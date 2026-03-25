@@ -5,9 +5,18 @@ import path from 'path';
 
 chromium.use(StealthPlugin());
 
-const [,, symbol='07709', slot='manual', email='', password=''] = process.argv;
+const [,, symbol='07709', slot='manual', emailArg='', passwordArg=''] = process.argv;
+const credsPath = path.resolve('..', 'credentials.json');
+let email = emailArg;
+let password = passwordArg;
+if ((!email || !password) && fs.existsSync(credsPath)) {
+  const creds = JSON.parse(fs.readFileSync(credsPath, 'utf8'));
+  email = email || creds.email || '';
+  password = password || creds.password || '';
+}
 if (!email || !password) {
-  console.error('Usage: node capture_futu_community.mjs <symbol> <slot> <email> <password>');
+  console.error('Usage: node capture_futu_community.mjs <symbol> <slot> [email] [password]');
+  console.error('Or provide ../credentials.json with {"email": "...", "password": "..."}.');
   process.exit(1);
 }
 

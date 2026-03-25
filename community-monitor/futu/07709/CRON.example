@@ -1,0 +1,6 @@
+# Example crontab (UTC)
+# Assumes credentials are stored in ../credentials.json
+0 6 * * * cd /root/.openclaw/workspace/community-monitor/futu/07709/scripts && ./run_slot.sh 0600
+0 12 * * * cd /root/.openclaw/workspace/community-monitor/futu/07709/scripts && ./run_slot.sh 1200
+0 18 * * * cd /root/.openclaw/workspace/community-monitor/futu/07709/scripts && ./run_slot.sh 1800
+0 0 * * * cd /root/.openclaw/workspace/community-monitor/futu/07709/scripts && ./run_slot.sh 2400

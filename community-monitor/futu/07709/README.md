@@ -16,7 +16,44 @@ Outputs:
 - `../YYYY-MM-DD/raw/<slot>.txt`
 - `../YYYY-MM-DD/normalized/<slot>.json`
 
-### 2) Merge one day
+### 2) Build one slot report immediately
+
+```bash
+node report_slot.mjs YYYY-MM-DD 1200
+```
+
+Output:
+- `../YYYY-MM-DD/reports/07709-YYYY-MM-DD-1200-report.md`
+
+### 3) Run one slot end-to-end
+
+Recommended: store credentials in `../credentials.json`:
+
+```json
+{
+  "email": "your@email.com",
+  "password": "your-password"
+}
+```
+
+Then run:
+
+```bash
+./run_slot.sh 1200
+```
+
+You can still override credentials ad hoc:
+
+```bash
+./run_slot.sh 1200 <email> <password>
+```
+
+Outputs:
+- `../YYYY-MM-DD/raw/<slot>.txt`
+- `../YYYY-MM-DD/normalized/<slot>.json`
+- `../YYYY-MM-DD/reports/07709-YYYY-MM-DD-<slot>-report.md`
+
+### 4) Merge one day (optional)
 
 ```bash
 node merge_daily.mjs YYYY-MM-DD
@@ -25,7 +62,7 @@ node merge_daily.mjs YYYY-MM-DD
 Output:
 - `../YYYY-MM-DD/daily/merged.json`
 
-### 3) Build report
+### 5) Build day report (optional)
 
 ```bash
 node report_daily.mjs YYYY-MM-DD
@@ -36,12 +73,35 @@ Output:
 
 ## Suggested schedule
 
-- 06:00
-- 12:00
-- 18:00
-- 24:00
+- 06:00 → run one slot + produce 06:00 report
+- 12:00 → run one slot + produce 12:00 report
+- 18:00 → run one slot + produce 18:00 report
+- 24:00 → run one slot + produce 24:00 report
 
-Capture each window, then run merge + report after the final window.
+Daily merge/report is optional if you still want an end-of-day combined view.
+
+## Multi-symbol mode
+
+A shared config lives at:
+
+```bash
+community-monitor/futu/config.json
+```
+
+And a shared runner lives at:
+
+```bash
+community-monitor/futu/scripts/run_all_symbols.sh
+```
+
+Example:
+
+```bash
+cd community-monitor/futu/scripts
+./run_all_symbols.sh 1200
+```
+
+This will iterate through all configured symbols and call each symbol's `run_slot.sh`.
 
 ## Safety notes
 
