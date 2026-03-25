@@ -89,12 +89,19 @@ try {
   await page.goto(`https://www.futunn.com/hk/etfs/${symbol}-HK/community?lang=zh-hk`, { waitUntil: 'domcontentloaded', timeout: 45000 });
   await sleep(6000);
 
+  await page.locator('body').waitFor({ state: 'visible', timeout: 60000 });
+
   let clickCount = 0;
   let prevLen = 0;
   let stable = 0;
   let finalText = '';
   for (let round = 1; round <= 30; round++) {
-    const text = await page.locator('body').innerText();
+    let text = '';
+    try {
+      text = await page.locator('body').innerText({ timeout: 60000 });
+    } catch {
+      text = await page.evaluate(() => document.body?.innerText || '').catch(() => '');
+    }
     finalText = text;
     if (Math.abs(text.length - prevLen) < 15) stable += 1; else stable = 0;
     prevLen = text.length;
