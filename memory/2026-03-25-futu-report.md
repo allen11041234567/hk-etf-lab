@@ -152,6 +152,18 @@ assistant: [[reply_to_current]] bro，这次我继续往下推进后，情况比
 - Expected next run: Beijing time 2026-03-26 00:05 for the 07709 report push.
 - Success criterion: user receives the message automatically.
 - Failure criterion: no message received by then, and I should investigate the cause immediately.
+
+## Current Achievements Locked In
+- 07709 Futu discussion capture pipeline is working for posts plus visible replies.
+- Single-cycle coverage reaches about the prior 6-7 hours at high coverage, not an official guaranteed full export.
+- Reports are intended as one report every 6 hours for 07709, summarizing the prior detection window.
+- Current delivery design is Beijing time 06:05 / 12:05 / 18:05 / 00:05, with :05 chosen to leave time for capture and rendering.
+- The user's preferred formal wording is: "本报告针对 07709 富途讨论区本检测周期内的主帖与回复内容生成。"
+- The user prefers report language to say "本检测周期" rather than "今天" to avoid implying a full-day summary.
+- Preferred report structure: overall sentiment; hottest themes; bullish summary; bearish/cautious summary; representative disagreement points; user persona analysis; one-line conclusion; subjective view; 10 simulated bullish-style lines.
+- The report style should read like a human-written synthesis, not a keyword dump or machine template.
+- For the previously discussed 18:00 sample on 2026-03-25, the workspace mapping used pushcheck as the underlying sample and an 1800 alias/report was created for consistency.
+- The user wants reports sent directly in chat and does not want to read files manually.
 user: System: [2026-03-25 13:27:19 UTC] Exec completed (keen-zep, code 0) :: : 压價收籌碼 我的收益很曼妙 : 這個隔一小時反彈一下，明顯莊家壓價吸籌呢 首男 - 回复1：財來 : 压價收籌碼 - 回复2：我的收益很曼妙 : 這個隔一小時反彈一下，明顯莊家壓價吸籌呢 43. [7h] 首男 - 主贴：$南方兩倍做多海力士 (07709.HK)$還有時間，向下插!! 1 34776135 44. [7h] 34776135 - 主贴…
 
 Conversation info (untrusted metadata):
