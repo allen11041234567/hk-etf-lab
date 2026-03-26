@@ -13,7 +13,10 @@ const jsonPath = path.resolve('..', date, 'normalized', `${slot}.json`);
 const reportDir = path.resolve('..', date, 'reports');
 fs.mkdirSync(reportDir, { recursive: true });
 const data = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
-const items = data.items || [];
+const allItems = data.items || [];
+const MAX_WINDOW_HOURS = 6;
+const items = allItems.filter(item => Number.isFinite(Number(item.hourBucket)) && Number(item.hourBucket) <= MAX_WINDOW_HOURS);
+const droppedItems = allItems.length - items.length;
 
 function slotInterval(slotValue) {
   const raw = String(slotValue).padStart(4, '0');
@@ -76,7 +79,7 @@ const topicDefs = [
     patterns: ['半貨','半货','加倉','加仓','補','补','逃生門','逃生门','回本就跑','走人','賣','卖'],
     examples: ['31.5放走半貨先','設了30.5買 差四仙','早上逃生門大夥跑了沒','想加倉了'],
     interpretation: '这说明持仓者里很多不是长期配置型，而是看情绪、看次日开盘、做波段和分批卖出。',
-    judgement: '今天讨论区整体是高度交易化的。'
+    judgement: '本检测周期讨论区整体是高度交易化的。'
   },
   {
     title: '外部消息也在影响情绪',
@@ -193,12 +196,12 @@ function personaBlocks(list) {
 
 function oneLineConclusion(sentiment) {
   if (sentiment.bull > sentiment.bear * 1.5) {
-    return '今天富途 07709 评论区整体偏多，短线投机热度很高，市场普遍在博次日高开/补涨；但同时，对“与正股不同步、杠杆磨损严重、长期持有体验差”的质疑也很强，说明它更像高弹性交易工具，而不是适合长期死拿的产品。';
+    return '本检测周期内，07709 富途评论区整体偏多，短线投机热度较高，评论区主流仍在博次日高开/补涨；但同时，对“与正股不同步、杠杆磨损严重、长期持有体验差”的质疑也很强，说明它更像高弹性交易工具，而不是适合长期死拿的产品。';
   }
   if (sentiment.bear > sentiment.bull) {
-    return '今天富途 07709 评论区整体偏谨慎，讨论核心并不是“无脑看空”，而是担心杠杆产品体验差、磨损重、情绪驱动过头。';
+    return '本检测周期内，07709 富途评论区整体偏谨慎，讨论核心并不是单纯看空，而是担心杠杆产品体验差、磨损重、情绪驱动过头。';
   }
-  return '今天富途 07709 评论区分歧明显：一边在博次日高开和补涨，一边在提醒杠杆磨损与产品机制问题，整体更像高弹性交易工具的博弈场。';
+  return '本检测周期内，07709 富途评论区分歧明显：一边在博次日高开和补涨，一边在提醒杠杆磨损与产品机制问题，整体更像高弹性交易工具的博弈场。';
 }
 
 function subjectiveView(list) {
@@ -256,18 +259,31 @@ const disagreements = disagreementPoints(items);
 const personas = personaBlocks(items);
 const lines = [];
 
-lines.push(`## ${SYMBOL} 今日富途评论区总结`);
+lines.push(`## ${SYMBOL} 富途评论区检测周期总结`);
 lines.push('');
 lines.push(`标的：${PRODUCT_NAME} (${SYMBOL}.HK)`);
 lines.push(`日期：${date}`);
 lines.push(`时间区间：${slotInterval(slot)}`);
+lines.push('本报告针对 07709 富途讨论区本检测周期内的主帖与回复内容生成。');
 lines.push(`样本量：${items.length} 条主贴，${replies} 条可见回复，合计 ${items.length + replies} 条`);
+if (droppedItems > 0) lines.push(`窗口过滤：已剔除 ${droppedItems} 条超出本检测周期 6 小时范围的旧样本`);
 lines.push('');
 lines.push('一、总体情绪');
 lines.push('');
+if (!items.length) {
+  lines.push('本检测周期内未抓到有效主帖或回复样本，因此本轮无法形成有效舆情判断。');
+  lines.push('');
+  lines.push('二、一句话结论');
+  lines.push('');
+  lines.push('本检测周期暂无有效样本，建议以下一轮抓取结果为准。');
+  const outPath = path.join(reportDir, `${SYMBOL}-${date}-${slot}-full.md`);
+  fs.writeFileSync(outPath, lines.join("\n"), 'utf8');
+  console.log(JSON.stringify({ out: outPath, filteredItemCount: items.length, droppedItems }, null, 2));
+  process.exit(0);
+}
 lines.push(sentiment.headline);
 lines.push('');
-lines.push('今天富途评论区的主基调，不是纯粹基本面分析，而是很典型的：');
+lines.push('本检测周期评论区的主基调，不是纯粹基本面分析，而是很典型的：');
 lines.push('');
 lines.push('• 明天会不会高开');
 lines.push('• 要不要先卖一半');
@@ -277,7 +293,7 @@ lines.push('• 杠杆磨损是不是太厉害');
 lines.push('');
 lines.push('也就是说：');
 lines.push('');
-lines.push('今日主情绪');
+lines.push('本检测周期主情绪');
 lines.push('');
 lines.push('• 交易情绪偏热');
 lines.push('• 短线看多情绪占优');
@@ -285,7 +301,7 @@ lines.push('• 但老持有人对“杠杆体验”分歧很大');
 lines.push('');
 lines.push('───');
 lines.push('');
-lines.push('二、今天讨论最集中的几个主题');
+lines.push('二、本检测周期讨论最集中的几个主题');
 lines.push('');
 
 topics.forEach((topic, idx) => {
@@ -309,7 +325,7 @@ topics.forEach((topic, idx) => {
 
 lines.push('三、多头观点总结');
 lines.push('');
-lines.push('今天富途里偏多的人，主要在讲这几类逻辑：');
+lines.push('本检测周期内，偏多的人主要在讲这几类逻辑：');
 lines.push('');
 for (const line of bullSummary) lines.push(line);
 lines.push('');
@@ -329,7 +345,7 @@ for (const line of disagreements) lines.push(line);
 lines.push('');
 lines.push('───');
 lines.push('');
-lines.push('六、今日社区用户画像感觉');
+lines.push('六、本检测周期社区用户画像感觉');
 lines.push('');
 lines.push('如果按讨论风格分，我会大致分成这几类：');
 lines.push('');
