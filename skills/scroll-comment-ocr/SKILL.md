@@ -60,7 +60,8 @@ Use these bundled scripts as the default building blocks:
 - `scripts/extract_frames.py` — extract frames with ffmpeg
 - `scripts/filter_similar_frames.py` — drop near-duplicate consecutive frames before OCR
 - `scripts/crop_comment_band.py` — crop likely comment area using presets, including `futu-main` and `futu-replies`
-- `scripts/ocr_frames.py` — OCR frames/crops into raw txt or jsonl
+- `scripts/preprocess_images.py` — grayscale/upscale/contrast/sharpen/threshold preprocessing before OCR
+- `scripts/ocr_frames.py` — OCR frames/crops into raw txt or jsonl with selectable backend
 - `scripts/merge_raw_dump.py` — merge chunk outputs in time order
 - `scripts/run_openclaw_parallel.py` — Python orchestrator for chunked parallel processing with partial output updates
 - `scripts/benchmark_run.py` — run a timed benchmark and write metrics json
@@ -102,10 +103,16 @@ When tuning Futu quickly, override the preset directly:
 /root/.openclaw/workspace/.venv-ocr/bin/python skills/scroll-comment-ocr/scripts/crop_comment_band.py output/filtered_01 output/crops_01 --preset futu --left 0.03 --top 0.19 --right 0.92 --bottom 0.86
 ```
 
+### Preprocess before OCR
+
+```bash
+/root/.openclaw/workspace/.venv-ocr/bin/python skills/scroll-comment-ocr/scripts/preprocess_images.py output/crops_01 output/prepared_01 --grayscale --upscale 1.5 --contrast 1.35 --sharpen
+```
+
 ### OCR to raw dump
 
 ```bash
-/root/.openclaw/workspace/.venv-ocr/bin/python skills/scroll-comment-ocr/scripts/ocr_frames.py output/crops_01 output/raw_01.txt --format txt
+/root/.openclaw/workspace/.venv-ocr/bin/python skills/scroll-comment-ocr/scripts/ocr_frames.py output/prepared_01 output/raw_01.txt --format txt --backend rapidocr
 ```
 
 ### Merge raw dumps
@@ -123,7 +130,7 @@ bash skills/scroll-comment-ocr/scripts/run_parallel_fast.sh input.mp4 output fut
 ### Python orchestrator
 
 ```bash
-/root/.openclaw/workspace/.venv-ocr/bin/python skills/scroll-comment-ocr/scripts/run_openclaw_parallel.py input.mp4 output --preset futu --parts 4 --fps 2 --threshold 8
+/root/.openclaw/workspace/.venv-ocr/bin/python skills/scroll-comment-ocr/scripts/run_openclaw_parallel.py input.mp4 output --preset futu-main --parts 4 --fps 2 --threshold 8 --preprocess basic --ocr-backend rapidocr
 ```
 
 This writes `output/status.json` with:
@@ -155,7 +162,7 @@ As parts complete, it also updates `output/partial_raw_dump.txt` so you can ship
 ### Benchmark a real video
 
 ```bash
-/root/.openclaw/workspace/.venv-ocr/bin/python skills/scroll-comment-ocr/scripts/benchmark_run.py input.mp4 bench_output --preset futu-main --parts 4 --fps 2 --threshold 8
+/root/.openclaw/workspace/.venv-ocr/bin/python skills/scroll-comment-ocr/scripts/benchmark_run.py input.mp4 bench_output --preset futu-main --parts 4 --fps 2 --threshold 8 --preprocess basic --ocr-backend rapidocr
 ```
 
 This writes `bench_output/benchmark.json` with elapsed time, total frames, filtered frames, and final raw line count.

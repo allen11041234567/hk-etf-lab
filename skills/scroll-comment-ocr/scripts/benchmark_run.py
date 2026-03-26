@@ -21,6 +21,8 @@ def main():
     ap.add_argument('--parts', type=int, default=4)
     ap.add_argument('--fps', type=float, default=2.0)
     ap.add_argument('--threshold', type=int, default=8)
+    ap.add_argument('--preprocess', choices=['none','basic','aggressive'], default='basic')
+    ap.add_argument('--ocr-backend', choices=['rapidocr','tesseract'], default='rapidocr')
     ap.add_argument('--pybin', default='/root/.openclaw/workspace/.venv-ocr/bin/python')
     args = ap.parse_args()
 
@@ -35,6 +37,8 @@ def main():
         '--parts', str(args.parts),
         '--fps', str(args.fps),
         '--threshold', str(args.threshold),
+        '--preprocess', args.preprocess,
+        '--ocr-backend', args.ocr_backend,
         '--pybin', args.pybin,
     ], check=True)
     elapsed = time.time() - started
@@ -49,6 +53,8 @@ def main():
         'fps': args.fps,
         'threshold': args.threshold,
         'preset': args.preset,
+        'preprocess': args.preprocess,
+        'ocrBackend': args.ocr_backend,
         'framesTotal': 0,
         'framesFiltered': 0,
         'rawLineCount': count_lines(workdir / 'final_raw_dump.txt'),

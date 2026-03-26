@@ -19,16 +19,26 @@ def split_video(pybin, script_dir, video, outdir, parts):
     run([pybin, str(script_dir / 'split_video.py'), str(video), str(outdir), '--parts', str(parts)])
 
 
-def process_part(pybin, script_dir, part, workdir, preset, fps, threshold):
+def process_part(pybin, script_dir, part, workdir, preset, fps, threshold, preprocess_mode, ocr_backend):
     base = part.stem
     frames = workdir / f'{base}_frames'
     filtered = workdir / f'{base}_filtered'
     crops = workdir / f'{base}_crops'
+    prepared = workdir / f'{base}_prepared'
     raw = workdir / 'raw' / f'{base}.txt'
     run([pybin, str(script_dir / 'extract_frames.py'), str(part), str(frames), '--fps', str(fps)])
     run([pybin, str(script_dir / 'filter_similar_frames.py'), str(frames), str(filtered), '--threshold', str(threshold)])
     run([pybin, str(script_dir / 'crop_comment_band.py'), str(filtered), str(crops), '--preset', preset])
-    run([pybin, str(script_dir / 'ocr_frames.py'), str(crops), str(raw), '--format', 'txt'])
+    ocr_input = crops
+    if preprocess_mode != 'none':
+        preprocess_cmd = [pybin, str(script_dir / 'preprocess_images.py'), str(crops), str(prepared)]
+        if preprocess_mode in ('basic', 'aggressive'):
+            preprocess_cmd += ['--grayscale', '--upscale', '1.5', '--contrast', '1.35', '--sharpen']
+        if preprocess_mode == 'aggressive':
+            preprocess_cmd += ['--threshold', '170']
+        run(preprocess_cmd)
+        ocr_input = prepared
+    run([pybin, str(script_dir / 'ocr_frames.py'), str(ocr_input), str(raw), '--format', 'txt', '--backend', ocr_backend])
     return raw
 
 
@@ -66,6 +76,8 @@ def main():
     ap.add_argument('--parts', type=int, default=4)
     ap.add_argument('--fps', type=float, default=2.0)
     ap.add_argument('--threshold', type=int, default=8)
+    ap.add_argument('--preprocess', choices=['none','basic','aggressive'], default='basic')
+    ap.add_argument('--ocr-backend', choices=['rapidocr','tesseract'], default='rapidocr')
     ap.add_argument('--pybin', default='/root/.openclaw/workspace/.venv-ocr/bin/python')
     args = ap.parse_args()
 
@@ -121,7 +133,7 @@ def main():
         cmd = [args.pybin, '-c', (
             'from pathlib import Path; '
             'from run_openclaw_parallel import process_part; '
-            f'process_part({args.pybin!r}, Path({str(script_dir)!r}), Path({str(part)!r}), Path({str(workdir)!r}), {args.preset!r}, {args.fps!r}, {args.threshold!r})'
+            f'process_part({args.pybin!r}, Path({str(script_dir)!r}), Path({str(part)!r}), Path({str(workdir)!r}), {args.preset!r}, {args.fps!r}, {args.threshold!r}, {args.preprocess!r}, {args.ocr_backend!r})'
         )]
         with log.open('w', encoding='utf-8') as lf:
             p = subprocess.Popen(cmd, stdout=lf, stderr=subprocess.STDOUT, cwd=str(script_dir))
