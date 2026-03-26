@@ -6,7 +6,7 @@ _Learn about the person you're helping. Update this as you go._
 - **What to call them:** bro
 - **Pronouns:** _(optional)_
 - **Timezone:**
-- **Notes:** Prefers a reliable buddy vibe (靠谱搭子型); wants mutual address as "bro".
+- **Notes:** Prefers a reliable buddy vibe (靠谱搭子型); wants mutual address as "bro". Confirmed the assistant is also called bro.
 
 ## Context
 
