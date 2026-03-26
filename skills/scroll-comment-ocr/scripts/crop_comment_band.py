@@ -5,11 +5,12 @@ from PIL import Image
 
 # normalized crop boxes: left, top, right, bottom
 PRESETS = {
-    'generic': (0.00, 0.16, 1.00, 0.90),
-    # tighter default for Futu: reduce top tabs, bottom bar, and right-side button area
-    'futu':    (0.03, 0.19, 0.92, 0.86),
-    'xhs':     (0.00, 0.18, 1.00, 0.92),
-    'douyin':  (0.00, 0.20, 1.00, 0.88),
+    'generic':      (0.00, 0.16, 1.00, 0.90),
+    'futu':         (0.03, 0.19, 0.92, 0.86),
+    'futu-main':    (0.03, 0.18, 0.92, 0.84),
+    'futu-replies': (0.05, 0.22, 0.94, 0.88),
+    'xhs':          (0.00, 0.18, 1.00, 0.92),
+    'douyin':       (0.00, 0.20, 1.00, 0.88),
 }
 
 

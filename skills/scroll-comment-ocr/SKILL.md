@@ -59,10 +59,11 @@ Use these bundled scripts as the default building blocks:
 - `scripts/split_video.py` — split one video into equal time chunks
 - `scripts/extract_frames.py` — extract frames with ffmpeg
 - `scripts/filter_similar_frames.py` — drop near-duplicate consecutive frames before OCR
-- `scripts/crop_comment_band.py` — crop likely comment area using presets
+- `scripts/crop_comment_band.py` — crop likely comment area using presets, including `futu-main` and `futu-replies`
 - `scripts/ocr_frames.py` — OCR frames/crops into raw txt or jsonl
 - `scripts/merge_raw_dump.py` — merge chunk outputs in time order
-- `scripts/run_openclaw_parallel.py` — Python orchestrator for chunked parallel processing
+- `scripts/run_openclaw_parallel.py` — Python orchestrator for chunked parallel processing with partial output updates
+- `scripts/benchmark_run.py` — run a timed benchmark and write metrics json
 
 ## Fast-path commands
 
@@ -87,8 +88,13 @@ Use these bundled scripts as the default building blocks:
 ### Crop likely comment band
 
 ```bash
-/root/.openclaw/workspace/.venv-ocr/bin/python skills/scroll-comment-ocr/scripts/crop_comment_band.py output/filtered_01 output/crops_01 --preset futu
+/root/.openclaw/workspace/.venv-ocr/bin/python skills/scroll-comment-ocr/scripts/crop_comment_band.py output/filtered_01 output/crops_01 --preset futu-main
 ```
+
+Use these Futu presets:
+- `futu-main` for main comment sweep
+- `futu-replies` for expanded replies / denser lower text areas
+- `futu` as a balanced default
 
 When tuning Futu quickly, override the preset directly:
 
@@ -126,6 +132,10 @@ This writes `output/status.json` with:
 - `doneDurationSec` / `totalDurationSec`
 - `etaSec`
 - `currentPart`
+- `partial` (rolling merged dump of completed parts)
+- `final` (full merged dump when done)
+
+As parts complete, it also updates `output/partial_raw_dump.txt` so you can ship batches before the full run finishes.
 
 ## Runtime requirements
 
@@ -140,7 +150,15 @@ This writes `output/status.json` with:
 - If OCR dependencies are missing, surface that immediately and fall back to chunk/frame extraction so setup can continue without blocking.
 - If the machine is resource-constrained, reduce parallelism from 6 to 4 before reducing fps.
 - If the text is too small, tell the user the recording method is the main bottleneck, not OCR.
-- For Futu recordings, prefer the tighter `futu` preset first; widen only if comments are being clipped.
+- For Futu recordings, start with `futu-main` for main comments and `futu-replies` for expanded replies; fall back to `futu` if you need a middle ground.
+
+### Benchmark a real video
+
+```bash
+/root/.openclaw/workspace/.venv-ocr/bin/python skills/scroll-comment-ocr/scripts/benchmark_run.py input.mp4 bench_output --preset futu-main --parts 4 --fps 2 --threshold 8
+```
+
+This writes `bench_output/benchmark.json` with elapsed time, total frames, filtered frames, and final raw line count.
 
 ## References
 
