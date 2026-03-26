@@ -9,10 +9,11 @@ Fetch readable page content with the lightest method first.
 
 ## Workflow
 
-1. Run `scripts/fetch_markdown.py <url> --json`.
-2. Accept the first provider that returns substantial readable text.
-3. Reject responses that are challenge pages, captcha pages, empty shells, or obviously blocked HTML.
-4. If all providers fail:
+1. Run `scripts/fetch_markdown.py <url-or-text> --json`.
+2. Let the script extract the first URL if the input contains surrounding text.
+3. Accept the first provider that returns substantial readable text.
+4. Reject responses that are challenge pages, captcha pages, empty shells, or obviously blocked HTML.
+5. If all providers fail:
    - use `playwright-scraper` for JS-heavy / anti-bot / login-dependent pages;
    - consider Scrapling when a dedicated scraping library is preferable.
 
@@ -24,6 +25,12 @@ Basic usage:
 
 ```bash
 python {baseDir}/scripts/fetch_markdown.py "https://developers.cloudflare.com/" --json
+```
+
+Input may also be a sentence containing a URL:
+
+```bash
+python {baseDir}/scripts/fetch_markdown.py "帮我读一下 https://example.com 这篇页面" --json
 ```
 
 With Playwright fallback from the existing workspace skill:
@@ -42,6 +49,9 @@ Expect JSON with:
 - `provider`
 - `target_url`
 - `fetch_url` when a markdown proxy succeeded
+- `title`
+- `is_cached_snapshot`
+- `summary`
 - `attempts` with each tried provider and why it passed/failed
 - `content` containing the returned markdown/text
 
