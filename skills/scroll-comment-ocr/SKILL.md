@@ -46,7 +46,7 @@ If the user already sent a video, continue with best effort.
 Preferred pipeline:
 1. Split video into 4–6 time chunks for parallel work when resources allow
 2. Extract frames at 2–2.5 fps for the fast path
-3. Keep only frames with enough visual change when possible
+3. Filter out near-duplicate frames before OCR
 4. Crop the comment text band instead of OCRing the whole screen
 5. OCR each cropped frame
 6. Merge outputs in time order
@@ -58,9 +58,11 @@ Use these bundled scripts as the default building blocks:
 
 - `scripts/split_video.py` — split one video into equal time chunks
 - `scripts/extract_frames.py` — extract frames with ffmpeg
+- `scripts/filter_similar_frames.py` — drop near-duplicate consecutive frames before OCR
 - `scripts/crop_comment_band.py` — crop likely comment area using presets
 - `scripts/ocr_frames.py` — OCR frames/crops into raw txt or jsonl
 - `scripts/merge_raw_dump.py` — merge chunk outputs in time order
+- `scripts/run_openclaw_parallel.py` — Python orchestrator for chunked parallel processing
 
 ## Fast-path commands
 
@@ -76,10 +78,16 @@ Use these bundled scripts as the default building blocks:
 /root/.openclaw/workspace/.venv-ocr/bin/python skills/scroll-comment-ocr/scripts/extract_frames.py output/chunks/part_01.mp4 output/frames_01 --fps 2
 ```
 
+### Filter similar frames
+
+```bash
+/root/.openclaw/workspace/.venv-ocr/bin/python skills/scroll-comment-ocr/scripts/filter_similar_frames.py output/frames_01 output/filtered_01 --threshold 8
+```
+
 ### Crop likely comment band
 
 ```bash
-/root/.openclaw/workspace/.venv-ocr/bin/python skills/scroll-comment-ocr/scripts/crop_comment_band.py output/frames_01 output/crops_01 --preset futu
+/root/.openclaw/workspace/.venv-ocr/bin/python skills/scroll-comment-ocr/scripts/crop_comment_band.py output/filtered_01 output/crops_01 --preset futu
 ```
 
 ### OCR to raw dump
@@ -98,6 +106,12 @@ Use these bundled scripts as the default building blocks:
 
 ```bash
 bash skills/scroll-comment-ocr/scripts/run_parallel_fast.sh input.mp4 output futu 6 2 /root/.openclaw/workspace/.venv-ocr/bin/python
+```
+
+### Python orchestrator
+
+```bash
+/root/.openclaw/workspace/.venv-ocr/bin/python skills/scroll-comment-ocr/scripts/run_openclaw_parallel.py input.mp4 output --preset futu --parts 4 --fps 2 --threshold 8
 ```
 
 ## Runtime requirements

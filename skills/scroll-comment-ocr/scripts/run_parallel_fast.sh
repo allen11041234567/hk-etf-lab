@@ -22,7 +22,8 @@ process_part() {
   local base
   base="$(basename "$part" .mp4)"
   "$PYBIN" "$SCRIPT_DIR/extract_frames.py" "$part" "$WORKDIR/${base}_frames" --fps "$FPS"
-  "$PYBIN" "$SCRIPT_DIR/crop_comment_band.py" "$WORKDIR/${base}_frames" "$WORKDIR/${base}_crops" --preset "$PRESET"
+  "$PYBIN" "$SCRIPT_DIR/filter_similar_frames.py" "$WORKDIR/${base}_frames" "$WORKDIR/${base}_filtered" --threshold 8 >/dev/null
+  "$PYBIN" "$SCRIPT_DIR/crop_comment_band.py" "$WORKDIR/${base}_filtered" "$WORKDIR/${base}_crops" --preset "$PRESET"
   "$PYBIN" "$SCRIPT_DIR/ocr_frames.py" "$WORKDIR/${base}_crops" "$WORKDIR/raw/${base}.txt" --format txt
 }
 
