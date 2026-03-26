@@ -90,6 +90,12 @@ Use these bundled scripts as the default building blocks:
 /root/.openclaw/workspace/.venv-ocr/bin/python skills/scroll-comment-ocr/scripts/crop_comment_band.py output/filtered_01 output/crops_01 --preset futu
 ```
 
+When tuning Futu quickly, override the preset directly:
+
+```bash
+/root/.openclaw/workspace/.venv-ocr/bin/python skills/scroll-comment-ocr/scripts/crop_comment_band.py output/filtered_01 output/crops_01 --preset futu --left 0.03 --top 0.19 --right 0.92 --bottom 0.86
+```
+
 ### OCR to raw dump
 
 ```bash
@@ -127,6 +133,7 @@ bash skills/scroll-comment-ocr/scripts/run_parallel_fast.sh input.mp4 output fut
 - If OCR dependencies are missing, surface that immediately and fall back to chunk/frame extraction so setup can continue without blocking.
 - If the machine is resource-constrained, reduce parallelism from 6 to 4 before reducing fps.
 - If the text is too small, tell the user the recording method is the main bottleneck, not OCR.
+- For Futu recordings, prefer the tighter `futu` preset first; widen only if comments are being clipped.
 
 ## References
 
