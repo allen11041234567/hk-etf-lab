@@ -1,6 +1,6 @@
 ---
 name: web-markdown-fetch
-description: Fetch web pages through markdown-conversion proxy services before using heavier scrapers. Use when a user asks to browse the web, read an article or page as markdown/text, or quickly extract readable content from a URL. Workflow: try `markdown.new/URL` first, then `defuddle.md/URL`, then `r.jina.ai/http://URL`. If those fail or return block/challenge HTML, fall back to Scrapling or the existing `playwright-scraper` skill for JS-heavy, protected, or interactive sites.
+description: "Fetch web pages through markdown-conversion proxy services before using heavier scrapers. Use when a user asks to browse the web, read an article or page as markdown/text, or quickly extract readable content from a URL. Workflow: try markdown.new/URL first, then defuddle.md/URL, then r.jina.ai/http://URL. If those fail or return block/challenge HTML, fall back to Scrapling or the existing playwright-scraper skill for JS-heavy, protected, or interactive sites."
 ---
 
 # Web Markdown Fetch
