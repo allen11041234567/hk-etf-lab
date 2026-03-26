@@ -120,6 +120,13 @@ bash skills/scroll-comment-ocr/scripts/run_parallel_fast.sh input.mp4 output fut
 /root/.openclaw/workspace/.venv-ocr/bin/python skills/scroll-comment-ocr/scripts/run_openclaw_parallel.py input.mp4 output --preset futu --parts 4 --fps 2 --threshold 8
 ```
 
+This writes `output/status.json` with:
+- `progressPercent`
+- `progressBar`
+- `doneDurationSec` / `totalDurationSec`
+- `etaSec`
+- `currentPart`
+
 ## Runtime requirements
 
 - `ffmpeg` and `ffprobe` must be available on PATH
