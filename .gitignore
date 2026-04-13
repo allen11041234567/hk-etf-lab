@@ -1,0 +1,8 @@
+# macOS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# temp
+*.tmp
+*.swp

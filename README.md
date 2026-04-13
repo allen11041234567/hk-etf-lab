@@ -1,32 +1,17 @@
-# Site scaffold
+# HK ETF Lab Site
 
-这个目录是第一版可部署静态站点骨架。
+这是 HK ETF Lab 的静态站点目录。
 
-## 当前结构
-
+## 结构
 - `index.html` 首页
-- `logbias/pool/overview.html` 59产品 LOGBIAS 总览
-- `logbias/03033/main.html` 3033 主报告
-- `logbias/03033/left.html` 3033 左侧优选
-- `logbias/03033/trades.html` 3033 交易明细
-- `assets/` 对应静态图片
+- `logbias/` LOGBIAS 相关页面
+- `daily/` 每日页面
+- `assets/` 图片资源
 
-## 本地预览
-
-在本目录运行：
-
-```bash
-python3 -m http.server 8000
-```
-
-然后打开：
-
-- http://127.0.0.1:8000/
-
-## 部署建议
-
-优先部署到 Cloudflare Pages：
+## Cloudflare Pages
+- Framework preset: None
 - Build command: 留空
-- Output directory: `site`
+- Build output directory: `/`（仓库根目录就是站点根目录）
 
-如果用命令行/上传目录方式部署，直接把 `site/` 作为静态站根目录即可。
+## 更新方式
+后续可由定时脚本自动更新页面后，提交到 GitHub；Cloudflare Pages 自动部署。
