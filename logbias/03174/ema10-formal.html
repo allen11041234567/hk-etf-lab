@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3174EMA10策略</title>
+<style>
+body{margin:0;background:linear-gradient(180deg,#f5f7fb 0%,#eef3ff 100%);color:#111827;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'PingFang SC','Microsoft YaHei',sans-serif}
+.wrap{max-width:1380px;margin:0 auto;padding:20px}.hero,.panel{background:#fff;border:1px solid #e5e7eb;border-radius:20px;padding:18px 20px;box-shadow:0 10px 30px rgba(17,24,39,.05);margin-bottom:14px}
+h1{margin:0 0 8px;font-size:32px}.sub{font-size:14px;color:#4b5563;line-height:1.7}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}.card{background:#f8fafc;border:1px solid #e5e7eb;border-radius:14px;padding:12px 14px}.k{font-size:12px;color:#6b7280}.v{font-size:24px;font-weight:800;margin-top:4px}.section-title{font-size:20px;font-weight:800;margin:0 0 10px}.chip{display:inline-block;padding:7px 10px;border-radius:999px;background:#f8fafc;border:1px solid #e5e7eb;font-size:12px;color:#374151;text-decoration:none;margin-right:6px}.list p,.list li{font-size:14px;line-height:1.75;color:#334155}.callout{background:#f8fafc;border:1px solid #e5e7eb;border-radius:14px;padding:14px 16px}ul{margin:8px 0 0 18px;padding:0}@media (max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}}@media (max-width:700px){.wrap{padding:14px}.hero,.panel{padding:16px 14px}.cards{grid-template-columns:1fr}.v{font-size:22px}h1{font-size:26px}}
+</style></head><body><div class="wrap">
+<div class="hero"><div style="margin-bottom:14px"><a class="chip" href="../../index.html">⌂ 首页</a><a class="chip" href="../../dev/index.html">✦ 新策略模块</a><a class="chip" href="../daily-signal.html">◉ 每日信号</a><a class="chip" href="../pool-state.html">◎ 强弱状态</a><a class="chip" href="../pool/overview.html">◌ 策略总览</a></div>
+<h1>3174EMA10策略</h1>
+<div class="sub">本页用于展示 3174（恒生生物科技ETF）在 EMA10 左侧策略框架下的正式候选版本。样本区间为 <b>2021-07-21 ~ 2026-04-14</b>，执行口径为收盘观察、次日开盘成交；当前主推版本为 <b>EMA10 左侧单点入场 + 分层止盈 + 尾仓保护退出</b>，单边费率 0.10%。</div>
+<div class="cards"><div class="card"><div class="k">正式候选净值</div><div class="v">1.793</div><div style="color:#059669">总收益 +79.26%</div></div><div class="card"><div class="k">Sharpe</div><div class="v">1.128</div><div>风险收益比较优</div></div><div class="card"><div class="k">最大回撤</div><div class="v">-4.48%</div><div>较单点基线更浅</div></div><div class="card"><div class="k">动作数</div><div class="v">15</div><div>基线为 8</div></div></div></div>
+
+<div class="panel callout list"><div class="section-title">正式候选规则</div>
+<ul>
+<li><b>入场：</b>当 EMA10-LOGBIAS ≤ -10.5，次日开盘买入。</li>
+<li><b>第一档止盈：</b>到 +1.5 卖出 50%。</li>
+<li><b>第二档止盈：</b>到 +3.0 再卖出 30%。</li>
+<li><b>尾仓：</b>保留 20% 跟踪后续修复延续。</li>
+<li><b>保护退出：</b>尾仓若回落到 0.0，次日开盘保护性退出。</li>
+</ul>
+</div></div>
+
+<div class="panel list"><div class="section-title">为什么它像正式候选</div>
+<p>03174 第一轮研究已经确认更偏左侧，EMA10 左侧是最顺手的主骨架。继续升级到分层止盈后，这版做到了三件事：</p>
+<ul>
+<li>动作数从 <b>8</b> 提高到 <b>15</b>，执行颗粒度更细。</li>
+<li>总收益几乎不变，甚至从 <b>79.06%</b> 略升到 <b>79.26%</b>。</li>
+<li>最大回撤从 <b>-5.03%</b> 改善到 <b>-4.48%</b>。</li>
+</ul>
+<p>这说明对 03174 来说，<b>先吃掉最确定的修复，再留一小段尾仓看延续，最后用简单回落保护退出</b>，比一次性全进全出更适合。</p>
+</div></div>
+
+<div class="panel list"><div class="section-title">和备选 MA10 的关系</div>
+<p>MA10 左侧也很强，而且升级后动作数可以做到更高，但作为正式主线，EMA10 左侧更干净：</p>
+<ul>
+<li>EMA10 版本：收益不掉、回撤更浅、升级逻辑顺。</li>
+<li>MA10 版本：更像稳健副线，适合做并行观察或对照页。</li>
+</ul>
+<p>因此当前建议是：<b>3174 先以 EMA10 左侧分层止盈版作为主候选，MA10 作为备选参考。</b></p>
+</div></div>
+
+<div class="panel callout list"><div class="section-title">投资者可关注什么</div>
+<p>这套策略更适合“深跌后的修复参与”，不太适合趋势确认后的持续追涨。它的核心价值在于：</p>
+<ul>
+<li>当医药/生科情绪极弱时，提供一个更有纪律的左侧入场框架；</li>
+<li>修复过程中不一刀切，而是分层落袋，降低持仓波动；</li>
+<li>尾仓保护退出可以避免“修了一段又跌回去”时把已得利润重新吐回。</li>
+</ul>
+</div></div>
+</div></body></html>
