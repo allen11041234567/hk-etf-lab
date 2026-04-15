@@ -45,20 +45,11 @@
     .summary-box .d{margin-top:6px;font-size:13px;line-height:1.7;color:#475569}
     .masters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
     .master-card{border-radius:24px;padding:18px}
+    .master-link{text-decoration:none;color:inherit;display:block}
+    .master-link:hover .master-name{text-decoration:underline;text-decoration-color:#94a3b8;text-underline-offset:4px}
+    .master-link:hover .detail-link{background:#e8f0ff;border-color:#b8d0ff}
     .master-top{display:flex;gap:14px;align-items:flex-start;margin-bottom:14px}
-    .portrait{width:96px;height:120px;border-radius:20px;flex:0 0 96px;position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.45);box-shadow:inset 0 1px 0 rgba(255,255,255,.25)}
-    .portrait::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 28%,rgba(255,255,255,.88) 0 15%,transparent 16%),radial-gradient(circle at 50% 53%,rgba(255,255,255,.78) 0 24%,transparent 25%),linear-gradient(180deg,rgba(255,255,255,.14),rgba(255,255,255,0));opacity:.55}
-    .portrait::after{content:attr(data-initials);position:absolute;left:10px;bottom:10px;font-size:28px;font-weight:900;color:#fff;letter-spacing:.04em;text-shadow:0 4px 18px rgba(0,0,0,.18)}
-    .p-buffett{background:linear-gradient(180deg,#2563eb,#1e3a8a)}
-    .p-munger{background:linear-gradient(180deg,#1f2937,#4b5563)}
-    .p-graham{background:linear-gradient(180deg,#0f766e,#115e59)}
-    .p-fisher{background:linear-gradient(180deg,#7c3aed,#4c1d95)}
-    .p-lynch{background:linear-gradient(180deg,#059669,#065f46)}
-    .p-marks{background:linear-gradient(180deg,#92400e,#78350f)}
-    .p-dalio{background:linear-gradient(180deg,#dc2626,#991b1b)}
-    .p-soros{background:linear-gradient(180deg,#0f172a,#334155)}
-    .p-templeton{background:linear-gradient(180deg,#c69214,#8b5e00)}
-    .p-druckenmiller{background:linear-gradient(180deg,#0891b2,#164e63)}
+    .portrait-img{width:96px;height:120px;border-radius:20px;flex:0 0 96px;object-fit:cover;border:1px solid rgba(255,255,255,.45);background:#f8fafc;box-shadow:0 10px 24px rgba(15,23,42,.12)}
     .master-name{font-size:24px;font-weight:900;line-height:1.25;margin:0}
     .master-role{margin-top:4px;font-size:13px;color:var(--muted);line-height:1.65}
     .tone{display:inline-block;margin-top:8px;padding:6px 10px;border-radius:999px;background:#f8fafc;border:1px solid var(--line);font-size:12px;color:#334155;font-weight:700}
@@ -70,6 +61,7 @@
     .pick{background:#ecfdf5;border-color:#ccefdc;color:#047857}
     .avoid{background:#fff7ed;border-color:#fed7aa;color:#c2410c}
     .quote{margin-top:12px;background:#f8fafc;border:1px solid var(--line);border-radius:16px;padding:12px 14px;font-size:14px;line-height:1.8;color:#334155}
+    .detail-link{display:inline-flex;align-items:center;gap:6px;margin-top:12px;padding:8px 12px;border-radius:999px;background:#f8fafc;border:1px solid var(--line);font-size:12px;font-weight:700;color:#334155}
     .compare{width:100%;border-collapse:collapse;margin-top:8px}
     .compare th,.compare td{border-bottom:1px solid #e5e7eb;padding:10px 8px;text-align:left;font-size:13px;line-height:1.65;vertical-align:top}
     .compare th{font-size:12px;color:#64748b;text-transform:uppercase;letter-spacing:.04em}
@@ -86,8 +78,7 @@
       .sub{font-size:14px;line-height:1.8}
       .section-title{font-size:19px}
       .master-top{gap:12px}
-      .portrait{width:78px;height:98px;flex-basis:78px;border-radius:16px}
-      .portrait::after{font-size:23px}
+      .portrait-img{width:78px;height:98px;flex-basis:78px;border-radius:16px}
       .master-name{font-size:20px}
       .master-role{font-size:12px}
       .block p,.quote{font-size:13px;line-height:1.75}
@@ -171,9 +162,9 @@
     </div>
 
     <div class="masters">
-      <section class="master-card">
+      <section class="master-card"><a class="master-link" href="./masters-hk-etf/buffett.html">
         <div class="master-top">
-          <div class="portrait p-buffett" data-initials="WB"></div>
+          <img class="portrait-img" src="../assets/masters/buffett.svg" alt="沃伦·巴菲特 Buffett" />
           <div>
             <h2 class="master-name">沃伦·巴菲特 Buffett</h2>
             <div class="master-role">核心镜片：可理解性、现金流、护城河、安全边际</div>
@@ -203,11 +194,12 @@
           <p>理由不是这些方向一定差，而是它们离“高可预测、高现金流、低叙事噪音”的要求更远。</p>
         </div>
         <div class="quote">组合思路：用红利和宽基做 70% 核心仓，把地域和行业波动压低，再留少量空间给成熟市场指数，不追逐高故事密度资产。</div>
-      </section>
+        <div class="detail-link">查看完整蒸馏详情 →</div>
+      </a></section>
 
-      <section class="master-card">
+      <section class="master-card"><a class="master-link" href="./masters-hk-etf/munger.html">
         <div class="master-top">
-          <div class="portrait p-munger" data-initials="CM"></div>
+          <img class="portrait-img" src="../assets/masters/munger.svg" alt="查理·芒格 Munger" />
           <div>
             <h2 class="master-name">查理·芒格 Munger</h2>
             <div class="master-role">核心镜片：多元思维模型、少做蠢事、长期胜率</div>
@@ -237,11 +229,12 @@
           <p>在他那里，这些更像“把复杂性和波动性一起打包出售”。</p>
         </div>
         <div class="quote">组合思路：少即是多，宁愿只拿 3 到 4 只长期能讲清楚的 ETF，也不愿为了热闹把组合搞成主题超市。</div>
-      </section>
+        <div class="detail-link">查看完整蒸馏详情 →</div>
+      </a></section>
 
-      <section class="master-card">
+      <section class="master-card"><a class="master-link" href="./masters-hk-etf/graham.html">
         <div class="master-top">
-          <div class="portrait p-graham" data-initials="BG"></div>
+          <img class="portrait-img" src="../assets/masters/graham.svg" alt="本杰明·格雷厄姆 Graham" />
           <div>
             <h2 class="master-name">本杰明·格雷厄姆 Graham</h2>
             <div class="master-role">核心镜片：低估、分散、防守型安全边际</div>
@@ -271,11 +264,12 @@
           <p>因为它们更像“未来预期的放大器”，而不是“现有价值的折价篮子”。</p>
         </div>
         <div class="quote">组合思路：做一道朴素但结实的墙，核心是多元分散、估值纪律和不过度押赌单一叙事。</div>
-      </section>
+        <div class="detail-link">查看完整蒸馏详情 →</div>
+      </a></section>
 
-      <section class="master-card">
+      <section class="master-card"><a class="master-link" href="./masters-hk-etf/fisher.html">
         <div class="master-top">
-          <div class="portrait p-fisher" data-initials="PF"></div>
+          <img class="portrait-img" src="../assets/masters/fisher.svg" alt="菲利普·费雪 Fisher" />
           <div>
             <h2 class="master-name">菲利普·费雪 Fisher</h2>
             <div class="master-role">核心镜片：高质量成长、管理层、长期复利</div>
@@ -304,11 +298,12 @@
           <p>不是看不上，而是这些更像“均值回归型资产”，复利故事不够性感。</p>
         </div>
         <div class="quote">组合思路：宁愿集中于少数优质成长篮子，也不愿把仓位摊平到一堆普通公司身上。</div>
-      </section>
+        <div class="detail-link">查看完整蒸馏详情 →</div>
+      </a></section>
 
-      <section class="master-card">
+      <section class="master-card"><a class="master-link" href="./masters-hk-etf/lynch.html">
         <div class="master-top">
-          <div class="portrait p-lynch" data-initials="PL"></div>
+          <img class="portrait-img" src="../assets/masters/lynch.svg" alt="彼得·林奇 Peter Lynch" />
           <div>
             <h2 class="master-name">彼得·林奇 Peter Lynch</h2>
             <div class="master-role">核心镜片：从熟悉出发，找“能讲清楚的成长”</div>
@@ -337,11 +332,12 @@
           <p>因为它们更稳，但故事密度和成长想象空间没有那么足。</p>
         </div>
         <div class="quote">组合思路：把最容易被大众理解、同时仍具成长斜率的篮子放前面，愿意接受波动，但要求逻辑听得懂。</div>
-      </section>
+        <div class="detail-link">查看完整蒸馏详情 →</div>
+      </a></section>
 
-      <section class="master-card">
+      <section class="master-card"><a class="master-link" href="./masters-hk-etf/marks.html">
         <div class="master-top">
-          <div class="portrait p-marks" data-initials="HM"></div>
+          <img class="portrait-img" src="../assets/masters/marks.svg" alt="霍华德·马克斯 Howard Marks" />
           <div>
             <h2 class="master-name">霍华德·马克斯 Howard Marks</h2>
             <div class="master-role">核心镜片：周期位置、风险预算、第二层思考</div>
@@ -371,11 +367,12 @@
           <p>越是市场已经共识很强的地方，他越会担心“好资产已经不便宜”。</p>
         </div>
         <div class="quote">组合思路：先活下来，再谈超额收益。核心仓看赔率，卫星仓看逆向价值，不轻易把自己暴露给单边叙事。</div>
-      </section>
+        <div class="detail-link">查看完整蒸馏详情 →</div>
+      </a></section>
 
-      <section class="master-card">
+      <section class="master-card"><a class="master-link" href="./masters-hk-etf/dalio.html">
         <div class="master-top">
-          <div class="portrait p-dalio" data-initials="RD"></div>
+          <img class="portrait-img" src="../assets/masters/dalio.svg" alt="瑞·达利欧 Ray Dalio" />
           <div>
             <h2 class="master-name">瑞·达利欧 Ray Dalio</h2>
             <div class="master-role">核心镜片：宏观平衡、相关性、全天候思维</div>
@@ -405,11 +402,12 @@
           <p>不是不能配，而是他会严格防止组合被同一类成长叙事绑架。</p>
         </div>
         <div class="quote">组合思路：不要押唯一正确答案，而要用不同宏观敞口之间的互补关系降低整体失误成本。</div>
-      </section>
+        <div class="detail-link">查看完整蒸馏详情 →</div>
+      </a></section>
 
-      <section class="master-card">
+      <section class="master-card"><a class="master-link" href="./masters-hk-etf/soros.html">
         <div class="master-top">
-          <div class="portrait p-soros" data-initials="GS"></div>
+          <img class="portrait-img" src="../assets/masters/soros.svg" alt="乔治·索罗斯 Soros" />
           <div>
             <h2 class="master-name">乔治·索罗斯 Soros</h2>
             <div class="master-role">核心镜片：反身性、市场情绪、快速进退</div>
@@ -438,11 +436,12 @@
           <p>这些产品未必差，只是缺少他喜欢的那种高弹性与叙事反馈回路。</p>
         </div>
         <div class="quote">组合思路：用最具杠杆感的主题表达观点，观点错了就撤，观点对了就顺势加码，不恋战。</div>
-      </section>
+        <div class="detail-link">查看完整蒸馏详情 →</div>
+      </a></section>
 
-      <section class="master-card">
+      <section class="master-card"><a class="master-link" href="./masters-hk-etf/templeton.html">
         <div class="master-top">
-          <div class="portrait p-templeton" data-initials="JT"></div>
+          <img class="portrait-img" src="../assets/masters/templeton.svg" alt="约翰·邓普顿 Templeton" />
           <div>
             <h2 class="master-name">约翰·邓普顿 Templeton</h2>
             <div class="master-role">核心镜片：全球配置、逆向、便宜中的优质</div>
@@ -471,11 +470,12 @@
           <p>他更喜欢“还没被所有人一起讲烂的机会”。</p>
         </div>
         <div class="quote">组合思路：从全球找分散、找冷门、找偏见，越是共识拥挤处，越要提高警惕。</div>
-      </section>
+        <div class="detail-link">查看完整蒸馏详情 →</div>
+      </a></section>
 
-      <section class="master-card">
+      <section class="master-card"><a class="master-link" href="./masters-hk-etf/druckenmiller.html">
         <div class="master-top">
-          <div class="portrait p-druckenmiller" data-initials="SD"></div>
+          <img class="portrait-img" src="../assets/masters/druckenmiller.svg" alt="斯坦利·德鲁肯米勒 Druckenmiller" />
           <div>
             <h2 class="master-name">斯坦利·德鲁肯米勒 Druckenmiller</h2>
             <div class="master-role">核心镜片：趋势、催化、集中出击</div>
@@ -505,7 +505,8 @@
           <p>因为这些不够“猛”，不利于在趋势确认时放大利润曲线。</p>
         </div>
         <div class="quote">组合思路：押最强主线，不平均用力。仓位不是按兴趣分，而是按把握度分。</div>
-      </section>
+        <div class="detail-link">查看完整蒸馏详情 →</div>
+      </a></section>
     </div>
 
     <div class="panel" style="margin-top:14px;">
