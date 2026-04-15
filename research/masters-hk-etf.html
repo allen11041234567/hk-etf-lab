@@ -295,7 +295,7 @@
           <img class="portrait-img" src="../assets/masters-real/lynch.jpg" alt="彼得·林奇 Peter Lynch" />
           <div>
             <h2 class="master-name">彼得·林奇 Peter Lynch</h2>
-            <div class="master-role">核心镜片：从熟悉出发，找“能讲清楚的成长”</div>
+            <div class="master-role">看得懂的成长 / 生活观察 / 朴素高效</div>
             
           </div>
         </div>
@@ -305,20 +305,12 @@
         </div>
         <div class="block">
           <h3>更可能偏爱的产品</h3>
-          <div class="pick-list">
-            <span class="pick">03454 美股七巨头ETF</span>
-            <span class="pick">03034 纳斯达克100ETF</span>
-            <span class="pick">03033 恒生科技ETF</span>
-            <span class="pick">03174 恒生生物科技ETF</span>
-          </div>
+          <div class="pick-list"><span class="pick">03454 美股七巨头ETF  03034 纳斯达克100ETF  03033 恒生科技ETF  03174 恒生生物科技ETF</span></div>
         </div>
         <div class="block">
           <h3>不太会兴奋的产品</h3>
-          <div class="avoid-list">
-            <span class="avoid">03469 恒生港股通红利ETF</span>
-            <span class="avoid">02822 富时中国A50ETF</span>
-          </div>
-          <p>因为它们更稳，但故事密度和成长想象空间没有那么足。</p>
+          <div class="avoid-list"><span class="avoid">7226 2倍做多恒生科技ETF  7266 2倍做多纳斯达克100ETF  7552 2倍做空恒生科技ETF</span></div>
+          <p>他可以接受在特别看懂的成长方向上提高弹性，但通常不喜欢靠做空去主导收益来源。</p>
         </div>
         <div class="quote">组合思路：把最容易被大众理解、同时仍具成长斜率的篮子放前面，愿意接受波动，但要求逻辑听得懂。</div>
         <div class="detail-link">查看完整详情 →</div>
@@ -329,7 +321,7 @@
           <img class="portrait-img" src="https://upload.wikimedia.org/wikipedia/commons/8/8b/Howard_Marks_2.17.12_%28cropped%29.jpg" alt="霍华德·马克斯 Howard Marks" />
           <div>
             <h2 class="master-name">霍华德·马克斯 Howard Marks</h2>
-            <div class="master-role">核心镜片：周期位置、风险预算、第二层思考</div>
+            <div class="master-role">周期 / 风险预算 / 第二层思考</div>
             
           </div>
         </div>
@@ -339,21 +331,12 @@
         </div>
         <div class="block">
           <h3>更可能偏爱的产品</h3>
-          <div class="pick-list">
-            <span class="pick">03469 恒生港股通红利ETF</span>
-            <span class="pick">03037 恒生ETF</span>
-            <span class="pick">03153 日经225ETF</span>
-            <span class="pick">02830 沙特阿拉伯ETF</span>
-          </div>
+          <div class="pick-list"><span class="pick">03469 港股通红利ETF  03037 恒生ETF  03153 日经225ETF  02830 沙特阿拉伯ETF</span></div>
         </div>
         <div class="block">
           <h3>会谨慎对待</h3>
-          <div class="avoid-list">
-            <span class="avoid">03454 美股七巨头ETF</span>
-            <span class="avoid">03134 中证太阳能ETF</span>
-            <span class="avoid">03109 科创板50ETF</span>
-          </div>
-          <p>越是市场已经共识很强的地方，他越会担心“好资产已经不便宜”。</p>
+          <div class="avoid-list"><span class="avoid">7300 1倍做空恒生ETF  7226 2倍做多恒生科技ETF  7266 2倍做多纳斯达克100ETF</span></div>
+          <p>他更可能把反向工具当风险对冲或边缘仓，而不是让高杠杆工具成为组合主力。</p>
         </div>
         <div class="quote">组合思路：先活下来，再谈超额收益。核心仓看赔率，卫星仓看逆向价值，不轻易把自己暴露给单边叙事。</div>
         <div class="detail-link">查看完整详情 →</div>
@@ -548,7 +531,7 @@ templeton:{name:'约翰·邓普顿',url:'./masters-hk-etf/templeton.html',desc:'
 let currentQuizStep=1;
 function showQuizStep(n){document.querySelectorAll('.quiz-step').forEach(el=>el.classList.remove('active'));const el=document.querySelector('.quiz-step[data-step="'+n+'"]');if(el)el.classList.add('active');currentQuizStep=n;if(n<6){const box=document.getElementById('quiz-result');if(box){box.className='quiz-result';box.innerHTML='';}}}
 function prevInvestorQuiz(){if(currentQuizStep>1){const prev=currentQuizStep-1;showQuizStep(prev);const checked=document.querySelector('input[name=\"q'+prev+'\"]:checked');if(checked){checked.checked=false;}const box=document.getElementById('quiz-result');box.className='quiz-result';box.innerHTML='';}}
-function handleQuizAnswer(step){if(step<6){showQuizStep(step+1);}else{runInvestorQuiz();}}
+function handleQuizAnswer(step){const answered=document.querySelector('input[name="q'+step+'"]:checked');if(!answered)return;if(step<6){showQuizStep(step+1);}else{setTimeout(runInvestorQuiz,10);}}
 function runInvestorQuiz(){const scores={};document.querySelectorAll('#investor-quiz input[type=radio]:checked').forEach(i=>scores[i.value]=(scores[i.value]||0)+1);const entries=Object.entries(scores).sort((a,b)=>b[1]-a[1]);const box=document.getElementById('quiz-result');if(document.querySelectorAll('#investor-quiz input[type=radio]:checked').length<6){box.className='quiz-result show';box.innerHTML='<b>还没法出结果。</b><br/>先把所有问题答完，再看你更像谁。';return;}const [key]=entries[0];const r=QUIZ_MAP[key];box.className='quiz-result show';box.innerHTML='<div class="k">测试结果</div><div class="quiz-card"><img class="quiz-avatar" src="'+r.img+'" alt="'+r.name+'"><div><div class="name">你更像：'+r.name+'</div><div class="sub" style="margin-top:8px">'+r.desc+'</div><div class="quiz-meta"><b>你的交易模式：</b>'+r.mode+'<br/><b>你在香港市场最拿手的ETF品种：</b>'+r.fit+'</div><div class="quiz-quote">“'+r.quote+'”</div><a class="detail-link" style="margin-top:12px" href="'+r.url+'">查看你最像的大师完整交易模式 →</a></div></div>'; }
 function resetInvestorQuiz(){document.querySelectorAll('#investor-quiz input[type=radio]').forEach(i=>i.checked=false);const box=document.getElementById('quiz-result');box.className='quiz-result';box.innerHTML='';showQuizStep(1);}
 
