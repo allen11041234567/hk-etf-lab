@@ -46,6 +46,25 @@
     .sub{font-size:17px;line-height:1.9;color:#475569;max-width:860px}
     .panel{padding:20px;margin-bottom:18px}
     .section-title{font-size:24px;font-weight:800;margin:4px 4px 16px}
+    .feature-link{
+      display:flex;
+      gap:16px;
+      align-items:center;
+      text-decoration:none;
+      color:inherit;
+      background:linear-gradient(180deg,#ffffff 0%,#fbfdff 100%);
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:16px;
+      box-shadow:0 8px 24px rgba(15,23,42,.04);
+      margin:0 0 16px;
+      transition:transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+    }
+    .feature-link:hover{transform:translateY(-2px);border-color:#bfd3ff;box-shadow:0 14px 34px rgba(37,99,235,.10)}
+    .feature-thumb{width:108px;height:108px;border-radius:18px;object-fit:cover;flex:0 0 108px;border:1px solid var(--line);background:#f8fafc}
+    .feature-k{font-size:13px;color:var(--muted);font-weight:700;letter-spacing:.03em}
+    .feature-v{margin-top:6px;font-size:24px;font-weight:800;line-height:1.35}
+    .feature-d{margin-top:8px;font-size:15px;line-height:1.8;color:#475569}
     .grid{display:grid;grid-template-columns:1fr;gap:14px}
     .card{
       display:block;
@@ -91,6 +110,10 @@
       h1{font-size:34px}
       .sub{font-size:16px}
       .v{font-size:24px}
+      .feature-link{align-items:flex-start;padding:14px}
+      .feature-thumb{width:84px;height:84px;flex-basis:84px;border-radius:14px}
+      .feature-v{font-size:19px;line-height:1.4}
+      .feature-d{font-size:14px;line-height:1.7}
     }
   </style>
 </head>
@@ -106,7 +129,25 @@
 
     <div class="panel">
       <div class="section-title">核心内容</div>
+      <a class="feature-link" href="https://stock.fengle.me">
+        <img class="feature-thumb" src="./assets/etfti-persona.jpg" alt="ETFTI ETF人格测试" />
+        <div>
+          <div class="feature-k">ETFTI</div>
+          <div class="feature-v">ETFTI ｜ ETF人格测试 你的钱会流向哪里，你的人格就住在哪里</div>
+          <div class="feature-d">点击进入外部页面，查看三星、海力士股价与 Trump 发言实时看版，也可顺手玩这张 ETF 人格测试图的概念入口。</div>
+        </div>
+      </a>
       <div class="grid">
+        <a class="card accent-blue" href="https://stock.fengle.me">
+          <div class="top">
+            <div class="k">Live Monitor</div>
+            <span class="tag">实时看版</span>
+          </div>
+          <div class="v">三星海力士股价及Trump发言实时看版</div>
+          <div class="d">用于实时查看三星、SK海力士相关股价动态，以及 Trump 发言带来的盘中扰动，适合作为高频盯盘入口。</div>
+          <div class="hint">点击后跳转外部实时页面</div>
+        </a>
+
         <a class="card accent-blue" href="./logbias/daily-signal.html">
           <div class="top">
             <div class="k">Daily Signal</div>
@@ -155,16 +196,6 @@
           <div class="v">开发中的新策略和回测表现</div>
           <div class="d">集中展示仍在开发、优化与验证阶段的新策略页面，便于快速查看试验中的净值曲线、信号轨迹与回测结果。</div>
           <div class="hint">适合跟踪新策略进展</div>
-        </a>
-
-        <a class="card accent-blue" href="https://stock.fengle.me">
-          <div class="top">
-            <div class="k">Live Monitor</div>
-            <span class="tag">实时看版</span>
-          </div>
-          <div class="v">三星海力士股价及Trump发言实时看版</div>
-          <div class="d">用于实时查看三星、SK海力士相关股价动态，以及 Trump 发言带来的盘中扰动，适合作为高频盯盘入口。</div>
-          <div class="hint">点击后跳转外部实时页面</div>
         </a>
       </div>
     </div>
