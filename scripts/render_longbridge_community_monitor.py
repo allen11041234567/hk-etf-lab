@@ -205,6 +205,29 @@ def svg_bars(counts):
     return f'<svg viewBox="0 0 410 120" class="bars">{"".join(parts)}</svg>'
 
 
+def svg_gauge(value, color='#7aa2ff', label=''):
+    value = max(0, min(float(value), 100))
+    cx, cy, r = 100, 100, 68
+    start_x = cx - r
+    start_y = cy
+    end_x = cx + r
+    end_y = cy
+    theta = math.pi * (1 - value / 100)
+    vx = cx + r * math.cos(theta)
+    vy = cy - r * math.sin(theta)
+    large = 1 if value > 50 else 0
+    bg = f'M {start_x:.1f} {start_y:.1f} A {r} {r} 0 0 1 {end_x:.1f} {end_y:.1f}'
+    fg = f'M {start_x:.1f} {start_y:.1f} A {r} {r} 0 {large} 1 {vx:.1f} {vy:.1f}'
+    return (
+        '<svg viewBox="0 0 200 132" class="gauge">'
+        f'<path d="{bg}" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="14" stroke-linecap="round" />'
+        f'<path d="{fg}" fill="none" stroke="{color}" stroke-width="14" stroke-linecap="round" />'
+        f'<text x="100" y="86" text-anchor="middle" fill="#eef4ff" font-size="30" font-weight="800">{value:.1f}</text>'
+        f'<text x="100" y="108" text-anchor="middle" fill="#8ea3c8" font-size="12">{label}</text>'
+        '</svg>'
+    )
+
+
 def svg_trend(daily):
     w, h = 640, 240
     left, right, top, bottom = 42, 18, 18, 38
@@ -281,7 +304,7 @@ def build_page(symbol, name, quote, enriched, strong, daily, title, top_words, s
     .pill{{display:inline-block;padding:10px 14px;border-radius:999px;background:rgba(255,184,77,.12);border:1px solid rgba(255,184,77,.22);color:#ffd694;font-size:13px;font-weight:700}} .meta{{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}} .chip{{display:inline-block;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);font-size:13px;color:#dbe7ff}}
     .panel{{padding:20px}} .section-title{{font-size:24px;font-weight:800;margin:4px 4px 16px}} .grid4{{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}} .grid2{{display:grid;grid-template-columns:1.02fr .98fr;gap:14px}} .card{{background:linear-gradient(180deg,rgba(17,31,56,.96) 0%,rgba(13,25,47,.94) 100%);border:1px solid var(--line);border-radius:24px;padding:22px 22px 18px;box-shadow:0 10px 30px rgba(0,0,0,.18)}}
     .k{{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}} .v{{margin-top:8px;font-size:34px;font-weight:800;line-height:1.25}} .d{{margin-top:10px;font-size:15px;line-height:1.85;color:#cfdbf4}} .hint{{margin-top:10px;font-size:13px;color:#98acd1;line-height:1.75}}
-    .donut-wrap{{display:grid;place-items:center;padding-top:6px}} .donut{{width:220px;max-width:100%}} .bars,.trend{{width:100%;height:auto;display:block}} .legend{{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}} .legend span{{font-size:13px;color:#cfe0ff}} .dot{{display:inline-block;width:10px;height:10px;border-radius:99px;margin-right:6px}}
+    .donut-wrap{{display:grid;place-items:center;padding-top:6px}} .donut{{width:220px;max-width:100%}} .gauge-wrap{{display:grid;place-items:center;padding-top:2px}} .gauge{{width:180px;max-width:100%;height:auto;display:block}} .bars,.trend{{width:100%;height:auto;display:block}} .legend{{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}} .legend span{{font-size:13px;color:#cfe0ff}} .dot{{display:inline-block;width:10px;height:10px;border-radius:99px;margin-right:6px}}
     .tags{{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}} .tag{{display:inline-block;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);font-size:14px;color:#dce7fc}}
     .quotes{{display:grid;gap:12px}} .quote{{padding:16px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.03)}} .quote p{{margin:0;font-size:15px;line-height:1.9;color:#eef4ff}} .quote .meta2{{margin-top:8px;font-size:13px;color:#9cb0d3;line-height:1.75}} .qlabel{{display:inline-block;padding:7px 11px;border-radius:999px;font-size:12px;font-weight:700;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04);color:#d6e3fb;white-space:nowrap;margin-bottom:10px}}
     .mini-grid{{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}} .mini{{padding:14px 16px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.03)}} .mini .label{{font-size:12px;color:#92a6cb}} .mini .num{{margin-top:6px;font-size:24px;font-weight:800}} .foot{{padding:4px 6px 0;color:#90a4c7;font-size:13px;line-height:1.8;text-align:center}}
@@ -308,10 +331,10 @@ def build_page(symbol, name, quote, enriched, strong, daily, title, top_words, s
   <div class="panel">
     <div class="section-title">核心指标</div>
     <div class="grid4">
-      <div class="card"><div class="k">Sentiment Score</div><div class="v">{sentiment_score}</div><div class="d">综合多空倾向与中性分布得到的情绪温度值。50 以下偏冷，50 以上偏修复。</div><div class="hint">适合观察近一周情绪方向变化</div></div>
-      <div class="card"><div class="k">Extremity RSI</div><div class="v">{extremity_rsi}</div><div class="d">衡量情绪是否正在逼近极端区间。越低越接近恐慌，越高越接近过热。</div><div class="hint">用于识别情绪拐点风险</div></div>
-      <div class="card"><div class="k">Heat Score</div><div class="v">{heat_score}</div><div class="d">反映近一周讨论热度与关注集中度。越高代表市场关注越聚焦。</div><div class="hint">用于判断题材是否正在升温</div></div>
-      <div class="card"><div class="k">Focus Ratio</div><div class="v">{pct(total, len(enriched))}%</div><div class="d">反映讨论是否高度聚焦在该标的本身，比例越高，情绪信号越集中。</div><div class="hint">用于区分泛讨论与强聚焦讨论</div></div>
+      <div class="card"><div class="k">Sentiment Score</div><div class="gauge-wrap">{svg_gauge(sentiment_score, '#7aa2ff', '情绪温度')}</div><div class="d">综合多空倾向与中性分布得到的情绪温度值。50 以下偏冷，50 以上偏修复。</div><div class="hint">适合观察近一周情绪方向变化</div></div>
+      <div class="card"><div class="k">Extremity RSI</div><div class="gauge-wrap">{svg_gauge(extremity_rsi, '#ff6b7c', '极端程度')}</div><div class="d">衡量情绪是否正在逼近极端区间。越低越接近恐慌，越高越接近过热。</div><div class="hint">用于识别情绪拐点风险</div></div>
+      <div class="card"><div class="k">Heat Score</div><div class="gauge-wrap">{svg_gauge(heat_score, '#ffb84d', '讨论热度')}</div><div class="d">反映近一周讨论热度与关注集中度。越高代表市场关注越聚焦。</div><div class="hint">用于判断题材是否正在升温</div></div>
+      <div class="card"><div class="k">Focus Ratio</div><div class="gauge-wrap">{svg_gauge(pct(total, len(enriched)), '#23c483', '聚焦比例')}</div><div class="d">反映讨论是否高度聚焦在该标的本身，比例越高，情绪信号越集中。</div><div class="hint">用于区分泛讨论与强聚焦讨论</div></div>
     </div>
   </div>
 
