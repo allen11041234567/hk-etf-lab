@@ -80,6 +80,11 @@
     .quiz-result{display:none;margin-top:14px;background:#eef4ff;border:1px solid #cfe0ff;border-radius:18px;padding:16px}
     .quiz-result.show{display:block}
     .quiz-result .name{font-size:24px;font-weight:800;margin-top:4px}
+    .quiz-card{display:flex;gap:14px;align-items:flex-start}
+    .quiz-avatar{width:88px;height:88px;border-radius:999px;object-fit:cover;object-position:center top;flex:0 0 88px;border:1px solid #dbe4f0;background:#fff}
+    .quiz-meta{font-size:13px;line-height:1.7;color:#334155;margin-top:8px}
+    .quiz-quote{margin-top:10px;padding:10px 12px;background:#fff;border:1px solid #dbe4f0;border-radius:14px;font-size:13px;line-height:1.7;color:#334155}
+    @media (max-width:640px){.quiz-card{flex-direction:column;align-items:flex-start}.quiz-avatar{width:72px;height:72px;flex-basis:72px}}
     @media (max-width:640px){.quiz-step{padding:14px}.quiz-step h3{font-size:16px}.opt{font-size:13px;padding:9px 10px}}
 
     @media (max-width:900px){
@@ -585,12 +590,23 @@
     </div>
   </div>
 <script>
-const QUIZ_MAP={buffett:{name:'沃伦·巴菲特',url:'./masters-hk-etf/buffett.html',desc:'你更重视生意质量、现金流和长期复利。'},munger:{name:'查理·芒格',url:'./masters-hk-etf/munger.html',desc:'你更像少犯错、先排雷、集中在高质量资产的一派。'},graham:{name:'本杰明·格雷厄姆',url:'./masters-hk-etf/graham.html',desc:'你更看重安全边际、低估值和防守型分散。'},fisher:{name:'菲利普·费雪',url:'./masters-hk-etf/fisher.html',desc:'你更偏爱高质量成长和长期扩张。'},lynch:{name:'彼得·林奇',url:'./masters-hk-etf/lynch.html',desc:'你更喜欢看得懂、能持续跟踪的成长主线。'},marks:{name:'霍华德·马克斯',url:'./masters-hk-etf/marks.html',desc:'你更重视周期位置、赔率和逆向思维。'},dalio:{name:'瑞·达利欧',url:'./masters-hk-etf/dalio.html',desc:'你更像宏观平衡派，先看组合韧性。'},soros:{name:'乔治·索罗斯',url:'./masters-hk-etf/soros.html',desc:'你更擅长用高弹性工具表达强观点。'},druckenmiller:{name:'斯坦利·德鲁肯米勒',url:'./masters-hk-etf/druckenmiller.html',desc:'你更像趋势集中出击派。'},templeton:{name:'约翰·邓普顿',url:'./masters-hk-etf/templeton.html',desc:'你更偏爱在冷门和悲观里找机会。'}};
+const QUIZ_MAP={
+buffett:{name:'沃伦·巴菲特',url:'./masters-hk-etf/buffett.html',desc:'你更重视生意质量、现金流和长期复利。',mode:'价值复利型，先看生意质量，再看价格。',fit:'红利 / 宽基 / 核心资产型 ETF',quote:'我买ETF，不是为了参与热闹，而是为了拥有一组未来几年仍能持续赚钱的企业。',img:'https://upload.wikimedia.org/wikipedia/commons/d/d4/Warren_Buffett_at_the_2015_SelectUSA_Investment_Summit_%28cropped%29.jpg'},
+munger:{name:'查理·芒格',url:'./masters-hk-etf/munger.html',desc:'你更像少犯错、先排雷、集中在高质量资产的一派。',mode:'高胜率过滤型，先排雷，再下手。',fit:'精选 / 红利 / 大盘质量型 ETF',quote:'与其到处找机会，不如先确保自己别掉进显而易见的坑里。',img:'https://upload.wikimedia.org/wikipedia/commons/5/56/Charlie_Munger_%28cropped%29.jpg'},
+graham:{name:'本杰明·格雷厄姆',url:'./masters-hk-etf/graham.html',desc:'你更看重安全边际、低估值和防守型分散。',mode:'防守低估型，靠安全边际赚赔率。',fit:'宽基 / 低估值 / 分散型 ETF',quote:'真正的防守，不是看起来便宜，而是即使看错也不会伤得太重。',img:'https://upload.wikimedia.org/wikipedia/commons/2/2a/Benjamin_Graham_%281894-1976%29_portrait_on_23_March_1950.jpg'},
+fisher:{name:'菲利普·费雪',url:'./masters-hk-etf/fisher.html',desc:'你更偏爱高质量成长和长期扩张。',mode:'成长精选型，愿意为好公司长期扩张付溢价。',fit:'龙头成长 / 精选科技 / 长期扩张型 ETF',quote:'最好的收益，往往来自少数真正优秀的成长资产被长期拿住。',img:'https://upload.wikimedia.org/wikipedia/en/d/d9/Philip_Arthur_Fisher.jpg'},
+lynch:{name:'彼得·林奇',url:'./masters-hk-etf/lynch.html',desc:'你更喜欢看得懂、能持续跟踪的成长主线。',mode:'常识成长型，买自己能持续讲清楚的方向。',fit:'科技成长 / 平台龙头 / 生物科技型 ETF',quote:'最好的投资，往往不是最深奥的，而是你能持续讲清楚的。',img:'https://a.storyblok.com/f/182663/1200x630/dd0e91187b/og_investor-portraits-peter-lynch.jpg/m/1200x630'},
+marks:{name:'霍华德·马克斯',url:'./masters-hk-etf/marks.html',desc:'你更重视周期位置、赔率和逆向思维。',mode:'周期逆向型，先看现在值不值得冒险。',fit:'红利 / 宽基 / 逆周期修复型 ETF',quote:'真正好的机会，往往出现在别人最不愿意讨论风险资产的时候。',img:'https://upload.wikimedia.org/wikipedia/commons/8/8b/Howard_Marks_2.17.12_%28cropped%29.jpg'},
+dalio:{name:'瑞·达利欧',url:'./masters-hk-etf/dalio.html',desc:'你更像宏观平衡派，先看组合韧性。',mode:'宏观平衡型，先搭结构，再谈进攻。',fit:'宽基 / 跨区域 / 组合平衡型 ETF',quote:'不要让组合只有一种天气。',img:'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Web_Summit_2018_-_Forum_-_Day_2%2C_November_7_HM1_7481_%2844858045925%29.jpg/960px-Web_Summit_2018_-_Forum_-_Day_2%2C_November_7_HM1_7481_%2844858045925%29.jpg'},
+soros:{name:'乔治·索罗斯',url:'./masters-hk-etf/soros.html',desc:'你更擅长用高弹性工具表达强观点。',mode:'高弹性交易型，看对就放大，错了就快撤。',fit:'科技弹性 / 情绪强化 / 主题表达型 ETF',quote:'市场情绪是可以被利用的力量。',img:'https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/George_Soros%2C_Founder_and_Chairman_of_the_Open_Society_Foundations%2C_visits_the_EC_%283x4_cropped%29.jpg/960px-George_Soros%2C_Founder_and_Chairman_of_the_Open_Society_Foundations%2C_visits_the_EC_%283x4_cropped%29.jpg'},
+druckenmiller:{name:'斯坦利·德鲁肯米勒',url:'./masters-hk-etf/druckenmiller.html',desc:'你更像趋势集中出击派。',mode:'趋势重仓型，最强主线配最强仓位。',fit:'科技主线 / 强趋势 / 高效率表达型 ETF',quote:'看对大趋势，就该狠狠干。',img:'https://pittsburghquarterly.com/wp-content/uploads/2025/01/2025-01-08-1-e1736317725977-1024x612.png'},
+templeton:{name:'约翰·邓普顿',url:'./masters-hk-etf/templeton.html',desc:'你更偏爱在冷门和悲观里找机会。',mode:'全球逆向型，专找被低估、被忽视的地方。',fit:'跨市场 / 冷门区域 / 逆向埋伏型 ETF',quote:'去别人不愿去的地方找便宜货。',img:'https://www.lgt.com/resource/image/301474/landscape_ratio16x9/1088/612/7646fd4ab80b02743fc83bbf8590cff7/BAEB9A743B5A69C51042336E2067D17D/25-575-johntempletonbrief-en.webp'}
+};
 let currentQuizStep=1;
 function showQuizStep(n){document.querySelectorAll('.quiz-step').forEach(el=>el.classList.remove('active'));const el=document.querySelector('.quiz-step[data-step="'+n+'"]');if(el)el.classList.add('active');currentQuizStep=n;}
 function prevInvestorQuiz(){if(currentQuizStep>1)showQuizStep(currentQuizStep-1);}
 function handleQuizAnswer(step){if(step<6){showQuizStep(step+1);}else{runInvestorQuiz();}}
-function runInvestorQuiz(){const scores={};document.querySelectorAll('#investor-quiz input[type=radio]:checked').forEach(i=>scores[i.value]=(scores[i.value]||0)+1);const entries=Object.entries(scores).sort((a,b)=>b[1]-a[1]);const box=document.getElementById('quiz-result');if(entries.length<6){box.className='quiz-result show';box.innerHTML='<b>还没法出结果。</b><br/>先把所有问题答完，再看你更像谁。';return;}const [key]=entries[0];const r=QUIZ_MAP[key];box.className='quiz-result show';box.innerHTML='<div class="k">测试结果</div><div class="name">你更像：'+r.name+'</div><div class="sub" style="margin-top:8px">'+r.desc+'</div><a class="detail-link" style="margin-top:12px" href="'+r.url+'">进入对应大师页面 →</a>';}
+function runInvestorQuiz(){const scores={};document.querySelectorAll('#investor-quiz input[type=radio]:checked').forEach(i=>scores[i.value]=(scores[i.value]||0)+1);const entries=Object.entries(scores).sort((a,b)=>b[1]-a[1]);const box=document.getElementById('quiz-result');if(entries.length<6){box.className='quiz-result show';box.innerHTML='<b>还没法出结果。</b><br/>先把所有问题答完，再看你更像谁。';return;}const [key]=entries[0];const r=QUIZ_MAP[key];box.className='quiz-result show';box.innerHTML='<div class="k">测试结果</div><div class="quiz-card"><img class="quiz-avatar" src="'+r.img+'" alt="'+r.name+'"><div><div class="name">你更像：'+r.name+'</div><div class="sub" style="margin-top:8px">'+r.desc+'</div><div class="quiz-meta"><b>你的交易模式：</b>'+r.mode+'<br/><b>你在香港市场最拿手的ETF品种：</b>'+r.fit+'</div><div class="quiz-quote">“'+r.quote+'”</div><a class="detail-link" style="margin-top:12px" href="'+r.url+'">进入完整大师页面 →</a></div></div>'; }
 function resetInvestorQuiz(){document.querySelectorAll('#investor-quiz input[type=radio]').forEach(i=>i.checked=false);const box=document.getElementById('quiz-result');box.className='quiz-result';box.innerHTML='';showQuizStep(1);}
 
 </script>
