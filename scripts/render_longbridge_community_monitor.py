@@ -215,9 +215,8 @@ def svg_gauge(value, color='#7aa2ff', label=''):
     theta = math.pi * (1 - value / 100)
     vx = cx + r * math.cos(theta)
     vy = cy - r * math.sin(theta)
-    large = 1 if value > 50 else 0
     bg = f'M {start_x:.1f} {start_y:.1f} A {r} {r} 0 0 1 {end_x:.1f} {end_y:.1f}'
-    fg = f'M {start_x:.1f} {start_y:.1f} A {r} {r} 0 {large} 1 {vx:.1f} {vy:.1f}'
+    fg = f'M {start_x:.1f} {start_y:.1f} A {r} {r} 0 0 1 {vx:.1f} {vy:.1f}'
     return (
         '<svg viewBox="0 0 200 132" class="gauge">'
         f'<path d="{bg}" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="14" stroke-linecap="round" />'
