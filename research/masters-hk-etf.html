@@ -162,15 +162,7 @@
       <div class="section-title">先做个小测试，你更像哪位投资大师？</div>
       <div class="sub">回答 6 个小问题，一题一题往下走，看看你的投资直觉更接近哪种风格。</div>
       <div id="investor-quiz">
-        <div class="quiz-step active" data-step="1">
-          <div class="quiz-progress">第 1 / 6 题</div>
-          <h3>市场大跌时，你第一反应更像？</h3>
-          <div class="opts">
-            <label class="opt"><input type="radio" name="q1" value="buffett"> 分批买入优质大盘和红利资产</label>
-            <label class="opt"><input type="radio" name="q1" value="marks"> 先判断是不是情绪过度，再逆向慢慢买</label>
-            <label class="opt"><input type="radio" name="q1" value="soros"> 看有没有最强反弹主线，直接打高弹性</label>
-          </div>
-        </div>
+        <div class="quiz-step active" data-step="1"><div class="quiz-progress">第 1 / 6 题</div><h3>市场大跌时，你第一反应更像？</h3><div class="opts"><label class="opt"><input type="radio" name="q1" value="buffett"> 分批买入优质大盘和红利资产</label><label class="opt"><input type="radio" name="q1" value="marks"> 先判断是不是情绪过度，再逆向慢慢买</label><label class="opt"><input type="radio" name="q1" value="soros"> 看有没有最强反弹主线，直接打高弹性</label></div></div>
         <div class="quiz-step" data-step="2"><div class="quiz-progress">第 2 / 6 题</div><h3>你更喜欢哪类产品？</h3><div class="opts"><label class="opt"><input type="radio" name="q2" value="graham"> 宽基、低估值、分散型 ETF</label><label class="opt"><input type="radio" name="q2" value="fisher"> 龙头成长、精选科技、长期扩张型 ETF</label><label class="opt"><input type="radio" name="q2" value="dalio"> 跨区域、能放进组合做平衡的 ETF</label></div></div>
         <div class="quiz-step" data-step="3"><div class="quiz-progress">第 3 / 6 题</div><h3>你更接受哪种赚钱方式？</h3><div class="opts"><label class="opt"><input type="radio" name="q3" value="lynch"> 找自己能讲清楚的成长主线，边跟踪边加仓</label><label class="opt"><input type="radio" name="q3" value="druckenmiller"> 看准趋势后狠狠干一段</label><label class="opt"><input type="radio" name="q3" value="templeton"> 去别人不愿意去的市场里埋伏便宜机会</label></div></div>
         <div class="quiz-step" data-step="4"><div class="quiz-progress">第 4 / 6 题</div><h3>如果一个主题特别火，你通常会？</h3><div class="opts"><label class="opt"><input type="radio" name="q4" value="munger"> 先怀疑自己是不是看漏了风险</label><label class="opt"><input type="radio" name="q4" value="soros"> 看趋势有没有继续强化的空间</label><label class="opt"><input type="radio" name="q4" value="marks"> 看它是不是已经贵到不值得冒险</label></div></div>
@@ -179,7 +171,6 @@
       </div>
       <div class="quiz-actions">
         <button class="btn secondary" onclick="prevInvestorQuiz()">上一题</button>
-        <button class="btn" onclick="nextInvestorQuiz()">下一题</button>
         <button class="btn secondary" onclick="resetInvestorQuiz()">重置</button>
       </div>
       <div class="quiz-result" id="quiz-result"></div>
@@ -595,9 +586,12 @@
   </div>
 <script>
 const QUIZ_MAP={buffett:{name:'沃伦·巴菲特',url:'./masters-hk-etf/buffett.html',desc:'你更重视生意质量、现金流和长期复利。'},munger:{name:'查理·芒格',url:'./masters-hk-etf/munger.html',desc:'你更像少犯错、先排雷、集中在高质量资产的一派。'},graham:{name:'本杰明·格雷厄姆',url:'./masters-hk-etf/graham.html',desc:'你更看重安全边际、低估值和防守型分散。'},fisher:{name:'菲利普·费雪',url:'./masters-hk-etf/fisher.html',desc:'你更偏爱高质量成长和长期扩张。'},lynch:{name:'彼得·林奇',url:'./masters-hk-etf/lynch.html',desc:'你更喜欢看得懂、能持续跟踪的成长主线。'},marks:{name:'霍华德·马克斯',url:'./masters-hk-etf/marks.html',desc:'你更重视周期位置、赔率和逆向思维。'},dalio:{name:'瑞·达利欧',url:'./masters-hk-etf/dalio.html',desc:'你更像宏观平衡派，先看组合韧性。'},soros:{name:'乔治·索罗斯',url:'./masters-hk-etf/soros.html',desc:'你更擅长用高弹性工具表达强观点。'},druckenmiller:{name:'斯坦利·德鲁肯米勒',url:'./masters-hk-etf/druckenmiller.html',desc:'你更像趋势集中出击派。'},templeton:{name:'约翰·邓普顿',url:'./masters-hk-etf/templeton.html',desc:'你更偏爱在冷门和悲观里找机会。'}};
-function runInvestorQuiz(){const scores={}; document.querySelectorAll('#investor-quiz input[type=radio]:checked').forEach(i=>scores[i.value]=(scores[i.value]||0)+1); const entries=Object.entries(scores).sort((a,b)=>b[1]-a[1]); const box=document.getElementById('quiz-result'); if(!entries.length){box.className='quiz-result show'; box.innerHTML='<b>还没法出结果。</b><br/>先选完上面的问题，再看你更像谁。'; return;} const [key,score]=entries[0]; const r=QUIZ_MAP[key]; box.className='quiz-result show'; box.innerHTML=`<div class="k">测试结果</div><div class="name">你更像：${r.name}</div><div class="sub" style="margin-top:8px">${r.desc}</div><div class="detail-link" style="margin-top:12px" onclick="location.href='${r.url}'">进入对应大师页面 →</div>`;}
-function resetInvestorQuiz(){document.querySelectorAll('#investor-quiz input[type=radio]').forEach(i=>i.checked=false); const box=document.getElementById('quiz-result'); box.className='quiz-result'; box.innerHTML='';}
+let currentQuizStep=1;
+function showQuizStep(n){document.querySelectorAll('.quiz-step').forEach(el=>el.classList.remove('active'));const el=document.querySelector('.quiz-step[data-step="'+n+'"]');if(el)el.classList.add('active');currentQuizStep=n;}
+function prevInvestorQuiz(){if(currentQuizStep>1)showQuizStep(currentQuizStep-1);}
+function runInvestorQuiz(){const scores={};document.querySelectorAll('#investor-quiz input[type=radio]:checked').forEach(i=>scores[i.value]=(scores[i.value]||0)+1);const entries=Object.entries(scores).sort((a,b)=>b[1]-a[1]);const box=document.getElementById('quiz-result');if(entries.length<6){box.className='quiz-result show';box.innerHTML='<b>还没法出结果。</b><br/>先把所有问题答完，再看你更像谁。';return;}const [key]=entries[0];const r=QUIZ_MAP[key];box.className='quiz-result show';box.innerHTML='<div class="k">测试结果</div><div class="name">你更像：'+r.name+'</div><div class="sub" style="margin-top:8px">'+r.desc+'</div><div class="detail-link" style="margin-top:12px" onclick="location.href=''+r.url+''">进入对应大师页面 →</div>';}
+function resetInvestorQuiz(){document.querySelectorAll('#investor-quiz input[type=radio]').forEach(i=>i.checked=false);const box=document.getElementById('quiz-result');box.className='quiz-result';box.innerHTML='';showQuizStep(1);}
+document.addEventListener('change',function(e){if(e.target.matches('#investor-quiz input[type=radio]')){const step=parseInt((e.target.name||'q1').replace('q',''),10)||1;if(step<6){showQuizStep(step+1);}else{runInvestorQuiz();}}});
 </script>
-
 </body>
 </html>
