@@ -451,6 +451,9 @@ def main():
     out_dir.mkdir(parents=True, exist_ok=True)
     out_path = out_dir / 'community.html'
     build_page(symbol, name, quote, enriched, strong, daily, title, top_words, sentiment_score, extremity_rsi, heat_score, gen, out_path)
+    routed_dir = out_dir / 'community'
+    routed_dir.mkdir(parents=True, exist_ok=True)
+    (routed_dir / 'index.html').write_text(out_path.read_text(encoding='utf-8'), encoding='utf-8')
 
     print(json.dumps({
         'ok': True,
