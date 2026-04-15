@@ -67,17 +67,20 @@
     .compare th{font-size:12px;color:#64748b;text-transform:uppercase;letter-spacing:.04em}
     .footer{padding:4px 4px 0;color:#64748b;font-size:12px;line-height:1.8}
     .quiz-panel{background:linear-gradient(180deg,#ffffff 0%,#f8fbff 100%)}
-    .quiz-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-    .q{background:#f8fafc;border:1px solid var(--line);border-radius:18px;padding:14px}
-    .q h3{margin:0 0 10px;font-size:16px}
+    .quiz-step{background:#f8fafc;border:1px solid var(--line);border-radius:18px;padding:16px;display:none}
+    .quiz-step.active{display:block}
+    .quiz-progress{font-size:12px;color:var(--muted);margin-bottom:10px}
+    .quiz-step h3{margin:0 0 12px;font-size:18px;line-height:1.5}
     .opts{display:grid;gap:8px}
-    .opt{display:flex;gap:8px;align-items:flex-start;font-size:13px;line-height:1.6;color:#334155}
+    .opt{display:flex;gap:8px;align-items:flex-start;font-size:14px;line-height:1.7;color:#334155;padding:10px 12px;border:1px solid var(--line);border-radius:14px;background:#fff;cursor:pointer}
+    .opt:hover{border-color:#bfd3ff;background:#f8fbff}
     .quiz-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
     .btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:999px;border:1px solid var(--line);background:#111827;color:#fff;font-size:13px;font-weight:700;cursor:pointer}
     .btn.secondary{background:#fff;color:#334155}
     .quiz-result{display:none;margin-top:14px;background:#eef4ff;border:1px solid #cfe0ff;border-radius:18px;padding:16px}
     .quiz-result.show{display:block}
     .quiz-result .name{font-size:24px;font-weight:800;margin-top:4px}
+    @media (max-width:640px){.quiz-step{padding:14px}.quiz-step h3{font-size:16px}.opt{font-size:13px;padding:9px 10px}}
 
     @media (max-width:900px){
       .summary-grid,.masters{grid-template-columns:1fr}
@@ -157,41 +160,26 @@
 
     <div class="panel quiz-panel">
       <div class="section-title">先做个小测试，你更像哪位投资大师？</div>
-      <div class="sub">回答 6 个小问题，看看你的直觉更接近哪种投资风格。测完会直接给出最像的结果，并跳到对应大师页面继续看。</div>
-      <div class="quiz-grid" id="investor-quiz">
-        <div class="q"><h3>1. 市场大跌时，你第一反应更像？</h3><div class="opts">
-          <label class="opt"><input type="radio" name="q1" value="buffett"> 分批买入优质大盘和红利资产</label>
-          <label class="opt"><input type="radio" name="q1" value="marks"> 先判断是不是情绪过度，再逆向慢慢买</label>
-          <label class="opt"><input type="radio" name="q1" value="soros"> 看有没有最强反弹主线，直接打高弹性</label>
-        </div></div>
-        <div class="q"><h3>2. 你更喜欢哪类产品？</h3><div class="opts">
-          <label class="opt"><input type="radio" name="q2" value="graham"> 宽基、低估值、分散型 ETF</label>
-          <label class="opt"><input type="radio" name="q2" value="fisher"> 龙头成长、精选科技、长期扩张型 ETF</label>
-          <label class="opt"><input type="radio" name="q2" value="dalio"> 跨区域、能放进组合做平衡的 ETF</label>
-        </div></div>
-        <div class="q"><h3>3. 你更接受哪种赚钱方式？</h3><div class="opts">
-          <label class="opt"><input type="radio" name="q3" value="lynch"> 找自己看得懂的成长主线，边跟踪边加仓</label>
-          <label class="opt"><input type="radio" name="q3" value="druckenmiller"> 看准趋势后狠狠干一段</label>
-          <label class="opt"><input type="radio" name="q3" value="templeton"> 去别人不愿意去的市场里埋伏便宜机会</label>
-        </div></div>
-        <div class="q"><h3>4. 如果一个主题特别火，你通常会？</h3><div class="opts">
-          <label class="opt"><input type="radio" name="q4" value="munger"> 先怀疑自己是不是看漏了风险</label>
-          <label class="opt"><input type="radio" name="q4" value="soros"> 看趋势有没有继续强化的空间</label>
-          <label class="opt"><input type="radio" name="q4" value="marks"> 看它是不是已经贵到不值得冒险</label>
-        </div></div>
-        <div class="q"><h3>5. 你最在意哪件事？</h3><div class="opts">
-          <label class="opt"><input type="radio" name="q5" value="buffett"> 生意质量和现金流</label>
-          <label class="opt"><input type="radio" name="q5" value="fisher"> 管理层和长期成长空间</label>
-          <label class="opt"><input type="radio" name="q5" value="dalio"> 组合在不同宏观环境下的韧性</label>
-        </div></div>
-        <div class="q"><h3>6. 你的仓位风格更像？</h3><div class="opts">
-          <label class="opt"><input type="radio" name="q6" value="graham"> 分散持有，避免单点失误</label>
-          <label class="opt"><input type="radio" name="q6" value="lynch"> 小仓起步，越看越懂再加</label>
-          <label class="opt"><input type="radio" name="q6" value="druckenmiller"> 把仓位压向最有把握的那一两条主线</label>
-        </div></div>
+      <div class="sub">回答 6 个小问题，一题一题往下走，看看你的投资直觉更接近哪种风格。</div>
+      <div id="investor-quiz">
+        <div class="quiz-step active" data-step="1">
+          <div class="quiz-progress">第 1 / 6 题</div>
+          <h3>市场大跌时，你第一反应更像？</h3>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="q1" value="buffett"> 分批买入优质大盘和红利资产</label>
+            <label class="opt"><input type="radio" name="q1" value="marks"> 先判断是不是情绪过度，再逆向慢慢买</label>
+            <label class="opt"><input type="radio" name="q1" value="soros"> 看有没有最强反弹主线，直接打高弹性</label>
+          </div>
+        </div>
+        <div class="quiz-step" data-step="2"><div class="quiz-progress">第 2 / 6 题</div><h3>你更喜欢哪类产品？</h3><div class="opts"><label class="opt"><input type="radio" name="q2" value="graham"> 宽基、低估值、分散型 ETF</label><label class="opt"><input type="radio" name="q2" value="fisher"> 龙头成长、精选科技、长期扩张型 ETF</label><label class="opt"><input type="radio" name="q2" value="dalio"> 跨区域、能放进组合做平衡的 ETF</label></div></div>
+        <div class="quiz-step" data-step="3"><div class="quiz-progress">第 3 / 6 题</div><h3>你更接受哪种赚钱方式？</h3><div class="opts"><label class="opt"><input type="radio" name="q3" value="lynch"> 找自己能讲清楚的成长主线，边跟踪边加仓</label><label class="opt"><input type="radio" name="q3" value="druckenmiller"> 看准趋势后狠狠干一段</label><label class="opt"><input type="radio" name="q3" value="templeton"> 去别人不愿意去的市场里埋伏便宜机会</label></div></div>
+        <div class="quiz-step" data-step="4"><div class="quiz-progress">第 4 / 6 题</div><h3>如果一个主题特别火，你通常会？</h3><div class="opts"><label class="opt"><input type="radio" name="q4" value="munger"> 先怀疑自己是不是看漏了风险</label><label class="opt"><input type="radio" name="q4" value="soros"> 看趋势有没有继续强化的空间</label><label class="opt"><input type="radio" name="q4" value="marks"> 看它是不是已经贵到不值得冒险</label></div></div>
+        <div class="quiz-step" data-step="5"><div class="quiz-progress">第 5 / 6 题</div><h3>你最在意哪件事？</h3><div class="opts"><label class="opt"><input type="radio" name="q5" value="buffett"> 生意质量和现金流</label><label class="opt"><input type="radio" name="q5" value="fisher"> 管理层和长期成长空间</label><label class="opt"><input type="radio" name="q5" value="dalio"> 组合在不同宏观环境下的韧性</label></div></div>
+        <div class="quiz-step" data-step="6"><div class="quiz-progress">第 6 / 6 题</div><h3>你的仓位风格更像？</h3><div class="opts"><label class="opt"><input type="radio" name="q6" value="graham"> 分散持有，避免单点失误</label><label class="opt"><input type="radio" name="q6" value="lynch"> 小仓起步，越看越懂再加</label><label class="opt"><input type="radio" name="q6" value="druckenmiller"> 把仓位压向最有把握的那一两条主线</label></div></div>
       </div>
       <div class="quiz-actions">
-        <button class="btn" onclick="runInvestorQuiz()">查看结果</button>
+        <button class="btn secondary" onclick="prevInvestorQuiz()">上一题</button>
+        <button class="btn" onclick="nextInvestorQuiz()">下一题</button>
         <button class="btn secondary" onclick="resetInvestorQuiz()">重置</button>
       </div>
       <div class="quiz-result" id="quiz-result"></div>
