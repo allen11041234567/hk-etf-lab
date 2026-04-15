@@ -4,285 +4,82 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>03033.HK 散户情绪监控器</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;800&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg:#07111f;
-      --bg-2:#091524;
-      --panel:rgba(11,23,43,.82);
-      --panel-2:rgba(13,27,51,.92);
-      --line:rgba(255,255,255,.08);
-      --line-2:rgba(122,162,255,.22);
-      --text:#eef4ff;
-      --muted:#96a8c9;
-      --blue:#7aa2ff;
-      --blue-2:#3b82f6;
-      --green:#23c483;
-      --red:#ff6b7c;
-      --amber:#ffb84d;
-      --purple:#8b7cff;
-      --shadow:0 24px 60px rgba(0,0,0,.28);
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      background:
-        radial-gradient(circle at top left, rgba(74,120,255,.22), transparent 28%),
-        radial-gradient(circle at top right, rgba(80,215,195,.12), transparent 24%),
-        linear-gradient(180deg,var(--bg) 0%,var(--bg-2) 42%,var(--bg) 100%);
-      color:var(--text);
-      font-family:"Noto Sans SC",-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
-    }
-    .wrap{max-width:1240px;margin:0 auto;padding:28px 20px 44px}
-    .hero,.panel{
-      background:linear-gradient(180deg,rgba(10,20,39,.94) 0%,rgba(10,22,43,.9) 100%);
-      border:1px solid var(--line);
-      border-radius:28px;
-      box-shadow:var(--shadow);
-      backdrop-filter:blur(10px);
-      margin-bottom:18px;
-    }
-    .hero{padding:30px 30px 26px;position:relative;overflow:hidden}
-    .hero:after{
-      content:"";position:absolute;right:-100px;top:-90px;width:320px;height:320px;
-      background:radial-gradient(circle, rgba(122,162,255,.24), transparent 62%);
-      pointer-events:none;
-    }
-    .panel{padding:20px}
-    .topnav{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
-    .chip{
-      display:inline-block;padding:8px 12px;border-radius:999px;
-      background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);
-      font-size:13px;color:#dbe7ff;text-decoration:none;
-    }
-    .eyebrow{
-      display:inline-block;padding:8px 12px;border-radius:999px;
-      background:rgba(122,162,255,.12);color:#cfe0ff;border:1px solid rgba(122,162,255,.24);
-      font-size:13px;font-weight:700;letter-spacing:.02em;
-    }
-    h1{margin:14px 0 12px;font-size:42px;line-height:1.12;letter-spacing:-.02em}
-    .sub{font-size:17px;line-height:1.9;color:#bfd0eb;max-width:960px}
-    .status-line{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:16px}
-    .signal-pill{
-      display:inline-block;padding:10px 14px;border-radius:999px;background:rgba(255,184,77,.12);
-      border:1px solid rgba(255,184,77,.2);color:#ffd694;font-size:13px;font-weight:700;
-    }
-    .tag{
-      display:inline-block;padding:7px 11px;border-radius:999px;font-size:12px;font-weight:700;
-      border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04);color:#d6e3fb;white-space:nowrap
-    }
-    .section-title{font-size:24px;font-weight:800;margin:4px 4px 16px}
-    .grid-4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
-    .grid-2{display:grid;grid-template-columns:1.08fr .92fr;gap:14px}
-    .card{
-      background:linear-gradient(180deg,rgba(17,31,56,.96) 0%,rgba(13,25,47,.94) 100%);
-      border:1px solid var(--line);
-      border-radius:24px;padding:22px 22px 18px;
-      box-shadow:0 10px 30px rgba(0,0,0,.18);
-    }
-    .accent-blue{box-shadow:inset 0 1px 0 rgba(122,162,255,.14),0 10px 30px rgba(0,0,0,.18);border-color:rgba(122,162,255,.2)}
-    .accent-green{box-shadow:inset 0 1px 0 rgba(35,196,131,.14),0 10px 30px rgba(0,0,0,.18);border-color:rgba(35,196,131,.18)}
-    .accent-red{box-shadow:inset 0 1px 0 rgba(255,107,124,.12),0 10px 30px rgba(0,0,0,.18);border-color:rgba(255,107,124,.18)}
-    .accent-purple{box-shadow:inset 0 1px 0 rgba(139,124,255,.14),0 10px 30px rgba(0,0,0,.18);border-color:rgba(139,124,255,.2)}
-    .accent-amber{box-shadow:inset 0 1px 0 rgba(255,184,77,.14),0 10px 30px rgba(0,0,0,.18);border-color:rgba(255,184,77,.18)}
-    .k{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
-    .v{margin-top:8px;font-size:32px;font-weight:800;line-height:1.28}
-    .d{margin-top:10px;font-size:15px;line-height:1.85;color:#cfdbf4}
-    .hint{margin-top:10px;font-size:13px;color:#98acd1;line-height:1.75}
-    .bar-group{display:grid;gap:12px;margin-top:10px}
-    .bar-row{display:grid;grid-template-columns:72px 1fr 44px;gap:12px;align-items:center}
-    .bar-label{font-size:14px;color:#d9e4fb}
-    .bar-track{height:12px;border-radius:999px;background:rgba(255,255,255,.06);overflow:hidden}
-    .bar-fill{height:100%;border-radius:999px}
-    .bull{background:linear-gradient(90deg,#17b26a 0%,#39d98a 100%)}
-    .neutral{background:linear-gradient(90deg,#5f8fff 0%,#7bc3ff 100%)}
-    .bear{background:linear-gradient(90deg,#ff667a 0%,#ff8f78 100%)}
-    .scorebox{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
-    .minibox{padding:14px 16px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.03)}
-    .minibox .label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
-    .minibox .num{margin-top:8px;font-size:28px;font-weight:800}
-    .list{display:grid;gap:12px}
-    .quote{padding:16px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.03)}
-    .quote p{margin:0;font-size:15px;line-height:1.9;color:#eef4ff}
-    .quote .meta{margin-top:8px;font-size:13px;color:#9cb0d3;line-height:1.75}
-    .chips{display:flex;flex-wrap:wrap;gap:10px}
-    .topic-chip{display:inline-block;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);font-size:14px;color:#dce7fc}
-    .table{display:grid;gap:10px}
-    .row{display:grid;grid-template-columns:110px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.06)}
-    .row:last-child{border-bottom:0}
-    .rk{color:var(--muted);font-size:14px}
-    .rv{color:#ebf3ff;font-size:15px;line-height:1.85}
-    .footer{padding:4px 6px 0;color:#90a4c7;font-size:13px;line-height:1.8;text-align:center}
-    .cta{
-      display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
-      margin-top:14px;padding:14px 16px;border-radius:18px;background:rgba(122,162,255,.08);border:1px solid rgba(122,162,255,.16)
-    }
-    .cta a{color:#dce7ff;text-decoration:none;font-weight:700}
-    @media (max-width:980px){.grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-2{grid-template-columns:1fr}h1{font-size:34px}}
-    @media (max-width:640px){
-      .wrap{padding:18px 14px 32px}.hero{padding:22px 18px 20px}.panel{padding:16px}
-      h1{font-size:30px;line-height:1.16}.sub{font-size:15px;line-height:1.78}.grid-4{grid-template-columns:1fr 1fr;gap:10px}
-      .card{padding:16px 16px 14px;border-radius:18px}.v{font-size:24px}.d{font-size:14px;line-height:1.72}
-      .row{grid-template-columns:1fr;gap:6px}.bar-row{grid-template-columns:64px 1fr 40px}.scorebox{grid-template-columns:1fr 1fr}
-    }
+    :root{--bg:#07111f;--bg2:#091524;--panel:rgba(10,22,43,.88);--line:rgba(255,255,255,.08);--text:#eef4ff;--muted:#97abcf;--blue:#7aa2ff;--green:#23c483;--red:#ff6b7c;--amber:#ffb84d;--purple:#8b7cff;--shadow:0 24px 60px rgba(0,0,0,.28)}
+    *{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at top left, rgba(74,120,255,.22), transparent 28%),radial-gradient(circle at top right, rgba(80,215,195,.12), transparent 24%),linear-gradient(180deg,var(--bg) 0%,var(--bg2) 42%,var(--bg) 100%);color:var(--text);font-family:"Noto Sans SC",sans-serif}
+    .wrap{max-width:1280px;margin:0 auto;padding:28px 20px 44px} .hero,.panel{background:linear-gradient(180deg,rgba(10,20,39,.94) 0%,rgba(10,22,43,.9) 100%);border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);margin-bottom:18px} .hero{padding:30px;position:relative;overflow:hidden} .hero:after{content:"";position:absolute;right:-100px;top:-90px;width:320px;height:320px;background:radial-gradient(circle, rgba(122,162,255,.24), transparent 62%)}
+    .eyebrow{display:inline-block;padding:8px 12px;border-radius:999px;background:rgba(122,162,255,.12);color:#cfe0ff;border:1px solid rgba(122,162,255,.24);font-size:13px;font-weight:700} h1{margin:14px 0 10px;font-size:42px;line-height:1.12} .sub{font-size:17px;line-height:1.9;color:#bfd0eb;max-width:980px}
+    .pill{display:inline-block;padding:10px 14px;border-radius:999px;background:rgba(255,184,77,.12);border:1px solid rgba(255,184,77,.22);color:#ffd694;font-size:13px;font-weight:700} .meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px} .chip{display:inline-block;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);font-size:13px;color:#dbe7ff}
+    .panel{padding:20px} .section-title{font-size:24px;font-weight:800;margin:4px 4px 16px} .grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px} .grid2{display:grid;grid-template-columns:1.04fr .96fr;gap:14px} .card{background:linear-gradient(180deg,rgba(17,31,56,.96) 0%,rgba(13,25,47,.94) 100%);border:1px solid var(--line);border-radius:24px;padding:22px 22px 18px;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+    .k{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em} .v{margin-top:8px;font-size:34px;font-weight:800;line-height:1.25} .d{margin-top:10px;font-size:15px;line-height:1.85;color:#cfdbf4} .hint{margin-top:10px;font-size:13px;color:#98acd1;line-height:1.75}
+    .donut-wrap{display:grid;place-items:center;padding-top:6px} .donut{width:220px;max-width:100%} .bars{width:100%;height:auto;display:block} .legend{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px} .legend span{font-size:13px;color:#cfe0ff} .dot{display:inline-block;width:10px;height:10px;border-radius:99px;margin-right:6px}
+    .tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px} .tag{display:inline-block;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);font-size:14px;color:#dce7fc}
+    .quotes{display:grid;gap:12px} .quote{padding:16px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.03)} .quote p{margin:0;font-size:15px;line-height:1.9;color:#eef4ff} .quote .meta2{margin-top:8px;font-size:13px;color:#9cb0d3;line-height:1.75} .qlabel{display:inline-block;padding:7px 11px;border-radius:999px;font-size:12px;font-weight:700;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04);color:#d6e3fb;white-space:nowrap;margin-bottom:10px}
+    table{width:100%;border-collapse:collapse} th,td{padding:12px 10px;border-bottom:1px solid rgba(255,255,255,.06);text-align:left;font-size:14px;vertical-align:top} th{color:#9db1d4;font-weight:700} td{color:#e7efff} a{color:#a6c0ff;text-decoration:none} .foot{padding:4px 6px 0;color:#90a4c7;font-size:13px;line-height:1.8;text-align:center}
+    @media (max-width:980px){.grid4{grid-template-columns:repeat(2,minmax(0,1fr))}.grid2{grid-template-columns:1fr}h1{font-size:34px}} @media (max-width:640px){.wrap{padding:18px 14px 32px}.hero{padding:22px 18px 20px}.panel{padding:16px}.grid4{grid-template-columns:1fr 1fr;gap:10px}.card{padding:16px 16px 14px;border-radius:18px}.v{font-size:24px}.d{font-size:14px;line-height:1.72}}
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="hero">
-      <div class="topnav">
-        <a class="chip" href="../../index.html">⌂ 首页</a>
-        <a class="chip" href="../index.html">LOGBIAS</a>
-        <a class="chip" href="./main.html">3033 主页面</a>
-        <a class="chip" href="https://longbridge.com/zh-CN/topics/39710701">参考帖子</a>
-      </div>
-      <span class="eyebrow">Longbridge Community Monitor</span>
-      <h1>03033.HK 散户情绪监控器</h1>
-      <div class="sub">
-        这页参考 Longbridge 社区情绪案例制作，但不直接照搬 TSLA 单股模板，而是按 03033 的实际讨论结构做适配。当前把 03033、恒生科技指数以及同篮子恒科 ETF 的相关讨论合并观察，更适合抓“套牢、补仓、修复、跌麻”这类 ETF 群体情绪。
-      </div>
-      <div class="status-line">
-        <span class="signal-pill">当前结论：偏悲观，但更像“跌麻后的分批补仓阶段”</span>
-        <span class="tag">更新时间：2026-04-15 03:13 UTC</span>
-      </div>
+<div class="wrap">
+  <div class="hero">
+    <span class="eyebrow">Real-time Longbridge Community Signal</span>
+    <h1>03033.HK 散户情绪监控器</h1>
+    <div class="sub">这版已切到真实数据。基于 Longbridge 社区最近 30 条候选帖子，结合帖子详情、回复与相关性过滤，做 03033 / 恒生科技 / 同篮子恒科 ETF 的情绪监控。当前重点不是猜涨跌，而是识别“恐慌、补仓、修复、分歧”处在哪个阶段。</div>
+    <div class="meta">
+      <span class="pill">当前判断：偏悲观，且带补仓韧性</span>
+      <span class="chip">最新价 4.850</span>
+      <span class="chip">涨跌幅 +2.11%</span>
+      <span class="chip">成交额 23.79亿</span>
+      <span class="chip">成交量 4.91亿</span>
+      <span class="chip">生成时间 2026-04-15 03:32 UTC</span>
     </div>
-
-    <div class="panel">
-      <div class="section-title">核心指标</div>
-      <div class="grid-4">
-        <div class="card accent-blue">
-          <div class="k">Sentiment Score</div>
-          <div class="v">38</div>
-          <div class="d">当前整体偏空，说明社区里悲观、受挫和“还没跌完”的表达仍然占优。</div>
-          <div class="hint">0 偏空，100 偏多</div>
-        </div>
-        <div class="card accent-red">
-          <div class="k">Extremity RSI</div>
-          <div class="v">27</div>
-          <div class="d">已经接近恐慌区，但尚未形成那种一致性“彻底投降”的极端情绪。</div>
-          <div class="hint">越低越接近极端悲观</div>
-        </div>
-        <div class="card accent-green">
-          <div class="k">Heat Score</div>
-          <div class="v">41</div>
-          <div class="d">有讨论度，但它更多嵌在恒科大盘和同类 ETF 讨论里，不是孤立单票热帖。</div>
-          <div class="hint">看帖子数、回复数、互动强度</div>
-        </div>
-        <div class="card accent-purple">
-          <div class="k">Sample Status</div>
-          <div class="v">9</div>
-          <div class="d">当前强相关样本偏少，正式版需要增加相关性过滤、扩样和自动更新。</div>
-          <div class="hint">样本仍属 v0 原型状态</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="panel">
-      <div class="section-title">多空中性占比</div>
-      <div class="grid-2">
-        <div class="card accent-blue">
-          <div class="k">Sentiment Mix</div>
-          <div class="v">偏空 52% · 中性 24% · 偏多 24%</div>
-          <div class="bar-group">
-            <div class="bar-row">
-              <div class="bar-label">偏空</div>
-              <div class="bar-track"><div class="bar-fill bear" style="width:52%"></div></div>
-              <div class="bar-label">52%</div>
-            </div>
-            <div class="bar-row">
-              <div class="bar-label">中性</div>
-              <div class="bar-track"><div class="bar-fill neutral" style="width:24%"></div></div>
-              <div class="bar-label">24%</div>
-            </div>
-            <div class="bar-row">
-              <div class="bar-label">偏多</div>
-              <div class="bar-track"><div class="bar-fill bull" style="width:24%"></div></div>
-              <div class="bar-label">24%</div>
-            </div>
-          </div>
-          <div class="hint">现阶段最明显的不是一致性抄底，而是“觉得没底，但有人继续慢慢补”。</div>
-        </div>
-
-        <div class="card accent-amber">
-          <div class="k">当前判断</div>
-          <div class="v">情绪偏冷，分歧仍在</div>
-          <div class="d">这类结构更像套牢、忍耐、补仓并存，而不是全体投降式的情绪真空。所以它是弱中带冷，不是已经杀到所有人都绝望的那一步。</div>
-          <div class="scorebox">
-            <div class="minibox">
-              <div class="label">监控重点 1</div>
-              <div class="num">宣泄词</div>
-            </div>
-            <div class="minibox">
-              <div class="label">监控重点 2</div>
-              <div class="num">补仓词</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="panel">
-      <div class="section-title">代表性原话</div>
-      <div class="list">
-        <div class="quote">
-          <span class="tag">空头 / 受挫</span>
-          <p>“恒生科技指数没有底，我已经加仓三次了还是跌，谁来救救我……”</p>
-          <div class="meta">典型特征是下跌挫败感、补仓无效感和短线情绪失望，这类话最适合放进悲观样本。</div>
-        </div>
-        <div class="quote">
-          <span class="tag">逆向补仓</span>
-          <p>“恒生科技成分股跌了很久，我一直在慢慢加仓，现在已经占到组合 35%。”</p>
-          <div class="meta">更像中长期逆向配置，不是简单追涨看多，里面带着明显的扛单和信仰持有意味。</div>
-        </div>
-        <div class="quote">
-          <span class="tag">中性 / 修复</span>
-          <p>“港股今天回升，核心逻辑还是科技主线 + 板块轮动，情绪在修复，但不建议追高。”</p>
-          <div class="meta">这类偏资讯和复盘的话适合进中性池，用于解释热度与背景，不一定直接加多空权重。</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="panel">
-      <div class="section-title">主题提炼</div>
-      <div class="chips">
-        <span class="topic-chip">跌不见底</span>
-        <span class="topic-chip">补仓三次还在跌</span>
-        <span class="topic-chip">慢慢加仓</span>
-        <span class="topic-chip">科技股反弹</span>
-        <span class="topic-chip">恒科权重承压</span>
-        <span class="topic-chip">长线忍耐</span>
-      </div>
-      <div class="cta">
-        <div>下一步最值得做的是把这页接成自动更新版，让情绪分数、热度分数和样本原话都来自实时抓取。</div>
-        <a href="./main.html">查看 3033 主页面 →</a>
-      </div>
-    </div>
-
-    <div class="panel">
-      <div class="section-title">页面结构建议</div>
-      <div class="table">
-        <div class="row">
-          <div class="rk">顶部</div>
-          <div class="rv">股票名、当前结论、更新时间、时间窗切换（24h / 3d / 7d）和参考来源链接。</div>
-        </div>
-        <div class="row">
-          <div class="rk">指标层</div>
-          <div class="rv">情绪分数、极端情绪 RSI、热度分数、多空中性占比，保留“卡片 + 一眼判断”的主站风格。</div>
-        </div>
-        <div class="row">
-          <div class="rk">解释层</div>
-          <div class="rv">代表性原话、关键词主题、样本帖列表、原始 Longbridge 链接，避免只给黑盒分数。</div>
-        </div>
-        <div class="row">
-          <div class="rk">告警层</div>
-          <div class="rv">极度恐慌、极度乐观、热度异动、分歧扩大、情绪修复中，后续可以直接做成固定监控模块。</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer">HK ETF Lab · 03033 Community Sentiment Monitor</div>
   </div>
+
+  <div class="panel">
+    <div class="section-title">核心指标</div>
+    <div class="grid4">
+      <div class="card"><div class="k">Sentiment Score</div><div class="v">50.0</div><div class="d">按强相关样本中的偏多、偏空、中性占比实时计算。50 以下代表偏冷，50 以上代表修复。</div><div class="hint">实时样本：12 条</div></div>
+      <div class="card"><div class="k">Extremity RSI</div><div class="v">50.0</div><div class="d">用多空对比衡量情绪极端程度，越低越接近恐慌区，越高越接近过热区。</div><div class="hint">仅对多空样本计算</div></div>
+      <div class="card"><div class="k">Heat Score</div><div class="v">78.8</div><div class="d">结合评论、点赞、回复与相关性，衡量 03033 这条线在社区里的热度强弱。</div><div class="hint">不是总社区热度，是本主题热度</div></div>
+      <div class="card"><div class="k">Strong Relevant Ratio</div><div class="v">40.0%</div><div class="d">最近 30 条候选帖里，真正与 03033 / 恒科主题强相关并纳入计算的比例。</div><div class="hint">候选 30 条，纳入 12 条</div></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="section-title">量化可视化</div>
+    <div class="grid2">
+      <div class="card"><div class="k">情绪分布环图</div><div class="donut-wrap"><svg viewBox="0 0 180 180" class="donut"><circle cx="90" cy="90" r="62" fill="none" stroke="rgba(255,255,255,.06)" stroke-width="18" /><circle cx="90" cy="90" r="62" fill="none" stroke="#23c483" stroke-width="18" stroke-linecap="round" stroke-dasharray="129.85 389.56" transform="rotate(-90 90 90)" /><circle cx="90" cy="90" r="62" fill="none" stroke="#60a5fa" stroke-width="18" stroke-linecap="round" stroke-dasharray="129.85 389.56" transform="rotate(30.0 90 90)" /><circle cx="90" cy="90" r="62" fill="none" stroke="#ff6b7c" stroke-width="18" stroke-linecap="round" stroke-dasharray="129.85 389.56" transform="rotate(150.0 90 90)" /><circle cx="90" cy="90" r="42" fill="#0d1730" /><text x="90" y="84" text-anchor="middle" fill="#eef4ff" font-size="30" font-weight="800">12</text><text x="90" y="106" text-anchor="middle" fill="#97abcf" font-size="12">样本数</text></svg></div><div class="legend"><span><i class="dot" style="background:#23c483"></i>偏多 4</span><span><i class="dot" style="background:#60a5fa"></i>中性 4</span><span><i class="dot" style="background:#ff6b7c"></i>偏空 4</span></div></div>
+      <div class="card"><div class="k">多空中性柱状图</div><svg viewBox="0 0 410 120" class="bars"><text x="0" y="25" fill="#cfe0ff" font-size="13">偏多</text><rect x="70" y="12" width="320" height="16" rx="8" fill="rgba(255,255,255,.06)" /><rect x="70" y="12" width="320.0" height="16" rx="8" fill="#23c483" /><text x="402" y="25" fill="#97abcf" font-size="13" text-anchor="end">4</text><text x="0" y="59" fill="#cfe0ff" font-size="13">中性</text><rect x="70" y="46" width="320" height="16" rx="8" fill="rgba(255,255,255,.06)" /><rect x="70" y="46" width="320.0" height="16" rx="8" fill="#60a5fa" /><text x="402" y="59" fill="#97abcf" font-size="13" text-anchor="end">4</text><text x="0" y="93" fill="#cfe0ff" font-size="13">偏空</text><rect x="70" y="80" width="320" height="16" rx="8" fill="rgba(255,255,255,.06)" /><rect x="70" y="80" width="320.0" height="16" rx="8" fill="#ff6b7c" /><text x="402" y="93" fill="#97abcf" font-size="13" text-anchor="end">4</text></svg><div class="hint">这版先用实时样本做静态可视化。下一版可以继续接成 24h / 3d / 7d 多时间窗切换。</div></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="section-title">关键词主题</div>
+    <div class="tags"><span class="tag">tech</span><span class="tag">rebound</span><span class="tag">panic</span><span class="tag">sell</span><span class="tag">rotation</span><span class="tag">buy</span><span class="tag">bottom</span><span class="tag">wait</span></div>
+  </div>
+
+  <div class="panel">
+    <div class="section-title">代表性原话</div>
+    <div class="quotes">
+      <div class="quote"><span class="qlabel">偏空 / 受挫</span><p>The S&P 500 fell 0.39% to 6343.72 points, opening high and closing low overall. The Dow…</p><div class="meta2">相关性 17 · 互动 2 · <a href="https://longbridge.com/topics/39632214">原帖链接</a></div></div>
+      <div class="quote"><span class="qlabel">偏多 / 补仓</span><p>[st]ST/US/AMZN#Amazon.US[/st][st]ST/US/TSLA#Tesla.US[/st][st]ST/HK/883#CNOOC.HK[/st]I've…</p><div class="meta2">相关性 17 · 互动 20 · <a href="https://longbridge.com/topics/39822391">原帖链接</a></div></div>
+      <div class="quote"><span class="qlabel">中性 / 修复</span><p>When can I break even? My Hang Seng Tech ETF</p><div class="meta2">相关性 14 · 互动 4 · <a href="https://longbridge.com/topics/39564792">原帖链接</a></div></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="section-title">样本明细</div>
+    <table>
+      <thead><tr><th>情绪</th><th>标题/摘要</th><th>相关性</th><th>互动</th><th>链接</th></tr></thead>
+      <tbody>
+        <tr><td>偏多</td><td>[st]ST/US/AMZN#Amazon.US[/st][st]ST/US/TSLA#Tesla.US[/st][st]ST/HK/883#C…</td><td>17</td><td>20</td><td><a href="https://longbridge.com/topics/39822391">查看</a></td></tr><tr><td>偏空</td><td>[Zhenzhuo Institutional View] Oil price fluctuations coupled with capita…</td><td>17</td><td>2</td><td><a href="https://longbridge.com/topics/39632214">查看</a></td></tr><tr><td>偏空</td><td>Volatile decline! Analysis of Hong Kong and US stock market on March 23:…</td><td>17</td><td>2</td><td><a href="https://longbridge.com/topics/39445562">查看</a></td></tr><tr><td>偏多</td><td>Hong Kong stocks opened higher again! The Hang Seng Tech Index rose near…</td><td>16</td><td>8</td><td><a href="https://longbridge.com/topics/39497480">查看</a></td></tr><tr><td>偏空</td><td>[st]ST/HK/700#TENCENT.HK[/st] The Hang Seng Tech Index has no bottom, I'…</td><td>16</td><td>5</td><td><a href="https://longbridge.com/topics/39859298">查看</a></td></tr><tr><td>中性</td><td>When can I break even? My Hang Seng Tech ETF</td><td>14</td><td>4</td><td><a href="https://longbridge.com/topics/39564792">查看</a></td></tr><tr><td>偏多</td><td>Today's Key Hong Kong Stock Market Information</td><td>14</td><td>2</td><td><a href="https://longbridge.com/topics/39915443">查看</a></td></tr><tr><td>中性</td><td>The Stock Connect (for Hong Kong) Innovative Medicine ETF Wanjia (520700…</td><td>14</td><td>2</td><td><a href="https://longbridge.com/topics/39662007">查看</a></td></tr><tr><td>偏空</td><td>In any case, Hang Seng Tech is currently in a state of short-term overso…</td><td>14</td><td>2</td><td><a href="https://longbridge.com/topics/39610220">查看</a></td></tr><tr><td>偏多</td><td>Kuaishou Plunges After Earnings Report: What's the Market Worried About?</td><td>14</td><td>2</td><td><a href="https://longbridge.com/topics/39543843">查看</a></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="foot">HK ETF Lab · 03033 Community Sentiment Monitor · Real Data Version</div>
+</div>
 </body>
 </html>
