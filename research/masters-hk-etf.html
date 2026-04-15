@@ -49,7 +49,7 @@
     .master-link:hover .master-name{text-decoration:underline;text-decoration-color:#94a3b8;text-underline-offset:4px}
     .master-link:hover .detail-link{background:#e8f0ff;border-color:#b8d0ff}
     .master-top{display:flex;gap:14px;align-items:flex-start;margin-bottom:14px}
-    .portrait-img{width:96px;height:120px;border-radius:20px;flex:0 0 96px;object-fit:cover;border:1px solid rgba(255,255,255,.45);background:#f8fafc;box-shadow:0 10px 24px rgba(15,23,42,.12)}
+    .portrait-img{width:104px;height:104px;border-radius:999px;flex:0 0 104px;object-fit:cover;object-position:center top;border:1px solid rgba(255,255,255,.45);background:#f8fafc;box-shadow:0 10px 24px rgba(15,23,42,.12)}
     .master-name{font-size:24px;font-weight:900;line-height:1.25;margin:0}
     .master-role{margin-top:4px;font-size:13px;color:var(--muted);line-height:1.65}
     .tone{display:inline-block;margin-top:8px;padding:6px 10px;border-radius:999px;background:#f8fafc;border:1px solid var(--line);font-size:12px;color:#334155;font-weight:700}
@@ -70,18 +70,28 @@
       .summary-grid,.masters{grid-template-columns:1fr}
     }
     @media (max-width:640px){
-      .wrap{padding:14px 12px 28px}
-      .hero,.panel,.master-card{border-radius:20px}
-      .hero,.panel{padding:16px 14px 14px}
-      .master-card{padding:14px}
-      h1{font-size:27px}
-      .sub{font-size:14px;line-height:1.8}
-      .section-title{font-size:19px}
-      .master-top{gap:12px}
-      .portrait-img{width:78px;height:98px;flex-basis:78px;border-radius:16px}
-      .master-name{font-size:20px}
-      .master-role{font-size:12px}
-      .block p,.quote{font-size:13px;line-height:1.75}
+      .wrap{padding:12px 10px 24px}
+      .hero,.panel,.master-card{border-radius:18px}
+      .hero,.panel{padding:14px 12px 12px}
+      .master-card{padding:12px}
+      h1{font-size:25px;line-height:1.18}
+      .sub{font-size:14px;line-height:1.72}
+      .section-title{font-size:18px}
+      .pool{gap:6px}
+      .pool span{font-size:11px;padding:7px 9px}
+      .summary-grid{gap:8px}
+      .summary-box{padding:12px}
+      .summary-box .v{font-size:19px}
+      .summary-box .d{font-size:12px;line-height:1.6}
+      .master-top{gap:10px;align-items:center}
+      .portrait-img{width:72px;height:72px;flex-basis:72px;border-radius:999px}
+      .master-name{font-size:18px}
+      .master-role{font-size:12px;line-height:1.5}
+      .block{margin-top:10px;padding-top:10px}
+      .block h3{font-size:14px}
+      .block p,.quote{font-size:13px;line-height:1.68}
+      .pick,.avoid{font-size:11px;padding:6px 8px}
+      .detail-link{font-size:11px;padding:7px 10px}
       .compare th,.compare td{font-size:12px;padding:8px 6px}
     }
   </style>
@@ -266,7 +276,7 @@
 
       <section class="master-card"><a class="master-link" href="./masters-hk-etf/fisher.html">
         <div class="master-top">
-          <img class="portrait-img" src="../assets/masters/fisher.svg" alt="菲利普·费雪 Fisher" />
+          <img class="portrait-img" src="https://upload.wikimedia.org/wikipedia/en/d/d9/Philip_Arthur_Fisher.jpg" alt="菲利普·费雪 Fisher" />
           <div>
             <h2 class="master-name">菲利普·费雪 Fisher</h2>
             <div class="master-role">核心镜片：高质量成长、管理层、长期复利</div>
