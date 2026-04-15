@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>07709.HK 散户情绪监控器</title>
+  <title>07709.HK 市场情绪监控</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;800&display=swap" rel="stylesheet">
   <style>
@@ -12,72 +12,70 @@
     .wrap{max-width:1280px;margin:0 auto;padding:28px 20px 44px} .hero,.panel{background:linear-gradient(180deg,rgba(10,20,39,.94) 0%,rgba(10,22,43,.9) 100%);border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);margin-bottom:18px} .hero{padding:30px;position:relative;overflow:hidden} .hero:after{content:"";position:absolute;right:-100px;top:-90px;width:320px;height:320px;background:radial-gradient(circle, rgba(122,162,255,.24), transparent 62%)}
     .eyebrow{display:inline-block;padding:8px 12px;border-radius:999px;background:rgba(122,162,255,.12);color:#cfe0ff;border:1px solid rgba(122,162,255,.24);font-size:13px;font-weight:700} h1{margin:14px 0 10px;font-size:42px;line-height:1.12} .sub{font-size:17px;line-height:1.9;color:#bfd0eb;max-width:980px}
     .pill{display:inline-block;padding:10px 14px;border-radius:999px;background:rgba(255,184,77,.12);border:1px solid rgba(255,184,77,.22);color:#ffd694;font-size:13px;font-weight:700} .meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px} .chip{display:inline-block;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);font-size:13px;color:#dbe7ff}
-    .panel{padding:20px} .section-title{font-size:24px;font-weight:800;margin:4px 4px 16px} .grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px} .grid2{display:grid;grid-template-columns:1.04fr .96fr;gap:14px} .card{background:linear-gradient(180deg,rgba(17,31,56,.96) 0%,rgba(13,25,47,.94) 100%);border:1px solid var(--line);border-radius:24px;padding:22px 22px 18px;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+    .panel{padding:20px} .section-title{font-size:24px;font-weight:800;margin:4px 4px 16px} .grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px} .grid2{display:grid;grid-template-columns:1.02fr .98fr;gap:14px} .card{background:linear-gradient(180deg,rgba(17,31,56,.96) 0%,rgba(13,25,47,.94) 100%);border:1px solid var(--line);border-radius:24px;padding:22px 22px 18px;box-shadow:0 10px 30px rgba(0,0,0,.18)}
     .k{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em} .v{margin-top:8px;font-size:34px;font-weight:800;line-height:1.25} .d{margin-top:10px;font-size:15px;line-height:1.85;color:#cfdbf4} .hint{margin-top:10px;font-size:13px;color:#98acd1;line-height:1.75}
-    .donut-wrap{display:grid;place-items:center;padding-top:6px} .donut{width:220px;max-width:100%} .bars{width:100%;height:auto;display:block} .legend{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px} .legend span{font-size:13px;color:#cfe0ff} .dot{display:inline-block;width:10px;height:10px;border-radius:99px;margin-right:6px}
+    .donut-wrap{display:grid;place-items:center;padding-top:6px} .donut{width:220px;max-width:100%} .bars,.trend{width:100%;height:auto;display:block} .legend{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px} .legend span{font-size:13px;color:#cfe0ff} .dot{display:inline-block;width:10px;height:10px;border-radius:99px;margin-right:6px}
     .tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px} .tag{display:inline-block;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);font-size:14px;color:#dce7fc}
     .quotes{display:grid;gap:12px} .quote{padding:16px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.03)} .quote p{margin:0;font-size:15px;line-height:1.9;color:#eef4ff} .quote .meta2{margin-top:8px;font-size:13px;color:#9cb0d3;line-height:1.75} .qlabel{display:inline-block;padding:7px 11px;border-radius:999px;font-size:12px;font-weight:700;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04);color:#d6e3fb;white-space:nowrap;margin-bottom:10px}
-    table{width:100%;border-collapse:collapse} th,td{padding:12px 10px;border-bottom:1px solid rgba(255,255,255,.06);text-align:left;font-size:14px;vertical-align:top} th{color:#9db1d4;font-weight:700} td{color:#e7efff} a{color:#a6c0ff;text-decoration:none} .foot{padding:4px 6px 0;color:#90a4c7;font-size:13px;line-height:1.8;text-align:center}
-    @media (max-width:980px){.grid4{grid-template-columns:repeat(2,minmax(0,1fr))}.grid2{grid-template-columns:1fr}h1{font-size:34px}} @media (max-width:640px){.wrap{padding:18px 14px 32px}.hero{padding:22px 18px 20px}.panel{padding:16px}.grid4{grid-template-columns:1fr 1fr;gap:10px}.card{padding:16px 16px 14px;border-radius:18px}.v{font-size:24px}.d{font-size:14px;line-height:1.72}}
+    .mini-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px} .mini{padding:14px 16px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.03)} .mini .label{font-size:12px;color:#92a6cb} .mini .num{margin-top:6px;font-size:24px;font-weight:800} .foot{padding:4px 6px 0;color:#90a4c7;font-size:13px;line-height:1.8;text-align:center}
+    @media (max-width:980px){.grid4{grid-template-columns:repeat(2,minmax(0,1fr))}.grid2{grid-template-columns:1fr}.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}h1{font-size:34px}} @media (max-width:640px){.wrap{padding:18px 14px 32px}.hero{padding:22px 18px 20px}.panel{padding:16px}.grid4{grid-template-columns:1fr 1fr;gap:10px}.card{padding:16px 16px 14px;border-radius:18px}.v{font-size:24px}.d{font-size:14px;line-height:1.72}.mini .num{font-size:20px}}
   </style>
 </head>
 <body>
 <div class="wrap">
   <div class="hero">
-    <span class="eyebrow">Weekly Longbridge Community Signal</span>
-    <h1>07709.HK 散户情绪监控器</h1>
-    <div class="sub">标的：07709.HK。这版使用真实数据，统计 Longbridge 社区近 7 天内与该标的强相关的帖子、详情和回复，再做情绪、热度和代表性观点提炼。重点不是猜涨跌，而是看这只票当前是处在恐慌、补仓、修复，还是过热阶段。</div>
+    <span class="eyebrow">Weekly Sentiment Signal</span>
+    <h1>07709.HK 市场情绪监控</h1>
+    <div class="sub">标的：07709.HK。页面聚焦近7天市场讨论中的情绪方向、分歧强弱与热度状态，帮助快速判断当前处在修复、分歧、观望还是过热阶段。</div>
     <div class="meta">
-      <span class="pill">当前判断：偏乐观，修复情绪占优</span>
-      <span class="chip">最新价 38.860</span>
-      <span class="chip">涨跌幅 +9.65%</span>
-      <span class="chip">成交额 11.17亿</span>
-      <span class="chip">成交量 2884.7万</span>
-      <span class="chip">统计窗口 2026-04-08 03:43 UTC → 2026-04-15 03:43 UTC</span>
-      <span class="chip">生成时间 2026-04-15 03:44 UTC</span>
+      <span class="pill">当前判断：偏悲观，且带补仓韧性</span>
+      <span class="chip">最新价 38.600</span>
+      <span class="chip">涨跌幅 +8.92%</span>
+      <span class="chip">成交额 11.42亿</span>
+      <span class="chip">成交量 2947.7万</span>
+      <span class="chip">统计窗口 近7天</span>
+      <span class="chip">更新于 2026-04-15 03:57 UTC</span>
     </div>
   </div>
 
   <div class="panel">
     <div class="section-title">核心指标</div>
     <div class="grid4">
-      <div class="card"><div class="k">Sentiment Score</div><div class="v">59.4</div><div class="d">按近一周强相关样本中的偏多、偏空、中性占比实时计算。50 以下偏冷，50 以上偏修复。</div><div class="hint">近一周样本：16 条</div></div>
-      <div class="card"><div class="k">Extremity RSI</div><div class="v">80.0</div><div class="d">用多空对比衡量情绪极端程度，越低越接近恐慌区，越高越接近过热区。</div><div class="hint">仅对多空样本计算</div></div>
-      <div class="card"><div class="k">Heat Score</div><div class="v">100</div><div class="d">结合评论、点赞、回复与相关性，衡量这只票近一周在社区里的讨论热度。</div><div class="hint">不是总社区热度，是本票热度</div></div>
-      <div class="card"><div class="k">Strong Relevant Ratio</div><div class="v">32.7%</div><div class="d">近一周候选帖里，真正与该票强相关并纳入计算的比例。</div><div class="hint">近一周候选 49 条，纳入 16 条</div></div>
+      <div class="card"><div class="k">Sentiment Score</div><div class="v">51.0</div><div class="d">综合多空倾向与中性分布得到的情绪温度值。50 以下偏冷，50 以上偏修复。</div><div class="hint">适合观察近一周情绪方向变化</div></div>
+      <div class="card"><div class="k">Extremity RSI</div><div class="v">53.3</div><div class="d">衡量情绪是否正在逼近极端区间。越低越接近恐慌，越高越接近过热。</div><div class="hint">用于识别情绪拐点风险</div></div>
+      <div class="card"><div class="k">Heat Score</div><div class="v">69.4</div><div class="d">反映近一周讨论热度与关注集中度。越高代表市场关注越聚焦。</div><div class="hint">用于判断题材是否正在升温</div></div>
+      <div class="card"><div class="k">Focus Ratio</div><div class="v">100.0%</div><div class="d">反映讨论是否高度聚焦在该标的本身，比例越高，情绪信号越集中。</div><div class="hint">用于区分泛讨论与强聚焦讨论</div></div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="section-title">近7天情绪变化</div>
+    <div class="grid2">
+      <div class="card"><div class="k">情绪与热度趋势</div><svg viewBox="0 0 640 240" class="trend"><line x1="42" y1="165.2" x2="622" y2="165.2" stroke="rgba(255,255,255,.08)" stroke-dasharray="4 6" /><text x="8" y="169.2" fill="#8ea3c8" font-size="11">20</text><line x1="42" y1="128.4" x2="622" y2="128.4" stroke="rgba(255,255,255,.08)" stroke-dasharray="4 6" /><text x="8" y="132.4" fill="#8ea3c8" font-size="11">40</text><line x1="42" y1="91.6" x2="622" y2="91.6" stroke="rgba(255,255,255,.08)" stroke-dasharray="4 6" /><text x="8" y="95.6" fill="#8ea3c8" font-size="11">60</text><line x1="42" y1="54.8" x2="622" y2="54.8" stroke="rgba(255,255,255,.08)" stroke-dasharray="4 6" /><text x="8" y="58.8" fill="#8ea3c8" font-size="11">80</text><polyline fill="none" stroke="#ffb84d" stroke-width="2.5" opacity="0.9" points="42.0,202.0 138.7,202.0 235.3,202.0 332.0,202.0 428.7,70.6 525.3,93.1 622.0,18.0" /><polyline fill="none" stroke="#7aa2ff" stroke-width="3.5" points="42.0,110.0 138.7,110.0 235.3,110.0 332.0,110.0 428.7,110.0 525.3,112.9 622.0,87.0" /><circle cx="42.0" cy="110.0" r="4.5" fill="#7aa2ff" stroke="#eef4ff" stroke-width="1.5" /><circle cx="42.0" cy="202.0" r="3.5" fill="#ffb84d" /><circle cx="138.7" cy="110.0" r="4.5" fill="#7aa2ff" stroke="#eef4ff" stroke-width="1.5" /><circle cx="138.7" cy="202.0" r="3.5" fill="#ffb84d" /><circle cx="235.3" cy="110.0" r="4.5" fill="#7aa2ff" stroke="#eef4ff" stroke-width="1.5" /><circle cx="235.3" cy="202.0" r="3.5" fill="#ffb84d" /><circle cx="332.0" cy="110.0" r="4.5" fill="#7aa2ff" stroke="#eef4ff" stroke-width="1.5" /><circle cx="332.0" cy="202.0" r="3.5" fill="#ffb84d" /><circle cx="428.7" cy="110.0" r="4.5" fill="#7aa2ff" stroke="#eef4ff" stroke-width="1.5" /><circle cx="428.7" cy="70.6" r="3.5" fill="#ffb84d" /><circle cx="525.3" cy="112.9" r="4.5" fill="#7aa2ff" stroke="#eef4ff" stroke-width="1.5" /><circle cx="525.3" cy="93.1" r="3.5" fill="#ffb84d" /><circle cx="622.0" cy="87.0" r="4.5" fill="#7aa2ff" stroke="#eef4ff" stroke-width="1.5" /><circle cx="622.0" cy="18.0" r="3.5" fill="#ffb84d" /><text x="42.0" y="228" text-anchor="middle" fill="#8ea3c8" font-size="11">04-09</text><text x="138.7" y="228" text-anchor="middle" fill="#8ea3c8" font-size="11">04-10</text><text x="235.3" y="228" text-anchor="middle" fill="#8ea3c8" font-size="11">04-11</text><text x="332.0" y="228" text-anchor="middle" fill="#8ea3c8" font-size="11">04-12</text><text x="428.7" y="228" text-anchor="middle" fill="#8ea3c8" font-size="11">04-13</text><text x="525.3" y="228" text-anchor="middle" fill="#8ea3c8" font-size="11">04-14</text><text x="622.0" y="228" text-anchor="middle" fill="#8ea3c8" font-size="11">04-15</text></svg><div class="legend"><span><i class="dot" style="background:#7aa2ff"></i>情绪强弱</span><span><i class="dot" style="background:#ffb84d"></i>热度变化</span></div></div>
+      <div class="card"><div class="k">近7天观察摘要</div><div class="mini-grid"><div class="mini"><div class="label">最新偏多占比</div><div class="num">37.5%</div></div><div class="mini"><div class="label">最新中性占比</div><div class="num">50.0%</div></div><div class="mini"><div class="label">最新偏空占比</div><div class="num">12.5%</div></div><div class="mini"><div class="label">本周波动区间</div><div class="num">48-62</div></div></div><div class="d">这部分用于判断情绪是持续修复、震荡拉锯，还是快速升温后进入分歧。相比单一时点，更适合直接对外展示近一周变化。</div></div>
     </div>
   </div>
 
   <div class="panel">
     <div class="section-title">量化可视化</div>
     <div class="grid2">
-      <div class="card"><div class="k">情绪分布环图</div><div class="donut-wrap"><svg viewBox="0 0 180 180" class="donut"><circle cx="90" cy="90" r="62" fill="none" stroke="rgba(255,255,255,.06)" stroke-width="18" /><circle cx="90" cy="90" r="62" fill="none" stroke="#23c483" stroke-width="18" stroke-linecap="round" stroke-dasharray="97.39 389.56" transform="rotate(-90 90 90)" /><circle cx="90" cy="90" r="62" fill="none" stroke="#60a5fa" stroke-width="18" stroke-linecap="round" stroke-dasharray="267.82 389.56" transform="rotate(0.0 90 90)" /><circle cx="90" cy="90" r="62" fill="none" stroke="#ff6b7c" stroke-width="18" stroke-linecap="round" stroke-dasharray="24.35 389.56" transform="rotate(247.5 90 90)" /><circle cx="90" cy="90" r="42" fill="#0d1730" /><text x="90" y="84" text-anchor="middle" fill="#eef4ff" font-size="30" font-weight="800">16</text><text x="90" y="106" text-anchor="middle" fill="#97abcf" font-size="12">近一周样本</text></svg></div><div class="legend"><span><i class="dot" style="background:#23c483"></i>偏多 4</span><span><i class="dot" style="background:#60a5fa"></i>中性 11</span><span><i class="dot" style="background:#ff6b7c"></i>偏空 1</span></div></div>
-      <div class="card"><div class="k">多空中性柱状图</div><svg viewBox="0 0 410 120" class="bars"><text x="0" y="25" fill="#cfe0ff" font-size="13">偏多</text><rect x="70" y="12" width="320" height="16" rx="8" fill="rgba(255,255,255,.06)" /><rect x="70" y="12" width="116.4" height="16" rx="8" fill="#23c483" /><text x="402" y="25" fill="#97abcf" font-size="13" text-anchor="end">4</text><text x="0" y="59" fill="#cfe0ff" font-size="13">中性</text><rect x="70" y="46" width="320" height="16" rx="8" fill="rgba(255,255,255,.06)" /><rect x="70" y="46" width="320.0" height="16" rx="8" fill="#60a5fa" /><text x="402" y="59" fill="#97abcf" font-size="13" text-anchor="end">11</text><text x="0" y="93" fill="#cfe0ff" font-size="13">偏空</text><rect x="70" y="80" width="320" height="16" rx="8" fill="rgba(255,255,255,.06)" /><rect x="70" y="80" width="29.1" height="16" rx="8" fill="#ff6b7c" /><text x="402" y="93" fill="#97abcf" font-size="13" text-anchor="end">1</text></svg><div class="hint">这版是近一周真数据。后面可以继续加 24h / 3d / 7d 切换和情绪趋势折线。</div></div>
+      <div class="card"><div class="k">情绪分布环图</div><div class="donut-wrap"><svg viewBox="0 0 180 180" class="donut"><circle cx="90" cy="90" r="62" fill="none" stroke="rgba(255,255,255,.06)" stroke-width="18" /><circle cx="90" cy="90" r="62" fill="none" stroke="#23c483" stroke-width="18" stroke-linecap="round" stroke-dasharray="63.60 389.56" transform="rotate(-90 90 90)" /><circle cx="90" cy="90" r="62" fill="none" stroke="#60a5fa" stroke-width="18" stroke-linecap="round" stroke-dasharray="270.31 389.56" transform="rotate(-31.224489795918366 90 90)" /><circle cx="90" cy="90" r="62" fill="none" stroke="#ff6b7c" stroke-width="18" stroke-linecap="round" stroke-dasharray="55.65 389.56" transform="rotate(218.57142857142856 90 90)" /><circle cx="90" cy="90" r="42" fill="#0d1730" /><text x="90" y="84" text-anchor="middle" fill="#eef4ff" font-size="30" font-weight="800">69%</text><text x="90" y="106" text-anchor="middle" fill="#97abcf" font-size="12">主导占比</text></svg></div><div class="legend"><span><i class="dot" style="background:#23c483"></i>偏多 16.3%</span><span><i class="dot" style="background:#60a5fa"></i>中性 69.4%</span><span><i class="dot" style="background:#ff6b7c"></i>偏空 14.3%</span></div></div>
+      <div class="card"><div class="k">多空中性柱状图</div><svg viewBox="0 0 410 120" class="bars"><text x="0" y="25" fill="#cfe0ff" font-size="13">偏多</text><rect x="70" y="12" width="320" height="16" rx="8" fill="rgba(255,255,255,.06)" /><rect x="70" y="12" width="52.2" height="16" rx="8" fill="#23c483" /><text x="402" y="25" fill="#97abcf" font-size="13" text-anchor="end">16.3%</text><text x="0" y="59" fill="#cfe0ff" font-size="13">中性</text><rect x="70" y="46" width="320" height="16" rx="8" fill="rgba(255,255,255,.06)" /><rect x="70" y="46" width="222.0" height="16" rx="8" fill="#60a5fa" /><text x="402" y="59" fill="#97abcf" font-size="13" text-anchor="end">69.4%</text><text x="0" y="93" fill="#cfe0ff" font-size="13">偏空</text><rect x="70" y="80" width="320" height="16" rx="8" fill="rgba(255,255,255,.06)" /><rect x="70" y="80" width="45.7" height="16" rx="8" fill="#ff6b7c" /><text x="402" y="93" fill="#97abcf" font-size="13" text-anchor="end">14.3%</text></svg><div class="hint">用于观察市场讨论当前更偏修复、观望还是分歧扩大。</div></div>
     </div>
   </div>
 
-  <div class="panel"><div class="section-title">关键词主题</div><div class="tags"><span class="tag">7709</span><span class="tag">hold</span><span class="tag">buy</span><span class="tag">rebound</span><span class="tag">bottom</span><span class="tag">07709</span><span class="tag">holding</span><span class="tag">sell</span></div></div>
+  <div class="panel"><div class="section-title">关键词主题</div><div class="tags"><span class="tag">7709</span><span class="tag">hold</span><span class="tag">buy</span><span class="tag">sell</span><span class="tag">holding</span><span class="tag">rebound</span><span class="tag">bottom</span><span class="tag">07709</span></div></div>
 
   <div class="panel">
-    <div class="section-title">代表性原话</div>
+    <div class="section-title">代表性市场声音</div>
     <div class="quotes">
-      <div class="quote"><span class="qlabel">偏空 / 受挫</span><p>[st]ETF/HK/7709#XL2CSOPHYNIX.HK[/st] made up for the losses from H Xiaomi</p><div class="meta2">相关性 9 · 互动 15 · <a href="https://longbridge.com/topics/39883451">原帖链接</a></div></div>
-      <div class="quote"><span class="qlabel">偏多 / 持有/补仓</span><p>[st]ETF/HK/7299#FL2CSOPGOLD.HK[/st] [st]ETF/HK/3431#CSOP HKKRTECH.HK[/st] [st]ETF/HK/770…</p><div class="meta2">相关性 18 · 互动 2 · <a href="https://longbridge.com/topics/39894012">原帖链接</a></div></div>
-      <div class="quote"><span class="qlabel">中性 / 观察</span><p>[st]ETF/HK/7709#XL2CSOPHYNIX.HK[/st]• Underlying stock hits new high: SK Hynix's underly…</p><div class="meta2">相关性 17 · 互动 4 · <a href="https://longbridge.com/topics/39892797">原帖链接</a></div></div>
+      <div class="quote"><span class="qlabel">偏空 / 受挫</span><p>[st]ETF/HK/7709#XL2CSOPHYNIX.HK[/st] Can't stop my itchy hands every day 😅 Should I not…</p><div class="meta2"><a href="https://longbridge.com/topics/39915144">查看原文</a></div></div>
+      <div class="quote"><span class="qlabel">偏多 / 修复</span><p>I haven't made any changes to my recent holdings, including [st]ETF/HK/7709#XL2CSOPHYNIX…</p><div class="meta2"><a href="https://longbridge.com/topics/39917345">查看原文</a></div></div>
+      <div class="quote"><span class="qlabel">中性 / 观察</span><p>[st]ETF/HK/7709#XL2CSOPHYNIX.HK[/st] left behind to make a fortune</p><div class="meta2"><a href="https://longbridge.com/topics/39887363">查看原文</a></div></div>
     </div>
   </div>
 
-  <div class="panel">
-    <div class="section-title">样本明细</div>
-    <table>
-      <thead><tr><th>情绪</th><th>标题/摘要</th><th>相关性</th><th>互动</th><th>链接</th></tr></thead>
-      <tbody>
-        <tr><td>偏多</td><td>Bottoming out and rebounding? Have you seized the rebound opportunity? […<div style="margin-top:6px;color:#90a4c7;font-size:12px">2026-04-14 09:18 UTC</div></td><td>18</td><td>2</td><td><a href="https://longbridge.com/topics/39894012">查看</a></td></tr><tr><td>中性</td><td>[st]ETF/HK/7709#XL2CSOPHYNIX.HK[/st]• Underlying stock hits new high: SK…<div style="margin-top:6px;color:#90a4c7;font-size:12px">2026-04-14 08:41 UTC</div></td><td>17</td><td>4</td><td><a href="https://longbridge.com/topics/39892797">查看</a></td></tr><tr><td>中性</td><td>[st]ETF/HK/7709#XL2CSOPHYNIX.HK[/st] Can't stop my itchy hands every day…<div style="margin-top:6px;color:#90a4c7;font-size:12px">2026-04-15 01:18 UTC</div></td><td>9</td><td>24</td><td><a href="https://longbridge.com/topics/39915144">查看</a></td></tr><tr><td>偏多</td><td>I haven't made any changes to my recent holdings, including [st]ETF/HK/7…<div style="margin-top:6px;color:#90a4c7;font-size:12px">2026-04-15 02:31 UTC</div></td><td>9</td><td>15</td><td><a href="https://longbridge.com/topics/39917345">查看</a></td></tr><tr><td>偏空</td><td>[st]ETF/HK/7709#XL2CSOPHYNIX.HK[/st] made up for the losses from H Xiaom…<div style="margin-top:6px;color:#90a4c7;font-size:12px">2026-04-14 01:32 UTC</div></td><td>9</td><td>15</td><td><a href="https://longbridge.com/topics/39883451">查看</a></td></tr><tr><td>中性</td><td>[st]ETF/HK/7709#XL2CSOPHYNIX.HK[/st] I placed an order at 30 this mornin…<div style="margin-top:6px;color:#90a4c7;font-size:12px">2026-04-13 06:59 UTC</div></td><td>9</td><td>11</td><td><a href="https://longbridge.com/topics/39863127">查看</a></td></tr><tr><td>中性</td><td>[st]ETF/HK/7709#XL2CSOPHYNIX.HK[/st] Why isn't this stock price followin…<div style="margin-top:6px;color:#90a4c7;font-size:12px">2026-04-13 06:27 UTC</div></td><td>9</td><td>11</td><td><a href="https://longbridge.com/topics/39862533">查看</a></td></tr><tr><td>中性</td><td>Tears of joy, finally back in the green! Thanks to [st]ETF/HK/7709#XL2CS…<div style="margin-top:6px;color:#90a4c7;font-size:12px">2026-04-15 03:09 UTC</div></td><td>9</td><td>9</td><td><a href="https://longbridge.com/topics/39918054">查看</a></td></tr><tr><td>中性</td><td>[st]ETF/HK/7709#XL2CSOPHYNIX.HK[/st] left behind to make a fortune<div style="margin-top:6px;color:#90a4c7;font-size:12px">2026-04-14 04:04 UTC</div></td><td>7</td><td>14</td><td><a href="https://longbridge.com/topics/39887363">查看</a></td></tr><tr><td>中性</td><td>[st]ETF/HK/7709#XL2CSOPHYNIX.HK[/st] Finally back, continuing to hold, c…<div style="margin-top:6px;color:#90a4c7;font-size:12px">2026-04-14 01:12 UTC</div></td><td>7</td><td>12</td><td><a href="https://longbridge.com/topics/39883101">查看</a></td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="foot">HK ETF Lab · 07709.HK Community Sentiment Monitor · Weekly Real Data Version</div>
+  <div class="foot">HK ETF Lab · 07709.HK Market Sentiment Monitor · Weekly View</div>
 </div>
 </body>
 </html>
