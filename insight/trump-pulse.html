@@ -4,89 +4,100 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex,nofollow,noarchive" />
-  <title>Trump 发言脉冲</title>
+  <title>Trump 发言时间线</title>
   <style>
-    :root{--bg:#0b1220;--panel:#111a2e;--panel2:#16233d;--text:#ecf3ff;--muted:#9eb0d1;--line:rgba(255,255,255,.08);--accent:#ff7a00;--accent2:#53c6f0;--shadow:0 20px 50px rgba(0,0,0,.35)}
-    *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,"PingFang SC","Microsoft YaHei",sans-serif;background:radial-gradient(circle at top,#15213b 0%,#0d1527 34%,var(--bg) 100%);color:var(--text)}
-    .wrap{width:min(1180px,calc(100vw - 32px));margin:0 auto;padding:28px 0 40px}
-    .hero{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-bottom:18px}
-    .hero-card,.stat-card{background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.03));border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow);backdrop-filter:blur(12px)}
-    .hero-card{padding:26px;flex:1 1 720px}.stat-wrap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;flex:0 0 300px}.stat-card{padding:18px}
-    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(255,122,0,.13);color:#ffb26e;border:1px solid rgba(255,122,0,.28);font-size:13px;font-weight:700}.eyebrow::before{content:'⚡'}
-    h1{margin:14px 0 10px;font-size:42px;line-height:1.08;letter-spacing:-.03em}.sub{color:var(--muted);font-size:16px;line-height:1.75;max-width:780px}.hero-meta{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}.pill{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--line);color:var(--muted);font-size:13px}
-    .stat-label{font-size:12px;color:var(--muted)} .stat-value{margin-top:8px;font-size:28px;font-weight:800;letter-spacing:-.03em}.stat-sub{margin-top:8px;font-size:12px;color:var(--muted);line-height:1.5}
-    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.post{background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.035));border:1px solid var(--line);border-radius:24px;padding:20px;box-shadow:var(--shadow)}
-    .post-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.profile{display:flex;gap:12px;align-items:center}.avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#ff8d2b,#ff5c00);display:grid;place-items:center;font-weight:800;color:#fff;box-shadow:0 8px 24px rgba(255,122,0,.28)}
+    :root{--bg:#f5f7fb;--panel:#ffffff;--panel-soft:#f8fbff;--text:#162033;--muted:#6b7280;--line:#e6ecf5;--accent:#2563eb;--accent-soft:#eaf2ff;--orange:#f36f21;--shadow:0 18px 45px rgba(15,23,42,.08)}
+    *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,"PingFang SC","Microsoft YaHei",sans-serif;background:linear-gradient(180deg,#fbfdff 0%,#f3f7fd 100%);color:var(--text)}
+    .wrap{width:min(1080px,calc(100vw - 32px));margin:0 auto;padding:28px 0 40px}
+    .hero{background:linear-gradient(180deg,#ffffff 0%,#f9fbff 100%);border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);padding:26px 24px 22px;margin-bottom:18px}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-size:13px;font-weight:700}.eyebrow::before{content:'📰'}
+    h1{margin:14px 0 10px;font-size:38px;line-height:1.08;letter-spacing:-.03em}.sub{color:var(--muted);font-size:15px;line-height:1.75;max-width:760px}
+    .hero-row{display:flex;justify-content:space-between;gap:18px;align-items:flex-end;flex-wrap:wrap}.hero-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.pill,.toggle-btn{padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--muted);font-size:13px}
+    .toggle-group{display:flex;gap:8px;flex-wrap:wrap}.toggle-btn{cursor:pointer;transition:.15s ease}.toggle-btn.active{background:#162033;color:#fff;border-color:#162033}
+    .stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;min-width:260px}.stat{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:16px 18px;box-shadow:var(--shadow)}.stat-label{font-size:12px;color:var(--muted)}.stat-value{margin-top:8px;font-size:26px;font-weight:800;letter-spacing:-.03em}.stat-sub{margin-top:6px;font-size:12px;color:var(--muted)}
+    .error{display:none;margin:0 0 14px;padding:14px 16px;border-radius:18px;background:#fff4f4;border:1px solid #ffd5d5;color:#b42318}
+    .timeline{position:relative;padding-left:34px}.timeline::before{content:'';position:absolute;left:14px;top:8px;bottom:8px;width:2px;background:linear-gradient(180deg,#cfe0ff 0%,#dce8f8 100%)}
+    .item{position:relative;margin-bottom:16px}.item:last-child{margin-bottom:0}.dot{position:absolute;left:-34px;top:24px;width:14px;height:14px;border-radius:50%;background:linear-gradient(135deg,#4f7cff,#2563eb);box-shadow:0 0 0 5px rgba(37,99,235,.12)}
+    .card{background:linear-gradient(180deg,#ffffff 0%,#fbfdff 100%);border:1px solid var(--line);border-radius:24px;padding:18px 18px 16px;box-shadow:var(--shadow)}
+    .card-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.profile{display:flex;gap:12px;align-items:center}.avatar{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#f9a14a,#f36f21);color:#fff;font-weight:800;box-shadow:0 10px 24px rgba(243,111,33,.22)}
     .name{font-size:16px;font-weight:800}.handle{margin-top:3px;font-size:12px;color:var(--muted)}.time{font-size:12px;color:var(--muted);white-space:nowrap}
-    .body{margin-top:16px;font-size:16px;line-height:1.75;color:#f6f9ff}.body a{color:#8ad8ff}.meta{margin-top:16px;display:flex;gap:8px;flex-wrap:wrap}.tag{padding:7px 10px;border-radius:999px;background:rgba(83,198,240,.1);border:1px solid rgba(83,198,240,.2);color:#9fe8ff;font-size:12px;font-weight:700}
-    .link-row{margin-top:16px;display:flex;justify-content:space-between;align-items:center;gap:12px}.origin-link{color:#ffb26e;text-decoration:none;font-size:13px;font-weight:700}.origin-link::after{content:' ↗'}
-    .error{display:none;margin-top:14px;padding:14px 16px;border-radius:18px;background:#3a1720;border:1px solid rgba(255,112,112,.28);color:#ffb6b6}
-    @media (max-width:900px){.grid{grid-template-columns:1fr}.stat-wrap{grid-template-columns:repeat(2,minmax(0,1fr));flex:1 1 100%}h1{font-size:32px}}
-    @media (max-width:560px){.wrap{width:calc(100vw - 16px);padding:14px 0 24px}.hero{gap:12px}.hero-card{padding:18px;border-radius:20px}.stat-wrap{grid-template-columns:1fr 1fr}.stat-card{padding:14px;border-radius:18px}.eyebrow{font-size:12px;padding:7px 10px}h1{font-size:26px;margin:10px 0 8px}.sub{font-size:14px;line-height:1.65}.hero-meta{margin-top:10px;gap:8px}.pill{font-size:12px;padding:7px 10px}.post{padding:16px;border-radius:18px}.avatar{width:40px;height:40px}.body{font-size:15px;line-height:1.7}.meta{gap:6px}.tag{font-size:11px;padding:6px 8px}}
+    .body{margin-top:14px;font-size:16px;line-height:1.8;color:#1f2937;white-space:pre-wrap}.body.is-original{color:#334155}
+    .meta{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}.tag{padding:7px 10px;border-radius:999px;background:var(--accent-soft);border:1px solid #d8e6ff;color:#275ccf;font-size:12px;font-weight:700}
+    .link-row{margin-top:14px;display:flex;justify-content:flex-end;align-items:center}.origin-link{color:var(--orange);text-decoration:none;font-size:13px;font-weight:700}.origin-link::after{content:' ↗'}
+    @media (max-width:900px){.hero-row{align-items:flex-start}.stats{width:100%}.timeline{padding-left:26px}.timeline::before{left:10px}.dot{left:-26px}}
+    @media (max-width:560px){.wrap{width:calc(100vw - 16px);padding:14px 0 24px}.hero{padding:18px 16px 16px;border-radius:22px;margin-bottom:12px}.eyebrow{font-size:12px;padding:7px 10px}h1{font-size:28px;margin:10px 0 8px}.sub{font-size:14px;line-height:1.68}.hero-meta{gap:8px;margin-top:10px}.pill,.toggle-btn{font-size:12px;padding:7px 10px}.stats{gap:8px}.stat{padding:14px;border-radius:16px}.stat-value{font-size:22px}.timeline{padding-left:22px}.timeline::before{left:8px}.dot{left:-22px;top:20px;width:12px;height:12px;box-shadow:0 0 0 4px rgba(37,99,235,.12)}.card{padding:14px 14px 12px;border-radius:18px}.avatar{width:38px;height:38px}.body{font-size:15px;line-height:1.72}.meta{gap:6px}.tag{font-size:11px;padding:6px 8px}}
   </style>
 </head>
 <body>
   <div class="wrap">
     <section class="hero">
-      <div class="hero-card">
-        <div class="eyebrow">Trump Signal Feed</div>
-        <h1>Trump 发言脉冲</h1>
-        <div class="sub">聚焦特朗普最新 Truth Social 发言，适合快速浏览情绪、话题方向与互动热度。页面默认展示最新中文内容，并保留原始链接入口。</div>
-        <div class="hero-meta">
-          <div class="pill" id="status-pill">准备载入最新内容…</div>
-          <div class="pill">自动更新</div>
-          <div class="pill">中文优先展示</div>
+      <div class="hero-row">
+        <div>
+          <div class="eyebrow">Trump Timeline</div>
+          <h1>Trump 发言时间线</h1>
+          <div class="sub">按时间顺序浏览特朗普最新发言，支持中文与原文一键切换，适合快速感知其最新表态节奏和互动热度。</div>
+          <div class="hero-meta">
+            <div class="pill" id="status-pill">准备载入最新内容…</div>
+            <div class="pill">时间线浏览</div>
+            <div class="toggle-group">
+              <button class="toggle-btn active" data-lang="zh">中文</button>
+              <button class="toggle-btn" data-lang="en">原文</button>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="stat-wrap">
-        <div class="stat-card"><div class="stat-label">最近发言数</div><div class="stat-value" id="count-stat">--</div><div class="stat-sub">默认展示最近 12 条脉冲</div></div>
-        <div class="stat-card"><div class="stat-label">最近一条时间</div><div class="stat-value" id="latest-stat">--</div><div class="stat-sub">帮助快速判断节奏变化</div></div>
+        <div class="stats">
+          <div class="stat"><div class="stat-label">最近发言数</div><div class="stat-value" id="count-stat">--</div><div class="stat-sub">默认展示最近 12 条</div></div>
+          <div class="stat"><div class="stat-label">最近一条时间</div><div class="stat-value" id="latest-stat">--</div><div class="stat-sub">快速判断当前活跃度</div></div>
+        </div>
       </div>
     </section>
     <div class="error" id="error-box"></div>
-    <section class="grid" id="posts"></section>
+    <section class="timeline" id="posts"></section>
   </div>
+
   <template id="post-template">
-    <article class="post">
-      <div class="post-top">
-        <div class="profile">
-          <div class="avatar">T</div>
-          <div>
-            <div class="name">Donald J. Trump</div>
-            <div class="handle">@realDonaldTrump</div>
+    <article class="item">
+      <div class="dot"></div>
+      <div class="card">
+        <div class="card-top">
+          <div class="profile">
+            <div class="avatar">T</div>
+            <div>
+              <div class="name">Donald J. Trump</div>
+              <div class="handle">@realDonaldTrump</div>
+            </div>
           </div>
+          <div class="time"></div>
         </div>
-        <div class="time"></div>
-      </div>
-      <div class="body"></div>
-      <div class="meta"></div>
-      <div class="link-row">
-        <div class="muted"></div>
-        <a class="origin-link" target="_blank" rel="noopener noreferrer">查看原帖</a>
+        <div class="body"></div>
+        <div class="meta"></div>
+        <div class="link-row">
+          <a class="origin-link" target="_blank" rel="noopener noreferrer">查看原帖</a>
+        </div>
       </div>
     </article>
   </template>
+
   <script>
     const FEED='/api/pulse/trump-feed';
     const REFRESH_MS=60000;
+    let currentLang='zh';
+    let latestPosts=[];
     const postsEl=document.getElementById('posts');
     const tpl=document.getElementById('post-template');
     const statusPill=document.getElementById('status-pill');
     const countStat=document.getElementById('count-stat');
     const latestStat=document.getElementById('latest-stat');
     const errorBox=document.getElementById('error-box');
+
     function timeAgo(ts){const diff=Math.max(0,Date.now()-new Date(ts).getTime());const min=Math.round(diff/60000);if(min<1)return'刚刚';if(min<60)return `${min} 分钟前`;const hr=Math.round(min/60);if(hr<24)return `${hr} 小时前`;const day=Math.round(hr/24);return `${day} 天前`}
     function formatCount(n){return new Intl.NumberFormat('en-US').format(Number(n||0))}
-    function preferredText(post){return post.content_zh_cn||post.content||''}
-    function render(posts){postsEl.innerHTML='';countStat.textContent=String(posts.length);latestStat.textContent=posts[0]?.created_at?timeAgo(posts[0].created_at):'--';
-      posts.forEach(post=>{const el=tpl.content.firstElementChild.cloneNode(true);el.querySelector('.time').textContent=post.created_at?timeAgo(post.created_at):'';el.querySelector('.body').textContent=preferredText(post);const meta=el.querySelector('.meta');
-        const tags=[['👍 点赞',post.favourites_count],['🔁 转发',post.reblogs_count],['💬 回复',post.replies_count]];
-        tags.forEach(([label,val])=>{const tag=document.createElement('span');tag.className='tag';tag.textContent=`${label} ${formatCount(val)}`;meta.appendChild(tag);});
-        el.querySelector('.origin-link').href=post.url||'https://truthsocial.com/@realDonaldTrump';
-        postsEl.appendChild(el);
-      });}
+    function preferredText(post){return currentLang==='zh'?(post.content_zh_cn||post.content||''):(post.content||post.content_zh_cn||'')}
+    function bindLangToggle(){document.querySelectorAll('.toggle-btn').forEach(btn=>{btn.addEventListener('click',()=>{currentLang=btn.dataset.lang;document.querySelectorAll('.toggle-btn').forEach(el=>el.classList.toggle('active',el===btn));render(latestPosts);});});}
+    function render(posts){latestPosts=posts;postsEl.innerHTML='';countStat.textContent=String(posts.length);latestStat.textContent=posts[0]?.created_at?timeAgo(posts[0].created_at):'--';
+      posts.forEach(post=>{const el=tpl.content.firstElementChild.cloneNode(true);el.querySelector('.time').textContent=post.created_at?timeAgo(post.created_at):'';const body=el.querySelector('.body');body.textContent=preferredText(post);body.classList.toggle('is-original', currentLang==='en');const meta=el.querySelector('.meta');[['👍 点赞',post.favourites_count],['🔁 转发',post.reblogs_count],['💬 回复',post.replies_count]].forEach(([label,val])=>{const tag=document.createElement('span');tag.className='tag';tag.textContent=`${label} ${formatCount(val)}`;meta.appendChild(tag);});el.querySelector('.origin-link').href=post.url||'https://truthsocial.com/@realDonaldTrump';postsEl.appendChild(el);});}
     async function refresh(){try{const resp=await fetch(FEED,{cache:'no-store'});if(!resp.ok) throw new Error(`HTTP ${resp.status}`);const data=await resp.json();if(!data.ok) throw new Error(data.error||'unknown error');errorBox.style.display='none';statusPill.textContent=`最近更新 ${timeAgo(data.fetchedAt)}`;render(data.posts||[]);}catch(err){errorBox.textContent='当前内容更新稍慢，请稍后刷新重试';errorBox.style.display='block';}}
-    refresh();setInterval(refresh,REFRESH_MS);
+    bindLangToggle(); refresh(); setInterval(refresh,REFRESH_MS);
   </script>
 </body>
 </html>
