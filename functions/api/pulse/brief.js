@@ -5,7 +5,6 @@ const CODE_NAMES = {
 };
 const SNAPSHOT_TTL_SECONDS = 15;
 const STALE_TTL_SECONDS = 180;
-const ALLOWED_PAGE_PATHS = ['/insight/korea-tech-briefing.html'];
 
 function normalizeCodes(raw) {
   if (!raw) return DEFAULT_CODES;
@@ -22,52 +21,6 @@ function mapDirection(rf) {
   return 'flat';
 }
 
-function blocked(message = 'forbidden') {
-  return new Response(JSON.stringify({ ok: false, error: message }), {
-    status: 403,
-    headers: {
-      'content-type': 'application/json; charset=utf-8',
-      'cache-control': 'no-store',
-      'access-control-allow-origin': '*',
-      'x-robots-tag': 'noindex, nofollow, noarchive',
-    },
-  });
-}
-
-function isAllowedRequest(request) {
-  const url = new URL(request.url);
-  const referer = request.headers.get('referer');
-  const origin = request.headers.get('origin');
-  const secFetchSite = request.headers.get('sec-fetch-site');
-  const userAgent = request.headers.get('user-agent') || '';
-
-  if (origin) {
-    try {
-      const originUrl = new URL(origin);
-      if (originUrl.origin !== url.origin) return false;
-    } catch {
-      return false;
-    }
-  }
-
-  if (referer) {
-    try {
-      const refererUrl = new URL(referer);
-      if (refererUrl.origin !== url.origin) return false;
-      if (!ALLOWED_PAGE_PATHS.includes(refererUrl.pathname)) return false;
-    } catch {
-      return false;
-    }
-  }
-
-  if (!referer && !origin) {
-    if (/Telegram|TelegramBot|WebView|Mobile/i.test(userAgent)) return true;
-    if (!secFetchSite || ['same-origin', 'same-site', 'none'].includes(secFetchSite)) return true;
-  }
-
-  if (secFetchSite && !['same-origin', 'same-site', 'none'].includes(secFetchSite)) return false;
-  return true;
-}
 
 function jsonHeaders(cacheControl, cacheState) {
   return {
@@ -81,8 +34,6 @@ function jsonHeaders(cacheControl, cacheState) {
 
 export async function onRequestGet(context) {
   const { request } = context;
-  if (!isAllowedRequest(request)) return blocked();
-
   const url = new URL(request.url);
   const codes = normalizeCodes(url.searchParams.get('codes'));
   const cache = caches.default;
