@@ -31,18 +31,18 @@
         <div>
           <div class="eyebrow">Trump's Truth Archive</div>
           <h1>Trump's Truth 时间线</h1>
-          <div class="sub">基于 `trumpstruth.org` 的归档页面重建时间线，适合按时间顺序浏览特朗普最新发言。默认展示原文，并保留原帖跳转入口。</div>
+          <div class="sub">基于 `trumpstruth.org` 的归档页面重建时间线，适合按时间顺序浏览特朗普最新发言。当前保留最近 20 条，并支持中文 / 原文切换。</div>
           <div class="hero-meta">
             <div class="pill" id="status-pill">准备载入最新内容…</div>
             <div class="pill">归档源展示</div>
             <div class="toggle-group">
-              <button class="toggle-btn active" data-lang="en">原文</button>
-              <button class="toggle-btn" data-lang="zh">中文占位</button>
+              <button class="toggle-btn" data-lang="en">原文</button>
+              <button class="toggle-btn active" data-lang="zh">中文</button>
             </div>
           </div>
         </div>
         <div class="stats">
-          <div class="stat"><div class="stat-label">最近发言数</div><div class="stat-value" id="count-stat">--</div><div class="stat-sub">默认展示最近 12 条</div></div>
+          <div class="stat"><div class="stat-label">最近发言数</div><div class="stat-value" id="count-stat">--</div><div class="stat-sub">默认展示最近 20 条</div></div>
           <div class="stat"><div class="stat-label">最近一条时间</div><div class="stat-value" id="latest-stat">--</div><div class="stat-sub">快速判断当前更新节奏</div></div>
         </div>
       </div>
@@ -77,7 +77,7 @@
   <script>
     const FEED='/api/pulse/trump-truth-archive';
     const REFRESH_MS=120000;
-    let currentLang='en';
+    let currentLang='zh';
     let latestPosts=[];
     const postsEl=document.getElementById('posts');
     const tpl=document.getElementById('post-template');
@@ -86,11 +86,11 @@
     const latestStat=document.getElementById('latest-stat');
     const errorBox=document.getElementById('error-box');
     function timeAgo(ts){if(!ts) return '--'; const diff=Math.max(0,Date.now()-new Date(ts).getTime());const min=Math.round(diff/60000);if(min<1)return'刚刚';if(min<60)return `${min} 分钟前`;const hr=Math.round(min/60);if(hr<24)return `${hr} 小时前`;const day=Math.round(hr/24);return `${day} 天前`}
-    function preferredText(post){if(currentLang==='zh') return '当前这版以归档原文为主，中文整理可后续接入。\n\n' + (post.content||''); return post.content||''}
+    function preferredText(post){if(currentLang==='zh') return post.content_zh_cn||post.content||''; return post.content||post.content_zh_cn||''}
     function bindLangToggle(){document.querySelectorAll('.toggle-btn').forEach(btn=>{btn.addEventListener('click',()=>{currentLang=btn.dataset.lang;document.querySelectorAll('.toggle-btn').forEach(el=>el.classList.toggle('active',el===btn));render(latestPosts);});});}
     function render(posts){latestPosts=posts;postsEl.innerHTML='';countStat.textContent=String(posts.length);latestStat.textContent=posts[0]?.created_at?timeAgo(posts[0].created_at):(posts[0]?.created_at_text||'--');
-      posts.forEach(post=>{const el=tpl.content.firstElementChild.cloneNode(true);el.querySelector('.time').textContent=post.created_at_text||timeAgo(post.created_at);const body=el.querySelector('.body');body.textContent=preferredText(post);body.classList.toggle('is-original', currentLang==='en');const avatar=el.querySelector('.avatar-img'); if(post.avatar){avatar.src=post.avatar;} else {avatar.style.display='none';}
-        const meta=el.querySelector('.meta');[['归档源','trumpstruth.org'],['原帖','Truth Social']].forEach(([a,b])=>{const tag=document.createElement('span');tag.className='tag';tag.textContent=`${a} · ${b}`;meta.appendChild(tag);});
+      posts.forEach(post=>{const el=tpl.content.firstElementChild.cloneNode(true);el.querySelector('.time').textContent=post.created_at_text||timeAgo(post.created_at);const body=el.querySelector('.body');body.textContent=preferredText(post);body.classList.toggle('is-original', currentLang==='en');const avatar=el.querySelector('.avatar-img'); if(post.avatar){avatar.src=post.avatar; avatar.style.display='block';} else {avatar.style.display='none';}
+        const meta=el.querySelector('.meta');[['归档源','trumpstruth.org'],['原帖','Truth Social'],['互动','已补充中文']].forEach(([a,b])=>{const tag=document.createElement('span');tag.className='tag';tag.textContent=`${a} · ${b}`;meta.appendChild(tag);});
         el.querySelector('.origin-link').href=post.url||post.status_url||'https://www.trumpstruth.org/';postsEl.appendChild(el);});}
     async function refresh(){try{const resp=await fetch(FEED,{cache:'no-store'});if(!resp.ok) throw new Error(`HTTP ${resp.status}`);const data=await resp.json();if(!data.ok) throw new Error(data.error||'unknown error');errorBox.style.display='none';statusPill.textContent=`最近更新 ${timeAgo(data.fetchedAt)}`;render(data.posts||[]);}catch(err){errorBox.textContent='当前内容更新稍慢，请稍后刷新重试';errorBox.style.display='block';}}
     bindLangToggle(); refresh(); setInterval(refresh,REFRESH_MS);

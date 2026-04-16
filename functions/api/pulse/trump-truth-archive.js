@@ -1,4 +1,6 @@
-const SOURCE_URL = 'https://www.trumpstruth.org/?sort=desc&per_page=12&removed=include';
+const SOURCE_URL = 'https://www.trumpstruth.org/?sort=desc&per_page=20&removed=include';
+const TRUMP_FEED_URL = 'https://stock.fengle.me/api/truth-social/posts?limit=50';
+const TRUMP_AVATAR_URL = 'https://stock.fengle.me/api/truth-social/media/trump_avatar';
 const CACHE_SECONDS = 120;
 const STALE_SECONDS = 600;
 
@@ -39,7 +41,7 @@ function stripTags(str = '') {
 function extractPosts(html) {
   const statusesBlock = html.match(/<div class="statuses">([\s\S]*?)<div class="pagination controls__pagination">/i)?.[1] || html;
   const chunks = statusesBlock.split(/<div class="status"\s+data-status-url=/i).slice(1);
-  return chunks.slice(0, 12).map((chunk) => {
+  return chunks.slice(0, 20).map((chunk) => {
     const statusUrl = chunk.match(/^"([^"]+)"/)?.[1]?.trim() || null;
     const permalink = chunk.match(/class="status-info__meta-item">([^<]+)<\/a>\s*<\/div>/i)?.[1]?.trim() || null;
     const originalUrl = chunk.match(/href="(https:\/\/truthsocial\.com\/@realDonaldTrump\/[^"]+)"[^>]*class="status__external-link"/i)?.[1] || null;
@@ -60,6 +62,29 @@ function extractPosts(html) {
   }).filter((post) => post.content || post.url);
 }
 
+function enrichWithTranslations(posts, translationPosts) {
+  const byUrl = new Map();
+  const byId = new Map();
+  for (const post of translationPosts || []) {
+    if (post.url) byUrl.set(post.url, post);
+    if (post.id) byId.set(String(post.id), post);
+  }
+  return posts.map((post) => {
+    const id = post.url?.split('/').pop() || null;
+    const match = (post.url && byUrl.get(post.url)) || (id && byId.get(id)) || null;
+    return {
+      ...post,
+      avatar: TRUMP_AVATAR_URL,
+      content_zh_cn: match?.content_zh_cn || '',
+      content_zh_hk: match?.content_zh_hk || '',
+      content_ko: match?.content_ko || '',
+      favourites_count: match?.favourites_count ?? null,
+      reblogs_count: match?.reblogs_count ?? null,
+      replies_count: match?.replies_count ?? null,
+    };
+  });
+}
+
 export async function onRequestGet(context) {
   const { request } = context;
   const url = new URL(request.url);
@@ -75,21 +100,35 @@ export async function onRequestGet(context) {
       return new Response(cached.body, { status: cached.status, headers: resHeaders });
     }
 
-    const upstream = await fetch(SOURCE_URL, {
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (compatible; HK-ETF-Lab/1.0; +https://hketf-lab.pages.dev/)',
-        Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-      },
-    });
+    const [upstream, translationResp] = await Promise.all([
+      fetch(SOURCE_URL, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (compatible; HK-ETF-Lab/1.0; +https://hketf-lab.pages.dev/)',
+          Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        },
+      }),
+      fetch(TRUMP_FEED_URL, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (compatible; HK-ETF-Lab/1.0; +https://hketf-lab.pages.dev/)',
+          Accept: 'application/json, text/plain, */*',
+        },
+      }).catch(() => null),
+    ]);
     if (!upstream.ok) throw new Error(`upstream ${upstream.status}`);
     const html = await upstream.text();
     const posts = extractPosts(html);
+    let translationPosts = [];
+    if (translationResp && translationResp.ok) {
+      const translationPayload = await translationResp.json();
+      translationPosts = Array.isArray(translationPayload.posts) ? translationPayload.posts : [];
+    }
+    const mergedPosts = enrichWithTranslations(posts, translationPosts);
     const body = JSON.stringify({
       ok: true,
       fetchedAt: new Date().toISOString(),
-      count: posts.length,
+      count: mergedPosts.length,
       source: 'trumpstruth.org',
-      posts,
+      posts: mergedPosts,
     });
 
     const liveRes = new Response(body, { headers: headers(`public, max-age=0, s-maxage=${CACHE_SECONDS}`, 'MISS') });
