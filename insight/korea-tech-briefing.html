@@ -10,6 +10,8 @@
     * { box-sizing:border-box; }
     body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:radial-gradient(circle at top,#ffffff 0%,#eef4ff 36%,var(--bg) 100%); color:var(--text); min-height:100vh; }
     .wrap { width:min(1180px,calc(100vw - 32px)); margin:0 auto; padding:28px 0 40px; }
+    .topnav{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+    .navchip{display:inline-block;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.88);border:1px solid var(--line);font-size:13px;color:#374151;text-decoration:none}
     .hero { display:flex; flex-wrap:wrap; gap:14px; align-items:flex-end; justify-content:space-between; margin-bottom:18px; }
     .title { font-size:clamp(28px,4vw,42px); font-weight:800; letter-spacing:-0.02em; margin:0; }
     .subtitle { margin-top:8px; color:var(--muted); font-size:15px; line-height:1.6; }
@@ -72,6 +74,8 @@
     @media (max-width: 560px) {
       body { background:linear-gradient(180deg,#f8fbff 0%,#f2f6fd 100%); }
       .wrap { width:calc(100vw - 16px); padding:12px 0 22px; }
+      .topnav{gap:8px;margin-bottom:10px}
+      .navchip{padding:7px 10px;font-size:12px}
       .hero { gap:10px; margin-bottom:12px; }
       .title { font-size:24px; }
       .subtitle { margin-top:6px; font-size:13px; line-height:1.6; }
@@ -108,6 +112,11 @@
 </head>
 <body>
   <div class="wrap">
+    <div class="topnav">
+      <a class="navchip" href="../index.html">⌂ 首页</a>
+      <a class="navchip" href="./trump-truth-archive.html">◉ Trump 动态</a>
+      <a class="navchip" href="../daily/morning-report.html">✦ 今晨晨报</a>
+    </div>
     <section class="hero">
       <div>
         <h1 class="title">三星海力士异动追踪，一眼看懂韩国科技风向</h1>
