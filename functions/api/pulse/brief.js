@@ -16,11 +16,120 @@ function normalizeCodes(raw) {
 }
 
 function mapDirection(rf) {
-  if (rf === '2') return 'up';
-  if (rf === '5') return 'down';
+  if (rf === '2' || rf === 'RISE') return 'up';
+  if (rf === '5' || rf === 'FALL') return 'down';
   return 'flat';
 }
 
+function parseNumber(value) {
+  if (value === null || value === undefined) return 0;
+  if (typeof value === 'number') return Number.isFinite(value) ? value : 0;
+  const normalized = String(value).replace(/,/g, '').trim();
+  const n = Number(normalized);
+  return Number.isFinite(n) ? n : 0;
+}
+
+async function fetchPollingQuote(code) {
+  const upstreamUrl = `https://polling.finance.naver.com/api/realtime?query=${encodeURIComponent(`SERVICE_ITEM:${code}`)}`;
+  const upstream = await fetch(upstreamUrl, {
+    headers: {
+      'User-Agent': 'Mozilla/5.0 (compatible; HK-ETF-Lab/1.0; +https://hketf-lab.pages.dev/)',
+      Referer: 'https://finance.naver.com/',
+      Accept: 'text/plain, application/json, */*',
+    },
+  });
+  if (!upstream.ok) throw new Error(`polling ${upstream.status} for ${code}`);
+  const buffer = await upstream.arrayBuffer();
+  const text = new TextDecoder('euc-kr').decode(buffer);
+  const payload = JSON.parse(text);
+  const item = payload?.result?.areas?.flatMap((area) => area.datas || []).find((entry) => entry.cd === code);
+  if (!item) throw new Error(`polling empty for ${code}`);
+  return { payload, item };
+}
+
+async function fetchMobileJson(path, referer) {
+  const resp = await fetch(`https://m.stock.naver.com${path}`, {
+    headers: {
+      'User-Agent': 'Mozilla/5.0 (compatible; HK-ETF-Lab/1.0; +https://hketf-lab.pages.dev/)',
+      Referer: referer,
+      Accept: 'application/json, text/plain, */*',
+    },
+  });
+  if (!resp.ok) throw new Error(`mobile ${resp.status} for ${path}`);
+  return await resp.json();
+}
+
+async function fetchMobileQuote(code) {
+  const referer = `https://m.stock.naver.com/domestic/stock/${code}/total`;
+  const [basic, integration] = await Promise.all([
+    fetchMobileJson(`/api/stock/${code}/basic`, referer),
+    fetchMobileJson(`/api/stock/${code}/integration`, referer),
+  ]);
+  return { basic, integration };
+}
+
+function buildQuoteFromSources(code, snapshotAt, pollingResult, mobileResult) {
+  const pollingItem = pollingResult?.item;
+  const pollingPayload = pollingResult?.payload;
+  const basic = mobileResult?.basic;
+  const integration = mobileResult?.integration;
+  const totalInfos = integration?.totalInfos || [];
+  const infoMap = Object.fromEntries(totalInfos.map((row) => [row.code, row.value]));
+
+  const current = parseNumber(pollingItem?.nv ?? basic?.closePrice ?? infoMap.closePrice ?? infoMap.tradePrice);
+  const previousClose = parseNumber(pollingItem?.pcv ?? basic?.previousClosePrice ?? infoMap.lastClosePrice);
+  const dayChange = parseNumber(pollingItem?.cv ?? basic?.compareToPreviousClosePrice ?? (current - previousClose));
+  const dayChangePercent = parseNumber(pollingItem?.cr ?? basic?.fluctuationsRatio ?? infoMap.fluctuationsRatio);
+  const open = parseNumber(pollingItem?.ov ?? basic?.openPrice ?? infoMap.openPrice);
+  const high = parseNumber(pollingItem?.hv ?? basic?.highPrice ?? infoMap.highPrice);
+  const low = parseNumber(pollingItem?.lv ?? basic?.lowPrice ?? infoMap.lowPrice);
+  const volume = parseNumber(pollingItem?.aq ?? basic?.accumulatedTradingVolume ?? infoMap.accumulatedTradingVolume);
+  const value = parseNumber(pollingItem?.aa ?? basic?.accumulatedTradingValue ?? infoMap.accumulatedTradingValue);
+  const market = pollingItem?.ms || basic?.marketStatus || null;
+  const direction = mapDirection(pollingItem?.rf || basic?.compareToPreviousPrice?.name || basic?.compareToPreviousPrice?.text || '');
+  const localTs = pollingPayload?.result?.time || basic?.localTradedAt || null;
+
+  if (!current && !previousClose && !open && !high && !low) {
+    return {
+      code,
+      name: CODE_NAMES[code] || basic?.stockName || integration?.stockName || code,
+      market,
+      direction: 'flat',
+      current: 0,
+      previousClose: 0,
+      dayChange: 0,
+      dayChangePercent: 0,
+      open: 0,
+      high: 0,
+      low: 0,
+      volume: 0,
+      value: 0,
+      fetchedAt: new Date(snapshotAt).toISOString(),
+      localTradedAt: null,
+      unavailable: true,
+      source: 'unavailable',
+    };
+  }
+
+  return {
+    code,
+    name: CODE_NAMES[code] || basic?.stockName || integration?.stockName || pollingItem?.nm || code,
+    market,
+    direction,
+    current,
+    previousClose,
+    dayChange,
+    dayChangePercent,
+    open,
+    high,
+    low,
+    volume,
+    value,
+    fetchedAt: new Date(snapshotAt).toISOString(),
+    localTradedAt: localTs ? new Date(localTs).toISOString() : null,
+    source: pollingItem ? 'polling+mobile' : 'mobile',
+  };
+}
 
 function jsonHeaders(cacheControl, cacheState) {
   return {
@@ -48,79 +157,35 @@ export async function onRequestGet(context) {
       return new Response(cached.body, { status: cached.status, headers });
     }
 
-    const responses = await Promise.all(
+    const perCodeResults = await Promise.all(
       codes.map(async (code) => {
-        const upstreamUrl = `https://polling.finance.naver.com/api/realtime?query=${encodeURIComponent(`SERVICE_ITEM:${code}`)}`;
-        const upstream = await fetch(upstreamUrl, {
-          headers: {
-            'User-Agent': 'Mozilla/5.0 (compatible; HK-ETF-Lab/1.0; +https://hketf-lab.pages.dev/)',
-            Referer: 'https://finance.naver.com/',
-            Accept: 'text/plain, application/json, */*',
-          },
-        });
-        if (!upstream.ok) throw new Error(`upstream ${upstream.status} for ${code}`);
-        const buffer = await upstream.arrayBuffer();
-        const text = new TextDecoder('euc-kr').decode(buffer);
-        return JSON.parse(text);
+        const [polling, mobile] = await Promise.allSettled([
+          fetchPollingQuote(code),
+          fetchMobileQuote(code),
+        ]);
+        return {
+          code,
+          polling: polling.status === 'fulfilled' ? polling.value : null,
+          mobile: mobile.status === 'fulfilled' ? mobile.value : null,
+        };
       })
     );
 
     const snapshotAt = Date.now();
-    const pollingIntervalMs = Math.max(...responses.map((payload) => Number(payload?.result?.pollingInterval || 7000)));
-    const serverTime = Math.max(...responses.map((payload) => Number(payload?.result?.time || snapshotAt)));
-    const dataMap = new Map();
+    const pollingIntervalMs = Math.max(
+      7000,
+      ...perCodeResults.map((entry) => Number(entry.polling?.payload?.result?.pollingInterval || 7000))
+    );
+    const serverTime = Math.max(
+      snapshotAt,
+      ...perCodeResults.map((entry) => {
+        const pollingTs = Number(entry.polling?.payload?.result?.time || 0);
+        const mobileTs = entry.mobile?.basic?.localTradedAt ? new Date(entry.mobile.basic.localTradedAt).getTime() : 0;
+        return Math.max(pollingTs, mobileTs, snapshotAt);
+      })
+    );
 
-    for (const payload of responses) {
-      const datas = payload?.result?.areas?.flatMap((area) => area.datas || []) || [];
-      for (const item of datas) dataMap.set(item.cd, { item, payload });
-    }
-
-    const quotes = codes.map((code) => {
-      const found = dataMap.get(code);
-      if (!found) {
-        return {
-          code,
-          name: CODE_NAMES[code] || code,
-          market: null,
-          direction: 'flat',
-          current: 0,
-          previousClose: 0,
-          dayChange: 0,
-          dayChangePercent: 0,
-          open: 0,
-          high: 0,
-          low: 0,
-          volume: 0,
-          value: 0,
-          fetchedAt: new Date(snapshotAt).toISOString(),
-          localTradedAt: null,
-          unavailable: true,
-        };
-      }
-
-      const { item, payload } = found;
-      const current = Number(item.nv ?? 0);
-      const previousClose = Number(item.pcv ?? 0);
-      const delta = Number(item.cv ?? current - previousClose);
-      const ratio = Number(item.cr ?? 0);
-      return {
-        code: item.cd,
-        name: CODE_NAMES[item.cd] || item.nm || item.cd,
-        market: item.ms || null,
-        direction: mapDirection(item.rf),
-        current,
-        previousClose,
-        dayChange: delta,
-        dayChangePercent: ratio,
-        open: Number(item.ov ?? 0),
-        high: Number(item.hv ?? 0),
-        low: Number(item.lv ?? 0),
-        volume: Number(item.aq ?? 0),
-        value: Number(item.aa ?? 0),
-        fetchedAt: new Date(snapshotAt).toISOString(),
-        localTradedAt: payload?.result?.time ? new Date(payload.result.time).toISOString() : null,
-      };
-    });
+    const quotes = perCodeResults.map(({ code, polling, mobile }) => buildQuoteFromSources(code, snapshotAt, polling, mobile));
 
     const body = JSON.stringify({
       ok: true,
