@@ -1,7 +1,9 @@
-const SOURCE_URL = 'https://www.trumpstruth.org/?sort=desc&per_page=20&removed=include';
-const TRUMP_FEED_URL = 'https://stock.fengle.me/api/truth-social/posts?limit=50';
+const SOURCE_URL = 'https://www.trumpstruth.org/?sort=desc&per_page=80&removed=include';
+const TRUMP_FEED_URL = 'https://stock.fengle.me/api/truth-social/posts?limit=100';
 const CACHE_SECONDS = 120;
 const STALE_SECONDS = 600;
+const RECENT_HOURS = 48;
+const MAX_POSTS = 80;
 
 function headers(cacheControl, state) {
   return {
@@ -40,7 +42,7 @@ function stripTags(str = '') {
 function extractPosts(html) {
   const statusesBlock = html.match(/<div class="statuses">([\s\S]*?)<div class="pagination controls__pagination">/i)?.[1] || html;
   const chunks = statusesBlock.split(/<div class="status"\s+data-status-url=/i).slice(1);
-  return chunks.slice(0, 20).map((chunk) => {
+  return chunks.slice(0, MAX_POSTS).map((chunk) => {
     const statusUrl = chunk.match(/^"([^"]+)"/)?.[1]?.trim() || null;
     const permalink = chunk.match(/class="status-info__meta-item">([^<]+)<\/a>\s*<\/div>/i)?.[1]?.trim() || null;
     const originalUrl = chunk.match(/href="(https:\/\/truthsocial\.com\/@realDonaldTrump\/[^"]+)"[^>]*class="status__external-link"/i)?.[1] || null;
@@ -109,6 +111,16 @@ function dedupePosts(posts) {
   return deduped;
 }
 
+function keepRecentPosts(posts, hours = RECENT_HOURS) {
+  const cutoff = Date.now() - hours * 60 * 60 * 1000;
+  const recent = (posts || []).filter((post) => {
+    const ts = post.created_at ? new Date(post.created_at).getTime() : NaN;
+    return Number.isFinite(ts) && ts >= cutoff;
+  });
+  if (recent.length) return recent.slice(0, MAX_POSTS);
+  return (posts || []).slice(0, Math.min(MAX_POSTS, 20));
+}
+
 export async function onRequestGet(context) {
   const { request } = context;
   const url = new URL(request.url);
@@ -148,13 +160,15 @@ export async function onRequestGet(context) {
     }
     const avatarUrl = `${url.origin}/assets/home/trump-home.jpg`;
     const mergedPosts = enrichWithTranslations(posts, translationPosts, avatarUrl);
-    const dedupedPosts = dedupePosts(mergedPosts).slice(0, 20);
+    const dedupedPosts = dedupePosts(mergedPosts);
+    const finalPosts = keepRecentPosts(dedupedPosts);
     const body = JSON.stringify({
       ok: true,
       fetchedAt: new Date().toISOString(),
-      count: dedupedPosts.length,
+      count: finalPosts.length,
       source: 'trumpstruth.org',
-      posts: dedupedPosts,
+      windowHours: RECENT_HOURS,
+      posts: finalPosts,
     });
 
     const liveRes = new Response(body, { headers: headers(`public, max-age=0, s-maxage=${CACHE_SECONDS}`, 'MISS') });
