@@ -1,5 +1,4 @@
 const SOURCE_URL = 'https://www.trumpstruth.org/?sort=desc&per_page=80&removed=include';
-const TRUMP_FEED_URL = 'https://stock.fengle.me/api/truth-social/posts?limit=100';
 const CACHE_SECONDS = 120;
 const STALE_SECONDS = 600;
 const RECENT_HOURS = 48;
@@ -74,34 +73,18 @@ function extractPosts(html) {
   }).filter((post) => post.content || post.url);
 }
 
-function enrichWithTranslations(posts, translationPosts, avatarUrl) {
-  const byUrl = new Map();
-  const byId = new Map();
-  for (const post of translationPosts || []) {
-    if (post.url) byUrl.set(post.url, post);
-    if (post.id) byId.set(String(post.id), post);
-  }
-  return posts.map((post) => {
-    const id = post.url?.split('/').pop() || null;
-    const match = (post.url && byUrl.get(post.url)) || (id && byId.get(id)) || null;
-    return {
-      ...post,
-      avatar: avatarUrl,
-      content_zh_cn: match?.content_zh_cn || '',
-      content_zh_hk: match?.content_zh_hk || '',
-      content_ko: match?.content_ko || '',
-      favourites_count: match?.favourites_count ?? null,
-      reblogs_count: match?.reblogs_count ?? null,
-      replies_count: match?.replies_count ?? null,
-      media: Array.isArray(post.media) && post.media.length
-        ? post.media
-        : (Array.isArray(match?.media)
-            ? match.media.filter((item) => typeof item === 'string'
-                ? /^https?:\/\//i.test(item)
-                : /^https?:\/\//i.test(item?.url || item?.preview_url || item?.remote_url || ''))
-            : []),
-    };
-  });
+function enrichFromArchive(posts, avatarUrl) {
+  return posts.map((post) => ({
+    ...post,
+    avatar: avatarUrl,
+    content_zh_cn: '',
+    content_zh_hk: '',
+    content_ko: '',
+    favourites_count: null,
+    reblogs_count: null,
+    replies_count: null,
+    media: Array.isArray(post.media) ? post.media : [],
+  }));
 }
 
 function normalizeForDedupe(str = '') {
@@ -153,30 +136,17 @@ export async function onRequestGet(context) {
       return new Response(cached.body, { status: cached.status, headers: resHeaders });
     }
 
-    const [upstream, translationResp] = await Promise.all([
-      fetch(SOURCE_URL, {
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (compatible; HK-ETF-Lab/1.0; +https://hketf-lab.pages.dev/)',
-          Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-        },
-      }),
-      fetch(TRUMP_FEED_URL, {
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (compatible; HK-ETF-Lab/1.0; +https://hketf-lab.pages.dev/)',
-          Accept: 'application/json, text/plain, */*',
-        },
-      }).catch(() => null),
-    ]);
+    const upstream = await fetch(SOURCE_URL, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (compatible; HK-ETF-Lab/1.0; +https://hketf-lab.pages.dev/)',
+        Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+      },
+    });
     if (!upstream.ok) throw new Error(`upstream ${upstream.status}`);
     const html = await upstream.text();
     const posts = extractPosts(html);
-    let translationPosts = [];
-    if (translationResp && translationResp.ok) {
-      const translationPayload = await translationResp.json();
-      translationPosts = Array.isArray(translationPayload.posts) ? translationPayload.posts : [];
-    }
     const avatarUrl = `${url.origin}/assets/home/trump-home.jpg`;
-    const mergedPosts = enrichWithTranslations(posts, translationPosts, avatarUrl);
+    const mergedPosts = enrichFromArchive(posts, avatarUrl);
     const dedupedPosts = dedupePosts(mergedPosts);
     const finalPosts = keepRecentPosts(dedupedPosts);
     const body = JSON.stringify({
