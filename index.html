@@ -77,7 +77,9 @@
       box-shadow:0 8px 24px rgba(15,23,42,.04);
       transition:transform .16s ease, box-shadow .16s ease, border-color .16s ease;
     }
-    .card-thumb{display:none}
+    .card-media{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:8px}
+    .card-copy{flex:1 1 auto;min-width:0}
+    .card-thumb{width:84px;height:84px;object-fit:cover;object-position:center;border-radius:14px;border:1px solid var(--line);background:#f8fafc;display:block;flex:0 0 84px}
     .card:hover{
       transform:translateY(-2px);
       border-color:#bfd3ff;
@@ -116,7 +118,9 @@
       .section-title{font-size:20px;margin:2px 2px 12px}
       .grid{gap:10px}
       .card{padding:16px 16px 14px;border-radius:18px;min-height:auto}
-      .card-thumb{display:none}
+      .card-media{gap:10px;margin-bottom:6px}
+      .card-copy{min-width:0}
+      .card-thumb{width:58px;height:58px;flex-basis:58px;border-radius:12px}
       .top{align-items:flex-start;gap:10px}
       .tag{font-size:11px;padding:6px 9px}
       .k{font-size:12px}
@@ -175,21 +179,31 @@
       <div class="section-title" style="font-size:18px;margin:6px 4px 14px;color:#475569;">轻松测一测</div>
       <div class="grid" style="margin-bottom:18px;">
         <a class="card accent-blue" href="https://etf.house">
-          <div class="top">
-            <div class="k">风格测试</div>
-            <span class="tag">互动体验</span>
+          <div class="card-media">
+            <div class="card-copy">
+              <div class="top">
+                <div class="k">风格测试</div>
+                <span class="tag">互动体验</span>
+              </div>
+              <div class="v">ETFTI ETF人格测试</div>
+            </div>
+            <img class="card-thumb" src="./assets/etfti-persona.jpg" alt="ETFTI ETF人格测试" />
           </div>
-          <div class="v">ETFTI ETF人格测试</div>
           <div class="d">通过轻量测试快速了解自己的资金偏好与产品风格取向，适合作为客户破冰和兴趣引导入口。</div>
           <div class="hint">适合先做轻互动体验</div>
         </a>
 
         <a class="card accent-purple" href="./research/masters-hk-etf.html">
-          <div class="top">
-            <div class="k">投资风格测试</div>
-            <span class="tag">客户互动</span>
+          <div class="card-media">
+            <div class="card-copy">
+              <div class="top">
+                <div class="k">投资风格测试</div>
+                <span class="tag">客户互动</span>
+              </div>
+              <div class="v">测测你的投资思路最像哪位顶级投资大师</div>
+            </div>
+            <img class="card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Warren_Buffett_at_the_2015_SelectUSA_Investment_Summit_%28cropped%29.jpg" alt="投资大师测试" />
           </div>
-          <div class="v">测测你的投资思路最像哪位顶级投资大师</div>
           <div class="d">用更轻松的方式帮助客户理解自己的投资偏好，再继续延伸到对应的大师框架与市场应用。</div>
           <div class="hint">适合做风格识别与交流开场</div>
         </a>
