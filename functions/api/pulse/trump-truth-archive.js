@@ -81,6 +81,7 @@ function enrichWithTranslations(posts, translationPosts) {
       favourites_count: match?.favourites_count ?? null,
       reblogs_count: match?.reblogs_count ?? null,
       replies_count: match?.replies_count ?? null,
+      media: Array.isArray(match?.media) ? match.media : [],
     };
   });
 }
