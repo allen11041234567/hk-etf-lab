@@ -39,7 +39,7 @@
         <div>
           <div class="eyebrow">每分钟更新，实时追踪 Trump 发言动态</div>
           <h1>一顿分析猛如虎，涨跌全看特朗普</h1>
-          <div class="sub">按时间顺序浏览特朗普最新发言，快速感受一句话如何撬动市场情绪、互动热度和图片视频内容。当前保留最近 20 条，支持中文 / 原文切换，并按分钟级自动更新。</div>
+          <div class="sub">按时间顺序浏览特朗普最新发言，快速感受一句话如何撬动市场情绪与图片视频内容。当前默认保留近两天内容，支持中文 / 原文切换，并按分钟级自动更新。</div>
           <div class="hero-meta">
             <div class="toggle-group">
               <button class="toggle-btn" data-lang="en">原文</button>
@@ -48,7 +48,7 @@
           </div>
         </div>
         <div class="stats">
-          <div class="stat"><div class="stat-label">最近发言数</div><div class="stat-value" id="count-stat">--</div><div class="stat-sub">默认展示最近 20 条</div></div>
+          <div class="stat"><div class="stat-label">最近发言数</div><div class="stat-value" id="count-stat">--</div><div class="stat-sub">默认展示近两天内容</div></div>
           <div class="stat"><div class="stat-label">最近一条时间</div><div class="stat-value" id="latest-stat">--</div><div class="stat-sub">快速判断当前更新节奏</div></div>
         </div>
       </div>
@@ -75,7 +75,6 @@
         <div class="meta"></div>
         <div class="media"></div>
         <div class="link-row">
-          <div class="counts"></div>
           <a class="origin-link" target="_blank" rel="noopener noreferrer">查看原文</a>
         </div>
       </div>
@@ -100,12 +99,6 @@
     function render(posts){latestPosts=posts;postsEl.innerHTML='';countStat.textContent=String(posts.length);latestStat.textContent=posts[0]?.created_at?timeAgo(posts[0].created_at):(posts[0]?.created_at_text||'--');
       posts.forEach(post=>{try{const el=tpl.content.firstElementChild.cloneNode(true);el.querySelector('.time').textContent=post.created_at_text||timeAgo(post.created_at);const body=el.querySelector('.body');body.textContent=preferredText(post);body.classList.toggle('is-original', currentLang==='en');const avatar=el.querySelector('.avatar-img'); if(post.avatar){avatar.src=normalizeMediaUrl(post.avatar); avatar.style.display='block';} else {avatar.style.display='none';}
         const meta=el.querySelector('.meta');[['内容类型','最新发言'],['阅读模式','中文 / 原文切换']].forEach(([a,b])=>{const tag=document.createElement('span');tag.className='tag';tag.textContent=`${a} · ${b}`;meta.appendChild(tag);});
-        const counts=el.querySelector('.counts');
-        const countParts=[];
-        if(post.favourites_count!=null) countParts.push(`👍 ${formatCount(post.favourites_count)}`);
-        if(post.reblogs_count!=null) countParts.push(`🔁 ${formatCount(post.reblogs_count)}`);
-        if(post.replies_count!=null) countParts.push(`💬 ${formatCount(post.replies_count)}`);
-        counts.textContent=countParts.join('   ');
         const mediaWrap=el.querySelector('.media');
         (post.media||[]).forEach(item=>{const type=((item&&item.type)||'').toLowerCase(); const rawUrl=(typeof item==='string')?item:((item&&(item.url||item.preview_url||item.remote_url))||''); const url=normalizeMediaUrl(rawUrl); if(!url) return; if(type.includes('video') || /\.mp4(\?|$)/i.test(url)){const v=document.createElement('video'); v.src=url; v.controls=true; v.preload='none'; mediaWrap.appendChild(v);} else {const img=document.createElement('img'); img.src=url; img.alt='post media'; img.loading='lazy'; mediaWrap.appendChild(img);} });
         el.querySelector('.origin-link').href=post.url||post.status_url||'https://www.trumpstruth.org/';postsEl.appendChild(el);}catch(err){console.error('render post failed', err, post);}});}

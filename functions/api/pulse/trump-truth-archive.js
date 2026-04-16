@@ -1,3 +1,5 @@
+import { TRUMP_TRANSLATION_CACHE } from './trump-translation-cache.js';
+
 const SOURCE_URL = 'https://www.trumpstruth.org/?sort=desc&per_page=80&removed=include';
 const CACHE_SECONDS = 120;
 const STALE_SECONDS = 600;
@@ -74,17 +76,20 @@ function extractPosts(html) {
 }
 
 function enrichFromArchive(posts, avatarUrl) {
-  return posts.map((post) => ({
-    ...post,
-    avatar: avatarUrl,
-    content_zh_cn: '',
-    content_zh_hk: '',
-    content_ko: '',
-    favourites_count: null,
-    reblogs_count: null,
-    replies_count: null,
-    media: Array.isArray(post.media) ? post.media : [],
-  }));
+  return posts.map((post) => {
+    const translated = TRUMP_TRANSLATION_CACHE[post.url] || {};
+    return {
+      ...post,
+      avatar: avatarUrl,
+      content_zh_cn: translated.content_zh_cn || '',
+      content_zh_hk: translated.content_zh_hk || '',
+      content_ko: translated.content_ko || '',
+      favourites_count: null,
+      reblogs_count: null,
+      replies_count: null,
+      media: Array.isArray(post.media) ? post.media : [],
+    };
+  });
 }
 
 function normalizeForDedupe(str = '') {
