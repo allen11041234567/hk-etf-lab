@@ -18,11 +18,16 @@
     .related-wrap { margin-bottom:18px; }
     .related-title { font-size:14px; color:var(--muted); margin:0 0 10px; }
     .related-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
-    .related-link { display:block; text-decoration:none; color:inherit; background:rgba(255,255,255,0.88); border:1px solid rgba(255,255,255,0.7); box-shadow:var(--shadow); border-radius:18px; padding:14px 16px; transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease; }
+    .related-link { display:block; text-decoration:none; color:inherit; background:linear-gradient(180deg, rgba(255,255,255,0.96), rgba(247,250,255,0.96)); border:1px solid rgba(255,255,255,0.7); box-shadow:var(--shadow); border-radius:18px; padding:14px 16px; transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease; }
     .related-link:hover { transform:translateY(-1px); border-color:rgba(20,33,61,0.14); }
+    .related-top { display:flex; align-items:center; justify-content:space-between; gap:10px; }
+    .trade-badge { display:inline-flex; align-items:center; gap:6px; padding:6px 10px; border-radius:999px; background:#f36f21; color:#fff; font-size:11px; font-weight:700; letter-spacing:.02em; box-shadow:0 8px 18px rgba(243,111,33,.22); white-space:nowrap; }
+    .trade-badge::before { content:'↗'; font-size:12px; line-height:1; }
     .related-code { font-size:12px; color:var(--muted); letter-spacing:.06em; }
     .related-name { margin-top:4px; font-size:18px; font-weight:700; letter-spacing:-.02em; }
     .related-desc { margin-top:6px; font-size:13px; line-height:1.5; color:var(--muted); }
+    .related-cta { margin-top:10px; display:inline-flex; align-items:center; gap:6px; color:#f36f21; font-size:13px; font-weight:700; }
+    .related-cta::after { content:'→'; }
     .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
     .card { background:var(--card); border:1px solid rgba(255,255,255,0.7); box-shadow:var(--shadow); border-radius:24px; padding:22px; backdrop-filter:blur(14px); }
     .code { font-size:13px; color:var(--muted); letter-spacing:0.06em; }
@@ -73,8 +78,10 @@
       .related-title { font-size:13px; margin-bottom:8px; }
       .related-grid { gap:8px; }
       .related-link { padding:12px; border-radius:14px; }
+      .trade-badge { padding:5px 8px; font-size:10px; }
       .related-name { font-size:16px; }
       .related-desc { font-size:12px; margin-top:4px; }
+      .related-cta { margin-top:8px; font-size:12px; }
       .grid { gap:12px; }
       .card { padding:14px; border-radius:18px; }
       .code { font-size:12px; }
@@ -111,24 +118,28 @@
       <div class="related-title">相关产品</div>
       <div class="related-grid">
         <a class="related-link" href="https://www.futunn.com/stock/07709-HK" target="_blank" rel="noopener noreferrer">
-          <div class="related-code">07709.HK</div>
+          <div class="related-top"><div class="related-code">07709.HK</div><div class="trade-badge">FUTU 可交易</div></div>
           <div class="related-name">三星每日杠杆 (2x)</div>
-          <div class="related-desc">点击跳转至富途查看对应产品详情与交易页面。</div>
+          <div class="related-desc">可直接跳转至富途查看详情、挂单与交易。</div>
+          <div class="related-cta">进入富途交易页</div>
         </a>
         <a class="related-link" href="https://www.futunn.com/stock/07747-HK" target="_blank" rel="noopener noreferrer">
-          <div class="related-code">07747.HK</div>
+          <div class="related-top"><div class="related-code">07747.HK</div><div class="trade-badge">FUTU 可交易</div></div>
           <div class="related-name">SK海力士每日杠杆 (2x)</div>
-          <div class="related-desc">点击跳转至富途查看对应产品详情与交易页面。</div>
+          <div class="related-desc">可直接跳转至富途查看详情、挂单与交易。</div>
+          <div class="related-cta">进入富途交易页</div>
         </a>
         <a class="related-link" href="https://www.futunn.com/stock/07347-HK" target="_blank" rel="noopener noreferrer">
-          <div class="related-code">07347.HK</div>
+          <div class="related-top"><div class="related-code">07347.HK</div><div class="trade-badge">FUTU 可交易</div></div>
           <div class="related-name">三星每日反向 (-2x)</div>
-          <div class="related-desc">点击跳转至富途查看对应产品详情与交易页面。</div>
+          <div class="related-desc">可直接跳转至富途查看详情、挂单与交易。</div>
+          <div class="related-cta">进入富途交易页</div>
         </a>
         <a class="related-link" href="https://www.futunn.com/stock/03431-HK" target="_blank" rel="noopener noreferrer">
-          <div class="related-code">03431.HK</div>
+          <div class="related-top"><div class="related-code">03431.HK</div><div class="trade-badge">FUTU 可交易</div></div>
           <div class="related-name">SK海力士每日反向 (-2x)</div>
-          <div class="related-desc">点击跳转至富途查看对应产品详情与交易页面。</div>
+          <div class="related-desc">可直接跳转至富途查看详情、挂单与交易。</div>
+          <div class="related-cta">进入富途交易页</div>
         </a>
       </div>
     </section>
