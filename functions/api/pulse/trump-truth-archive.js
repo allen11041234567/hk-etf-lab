@@ -39,6 +39,16 @@ function stripTags(str = '') {
     .trim();
 }
 
+function extractAttachments(chunk) {
+  const blockMatch = chunk.match(/<div class="status__attachments[^"]*">([\s\S]*?)<\/div>\s*(?:<\/div>|<div class="status__footer")/i);
+  const block = blockMatch?.[1] || '';
+  const urls = [...block.matchAll(/<(?:a|img|source)[^>]+(?:href|src)="(https:[^"]+)"/gi)].map((m) => m[1]);
+  return [...new Set(urls)].map((url) => ({
+    url,
+    type: /\.(mp4|mov|webm)(\?|$)/i.test(url) ? 'video' : 'image',
+  }));
+}
+
 function extractPosts(html) {
   const statusesBlock = html.match(/<div class="statuses">([\s\S]*?)<div class="pagination controls__pagination">/i)?.[1] || html;
   const chunks = statusesBlock.split(/<div class="status"\s+data-status-url=/i).slice(1);
@@ -59,6 +69,7 @@ function extractPosts(html) {
       created_at_text: createdAtText,
       content,
       content_html: contentHtml,
+      media: extractAttachments(chunk),
     };
   }).filter((post) => post.content || post.url);
 }
@@ -82,7 +93,13 @@ function enrichWithTranslations(posts, translationPosts, avatarUrl) {
       favourites_count: match?.favourites_count ?? null,
       reblogs_count: match?.reblogs_count ?? null,
       replies_count: match?.replies_count ?? null,
-      media: Array.isArray(match?.media) ? match.media : [],
+      media: Array.isArray(post.media) && post.media.length
+        ? post.media
+        : (Array.isArray(match?.media)
+            ? match.media.filter((item) => typeof item === 'string'
+                ? /^https?:\/\//i.test(item)
+                : /^https?:\/\//i.test(item?.url || item?.preview_url || item?.remote_url || ''))
+            : []),
     };
   });
 }
