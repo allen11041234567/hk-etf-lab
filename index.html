@@ -77,6 +77,7 @@
       box-shadow:0 8px 24px rgba(15,23,42,.04);
       transition:transform .16s ease, box-shadow .16s ease, border-color .16s ease;
     }
+    .card-thumb{width:100%;height:168px;object-fit:cover;border-radius:16px;border:1px solid var(--line);background:#f8fafc;margin-bottom:14px;display:block}
     .card:hover{
       transform:translateY(-2px);
       border-color:#bfd3ff;
@@ -115,6 +116,7 @@
       .section-title{font-size:20px;margin:2px 2px 12px}
       .grid{gap:10px}
       .card{padding:16px 16px 14px;border-radius:18px;min-height:auto}
+      .card-thumb{height:132px;border-radius:14px;margin-bottom:12px}
       .top{align-items:flex-start;gap:10px}
       .tag{font-size:11px;padding:6px 9px}
       .k{font-size:12px}
@@ -173,6 +175,7 @@
       <div class="section-title" style="font-size:18px;margin:6px 4px 14px;color:#475569;">轻松测一测</div>
       <div class="grid" style="margin-bottom:18px;">
         <a class="card accent-blue" href="https://etf.house">
+          <img class="card-thumb" src="./assets/etfti-persona.jpg" alt="ETFTI ETF人格测试" />
           <div class="top">
             <div class="k">风格测试</div>
             <span class="tag">互动体验</span>
@@ -183,6 +186,7 @@
         </a>
 
         <a class="card accent-purple" href="./research/masters-hk-etf.html">
+          <img class="card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Warren_Buffett_at_the_2015_SelectUSA_Investment_Summit_%28cropped%29.jpg" alt="投资大师测试" />
           <div class="top">
             <div class="k">投资风格测试</div>
             <span class="tag">客户互动</span>
