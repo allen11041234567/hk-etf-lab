@@ -109,7 +109,8 @@
         const mediaWrap=el.querySelector('.media');
         (post.media||[]).forEach(item=>{const type=((item&&item.type)||'').toLowerCase(); const rawUrl=(typeof item==='string')?item:((item&&(item.url||item.preview_url||item.remote_url))||''); const url=normalizeMediaUrl(rawUrl); if(!url) return; if(type.includes('video') || /\.mp4(\?|$)/i.test(url)){const v=document.createElement('video'); v.src=url; v.controls=true; v.preload='none'; mediaWrap.appendChild(v);} else {const img=document.createElement('img'); img.src=url; img.alt='post media'; img.loading='lazy'; mediaWrap.appendChild(img);} });
         el.querySelector('.origin-link').href=post.url||post.status_url||'https://www.trumpstruth.org/';postsEl.appendChild(el);}catch(err){console.error('render post failed', err, post);}});}
-    async function refresh(){try{const resp=await fetch(FEED,{cache:'no-store'});if(!resp.ok) throw new Error(`HTTP ${resp.status}`);const data=await resp.json();if(!data.ok) throw new Error(data.error||'unknown error');errorBox.style.display='none';render(data.posts||[]);}catch(err){errorBox.textContent='当前内容更新稍慢，请稍后刷新重试';errorBox.style.display='block';}}
+    async function refresh(){if(document.hidden) return; try{const resp=await fetch(FEED,{cache:'no-store'});if(!resp.ok) throw new Error(`HTTP ${resp.status}`);const data=await resp.json();if(!data.ok) throw new Error(data.error||'unknown error');errorBox.style.display='none';render(data.posts||[]);}catch(err){errorBox.textContent='当前内容更新稍慢，请稍后刷新重试';errorBox.style.display='block';}}
+    document.addEventListener('visibilitychange',()=>{ if(!document.hidden) refresh(); });
     bindLangToggle(); refresh(); setInterval(refresh,REFRESH_MS);
   </script>
 </body>
