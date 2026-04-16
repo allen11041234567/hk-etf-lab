@@ -39,6 +39,7 @@ function isAllowedRequest(request) {
   const referer = request.headers.get('referer');
   const origin = request.headers.get('origin');
   const secFetchSite = request.headers.get('sec-fetch-site');
+  const userAgent = request.headers.get('user-agent') || '';
 
   if (origin) {
     try {
@@ -57,6 +58,11 @@ function isAllowedRequest(request) {
     } catch {
       return false;
     }
+  }
+
+  if (!referer && !origin) {
+    if (/Telegram|TelegramBot|WebView|Mobile/i.test(userAgent)) return true;
+    if (!secFetchSite || ['same-origin', 'same-site', 'none'].includes(secFetchSite)) return true;
   }
 
   if (secFetchSite && !['same-origin', 'same-site', 'none'].includes(secFetchSite)) return false;
