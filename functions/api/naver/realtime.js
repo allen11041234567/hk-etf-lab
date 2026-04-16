@@ -29,8 +29,6 @@ export async function onRequestGet(context) {
   const { request } = context;
   const url = new URL(request.url);
   const codes = normalizeCodes(url.searchParams.get('codes'));
-  const query = codes.map((code) => `SERVICE_ITEM:${code}`).join('|');
-  const upstreamUrl = `https://polling.finance.naver.com/api/realtime?query=${encodeURIComponent(query)}`;
   const cacheKey = new Request(`${url.origin}/__snapshot/naver/realtime?codes=${codes.join(',')}`);
   const cache = caches.default;
 
@@ -46,36 +44,60 @@ export async function onRequestGet(context) {
       });
     }
 
-    const upstream = await fetch(upstreamUrl, {
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (compatible; HK-ETF-Lab/1.0; +https://hketf-lab.pages.dev/)',
-        Referer: 'https://finance.naver.com/',
-        Accept: 'text/plain, application/json, */*',
-      },
-    });
-
-    if (!upstream.ok) {
-      return new Response(
-        JSON.stringify({ ok: false, error: `upstream ${upstream.status}` }),
-        {
-          status: 502,
+    const responses = await Promise.all(
+      codes.map(async (code) => {
+        const upstreamUrl = `https://polling.finance.naver.com/api/realtime?query=${encodeURIComponent(`SERVICE_ITEM:${code}`)}`;
+        const upstream = await fetch(upstreamUrl, {
           headers: {
-            'content-type': 'application/json; charset=utf-8',
-            'cache-control': 'no-store',
-            'access-control-allow-origin': '*',
+            'User-Agent': 'Mozilla/5.0 (compatible; HK-ETF-Lab/1.0; +https://hketf-lab.pages.dev/)',
+            Referer: 'https://finance.naver.com/',
+            Accept: 'text/plain, application/json, */*',
           },
+        });
+        if (!upstream.ok) {
+          throw new Error(`upstream ${upstream.status} for ${code}`);
         }
-      );
+        const buffer = await upstream.arrayBuffer();
+        const decoder = new TextDecoder('euc-kr');
+        const text = decoder.decode(buffer);
+        return JSON.parse(text);
+      })
+    );
+
+    const snapshotAt = Date.now();
+    const pollingIntervalMs = Math.max(...responses.map((payload) => Number(payload?.result?.pollingInterval || 7000)));
+    const serverTime = Math.max(...responses.map((payload) => Number(payload?.result?.time || snapshotAt)));
+    const dataMap = new Map();
+    for (const payload of responses) {
+      const datas = payload?.result?.areas?.flatMap((area) => area.datas || []) || [];
+      for (const item of datas) dataMap.set(item.cd, { item, payload });
     }
 
-    const buffer = await upstream.arrayBuffer();
-    const decoder = new TextDecoder('euc-kr');
-    const text = decoder.decode(buffer);
-    const payload = JSON.parse(text);
-    const datas = payload?.result?.areas?.flatMap((area) => area.datas || []) || [];
-    const snapshotAt = Date.now();
-
-    const quotes = datas.map((item) => {
+    const quotes = codes.map((code) => {
+      const found = dataMap.get(code);
+      if (!found) {
+        return {
+          code,
+          name: CODE_NAMES[code] || code,
+          sourceName: null,
+          market: null,
+          direction: 'flat',
+          current: 0,
+          previousClose: 0,
+          dayChange: 0,
+          dayChangeText: '0',
+          dayChangePercent: 0,
+          open: 0,
+          high: 0,
+          low: 0,
+          volume: 0,
+          value: 0,
+          fetchedAt: new Date(snapshotAt).toISOString(),
+          localTradedAt: null,
+          unavailable: true,
+        };
+      }
+      const { item, payload } = found;
       const current = Number(item.nv ?? 0);
       const previousClose = Number(item.pcv ?? 0);
       const delta = Number(item.cv ?? current - previousClose);
@@ -106,8 +128,8 @@ export async function onRequestGet(context) {
       {
         ok: true,
         source: 'Naver Finance',
-        pollingIntervalMs: Number(payload?.result?.pollingInterval || 7000),
-        serverTime: payload?.result?.time || snapshotAt,
+        pollingIntervalMs,
+        serverTime,
         snapshotAt,
         snapshotTtlSeconds: SNAPSHOT_TTL_SECONDS,
         cacheMode: 'shared-edge-snapshot',

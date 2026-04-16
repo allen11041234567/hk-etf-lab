@@ -302,8 +302,9 @@
   </template>
 
   <script>
-    const API_URL = '/api/naver/realtime?codes=005930,000660';
+    const API_URL = '/api/naver/realtime?codes=000660,005930';
     const REFRESH_MS = 15000;
+    const CARD_ORDER = ['000660', '005930'];
     const historyMap = new Map();
     const previousMap = new Map();
     const cardsEl = document.getElementById('cards');
@@ -399,7 +400,11 @@
       card.dataset.chartType = 'area';
       card.dataset.chartRange = 'day';
       bindChartControls(card);
-      cardsEl.appendChild(card);
+      const orderIndex = CARD_ORDER.indexOf(code);
+      const children = [...cardsEl.children];
+      const before = children.find((el) => CARD_ORDER.indexOf(el.dataset.code) > orderIndex);
+      if (before) cardsEl.insertBefore(card, before);
+      else cardsEl.appendChild(card);
       return card;
     }
 
@@ -416,16 +421,16 @@
 
       card.querySelector('.code').textContent = `${quote.code} · KRX`;
       card.querySelector('.name').textContent = quote.name;
-      card.querySelector('.status').textContent = marketLabel(quote.market);
-      card.querySelector('.price').textContent = fmtNumber(quote.current);
+      card.querySelector('.status').textContent = quote.unavailable ? '暂不可用' : marketLabel(quote.market);
+      card.querySelector('.price').textContent = quote.unavailable ? '加载失败' : fmtNumber(quote.current);
 
       const dayEl = card.querySelector('.day-change');
       dayEl.className = `day-change ${getDirectionClass(quote.dayChange)}`;
-      dayEl.textContent = `当日涨跌 ${fmtSigned(quote.dayChange)} · ${fmtPct(quote.dayChangePercent)}`;
+      dayEl.textContent = quote.unavailable ? '当日数据暂不可用' : `当日涨跌 ${fmtSigned(quote.dayChange)} · ${fmtPct(quote.dayChangePercent)}`;
 
       const tickEl = card.querySelector('.refresh-change');
       tickEl.className = `refresh-change ${getDirectionClass(tickChange)}`;
-      tickEl.textContent = previous ? `较上次刷新 ${fmtSigned(tickChange)}` : '首轮抓取';
+      tickEl.textContent = quote.unavailable ? '等待下一轮快照' : (previous ? `较上次刷新 ${fmtSigned(tickChange)}` : '首轮抓取');
 
       card.querySelector('.open').textContent = fmtNumber(quote.open);
       card.querySelector('.previous-close').textContent = fmtNumber(quote.previousClose);
