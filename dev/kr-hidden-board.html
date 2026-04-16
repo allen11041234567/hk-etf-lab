@@ -161,6 +161,58 @@
       font-size: 12px;
       margin-top: 8px;
     }
+    .chart-wrap {
+      margin-top: 18px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(246,248,252,0.96));
+    }
+    .chart-toolbar {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .chart-title {
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .chip-group {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .chip {
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--muted);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    .chip.active {
+      background: #14213d;
+      border-color: #14213d;
+      color: #fff;
+    }
+    .chart-image {
+      width: 100%;
+      aspect-ratio: 700 / 289;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: #fff;
+      display: block;
+    }
+    .chart-note {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 12px;
+    }
     .footer {
       margin-top: 18px;
       color: var(--muted);
@@ -229,6 +281,22 @@
           <span class="spark-max"></span>
         </div>
       </div>
+      <div class="chart-wrap">
+        <div class="chart-toolbar">
+          <div class="chart-title">Naver Finance 原生图表</div>
+          <div class="chip-group chart-type-group">
+            <button class="chip active" data-kind="type" data-value="area">分时线</button>
+            <button class="chip" data-kind="type" data-value="candle">K线</button>
+          </div>
+          <div class="chip-group chart-range-group">
+            <button class="chip active" data-kind="range" data-value="day">日内</button>
+            <button class="chip" data-kind="range" data-value="week">周线</button>
+            <button class="chip" data-kind="range" data-value="month">月线</button>
+          </div>
+        </div>
+        <img class="chart-image" alt="chart" />
+        <div class="chart-note">图像来自 Naver Finance，页面每次刷新会自动加时间戳避免缓存。</div>
+      </div>
     </article>
   </template>
 
@@ -290,11 +358,45 @@
       }).join(' ');
     }
 
+    function chartUrl(code, type, range) {
+      return `https://ssl.pstatic.net/imgfinance/chart/item/${type}/${range}/${code}.png?sidcode=${Date.now()}`;
+    }
+
+    function updateChart(card) {
+      const code = card.dataset.code;
+      const type = card.dataset.chartType || 'area';
+      const range = card.dataset.chartRange || 'day';
+      const img = card.querySelector('.chart-image');
+      img.src = chartUrl(code, type, range);
+      img.alt = `${code} ${type} ${range}`;
+    }
+
+    function bindChartControls(card) {
+      card.querySelectorAll('.chip').forEach((chip) => {
+        chip.addEventListener('click', () => {
+          const kind = chip.dataset.kind;
+          const value = chip.dataset.value;
+          if (kind === 'type') {
+            card.dataset.chartType = value;
+            card.querySelectorAll('[data-kind="type"]').forEach((el) => el.classList.toggle('active', el === chip));
+          }
+          if (kind === 'range') {
+            card.dataset.chartRange = value;
+            card.querySelectorAll('[data-kind="range"]').forEach((el) => el.classList.toggle('active', el === chip));
+          }
+          updateChart(card);
+        });
+      });
+    }
+
     function ensureCard(code) {
       let card = document.querySelector(`[data-code="${code}"]`);
       if (card) return card;
       card = tpl.content.firstElementChild.cloneNode(true);
       card.dataset.code = code;
+      card.dataset.chartType = 'area';
+      card.dataset.chartRange = 'day';
+      bindChartControls(card);
       cardsEl.appendChild(card);
       return card;
     }
@@ -336,6 +438,7 @@
       spark.setAttribute('stroke', stroke);
       card.querySelector('.spark-min').textContent = `低点 ${fmtNumber(Math.min(...history))}`;
       card.querySelector('.spark-max').textContent = `高点 ${fmtNumber(Math.max(...history))}`;
+      updateChart(card);
     }
 
     async function refresh() {
