@@ -244,6 +244,7 @@
       <div class="meta">
         <div class="pill" id="source-pill">数据源：Naver Finance</div>
         <div class="pill" id="refresh-pill">刷新频率：15 秒</div>
+        <div class="pill" id="snapshot-pill">共享快照：15 秒</div>
         <div class="pill" id="update-pill">等待首轮数据…</div>
       </div>
     </section>
@@ -309,6 +310,7 @@
     const tpl = document.getElementById('card-template');
     const updatePill = document.getElementById('update-pill');
     const errorBox = document.getElementById('error-box');
+    const snapshotPill = document.getElementById('snapshot-pill');
 
     function fmtNumber(value) {
       return new Intl.NumberFormat('en-US').format(Math.round(value || 0));
@@ -449,6 +451,9 @@
         if (!data.ok) throw new Error(data.error || 'unknown error');
         errorBox.style.display = 'none';
         updatePill.textContent = `最近更新：${relativeTime(data.serverTime)}`;
+        if (data.snapshotTtlSeconds) {
+          snapshotPill.textContent = `共享快照：${data.snapshotTtlSeconds} 秒`;
+        }
         for (const quote of data.quotes) renderQuote(quote);
       } catch (error) {
         errorBox.textContent = `刷新失败：${error.message}`;
