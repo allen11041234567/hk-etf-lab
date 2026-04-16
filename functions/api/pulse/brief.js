@@ -3,8 +3,8 @@ const CODE_NAMES = {
   '005930': '三星电子',
   '000660': 'SK海力士',
 };
-const SNAPSHOT_TTL_SECONDS = 15;
-const STALE_TTL_SECONDS = 180;
+const SNAPSHOT_TTL_SECONDS = 30;
+const STALE_TTL_SECONDS = 300;
 
 function normalizeCodes(raw) {
   if (!raw) return DEFAULT_CODES;

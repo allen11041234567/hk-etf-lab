@@ -31,7 +31,7 @@ export async function onRequestGet(context) {
     if (!upstream.ok) throw new Error(`upstream ${upstream.status}`);
 
     const headers = new Headers(upstream.headers);
-    headers.set('cache-control', 'public, max-age=60, s-maxage=300');
+    headers.set('cache-control', 'public, max-age=120, s-maxage=600');
     headers.set('content-type', 'image/png');
     headers.set('x-robots-tag', 'noindex, nofollow, noarchive');
     const response = new Response(upstream.body, { status: 200, headers });
