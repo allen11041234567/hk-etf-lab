@@ -1,6 +1,5 @@
 const SOURCE_URL = 'https://www.trumpstruth.org/?sort=desc&per_page=20&removed=include';
 const TRUMP_FEED_URL = 'https://stock.fengle.me/api/truth-social/posts?limit=50';
-const TRUMP_AVATAR_URL = 'https://stock.fengle.me/api/truth-social/media/trump_avatar';
 const CACHE_SECONDS = 120;
 const STALE_SECONDS = 600;
 
@@ -62,7 +61,7 @@ function extractPosts(html) {
   }).filter((post) => post.content || post.url);
 }
 
-function enrichWithTranslations(posts, translationPosts) {
+function enrichWithTranslations(posts, translationPosts, avatarUrl) {
   const byUrl = new Map();
   const byId = new Map();
   for (const post of translationPosts || []) {
@@ -74,7 +73,7 @@ function enrichWithTranslations(posts, translationPosts) {
     const match = (post.url && byUrl.get(post.url)) || (id && byId.get(id)) || null;
     return {
       ...post,
-      avatar: TRUMP_AVATAR_URL,
+      avatar: avatarUrl,
       content_zh_cn: match?.content_zh_cn || '',
       content_zh_hk: match?.content_zh_hk || '',
       content_ko: match?.content_ko || '',
@@ -147,7 +146,8 @@ export async function onRequestGet(context) {
       const translationPayload = await translationResp.json();
       translationPosts = Array.isArray(translationPayload.posts) ? translationPayload.posts : [];
     }
-    const mergedPosts = enrichWithTranslations(posts, translationPosts);
+    const avatarUrl = `${url.origin}/assets/home/trump-home.jpg`;
+    const mergedPosts = enrichWithTranslations(posts, translationPosts, avatarUrl);
     const dedupedPosts = dedupePosts(mergedPosts).slice(0, 20);
     const body = JSON.stringify({
       ok: true,
