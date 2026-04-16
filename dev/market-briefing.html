@@ -53,7 +53,52 @@
     .chip.active { background: #14213d; border-color: #14213d; color: #fff; }
     .chart-image { width: 100%; aspect-ratio: 700 / 289; object-fit: cover; border-radius: 14px; border: 1px solid var(--line); background: #fff; display: block; }
     .error { margin-top: 16px; padding: 14px 16px; border-radius: 16px; color: #b42318; background: #fef3f2; border: 1px solid #fecdca; display: none; }
-    @media (max-width: 880px) { .grid { grid-template-columns: 1fr; } .meta { justify-content: flex-start; } }
+    @media (max-width: 880px) {
+      .wrap { width: min(100vw - 24px, 1180px); padding: 20px 0 28px; }
+      .grid { grid-template-columns: 1fr; }
+      .meta { justify-content: flex-start; }
+      .title { font-size: 30px; line-height: 1.16; }
+      .subtitle { font-size: 14px; line-height: 1.7; }
+      .card { padding: 18px; border-radius: 20px; }
+      .price { font-size: 42px; }
+      .change { font-size: 15px; gap: 10px; margin-bottom: 14px; }
+      .mini-grid { gap: 10px; margin-top: 14px; }
+      .stat { padding: 12px; border-radius: 14px; }
+      .stat-value { font-size: 18px; }
+      .spark-wrap, .chart-wrap { margin-top: 14px; padding: 12px; border-radius: 16px; }
+      .chart-toolbar { gap: 8px; }
+      .chip-group { gap: 6px; }
+      .chip { min-height: 34px; padding: 7px 10px; font-size: 12px; }
+    }
+    @media (max-width: 560px) {
+      body { background: linear-gradient(180deg, #f8fbff 0%, #f2f6fd 100%); }
+      .wrap { width: calc(100vw - 16px); padding: 12px 0 22px; }
+      .hero { gap: 10px; margin-bottom: 12px; }
+      .title { font-size: 24px; }
+      .subtitle { margin-top: 6px; font-size: 13px; line-height: 1.6; }
+      .meta { gap: 6px; }
+      .pill { padding: 7px 10px; font-size: 12px; }
+      .grid { gap: 12px; }
+      .card { padding: 14px; border-radius: 18px; }
+      .code { font-size: 12px; }
+      .name { font-size: 24px; }
+      .status { font-size: 11px; padding: 5px 8px; }
+      .price { font-size: 36px; margin: 8px 0 4px; }
+      .change { font-size: 14px; gap: 8px; margin-bottom: 12px; }
+      .mini-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 12px; }
+      .stat-label { font-size: 11px; margin-bottom: 4px; }
+      .stat-value { font-size: 16px; }
+      .spark-wrap, .chart-wrap { margin-top: 12px; padding: 10px; border-radius: 14px; }
+      .spark-title, .chart-title { font-size: 11px; margin-bottom: 8px; }
+      svg { height: 78px; }
+      .spark-labels { font-size: 11px; margin-top: 6px; }
+      .chart-toolbar { align-items: stretch; flex-direction: column; margin-bottom: 10px; }
+      .chip-group { width: 100%; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .chip-group:first-of-type { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .chip { width: 100%; min-height: 36px; padding: 8px 6px; font-size: 12px; }
+      .chart-image { border-radius: 12px; }
+      .error { margin-top: 12px; padding: 12px; border-radius: 14px; font-size: 13px; }
+    }
   </style>
 </head>
 <body>
