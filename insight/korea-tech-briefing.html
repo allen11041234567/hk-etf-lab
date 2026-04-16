@@ -92,7 +92,6 @@
       <div class="meta">
         <div class="pill">双市场核心观察</div>
         <div class="pill">高频更新</div>
-        <div class="pill" id="update-pill">等待首轮数据…</div>
       </div>
     </section>
     <section class="grid" id="cards"></section>
@@ -103,7 +102,7 @@
       <div class="code"></div>
       <div class="name-row"><div class="name"></div><div class="status"></div></div>
       <div class="price"></div>
-      <div class="change"><span class="day-change"></span><span class="refresh-change"></span></div>
+      <div class="change"><span class="day-change"></span></div>
       <div class="mini-grid">
         <div class="stat"><div class="stat-label">开盘</div><div class="stat-value open"></div></div>
         <div class="stat"><div class="stat-label">前收</div><div class="stat-value previous-close"></div></div>
@@ -128,21 +127,19 @@
     const previousMap = new Map();
     const cardsEl = document.getElementById('cards');
     const tpl = document.getElementById('card-template');
-    const updatePill = document.getElementById('update-pill');
     const errorBox = document.getElementById('error-box');
     function fmtNumber(value){ return new Intl.NumberFormat('en-US').format(Math.round(value || 0)); }
     function fmtSigned(value){ const n=Math.round(value || 0); return `${n > 0 ? '+' : ''}${fmtNumber(n)}`; }
     function fmtPct(value){ const n=Number(value || 0); return `${n > 0 ? '+' : ''}${n.toFixed(2)}%`; }
     function getDirectionClass(value){ if(value > 0) return 'up'; if(value < 0) return 'down'; return 'flat'; }
     function marketLabel(status){ if(status==='OPEN') return '交易中'; if(status==='CLOSE') return '已收盘'; return status || '观察中'; }
-    function relativeTime(ts){ if(!ts) return '刚刚更新'; const diff=Math.max(0,Date.now()-new Date(ts).getTime()); const sec=Math.round(diff/1000); if(sec < 5) return '刚刚更新'; if(sec < 60) return `${sec} 秒前更新`; return `${Math.round(sec/60)} 分钟前更新`; }
     function chartUrl(code,type,range){ return `${CHART}?code=${encodeURIComponent(code)}&type=${encodeURIComponent(type)}&range=${encodeURIComponent(range)}`; }
     function updateChart(card){ const code=card.dataset.code,type=card.dataset.chartType||'area',range=card.dataset.chartRange||'day'; const img=card.querySelector('.chart-image'); img.src=chartUrl(code,type,range); img.alt=`${code} chart`; }
     function bindChartControls(card){ card.querySelectorAll('.chip').forEach((chip)=>{ chip.addEventListener('click',()=>{ const kind=chip.dataset.kind,value=chip.dataset.value; if(kind==='type'){ card.dataset.chartType=value; card.querySelectorAll('[data-kind="type"]').forEach((el)=>el.classList.toggle('active', el===chip)); } if(kind==='range'){ card.dataset.chartRange=value; card.querySelectorAll('[data-kind="range"]').forEach((el)=>el.classList.toggle('active', el===chip)); } updateChart(card); }); }); }
     function ensureCard(code){ let card=document.querySelector(`[data-code="${code}"]`); if(card) return card; card=tpl.content.firstElementChild.cloneNode(true); card.dataset.code=code; card.dataset.chartType='area'; card.dataset.chartRange='day'; bindChartControls(card); const orderIndex=CARD_ORDER.indexOf(code); const children=[...cardsEl.children]; const before=children.find((el)=>CARD_ORDER.indexOf(el.dataset.code) > orderIndex); if(before) cardsEl.insertBefore(card,before); else cardsEl.appendChild(card); return card; }
-    function renderQuote(quote){ const card=ensureCard(quote.code); const previous=previousMap.get(quote.code); const tickChange=previous?quote.current-previous.current:0; previousMap.set(quote.code,quote); card.querySelector('.code').textContent=`${quote.code} · KRX`; card.querySelector('.name').textContent=quote.name; card.querySelector('.status').textContent=quote.unavailable?'暂不可用':marketLabel(quote.market); card.querySelector('.price').textContent=quote.unavailable?'加载失败':fmtNumber(quote.current); const dayEl=card.querySelector('.day-change'); dayEl.className=`day-change ${getDirectionClass(quote.dayChange)}`; dayEl.textContent=quote.unavailable?'数据暂不可用':`当日涨跌 ${fmtSigned(quote.dayChange)} · ${fmtPct(quote.dayChangePercent)}`; const tickEl=card.querySelector('.refresh-change'); tickEl.className=`refresh-change ${getDirectionClass(tickChange)}`; tickEl.textContent=quote.unavailable?'等待下一轮刷新':(previous?`较上次刷新 ${fmtSigned(tickChange)}`:'首轮抓取'); card.querySelector('.open').textContent=fmtNumber(quote.open); card.querySelector('.previous-close').textContent=fmtNumber(quote.previousClose); card.querySelector('.high').textContent=fmtNumber(quote.high); card.querySelector('.low').textContent=fmtNumber(quote.low); updateChart(card); }
-    async function refresh(){ try{ const resp=await fetch(FEED,{cache:'no-store'}); if(!resp.ok) throw new Error(`HTTP ${resp.status}`); const data=await resp.json(); if(!data.ok) throw new Error(data.error||'unknown error'); errorBox.style.display='none'; updatePill.textContent=`最近更新：${relativeTime(data.serverTime)}`; for(const quote of data.quotes) renderQuote(quote); }catch(error){ errorBox.textContent='当前数据更新稍慢，请稍后刷新重试'; errorBox.style.display='block'; } }
-    refresh(); setInterval(refresh, REFRESH_MS); setInterval(()=>{ const ts=previousMap.get('005930')?.fetchedAt || previousMap.get('000660')?.fetchedAt; if(ts) updatePill.textContent=`最近更新：${relativeTime(ts)}`; },1000);
+    function renderQuote(quote){ const card=ensureCard(quote.code); previousMap.set(quote.code,quote); card.querySelector('.code').textContent=`${quote.code} · KRX`; card.querySelector('.name').textContent=quote.name; card.querySelector('.status').textContent=quote.unavailable?'暂不可用':marketLabel(quote.market); card.querySelector('.price').textContent=quote.unavailable?'加载失败':fmtNumber(quote.current); const dayEl=card.querySelector('.day-change'); dayEl.className=`day-change ${getDirectionClass(quote.dayChange)}`; dayEl.textContent=quote.unavailable?'数据暂不可用':`当日涨跌 ${fmtSigned(quote.dayChange)} · ${fmtPct(quote.dayChangePercent)}`; card.querySelector('.open').textContent=fmtNumber(quote.open); card.querySelector('.previous-close').textContent=fmtNumber(quote.previousClose); card.querySelector('.high').textContent=fmtNumber(quote.high); card.querySelector('.low').textContent=fmtNumber(quote.low); updateChart(card); }
+    async function refresh(){ try{ const resp=await fetch(FEED,{cache:'no-store'}); if(!resp.ok) throw new Error(`HTTP ${resp.status}`); const data=await resp.json(); if(!data.ok) throw new Error(data.error||'unknown error'); errorBox.style.display='none'; for(const quote of data.quotes) renderQuote(quote); }catch(error){ errorBox.textContent='当前数据更新稍慢，请稍后刷新重试'; errorBox.style.display='block'; } }
+    refresh(); setInterval(refresh, REFRESH_MS);
   </script>
 </body>
 </html>
