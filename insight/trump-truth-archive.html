@@ -90,6 +90,7 @@
     const latestStat=document.getElementById('latest-stat');
     const errorBox=document.getElementById('error-box');
     function timeAgo(ts){if(!ts) return '--'; const diff=Math.max(0,Date.now()-new Date(ts).getTime());const min=Math.round(diff/60000);if(min<1)return'刚刚';if(min<60)return `${min} 分钟前`;const hr=Math.round(min/60);if(hr<24)return `${hr} 小时前`;const day=Math.round(hr/24);return `${day} 天前`}
+    function formatCount(n){return new Intl.NumberFormat('en-US').format(Number(n||0))}
     function preferredText(post){if(currentLang==='zh') return post.content_zh_cn||post.content||''; return post.content||post.content_zh_cn||''}
     function normalizeMediaUrl(url){if(!url) return ''; if(/^https?:\/\//i.test(url)) return url; if(url.startsWith('/api/truth-social/media/')) return `https://stock.fengle.me${url}`; return url;}
     function bindLangToggle(){document.querySelectorAll('.toggle-btn').forEach(btn=>{btn.addEventListener('click',()=>{currentLang=btn.dataset.lang;document.querySelectorAll('.toggle-btn').forEach(el=>el.classList.toggle('active',el===btn));render(latestPosts);});});}
