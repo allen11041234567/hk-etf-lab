@@ -86,6 +86,30 @@ function enrichWithTranslations(posts, translationPosts) {
   });
 }
 
+function normalizeForDedupe(str = '') {
+  return String(str)
+    .replace(/\s+/g, ' ')
+    .replace(/[“”"'‘’]+/g, '')
+    .trim()
+    .toLowerCase();
+}
+
+function dedupePosts(posts) {
+  const seen = new Set();
+  const deduped = [];
+  for (const post of posts || []) {
+    const key = post.url
+      || post.status_url
+      || `${post.created_at || post.created_at_text || ''}__${normalizeForDedupe(post.content)}`;
+    const fallbackKey = `${post.created_at || post.created_at_text || ''}__${normalizeForDedupe(post.content)}`;
+    const finalKey = key && key !== '__' ? key : fallbackKey;
+    if (!finalKey || seen.has(finalKey)) continue;
+    seen.add(finalKey);
+    deduped.push(post);
+  }
+  return deduped;
+}
+
 export async function onRequestGet(context) {
   const { request } = context;
   const url = new URL(request.url);
@@ -124,12 +148,13 @@ export async function onRequestGet(context) {
       translationPosts = Array.isArray(translationPayload.posts) ? translationPayload.posts : [];
     }
     const mergedPosts = enrichWithTranslations(posts, translationPosts);
+    const dedupedPosts = dedupePosts(mergedPosts).slice(0, 20);
     const body = JSON.stringify({
       ok: true,
       fetchedAt: new Date().toISOString(),
-      count: mergedPosts.length,
+      count: dedupedPosts.length,
       source: 'trumpstruth.org',
-      posts: mergedPosts,
+      posts: dedupedPosts,
     });
 
     const liveRes = new Response(body, { headers: headers(`public, max-age=0, s-maxage=${CACHE_SECONDS}`, 'MISS') });
