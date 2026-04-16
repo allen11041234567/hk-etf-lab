@@ -28,10 +28,8 @@
     .stat { padding:14px 14px 12px; border:1px solid var(--line); border-radius:16px; background:rgba(248,250,252,0.8); }
     .stat-label { font-size:12px; color:var(--muted); margin-bottom:6px; }
     .stat-value { font-size:20px; font-weight:700; letter-spacing:-0.02em; }
-    .spark-wrap,.chart-wrap { margin-top:18px; padding:16px; border:1px solid var(--line); border-radius:18px; background:linear-gradient(180deg,rgba(255,255,255,0.92),rgba(246,248,252,0.96)); }
-    .spark-title,.chart-title { color:var(--muted); font-size:12px; margin-bottom:10px; }
-    svg { width:100%; height:96px; display:block; }
-    .spark-labels { display:flex; justify-content:space-between; color:var(--muted); font-size:12px; margin-top:8px; }
+    .chart-wrap { margin-top:18px; padding:16px; border:1px solid var(--line); border-radius:18px; background:linear-gradient(180deg,rgba(255,255,255,0.92),rgba(246,248,252,0.96)); }
+    .chart-title { color:var(--muted); font-size:12px; margin-bottom:10px; }
     .chart-toolbar { display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; align-items:center; margin-bottom:12px; }
     .chip-group { display:flex; gap:8px; flex-wrap:wrap; }
     .chip { border:1px solid var(--line); background:#fff; color:var(--muted); padding:6px 10px; border-radius:999px; font-size:12px; cursor:pointer; }
@@ -50,7 +48,7 @@
       .mini-grid { gap:10px; margin-top:14px; }
       .stat { padding:12px; border-radius:14px; }
       .stat-value { font-size:18px; }
-      .spark-wrap,.chart-wrap { margin-top:14px; padding:12px; border-radius:16px; }
+      .chart-wrap { margin-top:14px; padding:12px; border-radius:16px; }
       .chart-toolbar { gap:8px; }
       .chip-group { gap:6px; }
       .chip { min-height:34px; padding:7px 10px; font-size:12px; }
@@ -73,10 +71,8 @@
       .mini-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin-top:12px; }
       .stat-label { font-size:11px; margin-bottom:4px; }
       .stat-value { font-size:16px; }
-      .spark-wrap,.chart-wrap { margin-top:12px; padding:10px; border-radius:14px; }
-      .spark-title,.chart-title { font-size:11px; margin-bottom:8px; }
-      svg { height:78px; }
-      .spark-labels { font-size:11px; margin-top:6px; }
+      .chart-wrap { margin-top:12px; padding:10px; border-radius:14px; }
+      .chart-title { font-size:11px; margin-bottom:8px; }
       .chart-toolbar { align-items:stretch; flex-direction:column; margin-bottom:10px; }
       .chip-group { width:100%; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); }
       .chip-group:first-of-type { grid-template-columns:repeat(2,minmax(0,1fr)); }
@@ -114,11 +110,6 @@
         <div class="stat"><div class="stat-label">日内高</div><div class="stat-value high"></div></div>
         <div class="stat"><div class="stat-label">日内低</div><div class="stat-value low"></div></div>
       </div>
-      <div class="spark-wrap">
-        <div class="spark-title">近 30 次刷新价格轨迹</div>
-        <svg viewBox="0 0 320 96" preserveAspectRatio="none"><path class="sparkline" fill="none" stroke-width="3" stroke-linecap="round"></path></svg>
-        <div class="spark-labels"><span class="spark-min"></span><span class="spark-max"></span></div>
-      </div>
       <div class="chart-wrap">
         <div class="chart-toolbar">
           <div class="chart-title">图表</div>
@@ -134,7 +125,6 @@
     const CHART = '/api/pulse/chart-image';
     const REFRESH_MS = 15000;
     const CARD_ORDER = ['000660', '005930'];
-    const historyMap = new Map();
     const previousMap = new Map();
     const cardsEl = document.getElementById('cards');
     const tpl = document.getElementById('card-template');
@@ -146,12 +136,11 @@
     function getDirectionClass(value){ if(value > 0) return 'up'; if(value < 0) return 'down'; return 'flat'; }
     function marketLabel(status){ if(status==='OPEN') return '交易中'; if(status==='CLOSE') return '已收盘'; return status || '观察中'; }
     function relativeTime(ts){ if(!ts) return '刚刚更新'; const diff=Math.max(0,Date.now()-new Date(ts).getTime()); const sec=Math.round(diff/1000); if(sec < 5) return '刚刚更新'; if(sec < 60) return `${sec} 秒前更新`; return `${Math.round(sec/60)} 分钟前更新`; }
-    function buildPath(values){ if(!values.length) return ''; const min=Math.min(...values),max=Math.max(...values),range=max-min||1; return values.map((value,index)=>{ const x=values.length===1?160:(index/(values.length-1))*320; const y=88-((value-min)/range)*80; return `${index===0?'M':'L'} ${x.toFixed(2)} ${y.toFixed(2)}`; }).join(' '); }
     function chartUrl(code,type,range){ return `${CHART}?code=${encodeURIComponent(code)}&type=${encodeURIComponent(type)}&range=${encodeURIComponent(range)}`; }
     function updateChart(card){ const code=card.dataset.code,type=card.dataset.chartType||'area',range=card.dataset.chartRange||'day'; const img=card.querySelector('.chart-image'); img.src=chartUrl(code,type,range); img.alt=`${code} chart`; }
     function bindChartControls(card){ card.querySelectorAll('.chip').forEach((chip)=>{ chip.addEventListener('click',()=>{ const kind=chip.dataset.kind,value=chip.dataset.value; if(kind==='type'){ card.dataset.chartType=value; card.querySelectorAll('[data-kind="type"]').forEach((el)=>el.classList.toggle('active', el===chip)); } if(kind==='range'){ card.dataset.chartRange=value; card.querySelectorAll('[data-kind="range"]').forEach((el)=>el.classList.toggle('active', el===chip)); } updateChart(card); }); }); }
     function ensureCard(code){ let card=document.querySelector(`[data-code="${code}"]`); if(card) return card; card=tpl.content.firstElementChild.cloneNode(true); card.dataset.code=code; card.dataset.chartType='area'; card.dataset.chartRange='day'; bindChartControls(card); const orderIndex=CARD_ORDER.indexOf(code); const children=[...cardsEl.children]; const before=children.find((el)=>CARD_ORDER.indexOf(el.dataset.code) > orderIndex); if(before) cardsEl.insertBefore(card,before); else cardsEl.appendChild(card); return card; }
-    function renderQuote(quote){ const card=ensureCard(quote.code); const previous=previousMap.get(quote.code); const tickChange=previous?quote.current-previous.current:0; previousMap.set(quote.code,quote); const history=historyMap.get(quote.code)||[]; history.push(quote.current); if(history.length > 30) history.shift(); historyMap.set(quote.code,history); card.querySelector('.code').textContent=`${quote.code} · KRX`; card.querySelector('.name').textContent=quote.name; card.querySelector('.status').textContent=quote.unavailable?'暂不可用':marketLabel(quote.market); card.querySelector('.price').textContent=quote.unavailable?'加载失败':fmtNumber(quote.current); const dayEl=card.querySelector('.day-change'); dayEl.className=`day-change ${getDirectionClass(quote.dayChange)}`; dayEl.textContent=quote.unavailable?'数据暂不可用':`当日涨跌 ${fmtSigned(quote.dayChange)} · ${fmtPct(quote.dayChangePercent)}`; const tickEl=card.querySelector('.refresh-change'); tickEl.className=`refresh-change ${getDirectionClass(tickChange)}`; tickEl.textContent=quote.unavailable?'等待下一轮刷新':(previous?`较上次刷新 ${fmtSigned(tickChange)}`:'首轮抓取'); card.querySelector('.open').textContent=fmtNumber(quote.open); card.querySelector('.previous-close').textContent=fmtNumber(quote.previousClose); card.querySelector('.high').textContent=fmtNumber(quote.high); card.querySelector('.low').textContent=fmtNumber(quote.low); const path=buildPath(history); const stroke=quote.dayChange > 0 ? '#d92d20' : quote.dayChange < 0 ? '#1570ef' : '#475467'; const spark=card.querySelector('.sparkline'); spark.setAttribute('d',path); spark.setAttribute('stroke',stroke); card.querySelector('.spark-min').textContent=`低点 ${fmtNumber(Math.min(...history))}`; card.querySelector('.spark-max').textContent=`高点 ${fmtNumber(Math.max(...history))}`; updateChart(card); }
+    function renderQuote(quote){ const card=ensureCard(quote.code); const previous=previousMap.get(quote.code); const tickChange=previous?quote.current-previous.current:0; previousMap.set(quote.code,quote); card.querySelector('.code').textContent=`${quote.code} · KRX`; card.querySelector('.name').textContent=quote.name; card.querySelector('.status').textContent=quote.unavailable?'暂不可用':marketLabel(quote.market); card.querySelector('.price').textContent=quote.unavailable?'加载失败':fmtNumber(quote.current); const dayEl=card.querySelector('.day-change'); dayEl.className=`day-change ${getDirectionClass(quote.dayChange)}`; dayEl.textContent=quote.unavailable?'数据暂不可用':`当日涨跌 ${fmtSigned(quote.dayChange)} · ${fmtPct(quote.dayChangePercent)}`; const tickEl=card.querySelector('.refresh-change'); tickEl.className=`refresh-change ${getDirectionClass(tickChange)}`; tickEl.textContent=quote.unavailable?'等待下一轮刷新':(previous?`较上次刷新 ${fmtSigned(tickChange)}`:'首轮抓取'); card.querySelector('.open').textContent=fmtNumber(quote.open); card.querySelector('.previous-close').textContent=fmtNumber(quote.previousClose); card.querySelector('.high').textContent=fmtNumber(quote.high); card.querySelector('.low').textContent=fmtNumber(quote.low); updateChart(card); }
     async function refresh(){ try{ const resp=await fetch(FEED,{cache:'no-store'}); if(!resp.ok) throw new Error(`HTTP ${resp.status}`); const data=await resp.json(); if(!data.ok) throw new Error(data.error||'unknown error'); errorBox.style.display='none'; updatePill.textContent=`最近更新：${relativeTime(data.serverTime)}`; for(const quote of data.quotes) renderQuote(quote); }catch(error){ errorBox.textContent='当前数据更新稍慢，请稍后刷新重试'; errorBox.style.display='block'; } }
     refresh(); setInterval(refresh, REFRESH_MS); setInterval(()=>{ const ts=previousMap.get('005930')?.fetchedAt || previousMap.get('000660')?.fetchedAt; if(ts) updatePill.textContent=`最近更新：${relativeTime(ts)}`; },1000);
   </script>
