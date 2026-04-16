@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex,nofollow,noarchive" />
+  <title>韩国科技龙头动态看板</title>
+  <style>
+    :root { --bg:#f5f7fb; --card:rgba(255,255,255,0.94); --text:#14213d; --muted:#667085; --up:#d92d20; --down:#1570ef; --flat:#475467; --line:rgba(15,23,42,0.08); --shadow:0 18px 45px rgba(15,23,42,0.08); }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:radial-gradient(circle at top,#ffffff 0%,#eef4ff 36%,var(--bg) 100%); color:var(--text); min-height:100vh; }
+    .wrap { width:min(1180px,calc(100vw - 32px)); margin:0 auto; padding:28px 0 40px; }
+    .hero { display:flex; flex-wrap:wrap; gap:14px; align-items:flex-end; justify-content:space-between; margin-bottom:18px; }
+    .title { font-size:clamp(28px,4vw,42px); font-weight:800; letter-spacing:-0.02em; margin:0; }
+    .subtitle { margin-top:8px; color:var(--muted); font-size:15px; line-height:1.6; }
+    .meta { display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+    .pill { border:1px solid var(--line); background:rgba(255,255,255,0.78); color:var(--muted); border-radius:999px; padding:8px 12px; font-size:13px; backdrop-filter:blur(10px); }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+    .card { background:var(--card); border:1px solid rgba(255,255,255,0.7); box-shadow:var(--shadow); border-radius:24px; padding:22px; backdrop-filter:blur(14px); }
+    .code { font-size:13px; color:var(--muted); letter-spacing:0.06em; }
+    .name-row { display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin-bottom:10px; }
+    .name { font-size:28px; font-weight:800; letter-spacing:-0.02em; }
+    .status { font-size:12px; padding:6px 10px; border-radius:999px; background:rgba(16,24,40,0.05); color:var(--muted); }
+    .price { font-size:clamp(38px,5vw,60px); font-weight:800; letter-spacing:-0.04em; margin:10px 0 6px; }
+    .change { display:flex; flex-wrap:wrap; gap:12px; align-items:center; font-size:17px; font-weight:700; margin-bottom:18px; }
+    .up { color:var(--up); } .down { color:var(--down); } .flat { color:var(--flat); }
+    .mini-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:16px; }
+    .stat { padding:14px 14px 12px; border:1px solid var(--line); border-radius:16px; background:rgba(248,250,252,0.8); }
+    .stat-label { font-size:12px; color:var(--muted); margin-bottom:6px; }
+    .stat-value { font-size:20px; font-weight:700; letter-spacing:-0.02em; }
+    .spark-wrap,.chart-wrap { margin-top:18px; padding:16px; border:1px solid var(--line); border-radius:18px; background:linear-gradient(180deg,rgba(255,255,255,0.92),rgba(246,248,252,0.96)); }
+    .spark-title,.chart-title { color:var(--muted); font-size:12px; margin-bottom:10px; }
+    svg { width:100%; height:96px; display:block; }
+    .spark-labels { display:flex; justify-content:space-between; color:var(--muted); font-size:12px; margin-top:8px; }
+    .chart-toolbar { display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; align-items:center; margin-bottom:12px; }
+    .chip-group { display:flex; gap:8px; flex-wrap:wrap; }
+    .chip { border:1px solid var(--line); background:#fff; color:var(--muted); padding:6px 10px; border-radius:999px; font-size:12px; cursor:pointer; }
+    .chip.active { background:#14213d; border-color:#14213d; color:#fff; }
+    .chart-image { width:100%; aspect-ratio:700/289; object-fit:cover; border-radius:14px; border:1px solid var(--line); background:#fff; display:block; }
+    .error { margin-top:16px; padding:14px 16px; border-radius:16px; color:#b42318; background:#fef3f2; border:1px solid #fecdca; display:none; }
+    @media (max-width: 880px) {
+      .wrap { width:min(100vw - 24px,1180px); padding:20px 0 28px; }
+      .grid { grid-template-columns:1fr; }
+      .meta { justify-content:flex-start; }
+      .title { font-size:30px; line-height:1.16; }
+      .subtitle { font-size:14px; line-height:1.7; }
+      .card { padding:18px; border-radius:20px; }
+      .price { font-size:42px; }
+      .change { font-size:15px; gap:10px; margin-bottom:14px; }
+      .mini-grid { gap:10px; margin-top:14px; }
+      .stat { padding:12px; border-radius:14px; }
+      .stat-value { font-size:18px; }
+      .spark-wrap,.chart-wrap { margin-top:14px; padding:12px; border-radius:16px; }
+      .chart-toolbar { gap:8px; }
+      .chip-group { gap:6px; }
+      .chip { min-height:34px; padding:7px 10px; font-size:12px; }
+    }
+    @media (max-width: 560px) {
+      body { background:linear-gradient(180deg,#f8fbff 0%,#f2f6fd 100%); }
+      .wrap { width:calc(100vw - 16px); padding:12px 0 22px; }
+      .hero { gap:10px; margin-bottom:12px; }
+      .title { font-size:24px; }
+      .subtitle { margin-top:6px; font-size:13px; line-height:1.6; }
+      .meta { gap:6px; }
+      .pill { padding:7px 10px; font-size:12px; }
+      .grid { gap:12px; }
+      .card { padding:14px; border-radius:18px; }
+      .code { font-size:12px; }
+      .name { font-size:24px; }
+      .status { font-size:11px; padding:5px 8px; }
+      .price { font-size:36px; margin:8px 0 4px; }
+      .change { font-size:14px; gap:8px; margin-bottom:12px; }
+      .mini-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin-top:12px; }
+      .stat-label { font-size:11px; margin-bottom:4px; }
+      .stat-value { font-size:16px; }
+      .spark-wrap,.chart-wrap { margin-top:12px; padding:10px; border-radius:14px; }
+      .spark-title,.chart-title { font-size:11px; margin-bottom:8px; }
+      svg { height:78px; }
+      .spark-labels { font-size:11px; margin-top:6px; }
+      .chart-toolbar { align-items:stretch; flex-direction:column; margin-bottom:10px; }
+      .chip-group { width:100%; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); }
+      .chip-group:first-of-type { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .chip { width:100%; min-height:36px; padding:8px 6px; font-size:12px; }
+      .chart-image { border-radius:12px; }
+      .error { margin-top:12px; padding:12px; border-radius:14px; font-size:13px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div>
+        <h1 class="title">韩国科技龙头动态看板</h1>
+        <div class="subtitle">聚焦两只韩国科技龙头的盘中价格变化、日内强弱与图表状态，适合快速浏览与客户展示。</div>
+      </div>
+      <div class="meta">
+        <div class="pill">双市场核心观察</div>
+        <div class="pill">高频更新</div>
+        <div class="pill" id="update-pill">等待首轮数据…</div>
+      </div>
+    </section>
+    <section class="grid" id="cards"></section>
+    <div class="error" id="error-box"></div>
+  </div>
+  <template id="card-template">
+    <article class="card">
+      <div class="code"></div>
+      <div class="name-row"><div class="name"></div><div class="status"></div></div>
+      <div class="price"></div>
+      <div class="change"><span class="day-change"></span><span class="refresh-change"></span></div>
+      <div class="mini-grid">
+        <div class="stat"><div class="stat-label">开盘</div><div class="stat-value open"></div></div>
+        <div class="stat"><div class="stat-label">前收</div><div class="stat-value previous-close"></div></div>
+        <div class="stat"><div class="stat-label">日内高</div><div class="stat-value high"></div></div>
+        <div class="stat"><div class="stat-label">日内低</div><div class="stat-value low"></div></div>
+      </div>
+      <div class="spark-wrap">
+        <div class="spark-title">近 30 次刷新价格轨迹</div>
+        <svg viewBox="0 0 320 96" preserveAspectRatio="none"><path class="sparkline" fill="none" stroke-width="3" stroke-linecap="round"></path></svg>
+        <div class="spark-labels"><span class="spark-min"></span><span class="spark-max"></span></div>
+      </div>
+      <div class="chart-wrap">
+        <div class="chart-toolbar">
+          <div class="chart-title">图表</div>
+          <div class="chip-group"><button class="chip active" data-kind="type" data-value="area">分时线</button><button class="chip" data-kind="type" data-value="candle">K线</button></div>
+          <div class="chip-group"><button class="chip active" data-kind="range" data-value="day">日内</button><button class="chip" data-kind="range" data-value="week">周线</button><button class="chip" data-kind="range" data-value="month">月线</button></div>
+        </div>
+        <img class="chart-image" alt="chart" />
+      </div>
+    </article>
+  </template>
+  <script>
+    const FEED = '/api/pulse/brief?codes=000660,005930';
+    const CHART = '/api/pulse/chart-image';
+    const REFRESH_MS = 15000;
+    const CARD_ORDER = ['000660', '005930'];
+    const historyMap = new Map();
+    const previousMap = new Map();
+    const cardsEl = document.getElementById('cards');
+    const tpl = document.getElementById('card-template');
+    const updatePill = document.getElementById('update-pill');
+    const errorBox = document.getElementById('error-box');
+    function fmtNumber(value){ return new Intl.NumberFormat('en-US').format(Math.round(value || 0)); }
+    function fmtSigned(value){ const n=Math.round(value || 0); return `${n > 0 ? '+' : ''}${fmtNumber(n)}`; }
+    function fmtPct(value){ const n=Number(value || 0); return `${n > 0 ? '+' : ''}${n.toFixed(2)}%`; }
+    function getDirectionClass(value){ if(value > 0) return 'up'; if(value < 0) return 'down'; return 'flat'; }
+    function marketLabel(status){ if(status==='OPEN') return '交易中'; if(status==='CLOSE') return '已收盘'; return status || '观察中'; }
+    function relativeTime(ts){ if(!ts) return '刚刚更新'; const diff=Math.max(0,Date.now()-new Date(ts).getTime()); const sec=Math.round(diff/1000); if(sec < 5) return '刚刚更新'; if(sec < 60) return `${sec} 秒前更新`; return `${Math.round(sec/60)} 分钟前更新`; }
+    function buildPath(values){ if(!values.length) return ''; const min=Math.min(...values),max=Math.max(...values),range=max-min||1; return values.map((value,index)=>{ const x=values.length===1?160:(index/(values.length-1))*320; const y=88-((value-min)/range)*80; return `${index===0?'M':'L'} ${x.toFixed(2)} ${y.toFixed(2)}`; }).join(' '); }
+    function chartUrl(code,type,range){ return `${CHART}?code=${encodeURIComponent(code)}&type=${encodeURIComponent(type)}&range=${encodeURIComponent(range)}`; }
+    function updateChart(card){ const code=card.dataset.code,type=card.dataset.chartType||'area',range=card.dataset.chartRange||'day'; const img=card.querySelector('.chart-image'); img.src=chartUrl(code,type,range); img.alt=`${code} chart`; }
+    function bindChartControls(card){ card.querySelectorAll('.chip').forEach((chip)=>{ chip.addEventListener('click',()=>{ const kind=chip.dataset.kind,value=chip.dataset.value; if(kind==='type'){ card.dataset.chartType=value; card.querySelectorAll('[data-kind="type"]').forEach((el)=>el.classList.toggle('active', el===chip)); } if(kind==='range'){ card.dataset.chartRange=value; card.querySelectorAll('[data-kind="range"]').forEach((el)=>el.classList.toggle('active', el===chip)); } updateChart(card); }); }); }
+    function ensureCard(code){ let card=document.querySelector(`[data-code="${code}"]`); if(card) return card; card=tpl.content.firstElementChild.cloneNode(true); card.dataset.code=code; card.dataset.chartType='area'; card.dataset.chartRange='day'; bindChartControls(card); const orderIndex=CARD_ORDER.indexOf(code); const children=[...cardsEl.children]; const before=children.find((el)=>CARD_ORDER.indexOf(el.dataset.code) > orderIndex); if(before) cardsEl.insertBefore(card,before); else cardsEl.appendChild(card); return card; }
+    function renderQuote(quote){ const card=ensureCard(quote.code); const previous=previousMap.get(quote.code); const tickChange=previous?quote.current-previous.current:0; previousMap.set(quote.code,quote); const history=historyMap.get(quote.code)||[]; history.push(quote.current); if(history.length > 30) history.shift(); historyMap.set(quote.code,history); card.querySelector('.code').textContent=`${quote.code} · KRX`; card.querySelector('.name').textContent=quote.name; card.querySelector('.status').textContent=quote.unavailable?'暂不可用':marketLabel(quote.market); card.querySelector('.price').textContent=quote.unavailable?'加载失败':fmtNumber(quote.current); const dayEl=card.querySelector('.day-change'); dayEl.className=`day-change ${getDirectionClass(quote.dayChange)}`; dayEl.textContent=quote.unavailable?'数据暂不可用':`当日涨跌 ${fmtSigned(quote.dayChange)} · ${fmtPct(quote.dayChangePercent)}`; const tickEl=card.querySelector('.refresh-change'); tickEl.className=`refresh-change ${getDirectionClass(tickChange)}`; tickEl.textContent=quote.unavailable?'等待下一轮刷新':(previous?`较上次刷新 ${fmtSigned(tickChange)}`:'首轮抓取'); card.querySelector('.open').textContent=fmtNumber(quote.open); card.querySelector('.previous-close').textContent=fmtNumber(quote.previousClose); card.querySelector('.high').textContent=fmtNumber(quote.high); card.querySelector('.low').textContent=fmtNumber(quote.low); const path=buildPath(history); const stroke=quote.dayChange > 0 ? '#d92d20' : quote.dayChange < 0 ? '#1570ef' : '#475467'; const spark=card.querySelector('.sparkline'); spark.setAttribute('d',path); spark.setAttribute('stroke',stroke); card.querySelector('.spark-min').textContent=`低点 ${fmtNumber(Math.min(...history))}`; card.querySelector('.spark-max').textContent=`高点 ${fmtNumber(Math.max(...history))}`; updateChart(card); }
+    async function refresh(){ try{ const resp=await fetch(FEED,{cache:'no-store'}); if(!resp.ok) throw new Error(`HTTP ${resp.status}`); const data=await resp.json(); if(!data.ok) throw new Error(data.error||'unknown error'); errorBox.style.display='none'; updatePill.textContent=`最近更新：${relativeTime(data.serverTime)}`; for(const quote of data.quotes) renderQuote(quote); }catch(error){ errorBox.textContent='当前数据更新稍慢，请稍后刷新重试'; errorBox.style.display='block'; } }
+    refresh(); setInterval(refresh, REFRESH_MS); setInterval(()=>{ const ts=previousMap.get('005930')?.fetchedAt || previousMap.get('000660')?.fetchedAt; if(ts) updatePill.textContent=`最近更新：${relativeTime(ts)}`; },1000);
+  </script>
+</body>
+</html>
