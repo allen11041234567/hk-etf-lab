@@ -8,8 +8,9 @@ export async function onRequestGet(context) {
   const { request } = context;
   const url = new URL(request.url);
   const code = /^\d{6}$/.test(url.searchParams.get('code') || '') ? url.searchParams.get('code') : '000660';
-  const type = pick(url.searchParams.get('type') || 'area', VALID_TYPES, 'area');
+  const requestedType = pick(url.searchParams.get('type') || 'area', VALID_TYPES, 'area');
   const range = pick(url.searchParams.get('range') || 'day', VALID_RANGES, 'day');
+  const type = requestedType === 'area' && range === 'month' ? 'candle' : requestedType;
   const cache = caches.default;
   const cacheKey = new Request(`${url.origin}/__edge/pulse/chart?code=${code}&type=${type}&range=${range}`);
   const staleKey = new Request(`${url.origin}/__edge/pulse/chart/stale?code=${code}&type=${type}&range=${range}`);
