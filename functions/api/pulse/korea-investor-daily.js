@@ -5,7 +5,7 @@ const CODE_NAMES = {
 };
 const LIVE_TTL_SECONDS = 1800;
 const STALE_TTL_SECONDS = 43200;
-const CACHE_VERSION = 'v4';
+const CACHE_VERSION = 'v5';
 
 function normalizeCodes(raw) {
   if (!raw) return DEFAULT_CODES;
@@ -62,18 +62,22 @@ function extractForeignRate(html) {
 }
 
 function extractRows(html) {
-  const rows = [...html.matchAll(/<tr[^>]*onMouseOver="mouseOver\(this\)"[\s\S]*?<td[^>]*class="tc"[^>]*><span[^>]*>([^<]+)<\/span><\/td>[\s\S]*?<td[^>]*class="num"[^>]*><span[^>]*>([^<]+)<\/span><\/td>[\s\S]*?<td[^>]*class="num"[^>]*>[\s\S]*?<span[^>]*>([+\-]?[0-9.,%]+)<\/span>[\s\S]*?<\/td>[\s\S]*?<td[^>]*class="num"[^>]*><span[^>]*>([+\-]?[0-9.,%]+)<\/span><\/td>[\s\S]*?<td[^>]*class="num"[^>]*><span[^>]*>([0-9,]+)<\/span><\/td>[\s\S]*?<td[^>]*class="num"[^>]*><span[^>]*>([+\-]?[0-9,]+)<\/span>[\s\S]*?<\/td>[\s\S]*?<td[^>]*class="num"[^>]*><span[^>]*>([+\-]?[0-9,]+)<\/span>[\s\S]*?<\/td>[\s\S]*?<td[^>]*class="num"[^>]*><span[^>]*>([0-9,]+)<\/span><\/td>[\s\S]*?<td[^>]*class="num"[^>]*><span[^>]*>([0-9.]+%)<\/span>/gi)];
-  return rows.map((m) => ({
-    date: m[1].trim(),
-    close: m[2].trim(),
-    pct: m[4].trim(),
-    volume: parseSignedNumber(m[5]),
-    institutionNet: parseSignedNumber(m[6]),
-    foreignNet: parseSignedNumber(m[7]),
-    foreignShares: parseSignedNumber(m[8]),
-    foreignRateText: m[9].trim(),
-    foreignRateValue: parsePercent(m[9]),
-  }));
+  const dates = [...html.matchAll(/<td width="62" class="tc"><span class="tah p10 gray03">([^<]+)<\/span>/g)].map((m) => m[1]);
+  const rates = [...html.matchAll(/<td width="60" class="num"><span class="tah p11">([0-9.]+%)<\/span>/g)].map((m) => m[1]);
+  const foreignNets = [...html.matchAll(/<td width="80" class="num"><span class="tah p11(?: [^"]+)?">([+\-]?[0-9,]+)<\/span>/g)].map((m) => m[1]);
+  const institutionNets = [...html.matchAll(/<td width="66" class="num"><span class="tah p11(?: [^"]+)?">([+\-]?[0-9,]+)<\/span>/g)].map((m) => m[1]);
+  const rows = [];
+  const n = Math.min(5, dates.length, rates.length, foreignNets.length, institutionNets.length);
+  for (let i = 0; i < n; i += 1) {
+    rows.push({
+      date: dates[i].trim(),
+      foreignNet: parseSignedNumber(foreignNets[i]),
+      institutionNet: parseSignedNumber(institutionNets[i]),
+      foreignRateText: rates[i].trim(),
+      foreignRateValue: parsePercent(rates[i]),
+    });
+  }
+  return rows;
 }
 
 async function fetchMobileIntegration(code) {
@@ -154,7 +158,7 @@ async function buildInvestorSnapshot(code) {
     fetchPriceSeries(code).catch(() => []),
   ]);
   const rows = extractRows(frgnHtml).slice(0, 5);
-  const today = rows[0] || { date: null, foreignNet: 0, institutionNet: 0, foreignRateValue: null, foreignRateText: null, volume: 0 };
+  const today = rows[0] || { date: null, foreignNet: 0, institutionNet: 0, foreignRateValue: null, foreignRateText: null };
   const yesterday = rows[1] || { foreignRateValue: null };
   const foreign5d = rows.map((r) => r.foreignNet);
   const institution5d = rows.map((r) => r.institutionNet);
@@ -181,7 +185,7 @@ async function buildInvestorSnapshot(code) {
     foreign5dNet: foreign5d.reduce((a, b) => a + b, 0),
     institution5dNet: institution5d.reduce((a, b) => a + b, 0),
     week52Position: week52PositionText(closePrice, low52, high52),
-    volumeTrend: volumeTrendText(today.volume, prevAvgVolume),
+    volumeTrend: volumeTrendText(parseSignedNumber(prices?.[0]?.accumulatedTradingVolume), prevAvgVolume),
   };
 }
 
