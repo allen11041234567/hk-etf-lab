@@ -5,7 +5,7 @@ const CODE_NAMES = {
 };
 const LIVE_TTL_SECONDS = 1800;
 const STALE_TTL_SECONDS = 43200;
-const CACHE_VERSION = 'v5';
+const CACHE_VERSION = 'v6';
 
 function normalizeCodes(raw) {
   if (!raw) return DEFAULT_CODES;

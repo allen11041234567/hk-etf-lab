@@ -139,7 +139,7 @@ function buildQuoteFromSources(code, snapshotAt, pollingResult, mobileResult) {
     eps: infoMap.eps || null,
     pbr: infoMap.pbr || null,
     bps: infoMap.bps || null,
-    dividendYield: infoMap.dividendYield || null,
+    dividendYield: infoMap.dividendYieldRatio || infoMap.dividendYield || null,
     fetchedAt: new Date(snapshotAt).toISOString(),
     localTradedAt: localTs ? new Date(localTs).toISOString() : null,
     source: pollingItem ? 'polling+mobile' : 'mobile',
