@@ -1,5 +1,6 @@
 const CACHE_SECONDS = 60;
 const STALE_SECONDS = 300;
+const CACHE_VERSION = 'v2';
 
 function headers(cacheControl, state) {
   return {
@@ -27,8 +28,8 @@ export async function onRequestGet(context) {
   const { request } = context;
   const url = new URL(request.url);
   const cache = caches.default;
-  const liveKey = new Request(`${url.origin}/__edge/pulse/trump-feed/live`);
-  const staleKey = new Request(`${url.origin}/__edge/pulse/trump-feed/stale`);
+  const liveKey = new Request(`${url.origin}/__edge/pulse/trump-feed/${CACHE_VERSION}/live`);
+  const staleKey = new Request(`${url.origin}/__edge/pulse/trump-feed/${CACHE_VERSION}/stale`);
 
   try {
     const cached = await cache.match(liveKey);
