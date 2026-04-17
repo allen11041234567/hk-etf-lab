@@ -205,8 +205,7 @@ async function buildInvestorSnapshot(code) {
     : null;
   const recentTrendRows = rows.map((r) => ({
     date: r.date,
-    price: r.price,
-    change: r.change,
+    pct: r.pct,
     foreignNet: `${r.foreignNet > 0 ? '+' : ''}${r.foreignNet.toLocaleString()}`,
     institutionNet: `${r.institutionNet > 0 ? '+' : ''}${r.institutionNet.toLocaleString()}`,
     retailNet: `${-(r.foreignNet + r.institutionNet) > 0 ? '+' : ''}${(-(r.foreignNet + r.institutionNet)).toLocaleString()}`,
