@@ -5,7 +5,7 @@ const CODE_NAMES = {
 };
 const LIVE_TTL_SECONDS = 1800;
 const STALE_TTL_SECONDS = 43200;
-const CACHE_VERSION = 'v6';
+const CACHE_VERSION = 'v7';
 
 function normalizeCodes(raw) {
   if (!raw) return DEFAULT_CODES;
@@ -61,26 +61,51 @@ function extractForeignRate(html) {
   return m?.[1]?.trim() || null;
 }
 
+function stripTags(html = '') {
+  return String(html)
+    .replace(/<br\s*\/?>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&nbsp;/gi, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function firstNumber(text = '', { percent = false } = {}) {
+  const re = percent ? /[+\-]?[0-9,]+(?:\.[0-9]+)?%/ : /[+\-]?[0-9,]+(?:\.[0-9]+)?/;
+  return String(text).match(re)?.[0]?.trim() || null;
+}
+
 function extractRows(html) {
-  const dates = [...html.matchAll(/<td width="62" class="tc"><span class="tah p10 gray03">([^<]+)<\/span>/g)].map((m) => m[1]);
-  const rates = [...html.matchAll(/<td width="60" class="num"><span class="tah p11">([0-9.]+%)<\/span>/g)].map((m) => m[1]);
-  const foreignNets = [...html.matchAll(/<td width="80" class="num"><span class="tah p11(?: [^"]+)?">([+\-]?[0-9,]+)<\/span>/g)].map((m) => m[1]);
-  const institutionNets = [...html.matchAll(/<td width="66" class="num"><span class="tah p11(?: [^"]+)?">([+\-]?[0-9,]+)<\/span>/g)].map((m) => m[1]);
-  const priceRows = [...html.matchAll(/<td width="67" class="num"><span class="tah p11">([^<]+)<\/span><\/td>/g)].map((m) => m[1]);
-  const changeRows = [...html.matchAll(/<td width="67" class="num">[\s\S]*?<span class="tah p11(?: [^"]+)?">\s*([+\-]?[0-9,]+(?:\.[0-9]+)?%?)\s*<\/span>/g)].map((m) => m[1]);
-  const volumeRows = [...html.matchAll(/<td width="67" class="num"><span class="tah p11">([0-9,]+)<\/span><\/td>/g)].map((m) => m[1]);
+  const rowMatches = [...html.matchAll(/<tr[^>]*onMouseOver="mouseOver\(this\)"[\s\S]*?<\/tr>/g)];
   const rows = [];
-  const n = Math.min(5, dates.length, rates.length, foreignNets.length, institutionNets.length);
-  for (let i = 0; i < n; i += 1) {
+  for (const match of rowMatches.slice(0, 5)) {
+    const rowHtml = match[0];
+    const cells = [...rowHtml.matchAll(/<td\b[^>]*>([\s\S]*?)<\/td>/g)].map((m) => stripTags(m[1]));
+    if (cells.length < 9) continue;
+
+    const date = cells[0];
+    const price = firstNumber(cells[1]);
+    const change = firstNumber(cells[2]);
+    const pct = firstNumber(cells[3], { percent: true });
+    const volume = firstNumber(cells[4]);
+    const institutionNet = firstNumber(cells[5]);
+    const foreignNet = firstNumber(cells[6]);
+    const foreignShares = firstNumber(cells[7]);
+    const foreignRateText = firstNumber(cells[8], { percent: true }) || '--';
+
+    if (!date || !price || !change || !pct || !volume || !institutionNet || !foreignNet || !foreignShares) continue;
+
     rows.push({
-      date: dates[i].trim(),
-      price: priceRows[i] || '--',
-      change: changeRows[i * 2 + 1] || '--',
-      volume: parseSignedNumber(volumeRows[i] || 0),
-      foreignNet: parseSignedNumber(foreignNets[i]),
-      institutionNet: parseSignedNumber(institutionNets[i]),
-      foreignRateText: rates[i].trim(),
-      foreignRateValue: parsePercent(rates[i]),
+      date,
+      price,
+      change,
+      pct,
+      volume: parseSignedNumber(volume),
+      institutionNet: parseSignedNumber(institutionNet),
+      foreignNet: parseSignedNumber(foreignNet),
+      foreignShares: parseSignedNumber(foreignShares),
+      foreignRateText,
+      foreignRateValue: parsePercent(foreignRateText),
     });
   }
   return rows;
