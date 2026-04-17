@@ -36,6 +36,9 @@
     .related-desc { margin-top:6px; font-size:13px; line-height:1.5; color:var(--muted); }
     .related-cta { margin-top:10px; display:inline-flex; align-items:center; gap:6px; color:#f36f21; font-size:13px; font-weight:700; }
     .related-cta::after { content:'→'; }
+    .stock-switch{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 16px}
+    .switch-btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:999px;border:1px solid var(--line);background:#fff;color:#475569;font-size:13px;font-weight:700;cursor:pointer}
+    .switch-btn.active{background:#14213d;color:#fff;border-color:#14213d}
     .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
     .card { background:var(--card); border:1px solid rgba(255,255,255,0.7); box-shadow:var(--shadow); border-radius:24px; padding:22px; backdrop-filter:blur(14px); }
     .code { font-size:13px; color:var(--muted); letter-spacing:0.06em; }
@@ -70,6 +73,8 @@
       .wrap { width:min(100vw - 24px,1180px); padding:20px 0 28px; }
       .summary-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
       .related-grid { grid-template-columns:1fr; }
+      .stock-switch{gap:8px;margin-bottom:12px}
+      .switch-btn{padding:8px 12px;font-size:12px}
       .grid { grid-template-columns:1fr; }
       .meta { justify-content:flex-start; }
       .title { font-size:30px; line-height:1.16; }
@@ -191,6 +196,10 @@
         </a>
       </div>
     </section>
+    <div class="stock-switch">
+      <button class="switch-btn active" data-target-code="000660">SK海力士</button>
+      <button class="switch-btn" data-target-code="005930">三星电子</button>
+    </div>
     <section class="grid" id="cards"></section>
     <div class="error" id="error-box"></div>
   </div>
@@ -205,6 +214,13 @@
         <div class="stat"><div class="stat-label">前收</div><div class="stat-value previous-close"></div></div>
         <div class="stat"><div class="stat-label">日内高</div><div class="stat-value high"></div></div>
         <div class="stat"><div class="stat-label">日内低</div><div class="stat-value low"></div></div>
+        <div class="stat"><div class="stat-label">成交量</div><div class="stat-value volume"></div></div>
+        <div class="stat"><div class="stat-label">成交金额</div><div class="stat-value value"></div></div>
+        <div class="stat"><div class="stat-label">市值</div><div class="stat-value market-value"></div></div>
+        <div class="stat"><div class="stat-label">52周高 / 低</div><div class="stat-value week52-range"></div></div>
+        <div class="stat"><div class="stat-label">PER / EPS</div><div class="stat-value per-eps"></div></div>
+        <div class="stat"><div class="stat-label">PBR / BPS</div><div class="stat-value pbr-bps"></div></div>
+        <div class="stat"><div class="stat-label">股息率</div><div class="stat-value dividend-yield"></div></div>
       </div>
       <div class="chart-wrap">
         <div class="chart-toolbar">
@@ -213,6 +229,10 @@
           <div class="chip-group"><button class="chip active" data-kind="range" data-value="day">日内</button><button class="chip" data-kind="range" data-value="week">周线</button><button class="chip" data-kind="range" data-value="month">月线</button></div>
         </div>
         <img class="chart-image" alt="chart" />
+      </div>
+      <div class="flow-wrap">
+        <div class="flow-title">近5日成交趋势</div>
+        <div class="flow-trend trend-table">--</div>
       </div>
       <div class="flow-wrap">
         <div class="flow-title">盘后资金风向</div>
@@ -243,6 +263,7 @@
     const tpl = document.getElementById('card-template');
     const errorBox = document.getElementById('error-box');
     function fmtNumber(value){ return new Intl.NumberFormat('en-US').format(Math.round(value || 0)); }
+    function fmtKrwMillion(value){ const n = Number(value || 0); if(!Number.isFinite(n)) return '--'; return `${fmtNumber(n)}백만韩元`; }
     function fmtSigned(value){ const n=Math.round(value || 0); return `${n > 0 ? '+' : ''}${fmtNumber(n)}`; }
     function fmtShares(value){ const n=Math.round(value || 0); return `${n > 0 ? '+' : ''}${fmtNumber(n)}股`; }
     function fmtPct(value){ const n=Number(value || 0); return `${n > 0 ? '+' : ''}${n.toFixed(2)}%`; }
@@ -259,13 +280,15 @@
     function updateChart(card, force=false){ const code=card.dataset.code,type=card.dataset.chartType||'area',range=card.dataset.chartRange||'day'; const img=card.querySelector('.chart-image'); const next=chartUrl(code,type,range); if(force || img.dataset.src!==next){ img.src=next; img.dataset.src=next; } img.alt=`${code} chart`; }
     function bindChartControls(card){ card.querySelectorAll('.chip').forEach((chip)=>{ chip.addEventListener('click',()=>{ const kind=chip.dataset.kind,value=chip.dataset.value; if(kind==='type'){ card.dataset.chartType=value; card.querySelectorAll('[data-kind="type"]').forEach((el)=>el.classList.toggle('active', el===chip)); } if(kind==='range'){ card.dataset.chartRange=value; card.querySelectorAll('[data-kind="range"]').forEach((el)=>el.classList.toggle('active', el===chip)); } updateChart(card, true); }); }); }
     function ensureCard(code){ let card=document.querySelector(`[data-code="${code}"]`); if(card) return card; card=tpl.content.firstElementChild.cloneNode(true); card.dataset.code=code; card.dataset.chartType='area'; card.dataset.chartRange='day'; bindChartControls(card); const orderIndex=CARD_ORDER.indexOf(code); const children=[...cardsEl.children]; const before=children.find((el)=>CARD_ORDER.indexOf(el.dataset.code) > orderIndex); if(before) cardsEl.insertBefore(card,before); else cardsEl.appendChild(card); return card; }
+    function applyCardVisibility(targetCode){ document.querySelectorAll('.switch-btn').forEach((btn)=>btn.classList.toggle('active', btn.dataset.targetCode===targetCode)); document.querySelectorAll('#cards .card').forEach((card)=>{ card.style.display = card.dataset.code===targetCode ? '' : 'none'; }); }
     function renderMarketSummary(summary){ if(!summary) return; document.getElementById('summary-kospi').textContent = summary.kospi ? summary.kospi.price : '--'; document.getElementById('summary-kospi-d').textContent = summary.kospi ? fmtPctMaybe(summary.kospi.changePct) : '--'; document.getElementById('summary-kosdaq').textContent = summary.kosdaq ? summary.kosdaq.price : '--'; document.getElementById('summary-kosdaq-d').textContent = summary.kosdaq ? fmtPctMaybe(summary.kosdaq.changePct) : '--'; document.getElementById('summary-usdkrw').textContent = summary.usdkrw ? summary.usdkrw.value : '--'; document.getElementById('summary-usdkrw-d').textContent = summary.usdkrw ? `${mapUsdDirection(summary.usdkrw.direction)} ${summary.usdkrw.change}` : '--'; document.getElementById('summary-semi').textContent = summary.semiconductorTone || '--'; }
-    function renderInvestor(snapshot){ investorMap.set(snapshot.code, snapshot); const card=ensureCard(snapshot.code); card.querySelector('.foreign-net').textContent = fmtShares(snapshot.foreignNetToday); card.querySelector('.institution-net').textContent = fmtShares(snapshot.institutionNetToday); card.querySelector('.foreign-rate').textContent = snapshot.foreignHoldingRate || '--'; card.querySelector('.foreign-rate-delta').textContent = snapshot.foreignHoldingRateDelta == null ? '' : ` （较昨日${snapshot.foreignHoldingRateDelta>0?'+':''}${snapshot.foreignHoldingRateDelta.toFixed(2)}pct）`; card.querySelector('.week52-position').textContent = snapshot.week52Position || '--'; card.querySelector('.volume-trend').textContent = snapshot.volumeTrend || '--'; card.querySelector('.foreign-trend').textContent = snapshot.foreign5dTrend || '--'; card.querySelector('.institution-trend').textContent = snapshot.institution5dTrend || '--'; }
-    function renderQuote(quote){ const card=ensureCard(quote.code); previousMap.set(quote.code,quote); card.querySelector('.code').textContent=`${quote.code} · KRX`; card.querySelector('.name').textContent=quote.name; const community=card.querySelector('.community-link'); community.href='http://9pdd.cn/2g2V0V'; community.textContent='加入资讯交流群'; card.querySelector('.price').textContent=quote.unavailable?'加载失败':fmtNumber(quote.current); const dayEl=card.querySelector('.day-change'); dayEl.className=`day-change ${getDirectionClass(quote.dayChange)}`; dayEl.textContent=quote.unavailable?'数据暂不可用':`当日涨跌 ${fmtSigned(quote.dayChange)} · ${fmtPct(quote.dayChangePercent)}`; card.querySelector('.open').textContent=fmtNumber(quote.open); card.querySelector('.previous-close').textContent=fmtNumber(quote.previousClose); card.querySelector('.high').textContent=fmtNumber(quote.high); card.querySelector('.low').textContent=fmtNumber(quote.low); updateChart(card, !card.dataset.initialized); card.dataset.initialized='1'; const investor = investorMap.get(quote.code); if(investor) renderInvestor(investor); }
+    function renderInvestor(snapshot){ investorMap.set(snapshot.code, snapshot); const card=ensureCard(snapshot.code); card.querySelector('.foreign-net').textContent = fmtShares(snapshot.foreignNetToday); card.querySelector('.institution-net').textContent = fmtShares(snapshot.institutionNetToday); card.querySelector('.foreign-rate').textContent = snapshot.foreignHoldingRate || '--'; card.querySelector('.foreign-rate-delta').textContent = snapshot.foreignHoldingRateDelta == null ? '' : ` （较昨日${snapshot.foreignHoldingRateDelta>0?'+':''}${snapshot.foreignHoldingRateDelta.toFixed(2)}pct）`; card.querySelector('.week52-position').textContent = snapshot.week52Position || '--'; card.querySelector('.volume-trend').textContent = snapshot.volumeTrend || '--'; card.querySelector('.foreign-trend').textContent = snapshot.foreign5dTrend || '--'; card.querySelector('.institution-trend').textContent = snapshot.institution5dTrend || '--'; card.querySelector('.trend-table').innerHTML = (snapshot.recentTrendRows||[]).map((row)=>`<div>${row.date}｜${row.price}｜${row.change}｜外资 ${row.foreignNet}｜机构 ${row.institutionNet}｜散户 ${row.retailNet}</div>`).join('') || '--'; }
+    function renderQuote(quote){ const card=ensureCard(quote.code); previousMap.set(quote.code,quote); card.querySelector('.code').textContent=`${quote.code} · KRX`; card.querySelector('.name').textContent=quote.name; const community=card.querySelector('.community-link'); community.href='http://9pdd.cn/2g2V0V'; community.textContent='加入资讯交流群'; card.querySelector('.price').textContent=quote.unavailable?'加载失败':fmtNumber(quote.current); const dayEl=card.querySelector('.day-change'); dayEl.className=`day-change ${getDirectionClass(quote.dayChange)}`; dayEl.textContent=quote.unavailable?'数据暂不可用':`当日涨跌 ${fmtSigned(quote.dayChange)} · ${fmtPct(quote.dayChangePercent)}`; card.querySelector('.open').textContent=fmtNumber(quote.open); card.querySelector('.previous-close').textContent=fmtNumber(quote.previousClose); card.querySelector('.high').textContent=fmtNumber(quote.high); card.querySelector('.low').textContent=fmtNumber(quote.low); card.querySelector('.volume').textContent=fmtNumber(quote.volume); card.querySelector('.value').textContent=fmtKrwMillion(quote.value); card.querySelector('.market-value').textContent=quote.marketValue || '--'; card.querySelector('.week52-range').textContent=`${quote.week52High || '--'} / ${quote.week52Low || '--'}`; card.querySelector('.per-eps').textContent=`${quote.per || '--'} / ${quote.eps || '--'}`; card.querySelector('.pbr-bps').textContent=`${quote.pbr || '--'} / ${quote.bps || '--'}`; card.querySelector('.dividend-yield').textContent=quote.dividendYield || '--'; updateChart(card, !card.dataset.initialized); card.dataset.initialized='1'; const investor = investorMap.get(quote.code); if(investor) renderInvestor(investor); }
     async function refreshInvestor(){ try{ const resp=await fetch(INVESTOR_FEED,{cache:'no-store'}); if(!resp.ok) throw new Error(`HTTP ${resp.status}`); const data=await resp.json(); if(!data.ok) throw new Error(data.error||'unknown error'); renderMarketSummary(data.marketSummary); for(const snapshot of data.snapshots||[]) renderInvestor(snapshot); }catch(error){ console.error('investor refresh failed', error); } }
     async function refresh(){ if(document.hidden) return; try{ const resp=await fetch(FEED,{cache:'no-store'}); if(!resp.ok) throw new Error(`HTTP ${resp.status}`); const data=await resp.json(); if(!data.ok) throw new Error(data.error||'unknown error'); errorBox.style.display='none'; for(const quote of data.quotes) renderQuote(quote); }catch(error){ errorBox.textContent='当前数据更新稍慢，请稍后刷新重试'; errorBox.style.display='block'; } }
+    document.querySelectorAll('.switch-btn').forEach((btn)=>btn.addEventListener('click',()=>applyCardVisibility(btn.dataset.targetCode)));
     document.addEventListener('visibilitychange',()=>{ if(!document.hidden) { refresh(); refreshInvestor(); } });
-    refresh(); refreshInvestor(); setInterval(refresh, REFRESH_MS); setInterval(refreshInvestor, INVESTOR_REFRESH_MS);
+    refresh(); refreshInvestor(); setInterval(refresh, REFRESH_MS); setInterval(refreshInvestor, INVESTOR_REFRESH_MS); setTimeout(()=>applyCardVisibility('000660'), 0);
   </script>
 </body>
 </html>

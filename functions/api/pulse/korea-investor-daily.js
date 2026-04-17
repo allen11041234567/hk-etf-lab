@@ -66,11 +66,17 @@ function extractRows(html) {
   const rates = [...html.matchAll(/<td width="60" class="num"><span class="tah p11">([0-9.]+%)<\/span>/g)].map((m) => m[1]);
   const foreignNets = [...html.matchAll(/<td width="80" class="num"><span class="tah p11(?: [^"]+)?">([+\-]?[0-9,]+)<\/span>/g)].map((m) => m[1]);
   const institutionNets = [...html.matchAll(/<td width="66" class="num"><span class="tah p11(?: [^"]+)?">([+\-]?[0-9,]+)<\/span>/g)].map((m) => m[1]);
+  const priceRows = [...html.matchAll(/<td width="67" class="num"><span class="tah p11">([^<]+)<\/span><\/td>/g)].map((m) => m[1]);
+  const changeRows = [...html.matchAll(/<td width="67" class="num">[\s\S]*?<span class="tah p11(?: [^"]+)?">\s*([+\-]?[0-9,]+(?:\.[0-9]+)?%?)\s*<\/span>/g)].map((m) => m[1]);
+  const volumeRows = [...html.matchAll(/<td width="67" class="num"><span class="tah p11">([0-9,]+)<\/span><\/td>/g)].map((m) => m[1]);
   const rows = [];
   const n = Math.min(5, dates.length, rates.length, foreignNets.length, institutionNets.length);
   for (let i = 0; i < n; i += 1) {
     rows.push({
       date: dates[i].trim(),
+      price: priceRows[i] || '--',
+      change: changeRows[i * 2 + 1] || '--',
+      volume: parseSignedNumber(volumeRows[i] || 0),
       foreignNet: parseSignedNumber(foreignNets[i]),
       institutionNet: parseSignedNumber(institutionNets[i]),
       foreignRateText: rates[i].trim(),
@@ -172,6 +178,14 @@ async function buildInvestorSnapshot(code) {
   const foreignRateDelta = today.foreignRateValue != null && yesterday.foreignRateValue != null
     ? Number((today.foreignRateValue - yesterday.foreignRateValue).toFixed(2))
     : null;
+  const recentTrendRows = rows.map((r) => ({
+    date: r.date,
+    price: r.price,
+    change: r.change,
+    foreignNet: `${r.foreignNet > 0 ? '+' : ''}${r.foreignNet.toLocaleString()}`,
+    institutionNet: `${r.institutionNet > 0 ? '+' : ''}${r.institutionNet.toLocaleString()}`,
+    retailNet: `${-(r.foreignNet + r.institutionNet) > 0 ? '+' : ''}${(-(r.foreignNet + r.institutionNet)).toLocaleString()}`,
+  }));
   return {
     code,
     name: CODE_NAMES[code] || code,
@@ -186,6 +200,7 @@ async function buildInvestorSnapshot(code) {
     institution5dNet: institution5d.reduce((a, b) => a + b, 0),
     week52Position: week52PositionText(closePrice, low52, high52),
     volumeTrend: volumeTrendText(parseSignedNumber(prices?.[0]?.accumulatedTradingVolume), prevAvgVolume),
+    recentTrendRows,
   };
 }
 
