@@ -5,7 +5,7 @@ const CODE_NAMES = {
 };
 const LIVE_TTL_SECONDS = 1800;
 const STALE_TTL_SECONDS = 43200;
-const CACHE_VERSION = 'v3';
+const CACHE_VERSION = 'v4';
 
 function normalizeCodes(raw) {
   if (!raw) return DEFAULT_CODES;
@@ -146,12 +146,14 @@ async function fetchIndexBasic(code) {
 
 async function buildInvestorSnapshot(code) {
   const mainUrl = `https://finance.naver.com/item/main.naver?code=${code}`;
-  const [mainHtml, integration, prices] = await Promise.all([
+  const frgnUrl = `https://finance.naver.com/item/frgn.naver?code=${code}`;
+  const [mainHtml, frgnHtml, integration, prices] = await Promise.all([
     fetchHtml(mainUrl, 'https://finance.naver.com/'),
+    fetchHtml(frgnUrl, mainUrl),
     fetchMobileIntegration(code).catch(() => null),
     fetchPriceSeries(code).catch(() => []),
   ]);
-  const rows = extractRows(mainHtml).slice(0, 5);
+  const rows = extractRows(frgnHtml).slice(0, 5);
   const today = rows[0] || { date: null, foreignNet: 0, institutionNet: 0, foreignRateValue: null, foreignRateText: null, volume: 0 };
   const yesterday = rows[1] || { foreignRateValue: null };
   const foreign5d = rows.map((r) => r.foreignNet);
