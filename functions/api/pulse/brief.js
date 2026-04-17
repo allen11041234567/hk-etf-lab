@@ -29,6 +29,13 @@ function parseNumber(value) {
   return Number.isFinite(n) ? n : 0;
 }
 
+function applyDirection(value, direction) {
+  const n = Math.abs(parseNumber(value));
+  if (direction === 'down') return -n;
+  if (direction === 'up') return n;
+  return parseNumber(value);
+}
+
 async function fetchPollingQuote(code) {
   const upstreamUrl = `https://polling.finance.naver.com/api/realtime?query=${encodeURIComponent(`SERVICE_ITEM:${code}`)}`;
   const upstream = await fetch(upstreamUrl, {
@@ -76,17 +83,17 @@ function buildQuoteFromSources(code, snapshotAt, pollingResult, mobileResult) {
   const totalInfos = integration?.totalInfos || [];
   const infoMap = Object.fromEntries(totalInfos.map((row) => [row.code, row.value]));
 
+  const market = pollingItem?.ms || basic?.marketStatus || null;
+  const direction = mapDirection(pollingItem?.rf || basic?.compareToPreviousPrice?.name || basic?.compareToPreviousPrice?.text || '');
   const current = parseNumber(pollingItem?.nv ?? basic?.closePrice ?? infoMap.closePrice ?? infoMap.tradePrice);
   const previousClose = parseNumber(pollingItem?.pcv ?? basic?.previousClosePrice ?? infoMap.lastClosePrice);
-  const dayChange = parseNumber(pollingItem?.cv ?? basic?.compareToPreviousClosePrice ?? (current - previousClose));
-  const dayChangePercent = parseNumber(pollingItem?.cr ?? basic?.fluctuationsRatio ?? infoMap.fluctuationsRatio);
+  const dayChange = applyDirection(pollingItem?.cv ?? basic?.compareToPreviousClosePrice ?? (current - previousClose), direction);
+  const dayChangePercent = applyDirection(pollingItem?.cr ?? basic?.fluctuationsRatio ?? infoMap.fluctuationsRatio, direction);
   const open = parseNumber(pollingItem?.ov ?? basic?.openPrice ?? infoMap.openPrice);
   const high = parseNumber(pollingItem?.hv ?? basic?.highPrice ?? infoMap.highPrice);
   const low = parseNumber(pollingItem?.lv ?? basic?.lowPrice ?? infoMap.lowPrice);
   const volume = parseNumber(pollingItem?.aq ?? basic?.accumulatedTradingVolume ?? infoMap.accumulatedTradingVolume);
   const value = parseNumber(pollingItem?.aa ?? basic?.accumulatedTradingValue ?? infoMap.accumulatedTradingValue);
-  const market = pollingItem?.ms || basic?.marketStatus || null;
-  const direction = mapDirection(pollingItem?.rf || basic?.compareToPreviousPrice?.name || basic?.compareToPreviousPrice?.text || '');
   const localTs = pollingPayload?.result?.time || basic?.localTradedAt || null;
 
   if (!current && !previousClose && !open && !high && !low) {
