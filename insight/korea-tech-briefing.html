@@ -17,6 +17,12 @@
     .subtitle { margin-top:8px; color:var(--muted); font-size:15px; line-height:1.6; }
     .meta { display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
     .pill { border:1px solid var(--line); background:rgba(255,255,255,0.78); color:var(--muted); border-radius:999px; padding:8px 12px; font-size:13px; backdrop-filter:blur(10px); }
+    .summary-wrap{margin-bottom:18px}
+    .summary-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+    .summary-card{padding:14px 16px;border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,0.96),rgba(247,250,255,0.96));border:1px solid rgba(255,255,255,0.7);box-shadow:var(--shadow)}
+    .summary-card .k{font-size:12px;color:var(--muted);margin-bottom:6px}
+    .summary-card .v{font-size:20px;font-weight:800;line-height:1.3}
+    .summary-card .d{margin-top:6px;font-size:12px;line-height:1.6;color:#475569}
     .related-wrap { margin-bottom:18px; }
     .related-title { font-size:14px; color:var(--muted); margin:0 0 10px; }
     .related-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
@@ -62,6 +68,7 @@
     .error { margin-top:16px; padding:14px 16px; border-radius:16px; color:#b42318; background:#fef3f2; border:1px solid #fecdca; display:none; }
     @media (max-width: 880px) {
       .wrap { width:min(100vw - 24px,1180px); padding:20px 0 28px; }
+      .summary-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
       .related-grid { grid-template-columns:1fr; }
       .grid { grid-template-columns:1fr; }
       .meta { justify-content:flex-start; }
@@ -90,6 +97,11 @@
       .subtitle { margin-top:6px; font-size:13px; line-height:1.6; }
       .meta { gap:6px; }
       .pill { padding:7px 10px; font-size:12px; }
+      .summary-wrap{margin-bottom:12px}
+      .summary-grid{grid-template-columns:1fr;gap:8px}
+      .summary-card{padding:12px;border-radius:14px}
+      .summary-card .v{font-size:17px}
+      .summary-card .d{font-size:12px}
       .related-wrap { margin-bottom:12px; }
       .related-title { font-size:13px; margin-bottom:8px; }
       .related-grid { gap:8px; }
@@ -139,6 +151,15 @@
       <div class="meta">
         <div class="pill">无延时数据，跟踪韩股行情</div>
         <div class="pill">高频更新</div>
+      </div>
+    </section>
+    <section class="summary-wrap">
+      <div class="related-title">韩股大盘小摘要</div>
+      <div class="summary-grid">
+        <div class="summary-card"><div class="k">KOSPI</div><div class="v" id="summary-kospi">--</div><div class="d" id="summary-kospi-d">--</div></div>
+        <div class="summary-card"><div class="k">KOSDAQ</div><div class="v" id="summary-kosdaq">--</div><div class="d" id="summary-kosdaq-d">--</div></div>
+        <div class="summary-card"><div class="k">USD/KRW</div><div class="v" id="summary-usdkrw">--</div><div class="d" id="summary-usdkrw-d">--</div></div>
+        <div class="summary-card"><div class="k">半导体板块温度</div><div class="v" id="summary-semi">--</div><div class="d" id="summary-semi-d">根据龙头股资金面判断</div></div>
       </div>
     </section>
     <section class="related-wrap">
@@ -200,7 +221,9 @@
           <div class="flow-box"><div class="label">机构当日净流入</div><div class="value institution-net">--</div></div>
         </div>
         <div class="flow-trend">
-          <div>外资持股比例：<span class="foreign-rate">--</span></div>
+          <div>外资持股比例：<span class="foreign-rate">--</span><span class="foreign-rate-delta"></span></div>
+          <div>52周位置：<span class="week52-position">--</span></div>
+          <div>量能状态：<span class="volume-trend">--</span></div>
           <div>外资近5日趋势：<span class="foreign-trend">--</span></div>
           <div>机构近5日趋势：<span class="institution-trend">--</span></div>
         </div>
@@ -223,14 +246,16 @@
     function fmtSigned(value){ const n=Math.round(value || 0); return `${n > 0 ? '+' : ''}${fmtNumber(n)}`; }
     function fmtShares(value){ const n=Math.round(value || 0); return `${n > 0 ? '+' : ''}${fmtNumber(n)}股`; }
     function fmtPct(value){ const n=Number(value || 0); return `${n > 0 ? '+' : ''}${n.toFixed(2)}%`; }
+    function fmtPctMaybe(value){ const n=Number(value); if(!Number.isFinite(n)) return '--'; return `${n>0?'+':''}${n.toFixed(2)}%`; }
     function getDirectionClass(value){ if(value > 0) return 'up'; if(value < 0) return 'down'; return 'flat'; }
     function chartUrl(code,type,range){ return `${CHART}?code=${encodeURIComponent(code)}&type=${encodeURIComponent(type)}&range=${encodeURIComponent(range)}`; }
     function updateChart(card, force=false){ const code=card.dataset.code,type=card.dataset.chartType||'area',range=card.dataset.chartRange||'day'; const img=card.querySelector('.chart-image'); const next=chartUrl(code,type,range); if(force || img.dataset.src!==next){ img.src=next; img.dataset.src=next; } img.alt=`${code} chart`; }
     function bindChartControls(card){ card.querySelectorAll('.chip').forEach((chip)=>{ chip.addEventListener('click',()=>{ const kind=chip.dataset.kind,value=chip.dataset.value; if(kind==='type'){ card.dataset.chartType=value; card.querySelectorAll('[data-kind="type"]').forEach((el)=>el.classList.toggle('active', el===chip)); } if(kind==='range'){ card.dataset.chartRange=value; card.querySelectorAll('[data-kind="range"]').forEach((el)=>el.classList.toggle('active', el===chip)); } updateChart(card, true); }); }); }
     function ensureCard(code){ let card=document.querySelector(`[data-code="${code}"]`); if(card) return card; card=tpl.content.firstElementChild.cloneNode(true); card.dataset.code=code; card.dataset.chartType='area'; card.dataset.chartRange='day'; bindChartControls(card); const orderIndex=CARD_ORDER.indexOf(code); const children=[...cardsEl.children]; const before=children.find((el)=>CARD_ORDER.indexOf(el.dataset.code) > orderIndex); if(before) cardsEl.insertBefore(card,before); else cardsEl.appendChild(card); return card; }
-    function renderInvestor(snapshot){ investorMap.set(snapshot.code, snapshot); const card=ensureCard(snapshot.code); card.querySelector('.foreign-net').textContent = fmtShares(snapshot.foreignNetToday); card.querySelector('.institution-net').textContent = fmtShares(snapshot.institutionNetToday); card.querySelector('.foreign-rate').textContent = snapshot.foreignHoldingRate || '--'; card.querySelector('.foreign-trend').textContent = snapshot.foreign5dTrend || '--'; card.querySelector('.institution-trend').textContent = snapshot.institution5dTrend || '--'; }
+    function renderMarketSummary(summary){ if(!summary) return; document.getElementById('summary-kospi').textContent = summary.kospi ? summary.kospi.price : '--'; document.getElementById('summary-kospi-d').textContent = summary.kospi ? fmtPctMaybe(summary.kospi.changePct) : '--'; document.getElementById('summary-kosdaq').textContent = summary.kosdaq ? summary.kosdaq.price : '--'; document.getElementById('summary-kosdaq-d').textContent = summary.kosdaq ? fmtPctMaybe(summary.kosdaq.changePct) : '--'; document.getElementById('summary-usdkrw').textContent = summary.usdkrw ? summary.usdkrw.value : '--'; document.getElementById('summary-usdkrw-d').textContent = summary.usdkrw ? `${summary.usdkrw.direction} ${summary.usdkrw.change}` : '--'; document.getElementById('summary-semi').textContent = summary.semiconductorTone || '--'; }
+    function renderInvestor(snapshot){ investorMap.set(snapshot.code, snapshot); const card=ensureCard(snapshot.code); card.querySelector('.foreign-net').textContent = fmtShares(snapshot.foreignNetToday); card.querySelector('.institution-net').textContent = fmtShares(snapshot.institutionNetToday); card.querySelector('.foreign-rate').textContent = snapshot.foreignHoldingRate || '--'; card.querySelector('.foreign-rate-delta').textContent = snapshot.foreignHoldingRateDelta == null ? '' : ` （较昨日${snapshot.foreignHoldingRateDelta>0?'+':''}${snapshot.foreignHoldingRateDelta.toFixed(2)}pct）`; card.querySelector('.week52-position').textContent = snapshot.week52Position || '--'; card.querySelector('.volume-trend').textContent = snapshot.volumeTrend || '--'; card.querySelector('.foreign-trend').textContent = snapshot.foreign5dTrend || '--'; card.querySelector('.institution-trend').textContent = snapshot.institution5dTrend || '--'; }
     function renderQuote(quote){ const card=ensureCard(quote.code); previousMap.set(quote.code,quote); card.querySelector('.code').textContent=`${quote.code} · KRX`; card.querySelector('.name').textContent=quote.name; const community=card.querySelector('.community-link'); community.href='http://9pdd.cn/2g2V0V'; community.textContent='加入资讯交流群'; card.querySelector('.price').textContent=quote.unavailable?'加载失败':fmtNumber(quote.current); const dayEl=card.querySelector('.day-change'); dayEl.className=`day-change ${getDirectionClass(quote.dayChange)}`; dayEl.textContent=quote.unavailable?'数据暂不可用':`当日涨跌 ${fmtSigned(quote.dayChange)} · ${fmtPct(quote.dayChangePercent)}`; card.querySelector('.open').textContent=fmtNumber(quote.open); card.querySelector('.previous-close').textContent=fmtNumber(quote.previousClose); card.querySelector('.high').textContent=fmtNumber(quote.high); card.querySelector('.low').textContent=fmtNumber(quote.low); updateChart(card, !card.dataset.initialized); card.dataset.initialized='1'; const investor = investorMap.get(quote.code); if(investor) renderInvestor(investor); }
-    async function refreshInvestor(){ try{ const resp=await fetch(INVESTOR_FEED,{cache:'no-store'}); if(!resp.ok) throw new Error(`HTTP ${resp.status}`); const data=await resp.json(); if(!data.ok) throw new Error(data.error||'unknown error'); for(const snapshot of data.snapshots||[]) renderInvestor(snapshot); }catch(error){ console.error('investor refresh failed', error); } }
+    async function refreshInvestor(){ try{ const resp=await fetch(INVESTOR_FEED,{cache:'no-store'}); if(!resp.ok) throw new Error(`HTTP ${resp.status}`); const data=await resp.json(); if(!data.ok) throw new Error(data.error||'unknown error'); renderMarketSummary(data.marketSummary); for(const snapshot of data.snapshots||[]) renderInvestor(snapshot); }catch(error){ console.error('investor refresh failed', error); } }
     async function refresh(){ if(document.hidden) return; try{ const resp=await fetch(FEED,{cache:'no-store'}); if(!resp.ok) throw new Error(`HTTP ${resp.status}`); const data=await resp.json(); if(!data.ok) throw new Error(data.error||'unknown error'); errorBox.style.display='none'; for(const quote of data.quotes) renderQuote(quote); }catch(error){ errorBox.textContent='当前数据更新稍慢，请稍后刷新重试'; errorBox.style.display='block'; } }
     document.addEventListener('visibilitychange',()=>{ if(!document.hidden) { refresh(); refreshInvestor(); } });
     refresh(); refreshInvestor(); setInterval(refresh, REFRESH_MS); setInterval(refreshInvestor, INVESTOR_REFRESH_MS);
