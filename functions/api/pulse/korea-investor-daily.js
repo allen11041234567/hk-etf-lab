@@ -5,6 +5,7 @@ const CODE_NAMES = {
 };
 const LIVE_TTL_SECONDS = 1800;
 const STALE_TTL_SECONDS = 43200;
+const CACHE_VERSION = 'v2';
 
 function normalizeCodes(raw) {
   if (!raw) return DEFAULT_CODES;
@@ -110,8 +111,8 @@ export async function onRequestGet(context) {
   const url = new URL(request.url);
   const codes = normalizeCodes(url.searchParams.get('codes'));
   const cache = caches.default;
-  const liveKey = new Request(`${url.origin}/__edge/pulse/korea-investor-daily/live?codes=${codes.join(',')}`);
-  const staleKey = new Request(`${url.origin}/__edge/pulse/korea-investor-daily/stale?codes=${codes.join(',')}`);
+  const liveKey = new Request(`${url.origin}/__edge/pulse/korea-investor-daily/${CACHE_VERSION}/live?codes=${codes.join(',')}`);
+  const staleKey = new Request(`${url.origin}/__edge/pulse/korea-investor-daily/${CACHE_VERSION}/stale?codes=${codes.join(',')}`);
 
   try {
     const cached = await cache.match(liveKey);
