@@ -163,7 +163,7 @@
       <div class="summary-grid">
         <div class="summary-card"><div class="k">韩国综合指数</div><div class="v" id="summary-kospi">--</div><div class="d" id="summary-kospi-d">--</div></div>
         <div class="summary-card"><div class="k">韩国创业板指数</div><div class="v" id="summary-kosdaq">--</div><div class="d" id="summary-kosdaq-d">--</div></div>
-        <div class="summary-card"><div class="k">美元兑韩元</div><div class="v" id="summary-usdkrw">--</div><div class="d" id="summary-usdkrw-d">--</div></div>
+        <div class="summary-card"><div class="k">美元兑汇率</div><div class="v" id="summary-usdkrw">--</div><div class="d" id="summary-usdkrw-d">--</div></div>
         <div class="summary-card"><div class="k">半导体板块温度</div><div class="v" id="summary-semi">--</div><div class="d" id="summary-semi-d">根据龙头股资金面判断</div></div>
       </div>
     </section>
@@ -260,7 +260,7 @@
     const tpl = document.getElementById('card-template');
     const errorBox = document.getElementById('error-box');
     function fmtNumber(value){ return new Intl.NumberFormat('en-US').format(Math.round(value || 0)); }
-    function fmtKrwMillion(value){ const n = Number(value || 0); if(!Number.isFinite(n)) return '--'; return `${fmtNumber(n)}百万韩元`; }
+    function fmtKrwMillion(value){ const n = Number(value || 0); if(!Number.isFinite(n)) return '--'; return `${fmtNumber(n)}百万`; }
     function fmtSigned(value){ const n=Math.round(value || 0); return `${n > 0 ? '+' : ''}${fmtNumber(n)}`; }
     function fmtShares(value){ const n=Math.round(value || 0); return `${n > 0 ? '+' : ''}${fmtNumber(n)}股`; }
     function fmtPct(value){ const n=Number(value || 0); return `${n > 0 ? '+' : ''}${n.toFixed(2)}%`; }
