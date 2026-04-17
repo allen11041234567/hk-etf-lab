@@ -185,6 +185,14 @@
         <div class="stat"><div class="stat-label">日内高</div><div class="stat-value high"></div></div>
         <div class="stat"><div class="stat-label">日内低</div><div class="stat-value low"></div></div>
       </div>
+      <div class="chart-wrap">
+        <div class="chart-toolbar">
+          <div class="chart-title">图表</div>
+          <div class="chip-group"><button class="chip active" data-kind="type" data-value="area">分时线</button><button class="chip" data-kind="type" data-value="candle">K线</button></div>
+          <div class="chip-group"><button class="chip active" data-kind="range" data-value="day">日内</button><button class="chip" data-kind="range" data-value="week">周线</button><button class="chip" data-kind="range" data-value="month">月线</button></div>
+        </div>
+        <img class="chart-image" alt="chart" />
+      </div>
       <div class="flow-wrap">
         <div class="flow-title">盘后资金风向</div>
         <div class="flow-grid">
@@ -196,14 +204,6 @@
           <div>外资近5日趋势：<span class="foreign-trend">--</span></div>
           <div>机构近5日趋势：<span class="institution-trend">--</span></div>
         </div>
-      </div>
-      <div class="chart-wrap">
-        <div class="chart-toolbar">
-          <div class="chart-title">图表</div>
-          <div class="chip-group"><button class="chip active" data-kind="type" data-value="area">分时线</button><button class="chip" data-kind="type" data-value="candle">K线</button></div>
-          <div class="chip-group"><button class="chip active" data-kind="range" data-value="day">日内</button><button class="chip" data-kind="range" data-value="week">周线</button><button class="chip" data-kind="range" data-value="month">月线</button></div>
-        </div>
-        <img class="chart-image" alt="chart" />
       </div>
     </article>
   </template>
