@@ -212,6 +212,7 @@
     const INVESTOR_FEED = '/api/pulse/korea-investor-daily?codes=000660,005930';
     const CHART = '/api/pulse/chart-image';
     const REFRESH_MS = 15000;
+    const INVESTOR_REFRESH_MS = 3600000;
     const CARD_ORDER = ['000660', '005930'];
     const previousMap = new Map();
     const investorMap = new Map();
@@ -232,7 +233,7 @@
     async function refreshInvestor(){ try{ const resp=await fetch(INVESTOR_FEED,{cache:'no-store'}); if(!resp.ok) throw new Error(`HTTP ${resp.status}`); const data=await resp.json(); if(!data.ok) throw new Error(data.error||'unknown error'); for(const snapshot of data.snapshots||[]) renderInvestor(snapshot); }catch(error){ console.error('investor refresh failed', error); } }
     async function refresh(){ if(document.hidden) return; try{ const resp=await fetch(FEED,{cache:'no-store'}); if(!resp.ok) throw new Error(`HTTP ${resp.status}`); const data=await resp.json(); if(!data.ok) throw new Error(data.error||'unknown error'); errorBox.style.display='none'; for(const quote of data.quotes) renderQuote(quote); }catch(error){ errorBox.textContent='当前数据更新稍慢，请稍后刷新重试'; errorBox.style.display='block'; } }
     document.addEventListener('visibilitychange',()=>{ if(!document.hidden) { refresh(); refreshInvestor(); } });
-    refresh(); refreshInvestor(); setInterval(refresh, REFRESH_MS);
+    refresh(); refreshInvestor(); setInterval(refresh, REFRESH_MS); setInterval(refreshInvestor, INVESTOR_REFRESH_MS);
   </script>
 </body>
 </html>

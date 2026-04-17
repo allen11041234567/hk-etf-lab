@@ -66,22 +66,36 @@ function extractRows(html) {
   }));
 }
 
+async function fetchMobileIntegration(code) {
+  const referer = `https://m.stock.naver.com/domestic/stock/${code}/total`;
+  const resp = await fetch(`https://m.stock.naver.com/api/stock/${code}/integration`, {
+    headers: {
+      'User-Agent': 'Mozilla/5.0 (compatible; HK-ETF-Lab/1.0; +https://hketf-lab.pages.dev/)',
+      Referer: referer,
+      Accept: 'application/json, text/plain, */*',
+    },
+  });
+  if (!resp.ok) throw new Error(`mobile integration ${resp.status} for ${code}`);
+  return await resp.json();
+}
+
 async function buildInvestorSnapshot(code) {
   const mainUrl = `https://finance.naver.com/item/main.naver?code=${code}`;
-  const frgnUrl = `https://finance.naver.com/item/frgn.naver?code=${code}`;
-  const [mainHtml, frgnHtml] = await Promise.all([
+  const [mainHtml, integration] = await Promise.all([
     fetchHtml(mainUrl, 'https://finance.naver.com/'),
-    fetchHtml(frgnUrl, mainUrl),
+    fetchMobileIntegration(code).catch(() => null),
   ]);
-  const rows = extractRows(frgnHtml).slice(0, 5);
+  const rows = extractRows(mainHtml).slice(0, 5);
   const today = rows[0] || { date: null, foreignNet: 0, institutionNet: 0 };
   const foreign5d = rows.map((r) => r.foreignNet);
   const institution5d = rows.map((r) => r.institutionNet);
+  const totalInfos = integration?.totalInfos || [];
+  const foreignRate = totalInfos.find((x) => x.code === 'foreignRate')?.value || extractForeignRate(mainHtml);
   return {
     code,
     name: CODE_NAMES[code] || code,
     tradeDate: today.date,
-    foreignHoldingRate: extractForeignRate(mainHtml),
+    foreignHoldingRate: foreignRate || null,
     foreignNetToday: today.foreignNet,
     institutionNetToday: today.institutionNet,
     foreign5dTrend: fmtTrend(foreign5d),
