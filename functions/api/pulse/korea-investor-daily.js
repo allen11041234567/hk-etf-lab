@@ -13,6 +13,24 @@ function normalizeCodes(raw) {
   return codes.length ? [...new Set(codes)] : DEFAULT_CODES;
 }
 
+function zhText(text = '') {
+  return String(text)
+    .replace(/하락/g, '下跌')
+    .replace(/상승/g, '上涨')
+    .replace(/보합/g, '持平')
+    .replace(/외국인|외인/g, '外资')
+    .replace(/기관/g, '机构')
+    .replace(/개인/g, '散户')
+    .replace(/순매수/g, '净买入')
+    .replace(/순매도/g, '净卖出')
+    .replace(/매수/g, '买入')
+    .replace(/매도/g, '卖出')
+    .replace(/원/g, '韩元')
+    .replace(/주/g, '股')
+    .replace(/배/g, '倍')
+    .trim();
+}
+
 function parseSignedNumber(text = '') {
   const cleaned = String(text).replace(/,/g, '').trim();
   const n = Number(cleaned);
@@ -161,9 +179,9 @@ async function fetchUsdKrwSummary() {
   const m = html.match(/marketindexCd=FX_USDKRW[\s\S]*?<span class="value">([^<]+)<\/span>[\s\S]*?<span class="change">\s*([^<]+)<\/span>[\s\S]*?<span class="blind">([^<]+)<\/span>/i);
   if (!m) return null;
   return {
-    value: m[1].trim(),
-    change: m[2].trim(),
-    direction: m[3].trim(),
+    value: zhText(m[1].trim()),
+    change: zhText(m[2].trim()),
+    direction: zhText(m[3].trim()),
   };
 }
 
@@ -214,7 +232,7 @@ async function buildInvestorSnapshot(code) {
     code,
     name: CODE_NAMES[code] || code,
     tradeDate: today.date,
-    foreignHoldingRate: foreignRate || null,
+    foreignHoldingRate: zhText(foreignRate || '') || null,
     foreignHoldingRateDelta: foreignRateDelta,
     foreignNetToday: today.foreignNet,
     institutionNetToday: today.institutionNet,

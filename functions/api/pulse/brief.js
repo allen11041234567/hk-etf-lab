@@ -75,6 +75,18 @@ async function fetchMobileQuote(code) {
   return { basic, integration };
 }
 
+function sanitizeMetricText(value) {
+  if (value === null || value === undefined || value === '') return null;
+  return String(value)
+    .replace(/하락/g, '下跌')
+    .replace(/상승/g, '上涨')
+    .replace(/보합/g, '持平')
+    .replace(/원/g, '韩元')
+    .replace(/주/g, '股')
+    .replace(/배/g, '倍')
+    .trim();
+}
+
 function buildQuoteFromSources(code, snapshotAt, pollingResult, mobileResult) {
   const pollingItem = pollingResult?.item;
   const pollingPayload = pollingResult?.payload;
@@ -133,12 +145,12 @@ function buildQuoteFromSources(code, snapshotAt, pollingResult, mobileResult) {
     volume,
     value,
     marketValue: infoMap.marketValue || null,
-    week52High: infoMap.highPriceOf52Weeks || null,
-    week52Low: infoMap.lowPriceOf52Weeks || null,
-    per: infoMap.per || null,
-    eps: infoMap.eps || null,
-    pbr: infoMap.pbr || null,
-    bps: infoMap.bps || null,
+    week52High: sanitizeMetricText(infoMap.highPriceOf52Weeks) || null,
+    week52Low: sanitizeMetricText(infoMap.lowPriceOf52Weeks) || null,
+    per: sanitizeMetricText(infoMap.per) || null,
+    eps: sanitizeMetricText(infoMap.eps) || null,
+    pbr: sanitizeMetricText(infoMap.pbr) || null,
+    bps: sanitizeMetricText(infoMap.bps) || null,
     dividendYield: infoMap.dividendYieldRatio || infoMap.dividendYield || null,
     fetchedAt: new Date(snapshotAt).toISOString(),
     localTradedAt: localTs ? new Date(localTs).toISOString() : null,
