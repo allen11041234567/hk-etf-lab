@@ -1,4 +1,14 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116420038210190121": {
+    "content_zh_cn": "美国现在是全球“最火热”的国家。就在不久前，在“瞌睡乔”拜登治下，美国死气沉沉，还遭到全世界嘲笑！！！但现在不一样了——再也没人敢笑了！！！特朗普总统",
+    "content_zh_hk": "美國現在是全球“最火熱”的國家。就在不久前，在「瞌睡喬」拜登治下，美國死氣沉沉，還遭到全世界嘲笑！！！但現在不一樣了——再也沒人敢笑了！！！特朗普總統",
+    "content_ko": "미국은 지금 세계에서 가장 “뜨거운” 나라입니다. 불과 얼마 전만 해도, 졸린 조 바이든 치하에서는 완전히 죽은 나라였고, 전 세계의 웃음거리가 됐었습니다!!! 하지만 이제는 아닙니다 - 아무도 웃지 않습니다!!! 트럼프 대통령"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116419983493630857": {
+    "content_zh_cn": "这很容易！塔克是个低智商的人——一向很容易击败，而且被严重高估了！！！梅根·凯利、“坎迪斯”（真是愚蠢，还精神有问题！），以及已经破产、彻底“糊掉了”的亚历克斯·琼斯，也都是这样。还有其他人，也一样！\n\n然后，也有一些人是非常出色的，是真正一路到底的MAGA，而且很聪明。我应该列一份名单，把好的、坏的，以及介于中间的都列出来。那难道不会很精彩吗？？？\n\n总统 DJT\nhttps://www.mediaite.com/media/tv/he-is-crushing-crushing-tucker-carlson-cnn-data-guru-reveals-trump-has-ruined-his-old-friend/",
+    "content_zh_hk": "這很容易！塔克是個低智商的人——一向很容易擊敗，而且被嚴重高估了！！！梅根·凱利、「坎迪斯」（真是愚蠢，還有精神問題！），以及已經破產、徹底「玩完了」的亞歷克斯·瓊斯，也都是這樣。還有其他人，也一樣！\n\n然後，也有一些人是非常出色的，是真正一路到底的MAGA，而且很聰明。我應該列一份名單，把好的、壞的，以及介乎中間的都列出來。那難道不會很精彩嗎？？？\n\n總統 DJT\nhttps://www.mediaite.com/media/tv/he-is-crushing-crushing-tucker-carlson-cnn-data-guru-reveals-trump-has-ruined-his-old-friend/",
+    "content_ko": "쉽다! 터커는 IQ가 낮은 사람이다 - 늘 이기기 쉬웠고, 엄청나게 과대평가돼 있다!!! 메긴 켈리, “캔디스”(정말 멍청하고 정신적으로도 문제가 있다!), 그리고 파산한 알렉스 존스도 마찬가지인데, 그는 완전히 “맛이 갔다.” 다른 사람들도 있다!\n\n그리고 아주 훌륭한 사람들도 있다. 끝까지 진정한 MAGA이고, 똑똑한 사람들이다. 좋은 사람, 나쁜 사람, 그리고 그 중간 어디쯤인 사람들의 목록을 하나 만들어야겠다. 그거 정말 흥미롭지 않겠나???\n\n대통령 DJT\nhttps://www.mediaite.com/media/tv/he-is-crushing-crushing-tucker-carlson-cnn-data-guru-reveals-trump-has-ruined-his-old-friend/"
+  },
   "https://truthsocial.com/@realDonaldTrump/116417764784525982": {
     "content_zh_cn": "黎巴嫩今天可能迎来了一个具有历史意义的日子。好事正在发生！！！总统 DJT",
     "content_zh_hk": "黎巴嫩今天可能迎來了一個具有歷史意義的日子。好事正在發生！！！總統 DJT",

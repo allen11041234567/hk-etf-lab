@@ -94,50 +94,62 @@
     }
     @media (max-width: 560px) {
       body { background:linear-gradient(180deg,#f8fbff 0%,#f2f6fd 100%); }
-      .wrap { width:calc(100vw - 16px); padding:12px 0 22px; }
-      .topnav{gap:8px;margin-bottom:10px}
+      .wrap { width:calc(100vw - 14px); padding:10px 0 20px; }
+      .topnav{gap:8px;margin-bottom:8px}
       .navchip{padding:7px 10px;font-size:12px}
-      .hero { gap:10px; margin-bottom:12px; }
-      .title { font-size:24px; }
-      .subtitle { margin-top:6px; font-size:13px; line-height:1.6; }
+      .hero { gap:8px; margin-bottom:10px; }
+      .title { font-size:22px; line-height:1.18; }
+      .subtitle { margin-top:6px; font-size:13px; line-height:1.58; }
       .meta { gap:6px; }
       .pill { padding:7px 10px; font-size:12px; }
-      .summary-wrap{margin-bottom:12px}
-      .summary-grid{grid-template-columns:1fr;gap:8px}
+      .summary-wrap{margin-bottom:10px}
+      .summary-grid{grid-template-columns:1fr 1fr;gap:8px}
       .summary-card{padding:12px;border-radius:14px}
-      .summary-card .v{font-size:17px}
-      .summary-card .d{font-size:12px}
-      .related-wrap { margin-bottom:12px; }
+      .summary-card .v{font-size:16px}
+      .summary-card .d{font-size:11px;line-height:1.55}
+      .related-wrap { margin-bottom:10px; }
       .related-title { font-size:13px; margin-bottom:8px; }
       .related-grid { gap:8px; }
       .related-link { padding:12px; border-radius:14px; }
+      .related-top{align-items:flex-start;flex-direction:column;gap:6px}
       .trade-badge { padding:5px 8px; font-size:10px; }
-      .related-name { font-size:16px; }
-      .related-desc { font-size:12px; margin-top:4px; }
+      .related-name { font-size:15px; line-height:1.4; }
+      .related-desc { font-size:12px; margin-top:4px; line-height:1.55; }
       .related-cta { margin-top:8px; font-size:12px; }
-      .grid { gap:12px; }
-      .card { padding:14px; border-radius:18px; }
+      .stock-switch{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
+      .switch-btn{width:100%;min-height:40px}
+      .grid { gap:10px; }
+      .card { padding:12px; border-radius:18px; }
       .code { font-size:12px; }
-      .name { font-size:24px; }
-      .community-link{padding:7px 10px;font-size:11px}
-      .price { font-size:36px; margin:8px 0 4px; }
-      .change { font-size:14px; gap:8px; margin-bottom:12px; }
-      .mini-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin-top:12px; }
+      .name-row{flex-direction:column;align-items:flex-start;gap:8px}
+      .name { font-size:22px; }
+      .community-link{padding:7px 10px;font-size:11px;width:100%;justify-content:center}
+      .price { font-size:34px; margin:8px 0 4px; }
+      .change { font-size:13px; gap:6px; margin-bottom:10px; }
+      .mini-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin-top:10px; }
       .stat-label { font-size:11px; margin-bottom:4px; }
-      .stat-value { font-size:16px; }
-      .flow-wrap{margin-top:12px;padding:10px;border-radius:14px}
+      .stat-value { font-size:15px; line-height:1.35; word-break:break-word; }
+      .flow-wrap{margin-top:10px;padding:10px;border-radius:14px}
       .flow-grid{grid-template-columns:1fr;gap:8px}
       .flow-box{padding:10px}
       .flow-box .value{font-size:15px}
-      .flow-trend{font-size:12px;line-height:1.6}
-      .chart-wrap { margin-top:12px; padding:10px; border-radius:14px; }
+      .flow-trend{font-size:12px;line-height:1.58}
+      .chart-wrap { margin-top:10px; padding:10px; border-radius:14px; }
       .chart-title { font-size:11px; margin-bottom:8px; }
       .chart-toolbar { align-items:stretch; flex-direction:column; margin-bottom:10px; }
       .chip-group { width:100%; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); }
       .chip-group:first-of-type { grid-template-columns:repeat(2,minmax(0,1fr)); }
-      .chip { width:100%; min-height:36px; padding:8px 6px; font-size:12px; }
+      .chip { width:100%; min-height:38px; padding:8px 6px; font-size:12px; }
       .chart-image { border-radius:12px; }
       .error { margin-top:12px; padding:12px; border-radius:14px; font-size:13px; }
+    }
+    @media (max-width: 380px) {
+      .summary-grid{grid-template-columns:1fr}
+      .stock-switch{grid-template-columns:1fr}
+      .mini-grid{grid-template-columns:1fr}
+      .title{font-size:20px}
+      .name{font-size:20px}
+      .price{font-size:30px}
     }
   </style>
 </head>
