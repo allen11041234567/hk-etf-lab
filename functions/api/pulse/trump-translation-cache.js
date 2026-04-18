@@ -1,4 +1,29 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116423145937825528": {
+    "content_zh_cn": "特朗普：取消小费税、加班费免税等政策表明，共和党是工人阶级的政党：https://www.breitbart.com/politics/2026/04/16/trump-policies-like-no-tax-on-tips-overtime-show-gop-is-party-of-working-class/",
+    "content_zh_hk": "特朗普：取消小費稅、加班費免稅等政策顯示，共和黨是工人階級的政黨：https://www.breitbart.com/politics/2026/04/16/trump-policies-like-no-tax-on-tips-overtime-show-gop-is-party-of-working-class/",
+    "content_ko": "트럼프: 팁 비과세, 초과근무수당 비과세 같은 정책은 공화당이 노동계급의 정당임을 보여준다: https://www.breitbart.com/politics/2026/04/16/trump-policies-like-no-tax-on-tips-overtime-show-gop-is-party-of-working-class/"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116423143761972299": {
+    "content_zh_cn": "特朗普：税收抵扣将为领取小费的劳动者带来“最大规模退税”：https://www.newsmax.com/us/las-vegas-donald-trump-tips/2026/04/17/id/1253271/",
+    "content_zh_hk": "特朗普：稅務扣減將為收取小費的勞工帶來「最大規模退稅」：https://www.newsmax.com/us/las-vegas-donald-trump-tips/2026/04/17/id/1253271/",
+    "content_ko": "트럼프: 세액공제가 팁 노동자들에게 '가장 큰 환급금'을 안겨줄 것: https://www.newsmax.com/us/las-vegas-donald-trump-tips/2026/04/17/id/1253271/"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116423140793678361": {
+    "content_zh_cn": "特朗普称拉斯维加斯是“小费免税”政策的“发源地”，并宣传工人最高可获“8,000美元”退税：https://nypost.com/2026/04/16/us-news/trump-credits-las-vegas-as-the-birthplace-of-no-tax-on-tips-policy-touts-up-to-8000-refunds-for-workers/",
+    "content_zh_hk": "特朗普稱拉斯維加斯是「小費免稅」政策的「發源地」，並宣傳工人最高可獲「8,000美元」退稅：https://nypost.com/2026/04/16/us-news/trump-credits-las-vegas-as-the-birthplace-of-no-tax-on-tips-policy-touts-up-to-8000-refunds-for-workers/",
+    "content_ko": "트럼프, 라스베이거스를 ‘팁 비과세’ 정책의 ‘발상지’로 평가… 근로자 최대 ‘8,000달러’ 환급 홍보: https://nypost.com/2026/04/16/us-news/trump-credits-las-vegas-as-the-birthplace-of-no-tax-on-tips-policy-touts-up-to-8000-refunds-for-workers/"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116423134926254421": {
+    "content_zh_cn": "特朗普在TPUSA集会上谈及查理·柯克：“查理的声音并未被压制，而是在怒吼”\nhttps://justthenews.com/politics-policy/all-things-trump/trump-reflects-charlie-kirk-tpusa-rally-charlies-voice-not",
+    "content_zh_hk": "特朗普在TPUSA集會上談及查理·柯克：「查理的聲音並未被壓制，而是在怒吼」\nhttps://justthenews.com/politics-policy/all-things-trump/trump-reflects-charlie-kirk-tpusa-rally-charlies-voice-not",
+    "content_ko": "트럼프, TPUSA 집회에서 찰리 커크 언급: “찰리의 목소리는 침묵당한 것이 아니라, 우렁차게 울려 퍼지고 있다”\nhttps://justthenews.com/politics-policy/all-things-trump/trump-reflects-charlie-kirk-tpusa-rally-charlies-voice-not"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116423133703021080": {
+    "content_zh_cn": "特朗普披露，政府绝密UFO档案中发现了“非常耐人寻味”的内容，并称这些档案将“很快”对外公布：https://www.dailymail.co.uk/news/article-15743779/donald-trump-pete-hegseth-ufo-files.html",
+    "content_zh_hk": "特朗普披露，政府絕密UFO檔案中發現了「非常耐人尋味」的內容，並稱這些檔案將「很快」對外公布：https://www.dailymail.co.uk/news/article-15743779/donald-trump-pete-hegseth-ufo-files.html",
+    "content_ko": "트럼프는 정부의 극비 UFO 파일에서 \"매우 흥미로운\" 내용이 나왔다고 밝히며, 해당 자료가 \"매우 곧\" 공개될 것이라고 말했다: https://www.dailymail.co.uk/news/article-15743779/donald-trump-pete-hegseth-ufo-files.html"
+  },
   "https://truthsocial.com/@realDonaldTrump/116421975390940454": {
     "content_zh_cn": "今天晚些时候，我将前往伟大的亚利桑那州，在Turning Point USA活动上对一大群民众发表讲话，随后飞回白宫，因此今晚将无法在海湖庄园出席一场非常特别的活动。该活动旨在表彰我们来自得州第13国会选区、杰出的联邦众议员“Doc”罗尼·杰克逊。\n他是我的好朋友，100%支持MAGA，也是我们国家最有才华的医生和政治人物之一。罗尼，生日快乐！\n\n作为一位备受尊敬的海军上将、国会议员和医生，“Doc”罗尼·杰克逊深知捍卫我们的国家、支持我们勇敢的军人/退伍军人，以及确保“以实力求和平”所必需的智慧与勇气。在我的第一个任期内，“Doc”罗尼曾担任我的高级顾问之一，并在成为杰出国会议员之前担任我的私人医生。在国会，他正不知疲倦地为推动我们的经济增长、削减税负和监管、促进“美国制造”、捍卫美国能源主导地位、确保边境安全、推进选举诚信，以及保护我们始终受到围攻的《第二修正案》而奋斗。\n\n罗尼·杰克逊是一位斗士，也是赢家，我完全、彻底支持他竞选连任。HE IS ONE OF MY ALL TIME FAVORITES, AND WILL NEVER LET YOU DOWN!\n总统 唐纳德·J·特朗普",
     "content_zh_hk": "今日稍後，我將前往偉大的亞利桑那州，在Turning Point USA活動上向一大群民眾發表講話，之後飛返白宮，因此今晚將不會在海湖莊園出席一場非常特別、向我們來自德州第13國會選區的優秀國會議員“Doc” Ronny Jackson致敬的活動。\n他是我的好朋友，100%支持MAGA，也是我們國家最有才華的醫生和政治人物之一。RONNY，生日快樂！\n\n作為一位備受尊敬的海軍上將、國會議員和醫生，“Doc” Ronny Jackson深知，捍衛我們的國家、支持我們勇敢的軍人／退伍軍人，以及確保「以實力維護和平」所必需的智慧與勇氣。在我的第一個任期內，“Doc” Ronny曾擔任我的高級顧問之一，並在成為傑出國會議員之前擔任我的私人醫生。在國會，他正不知疲倦地為推動我們的經濟增長、減稅和削減監管、推廣「美國製造」、捍衛美國能源主導地位、確保邊境安全、推進選舉公正，以及保護我們始終備受攻擊的《第二修正案》而奮鬥。\n\nRonny Jackson是一位鬥士，也是贏家，我對他競逐連任給予完全而徹底的支持。HE IS ONE OF MY ALL TIME FAVORITES, AND WILL NEVER LET YOU DOWN!\n總統 DONALD J. TRUMP",
