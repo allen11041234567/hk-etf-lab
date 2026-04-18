@@ -1,4 +1,84 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116421975390940454": {
+    "content_zh_cn": "今天晚些时候，我将前往伟大的亚利桑那州，在Turning Point USA活动上对一大群民众发表讲话，随后飞回白宫，因此今晚将无法在海湖庄园出席一场非常特别的活动。该活动旨在表彰我们来自得州第13国会选区、杰出的联邦众议员“Doc”罗尼·杰克逊。\n他是我的好朋友，100%支持MAGA，也是我们国家最有才华的医生和政治人物之一。罗尼，生日快乐！\n\n作为一位备受尊敬的海军上将、国会议员和医生，“Doc”罗尼·杰克逊深知捍卫我们的国家、支持我们勇敢的军人/退伍军人，以及确保“以实力求和平”所必需的智慧与勇气。在我的第一个任期内，“Doc”罗尼曾担任我的高级顾问之一，并在成为杰出国会议员之前担任我的私人医生。在国会，他正不知疲倦地为推动我们的经济增长、削减税负和监管、促进“美国制造”、捍卫美国能源主导地位、确保边境安全、推进选举诚信，以及保护我们始终受到围攻的《第二修正案》而奋斗。\n\n罗尼·杰克逊是一位斗士，也是赢家，我完全、彻底支持他竞选连任。HE IS ONE OF MY ALL TIME FAVORITES, AND WILL NEVER LET YOU DOWN!\n总统 唐纳德·J·特朗普",
+    "content_zh_hk": "今日稍後，我將前往偉大的亞利桑那州，在Turning Point USA活動上向一大群民眾發表講話，之後飛返白宮，因此今晚將不會在海湖莊園出席一場非常特別、向我們來自德州第13國會選區的優秀國會議員“Doc” Ronny Jackson致敬的活動。\n他是我的好朋友，100%支持MAGA，也是我們國家最有才華的醫生和政治人物之一。RONNY，生日快樂！\n\n作為一位備受尊敬的海軍上將、國會議員和醫生，“Doc” Ronny Jackson深知，捍衛我們的國家、支持我們勇敢的軍人／退伍軍人，以及確保「以實力維護和平」所必需的智慧與勇氣。在我的第一個任期內，“Doc” Ronny曾擔任我的高級顧問之一，並在成為傑出國會議員之前擔任我的私人醫生。在國會，他正不知疲倦地為推動我們的經濟增長、減稅和削減監管、推廣「美國製造」、捍衛美國能源主導地位、確保邊境安全、推進選舉公正，以及保護我們始終備受攻擊的《第二修正案》而奮鬥。\n\nRonny Jackson是一位鬥士，也是贏家，我對他競逐連任給予完全而徹底的支持。HE IS ONE OF MY ALL TIME FAVORITES, AND WILL NEVER LET YOU DOWN!\n總統 DONALD J. TRUMP",
+    "content_ko": "오늘 늦게 저는 위대한 애리조나주에서 Turning Point USA를 위해 엄청난 군중을 상대로 연설한 뒤 백악관으로 다시 돌아갈 예정입니다. 따라서 오늘 밤 마러라고에서 열리는, 텍사스주 제13선거구의 훌륭한 연방하원의원인 “Doc” 로니 잭슨을 기리는 매우 특별한 행사에는 참석하지 못합니다.\n그는 제 좋은 친구이며, 100% MAGA이고, 우리나라에서 가장 재능 있는 의사이자 정치인 가운데 한 명입니다. 생일 축하합니다, 로니!\n\n존경받는 제독이자 연방하원의원, 그리고 의사인 “Doc” 로니 잭슨은 우리나라를 수호하고, 우리의 용감한 군인/재향군인을 지원하며, 힘을 통한 평화를 보장하는 데 필요한 지혜와 용기를 잘 알고 있습니다. 제 첫 임기 동안 “Doc” 로니는 저의 선임 고문 중 한 명으로 일했고, 뛰어난 연방하원의원이 되기 전에 제 개인 주치의로도 봉사했습니다. 의회에서 그는 우리 경제 성장, 감세와 규제 완화, MADE IN THE U.S.A. 촉진, 미국의 에너지 지배력 옹호, 국경 안보 강화, 선거의 공정성 제고, 그리고 늘 공격받고 있는 수정헌법 제2조 보호를 위해 지치지 않고 싸우고 있습니다.\n\n로니 잭슨은 투사이자 승리자이며, 저는 그의 재선에 대해 완전하고 전적인 지지를 보냅니다. HE IS ONE OF MY ALL TIME FAVORITES, AND WILL NEVER LET YOU DOWN!\n대통령 DONALD J. TRUMP"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116421678154340515": {
+    "content_zh_cn": "他们当时可不是站在我们这边的！",
+    "content_zh_hk": "他們當時可不是站在我們這邊的！",
+    "content_ko": "그들은 우리를 위해 거기 있었던 것이 아니다!"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116421673135051159": {
+    "content_zh_cn": "德桑蒂斯签署法案，将棕榈滩国际机场重新命名为“唐纳德·J·特朗普国际机场”：https://www.wptv.com/news/trump/desantis-signs-bill-to-rename-palm-beach-international-airport-after-donald-j-trump",
+    "content_zh_hk": "德桑蒂斯簽署法案，將棕櫚灘國際機場重新命名為「唐納德·J·特朗普國際機場」：https://www.wptv.com/news/trump/desantis-signs-bill-to-rename-palm-beach-international-airport-after-donald-j-trump",
+    "content_ko": "디샌티스, 팜비치 국제공항의 명칭을 도널드 J. 트럼프의 이름을 딴 공항으로 변경하는 법안에 서명: https://www.wptv.com/news/trump/desantis-signs-bill-to-rename-palm-beach-international-airport-after-donald-j-trump"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116421671494376872": {
+    "content_zh_cn": "在副总统万斯支持下，参议院确认司法部新任“反欺诈战争”检察官科林·麦克唐纳德——https://nypost.com/2026/03/24/us-news/senate-confirms-dojs-new-top-fraud-prosecutor-colin-mcdonald/",
+    "content_zh_hk": "在副總統萬斯支持下，參議院確認司法部新任「反欺詐戰爭」檢察官科林·麥克唐納德——https://nypost.com/2026/03/24/us-news/senate-confirms-dojs-new-top-fraud-prosecutor-colin-mcdonald/",
+    "content_ko": "밴스 부통령의 지지 속에, 상원은 법무부의 새 ‘사기와의 전쟁’ 담당 검사 콜린 맥도널드를 인준: https://nypost.com/2026/03/24/us-news/senate-confirms-dojs-new-top-fraud-prosecutor-colin-mcdonald/"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116421668823698549": {
+    "content_zh_cn": "特朗普效应：苹果携手4家合作伙伴扩大美国制造计划：https://www.breitbart.com/tech/2026/03/26/trump-effect-apple-expands-american-manufacturing-program-with-4-partners/",
+    "content_zh_hk": "特朗普效應：蘋果聯同4家合作夥伴擴大美國製造計劃：https://www.breitbart.com/tech/2026/03/26/trump-effect-apple-expands-american-manufacturing-program-with-4-partners/",
+    "content_ko": "트럼프 효과: 애플, 4개 파트너사와 함께 미국 제조 프로그램 확대: https://www.breitbart.com/tech/2026/03/26/trump-effect-apple-expands-american-manufacturing-program-with-4-partners/"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116420635683173112": {
+    "content_zh_cn": "《纽约时报》这个正在走下坡路的媒体、散布假新闻的CNN，以及其他一些媒体，根本不知道该怎么办。他们拼命想在伊朗局势上找理由批评唐纳德·J·特朗普总统，却就是找不到。为什么他们不在适当的时候直接说一句：干得好，总统先生，JOB WELL DONE, MR. PRESIDENT，并开始一点点挽回自己的公信力？？？",
+    "content_zh_hk": "《紐約時報》這家走下坡的媒體、散播假新聞的CNN，以及其他一些媒體，根本不知道該怎麼辦。他們拼命想就伊朗局勢找理由批評唐納德·J·特朗普總統，卻就是找不到。為甚麼他們不在適當的時候直接說一句：做得好，總統先生，JOB WELL DONE, MR. PRESIDENT，並開始逐步挽回自己的公信力？？？",
+    "content_ko": "망해가는 뉴욕타임스, FAKE NEWS CNN, 그리고 다른 언론들은 도대체 어떻게 해야 할지 모릅니다. 이들은 이란 상황과 관련해 도널드 J. 트럼프 대통령을 비판할 이유를 필사적으로 찾고 있지만, 도저히 찾지 못하고 있습니다. 왜 그들은 적절한 때에 그냥 이렇게 말하지 못합니까. JOB WELL DONE, MR. PRESIDENT, 그리고 자신들의 신뢰를 되찾기 시작하면 되는 것 아닙니까???"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116420562510387829": {
+    "content_zh_cn": "伊朗已同意今后绝不再关闭霍尔木兹海峡。该海峡将不再被用作对抗全球的武器！\n——总统 唐纳德·J·特朗普",
+    "content_zh_hk": "伊朗已同意今後絕不再關閉霍爾木茲海峽。該海峽將不再被用作對抗全球的武器！\n——總統 唐納德·J·特朗普",
+    "content_ko": "이란은 앞으로 호르무즈 해협을 다시는 폐쇄하지 않기로 합의했습니다. 이 해협은 더 이상 세계를 상대로 한 무기로 사용되지 않을 것입니다!\n— 도널드 J. 트럼프 대통령"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116420534754267698": {
+    "content_zh_cn": "对世界而言，这是伟大而辉煌的一天！DJT",
+    "content_zh_hk": "對世界而言，這是偉大而輝煌的一天！DJT",
+    "content_ko": "세계에 위대하고 찬란한 날이다! DJT"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116420525257407908": {
+    "content_zh_cn": "感谢巴基斯坦，感谢其伟大的总理和陆军元帅，两位了不起的人物！！！\n——总统 唐纳德·J·特朗普",
+    "content_zh_hk": "感謝巴基斯坦，感謝其偉大的總理和陸軍元帥，兩位了不起的人物！！！\n——總統 唐納德·J·特朗普",
+    "content_ko": "파키스탄과 그 위대한 총리, 그리고 육군 원수께 감사드립니다. 두 분 모두 정말 훌륭한 분들입니다!!!\n— 도널드 J. 트럼프 대통령"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116420512192383443": {
+    "content_zh_cn": "再说一遍！这项协议与黎巴嫩毫无任何关联，但我们将让黎巴嫩再次伟大！",
+    "content_zh_hk": "再講一遍！這項協議與黎巴嫩毫無任何關聯，但我們將讓黎巴嫩再次偉大！",
+    "content_ko": "다시 말한다! 이 합의는 어떤 식으로든 레바논과 연계된 것이 아니지만, 우리는 레바논을 다시 위대하게 만들 것이다!"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116420484827577347": {
+    "content_zh_cn": "伊朗在美国的协助下，已经清除了、或正在清除所有海上水雷！谢谢！总统DJT",
+    "content_zh_hk": "伊朗在美國的協助下，已經清除了、或正在清除所有海上水雷！多謝！總統DJT",
+    "content_ko": "이란은 미국의 도움으로 모든 해상 기뢰를 제거했거나, 제거하고 있습니다! 감사합니다! 대통령 DJT"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116420468063226470": {
+    "content_zh_cn": "感谢沙特阿拉伯、阿联酋和卡塔尔展现出的巨大勇气与提供的帮助！\n总统 唐纳德·J·特朗普",
+    "content_zh_hk": "感謝沙特阿拉伯、阿聯酋和卡塔爾展現出的巨大勇氣與提供的幫助！\n總統 當勞·J·特朗普",
+    "content_ko": "사우디아라비아, UAE, 그리고 카타르의 큰 용기와 도움에 감사드립니다!\n대통령 도널드 J. 트럼프"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116420456436213944": {
+    "content_zh_cn": "既然霍尔木兹海峡的局势已经结束，我接到了北约的电话，问我们是否需要一些帮助。\n我告诉他们：离远点，除非他们只是想把他们的船装满石油。\n在需要他们的时候，他们毫无用处，不过是只纸老虎！\n——总统DJT",
+    "content_zh_hk": "既然霍爾木茲海峽的局勢已經結束，我接到北約來電，問我們是否需要一些幫助。\n我告訴他們：離遠點，除非他們只是想把他們的船裝滿石油。\n在需要他們的時候，他們毫無用處，不過是一隻紙老虎！\n——總統DJT",
+    "content_ko": "이제 호르무즈 해협 상황이 끝난 만큼, 나는 NATO로부터 우리가 도움이 필요한지 묻는 전화를 받았다.\n나는 그들에게 말했다. 물러 있으라고, 그저 자기들 배에 석유나 가득 실으려는 게 아니라면 말이다.\n정작 필요할 때는 아무 쓸모도 없었다. 종이호랑이에 불과하다!\n— 대통령 DJT"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116420395293904982": {
+    "content_zh_cn": "美国将获得由我们伟大的B2轰炸机制造出的所有核“尘埃”——不会以任何方式、任何形式发生任何资金往来。\n这项协议也绝不以黎巴嫩为条件，但美国将另外与黎巴嫩合作，并以适当方式处理真主党局势。\n以色列将不再轰炸黎巴嫩。美国已明确禁止其这样做。够了就是够了！！！谢谢！\n总统 DJT",
+    "content_zh_hk": "美國將取得由我們偉大的B2轟炸機製造出的所有核「塵埃」——不會以任何方式、任何形式涉及任何金錢往來。\n這項協議亦絕不以黎巴嫩為條件，但美國將另外與黎巴嫩合作，並以適當方式處理真主黨局勢。\n以色列將不再轟炸黎巴嫩。美國已明確禁止其這樣做。夠了就是夠了！！！謝謝！\n總統 DJT",
+    "content_ko": "미국은 우리의 위대한 B2 폭격기가 만들어낸 모든 핵 “먼지”를 갖게 될 것이다 — 어떤 방식이나 형태로도 돈은 오가지 않을 것이다.\n이 합의는 레바논과도 전혀 관련된 조건이 아니지만, 미국은 별도로 레바논과 협력하고 헤즈볼라 문제를 적절한 방식으로 다룰 것이다.\n이스라엘은 더 이상 레바논을 폭격하지 않을 것이다. 미국이 이를 금지했기 때문이다. 이제는 정말 충분하다!!! 감사하다!\n대통령 DJT"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116420275523158052": {
+    "content_zh_cn": "霍尔木兹海峡已完全开放，恢复通行并可正常开展业务；但仅针对伊朗的海上封锁仍将继续全面实施，直至我们与伊朗的交易100%完成为止。鉴于大部分要点已谈妥，这一进程应会很快推进。感谢您对此事的关注！\n\n总统 唐纳德·J·特朗普",
+    "content_zh_hk": "霍爾木茲海峽已全面開放，恢復通行並可正常開展業務；但僅針對伊朗的海上封鎖仍將繼續全面實施，直至我們與伊朗的交易100%完成為止。鑑於大部分要點已談妥，這一進程應會很快推進。感謝您對此事的關注！\n\n總統 唐納德·J·特朗普",
+    "content_ko": "호르무즈 해협은 완전히 개방돼 있으며, 통항과 상업 활동을 위한 전면 통행이 가능하다. 그러나 이란에 한해서는, 우리와 이란 간 거래가 100% 완료될 때까지 해상 봉쇄가 계속 전면적으로 유지될 것이다. 대부분의 핵심 사항이 이미 협상된 만큼, 이 절차는 매우 신속하게 진행될 것이다. 이 사안에 관심을 가져주셔서 감사하다!\n\n도널드 J. 트럼프 대통령"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116420194853200133": {
+    "content_zh_cn": "伊朗刚刚宣布，伊朗海峡已全面开放，现已可全面通行。谢谢！",
+    "content_zh_hk": "伊朗剛剛宣布，伊朗海峽已全面開放，現已可全面通行。謝謝！",
+    "content_ko": "이란이 방금 이란 해협이 완전히 개방됐으며 전면 통항이 가능하다고 발표했습니다. 감사합니다!"
+  },
   "https://truthsocial.com/@realDonaldTrump/116420038210190121": {
     "content_zh_cn": "美国现在是全球“最火热”的国家。就在不久前，在“瞌睡乔”拜登治下，美国死气沉沉，还遭到全世界嘲笑！！！但现在不一样了——再也没人敢笑了！！！特朗普总统",
     "content_zh_hk": "美國現在是全球“最火熱”的國家。就在不久前，在「瞌睡喬」拜登治下，美國死氣沉沉，還遭到全世界嘲笑！！！但現在不一樣了——再也沒人敢笑了！！！特朗普總統",
