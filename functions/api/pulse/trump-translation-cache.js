@@ -1,4 +1,19 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116423970008317740": {
+    "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116423967114156778\n谢谢！",
+    "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116423967114156778\n多謝！",
+    "content_ko": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116423967114156778\n감사합니다!"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116423572074498917": {
+    "content_zh_cn": "还有人已经赢到厌了吗？",
+    "content_zh_hk": "還有人已經贏到厭了嗎？",
+    "content_ko": "이기는 것, 이제 지겹지 않은가?"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116423452270235983": {
+    "content_zh_cn": "里德·黑斯廷斯是因为他是个卑鄙小人，才被迫离开奈飞董事会的吗？他的“罪行”是什么，又犯了多少起？",
+    "content_zh_hk": "里德·黑斯廷斯是否因為他是個卑鄙小人，而被迫離開Netflix董事會？他的「罪行」是甚麼，又犯了多少宗？",
+    "content_ko": "리드 헤이스팅스는 비열한 인간이라서 넷플릭스 이사회에서 쫓겨난 것인가? 그의 “범죄”는 무엇이었고, 그는 몇 건이나 저질렀는가?"
+  },
   "https://truthsocial.com/@realDonaldTrump/116423346036127010": {
     "content_zh_cn": "特朗普参观辛辛那提一家制药生产基地，并就伊朗问题发布最新进展：‘远远领先于计划进度’：https://www.breitbart.com/middle-east/2026/03/11/trump-tours-pharmaceutical-manufacturing-site-in-cincinnati-gives-update-on-iran-way-ahead-of-schedule/amp/",
     "content_zh_hk": "特朗普到訪辛辛那提一間藥品製造設施，並就伊朗問題更新進展：『大幅領先原定進度』：https://www.breitbart.com/middle-east/2026/03/11/trump-tours-pharmaceutical-manufacturing-site-in-cincinnati-gives-update-on-iran-way-ahead-of-schedule/amp/",
