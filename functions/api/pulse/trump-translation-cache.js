@@ -1,4 +1,24 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116423346036127010": {
+    "content_zh_cn": "特朗普参观辛辛那提一家制药生产基地，并就伊朗问题发布最新进展：‘远远领先于计划进度’：https://www.breitbart.com/middle-east/2026/03/11/trump-tours-pharmaceutical-manufacturing-site-in-cincinnati-gives-update-on-iran-way-ahead-of-schedule/amp/",
+    "content_zh_hk": "特朗普到訪辛辛那提一間藥品製造設施，並就伊朗問題更新進展：『大幅領先原定進度』：https://www.breitbart.com/middle-east/2026/03/11/trump-tours-pharmaceutical-manufacturing-site-in-cincinnati-gives-update-on-iran-way-ahead-of-schedule/amp/",
+    "content_ko": "트럼프, 신시내티 제약 생산시설 방문… 이란 관련 최신 상황 전해: '예정보다 훨씬 앞서 있다': https://www.breitbart.com/middle-east/2026/03/11/trump-tours-pharmaceutical-manufacturing-site-in-cincinnati-gives-update-on-iran-way-ahead-of-schedule/amp/"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116423336936103421": {
+    "content_zh_cn": "习近平主席对霍尔木兹海峡保持畅通和/或正迅速恢复通航感到非常高兴。我们在中国的会晤将是一次特别的会晤，而且有可能具有历史意义。我期待与习近平主席会面——将取得丰硕成果！\n\n总统 唐纳德·J·特朗普",
+    "content_zh_hk": "習近平主席對霍爾木茲海峽維持暢通及／或正迅速恢復通航感到非常高興。我們在中國的會晤將會是一次特別的會晤，而且有可能具有歷史意義。我期待與習主席會面——將取得豐碩成果！\n\n總統 唐納德·J·特朗普",
+    "content_ko": "시진핑 주석은 호르무즈 해협이 열려 있고, 그리고/또는 신속히 다시 열리고 있는 데 대해 매우 기뻐하고 있습니다. 중국에서의 우리의 회담은 특별한 자리가 될 것이며, 어쩌면 역사적인 순간이 될 수도 있습니다. 저는 시진핑 주석과 함께하게 되기를 고대합니다 — 많은 성과가 이뤄질 것입니다!\n\n대통령 도널드 J. 트럼프"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116423303405254078": {
+    "content_zh_cn": "举报人称：穆勒调查为“扳倒特朗普”而偷工减料、违反规定：https://nypost.com/2026/03/16/us-news/mueller-probe-cut-corners-broke-rules-to-get-trump-whistleblower-claims/",
+    "content_zh_hk": "舉報人稱：穆勒調查為「扳倒特朗普」而偷工減料、違反規定：https://nypost.com/2026/03/16/us-news/mueller-probe-cut-corners-broke-rules-to-get-trump-whistleblower-claims/",
+    "content_ko": "내부고발자 주장: 뮬러 수사가 ‘트럼프를 잡기 위해’ 절차를 생략하고 규정을 위반했다: https://nypost.com/2026/03/16/us-news/mueller-probe-cut-corners-broke-rules-to-get-trump-whistleblower-claims/"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116423281657895037": {
+    "content_zh_cn": "特朗普称得州这座耗资3000亿美元的炼油厂具有“历史性”意义，称其为美国近50年来首座新建炼油厂：https://www.foxbusiness.com/energy/trump-touts-historic-300b-texas-refinery-first-new-us-plant-nearly-50-years",
+    "content_zh_hk": "特朗普稱得州這座耗資3,000億美元的煉油廠具有「歷史性」意義，並稱其為美國近50年來首座新建煉油廠：https://www.foxbusiness.com/energy/trump-touts-historic-300b-texas-refinery-first-new-us-plant-nearly-50-years",
+    "content_ko": "트럼프, 텍사스의 3,000억 달러 규모 정유공장을 ‘역사적’이라고 치켜세우며 미국에서 거의 50년 만에 들어서는 첫 신규 공장이라고 주장: https://www.foxbusiness.com/energy/trump-touts-historic-300b-texas-refinery-first-new-us-plant-nearly-50-years"
+  },
   "https://truthsocial.com/@realDonaldTrump/116423145937825528": {
     "content_zh_cn": "特朗普：取消小费税、加班费免税等政策表明，共和党是工人阶级的政党：https://www.breitbart.com/politics/2026/04/16/trump-policies-like-no-tax-on-tips-overtime-show-gop-is-party-of-working-class/",
     "content_zh_hk": "特朗普：取消小費稅、加班費免稅等政策顯示，共和黨是工人階級的政黨：https://www.breitbart.com/politics/2026/04/16/trump-policies-like-no-tax-on-tips-overtime-show-gop-is-party-of-working-class/",
