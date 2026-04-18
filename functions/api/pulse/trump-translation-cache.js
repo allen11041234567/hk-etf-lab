@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116425653087220924": {
+    "content_zh_cn": "有人关注过西班牙这个国家的状况有多糟吗？尽管其对北约和自身军事防务的投入几乎为零，但其财政数据却糟糕透顶。看着真令人难过！！！",
+    "content_zh_hk": "有冇人留意過西班牙這個國家的情況有幾差嗎？儘管其對北約及自身軍事防務的投入幾乎等於零，但其財政數據卻糟糕透頂。睇到真令人難過！！！",
+    "content_ko": "스페인이라는 나라가 얼마나 형편없는 상황인지 누가 본 적 있습니까? NATO와 자국 군사 방위에 거의 아무 기여도 하지 않으면서도, 그들의 재정 수치는 정말 처참합니다. 보고 있자니 안타깝습니다!!!"
+  },
   "https://truthsocial.com/@realDonaldTrump/116423970008317740": {
     "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116423967114156778\n谢谢！",
     "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116423967114156778\n多謝！",
