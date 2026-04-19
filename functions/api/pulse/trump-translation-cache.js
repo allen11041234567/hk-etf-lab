@@ -1,4 +1,34 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116428857516654596": {
+    "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116428856333288529",
+    "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116428856333288529",
+    "content_ko": "재게시: https://truthsocial.com/users/realDonaldTrump/statuses/116428856333288529"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116428719135549075": {
+    "content_zh_cn": "今晚，传统基金会艾利森中心主任罗伯特·格林威在马克·莱文的节目中发表了精彩且富有见地的讲话。谢谢你，罗伯特！",
+    "content_zh_hk": "今晚，傳統基金會艾利森中心主任羅伯特·格林威在馬克·萊文的節目中發表了精彩且富有見地的講話。謝謝你，羅伯特！",
+    "content_ko": "오늘 밤 마크 레빈 쇼에서 헤리티지재단 앨리슨 센터 소장 로버트 그린웨이가 훌륭하고 통찰력 있는 발언을 했습니다. 고마워요, 로버트!"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116428690626427742": {
+    "content_zh_cn": "不论人们是否喜欢以色列，他们都已证明自己是美利坚合众国一个伟大的盟友。以色列勇敢、果断、忠诚且聪明；不像其他一些国家在冲突与压力时刻暴露了真面目，以色列作战顽强，并且知道如何取胜！\n特朗普总统",
+    "content_zh_hk": "無論人們是否喜歡以色列，他們都已證明自己是美利堅合眾國一個偉大的盟友。以色列勇敢、果斷、忠誠且聰明；不像其他一些國家在衝突與壓力時刻暴露了真面目，以色列作戰頑強，並且知道如何取勝！\n特朗普總統",
+    "content_ko": "사람들이 이스라엘을 좋아하든 아니든, 이스라엘은 미국의 위대한 동맹국임을 입증해 왔습니다. 이스라엘은 용감하고, 대담하며, 충성스럽고, 영리합니다. 그리고 갈등과 압박의 순간에 본색을 드러낸 다른 이들과 달리, 이스라엘은 끝까지 강하게 싸우며 어떻게 승리하는지 알고 있습니다!\n트럼프 대통령"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116428390999409071": {
+    "content_zh_cn": "https://x.com/real_robn/status/2045552110100758533?s=10",
+    "content_zh_hk": "https://x.com/real_robn/status/2045552110100758533?s=10",
+    "content_ko": "https://x.com/real_robn/status/2045552110100758533?s=10"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116428370306928773": {
+    "content_zh_cn": "一场被操纵的选举！！！",
+    "content_zh_hk": "一場被操縱的選舉！！！",
+    "content_ko": "조작된 선거다!!!"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116428350579951040": {
+    "content_zh_cn": "https://x.com/thescif/status/2045034437813903700?s=10",
+    "content_zh_hk": "https://x.com/thescif/status/2045034437813903700?s=10",
+    "content_ko": "https://x.com/thescif/status/2045034437813903700?s=10"
+  },
   "https://truthsocial.com/@realDonaldTrump/116425653087220924": {
     "content_zh_cn": "有人关注过西班牙这个国家的状况有多糟吗？尽管其对北约和自身军事防务的投入几乎为零，但其财政数据却糟糕透顶。看着真令人难过！！！",
     "content_zh_hk": "有冇人留意過西班牙這個國家的情況有幾差嗎？儘管其對北約及自身軍事防務的投入幾乎等於零，但其財政數據卻糟糕透頂。睇到真令人難過！！！",
