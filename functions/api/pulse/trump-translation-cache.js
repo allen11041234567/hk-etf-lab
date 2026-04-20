@@ -1,4 +1,49 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116433972349508843": {
+    "content_zh_cn": "无法访问该链接内容。请提供帖子原文，我将按要求翻译。",
+    "content_zh_hk": "無法存取該連結內容。請提供帖文原文，我將按要求翻譯。",
+    "content_ko": "해당 링크의 내용을 확인할 수 없습니다. 게시물 원문을 보내주시면 요청하신 형식에 맞춰 번역해 드리겠습니다."
+  },
+  "https://truthsocial.com/@realDonaldTrump/116433035427727878": {
+    "content_zh_cn": "白宫如何制定出一套新的作战方案，以应对华盛顿记者团：\nhttps://www.washingtontimes.com/news/2025/dec/26/white-house-drew-new-battle-plan-take-washington-press-corps/",
+    "content_zh_hk": "白宮如何制定出一套新的作戰方案，以應對華盛頓記者團：\nhttps://www.washingtontimes.com/news/2025/dec/26/white-house-drew-new-battle-plan-take-washington-press-corps/",
+    "content_ko": "백악관이 워싱턴 출입기자단에 맞서기 위해 새로운 대응 전략을 어떻게 마련했는가:\nhttps://www.washingtontimes.com/news/2025/dec/26/white-house-drew-new-battle-plan-take-washington-press-corps/"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116433033991904343": {
+    "content_zh_cn": "关税是一种纪律，不是一则新闻稿：https://www.wsj.com/opinion/tariffs-are-a-discipline-not-a-press-release-4022e09e",
+    "content_zh_hk": "關稅是一種紀律，不是一則新聞稿：https://www.wsj.com/opinion/tariffs-are-a-discipline-not-a-press-release-4022e09e",
+    "content_ko": "관세는 보도자료가 아니라 규율이다: https://www.wsj.com/opinion/tariffs-are-a-discipline-not-a-press-release-4022e09e"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116433033114293290": {
+    "content_zh_cn": "万斯的反欺诈特别工作组一上阵就捷报频传：https://www.breitbart.com/politics/2026/04/03/vances-anti-fraud-task-force-hits-ground-running-with-collection-of-wins/",
+    "content_zh_hk": "萬斯的反欺詐特別工作組一上陣就捷報頻傳：https://www.breitbart.com/politics/2026/04/03/vances-anti-fraud-task-force-hits-ground-running-with-collection-of-wins/",
+    "content_ko": "밴스의 반사기 태스크포스, 출범 직후부터 잇단 성과: https://www.breitbart.com/politics/2026/04/03/vances-anti-fraud-task-force-hits-ground-running-with-collection-of-wins/"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116433000897070863": {
+    "content_zh_cn": "今天，一艘悬挂伊朗国旗、名为“TOUSKA”的货船，船长近900英尺、排水量几乎与一艘航空母舰相当，试图突破我们的海上封锁，但他们的结果并不好。美国海军导弹驱逐舰“斯普鲁恩斯”号（USS SPRUANCE）在阿曼湾拦截了“TOUSKA”，并向其发出了明确警告，要求停船。伊朗船员拒不理会，因此我们的海军舰艇直接炸穿了其机舱，使其当场失去行动能力。目前，美国海军陆战队已经控制该船。“TOUSKA”因其过往非法活动记录，受到美国财政部制裁。我们已完全控制这艘船，正在查看船上装载了什么！\n\n总统 唐纳德·J·特朗普",
+    "content_zh_hk": "今天，一艘懸掛伊朗國旗、名為「TOUSKA」的貨船，船長近900呎、排水量幾乎與一艘航空母艦相當，試圖突破我們的海上封鎖，但他們的結果並不好。美國海軍導彈驅逐艦「斯普魯恩斯」號（USS SPRUANCE）在阿曼灣攔截了「TOUSKA」，並向其發出明確警告，要求停船。伊朗船員拒不理會，因此我們的海軍艦艇直接炸穿了其機艙，使其當場失去行動能力。目前，美國海軍陸戰隊已經控制該船。「TOUSKA」因其過往非法活動紀錄，受到美國財政部制裁。我們已完全控制這艘船，正在查看船上裝載了甚麼！\n\n總統 唐納德·J·特朗普",
+    "content_ko": "오늘 이란 국기를 단 화물선 ‘TOUSKA’호가, 길이 거의 900피트에 항공모함에 맞먹는 수준의 중량을 지닌 채 우리 해상 봉쇄를 뚫으려 했지만, 그들에게는 좋지 않은 결과로 끝났습니다. 미 해군 유도미사일 구축함 USS SPRUANCE가 오만만에서 ‘TOUSKA’호를 가로막고 정선하라는 정당한 경고를 보냈습니다. 이란인 승조원들은 이를 따르지 않았고, 이에 우리 해군 함정은 기관실에 구멍을 내 즉시 움직이지 못하게 했습니다. 현재 미 해병대가 해당 선박을 확보하고 있습니다. ‘TOUSKA’호는 과거 불법 활동 전력으로 인해 미 재무부의 제재 대상입니다. 우리는 이 선박을 완전히 장악했으며, 선내에 무엇이 실려 있는지 확인하고 있습니다!\n\n도널드 J. 트럼프 대통령"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116432861817731743": {
+    "content_zh_cn": "为什么最高法院必须否决“出生公民权”：https://paulingrassia.substack.com/p/why-the-supreme-court-must-strike",
+    "content_zh_hk": "為什麼最高法院必須推翻「出生公民權」：https://paulingrassia.substack.com/p/why-the-supreme-court-must-strike",
+    "content_ko": "대법원이 왜 출생시민권을 무효화해야 하는가: https://paulingrassia.substack.com/p/why-the-supreme-court-must-strike"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116432860421226752": {
+    "content_zh_cn": "麦克劳克林民调：选民在伊朗问题上支持特朗普：https://www.newsmax.com/mclaughlin/midterm-republican-voters/2026/04/17/id/1253286/",
+    "content_zh_hk": "麥克勞克林民調：選民在伊朗問題上支持特朗普：https://www.newsmax.com/mclaughlin/midterm-republican-voters/2026/04/17/id/1253286/",
+    "content_ko": "맥러플린 여론조사: 유권자들은 이란 문제에 있어 트럼프를 지지: https://www.newsmax.com/mclaughlin/midterm-republican-voters/2026/04/17/id/1253286/"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116432859604499088": {
+    "content_zh_cn": "特朗普、伊朗与美国利益的核心考量：https://www.realclearpolitics.com/articles/2026/04/17/trump_iran_and_the_bottom_line_for_american_interests.html",
+    "content_zh_hk": "特朗普、伊朗與美國利益的核心考量：https://www.realclearpolitics.com/articles/2026/04/17/trump_iran_and_the_bottom_line_for_american_interests.html",
+    "content_ko": "트럼프, 이란, 그리고 미국의 이익에 대한 핵심 판단: https://www.realclearpolitics.com/articles/2026/04/17/trump_iran_and_the_bottom_line_for_american_interests.html"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116432858497606616": {
+    "content_zh_cn": "感谢伟大的格雷格·贾瑞特——这是对美国公众的一场巨大骗局。希望这一切能够得到纠正！\nhttps://www.foxnews.com/opinion/gregg-jarrett-long-hidden-documents-reveal-first-trump-impeachment-total-fraud",
+    "content_zh_hk": "感謝偉大的格雷格·賈瑞特——這是對美國公眾的一場巨大騙局。希望這一切能夠得到糾正！\nhttps://www.foxnews.com/opinion/gregg-jarrett-long-hidden-documents-reveal-first-trump-impeachment-total-fraud",
+    "content_ko": "위대한 그레그 재럿에게 감사드립니다 — 이는 미국 대중을 상대로 한 거대한 사기입니다. 부디 바로잡히기를 바랍니다!\nhttps://www.foxnews.com/opinion/gregg-jarrett-long-hidden-documents-reveal-first-trump-impeachment-total-fraud"
+  },
   "https://truthsocial.com/@realDonaldTrump/116431297579272777": {
     "content_zh_cn": "伊朗昨天决定在霍尔木兹海峡开火——这完全违反了我们的停火协议！其中许多子弹瞄准了一艘法国船只，以及一艘来自英国的货轮。这可不太友好，不是吗？我的代表将前往巴基斯坦伊斯兰堡——他们将于明晚抵达，进行谈判。\n\n伊朗最近宣布他们将关闭海峡，这很奇怪，因为我们的封锁已经让它关闭了。他们在不知不觉中帮了我们，而封闭航道真正受损失的是他们自己——每天5亿美元！美国毫无损失。事实上，许多船只此刻正驶往美国，前往得州、路易斯安那州和阿拉斯加装货，这都要“感谢”伊朗伊斯兰革命卫队，他们总想当“硬汉”！\n\n我们提出的是一项非常公平合理的协议，我希望他们会接受，因为如果他们不接受，美国将摧毁伊朗每一座发电厂，以及每一座桥梁。别再当好好先生了！他们会很快屈服，也会轻易屈服；如果他们不接受这项协议，那么去做必须做的事，将是我的荣幸——而这本该是过去47年来历任总统早就该对伊朗做的事。是时候结束伊朗这台杀戮机器了！\n\n总统 唐纳德·J·特朗普",
     "content_zh_hk": "伊朗昨天決定在霍爾木茲海峽開火——這完全違反了我們的停火協議！其中很多子彈瞄準了一艘法國船隻，以及一艘來自英國的貨輪。這可不太友善，不是嗎？我的代表將前往巴基斯坦伊斯蘭堡——他們將於明晚抵達，進行談判。\n\n伊朗最近宣布他們將關閉海峽，這很奇怪，因為我們的封鎖已經令其關閉。他們在不知不覺中幫了我們，而封閉航道真正蒙受損失的是他們自己——每天5億美元！美國毫無損失。事實上，許多船隻此刻正駛往美國，前往得州、路易斯安那州和阿拉斯加裝貨，這都要「感謝」伊朗伊斯蘭革命衛隊，他們總想當「硬漢」！\n\n我們提出的是一項非常公平合理的協議，我希望他們會接受，因為如果他們不接受，美國將摧毀伊朗每一座發電廠，以及每一座橋樑。別再當好好先生了！他們會很快屈服，也會輕易屈服；如果他們不接受這項協議，那麼去做必須做的事，將是我的榮幸——而這本該是過去47年來歷任總統早就該對伊朗做的事。是時候結束伊朗這台殺戮機器了！\n\n總統 唐納德·J·特朗普",
