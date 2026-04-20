@@ -49,29 +49,35 @@ function stripTags(str = '') {
     .trim();
 }
 
-function isLikelyAttachmentUrl(url = '') {
-  if (!url) return false;
-  if (/accounts\/avatars\//i.test(url)) return false;
-  if (/\/statuses\/\d+$/i.test(url)) return false;
-  if (/truthsocial\.com\/@realDonaldTrump\//i.test(url)) return false;
-  if (/trumpstruth\.org\/?$/i.test(url)) return false;
-  if (/\.(png|jpe?g|gif|webp|mp4|mov|webm)(\?|$)/i.test(url)) return true;
-  if (/\/attachments\//i.test(url)) return true;
-  if (/\/api\/truth-social\/media\//i.test(url)) return true;
-  return false;
-}
-
 function extractAttachments(chunk) {
   const blockMatch = chunk.match(/<div class="status__attachments[^"]*">([\s\S]*?)(?:<\/div>\s*<div class="status__footer"|<\/div>\s*<\/div>|<\/article>|$)/i);
-  const block = blockMatch?.[1] || chunk || '';
-  const urls = [
-    ...block.matchAll(/<(?:a|img|source|video)[^>]+(?:href|src|data-url)="(https:[^"]+)"/gi),
-    ...block.matchAll(/<(?:a|img|source|video)[^>]+(?:href|src|data-url)="(\/api\/truth-social\/media\/[^"]+)"/gi),
-  ].map((m) => m[1]).filter(isLikelyAttachmentUrl);
-  return [...new Set(urls)].map((url) => ({
-    url,
-    type: /\.(mp4|mov|webm)(\?|$)/i.test(url) || /\/video\//i.test(url) ? 'video' : 'image',
-  }));
+  const block = blockMatch?.[1] || '';
+  if (!block) return [];
+
+  const items = [];
+
+  for (const m of block.matchAll(/<div class="status-attachment\s+status-attachment--video">([\s\S]*?)<\/div>/gi)) {
+    const inner = m[1] || '';
+    const videoUrl = inner.match(/<video[^>]+src="([^"]+)"/i)?.[1] || '';
+    const posterUrl = inner.match(/poster="([^"]+)"/i)?.[1] || '';
+    if (videoUrl) items.push({ url: videoUrl, type: 'video', poster_url: posterUrl || undefined });
+  }
+
+  for (const m of block.matchAll(/<div class="status-attachment\s+status-attachment--image">([\s\S]*?)<\/div>/gi)) {
+    const inner = m[1] || '';
+    const imageUrl = inner.match(/<(?:a|img)[^>]+(?:href|src)="([^"]+)"/i)?.[1] || '';
+    if (imageUrl) items.push({ url: imageUrl, type: 'image' });
+  }
+
+  const deduped = [];
+  const seen = new Set();
+  for (const item of items) {
+    const key = `${item.type}:${item.url}`;
+    if (!item.url || seen.has(key)) continue;
+    seen.add(key);
+    deduped.push(item);
+  }
+  return deduped;
 }
 
 function extractPosts(html) {
