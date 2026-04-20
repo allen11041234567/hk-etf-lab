@@ -6,9 +6,13 @@ const STALE_SECONDS = 600;
 const RECENT_HOURS = 48;
 const MAX_POSTS = 80;
 const BAD_TRANSLATION_PATTERNS = [
-  '无法访问该链接内容',
-  '無法存取該連結內容',
+  '无法访问',
+  '無法存取',
+  '链接内容无法直接访问',
+  '請提供帖文原文',
+  '请提供帖文原文',
   '해당 링크의 내용을 확인할 수 없습니다',
+  '게시물 원문을 보내주시면',
 ];
 
 function headers(cacheControl, state) {
@@ -87,9 +91,9 @@ function hasBadTranslation(text = '') {
 function enrichFromArchive(posts, avatarUrl) {
   return posts.map((post) => {
     const translated = TRUMP_TRANSLATION_CACHE[post.url] || {};
-    const content_zh_cn = hasBadTranslation(translated.content_zh_cn) ? '' : (translated.content_zh_cn || '');
-    const content_zh_hk = hasBadTranslation(translated.content_zh_hk) ? '' : (translated.content_zh_hk || '');
-    const content_ko = hasBadTranslation(translated.content_ko) ? '' : (translated.content_ko || '');
+    const content_zh_cn = hasBadTranslation(translated.content_zh_cn) ? (post.content || '') : (translated.content_zh_cn || '');
+    const content_zh_hk = hasBadTranslation(translated.content_zh_hk) ? (post.content || '') : (translated.content_zh_hk || '');
+    const content_ko = hasBadTranslation(translated.content_ko) ? (post.content || '') : (translated.content_ko || '');
     return {
       ...post,
       avatar: avatarUrl,
