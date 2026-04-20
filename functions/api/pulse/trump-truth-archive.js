@@ -116,9 +116,13 @@ function hasBadTranslation(text = '') {
   return false;
 }
 
+function encodeMediaId(url = '') {
+  return btoa(url).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/g, '');
+}
+
 function proxyMedia(url, origin) {
   if (!url || !/^https?:\/\//i.test(url)) return url;
-  return `${origin}/api/pulse/trump-media?url=${encodeURIComponent(url)}`;
+  return `${origin}/api/pulse/trump-media?id=${encodeMediaId(url)}`;
 }
 
 function enrichFromArchive(posts, avatarUrl, origin) {

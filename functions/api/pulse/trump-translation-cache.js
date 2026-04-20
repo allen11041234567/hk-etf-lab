@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116434776225677515": {
+    "content_zh_cn": "Ruddy：特朗普已凭借9场胜利赢得这场战争：https://www.newsmax.com/ruddy/ruddy-donald-trump-iran/2026/04/16/id/1253115/",
+    "content_zh_hk": "Ruddy：特朗普已憑藉9場勝利贏得這場戰爭：https://www.newsmax.com/ruddy/ruddy-donald-trump-iran/2026/04/16/id/1253115/",
+    "content_ko": "Ruddy: 트럼프는 이미 9번의 승리로 전쟁에서 이겼다: https://www.newsmax.com/ruddy/ruddy-donald-trump-iran/2026/04/16/id/1253115/"
+  },
   "https://truthsocial.com/@realDonaldTrump/116433972349508843": {
     "content_zh_cn": "https://x.com/americafirsst/status/2045609944037077104?s=46",
     "content_zh_hk": "https://x.com/americafirsst/status/2045609944037077104?s=46",

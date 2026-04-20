@@ -15,9 +15,21 @@ function isAllowedHost(target = '') {
   return /truth-archive\.us-iad-1\.linodeobjects\.com|static-assets-1\.truthsocial\.com|www\.trumpstruth\.org/i.test(target);
 }
 
+function decodeMediaId(id = '') {
+  try {
+    const normalized = String(id).replace(/-/g, '+').replace(/_/g, '/');
+    const padded = normalized + '='.repeat((4 - normalized.length % 4) % 4);
+    return atob(padded);
+  } catch {
+    return '';
+  }
+}
+
 async function proxy(request) {
   const url = new URL(request.url);
-  const target = url.searchParams.get('url') || '';
+  const mediaId = url.searchParams.get('id') || '';
+  const rawUrl = url.searchParams.get('url') || '';
+  const target = rawUrl || decodeMediaId(mediaId);
   if (!/^https:\/\//i.test(target)) {
     return new Response('bad url', { status: 400, headers: corsHeaders('text/plain; charset=utf-8') });
   }
