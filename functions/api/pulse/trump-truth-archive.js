@@ -170,6 +170,18 @@ function dedupePosts(posts) {
   return deduped;
 }
 
+function hasVideoMedia(post) {
+  return Array.isArray(post?.media) && post.media.some((item) => {
+    const type = String(item?.type || '').toLowerCase();
+    const mediaUrl = String(item?.url || '');
+    return type.includes('video') || /\.(mp4|mov|webm)(\?|$)/i.test(mediaUrl);
+  });
+}
+
+function dropVideoPosts(posts) {
+  return (posts || []).filter((post) => !hasVideoMedia(post));
+}
+
 function keepRecentPosts(posts, hours = RECENT_HOURS) {
   const cutoff = Date.now() - hours * 60 * 60 * 1000;
   const recent = (posts || []).filter((post) => {
@@ -207,7 +219,8 @@ export async function onRequestGet(context) {
     const avatarUrl = `${url.origin}/assets/home/trump-home.jpg`;
     const mergedPosts = enrichFromArchive(posts, avatarUrl, url.origin);
     const dedupedPosts = dedupePosts(mergedPosts);
-    const finalPosts = keepRecentPosts(dedupedPosts);
+    const noVideoPosts = dropVideoPosts(dedupedPosts);
+    const finalPosts = keepRecentPosts(noVideoPosts);
     const body = JSON.stringify({
       ok: true,
       fetchedAt: new Date().toISOString(),
