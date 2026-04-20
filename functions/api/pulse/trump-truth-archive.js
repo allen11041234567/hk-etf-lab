@@ -184,8 +184,8 @@ export async function onRequestGet(context) {
   const { request } = context;
   const url = new URL(request.url);
   const cache = caches.default;
-  const liveKey = new Request(`${url.origin}/__edge/pulse/trump-truth-archive/live-v3`);
-  const staleKey = new Request(`${url.origin}/__edge/pulse/trump-truth-archive/stale-v3`);
+  const liveKey = new Request(`${url.origin}/__edge/pulse/trump-truth-archive/live-v4`);
+  const staleKey = new Request(`${url.origin}/__edge/pulse/trump-truth-archive/stale-v4`);
 
   try {
     const cached = await cache.match(liveKey);

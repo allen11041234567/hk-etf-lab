@@ -4,6 +4,11 @@ export const TRUMP_TRANSLATION_CACHE = {
     "content_zh_hk": "Ruddy：特朗普已憑藉9場勝利贏得這場戰爭：https://www.newsmax.com/ruddy/ruddy-donald-trump-iran/2026/04/16/id/1253115/",
     "content_ko": "Ruddy: 트럼프는 이미 9번의 승리로 전쟁에서 이겼다: https://www.newsmax.com/ruddy/ruddy-donald-trump-iran/2026/04/16/id/1253115/"
   },
+  "https://truthsocial.com/@realDonaldTrump/116434773211303526": {
+    "content_zh_cn": "麦克劳克林民调：选民在伊朗问题上支持特朗普：https://www.newsmax.com/mclaughlin/midterm-republican-voters/2026/04/17/id/1253286/",
+    "content_zh_hk": "麥克勞克林民調：選民在伊朗問題上支持特朗普：https://www.newsmax.com/mclaughlin/midterm-republican-voters/2026/04/17/id/1253286/",
+    "content_ko": "맥러플린 여론조사: 유권자들은 이란 문제에서 트럼프를 지지 https://www.newsmax.com/mclaughlin/midterm-republican-voters/2026/04/17/id/1253286/"
+  },
   "https://truthsocial.com/@realDonaldTrump/116433972349508843": {
     "content_zh_cn": "https://x.com/americafirsst/status/2045609944037077104?s=46",
     "content_zh_hk": "https://x.com/americafirsst/status/2045609944037077104?s=46",
