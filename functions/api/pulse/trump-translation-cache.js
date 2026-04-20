@@ -1,4 +1,14 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116437457191403164": {
+    "content_zh_cn": "以色列从未说服我与伊朗开战。真正促使我这样做的，是10月7日的后果，再加上我一贯以来的看法：伊朗绝不能拥有核武器。\n\n我看着、读着那些假新闻评论员和民调，简直难以置信。他们说的话里，90%都是谎言和凭空编造的故事，而那些民调也都被操纵了，就像2020年美国总统大选被操纵一样。\n\n就像委内瑞拉的结果一样，媒体并不愿意谈论；而伊朗的结果将会令人惊叹——如果伊朗的新领导人（政权更迭！）足够聪明，伊朗就能拥有一个伟大而繁荣的未来！\n\n总统 DJT",
+    "content_zh_hk": "以色列從未說服我與伊朗開戰。真正促使我這樣做的，是10月7日的後果，再加上我一貫以來的看法：伊朗絕不能擁有核武器。\n\n我看着、讀着那些假新聞評論員和民調，簡直難以置信。他們說的話裏，90%都是謊言和憑空編造的故事，而那些民調也都被操縱了，就像2020年美國總統大選被操縱一樣。\n\n就像委內瑞拉的結果一樣，媒體並不願意談論；而伊朗的結果將會令人驚嘆——如果伊朗的新領導人（政權更迭！）足夠聰明，伊朗就能擁有一個偉大而繁榮的未來！\n\n總統 DJT",
+    "content_ko": "이스라엘이 나를 설득해 이란과의 전쟁에 나서게 한 적은 결코 없다. 그렇게 하게 만든 것은 10월 7일의 결과였고, 여기에 더해 내가 평생 견지해 온 신념, 즉 이란은 결코 핵무기를 가져서는 안 된다는 점이었다.\n\n나는 가짜뉴스 평론가들과 여론조사를 보며, 또 읽으며 완전히 믿기지 않는다. 그들이 하는 말의 90%는 거짓말이자 지어낸 이야기이며, 여론조사도 모두 조작됐다. 2020년 미국 대통령선거가 조작됐던 것과 마찬가지다.\n\n언론이 말하길 꺼리는 베네수엘라의 결과와 마찬가지로, 이란의 결과도 놀라울 것이다 - 그리고 이란의 새로운 지도자들(정권교체!)이 현명하다면, 이란은 위대하고 번영하는 미래를 가질 수 있다!\n\n대통령 DJT"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116436865777263574": {
+    "content_zh_cn": "特朗普经济：零售销售和住房市场表明，消费者依然具有韧性：https://justthenews.com/nation/states/center-square/everyday-economics-retail-sales-and-housing-suggest-resilient-consumer",
+    "content_zh_hk": "特朗普經濟：零售銷售和房屋市場顯示，消費者依然具韌性：https://justthenews.com/nation/states/center-square/everyday-economics-retail-sales-and-housing-suggest-resilient-consumer",
+    "content_ko": "트럼프 경제: 소매판매와 주택시장은 소비자의 회복력이 여전하다는 점을 시사한다: https://justthenews.com/nation/states/center-square/everyday-economics-retail-sales-and-housing-suggest-resilient-consumer"
+  },
   "https://truthsocial.com/@realDonaldTrump/116434776225677515": {
     "content_zh_cn": "Ruddy：特朗普已凭借9场胜利赢得这场战争：https://www.newsmax.com/ruddy/ruddy-donald-trump-iran/2026/04/16/id/1253115/",
     "content_zh_hk": "Ruddy：特朗普已憑藉9場勝利贏得這場戰爭：https://www.newsmax.com/ruddy/ruddy-donald-trump-iran/2026/04/16/id/1253115/",
