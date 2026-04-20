@@ -96,12 +96,24 @@
     function formatCount(n){return new Intl.NumberFormat('en-US').format(Number(n||0))}
     function preferredText(post){if(currentLang==='zh') return post.content_zh_cn||post.content||''; return post.content||post.content_zh_cn||''}
     function normalizeMediaUrl(url){if(!url) return ''; if(/^https?:\/\//i.test(url)) return url; if(url.startsWith('/')) return url; return url;}
+    async function attachPlayableBlob(videoEl, url){
+      try{
+        const resp=await fetch(url,{cache:'force-cache'});
+        if(!resp.ok) throw new Error(`HTTP ${resp.status}`);
+        const blob=await resp.blob();
+        const blobUrl=URL.createObjectURL(blob);
+        videoEl.src=blobUrl;
+        videoEl.dataset.blobUrl=blobUrl;
+      }catch(err){
+        console.error('video blob load failed', err, url);
+      }
+    }
     function bindLangToggle(){document.querySelectorAll('.toggle-btn').forEach(btn=>{btn.addEventListener('click',()=>{currentLang=btn.dataset.lang;document.querySelectorAll('.toggle-btn').forEach(el=>el.classList.toggle('active',el===btn));render(latestPosts);});});}
     function render(posts){latestPosts=posts;postsEl.innerHTML='';countStat.textContent=String(posts.length);latestStat.textContent=posts[0]?.created_at?timeAgo(posts[0].created_at):(posts[0]?.created_at_text||'--');
       posts.forEach(post=>{try{const el=tpl.content.firstElementChild.cloneNode(true);el.querySelector('.time').textContent=post.created_at_text||timeAgo(post.created_at);const body=el.querySelector('.body');body.textContent=preferredText(post);body.classList.toggle('is-original', currentLang==='en');const avatar=el.querySelector('.avatar-img'); if(post.avatar){avatar.src=normalizeMediaUrl(post.avatar); avatar.style.display='block';} else {avatar.style.display='none';}
         const meta=el.querySelector('.meta');[['内容类型','最新发言'],['阅读模式','中文 / 原文切换']].forEach(([a,b])=>{const tag=document.createElement('span');tag.className='tag';tag.textContent=`${a} · ${b}`;meta.appendChild(tag);});
         const mediaWrap=el.querySelector('.media');
-        (post.media||[]).forEach(item=>{const type=((item&&item.type)||'').toLowerCase(); const rawUrl=(typeof item==='string')?item:((item&&(item.url||item.preview_url||item.remote_url))||''); const url=normalizeMediaUrl(rawUrl); if(!url) return; if(type.includes('video') || /\.(mp4|mov|webm)(\?|$)/i.test(url)){const v=document.createElement('video'); v.controls=true; v.preload='metadata'; v.playsInline=true; v.setAttribute('playsinline',''); v.setAttribute('webkit-playsinline',''); const poster=normalizeMediaUrl((item&&item.poster_url)||''); if(poster) v.poster=poster; const source=document.createElement('source'); source.src=url; source.type=/\.mov(\?|$)/i.test(url)?'video/quicktime':/\.webm(\?|$)/i.test(url)?'video/webm':'video/mp4'; v.appendChild(source); const link=document.createElement('a'); link.href=url; link.target='_blank'; link.rel='noopener noreferrer'; link.textContent='如果视频无法内嵌播放，点这里单独打开'; link.style.display='block'; link.style.marginTop='8px'; mediaWrap.appendChild(v); mediaWrap.appendChild(link);} else {const img=document.createElement('img'); img.src=url; img.alt='post media'; img.loading='lazy'; mediaWrap.appendChild(img);} });
+        (post.media||[]).forEach(item=>{const type=((item&&item.type)||'').toLowerCase(); const rawUrl=(typeof item==='string')?item:((item&&(item.url||item.preview_url||item.remote_url))||''); const url=normalizeMediaUrl(rawUrl); if(!url) return; if(type.includes('video') || /\.(mp4|mov|webm)(\?|$)/i.test(url)){const v=document.createElement('video'); v.controls=true; v.preload='metadata'; v.playsInline=true; v.setAttribute('playsinline',''); v.setAttribute('webkit-playsinline',''); const poster=normalizeMediaUrl((item&&item.poster_url)||''); if(poster) v.poster=poster; v.crossOrigin='anonymous'; mediaWrap.appendChild(v); attachPlayableBlob(v, url); const link=document.createElement('a'); link.href=url; link.target='_blank'; link.rel='noopener noreferrer'; link.textContent='如果视频无法内嵌播放，点这里单独打开'; link.style.display='block'; link.style.marginTop='8px'; mediaWrap.appendChild(link);} else {const img=document.createElement('img'); img.src=url; img.alt='post media'; img.loading='lazy'; mediaWrap.appendChild(img);} });
         el.querySelector('.origin-link').href=post.url||post.status_url||'https://www.trumpstruth.org/';postsEl.appendChild(el);}catch(err){console.error('render post failed', err, post);}});}
     async function refresh(){if(document.hidden) return; try{const resp=await fetch(FEED,{cache:'no-store'});if(!resp.ok) throw new Error(`HTTP ${resp.status}`);const data=await resp.json();if(!data.ok) throw new Error(data.error||'unknown error');errorBox.style.display='none';render(data.posts||[]);}catch(err){errorBox.textContent='当前内容更新稍慢，请稍后刷新重试';errorBox.style.display='block';}}
     document.addEventListener('visibilitychange',()=>{ if(!document.hidden) refresh(); });
