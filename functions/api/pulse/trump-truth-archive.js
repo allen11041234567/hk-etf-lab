@@ -49,13 +49,25 @@ function stripTags(str = '') {
     .trim();
 }
 
+function isLikelyAttachmentUrl(url = '') {
+  if (!url) return false;
+  if (/accounts\/avatars\//i.test(url)) return false;
+  if (/\/statuses\/\d+$/i.test(url)) return false;
+  if (/truthsocial\.com\/@realDonaldTrump\//i.test(url)) return false;
+  if (/trumpstruth\.org\/?$/i.test(url)) return false;
+  if (/\.(png|jpe?g|gif|webp|mp4|mov|webm)(\?|$)/i.test(url)) return true;
+  if (/\/attachments\//i.test(url)) return true;
+  if (/\/api\/truth-social\/media\//i.test(url)) return true;
+  return false;
+}
+
 function extractAttachments(chunk) {
   const blockMatch = chunk.match(/<div class="status__attachments[^"]*">([\s\S]*?)(?:<\/div>\s*<div class="status__footer"|<\/div>\s*<\/div>|<\/article>|$)/i);
   const block = blockMatch?.[1] || chunk || '';
   const urls = [
     ...block.matchAll(/<(?:a|img|source|video)[^>]+(?:href|src|data-url)="(https:[^"]+)"/gi),
     ...block.matchAll(/<(?:a|img|source|video)[^>]+(?:href|src|data-url)="(\/api\/truth-social\/media\/[^"]+)"/gi),
-  ].map((m) => m[1]);
+  ].map((m) => m[1]).filter(isLikelyAttachmentUrl);
   return [...new Set(urls)].map((url) => ({
     url,
     type: /\.(mp4|mov|webm)(\?|$)/i.test(url) || /\/video\//i.test(url) ? 'video' : 'image',
@@ -88,7 +100,13 @@ function extractPosts(html) {
 }
 
 function hasBadTranslation(text = '') {
-  return BAD_TRANSLATION_PATTERNS.some((x) => String(text || '').includes(x));
+  const raw = String(text || '').trim();
+  if (!raw) return false;
+  if (BAD_TRANSLATION_PATTERNS.some((x) => raw.includes(x))) return true;
+  if (/^链接内容无法直接访问/i.test(raw)) return true;
+  if (/^無法/i.test(raw)) return true;
+  if (/^请提供/i.test(raw) || /^請提供/i.test(raw)) return true;
+  return false;
 }
 
 function enrichFromArchive(posts, avatarUrl) {
