@@ -32,7 +32,9 @@ async function proxy(request) {
   const range = request.headers.get('Range');
   if (range) upstreamHeaders['Range'] = range;
 
-  const upstream = await fetch(target, { method: request.method === 'HEAD' ? 'HEAD' : 'GET', headers: upstreamHeaders });
+  // Some origins do not answer HEAD correctly for media. Use GET for both and
+  // return an empty body for HEAD while preserving media headers.
+  const upstream = await fetch(target, { method: 'GET', headers: upstreamHeaders });
   const headers = new Headers(corsHeaders(upstream.headers.get('content-type') || 'application/octet-stream'));
   headers.set('accept-ranges', upstream.headers.get('accept-ranges') || 'bytes');
   const passthrough = ['content-length', 'content-range', 'etag', 'last-modified'];
