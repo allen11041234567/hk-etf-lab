@@ -116,12 +116,18 @@ function hasBadTranslation(text = '') {
   return false;
 }
 
-function enrichFromArchive(posts, avatarUrl) {
+function proxyMedia(url, origin) {
+  if (!url || !/^https?:\/\//i.test(url)) return url;
+  return `${origin}/api/pulse/trump-media?url=${encodeURIComponent(url)}`;
+}
+
+function enrichFromArchive(posts, avatarUrl, origin) {
   return posts.map((post) => {
     const translated = TRUMP_TRANSLATION_CACHE[post.url] || {};
     const content_zh_cn = hasBadTranslation(translated.content_zh_cn) ? (post.content || '') : (translated.content_zh_cn || '');
     const content_zh_hk = hasBadTranslation(translated.content_zh_hk) ? (post.content || '') : (translated.content_zh_hk || '');
     const content_ko = hasBadTranslation(translated.content_ko) ? (post.content || '') : (translated.content_ko || '');
+    const media = (Array.isArray(post.media) ? post.media : []).map((m) => ({ ...m, url: proxyMedia(m.url, origin), poster_url: proxyMedia(m.poster_url, origin) }));
     return {
       ...post,
       avatar: avatarUrl,
@@ -131,7 +137,7 @@ function enrichFromArchive(posts, avatarUrl) {
       favourites_count: null,
       reblogs_count: null,
       replies_count: null,
-      media: Array.isArray(post.media) ? post.media : [],
+      media,
     };
   });
 }
@@ -195,7 +201,7 @@ export async function onRequestGet(context) {
     const html = await upstream.text();
     const posts = extractPosts(html);
     const avatarUrl = `${url.origin}/assets/home/trump-home.jpg`;
-    const mergedPosts = enrichFromArchive(posts, avatarUrl);
+    const mergedPosts = enrichFromArchive(posts, avatarUrl, url.origin);
     const dedupedPosts = dedupePosts(mergedPosts);
     const finalPosts = keepRecentPosts(dedupedPosts);
     const body = JSON.stringify({
