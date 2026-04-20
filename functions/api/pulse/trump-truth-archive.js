@@ -50,12 +50,15 @@ function stripTags(str = '') {
 }
 
 function extractAttachments(chunk) {
-  const blockMatch = chunk.match(/<div class="status__attachments[^"]*">([\s\S]*?)<\/div>\s*(?:<\/div>|<div class="status__footer")/i);
-  const block = blockMatch?.[1] || '';
-  const urls = [...block.matchAll(/<(?:a|img|source)[^>]+(?:href|src)="(https:[^"]+)"/gi)].map((m) => m[1]);
+  const blockMatch = chunk.match(/<div class="status__attachments[^"]*">([\s\S]*?)(?:<\/div>\s*<div class="status__footer"|<\/div>\s*<\/div>|<\/article>|$)/i);
+  const block = blockMatch?.[1] || chunk || '';
+  const urls = [
+    ...block.matchAll(/<(?:a|img|source|video)[^>]+(?:href|src|data-url)="(https:[^"]+)"/gi),
+    ...block.matchAll(/<(?:a|img|source|video)[^>]+(?:href|src|data-url)="(\/api\/truth-social\/media\/[^"]+)"/gi),
+  ].map((m) => m[1]);
   return [...new Set(urls)].map((url) => ({
     url,
-    type: /\.(mp4|mov|webm)(\?|$)/i.test(url) ? 'video' : 'image',
+    type: /\.(mp4|mov|webm)(\?|$)/i.test(url) || /\/video\//i.test(url) ? 'video' : 'image',
   }));
 }
 
