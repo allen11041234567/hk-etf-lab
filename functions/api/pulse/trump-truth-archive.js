@@ -5,6 +5,11 @@ const CACHE_SECONDS = 120;
 const STALE_SECONDS = 600;
 const RECENT_HOURS = 48;
 const MAX_POSTS = 80;
+const BAD_TRANSLATION_PATTERNS = [
+  '无法访问该链接内容',
+  '無法存取該連結內容',
+  '해당 링크의 내용을 확인할 수 없습니다',
+];
 
 function headers(cacheControl, state) {
   return {
@@ -75,15 +80,22 @@ function extractPosts(html) {
   }).filter((post) => post.content || post.url);
 }
 
+function hasBadTranslation(text = '') {
+  return BAD_TRANSLATION_PATTERNS.some((x) => String(text || '').includes(x));
+}
+
 function enrichFromArchive(posts, avatarUrl) {
   return posts.map((post) => {
     const translated = TRUMP_TRANSLATION_CACHE[post.url] || {};
+    const content_zh_cn = hasBadTranslation(translated.content_zh_cn) ? '' : (translated.content_zh_cn || '');
+    const content_zh_hk = hasBadTranslation(translated.content_zh_hk) ? '' : (translated.content_zh_hk || '');
+    const content_ko = hasBadTranslation(translated.content_ko) ? '' : (translated.content_ko || '');
     return {
       ...post,
       avatar: avatarUrl,
-      content_zh_cn: translated.content_zh_cn || '',
-      content_zh_hk: translated.content_zh_hk || '',
-      content_ko: translated.content_ko || '',
+      content_zh_cn,
+      content_zh_hk,
+      content_ko,
       favourites_count: null,
       reblogs_count: null,
       replies_count: null,

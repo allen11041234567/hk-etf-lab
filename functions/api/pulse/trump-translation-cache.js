@@ -1,8 +1,8 @@
 export const TRUMP_TRANSLATION_CACHE = {
   "https://truthsocial.com/@realDonaldTrump/116433972349508843": {
-    "content_zh_cn": "无法访问该链接内容。请提供帖子原文，我将按要求翻译。",
-    "content_zh_hk": "無法存取該連結內容。請提供帖文原文，我將按要求翻譯。",
-    "content_ko": "해당 링크의 내용을 확인할 수 없습니다. 게시물 원문을 보내주시면 요청하신 형식에 맞춰 번역해 드리겠습니다."
+    "content_zh_cn": "链接内容无法直接访问。请提供帖文原文，我将按要求返回严格 JSON。",
+    "content_zh_hk": "連結內容無法直接存取。請提供帖文原文，我將按要求返回嚴格 JSON。",
+    "content_ko": "링크 내용을 직접 확인할 수 없습니다. 게시물 원문을 보내주시면 요청하신 형식의 엄격한 JSON으로 반환하겠습니다."
   },
   "https://truthsocial.com/@realDonaldTrump/116433035427727878": {
     "content_zh_cn": "白宫如何制定出一套新的作战方案，以应对华盛顿记者团：\nhttps://www.washingtontimes.com/news/2025/dec/26/white-house-drew-new-battle-plan-take-washington-press-corps/",
