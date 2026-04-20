@@ -1,8 +1,8 @@
 export const TRUMP_TRANSLATION_CACHE = {
   "https://truthsocial.com/@realDonaldTrump/116433972349508843": {
-    "content_zh_cn": "",
-    "content_zh_hk": "",
-    "content_ko": ""
+    "content_zh_cn": "https://x.com/americafirsst/status/2045609944037077104?s=46",
+    "content_zh_hk": "https://x.com/americafirsst/status/2045609944037077104?s=46",
+    "content_ko": "https://x.com/americafirsst/status/2045609944037077104?s=46"
   },
   "https://truthsocial.com/@realDonaldTrump/116433035427727878": {
     "content_zh_cn": "白宫如何制定出一套新的作战方案，以应对华盛顿记者团：\nhttps://www.washingtontimes.com/news/2025/dec/26/white-house-drew-new-battle-plan-take-washington-press-corps/",

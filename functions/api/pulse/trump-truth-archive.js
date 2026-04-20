@@ -52,22 +52,18 @@ function stripTags(str = '') {
 }
 
 function extractAttachments(chunk) {
-  const blockMatch = chunk.match(/<div class="status__attachments[^"]*">([\s\S]*?)(?:<\/div>\s*<div class="status__footer"|<\/div>\s*<\/div>|<\/article>|$)/i);
-  const block = blockMatch?.[1] || '';
-  if (!block) return [];
-
   const items = [];
 
-  for (const m of block.matchAll(/<div class="status-attachment\s+status-attachment--video">([\s\S]*?)<\/div>/gi)) {
+  for (const m of chunk.matchAll(/<div class="status-attachment\s+status-attachment--video">([\s\S]*?)<\/video>[\s\S]*?<\/div>/gi)) {
     const inner = m[1] || '';
-    const videoUrl = inner.match(/<video[^>]+src="([^"]+)"/i)?.[1] || '';
+    const videoUrl = inner.match(/src="([^"]+)"/i)?.[1] || '';
     const posterUrl = inner.match(/poster="([^"]+)"/i)?.[1] || '';
     if (videoUrl) items.push({ url: videoUrl, type: 'video', poster_url: posterUrl || undefined });
   }
 
-  for (const m of block.matchAll(/<div class="status-attachment\s+status-attachment--image">([\s\S]*?)<\/div>/gi)) {
+  for (const m of chunk.matchAll(/<div class="status-attachment\s+status-attachment--image">([\s\S]*?)<\/div>/gi)) {
     const inner = m[1] || '';
-    const imageUrl = inner.match(/<(?:a|img)[^>]+(?:href|src)="([^"]+)"/i)?.[1] || '';
+    const imageUrl = inner.match(/<a[^>]+href="([^"]+)"/i)?.[1] || inner.match(/<img[^>]+src="([^"]+)"/i)?.[1] || '';
     if (imageUrl) items.push({ url: imageUrl, type: 'image' });
   }
 
