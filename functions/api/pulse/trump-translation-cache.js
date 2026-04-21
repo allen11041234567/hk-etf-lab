@@ -1,4 +1,34 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116440547673226976": {
+    "content_zh_cn": "“午夜铁锤行动”已将伊朗的核尘埃设施彻底、完全摧毁。因此，要把它挖出来将是一个漫长而艰难的过程。假新闻CNN以及其他腐败的媒体网络和平台，没有给予我们伟大飞行员应得的赞誉——总是试图贬低、轻视他们——失败者！！！",
+    "content_zh_hk": "「午夜鐵鎚行動」已將伊朗的核塵埃設施徹底、完全摧毀。因此，要把它挖出來將會是一個漫長而艱難的過程。假新聞CNN以及其他腐敗的媒體網絡和平台，沒有給予我們偉大飛行員應得的讚譽——總是試圖貶低、輕視他們——失敗者！！！",
+    "content_ko": "\"미드나이트 해머 작전\"은 이란의 핵 먼지 시설들을 완전하고 철저하게 초토화했다. 따라서 그것을 파내는 일은 길고 어려운 과정이 될 것이다. 가짜 뉴스 CNN과 기타 부패한 미디어 네트워크 및 플랫폼들은 우리의 위대한 조종사들이 마땅히 받아야 할 공로를 인정하지 않는다 - 언제나 깎아내리고 비하하려 한다 - 패배자들!!!"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116440475208030352": {
+    "content_zh_cn": "英国首相基尔·斯塔默承认，在选择驻华盛顿大使时，他“判断失误”。我同意，这个人选确实很糟糕。不过，仍有充足时间挽回！特朗普总统",
+    "content_zh_hk": "英國首相施紀賢承認，在選擇駐華盛頓大使時，他「判斷失誤」。我同意，這個人選確實很差。不過，仍有充足時間補救！特朗普總統",
+    "content_ko": "영국의 키어 스타머 총리는 워싱턴 주재 대사를 선택할 때 자신이 “잘못된 판단을 했다”고 인정했다. 나도 동의한다, 정말 형편없는 인선이었다. 하지만, 아직 만회할 시간은 충분하다! DJT 대통령"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116440126689763629": {
+    "content_zh_cn": "特朗普在老年群体中的支持率创历史新高，税收抵扣政策提振表现：https://justthenews.com/government/white-house/trumps-historic-high-rating-seniors-sweetened-tax-deductions",
+    "content_zh_hk": "特朗普在長者群體中的支持率創歷史新高，稅務扣減政策提振表現：https://justthenews.com/government/white-house/trumps-historic-high-rating-seniors-sweetened-tax-deductions",
+    "content_ko": "트럼프의 고령층 지지율이 세금 공제에 힘입어 사상 최고치를 기록: https://justthenews.com/government/white-house/trumps-historic-high-rating-seniors-sweetened-tax-deductions"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116440125310523388": {
+    "content_zh_cn": "特朗普经济：零售销售和住房市场显示，消费者依然具有韧性：https://justthenews.com/nation/states/center-square/everyday-economics-retail-sales-and-housing-suggest-resilient-consumer",
+    "content_zh_hk": "特朗普經濟：零售銷售和樓市顯示，消費者依然具韌性：https://justthenews.com/nation/states/center-square/everyday-economics-retail-sales-and-housing-suggest-resilient-consumer",
+    "content_ko": "트럼프 경제: 소매판매와 주택시장은 소비자가 여전히 견조하다는 점을 시사한다: https://justthenews.com/nation/states/center-square/everyday-economics-retail-sales-and-housing-suggest-resilient-consumer"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116440123694064271": {
+    "content_zh_cn": "叛国！！！\n特朗普总统\nhttps://justthenews.com/accountability/political-ethics/democrats-ukraine-narrative-has-gone-reverse-gop-seeks-expunge",
+    "content_zh_hk": "叛國！！！\n特朗普總統\nhttps://justthenews.com/accountability/political-ethics/democrats-ukraine-narrative-has-gone-reverse-gop-seeks-expunge",
+    "content_ko": "반역이다!!!\n트럼프 대통령\nhttps://justthenews.com/accountability/political-ethics/democrats-ukraine-narrative-has-gone-reverse-gop-seeks-expunge"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116440120057142433": {
+    "content_zh_cn": "感谢参议员里克·斯科特。希望正义最终能够伸张！！！\n——特朗普总统（DJT）\nhttps://justthenews.com/accountability/political-ethics/sen-rick-scott-introduces-legislation-repudiate-2019-trump",
+    "content_zh_hk": "感謝參議員里克·斯科特。希望正義最終能夠伸張！！！\n——特朗普總統（DJT）\nhttps://justthenews.com/accountability/political-ethics/sen-rick-scott-introduces-legislation-repudiate-2019-trump",
+    "content_ko": "릭 스콧 상원의원께 감사드립니다. 부디 정의가 마침내 실현되기를 바랍니다!!!\n— 도널드 J. 트럼프 대통령(DJT)\nhttps://justthenews.com/accountability/political-ethics/sen-rick-scott-introduces-legislation-repudiate-2019-trump"
+  },
   "https://truthsocial.com/@realDonaldTrump/116438448094769480": {
     "content_zh_cn": "伊朗领导层迫使数百艘船只驶向美国，主要前往得州、路易斯安那州和阿拉斯加，以获取他们的石油——非常感谢！\n美国总统 唐纳德·J·特朗普",
     "content_zh_hk": "伊朗領導層迫使數百艘船隻駛向美國，主要前往德州、路易斯安那州和阿拉斯加，以取得他們的石油——非常感謝！\n美國總統 唐納德·J·特朗普",
