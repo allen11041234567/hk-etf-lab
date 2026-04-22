@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116449851372799866": {
+    "content_zh_cn": "BBC涉唐纳德·特朗普影片制片方称，对剪辑错误并不知情：https://deadline.com/2025/11/bbc-donald-trump-saga-october-films-kept-in-dark-1236613974/",
+    "content_zh_hk": "BBC涉唐納德·特朗普影片製片方稱，對剪輯錯誤並不知情：https://deadline.com/2025/11/bbc-donald-trump-saga-october-films-kept-in-dark-1236613974/",
+    "content_ko": "BBC의 도널드 트럼프 관련 영화 제작사는 편집 오류에 대해 사전에 알지 못했다고 밝혔다: https://deadline.com/2025/11/bbc-donald-trump-saga-october-films-kept-in-dark-1236613974/"
+  },
   "https://truthsocial.com/@realDonaldTrump/116449588860876736": {
     "content_zh_cn": "参议院多数党领袖约翰·图恩（John Thune）和参议员林赛·格雷厄姆（Lindsey Graham）已经迈出了关键的第一步，推动通过另一项预算协调法案，为我们伟大的边境巡逻队和ICE执法人员提供资金。\n激进左翼民主党人，以及他们那位所谓的“领袖”——“爱哭的”查克·舒默（Cryin’ Chuck Schumer），这位美国历史上最无能的参议员之一，将试图在这一过程中提出“修正案”，以分裂共和党人。共和党人必须团结一致、实现统一，才能完成这件事，并确保美国安全——而这恰恰是民主党人毫不关心的。\n感谢大家对此事的关注。让美国再次伟大！\n总统 唐纳德·J·特朗普",
     "content_zh_hk": "參議院多數黨領袖約翰·圖恩（John Thune）和參議員林賽·格雷厄姆（Lindsey Graham）已經邁出了關鍵的第一步，推動通過另一項預算協調法案，為我們偉大的邊境巡邏隊和ICE執法人員提供資金。\n激進左翼民主黨人，以及他們那位所謂的「領袖」——「愛哭的」查克·舒默（Cryin’ Chuck Schumer），這位美國歷史上最無能的參議員之一，將試圖在這一過程中提出「修正案」，以分化共和黨人。共和黨人必須團結一致、實現統一，才能完成這件事，並確保美國安全——而這恰恰是民主黨人毫不關心的。\n感謝大家對此事的關注。讓美國再次偉大！\n總統 唐納德·J·特朗普",
