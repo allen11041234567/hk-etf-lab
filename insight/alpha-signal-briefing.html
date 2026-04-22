@@ -82,14 +82,14 @@
     <section class="hero">
       <div class="hero-row">
         <div>
-          <div class="eyebrow">隐藏测试页 · API 驱动实时版</div>
+          <div class="eyebrow">API 驱动实时版</div>
           <h1>Polymarket 金融预测信号台</h1>
-          <div class="sub">这页不再读本地静态快照，而是前端直接轮询我们自己的 API。底层先尽量覆盖更大的金融预测市场池，再把“现在该看什么、为什么值得看、可能映射哪些资产”翻成中文人话给你看。</div>
+          <div class="sub">聚焦金融预测市场中的关键异动、趋势变化与重点账户动作，帮助你更快识别现在最值得盯的交易主线，以及它们可能映射的资产方向。</div>
           <div class="hero-meta">
             <div class="pill">官方 Gamma + CLOB 公开接口</div>
+            <div class="pill">重点账户持续跟踪</div>
             <div class="pill">中文读者优先表达</div>
-            <div class="pill">隐藏入口，不挂首页</div>
-            <div class="pill">硬排除 习近平 / 台湾 / 台海相关内容</div>
+            <div class="pill">金融主线优先筛选</div>
           </div>
         </div>
         <div class="hero-side">
@@ -125,14 +125,14 @@
     </section>
 
     <section class="section">
-      <div class="section-title"><h2>1 小时异动检测</h2><div class="hint">只走新 API 链路，用最近 1 小时基线比对</div></div>
+      <div class="section-title"><h2>1 小时异动检测</h2><div class="hint">基于最近 1 小时变化识别最值得盯的市场</div></div>
       <div class="grid-2">
         <div class="panel">
           <div class="section-title" style="margin-bottom:10px"><h2 style="font-size:18px">概率 / 成交异动榜</h2><div class="hint" id="anomaly-hint">优先抓 1 小时里明显变快的市场</div></div>
           <div class="signal-list" id="anomaly-signals"></div>
         </div>
         <div class="panel">
-          <div class="section-title" style="margin-bottom:10px"><h2 style="font-size:18px">聪明钱最近在做什么</h2><div class="hint">真实钱包动作，不再只是候选骨架</div></div>
+          <div class="section-title" style="margin-bottom:10px"><h2 style="font-size:18px">重点账户最近在做什么</h2><div class="hint">聚焦最近的代表性动作</div></div>
           <div class="timeline" id="smart-money-actions"></div>
         </div>
       </div>
@@ -175,16 +175,16 @@
     </section>
 
     <section class="section">
-      <div class="section-title"><h2>当前监控市场</h2><div class="hint">保留外链，但页面本身不做公开入口</div></div>
+      <div class="section-title"><h2>当前监控市场</h2><div class="hint">查看重点市场的实时状态与原始市场链接</div></div>
       <div class="markets" id="market-list"></div>
     </section>
 
     <section class="section">
-      <div class="section-title"><h2>下一步继续补强</h2><div class="hint">已经从快照版切到 API 版，接下来做“更像产品”</div></div>
+      <div class="section-title"><h2>阅读说明</h2><div class="hint">先看异动，再看趋势，最后看重点账户动作</div></div>
       <div class="story-grid">
-        <div class="story-card"><div class="k">下一步</div><div class="v">把 finance universe 再继续放大和分主题聚类</div><div class="d">首页只展示精选，但底层监控池继续扩到更接近真正的 finance universe。</div></div>
-        <div class="story-card"><div class="k">第二步</div><div class="v">补单事件详情页和更多“为什么值得看”解释层</div><div class="d">把概率、短时变化、盘口结构、大类资产映射拆得更清楚。</div></div>
-        <div class="story-card"><div class="k">第三步</div><div class="v">再考虑接 WebSocket 做更高频更新</div><div class="d">当前先用 API 轮询，下一阶段再接 Market Channel 做更即时的事件流。</div></div>
+        <div class="story-card"><div class="k">先看</div><div class="v">异动榜</div><div class="d">优先识别短时间内概率、成交和结构同时发生变化的市场。</div></div>
+        <div class="story-card"><div class="k">再看</div><div class="v">趋势解释</div><div class="d">把短时变化放回 24 小时和更长一点的背景里，减少误判。</div></div>
+        <div class="story-card"><div class="k">最后看</div><div class="v">重点账户动作</div><div class="d">确认是否有持续盈利账户参与，以及它们在押注哪条主线。</div></div>
       </div>
     </section>
   </div>
