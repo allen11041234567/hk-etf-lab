@@ -215,49 +215,92 @@ function scoreMarket(market, nearBidDepth, nearAskDepth, topic, discoveryText) {
 }
 
 function shortZhTitle(question = '') {
-  return question
-    .replace(/^Will\s+/i, '')
-    .replace(/ by end of 2026\??$/i, '（到 2026 年底）')
-    .replace(/ by December 31, 2026\??$/i, '（到 2026-12-31）')
-    .replace(/ by June 30, 2026\??$/i, '（到 2026-06-30）')
-    .replace(/\?$/, '')
-    .replace(/Bitcoin/g, '比特币')
-    .replace(/Ethereum/g, '以太坊')
-    .replace(/Fed/g, '美联储')
-    .replace(/Trump/g, '特朗普')
-    .replace(/Russia/g, '俄罗斯')
-    .replace(/Ukraine/g, '乌克兰')
-    .replace(/recession/ig, '衰退')
-    .trim();
+  let q = (question || '').trim();
+  if (!q) return '--';
+
+  const exactRules = [
+    [/^Will no Fed rate cuts happen in 2026\?$/i, '2026 年美联储会零降息吗'],
+    [/^Will (\d+) Fed rate cuts happen in 2026\?$/i, (_, n) => `2026 年会出现 ${n} 次美联储降息吗`],
+    [/^Will Bitcoin hit \$([\d.]+[kKmM]?) by June 30, 2026\?$/i, (_, p) => `比特币会在 2026 年 6 月 30 日前触及 ${p} 美元吗`],
+    [/^Will Bitcoin hit \$([\d.]+[kKmM]?) by December 31, 2026\?$/i, (_, p) => `比特币会在 2026 年 12 月 31 日前触及 ${p} 美元吗`],
+    [/^US recession by end of 2026\?$/i, '美国会在 2026 年底前陷入衰退吗'],
+    [/^USD\.AI FDV above \$([\d.]+[kKmM]?) one day after launch\?$/i, (_, p) => `USD.AI 上线一天后估值会高于 ${p} 美元吗`],
+    [/^US x Iran diplomatic meeting by ([A-Za-z]+ \d{1,2}, 2026)\?$/i, (_, d) => `美国与伊朗会在 ${d} 前举行外交会晤吗`],
+    [/^US x Iran ceasefire extended by ([A-Za-z]+ \d{1,2}, 2026)\?$/i, (_, d) => `美国与伊朗停火会在 ${d} 前延长吗`],
+    [/^特朗普 agree to Iranian enrichment of uranium in April$/i, '特朗普会在 4 月同意伊朗进行铀浓缩吗'],
+  ];
+  for (const [re, value] of exactRules) {
+    const m = q.match(re);
+    if (m) return typeof value === 'function' ? value(...m) : value;
+  }
+
+  q = q.replace(/^Will\s+/i, '');
+  q = q.replace(/\?$/, '');
+  q = q.replace(/ by end of 2026$/i, '（到 2026 年底）');
+  q = q.replace(/ by December 31, 2026$/i, '（到 2026-12-31）');
+  q = q.replace(/ by June 30, 2026$/i, '（到 2026-06-30）');
+  q = q.replace(/ by April (\d{1,2}), 2026$/i, '（到 2026-04-$1）');
+  q = q.replace(/ one day after launch$/i, '（上线 1 天后）');
+  q = q.replace(/ above \$/ig, '高于 ');
+  q = q.replace(/ below \$/ig, '低于 ');
+  q = q.replace(/\$/g, '');
+
+  const dict = [
+    [/Bitcoin/g, '比特币'],
+    [/Ethereum/g, '以太坊'],
+    [/Fed/g, '美联储'],
+    [/interest rates?/ig, '利率'],
+    [/rate cuts?/ig, '降息'],
+    [/rate hikes?/ig, '加息'],
+    [/Trump/g, '特朗普'],
+    [/Russia/g, '俄罗斯'],
+    [/Ukraine/g, '乌克兰'],
+    [/Iran/g, '伊朗'],
+    [/US x /g, '美国与'],
+    [/US /g, '美国 '],
+    [/recession/ig, '衰退'],
+    [/ceasefire/ig, '停火'],
+    [/diplomatic meeting/ig, '外交会晤'],
+    [/inflation/ig, '通胀'],
+    [/tariff/ig, '关税'],
+    [/gold/ig, '黄金'],
+    [/oil/ig, '原油'],
+    [/FDV/g, '估值'],
+    [/launch/ig, '上线'],
+    [/OpenAI/g, 'OpenAI'],
+    [/best AI model/ig, '最佳 AI 模型'],
+  ];
+  for (const [re, to] of dict) q = q.replace(re, to);
+  return q.trim();
 }
 
 function explainMarket(item) {
   const prob = `${item.yesPct.toFixed(1)}%`;
-  const shortMove = item.oneHourChangePct ? `短线 ${pctText(item.oneHourChangePct)}` : `今日 ${pctText(item.oneDayChangePct)}`;
+  const shortMove = Math.abs(item.oneHourChangePct) >= 0.1 ? `最近 1 小时 ${pctText(item.oneHourChangePct)}` : `最近 1 天 ${pctText(item.oneDayChangePct)}`;
   const week = pctText(item.oneWeekChangePct);
   const pressure = item.pressureLabel;
 
-  let assetMap = '更适合拿来观察风险偏好变化。';
+  let assetMap = '更适合当作风险偏好变化的前瞻温度计。';
   if (item.topic === '美联储与利率') assetMap = '通常会映射到美债、黄金、美元和成长股。';
-  else if (item.topic === '加密资产') assetMap = '通常会映射到 BTC、ETH 以及高 beta 风险偏好。';
-  else if (item.topic === '股票与风险偏好') assetMap = '更像美股风格和高 beta 风险偏好的前瞻温度计。';
-  else if (item.topic === '大宗商品') assetMap = '适合联动原油、贵金属和通胀交易主线。';
+  else if (item.topic === '加密资产') assetMap = '通常会映射到比特币、以太坊以及高波动风险偏好。';
+  else if (item.topic === '股票与风险偏好') assetMap = '更像美股风格、科技龙头和高 beta 情绪的前瞻温度计。';
+  else if (item.topic === '大宗商品') assetMap = '适合联动原油、黄金、工业金属和通胀交易主线。';
   else if (item.topic === '外汇') assetMap = '适合联动美元、日元、人民币和全球风险偏好。';
-  else if (item.topic === '地缘风险') assetMap = '适合联动避险资产和宏观风险溢价。';
-  else if (item.topic === '美国政治') assetMap = '适合联动财政、关税和市场风险偏好叙事。';
+  else if (item.topic === '地缘风险') assetMap = '适合联动黄金、原油和宏观风险溢价。';
+  else if (item.topic === '美国政治') assetMap = '适合联动关税、财政预期和市场风险偏好。';
 
-  return `市场当前给这件事 ${prob} 的发生概率，${shortMove}，近一周 ${week}，${pressure}。${assetMap}`;
+  return `当前市场给这件事 ${prob} 的概率定价，${shortMove}，近一周 ${week}，同时 ${pressure}。${assetMap}`;
 }
 
 function financeMapping(item) {
-  if (item.topic === '美联储与利率') return '资产映射：美债 / 黄金 / 纳指 / 美元';
-  if (item.topic === '加密资产') return '资产映射：BTC / ETH / COIN / MSTR';
-  if (item.topic === '股票与风险偏好') return '资产映射：纳指 / 七巨头 / 风险偏好';
-  if (item.topic === '大宗商品') return '资产映射：原油 / 黄金 / 通胀交易';
-  if (item.topic === '外汇') return '资产映射：美元指数 / 日元 / 人民币';
-  if (item.topic === '地缘风险') return '资产映射：黄金 / 原油 / 避险情绪';
-  if (item.topic === '美国政治') return '资产映射：关税 / 财政 / 风险偏好';
-  return '资产映射：观察主线情绪变化';
+  if (item.topic === '美联储与利率') return '对应资产：美债 / 黄金 / 纳指 / 美元';
+  if (item.topic === '加密资产') return '对应资产：比特币 / 以太坊 / COIN / MSTR';
+  if (item.topic === '股票与风险偏好') return '对应资产：纳指 / 七巨头 / 风险偏好';
+  if (item.topic === '大宗商品') return '对应资产：原油 / 黄金 / 通胀交易';
+  if (item.topic === '外汇') return '对应资产：美元指数 / 日元 / 人民币';
+  if (item.topic === '地缘风险') return '对应资产：黄金 / 原油 / 避险情绪';
+  if (item.topic === '美国政治') return '对应资产：关税 / 财政 / 风险偏好';
+  return '对应资产：观察主线情绪变化';
 }
 
 function selectUniverse(markets) {

@@ -84,9 +84,10 @@
         <div>
           <div class="eyebrow">隐藏测试页 · API 驱动实时版</div>
           <h1>Polymarket 金融预测信号台</h1>
-          <div class="sub">这页不再读本地静态快照，而是前端直接轮询我们自己的 API。底层先尽量吃下更大的 finance universe，再把“值得看什么、为什么值得看、对应什么金融映射”翻成人话给你看。</div>
+          <div class="sub">这页不再读本地静态快照，而是前端直接轮询我们自己的 API。底层先尽量覆盖更大的金融预测市场池，再把“现在该看什么、为什么值得看、可能映射哪些资产”翻成中文人话给你看。</div>
           <div class="hero-meta">
             <div class="pill">官方 Gamma + CLOB 公开接口</div>
+            <div class="pill">中文读者优先表达</div>
             <div class="pill">隐藏入口，不挂首页</div>
             <div class="pill">硬排除 习近平 / 台湾 / 台海相关内容</div>
           </div>
@@ -187,10 +188,10 @@
       return `<div class="heat-item"><div><div class="heat-k">${x.topic}</div><div class="heat-v">${x.hottestTitle}</div></div><div style="text-align:right"><div class="heat-num">${x.count}</div><div class="heat-k">平均波动 ${fmtPct(x.avgWeekChangePct)}</div></div></div>`;
     }
     function renderLiquid(x) {
-      return `<div class="time-item"><div class="time-top"><div class="signal-name">${x.titleZh}</div><div class="time-stamp up">24h ${fmtMoney(x.volume24hr)}</div></div><div class="time-desc">近价买盘 ${fmtMoney(x.nearBidDepth)}，近价卖盘 ${fmtMoney(x.nearAskDepth)}，${x.pressureLabel}。${x.financeLine}</div></div>`;
+      return `<div class="time-item"><div class="time-top"><div class="signal-name">${x.titleZh}</div><div class="time-stamp up">24小时 ${fmtMoney(x.volume24hr)}</div></div><div class="time-desc">近价买盘 ${fmtMoney(x.nearBidDepth)}，近价卖盘 ${fmtMoney(x.nearAskDepth)}，${x.pressureLabel}。${x.financeLine}</div></div>`;
     }
     function renderMarket(x) {
-      return `<div class="market-card"><div class="market-top"><div><div class="market-name">${x.titleZh}</div><div class="market-sub">${x.topic} · 截止 ${timeText(x.endDate)}</div></div><div class="score">Yes ${x.yesPct.toFixed(1)}%</div></div><div class="market-meta">${pill(`1h ${fmtPct(x.oneHourChangePct)}`)}${pill(`1d ${fmtPct(x.oneDayChangePct)}`)}${pill(`24h ${fmtMoney(x.volume24hr)}`)}${pill(`买盘 ${fmtMoney(x.nearBidDepth)}`)}${pill(`卖盘 ${fmtMoney(x.nearAskDepth)}`)}</div><div class="market-note">${x.noteZh}</div><div class="market-map">${x.financeLine}</div><a class="market-link" href="${x.url}" target="_blank" rel="noopener noreferrer">查看原始市场</a></div>`;
+      return `<div class="market-card"><div class="market-top"><div><div class="market-name">${x.titleZh}</div><div class="market-sub">${x.topic} · 截止 ${timeText(x.endDate)}</div></div><div class="score">发生概率 ${x.yesPct.toFixed(1)}%</div></div><div class="market-meta">${pill(`1小时 ${fmtPct(x.oneHourChangePct)}`)}${pill(`1天 ${fmtPct(x.oneDayChangePct)}`)}${pill(`24小时 ${fmtMoney(x.volume24hr)}`)}${pill(`买盘 ${fmtMoney(x.nearBidDepth)}`)}${pill(`卖盘 ${fmtMoney(x.nearAskDepth)}`)}</div><div class="market-note">${x.noteZh}</div><div class="market-map">${x.financeLine}</div><a class="market-link" href="${x.url}" target="_blank" rel="noopener noreferrer">查看原始市场</a></div>`;
     }
 
     let refreshTimer = null;
@@ -206,7 +207,7 @@
         $('monitored-count').textContent = data.monitoredCount ?? '--';
         $('volume-total').textContent = fmtMoney(data.total24hrVolume || 0);
         $('generated-at').textContent = timeText(data.generatedAt);
-        $('refresh-note').textContent = `当前为 API 轮询模式，约 ${(Number(data.refreshMs || 20000) / 1000).toFixed(0)} 秒刷新一次`;
+        $('refresh-note').textContent = `当前为 API 轮询模式，约 ${(Number(data.refreshMs || 20000) / 1000).toFixed(0)} 秒自动刷新一次`;
 
         const lead = data.lead;
         if (lead) {
@@ -214,9 +215,9 @@
           $('lead-desc').textContent = lead.noteZh;
           $('lead-map').textContent = lead.financeLine;
           $('lead-pills').innerHTML = [
-            pill(`Yes ${lead.yesPct.toFixed(1)}%`, lead.yesPrice >= 0.5 ? 'up' : ''),
-            pill(`1h ${fmtPct(lead.oneHourChangePct)}`, 'hot'),
-            pill(`1w ${fmtPct(lead.oneWeekChangePct)}`),
+            pill(`发生概率 ${lead.yesPct.toFixed(1)}%`, lead.yesPrice >= 0.5 ? 'up' : ''),
+            pill(`1小时 ${fmtPct(lead.oneHourChangePct)}`, 'hot'),
+            pill(`1周 ${fmtPct(lead.oneWeekChangePct)}`),
             pill(lead.pressureLabel, 'violet'),
             pill(`24h ${fmtMoney(lead.volume24hr)}`)
           ].join('');
