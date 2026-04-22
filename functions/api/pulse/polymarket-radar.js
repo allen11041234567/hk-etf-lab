@@ -237,6 +237,9 @@ function shortZhTitle(question = '') {
     [/^Will J\.D\. Vance have a diplomatic meeting with Iran by ([A-Za-z]+ \d{1,2})\??$/i, (_, d) => `J.D. Vance 会在 ${toZhDate(d)}前与伊朗举行外交会晤吗`],
     [/^Will Iran agree to end enrichment of uranium by ([A-Za-z]+ \d{1,2})\??$/i, (_, d) => `伊朗会在 ${toZhDate(d)}前同意停止铀浓缩吗`],
     [/^Will Trump agree to Iranian enrichment of uranium in April\??$/i, '特朗普会在 4 月同意伊朗进行铀浓缩吗'],
+    [/^Will there be no change in Fed rates after the April 2026 meeting\?$/i, '2026 年 4 月议息会议后，美联储会维持利率不变吗'],
+    [/^Will the Fed decrease interest rates by 25 bps after the April 2026 meeting\?$/i, '2026 年 4 月议息会议后，美联储会降息 25 个基点吗'],
+    [/^Will ([A-Za-z .'-]+) be confirmed as Fed Chair\?$/i, (_, name) => `${name.trim()} 会被确认出任美联储主席吗`],
   ];
   for (const [re, value] of exactRules) {
     const m = q.match(re);
@@ -258,6 +261,7 @@ function shortZhTitle(question = '') {
   const dict = [
     [/Bitcoin/g, '比特币'],
     [/Ethereum/g, '以太坊'],
+    [/Fed Chair/g, '美联储主席'],
     [/Fed/g, '美联储'],
     [/interest rates?/ig, '利率'],
     [/rate cuts?/ig, '降息'],
@@ -273,6 +277,7 @@ function shortZhTitle(question = '') {
     [/ceasefire/ig, '停火'],
     [/diplomatic meeting/ig, '外交会晤'],
     [/agree to end enrichment of uranium/ig, '同意停止铀浓缩'],
+    [/agrees to end enrichment of uranium/ig, '会同意停止铀浓缩'],
     [/agree to enrichment of uranium/ig, '同意进行铀浓缩'],
     [/inflation/ig, '通胀'],
     [/tariff/ig, '关税'],
@@ -283,6 +288,9 @@ function shortZhTitle(question = '') {
     [/OpenAI/g, 'OpenAI'],
     [/best AI model/ig, '最佳 AI 模型'],
     [/have a /ig, '进行'],
+    [/be confirmed as/ig, '被确认为'],
+    [/there be no change in/ig, '将维持不变：'],
+    [/decrease 利率 by 25 bps/ig, '降息 25 个基点'],
     [/ with /ig, '与'],
   ];
   for (const [re, to] of dict) q = q.replace(re, to);
@@ -291,20 +299,39 @@ function shortZhTitle(question = '') {
 
 function explainMarket(item) {
   const prob = `${item.yesPct.toFixed(1)}%`;
-  const shortMove = Math.abs(item.oneHourChangePct) >= 0.1 ? `最近 1 小时 ${pctText(item.oneHourChangePct)}` : `最近 1 天 ${pctText(item.oneDayChangePct)}`;
+  const shortMove = Math.abs(item.oneHourChangePct) >= 0.1 ? `最近 1 小时变化 ${pctText(item.oneHourChangePct)}` : `最近 1 天变化 ${pctText(item.oneDayChangePct)}`;
   const week = pctText(item.oneWeekChangePct);
   const pressure = item.pressureLabel;
 
-  let assetMap = '更适合当作风险偏好变化的前瞻温度计。';
-  if (item.topic === '美联储与利率') assetMap = '通常会映射到美债、黄金、美元和成长股。';
-  else if (item.topic === '加密资产') assetMap = '通常会映射到比特币、以太坊以及高波动风险偏好。';
-  else if (item.topic === '股票与风险偏好') assetMap = '更像美股风格、科技龙头和高 beta 情绪的前瞻温度计。';
-  else if (item.topic === '大宗商品') assetMap = '适合联动原油、黄金、工业金属和通胀交易主线。';
-  else if (item.topic === '外汇') assetMap = '适合联动美元、日元、人民币和全球风险偏好。';
-  else if (item.topic === '地缘风险') assetMap = '适合联动黄金、原油和宏观风险溢价。';
-  else if (item.topic === '美国政治') assetMap = '适合联动关税、财政预期和市场风险偏好。';
+  let marketLine = '更适合当作风险偏好变化的前瞻温度计。';
+  let assetLine = '先观察市场叙事强弱，再决定是否值得继续跟踪。';
+  if (item.topic === '美联储与利率') {
+    marketLine = '这是典型的利率预期信号，核心看市场是否在重新定价未来降息或加息路径。';
+    assetLine = '如果概率快速抬升，通常更容易传导到美债、黄金、美元和成长股。';
+  } else if (item.topic === '宏观数据') {
+    marketLine = '这是宏观数据预期信号，核心看市场是否在提前押注通胀、增长或就业变化。';
+    assetLine = '如果方向持续强化，通常会影响美债收益率、美元和全球风险资产。';
+  } else if (item.topic === '大宗商品') {
+    marketLine = '这是商品主线信号，核心看供需、地缘和通胀交易是否在升温。';
+    assetLine = '更适合联动原油、黄金、工业金属以及通胀交易框架一起看。';
+  } else if (item.topic === '外汇') {
+    marketLine = '这是外汇定价信号，核心看美元强弱和跨市场风险偏好是否切换。';
+    assetLine = '更适合联动美元指数、日元、人民币以及全球股债节奏。';
+  } else if (item.topic === '股票与风险偏好') {
+    marketLine = '这是股市风格和风险偏好信号，核心看资金更偏进攻还是防守。';
+    assetLine = '更适合拿来辅助观察纳指、科技龙头和高 beta 方向。';
+  } else if (item.topic === '加密资产') {
+    marketLine = '这是加密情绪信号，核心看高波动资产的风险偏好是否在继续升温或降温。';
+    assetLine = '更适合联动比特币、以太坊以及高弹性相关资产一起看。';
+  } else if (item.topic === '地缘风险') {
+    marketLine = '这是地缘风险信号，核心看避险溢价是否在上升。';
+    assetLine = '更适合联动黄金、原油和全球风险资产的回撤压力一起看。';
+  } else if (item.topic === '美国政治') {
+    marketLine = '这是政策和政治不确定性信号，核心看财政、关税或监管预期是否在变化。';
+    assetLine = '更适合联动关税预期、财政交易和风险偏好框架。';
+  }
 
-  return `当前市场给这件事 ${prob} 的概率定价，${shortMove}，近一周 ${week}，同时 ${pressure}。${assetMap}`;
+  return `当前市场给这件事 ${prob} 的概率定价，${shortMove}，近一周 ${week}，盘口上看 ${pressure}。${marketLine}${assetLine}`;
 }
 
 function financeMapping(item) {
@@ -401,14 +428,15 @@ function buildSnapshot(qualifiedUniverse, booksByToken) {
   enriched.sort((a, b) => b.score - a.score);
 
   const rendered = enriched
-    .filter((item) => item.financePriority >= 18)
+    .filter((item) => item.financePriority >= 26)
     .slice(0, MAX_RENDERED_MARKETS);
-  const topSignals = rendered.slice(0, MAX_TOP_SIGNALS);
+  const preferredLead = rendered.filter((item) => ['美联储与利率', '宏观数据', '大宗商品', '外汇', '股票与风险偏好'].includes(item.topic));
+  const topSignals = (preferredLead.length ? preferredLead : rendered).slice(0, MAX_TOP_SIGNALS);
   const wallSignals = [...rendered]
     .sort((a, b) => Math.abs(b.nearBidDepth - b.nearAskDepth) - Math.abs(a.nearBidDepth - a.nearAskDepth))
     .slice(0, MAX_TOP_SIGNALS);
   const liquidSignals = [...rendered]
-    .sort((a, b) => (b.volume24hr + b.liquidity) - (a.volume24hr + a.liquidity))
+    .sort((a, b) => (b.volume24hr + b.liquidity + b.financePriority * 500) - (a.volume24hr + a.liquidity + a.financePriority * 500))
     .slice(0, MAX_TOP_SIGNALS);
 
   const topicBuckets = new Map();
