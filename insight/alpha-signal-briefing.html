@@ -249,7 +249,8 @@
     }
     function renderSmartMoneyTheme(x) {
       const leaders = (x.leaders || []).map(v => v.displayName || v.walletShort).join('、') || '暂无';
-      return `<div class="time-item"><div class="time-top"><div class="signal-name">${x.topic}</div><div class="time-stamp warm">${x.tilt}</div></div><div class="time-desc">最近有 ${x.walletCount} 个重点钱包、${x.tradeCount} 笔动作，累计名义金额约 ${fmtMoney(x.totalNotional || 0)}。代表账户：${leaders}。${x.strongestSummaryZh}</div></div>`;
+      const reps = (x.representativeMarkets || []).map(v => `${v.titleZh}（${v.resonanceLevel || '观察'}）`).join('；');
+      return `<div class="time-item"><div class="time-top"><div class="signal-name">${x.topic}</div><div class="time-stamp warm">主线分 ${x.themeScore}</div></div><div class="time-desc">当前${x.tilt}，最近有 ${x.walletCount} 个重点钱包、${x.tradeCount} 笔动作，累计名义金额约 ${fmtMoney(x.totalNotional || 0)}。代表账户：${leaders}。代表市场：${reps || '暂无'}。${x.strongestSummaryZh}</div></div>`;
     }
     function renderMarket(x) {
       return `<div class="market-card"><div class="market-top"><div><div class="market-name">${x.titleZh}</div><div class="market-sub">${x.topic} · 截止 ${timeText(x.endDate)}</div></div><div class="score">${x.resonanceLevel || ('发生概率 ' + x.yesPct.toFixed(1) + '%')}</div></div><div class="market-meta">${pill(`1小时 ${fmtPct(x.oneHourChangePct)}`)}${pill(`1天 ${fmtPct(x.oneDayChangePct)}`)}${pill(`24小时 ${fmtMoney(x.volume24hr)}`)}${pill(`买盘 ${fmtMoney(x.nearBidDepth)}`)}${pill(`卖盘 ${fmtMoney(x.nearAskDepth)}`)}</div><div class="market-note">${x.intelLine || x.noteZh}</div><div class="market-map">${x.financeLine}。${x.resonanceSummary || ''}</div><a class="market-link" href="${x.url}" target="_blank" rel="noopener noreferrer">查看原始市场</a></div>`;
@@ -296,7 +297,7 @@
         $('wall-signals').innerHTML = (data.wallSignals || []).map(x => renderSignalItem(x, 'wall')).join('') || '<div class="empty">暂无数据</div>';
         $('liquid-signals').innerHTML = (data.liquidSignals || []).map(renderLiquid).join('') || '<div class="empty">暂无数据</div>';
         $('market-list').innerHTML = (data.markets || []).map(renderMarket).join('') || '<div class="empty">暂无数据</div>';
-        $('resonance-list').innerHTML = ((data.anomalySignals || []).filter(x => (x.resonanceParts || []).length >= 2).slice(0,8)).map(renderTrendExplanation).join('') || '<div class="empty">当前暂无明显共振市场</div>';
+        $('resonance-list').innerHTML = (data.resonanceSignals || []).map(renderTrendExplanation).join('') || '<div class="empty">当前暂无明显共振市场</div>';
 
         const nextMs = Math.max(15000, Number(data.refreshMs || 20000));
         if (refreshTimer) clearTimeout(refreshTimer);
