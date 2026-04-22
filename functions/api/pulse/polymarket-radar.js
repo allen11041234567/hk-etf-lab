@@ -238,6 +238,7 @@ function shortZhTitle(question = '') {
     [/^Will Iran agree to end enrichment of uranium by ([A-Za-z]+ \d{1,2})\??$/i, (_, d) => `伊朗会在 ${toZhDate(d)}前同意停止铀浓缩吗`],
     [/^Will Trump agree to Iranian enrichment of uranium in April\??$/i, '特朗普会在 4 月同意伊朗进行铀浓缩吗'],
     [/^Will there be no change in Fed rates after the April 2026 meeting\?$/i, '2026 年 4 月议息会议后，美联储会维持利率不变吗'],
+    [/^Will there be no change in Fed interest rates after the April 2026 meeting\?$/i, '2026 年 4 月议息会议后，美联储会维持利率不变吗'],
     [/^Will the Fed decrease interest rates by 25 bps after the April 2026 meeting\?$/i, '2026 年 4 月议息会议后，美联储会降息 25 个基点吗'],
     [/^Will ([A-Za-z .'-]+) be confirmed as Fed Chair\?$/i, (_, name) => `${name.trim()} 会被确认出任美联储主席吗`],
   ];
