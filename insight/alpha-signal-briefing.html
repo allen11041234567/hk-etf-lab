@@ -146,6 +146,10 @@
           <div class="timeline" id="smart-money-overview"></div>
         </div>
         <div class="panel">
+          <div class="section-title" style="margin-bottom:10px"><h2 style="font-size:18px">重点钱包正在下注哪条线</h2><div class="hint">按主题看持续下注，不只看单市场</div></div>
+          <div class="timeline" id="smart-money-themes"></div>
+        </div>
+        <div class="panel">
           <div class="section-title" style="margin-bottom:10px"><h2 style="font-size:18px">24 小时趋势解释</h2><div class="hint">把异动放回更长一点的时间轴</div></div>
           <div class="timeline" id="trend-explanations"></div>
         </div>
@@ -238,6 +242,10 @@
     function renderTrendExplanation(x) {
       return `<div class="time-item"><div class="time-top"><div class="signal-name">${x.titleZh}</div><div class="time-stamp">${x.trendLabel || '24 小时趋势'}</div></div><div class="time-desc">${x.anomalyNarrative || x.noteZh} ${x.smartMoneyNote || ''}</div></div>`;
     }
+    function renderSmartMoneyTheme(x) {
+      const leaders = (x.leaders || []).map(v => v.displayName || v.walletShort).join('、') || '暂无';
+      return `<div class="time-item"><div class="time-top"><div class="signal-name">${x.topic}</div><div class="time-stamp warm">${x.tilt}</div></div><div class="time-desc">最近有 ${x.walletCount} 个重点钱包、${x.tradeCount} 笔动作，累计名义金额约 ${fmtMoney(x.totalNotional || 0)}。代表账户：${leaders}。${x.strongestSummaryZh}</div></div>`;
+    }
     function renderMarket(x) {
       return `<div class="market-card"><div class="market-top"><div><div class="market-name">${x.titleZh}</div><div class="market-sub">${x.topic} · 截止 ${timeText(x.endDate)}</div></div><div class="score">发生概率 ${x.yesPct.toFixed(1)}%</div></div><div class="market-meta">${pill(`1小时 ${fmtPct(x.oneHourChangePct)}`)}${pill(`1天 ${fmtPct(x.oneDayChangePct)}`)}${pill(`24小时 ${fmtMoney(x.volume24hr)}`)}${pill(`买盘 ${fmtMoney(x.nearBidDepth)}`)}${pill(`卖盘 ${fmtMoney(x.nearAskDepth)}`)}</div><div class="market-note">${x.noteZh}</div><div class="market-map">${x.financeLine}</div><a class="market-link" href="${x.url}" target="_blank" rel="noopener noreferrer">查看原始市场</a></div>`;
     }
@@ -277,6 +285,7 @@
         $('anomaly-signals').innerHTML = (data.anomalySignals || []).map(renderAnomaly).join('') || '<div class="empty">最近 1 小时暂无明显异动</div>';
         $('smart-money-actions').innerHTML = (data.smartMoneyActions || []).map(renderSmartMoneyAction).join('') || '<div class="empty">最近暂无重点钱包动作</div>';
         $('smart-money-overview').innerHTML = (data.smartMoneyOverview || []).map(renderSmartMoneyOverview).join('') || '<div class="empty">聪明钱观察名单暂时为空</div>';
+        $('smart-money-themes').innerHTML = (data.smartMoneyThemes || []).map(renderSmartMoneyTheme).join('') || '<div class="empty">重点钱包主题聚合暂时为空</div>';
         $('trend-explanations').innerHTML = ((data.anomalySignals && data.anomalySignals.length ? data.anomalySignals : data.topSignals) || []).slice(0, 8).map(renderTrendExplanation).join('') || '<div class="empty">暂无趋势解释</div>';
         $('smart-money-signals').innerHTML = (data.smartMoneyCandidates || []).map(renderSmartMoney).join('') || '<div class="empty">聪明钱候选池暂时为空</div>';
         $('wall-signals').innerHTML = (data.wallSignals || []).map(x => renderSignalItem(x, 'wall')).join('') || '<div class="empty">暂无数据</div>';

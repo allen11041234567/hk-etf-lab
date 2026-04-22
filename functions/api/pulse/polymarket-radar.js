@@ -819,6 +819,52 @@ async function buildSmartMoneyLayer(snapshot) {
       summaryZh: `${trade.displayName || maskWallet(trade.wallet)} 在 ${trade.titleZh} 上 ${trade.side === 'BUY' ? '继续加' : '开始减'} ${trade.outcome}，成交价 ${pctText(trade.price * 100)}，名义金额约 ${moneyText(trade.usdcSize)}。`,
     }));
 
+  const topicMap = new Map();
+  for (const trade of smartMoneyActions) {
+    const topic = trade.topic || '其他';
+    const current = topicMap.get(topic) || {
+      topic,
+      buyCount: 0,
+      sellCount: 0,
+      totalNotional: 0,
+      wallets: new Map(),
+      topTrades: [],
+    };
+    if (trade.side === 'BUY') current.buyCount += 1;
+    if (trade.side === 'SELL') current.sellCount += 1;
+    current.totalNotional += Number(trade.usdcSize || 0);
+    if (!current.wallets.has(trade.wallet)) {
+      current.wallets.set(trade.wallet, {
+        wallet: trade.wallet,
+        displayName: trade.displayName,
+        walletShort: trade.walletShort,
+        smartScore: trade.smartScore,
+      });
+    }
+    current.topTrades.push(trade);
+    topicMap.set(topic, current);
+  }
+
+  const smartMoneyThemes = [...topicMap.values()]
+    .map((item) => {
+      const tilt = item.buyCount > item.sellCount ? '偏买入' : item.sellCount > item.buyCount ? '偏卖出' : '多空分歧';
+      const leaders = [...item.wallets.values()].sort((a, b) => b.smartScore - a.smartScore).slice(0, 3);
+      const strongest = item.topTrades.sort((a, b) => b.usdcSize - a.usdcSize)[0] || null;
+      return {
+        topic: item.topic,
+        tilt,
+        walletCount: item.wallets.size,
+        tradeCount: item.buyCount + item.sellCount,
+        buyCount: item.buyCount,
+        sellCount: item.sellCount,
+        totalNotional: item.totalNotional,
+        leaders,
+        strongestTitleZh: strongest?.titleZh || '--',
+        strongestSummaryZh: strongest ? `${strongest.displayName || strongest.walletShort} 在 ${strongest.titleZh} 上 ${strongest.side === 'BUY' ? '偏主动买入' : '偏主动卖出'}，名义金额约 ${moneyText(strongest.usdcSize)}。` : '暂无代表性动作。',
+      };
+    })
+    .sort((a, b) => b.totalNotional - a.totalNotional || b.walletCount - a.walletCount);
+
   const smartParticipation = [...smartParticipationMap.entries()].map(([conditionId, data]) => ({
     conditionId,
     walletCount: data.wallets.length,
@@ -830,7 +876,7 @@ async function buildSmartMoneyLayer(snapshot) {
       .slice(0, 3),
   }));
 
-  return { smartMoneyOverview, smartMoneyActions, smartParticipation };
+  return { smartMoneyOverview, smartMoneyActions, smartMoneyThemes, smartParticipation };
 }
 
 async function buildRadarSnapshot(previousSnapshot = null) {
@@ -840,7 +886,7 @@ async function buildRadarSnapshot(previousSnapshot = null) {
   const books = await fetchBooksForTokens(bookCandidates.map((entry) => entry.yesTokenId));
   const booksByToken = new Map(books.map((book) => [String(book.asset_id), book]));
   const snapshot = buildSnapshot(qualifiedUniverse, booksByToken, previousSnapshot);
-  const smartMoneyLayer = await buildSmartMoneyLayer(snapshot).catch(() => ({ smartMoneyOverview: [], smartMoneyActions: [], smartParticipation: [] }));
+  const smartMoneyLayer = await buildSmartMoneyLayer(snapshot).catch(() => ({ smartMoneyOverview: [], smartMoneyActions: [], smartMoneyThemes: [], smartParticipation: [] }));
   const participationMap = new Map((smartMoneyLayer.smartParticipation || []).map((x) => [x.conditionId, x]));
   const enrichWithParticipation = (items = []) => items.map((item) => {
     const participation = participationMap.get(item.conditionId);
