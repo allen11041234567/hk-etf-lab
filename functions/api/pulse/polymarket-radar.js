@@ -2,7 +2,7 @@ const GAMMA_BASE = 'https://gamma-api.polymarket.com';
 const CLOB_BASE = 'https://clob.polymarket.com';
 const SNAPSHOT_TTL_SECONDS = 20;
 const STALE_TTL_SECONDS = 180;
-const ANOMALY_BASELINE_SECONDS = 300;
+const ANOMALY_BASELINE_SECONDS = 3600;
 const DISCOVERY_LIMIT = 1000;
 const MAX_BOOK_CANDIDATES = 120;
 const MAX_RENDERED_MARKETS = 48;
@@ -401,14 +401,14 @@ function detectAnomalies(currentItems, baselineItems = []) {
         ? Math.abs(item.nearBidDepth - item.nearAskDepth) - Math.abs(Number(prev.nearBidDepth || 0) - Number(prev.nearAskDepth || 0))
         : 0;
       const anomalyScore = Math.abs(yesDeltaPct) * 8
-        + Math.min(Math.abs(volumeDelta) / 2500, 18)
+        + Math.min(Math.abs(volumeDelta) / 4000, 18)
         + Math.min(Math.abs(scoreDelta) * 0.7, 14)
         + Math.min(Math.abs(wallDelta) / 3000, 12);
-      let trigger = '5 分钟内整体变化不大';
-      if (Math.abs(yesDeltaPct) >= 2.5) trigger = `5 分钟概率跳变 ${pctText(yesDeltaPct)}`;
-      else if (Math.abs(volumeDelta) >= 15000) trigger = `5 分钟放量 ${moneyText(volumeDelta > 0 ? volumeDelta : -volumeDelta)}`;
-      else if (Math.abs(wallDelta) >= 12000) trigger = '近价盘口厚度明显重排';
-      else if (Math.abs(scoreDelta) >= 8) trigger = `综合优先级抬升 ${scoreDelta > 0 ? '+' : ''}${scoreDelta.toFixed(1)}`;
+      let trigger = '1 小时内整体变化不大';
+      if (Math.abs(yesDeltaPct) >= 4) trigger = `1 小时概率跳变 ${pctText(yesDeltaPct)}`;
+      else if (Math.abs(volumeDelta) >= 25000) trigger = `1 小时放量 ${moneyText(volumeDelta > 0 ? volumeDelta : -volumeDelta)}`;
+      else if (Math.abs(wallDelta) >= 18000) trigger = '1 小时内近价盘口厚度明显重排';
+      else if (Math.abs(scoreDelta) >= 10) trigger = `1 小时综合优先级抬升 ${scoreDelta > 0 ? '+' : ''}${scoreDelta.toFixed(1)}`;
       return {
         ...item,
         yesDeltaPct: Math.round(yesDeltaPct * 10) / 10,
@@ -419,7 +419,7 @@ function detectAnomalies(currentItems, baselineItems = []) {
         anomalyTrigger: trigger,
       };
     })
-    .filter((item) => item.anomalyScore >= 10)
+    .filter((item) => item.anomalyScore >= 9)
     .sort((a, b) => b.anomalyScore - a.anomalyScore)
     .slice(0, MAX_ANOMALIES);
 }
