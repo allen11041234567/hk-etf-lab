@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116449097739614343": {
+    "content_zh_cn": "我那档《飞黄腾达》现象级节目最后一季！",
+    "content_zh_hk": "我那檔《飛黃騰達》現象級節目最後一季！",
+    "content_ko": "내 초대형 히트작 ‘어프렌티스’ 마지막 시즌!"
+  },
   "https://truthsocial.com/@realDonaldTrump/116449087766053163": {
     "content_zh_cn": "该让务实的大人们叫停马姆达尼的财政幻想了：https://nypost.com/2026/03/19/opinion/time-for-the-grown-ups-to-halt-mamdanis-fiscal-fantasies/",
     "content_zh_hk": "係時候由務實嘅大人們叫停Mamdani嘅財政幻想：https://nypost.com/2026/03/19/opinion/time-for-the-grown-ups-to-halt-mamdanis-fiscal-fantasies/",
