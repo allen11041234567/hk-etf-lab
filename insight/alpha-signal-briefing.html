@@ -84,7 +84,7 @@
         <div>
           <div class="eyebrow">API 驱动实时版</div>
           <h1>Polymarket 金融预测信号台</h1>
-          <div class="sub">聚焦金融预测市场中的关键异动、趋势变化与重点账户动作，帮助你更快识别现在最值得盯的交易主线，以及它们可能映射的资产方向。</div>
+          <div class="sub" id="headline-summary-long">聚焦金融预测市场中的关键异动、趋势变化与重点账户动作，帮助你更快识别现在最值得盯的交易主线，以及它们可能映射的资产方向。</div>
           <div class="hero-meta">
             <div class="pill">官方 Gamma + CLOB 公开接口</div>
             <div class="pill">重点账户持续跟踪</div>
@@ -122,6 +122,20 @@
           <div class="timeline" id="resonance-list"></div>
         </div>
       </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title"><h2>今日总判断</h2><div class="hint">先看一句话结论，再下钻细节</div></div>
+      <div class="lead-card" style="padding:16px 18px;border-radius:20px;">
+        <div class="label">TODAY'S TAKE</div>
+        <div class="lead-title" id="headline-summary-short" style="font-size:24px;">--</div>
+        <div class="lead-desc" id="headline-summary-extra" style="margin-top:8px;">--</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title"><h2>今日最该盯的 3 个市场</h2><div class="hint">更像首页入口，而不是泛榜单</div></div>
+      <div class="markets" id="must-watch-list"></div>
     </section>
 
     <section class="section">
@@ -235,6 +249,9 @@
         $('generated-at').textContent = timeText(data.generatedAt);
         $('refresh-note').textContent = `当前为 API 轮询模式，约 ${(Number(data.refreshMs || 20000) / 1000).toFixed(0)} 秒自动刷新一次`;
         $('anomaly-hint').textContent = `基于最近 ${data.baselineWindowMinutes || 5} 分钟缓存基线做对比`;
+        $('headline-summary-short').textContent = data.headlineSummary?.short || '--';
+        $('headline-summary-extra').textContent = data.headlineSummary?.long || '--';
+        $('headline-summary-long').textContent = data.headlineSummary?.long || $('headline-summary-long').textContent;
 
         const lead = data.lead;
         if (lead) {
@@ -253,6 +270,7 @@
         $('anomaly-signals').innerHTML = (data.anomalySignals || []).map(renderAnomaly).join('') || '<div class="empty">当前没有强异动，先展示最近 1 小时最活跃的市场</div>';
         $('smart-money-actions').innerHTML = (data.smartMoneyActions || []).map(renderSmartMoneyAction).join('') || '<div class="empty">最近暂无重点钱包动作</div>';
         $('smart-money-overview').innerHTML = (data.smartMoneyOverview || []).map(renderSmartMoneyOverview).join('') || '<div class="empty">聪明钱观察名单暂时为空</div>';
+        $('must-watch-list').innerHTML = (data.mustWatch || []).map(renderMarket).join('') || '<div class="empty">暂无重点市场</div>';
         $('smart-money-themes').innerHTML = (data.smartMoneyThemes || []).map(renderSmartMoneyTheme).join('') || '<div class="empty">重点钱包主题聚合暂时为空</div>';
         $('trend-explanations').innerHTML = ((data.anomalySignals && data.anomalySignals.length ? data.anomalySignals : data.topSignals) || []).slice(0, 8).map(renderTrendExplanation).join('') || '<div class="empty">暂无趋势解释</div>';
         $('market-list').innerHTML = (data.markets || []).map(renderMarket).join('') || '<div class="empty">暂无数据</div>';
