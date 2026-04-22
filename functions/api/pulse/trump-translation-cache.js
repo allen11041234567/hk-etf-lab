@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116445894900653474": {
+    "content_zh_cn": "萨利娜·齐托：特朗普深谙宾夕法尼亚之道。这篇采访说明了原因。\nhttps://www.washingtonpost.com/opinions/2025/11/19/trump-interview-pennsylvania-steel-tariffs/",
+    "content_zh_hk": "薩利娜·齊托：特朗普深諳賓夕法尼亞之道。這篇訪問說明了原因。\nhttps://www.washingtonpost.com/opinions/2025/11/19/trump-interview-pennsylvania-steel-tariffs/",
+    "content_ko": "살레나 지토: 트럼프는 펜실베이니아를 다루는 특별한 방식이 있다. 이 인터뷰가 그 이유를 보여준다.\nhttps://www.washingtonpost.com/opinions/2025/11/19/trump-interview-pennsylvania-steel-tariffs/"
+  },
   "https://truthsocial.com/@realDonaldTrump/116445555373723862": {
     "content_zh_cn": "伊朗并不想让霍尔木兹海峡关闭，他们希望海峡保持开放，这样他们每天就能赚取5亿美元（因此，如果海峡关闭，他们损失的也正是这笔钱！）。他们之所以声称想要关闭海峡，只是因为我已经将其彻底封锁（关闭！），所以他们不过是想“保住面子”。四天前，有人来找我，对我说：“总统先生，伊朗希望立即开放海峡。”但如果我们那样做，就永远不可能与伊朗达成协议，除非我们把他们国家其余部分也炸掉，包括他们的领导层！总统 唐纳德·J·特朗普",
     "content_zh_hk": "伊朗並不想讓霍爾木茲海峽關閉，他們希望海峽保持開放，這樣他們每天就能賺取5億美元（因此，如果海峽關閉，他們損失的也正是這筆錢！）。他們之所以聲稱想要關閉海峽，只是因為我已經將其徹底封鎖（關閉！），所以他們不過是想「保住面子」。四天前，有人來找我，對我說：「總統先生，伊朗希望立即開放海峽。」但如果我們那樣做，就永遠不可能與伊朗達成協議，除非我們把他們國家其餘部分也炸掉，包括他們的領導層！總統 唐納德·J·特朗普",
