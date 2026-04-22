@@ -255,9 +255,6 @@
         $('smart-money-overview').innerHTML = (data.smartMoneyOverview || []).map(renderSmartMoneyOverview).join('') || '<div class="empty">聪明钱观察名单暂时为空</div>';
         $('smart-money-themes').innerHTML = (data.smartMoneyThemes || []).map(renderSmartMoneyTheme).join('') || '<div class="empty">重点钱包主题聚合暂时为空</div>';
         $('trend-explanations').innerHTML = ((data.anomalySignals && data.anomalySignals.length ? data.anomalySignals : data.topSignals) || []).slice(0, 8).map(renderTrendExplanation).join('') || '<div class="empty">暂无趋势解释</div>';
-        $('smart-money-signals').innerHTML = (data.smartMoneyCandidates || []).map(renderSmartMoney).join('') || '<div class="empty">聪明钱候选池暂时为空</div>';
-        $('wall-signals').innerHTML = (data.wallSignals || []).map(x => renderSignalItem(x, 'wall')).join('') || '<div class="empty">暂无数据</div>';
-        $('liquid-signals').innerHTML = (data.liquidSignals || []).map(renderLiquid).join('') || '<div class="empty">暂无数据</div>';
         $('market-list').innerHTML = (data.markets || []).map(renderMarket).join('') || '<div class="empty">暂无数据</div>';
         $('resonance-list').innerHTML = (data.resonanceSignals || []).map(renderTrendExplanation).join('') || '<div class="empty">当前暂无明显共振市场</div>';
 
