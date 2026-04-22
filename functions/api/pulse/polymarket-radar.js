@@ -29,6 +29,8 @@ const HARD_EXCLUDE_RE = new RegExp([
   'playboi', 'rihanna', 'lebron', 'kardashian', 'celebrity', 'top goal scorer', 'mvp', 'champion',
   'referendum', 'constitutional amendment', 'mayor', 'governor primary', 'election in',
   'tweet', 'tweets', 'post counter', 'xtracker', 'followers', 'subscribers',
+  'fdv', 'fully diluted', 'one day after launch', 'token launch', 'memecoin', 'airdrop',
+  'best ai model', 'openai', 'anthropic', 'grok', 'chatgpt', 'llm', 'model benchmark',
   'released for purchase', 'download', 'box office'
 ].join('|'), 'i');
 
@@ -135,15 +137,42 @@ function getMarketText(market) {
 
 function classifyTopic(text) {
   const t = text.toLowerCase();
-  if (/bitcoin|\bbtc\b|ethereum|\beth\b|solana|\bsol\b|dogecoin|\bdoge\b|crypto|stablecoin|altcoin/.test(t)) return '加密资产';
   if (/\bfed\b|\bfomc\b|rate cut|rate cuts|rate hike|interest rate|terminal rate|treasury|yield|10y|2y/.test(t)) return '美联储与利率';
   if (/\bcpi\b|\bpce\b|\bppi\b|\bpmis?\b|inflation|disinflation|deflation|recession|\bgdp\b|payrolls|nonfarm|unemployment|jobless/.test(t)) return '宏观数据';
   if (/gold|silver|copper|oil|crude|brent|wti|nat gas|natural gas|lng|commodity|uranium/.test(t)) return '大宗商品';
-  if (/nasdaq|\bqqq\b|\bspy\b|s&p|dow jones|\bvix\b|russell 2000|nikkei|hang seng|hsi|\bnvda\b|\btsla\b|\baapl\b|\bmsft\b|\bmeta\b|\bamzn\b|\bgoogl\b|\bgoogle\b|\bmstr\b|\bcoin\b/.test(t)) return '股票与风险偏好';
   if (/usd\/jpy|usd\/cny|usdcny|eurusd|dxy|dollar index|yen|yuan|foreign exchange|\bfx\b/.test(t)) return '外汇';
-  if (/ukraine|russia|ceasefire|nato|iran|israel|gaza|war|geopolit|china/.test(t)) return '地缘风险';
-  if (/trump|senate|house|midterm|government shutdown|debt ceiling/.test(t)) return '美国政治';
+  if (/nasdaq|\bqqq\b|\bspy\b|s&p|dow jones|\bvix\b|russell 2000|nikkei|hang seng|hsi|\bnvda\b|\btsla\b|\baapl\b|\bmsft\b|\bmeta\b|\bamzn\b|\bgoogl\b|\bgoogle\b|\bmstr\b|\bcoin\b/.test(t)) return '股票与风险偏好';
+  if (/bitcoin|\bbtc\b|ethereum|\beth\b|solana|\bsol\b|dogecoin|\bdoge\b|crypto|stablecoin|altcoin/.test(t)) return '加密资产';
+  if (/ukraine|russia|ceasefire|nato|iran|israel|gaza|war|geopolit|sanction|trade war/.test(t)) return '地缘风险';
+  if (/trump|senate|house|midterm|government shutdown|debt ceiling|tariff/.test(t)) return '美国政治';
   return '其他';
+}
+
+function topicBaseWeight(topic) {
+  if (topic === '美联储与利率') return 34;
+  if (topic === '宏观数据') return 30;
+  if (topic === '大宗商品') return 24;
+  if (topic === '外汇') return 23;
+  if (topic === '股票与风险偏好') return 21;
+  if (topic === '地缘风险') return 18;
+  if (topic === '加密资产') return 13;
+  if (topic === '美国政治') return 10;
+  return 0;
+}
+
+function financeIntentScore(text) {
+  const t = text.toLowerCase();
+  let score = 0;
+  if (/\bfed\b|\bfomc\b|rate cut|rate cuts|rate hike|interest rate|terminal rate/.test(t)) score += 34;
+  if (/\bcpi\b|\bpce\b|\bppi\b|\bpmis?\b|inflation|recession|\bgdp\b|payrolls|unemployment|jobless/.test(t)) score += 28;
+  if (/gold|silver|copper|oil|crude|brent|wti|nat gas|natural gas|lng|commodity|uranium/.test(t)) score += 24;
+  if (/usd\/jpy|usd\/cny|usdcny|eurusd|dxy|dollar index|yen|yuan|foreign exchange|\bfx\b/.test(t)) score += 22;
+  if (/nasdaq|\bqqq\b|\bspy\b|s&p|dow jones|\bvix\b|russell 2000|nikkei|hang seng|hsi/.test(t)) score += 21;
+  if (/\bnvda\b|\btsla\b|\baapl\b|\bmsft\b|\bmeta\b|\bamzn\b|\bgoogl\b|\bgoogle\b|\bmstr\b|\bcoin\b/.test(t)) score += 14;
+  if (/bitcoin|\bbtc\b|ethereum|\beth\b|solana|\bsol\b|crypto|stablecoin|altcoin/.test(t)) score += 12;
+  if (/ukraine|russia|ceasefire|nato|iran|israel|gaza|war|geopolit|sanction|trade war/.test(t)) score += 10;
+  if (/trump|tariff|government shutdown|debt ceiling/.test(t)) score += 8;
+  return score;
 }
 
 function pressureLabel(bidDepth, askDepth) {
@@ -164,7 +193,7 @@ function calcNearDepth(book, refPrice) {
   return { nearBidDepth, nearAskDepth };
 }
 
-function scoreMarket(market, nearBidDepth, nearAskDepth) {
+function scoreMarket(market, nearBidDepth, nearAskDepth, topic, discoveryText) {
   const oneHour = Math.abs(parseNumber(market.oneHourPriceChange) * 100);
   const oneDay = Math.abs(parseNumber(market.oneDayPriceChange) * 100);
   const oneWeek = Math.abs(parseNumber(market.oneWeekPriceChange) * 100);
@@ -172,14 +201,16 @@ function scoreMarket(market, nearBidDepth, nearAskDepth) {
   const liquidity = parseNumber(market.liquidityNum || market.liquidityClob || market.liquidity);
   const spread = parseNumber(market.spread);
   const imbalance = liquidity > 0 ? Math.abs(nearBidDepth - nearAskDepth) / Math.max(nearBidDepth + nearAskDepth, 1) : 0;
+  const financePriority = topicBaseWeight(topic) + financeIntentScore(discoveryText);
   return Math.round((
-    oneHour * 1.35 +
-    oneDay * 1.0 +
-    oneWeek * 0.45 +
-    Math.min((volume24hr / Math.max(liquidity, 1)) * 28, 25) +
-    Math.min(Math.log10(volume24hr + 1) * 8, 20) +
-    Math.max(0, (0.03 - spread) * 240) +
-    imbalance * 18
+    financePriority +
+    oneHour * 1.15 +
+    oneDay * 0.95 +
+    oneWeek * 0.40 +
+    Math.min((volume24hr / Math.max(liquidity, 1)) * 24, 20) +
+    Math.min(Math.log10(volume24hr + 1) * 7, 18) +
+    Math.max(0, (0.03 - spread) * 220) +
+    imbalance * 16
   ) * 100) / 100;
 }
 
@@ -277,7 +308,7 @@ function buildSnapshot(qualifiedUniverse, booksByToken) {
     const oneHourChangePct = parseNumber(market.oneHourPriceChange) * 100;
     const oneDayChangePct = parseNumber(market.oneDayPriceChange) * 100;
     const oneWeekChangePct = parseNumber(market.oneWeekPriceChange) * 100;
-    const score = scoreMarket(market, nearBidDepth, nearAskDepth);
+    const score = scoreMarket(market, nearBidDepth, nearAskDepth, entry.topic, entry.discoveryText);
     const item = {
       id: market.id,
       slug: market.slug,
@@ -302,6 +333,7 @@ function buildSnapshot(qualifiedUniverse, booksByToken) {
       nearAskDepth,
       pressureLabel: pressureLabel(nearBidDepth, nearAskDepth),
       score,
+      financePriority: topicBaseWeight(entry.topic) + financeIntentScore(entry.discoveryText),
       financeLine: financeMapping({ topic: entry.topic }),
     };
     item.noteZh = explainMarket(item);
@@ -310,7 +342,9 @@ function buildSnapshot(qualifiedUniverse, booksByToken) {
 
   enriched.sort((a, b) => b.score - a.score);
 
-  const rendered = enriched.slice(0, MAX_RENDERED_MARKETS);
+  const rendered = enriched
+    .filter((item) => item.financePriority >= 18)
+    .slice(0, MAX_RENDERED_MARKETS);
   const topSignals = rendered.slice(0, MAX_TOP_SIGNALS);
   const wallSignals = [...rendered]
     .sort((a, b) => Math.abs(b.nearBidDepth - b.nearAskDepth) - Math.abs(a.nearBidDepth - a.nearAskDepth))
@@ -332,7 +366,8 @@ function buildSnapshot(qualifiedUniverse, booksByToken) {
     avgYesPct: items.reduce((sum, item) => sum + item.yesPct, 0) / Math.max(items.length, 1),
     avgWeekChangePct: items.reduce((sum, item) => sum + Math.abs(item.oneWeekChangePct), 0) / Math.max(items.length, 1),
     hottestTitle: items[0]?.titleZh || '--',
-  })).sort((a, b) => b.count - a.count);
+    avgPriority: items.reduce((sum, item) => sum + item.financePriority, 0) / Math.max(items.length, 1),
+  })).sort((a, b) => b.avgPriority - a.avgPriority || b.count - a.count);
 
   const lead = topSignals[0] || null;
   return {
