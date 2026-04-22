@@ -250,7 +250,7 @@
           ].join('');
         }
 
-        $('anomaly-signals').innerHTML = (data.anomalySignals || []).map(renderAnomaly).join('') || '<div class="empty">最近 1 小时暂无明显异动</div>';
+        $('anomaly-signals').innerHTML = (data.anomalySignals || []).map(renderAnomaly).join('') || '<div class="empty">当前没有强异动，先展示最近 1 小时最活跃的市场</div>';
         $('smart-money-actions').innerHTML = (data.smartMoneyActions || []).map(renderSmartMoneyAction).join('') || '<div class="empty">最近暂无重点钱包动作</div>';
         $('smart-money-overview').innerHTML = (data.smartMoneyOverview || []).map(renderSmartMoneyOverview).join('') || '<div class="empty">聪明钱观察名单暂时为空</div>';
         $('smart-money-themes').innerHTML = (data.smartMoneyThemes || []).map(renderSmartMoneyTheme).join('') || '<div class="empty">重点钱包主题聚合暂时为空</div>';
