@@ -1,4 +1,14 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116449875545717304": {
+    "content_zh_cn": "“在理智与常识问题上，绝不能妥协！”",
+    "content_zh_hk": "“在理智與常識問題上，絕不能妥協！”",
+    "content_ko": "“정신의 온전함과 상식만큼은 타협할 수 없다!”"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116449863099320049": {
+    "content_zh_cn": "独家——《违法行径》：调查披露，拜登白宫策动针对特朗普的“司法战”，以操纵2024年大选：https://www.breitbart.com/politics/2025/08/04/exclusive-breaking-the-law-expose-reveals-biden-white-house-orchestrated-lawfare-against-trump-to-rig-2024-election/",
+    "content_zh_hk": "獨家——《違法行徑》：調查披露，拜登白宮策動針對特朗普的「司法戰」，以操縱2024年大選：https://www.breitbart.com/politics/2025/08/04/exclusive-breaking-the-law-expose-reveals-biden-white-house-orchestrated-lawfare-against-trump-to-rig-2024-election/",
+    "content_ko": "단독—‘법 위반’: 폭로 보도에 따르면, 바이든 백악관이 2024년 대선을 좌우하기 위해 트럼프를 겨냥한 ‘사법전’을 기획한 것으로 드러났다: https://www.breitbart.com/politics/2025/08/04/exclusive-breaking-the-law-expose-reveals-biden-white-house-orchestrated-lawfare-against-trump-to-rig-2024-election/"
+  },
   "https://truthsocial.com/@realDonaldTrump/116449851372799866": {
     "content_zh_cn": "BBC涉唐纳德·特朗普影片制片方称，对剪辑错误并不知情：https://deadline.com/2025/11/bbc-donald-trump-saga-october-films-kept-in-dark-1236613974/",
     "content_zh_hk": "BBC涉唐納德·特朗普影片製片方稱，對剪輯錯誤並不知情：https://deadline.com/2025/11/bbc-donald-trump-saga-october-films-kept-in-dark-1236613974/",
