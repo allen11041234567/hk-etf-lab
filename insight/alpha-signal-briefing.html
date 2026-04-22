@@ -229,7 +229,8 @@
       return `<div class="time-item"><div class="time-top"><div class="signal-name">${x.titleZh}</div><div class="time-stamp violet">候选 ${x.smartMoneyScore}</div></div><div class="time-desc">${x.smartMoneyStyle}，近价买盘 ${fmtMoney(x.nearBidDepth)}，近价卖盘 ${fmtMoney(x.nearAskDepth)}，24 小时成交 ${fmtMoney(x.volume24hr)}。${x.financeLine}</div></div>`;
     }
     function renderSmartMoneyOverview(x) {
-      return `<div class="time-item"><div class="time-top"><div class="signal-name">${x.displayName}</div><div class="time-stamp warm">Score ${x.smartScore}</div></div><div class="time-desc">${x.summaryZh} 总 PnL ${x.totalPnl >= 0 ? '+' : ''}${fmtMoney(Math.abs(x.totalPnl || 0))}，总仓位价值约 ${fmtMoney(x.portfolioValue || 0)}，覆盖 ${x.diversity} 个重点市场。</div></div>`;
+      const extra = x.leaderboardGain != null ? ` 榜单累计 PnL ${x.leaderboardGain >= 0 ? '+' : ''}${fmtMoney(Math.abs(x.leaderboardGain || 0))}，胜率 ${(Number(x.leaderboardWinRate || 0) * 100).toFixed(1)}%。` : '';
+      return `<div class="time-item"><div class="time-top"><div class="signal-name">${x.displayName}</div><div class="time-stamp warm">${x.sourceLabel || ('Score ' + x.smartScore)}</div></div><div class="time-desc">${x.summaryZh} 当前焦点市场总 PnL ${x.totalPnl >= 0 ? '+' : ''}${fmtMoney(Math.abs(x.totalPnl || 0))}，总仓位价值约 ${fmtMoney(x.portfolioValue || 0)}，覆盖 ${x.diversity} 个重点市场。${extra}</div></div>`;
     }
     function renderSmartMoneyAction(x) {
       return `<div class="time-item"><div class="time-top"><div class="signal-name">${x.actionLabel}</div><div class="time-stamp up">${x.walletShort}</div></div><div class="time-desc">${x.summaryZh} Smart Score ${x.smartScore}，${x.financeLine || ''}</div></div>`;

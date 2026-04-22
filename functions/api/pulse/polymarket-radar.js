@@ -14,6 +14,7 @@ const MAX_SMART_MONEY = 8;
 const MAX_SMART_MONEY_MARKETS = 4;
 const MAX_SMART_WALLETS = 6;
 const MAX_SMART_ACTIONS = 8;
+const MAX_SEED_WALLETS = 30;
 const USER_AGENT = 'Mozilla/5.0 (compatible; HK-ETF-Lab/1.0; +https://hketf-lab.pages.dev/)';
 
 const FINANCE_INCLUDE_RE = new RegExp([
@@ -143,6 +144,31 @@ async function fetchBooksForTokens(tokenIds) {
     if (Array.isArray(books)) all.push(...books);
   }
   return all;
+}
+
+async function fetchSeedWallets(limit = MAX_SEED_WALLETS) {
+  const url = new URL('https://polymarketanalytics.com/api/traders-tag-performance');
+  url.searchParams.set('tag', 'Overall');
+  url.searchParams.set('page', '1');
+  url.searchParams.set('pageSize', String(limit));
+  url.searchParams.set('sortBy', 'rank');
+  url.searchParams.set('sortDesc', 'false');
+  const payload = await fetchJson(url.toString(), {
+    headers: { referer: 'https://polymarketanalytics.com/traders' },
+  });
+  const rows = Array.isArray(payload?.data) ? payload.data : [];
+  return rows.map((row) => ({
+    wallet: String(row.trader || '').toLowerCase(),
+    displayName: row.trader_name || maskWallet(row.trader || ''),
+    rank: Number(row.rank || 0),
+    overallGain: Number(row.overall_gain || 0),
+    activePositions: Number(row.active_positions || 0),
+    totalCurrentValue: Number(row.total_current_value || 0),
+    totalPositions: Number(row.total_positions || 0),
+    winRate: Number(row.win_rate || 0),
+    traderTags: row.trader_tags || '',
+    source: 'leaderboard-seed',
+  })).filter((row) => row.wallet);
 }
 
 async function fetchMarketPositions(conditionId, limit = 6) {
@@ -627,6 +653,9 @@ async function buildSmartMoneyLayer(snapshot) {
   }
   if (!focusMarkets.length) return { smartMoneyOverview: [], smartMoneyActions: [] };
 
+  const seedWallets = await fetchSeedWallets().catch(() => []);
+  const seedWalletMap = new Map(seedWallets.map((w) => [w.wallet, w]));
+
   const marketRows = await Promise.all(focusMarkets.map(async (m) => {
     try {
       const rows = await fetchMarketPositions(m.conditionId, 6);
@@ -642,7 +671,15 @@ async function buildSmartMoneyLayer(snapshot) {
       for (const pos of tokenBlock.positions || []) {
         const wallet = String(pos.proxyWallet || '');
         if (!wallet) continue;
+        const seed = seedWalletMap.get(wallet.toLowerCase()) || null;
         const current = walletMap.get(wallet) || {
+          seed,
+          source: seed ? 'leaderboard-seed' : 'focus-market-derived',
+          seedRank: seed?.rank ?? null,
+          leaderboardGain: seed?.overallGain ?? null,
+          leaderboardWinRate: seed?.winRate ?? null,
+          traderTags: seed?.traderTags ?? '',
+          wallet,
           wallet,
           displayName: pos.name || pos.pseudonym || maskWallet(wallet),
           verified: Boolean(pos.verified),
@@ -683,11 +720,13 @@ async function buildSmartMoneyLayer(snapshot) {
       const smartScore = Math.round((Math.min(Math.log10(Math.max(wallet.totalPnl, 1) + 1) * 22, 46)
         + Math.min(Math.log10(wallet.currentValue + 1) * 14, 20)
         + diversity * 6
-        + (wallet.verified ? 6 : 0)) * 10) / 10;
+        + (wallet.verified ? 6 : 0)
+        + (wallet.seedRank ? Math.max(0, 10 - wallet.seedRank / 4) : 0)
+        + (wallet.leaderboardGain ? Math.min(Math.log10(Math.max(wallet.leaderboardGain, 1) + 1) * 4, 10) : 0)) * 10) / 10;
       return { ...wallet, diversity, smartScore };
     })
-    .filter((wallet) => wallet.totalPnl > 0 || wallet.currentValue > 500)
-    .sort((a, b) => b.smartScore - a.smartScore)
+    .filter((wallet) => wallet.seed || wallet.totalPnl > 0 || wallet.currentValue > 500)
+    .sort((a, b) => (a.seed && !b.seed) ? -1 : (!a.seed && b.seed) ? 1 : b.smartScore - a.smartScore)
     .slice(0, MAX_SMART_WALLETS);
 
   const focusConditionIds = focusMarkets.map((m) => m.conditionId);
@@ -730,7 +769,10 @@ async function buildSmartMoneyLayer(snapshot) {
     focusTitleZh: wallet.bestPosition?.titleZh || '--',
     focusOutcome: wallet.bestPosition?.outcome || '--',
     focusPnl: Number(wallet.bestPosition?.totalPnl || 0),
-    summaryZh: `${wallet.displayName || maskWallet(wallet.wallet)} 最近在高优先级市场里更像持续型盈利账户，当前更重仓 ${wallet.bestPosition?.titleZh || '重点市场'} 的 ${wallet.bestPosition?.outcome || '--'} 方向。`,
+    summaryZh: `${wallet.seed ? '榜单种子账户' : '补充观察账户'} ${wallet.displayName || maskWallet(wallet.wallet)} 最近在高优先级市场里更像持续型盈利账户，当前更重仓 ${wallet.bestPosition?.titleZh || '重点市场'} 的 ${wallet.bestPosition?.outcome || '--'} 方向。`,
+    sourceLabel: wallet.seed ? `榜单种子 #${wallet.seedRank || '--'}` : '焦点市场补充',
+    leaderboardWinRate: wallet.leaderboardWinRate,
+    leaderboardGain: wallet.leaderboardGain,
   }));
 
   const smartParticipationMap = new Map();
