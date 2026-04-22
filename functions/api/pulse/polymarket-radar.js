@@ -733,6 +733,39 @@ async function buildSmartMoneyLayer(snapshot) {
     summaryZh: `${wallet.displayName || maskWallet(wallet.wallet)} 最近在高优先级市场里更像持续型盈利账户，当前更重仓 ${wallet.bestPosition?.titleZh || '重点市场'} 的 ${wallet.bestPosition?.outcome || '--'} 方向。`,
   }));
 
+  const smartParticipationMap = new Map();
+  for (const wallet of detailedWallets) {
+    for (const market of wallet.markets || []) {
+      const current = smartParticipationMap.get(market.conditionId) || { wallets: [], buyCount: 0, sellCount: 0, totalPnl: 0 };
+      if (!current.wallets.some((w) => w.wallet === wallet.wallet)) {
+        current.wallets.push({
+          wallet: wallet.wallet,
+          walletShort: maskWallet(wallet.wallet),
+          displayName: wallet.displayName,
+          smartScore: wallet.smartScore,
+          totalPnl: wallet.totalPnl,
+        });
+      }
+      current.totalPnl += Number(wallet.totalPnl || 0);
+      smartParticipationMap.set(market.conditionId, current);
+    }
+    for (const trade of wallet.recentTrades || []) {
+      const current = smartParticipationMap.get(trade.conditionId) || { wallets: [], buyCount: 0, sellCount: 0, totalPnl: 0 };
+      if (trade.side === 'BUY') current.buyCount += 1;
+      if (trade.side === 'SELL') current.sellCount += 1;
+      if (!current.wallets.some((w) => w.wallet === wallet.wallet)) {
+        current.wallets.push({
+          wallet: wallet.wallet,
+          walletShort: maskWallet(wallet.wallet),
+          displayName: wallet.displayName,
+          smartScore: wallet.smartScore,
+          totalPnl: wallet.totalPnl,
+        });
+      }
+      smartParticipationMap.set(trade.conditionId, current);
+    }
+  }
+
   const smartMoneyActions = detailedWallets
     .flatMap((wallet) => wallet.recentTrades || [])
     .sort((a, b) => b.timestamp - a.timestamp)
@@ -744,7 +777,18 @@ async function buildSmartMoneyLayer(snapshot) {
       summaryZh: `${trade.displayName || maskWallet(trade.wallet)} 在 ${trade.titleZh} 上 ${trade.side === 'BUY' ? '继续加' : '开始减'} ${trade.outcome}，成交价 ${pctText(trade.price * 100)}，名义金额约 ${moneyText(trade.usdcSize)}。`,
     }));
 
-  return { smartMoneyOverview, smartMoneyActions };
+  const smartParticipation = [...smartParticipationMap.entries()].map(([conditionId, data]) => ({
+    conditionId,
+    walletCount: data.wallets.length,
+    buyCount: data.buyCount,
+    sellCount: data.sellCount,
+    totalPnl: data.totalPnl,
+    topWallets: data.wallets
+      .sort((a, b) => b.smartScore - a.smartScore)
+      .slice(0, 3),
+  }));
+
+  return { smartMoneyOverview, smartMoneyActions, smartParticipation };
 }
 
 async function buildRadarSnapshot(previousSnapshot = null) {
@@ -754,8 +798,31 @@ async function buildRadarSnapshot(previousSnapshot = null) {
   const books = await fetchBooksForTokens(bookCandidates.map((entry) => entry.yesTokenId));
   const booksByToken = new Map(books.map((book) => [String(book.asset_id), book]));
   const snapshot = buildSnapshot(qualifiedUniverse, booksByToken, previousSnapshot);
-  const smartMoneyLayer = await buildSmartMoneyLayer(snapshot).catch(() => ({ smartMoneyOverview: [], smartMoneyActions: [] }));
-  return { ...snapshot, ...smartMoneyLayer };
+  const smartMoneyLayer = await buildSmartMoneyLayer(snapshot).catch(() => ({ smartMoneyOverview: [], smartMoneyActions: [], smartParticipation: [] }));
+  const participationMap = new Map((smartMoneyLayer.smartParticipation || []).map((x) => [x.conditionId, x]));
+  const enrichWithParticipation = (items = []) => items.map((item) => {
+    const participation = participationMap.get(item.conditionId);
+    if (!participation) {
+      return {
+        ...item,
+        smartMoneyFlag: '暂无聪明钱联动',
+        smartMoneyNote: '当前没有抓到重点钱包在这个市场的明显动作。',
+      };
+    }
+    const tilt = participation.buyCount > participation.sellCount ? '偏买入' : participation.sellCount > participation.buyCount ? '偏卖出' : '多空都有';
+    const leaders = (participation.topWallets || []).map((x) => x.displayName || x.walletShort).join('、');
+    return {
+      ...item,
+      smartMoneyFlag: `${participation.walletCount} 个重点钱包参与`,
+      smartMoneyNote: `最近抓到 ${participation.walletCount} 个重点钱包参与，动作倾向 ${tilt}，代表账户包括 ${leaders || '若干账户'}。`,
+    };
+  });
+  return {
+    ...snapshot,
+    ...smartMoneyLayer,
+    anomalySignals: enrichWithParticipation(snapshot.anomalySignals || []),
+    topSignals: enrichWithParticipation(snapshot.topSignals || []),
+  };
 }
 
 export async function onRequestGet(context) {
