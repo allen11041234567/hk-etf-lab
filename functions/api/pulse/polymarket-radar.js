@@ -2,11 +2,14 @@ const GAMMA_BASE = 'https://gamma-api.polymarket.com';
 const CLOB_BASE = 'https://clob.polymarket.com';
 const SNAPSHOT_TTL_SECONDS = 20;
 const STALE_TTL_SECONDS = 180;
+const ANOMALY_BASELINE_SECONDS = 300;
 const DISCOVERY_LIMIT = 1000;
 const MAX_BOOK_CANDIDATES = 120;
 const MAX_RENDERED_MARKETS = 48;
 const MAX_TOP_SIGNALS = 10;
 const MAX_TOPIC_BUCKET = 10;
+const MAX_ANOMALIES = 8;
+const MAX_SMART_MONEY = 8;
 const USER_AGENT = 'Mozilla/5.0 (compatible; HK-ETF-Lab/1.0; +https://hketf-lab.pages.dev/)';
 
 const FINANCE_INCLUDE_RE = new RegExp([
@@ -386,7 +389,66 @@ function selectUniverse(markets) {
   return qualified;
 }
 
-function buildSnapshot(qualifiedUniverse, booksByToken) {
+function detectAnomalies(currentItems, baselineItems = []) {
+  const baselineMap = new Map((baselineItems || []).map((item) => [String(item.id), item]));
+  return currentItems
+    .map((item) => {
+      const prev = baselineMap.get(String(item.id));
+      const yesDeltaPct = prev ? item.yesPct - Number(prev.yesPct || 0) : 0;
+      const volumeDelta = prev ? item.volume24hr - Number(prev.volume24hr || 0) : 0;
+      const scoreDelta = prev ? item.score - Number(prev.score || 0) : 0;
+      const wallDelta = prev
+        ? Math.abs(item.nearBidDepth - item.nearAskDepth) - Math.abs(Number(prev.nearBidDepth || 0) - Number(prev.nearAskDepth || 0))
+        : 0;
+      const anomalyScore = Math.abs(yesDeltaPct) * 8
+        + Math.min(Math.abs(volumeDelta) / 2500, 18)
+        + Math.min(Math.abs(scoreDelta) * 0.7, 14)
+        + Math.min(Math.abs(wallDelta) / 3000, 12);
+      let trigger = '5 分钟内整体变化不大';
+      if (Math.abs(yesDeltaPct) >= 2.5) trigger = `5 分钟概率跳变 ${pctText(yesDeltaPct)}`;
+      else if (Math.abs(volumeDelta) >= 15000) trigger = `5 分钟放量 ${moneyText(volumeDelta > 0 ? volumeDelta : -volumeDelta)}`;
+      else if (Math.abs(wallDelta) >= 12000) trigger = '近价盘口厚度明显重排';
+      else if (Math.abs(scoreDelta) >= 8) trigger = `综合优先级抬升 ${scoreDelta > 0 ? '+' : ''}${scoreDelta.toFixed(1)}`;
+      return {
+        ...item,
+        yesDeltaPct: Math.round(yesDeltaPct * 10) / 10,
+        volumeDelta,
+        scoreDelta: Math.round(scoreDelta * 10) / 10,
+        wallDelta,
+        anomalyScore: Math.round(anomalyScore * 10) / 10,
+        anomalyTrigger: trigger,
+      };
+    })
+    .filter((item) => item.anomalyScore >= 10)
+    .sort((a, b) => b.anomalyScore - a.anomalyScore)
+    .slice(0, MAX_ANOMALIES);
+}
+
+function buildSmartMoneyCandidates(items) {
+  return [...items]
+    .map((item) => {
+      const bidLead = item.nearBidDepth - item.nearAskDepth;
+      const absorbRatio = item.nearAskDepth > 0 ? item.nearBidDepth / item.nearAskDepth : item.nearBidDepth > 0 ? 9 : 1;
+      const tradability = Math.max(0, 0.03 - Number(item.spread || 0)) * 600;
+      const flowScore = Math.min(Math.log10(item.volume24hr + 1) * 8, 22)
+        + Math.min(Math.abs(bidLead) / 3000, 18)
+        + Math.min(Math.abs(item.oneHourChangePct) * 0.9, 14)
+        + tradability;
+      let style = '盘口相对均衡';
+      if (bidLead > 0 && absorbRatio >= 1.5) style = '承接更厚，像有人在下面接';
+      else if (bidLead < 0 && absorbRatio <= 0.67) style = '卖压更重，像有人在上面压';
+      else if (Math.abs(item.oneHourChangePct) >= 2) style = '短时主动性更强';
+      return {
+        ...item,
+        smartMoneyScore: Math.round(flowScore * 10) / 10,
+        smartMoneyStyle: style,
+      };
+    })
+    .sort((a, b) => b.smartMoneyScore - a.smartMoneyScore)
+    .slice(0, MAX_SMART_MONEY);
+}
+
+function buildSnapshot(qualifiedUniverse, booksByToken, previousSnapshot = null) {
   const enriched = qualifiedUniverse.map((entry) => {
     const market = entry.market;
     const book = booksByToken.get(entry.yesTokenId) || null;
@@ -456,7 +518,9 @@ function buildSnapshot(qualifiedUniverse, booksByToken) {
     avgPriority: items.reduce((sum, item) => sum + item.financePriority, 0) / Math.max(items.length, 1),
   })).sort((a, b) => b.avgPriority - a.avgPriority || b.count - a.count);
 
-  const lead = topSignals[0] || null;
+  const anomalySignals = detectAnomalies(rendered, previousSnapshot?.markets || []);
+  const smartMoneyCandidates = buildSmartMoneyCandidates(rendered);
+  const lead = anomalySignals[0] || topSignals[0] || null;
   return {
     ok: true,
     generatedAt: new Date().toISOString(),
@@ -470,22 +534,25 @@ function buildSnapshot(qualifiedUniverse, booksByToken) {
     monitoredCount: rendered.length,
     topSignalCount: topSignals.length,
     total24hrVolume: rendered.reduce((sum, item) => sum + item.volume24hr, 0),
+    baselineWindowMinutes: Math.round(ANOMALY_BASELINE_SECONDS / 60),
     lead,
     topicSummary,
     topSignals,
+    anomalySignals,
+    smartMoneyCandidates,
     wallSignals,
     liquidSignals,
     markets: rendered,
   };
 }
 
-async function buildRadarSnapshot() {
+async function buildRadarSnapshot(previousSnapshot = null) {
   const discovered = await fetchMarkets();
   const qualifiedUniverse = selectUniverse(Array.isArray(discovered) ? discovered : []);
   const bookCandidates = qualifiedUniverse.slice(0, MAX_BOOK_CANDIDATES);
   const books = await fetchBooksForTokens(bookCandidates.map((entry) => entry.yesTokenId));
   const booksByToken = new Map(books.map((book) => [String(book.asset_id), book]));
-  return buildSnapshot(qualifiedUniverse, booksByToken);
+  return buildSnapshot(qualifiedUniverse, booksByToken, previousSnapshot);
 }
 
 export async function onRequestGet(context) {
@@ -494,6 +561,7 @@ export async function onRequestGet(context) {
   const cache = caches.default;
   const liveCacheKey = new Request(`${url.origin}/__edge/pulse/polymarket-radar/live`);
   const staleCacheKey = new Request(`${url.origin}/__edge/pulse/polymarket-radar/stale`);
+  const baselineCacheKey = new Request(`${url.origin}/__edge/pulse/polymarket-radar/baseline-5m`);
 
   try {
     const cached = await cache.match(liveCacheKey);
@@ -503,17 +571,24 @@ export async function onRequestGet(context) {
       return new Response(cached.body, { status: cached.status, headers });
     }
 
-    const body = JSON.stringify(await buildRadarSnapshot());
+    const baselineCached = await cache.match(baselineCacheKey);
+    const previousSnapshot = baselineCached ? await baselineCached.clone().json().catch(() => null) : null;
+    const snapshot = await buildRadarSnapshot(previousSnapshot);
+    const body = JSON.stringify(snapshot);
     const liveResponse = new Response(body, {
       headers: responseHeaders(`public, max-age=0, s-maxage=${SNAPSHOT_TTL_SECONDS}`, 'MISS'),
     });
     const staleResponse = new Response(body, {
       headers: responseHeaders(`public, max-age=0, s-maxage=${STALE_TTL_SECONDS}`, 'WARM'),
     });
+    const baselineResponse = new Response(body, {
+      headers: responseHeaders(`public, max-age=0, s-maxage=${ANOMALY_BASELINE_SECONDS}`, 'BASELINE'),
+    });
 
     context.waitUntil(Promise.all([
       cache.put(liveCacheKey, liveResponse.clone()),
       cache.put(staleCacheKey, staleResponse.clone()),
+      cache.put(baselineCacheKey, baselineResponse.clone()),
     ]));
 
     return liveResponse;

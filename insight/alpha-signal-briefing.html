@@ -125,6 +125,20 @@
     </section>
 
     <section class="section">
+      <div class="section-title"><h2>5 分钟异动检测</h2><div class="hint">只走新 API 链路，用最近 5 分钟基线比对</div></div>
+      <div class="grid-2">
+        <div class="panel">
+          <div class="section-title" style="margin-bottom:10px"><h2 style="font-size:18px">概率 / 成交异动榜</h2><div class="hint" id="anomaly-hint">优先抓突然变快的市场</div></div>
+          <div class="signal-list" id="anomaly-signals"></div>
+        </div>
+        <div class="panel">
+          <div class="section-title" style="margin-bottom:10px"><h2 style="font-size:18px">聪明钱候选池</h2><div class="hint">先用订单流骨架，后面再接真实追踪</div></div>
+          <div class="timeline" id="smart-money-signals"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
       <div class="section-title"><h2>结构信号</h2><div class="hint">不只看概率，也看深度和活跃度</div></div>
       <div class="grid-2">
         <div class="panel">
@@ -187,8 +201,14 @@
     function renderTopic(x) {
       return `<div class="heat-item"><div><div class="heat-k">${x.topic}</div><div class="heat-v">${x.hottestTitle}</div></div><div style="text-align:right"><div class="heat-num">${x.count}</div><div class="heat-k">平均波动 ${fmtPct(x.avgWeekChangePct)}</div></div></div>`;
     }
+    function renderAnomaly(x) {
+      return `<div class="signal-item"><div class="signal-top"><div class="signal-name">${x.titleZh}</div><div class="score">5m 分 ${x.anomalyScore}</div></div><div class="signal-meta">${pill(`5m 概率 ${fmtPct(x.yesDeltaPct)}`, Math.abs(x.yesDeltaPct) >= 2 ? 'hot' : '')}${pill(`5m 成交 ${x.volumeDelta >= 0 ? '+' : '-'}${fmtMoney(Math.abs(x.volumeDelta || 0))}`)}${pill(`1h ${fmtPct(x.oneHourChangePct)}`)}${pill(`价差 ${fmtPct((x.spread || 0) * 100)}`)}</div><div class="signal-note">${x.anomalyTrigger}</div><div class="signal-map">${x.financeLine}</div></div>`;
+    }
     function renderLiquid(x) {
       return `<div class="time-item"><div class="time-top"><div class="signal-name">${x.titleZh}</div><div class="time-stamp up">24小时 ${fmtMoney(x.volume24hr)}</div></div><div class="time-desc">近价买盘 ${fmtMoney(x.nearBidDepth)}，近价卖盘 ${fmtMoney(x.nearAskDepth)}，${x.pressureLabel}。${x.financeLine}</div></div>`;
+    }
+    function renderSmartMoney(x) {
+      return `<div class="time-item"><div class="time-top"><div class="signal-name">${x.titleZh}</div><div class="time-stamp violet">候选 ${x.smartMoneyScore}</div></div><div class="time-desc">${x.smartMoneyStyle}，近价买盘 ${fmtMoney(x.nearBidDepth)}，近价卖盘 ${fmtMoney(x.nearAskDepth)}，24 小时成交 ${fmtMoney(x.volume24hr)}。${x.financeLine}</div></div>`;
     }
     function renderMarket(x) {
       return `<div class="market-card"><div class="market-top"><div><div class="market-name">${x.titleZh}</div><div class="market-sub">${x.topic} · 截止 ${timeText(x.endDate)}</div></div><div class="score">发生概率 ${x.yesPct.toFixed(1)}%</div></div><div class="market-meta">${pill(`1小时 ${fmtPct(x.oneHourChangePct)}`)}${pill(`1天 ${fmtPct(x.oneDayChangePct)}`)}${pill(`24小时 ${fmtMoney(x.volume24hr)}`)}${pill(`买盘 ${fmtMoney(x.nearBidDepth)}`)}${pill(`卖盘 ${fmtMoney(x.nearAskDepth)}`)}</div><div class="market-note">${x.noteZh}</div><div class="market-map">${x.financeLine}</div><a class="market-link" href="${x.url}" target="_blank" rel="noopener noreferrer">查看原始市场</a></div>`;
@@ -208,6 +228,7 @@
         $('volume-total').textContent = fmtMoney(data.total24hrVolume || 0);
         $('generated-at').textContent = timeText(data.generatedAt);
         $('refresh-note').textContent = `当前为 API 轮询模式，约 ${(Number(data.refreshMs || 20000) / 1000).toFixed(0)} 秒自动刷新一次`;
+        $('anomaly-hint').textContent = `基于最近 ${data.baselineWindowMinutes || 5} 分钟缓存基线做对比`;
 
         const lead = data.lead;
         if (lead) {
@@ -225,6 +246,8 @@
 
         $('top-signals').innerHTML = (data.topSignals || []).map(x => renderSignalItem(x, 'score')).join('') || '<div class="empty">暂无数据</div>';
         $('topic-summary').innerHTML = (data.topicSummary || []).map(renderTopic).join('') || '<div class="empty">暂无数据</div>';
+        $('anomaly-signals').innerHTML = (data.anomalySignals || []).map(renderAnomaly).join('') || '<div class="empty">最近 5 分钟暂无明显异动</div>';
+        $('smart-money-signals').innerHTML = (data.smartMoneyCandidates || []).map(renderSmartMoney).join('') || '<div class="empty">聪明钱候选池暂时为空</div>';
         $('wall-signals').innerHTML = (data.wallSignals || []).map(x => renderSignalItem(x, 'wall')).join('') || '<div class="empty">暂无数据</div>';
         $('liquid-signals').innerHTML = (data.liquidSignals || []).map(renderLiquid).join('') || '<div class="empty">暂无数据</div>';
         $('market-list').innerHTML = (data.markets || []).map(renderMarket).join('') || '<div class="empty">暂无数据</div>';
