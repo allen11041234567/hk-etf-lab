@@ -4,6 +4,11 @@ export const TRUMP_TRANSLATION_CACHE = {
     "content_zh_hk": "我那檔《飛黃騰達》現象級節目最後一季！",
     "content_ko": "내 초대형 히트작 ‘어프렌티스’ 마지막 시즌!"
   },
+  "https://truthsocial.com/@realDonaldTrump/116449089632063189": {
+    "content_zh_cn": "《晨间荣耀》：特朗普总统会在对伊朗的战争中像谢尔曼那样全力出击吗？\nhttps://www.foxnews.com/opinion/morning-glory-president-trump-go-full-sherman-war-iran",
+    "content_zh_hk": "《Morning Glory》：特朗普總統會否在對伊朗的戰爭中如謝爾曼般全力出擊？\nhttps://www.foxnews.com/opinion/morning-glory-president-trump-go-full-sherman-war-iran",
+    "content_ko": "MORNING GLORY: 트럼프 대통령은 대이란 전쟁에서 셔먼식으로 전면전을 펼칠 것인가?\nhttps://www.foxnews.com/opinion/morning-glory-president-trump-go-full-sherman-war-iran"
+  },
   "https://truthsocial.com/@realDonaldTrump/116449087766053163": {
     "content_zh_cn": "该让务实的大人们叫停马姆达尼的财政幻想了：https://nypost.com/2026/03/19/opinion/time-for-the-grown-ups-to-halt-mamdanis-fiscal-fantasies/",
     "content_zh_hk": "係時候由務實嘅大人們叫停Mamdani嘅財政幻想：https://nypost.com/2026/03/19/opinion/time-for-the-grown-ups-to-halt-mamdanis-fiscal-fantasies/",
