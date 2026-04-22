@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex,nofollow,noarchive" />
+  <title>市场信号简报</title>
+  <style>
+    :root{
+      --bg:#07111f;--bg2:#0b1728;--panel:rgba(12,23,40,.86);--panel2:rgba(16,29,49,.92);--line:rgba(148,163,184,.16);
+      --text:#edf4ff;--muted:#8ea3bf;--hot:#ff6b6b;--warm:#ffb84d;--up:#3dd9a4;--down:#69a7ff;--violet:#a78bfa;--cyan:#52d7ff;
+      --shadow:0 20px 50px rgba(0,0,0,.28);
+    }
+    *{box-sizing:border-box} body{margin:0;color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:
+      radial-gradient(circle at top left, rgba(82,215,255,.12), transparent 28%),
+      radial-gradient(circle at top right, rgba(167,139,250,.12), transparent 24%),
+      linear-gradient(180deg, #08111d 0%, #0a1423 40%, #08101a 100%);} a{color:inherit}
+    .wrap{width:min(1180px, calc(100vw - 28px)); margin:0 auto; padding:20px 0 42px}
+    .hero{padding:26px 24px 22px;border-radius:30px;background:linear-gradient(180deg, rgba(15,29,49,.92), rgba(9,18,31,.92));border:1px solid var(--line);box-shadow:var(--shadow);overflow:hidden;position:relative}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(82,215,255,.12);border:1px solid rgba(82,215,255,.22);color:#96ebff;font-size:13px;font-weight:700}
+    h1{margin:14px 0 10px;font-size:44px;line-height:1.08;letter-spacing:-.04em}.sub{max-width:860px;color:#b8c8dc;font-size:16px;line-height:1.85}
+    .hero-row{display:flex;justify-content:space-between;gap:16px;align-items:flex-end;flex-wrap:wrap}.hero-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.pill{padding:9px 12px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:#c1d0e4;font-size:13px}
+    .hero-side{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;min-width:330px}.hero-stat{padding:16px 16px 14px;border-radius:20px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
+    .hero-stat .k{font-size:12px;color:#8ea3bf}.hero-stat .v{margin-top:7px;font-size:28px;font-weight:800;letter-spacing:-.03em}.hero-stat .d{margin-top:6px;font-size:12px;color:#9fb2ca;line-height:1.6}
+    .section{margin-top:16px;padding:18px 18px 16px;border-radius:26px;background:linear-gradient(180deg, rgba(14,25,43,.88), rgba(9,17,29,.92));border:1px solid var(--line);box-shadow:var(--shadow)}
+    .section-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}.section-title h2{margin:0;font-size:24px;letter-spacing:-.02em}.section-title .hint{font-size:13px;color:var(--muted)}
+    .grid-3{display:grid;grid-template-columns:1.45fr 1fr 1fr;gap:14px}.grid-2{display:grid;grid-template-columns:1.2fr .8fr;gap:14px}
+    .panel{border:1px solid var(--line);border-radius:22px;padding:16px;background:linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.02))}
+    .lead-card{padding:18px;border-radius:24px;border:1px solid rgba(255,107,107,.28);background:linear-gradient(180deg, rgba(255,107,107,.10), rgba(255,255,255,.03))}
+    .label{font-size:12px;color:#ffd2d2;letter-spacing:.06em;text-transform:uppercase}.lead-title{margin-top:8px;font-size:28px;font-weight:800;line-height:1.25}.lead-desc{margin-top:10px;font-size:15px;line-height:1.78;color:#c9d6e5}
+    .stat-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.mini-pill{padding:7px 10px;border-radius:999px;font-size:12px;font-weight:700;border:1px solid var(--line);background:rgba(255,255,255,.04);color:#d7e2ef}
+    .mini-pill.hot{color:#ffd2d2;border-color:rgba(255,107,107,.28);background:rgba(255,107,107,.08)}.mini-pill.up{color:#bdfbe7;border-color:rgba(61,217,164,.24);background:rgba(61,217,164,.09)}.mini-pill.violet{color:#ddd1ff;border-color:rgba(167,139,250,.24);background:rgba(167,139,250,.09)}
+    .signal-list,.heat-list,.timeline,.story-grid,.markets{display:grid;gap:10px}.signal-item,.story-card,.market-card{padding:13px 14px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.03)}
+    .signal-top,.market-top,.heat-item,.time-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}.signal-name,.market-name{font-size:16px;font-weight:700;line-height:1.45}.score{font-size:12px;padding:6px 8px;border-radius:999px;background:rgba(82,215,255,.10);border:1px solid rgba(82,215,255,.18);color:#93ecff;white-space:nowrap}
+    .signal-meta,.market-meta{margin-top:8px;display:flex;flex-wrap:wrap;gap:8px}.signal-note,.market-note,.time-desc,.story-card .d{margin-top:8px;font-size:13px;color:#9fb2ca;line-height:1.65}
+    .heat-item{padding:12px 0;border-bottom:1px dashed rgba(148,163,184,.16)}.heat-item:last-child{border-bottom:none;padding-bottom:0}.heat-k{font-size:12px;color:var(--muted)}.heat-v{margin-top:4px;font-size:15px;font-weight:700;line-height:1.45}.heat-num{font-size:20px;font-weight:800}
+    .ticker-item,.time-item{padding:12px 14px;border-radius:16px;background:rgba(255,255,255,.03);border:1px solid var(--line)}.ticker-tag,.time-stamp,.market-sub{font-size:12px;color:#9fb2ca}.ticker-title{font-size:14px;font-weight:700;line-height:1.5}.ticker-move{font-size:15px;font-weight:800}
+    .up{color:var(--up)} .down{color:var(--down)} .warm{color:var(--warm)} .hot{color:var(--hot)} .violet{color:var(--violet)}
+    .story-grid{grid-template-columns:1fr 1fr 1fr}.story-card .k{font-size:12px;color:var(--muted)}.story-card .v{margin-top:7px;font-size:19px;font-weight:800;line-height:1.4}
+    .markets{grid-template-columns:1fr 1fr}.market-link{margin-top:10px;display:inline-flex;align-items:center;gap:6px;color:#9aefff;text-decoration:none;font-size:13px;font-weight:700}.market-link::after{content:'↗'}
+    .empty,.error{padding:14px 16px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:#cbd8e8}.error{display:none;background:#3b1820;border-color:#6a2633;color:#ffd7df}
+    @media (max-width:980px){h1{font-size:34px}.hero-side{min-width:0;width:100%}.grid-3,.grid-2,.story-grid,.markets{grid-template-columns:1fr}}
+    @media (max-width:560px){.wrap{width:calc(100vw - 14px);padding:12px 0 24px}.hero{padding:16px 14px 14px;border-radius:22px}.eyebrow{font-size:12px;padding:7px 10px}h1{font-size:26px;line-height:1.14;margin:10px 0 8px}.sub{font-size:13px;line-height:1.7}.hero-meta{gap:8px;margin-top:10px}.pill{font-size:12px;padding:7px 10px}.hero-side{grid-template-columns:1fr 1fr;gap:8px}.hero-stat{padding:12px;border-radius:16px}.hero-stat .v{font-size:20px}.section{margin-top:10px;padding:12px;border-radius:18px}.section-title{margin-bottom:10px}.section-title h2{font-size:18px}.section-title .hint{font-size:12px}.lead-card{padding:14px;border-radius:18px}.lead-title{font-size:21px}.lead-desc{font-size:13px;line-height:1.68}.signal-name,.market-name,.ticker-title{font-size:13px}.story-card .v{font-size:16px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="hero-row">
+        <div>
+          <div class="eyebrow">隐藏测试页 · Polymarket 实时快照版</div>
+          <h1>金融预测市场异动跟踪</h1>
+          <div class="sub">聚焦更容易影响金融资产定价的预测市场，包括加密资产、美联储利率、宏观数据、地缘风险和美国政治。首屏优先呈现最值得盯的异动，而不是原始市场列表。</div>
+          <div class="hero-meta">
+            <div class="pill">全中文展示</div>
+            <div class="pill">隐藏入口，不挂首页</div>
+            <div class="pill">真实数据来自 Polymarket 公开接口</div>
+          </div>
+        </div>
+        <div class="hero-side">
+          <div class="hero-stat"><div class="k">已纳入市场</div><div class="v" id="market-count">--</div><div class="d">优先保留更偏金融和宏观的可解释事件</div></div>
+          <div class="hero-stat"><div class="k">高优先级异动</div><div class="v hot" id="hot-count">--</div><div class="d">按价格、活跃度、价差和盘口紧张度综合打分</div></div>
+          <div class="hero-stat"><div class="k">样本 24h 成交额</div><div class="v warm" id="volume-total">--</div><div class="d">用于判断当前站点里这批市场是否真的活跃</div></div>
+          <div class="hero-stat"><div class="k">最近刷新</div><div class="v" id="generated-at">--</div><div class="d">当前为静态快照模式，后续可转定时自动刷新</div></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="error" id="error-box"></div>
+
+    <section class="section">
+      <div class="section-title"><h2>今天最值得看的异动</h2><div class="hint">先看主信号，再看异动榜</div></div>
+      <div class="grid-3">
+        <div class="lead-card">
+          <div class="label">TOP SIGNAL</div>
+          <div class="lead-title" id="lead-title">--</div>
+          <div class="lead-desc" id="lead-desc">--</div>
+          <div class="stat-row" id="lead-pills"></div>
+        </div>
+        <div class="panel">
+          <div class="section-title" style="margin-bottom:10px"><h2 style="font-size:18px">异动榜</h2><div class="hint">综合打分最高</div></div>
+          <div class="signal-list" id="top-signals"></div>
+        </div>
+        <div class="panel">
+          <div class="section-title" style="margin-bottom:10px"><h2 style="font-size:18px">主题热度</h2><div class="hint">适合快速抓主线</div></div>
+          <div class="heat-list" id="topic-summary"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title"><h2>压住变化与活跃度</h2><div class="hint">先用真实盘口深度近似观察，后续再接连续快照</div></div>
+      <div class="grid-2">
+        <div class="panel">
+          <div class="section-title" style="margin-bottom:10px"><h2 style="font-size:18px">Wall Shift，盘口压力榜</h2><div class="hint">当前看近价位买卖深度</div></div>
+          <div class="signal-list" id="wall-signals"></div>
+        </div>
+        <div class="panel">
+          <div class="section-title" style="margin-bottom:10px"><h2 style="font-size:18px">最近一轮变动</h2><div class="hint">对比上一次脚本快照</div></div>
+          <div class="timeline" id="movers"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title"><h2>当前监控市场</h2><div class="hint">保留外链，但页面本身不做公开入口</div></div>
+      <div class="markets" id="market-list"></div>
+    </section>
+
+    <section class="section">
+      <div class="section-title"><h2>下一步最值得补的能力</h2><div class="hint">你要的“定时播报”会从这里接出来</div></div>
+      <div class="story-grid">
+        <div class="story-card"><div class="k">下一步</div><div class="v">把这份快照脚本做成定时生成 + 自动发布</div><div class="d">这样隐藏页会定时刷新，数据不会停在手动快照状态。</div></div>
+        <div class="story-card"><div class="k">第二步</div><div class="v">增加 Telegram / X 的异动播报模板</div><div class="d">优先播报概率突然跳变、盘口压力反转、地缘和利率类高影响事件。</div></div>
+        <div class="story-card"><div class="k">第三步</div><div class="v">加单事件详情页和专题页</div><div class="d">把利率、比特币、台海、衰退这些单独做成可沉淀的专题入口。</div></div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const DATA_URL = '../assets/data/pm-alpha-snapshot.json';
+    const $ = (id) => document.getElementById(id);
+    const fmtMoney = (n) => {
+      n = Number(n || 0);
+      if (n >= 1e6) return (n / 1e6).toFixed(2) + 'M';
+      if (n >= 1e3) return (n / 1e3).toFixed(1) + 'K';
+      return String(Math.round(n));
+    };
+    const fmtPp = (n) => {
+      n = Number(n || 0);
+      const sign = n > 0 ? '+' : '';
+      return sign + n.toFixed(1) + 'pct';
+    };
+    const fmtPct = (n) => {
+      n = Number(n || 0);
+      const sign = n > 0 ? '+' : '';
+      return sign + n.toFixed(1) + '%';
+    };
+    const timeText = (iso) => {
+      if (!iso) return '--';
+      const d = new Date(iso);
+      return d.toLocaleString('zh-CN', { hour12:false, timeZone:'Asia/Shanghai', month:'2-digit', day:'2-digit', hour:'2-digit', minute:'2-digit' });
+    };
+    function pill(text, cls='') { return `<span class="mini-pill ${cls}">${text}</span>`; }
+    function renderSignalItem(x, mode='score') {
+      const right = mode === 'score' ? `异动分 ${x.score}` : x.pressureLabel;
+      const meta = [pill(`Yes ${x.yesPct}%`, x.yesPrice >= 0.5 ? 'up' : ''), pill(`周变化 ${fmtPct(x.weekChangePct)}`), pill(`价差 ${fmtPct(x.spread * 100)}`)].join('');
+      return `<div class="signal-item"><div class="signal-top"><div class="signal-name">${x.titleZh}</div><div class="score">${right}</div></div><div class="signal-meta">${meta}</div><div class="signal-note">${x.noteZh}</div></div>`;
+    }
+    function renderTopic(x) {
+      return `<div class="heat-item"><div><div class="heat-k">${x.topic}</div><div class="heat-v">${x.hotestTitle}</div></div><div style="text-align:right"><div class="heat-num">${x.count}</div><div class="heat-k">均值 ${x.avgYesPct}%</div></div></div>`;
+    }
+    function renderMover(x) {
+      const changeCls = Number(x.priceDeltaSinceLastPp) >= 0 ? 'up' : 'down';
+      return `<div class="time-item"><div class="time-top"><div class="signal-name">${x.titleZh}</div><div class="time-stamp ${changeCls}">${fmtPp(x.priceDeltaSinceLastPp)}</div></div><div class="time-desc">相对上次快照，近价位买盘变化 ${fmtMoney(x.bidDepthDelta)}，卖盘变化 ${fmtMoney(x.askDepthDelta)}。当前判断：${x.pressureLabel}。</div></div>`;
+    }
+    function renderMarket(x) {
+      return `<div class="market-card"><div class="market-top"><div><div class="market-name">${x.titleZh}</div><div class="market-sub">${x.topic} · 截止 ${timeText(x.endDate)}</div></div><div class="score">Yes ${x.yesPct}%</div></div><div class="market-meta">${pill(`24h ${fmtMoney(x.volume24hr)}`)}${pill(`流动性 ${fmtMoney(x.liquidity)}`)}${pill(`近价买盘 ${fmtMoney(x.nearBidDepth)}`)}${pill(`近价卖盘 ${fmtMoney(x.nearAskDepth)}`)}</div><div class="market-note">${x.noteZh}</div><a class="market-link" href="${x.url}" target="_blank" rel="noopener noreferrer">查看原始市场</a></div>`;
+    }
+    async function load() {
+      try {
+        const resp = await fetch(DATA_URL + '?v=' + Date.now(), { cache:'no-store' });
+        if (!resp.ok) throw new Error('HTTP ' + resp.status);
+        const data = await resp.json();
+        $('market-count').textContent = data.marketCount ?? '--';
+        $('hot-count').textContent = data.hotCount ?? '--';
+        $('volume-total').textContent = fmtMoney(data.total24hrVolume || 0);
+        $('generated-at').textContent = timeText(data.generatedAt);
+
+        const lead = (data.topSignals || [])[0];
+        if (lead) {
+          $('lead-title').textContent = lead.titleZh;
+          $('lead-desc').textContent = lead.noteZh;
+          $('lead-pills').innerHTML = [
+            pill(`Yes ${lead.yesPct}%`, lead.yesPrice >= 0.5 ? 'up' : ''),
+            pill(`周变化 ${fmtPct(lead.weekChangePct)}`, 'hot'),
+            pill(lead.pressureLabel, 'violet'),
+            pill(`24h ${fmtMoney(lead.volume24hr)}`)
+          ].join('');
+        }
+
+        $('top-signals').innerHTML = (data.topSignals || []).slice(0,4).map(x => renderSignalItem(x, 'score')).join('') || '<div class="empty">暂无数据</div>';
+        $('topic-summary').innerHTML = (data.topicSummary || []).slice(0,6).map(renderTopic).join('') || '<div class="empty">暂无数据</div>';
+        $('wall-signals').innerHTML = (data.wallSignals || []).slice(0,6).map(x => renderSignalItem(x, 'wall')).join('') || '<div class="empty">暂无数据</div>';
+        $('movers').innerHTML = (data.movers || []).slice(0,6).map(renderMover).join('') || '<div class="empty">首次运行还没有“对上次快照”的变化数据</div>';
+        $('market-list').innerHTML = (data.markets || []).map(renderMarket).join('') || '<div class="empty">暂无数据</div>';
+      } catch (err) {
+        $('error-box').style.display = 'block';
+        $('error-box').textContent = '页面数据加载失败：' + err.message;
+      }
+    }
+    load();
+  </script>
+</body>
+</html>

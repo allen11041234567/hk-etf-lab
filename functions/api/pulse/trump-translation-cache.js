@@ -1,4 +1,14 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116446361617264811": {
+    "content_zh_cn": "“中东论坛”的吉姆·汉森在《Jesse Watters Primetime》节目中，对美国如何“获胜”作出了精彩解读！",
+    "content_zh_hk": "「中東論壇」的Jim Hanson在《Jesse Watters Primetime》節目中，精彩闡述了美國如何「勝出」！",
+    "content_ko": "「Middle East Forum」의 짐 핸슨이 ‘Jesse Watters Primetime’에서 미국의 “승리”를 훌륭하게 설명했습니다!"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116446283085364326": {
+    "content_zh_cn": "伊朗的财政正濒临崩溃！他们希望霍尔木兹海峡立即开放——急需现金！每天损失5亿美元。军方和警方都在抱怨拿不到薪水。SOS！！！",
+    "content_zh_hk": "伊朗的財政正瀕臨崩潰！他們希望霍爾木茲海峽立即開放——急需現金！每天損失5億美元。軍方和警方都在抱怨拿不到薪水。SOS！！！",
+    "content_ko": "이란은 재정적으로 붕괴하고 있다! 그들은 호르무즈 해협이 즉시 개방되기를 원한다- 현금이 절실하다! 하루에 5억 달러를 잃고 있다. 군과 경찰은 급여를 받지 못하고 있다고 불만을 제기하고 있다. SOS!!!"
+  },
   "https://truthsocial.com/@realDonaldTrump/116446193585410965": {
     "content_zh_cn": "联邦大陪审团以“仇恨评级”相关欺诈罪名起诉南方贫困法律中心：https://justthenews.com/nation/crime/justice-department-launches-criminal-investigation-against-southern-poverty-law-center",
     "content_zh_hk": "聯邦大陪審團就「仇恨評級」相關欺詐罪名起訴南方貧困法律中心：https://justthenews.com/nation/crime/justice-department-launches-criminal-investigation-against-southern-poverty-law-center",
