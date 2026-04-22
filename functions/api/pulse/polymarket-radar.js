@@ -1048,14 +1048,16 @@ export async function onRequestGet(context) {
       headers: responseHeaders(`public, max-age=0, s-maxage=${STALE_TTL_SECONDS}`, 'WARM'),
     });
     const baselineResponse = new Response(body, {
-      headers: responseHeaders(`public, max-age=0, s-maxage=${ANOMALY_BASELINE_SECONDS}`, 'BASELINE'),
+      headers: responseHeaders(`public, max-age=0, s-maxage=${ANOMALY_BASELINE_SECONDS}`, baselineCached ? 'BASELINE-KEEP' : 'BASELINE-SET'),
     });
 
-    context.waitUntil(Promise.all([
+    const cacheWrites = [
       cache.put(liveCacheKey, liveResponse.clone()),
       cache.put(staleCacheKey, staleResponse.clone()),
-      cache.put(baselineCacheKey, baselineResponse.clone()),
-    ]));
+    ];
+    if (!baselineCached) cacheWrites.push(cache.put(baselineCacheKey, baselineResponse.clone()));
+
+    context.waitUntil(Promise.all(cacheWrites));
 
     return liveResponse;
   } catch (error) {
