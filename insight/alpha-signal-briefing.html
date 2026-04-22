@@ -187,6 +187,12 @@
       const sign = n > 0 ? '+' : '';
       return sign + n.toFixed(1) + '%';
     };
+    const fmtPctMaybe = (n) => {
+      if (n === null || n === undefined || Number.isNaN(Number(n))) return '--';
+      n = Number(n);
+      const sign = n > 0 ? '+' : '';
+      return sign + n.toFixed(1) + '%';
+    };
     const timeText = (iso) => {
       if (!iso) return '--';
       const d = new Date(iso);
@@ -197,17 +203,17 @@
       const right = mode === 'score' ? `异动分 ${x.score}` : x.pressureLabel;
       const meta = [
         pill(`Yes ${x.yesPct.toFixed(1)}%`, x.yesPrice >= 0.5 ? 'up' : ''),
-        pill(`1h ${fmtPct(x.oneHourChangePct)}`),
-        pill(`1w ${fmtPct(x.oneWeekChangePct)}`),
+        pill(`1h ${fmtPctMaybe(x.oneHourChangePct)}`),
+        pill(`1w ${fmtPctMaybe(x.oneWeekChangePct)}`),
         pill(`价差 ${fmtPct((x.spread || 0) * 100)}`)
       ].join('');
       return `<div class="signal-item"><div class="signal-top"><div class="signal-name">${x.titleZh}</div><div class="score">${right}</div></div><div class="signal-meta">${meta}</div><div class="signal-note">${x.noteZh}</div><div class="signal-map">${x.financeLine}</div></div>`;
     }
     function renderTopic(x) {
-      return `<div class="heat-item"><div><div class="heat-k">${x.topic}</div><div class="heat-v">${x.hottestTitle}</div></div><div style="text-align:right"><div class="heat-num">${x.count}</div><div class="heat-k">平均波动 ${fmtPct(x.avgWeekChangePct)}</div></div></div>`;
+      return `<div class="heat-item"><div><div class="heat-k">${x.topic}</div><div class="heat-v">${x.hottestTitle}</div></div><div style="text-align:right"><div class="heat-num">${x.count}</div><div class="heat-k">平均波动 ${fmtPctMaybe(x.avgWeekChangePct)}</div></div></div>`;
     }
     function renderAnomaly(x) {
-      return `<div class="signal-item"><div class="signal-top"><div class="signal-name">${x.titleZh}</div><div class="score">${x.resonanceLevel || ('1h 分 ' + x.anomalyScore)}</div></div><div class="signal-meta">${pill(`1h 概率 ${fmtPct(x.yesDeltaPct)}`, Math.abs(x.yesDeltaPct) >= 3 ? 'hot' : '')}${pill(`1h 成交 ${x.volumeDelta >= 0 ? '+' : '-'}${fmtMoney(Math.abs(x.volumeDelta || 0))}`)}${pill(`24h ${fmtPct(x.oneDayChangePct)}`)}${pill(x.smartMoneyFlag || '暂无聪明钱联动', 'violet')}</div><div class="signal-note">${x.intelLine || x.anomalyNarrative || x.noteZh}</div><div class="signal-map">${x.resonanceSummary || x.financeLine}。${x.smartMoneyNote || ''}</div></div>`;
+      return `<div class="signal-item"><div class="signal-top"><div class="signal-name">${x.titleZh}</div><div class="score">${x.resonanceLevel || ('1h 分 ' + x.anomalyScore)}</div></div><div class="signal-meta">${pill(`1h 概率 ${fmtPctMaybe(x.yesDeltaPct)}`, Math.abs(Number(x.yesDeltaPct || 0)) >= 3 ? 'hot' : '')}${pill(`1h 成交 ${x.volumeDelta >= 0 ? '+' : '-'}${fmtMoney(Math.abs(x.volumeDelta || 0))}`)}${pill(`24h ${fmtPctMaybe(x.oneDayChangePct)}`)}${pill(x.smartMoneyFlag || '暂无聪明钱联动', 'violet')}</div><div class="signal-note">${x.intelLine || x.anomalyNarrative || x.noteZh}</div><div class="signal-map">${x.resonanceSummary || x.financeLine}。${x.smartMoneyNote || ''}</div></div>`;
     }
     function renderLiquid(x) {
       return `<div class="time-item"><div class="time-top"><div class="signal-name">${x.titleZh}</div><div class="time-stamp up">24小时 ${fmtMoney(x.volume24hr)}</div></div><div class="time-desc">近价买盘 ${fmtMoney(x.nearBidDepth)}，近价卖盘 ${fmtMoney(x.nearAskDepth)}，${x.pressureLabel}。${x.financeLine}</div></div>`;
@@ -231,7 +237,7 @@
       return `<div class="time-item"><div class="time-top"><div class="signal-name">${x.topic}</div><div class="time-stamp warm">主线分 ${x.themeScore}</div></div><div class="time-desc">当前${x.tilt}，最近有 ${x.walletCount} 个重点钱包、${x.tradeCount} 笔动作，累计名义金额约 ${fmtMoney(x.totalNotional || 0)}。代表账户：${leaders}。代表市场：${reps || '暂无'}。${x.strongestSummaryZh}</div></div>`;
     }
     function renderMarket(x) {
-      return `<div class="market-card"><div class="market-top"><div><div class="market-name">${x.titleZh}</div><div class="market-sub">${x.topic} · 截止 ${timeText(x.endDate)}</div></div><div class="score">${x.resonanceLevel || ('发生概率 ' + x.yesPct.toFixed(1) + '%')}</div></div><div class="market-meta">${pill(`1小时 ${fmtPct(x.oneHourChangePct)}`)}${pill(`1天 ${fmtPct(x.oneDayChangePct)}`)}${pill(`24小时 ${fmtMoney(x.volume24hr)}`)}${pill(`买盘 ${fmtMoney(x.nearBidDepth)}`)}${pill(`卖盘 ${fmtMoney(x.nearAskDepth)}`)}</div><div class="market-note">${x.intelLine || x.noteZh}</div><div class="market-map">${x.financeLine}。${x.resonanceSummary || ''}</div><a class="market-link" href="${x.url}" target="_blank" rel="noopener noreferrer">查看原始市场</a></div>`;
+      return `<div class="market-card"><div class="market-top"><div><div class="market-name">${x.titleZh}</div><div class="market-sub">${x.topic} · 截止 ${timeText(x.endDate)}</div></div><div class="score">${x.resonanceLevel || ('发生概率 ' + x.yesPct.toFixed(1) + '%')}</div></div><div class="market-meta">${pill(`1小时 ${fmtPctMaybe(x.oneHourChangePct)}`)}${pill(`1天 ${fmtPctMaybe(x.oneDayChangePct)}`)}${pill(`1周 ${fmtPctMaybe(x.oneWeekChangePct)}`)}${pill(`24小时 ${fmtMoney(x.volume24hr)}`)}${pill(`买盘 ${fmtMoney(x.nearBidDepth)}`)}${pill(`卖盘 ${fmtMoney(x.nearAskDepth)}`)}</div><div class="market-note">${x.intelLine || x.noteZh}</div><div class="market-map">${x.financeLine}。${x.resonanceSummary || ''}</div><a class="market-link" href="${x.url}" target="_blank" rel="noopener noreferrer">查看原始市场</a></div>`;
     }
 
     let refreshTimer = null;

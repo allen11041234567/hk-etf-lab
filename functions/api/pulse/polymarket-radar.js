@@ -61,6 +61,15 @@ function parseArrayish(value) {
   }
 }
 
+function parseMaybeNumber(value) {
+  if (value === null || value === undefined || value === '') return null;
+  if (typeof value === 'number') return Number.isFinite(value) ? value : null;
+  const normalized = String(value).replace(/,/g, '').trim();
+  if (!normalized) return null;
+  const n = Number(normalized);
+  return Number.isFinite(n) ? n : null;
+}
+
 function pctText(value, digits = 1) {
   const n = Number(value || 0);
   const sign = n > 0 ? '+' : '';
@@ -265,9 +274,9 @@ function calcNearDepth(book, refPrice) {
 }
 
 function scoreMarket(market, nearBidDepth, nearAskDepth, topic, discoveryText) {
-  const oneHour = Math.abs(parseNumber(market.oneHourPriceChange) * 100);
-  const oneDay = Math.abs(parseNumber(market.oneDayPriceChange) * 100);
-  const oneWeek = Math.abs(parseNumber(market.oneWeekPriceChange) * 100);
+  const oneHour = Math.abs((parseMaybeNumber(market.oneHourPriceChange) ?? 0) * 100);
+  const oneDay = Math.abs((parseMaybeNumber(market.oneDayPriceChange) ?? 0) * 100);
+  const oneWeek = Math.abs((parseMaybeNumber(market.oneWeekPriceChange) ?? 0) * 100);
   const volume24hr = parseNumber(market.volume24hr || market.volume24hrClob);
   const liquidity = parseNumber(market.liquidityNum || market.liquidityClob || market.liquidity);
   const spread = parseNumber(market.spread);
@@ -604,9 +613,9 @@ function buildSnapshot(qualifiedUniverse, booksByToken, previousSnapshot = null)
     const market = entry.market;
     const book = booksByToken.get(entry.yesTokenId) || null;
     const { nearBidDepth, nearAskDepth } = calcNearDepth(book, entry.yesPrice);
-    const oneHourChangePct = parseNumber(market.oneHourPriceChange) * 100;
-    const oneDayChangePct = parseNumber(market.oneDayPriceChange) * 100;
-    const oneWeekChangePct = parseNumber(market.oneWeekPriceChange) * 100;
+    const oneHourChangePct = parseMaybeNumber(market.oneHourPriceChange);
+    const oneDayChangePct = parseMaybeNumber(market.oneDayPriceChange);
+    const oneWeekChangePct = parseMaybeNumber(market.oneWeekPriceChange);
     const score = scoreMarket(market, nearBidDepth, nearAskDepth, entry.topic, entry.discoveryText);
     const item = {
       id: market.id,
@@ -626,9 +635,9 @@ function buildSnapshot(qualifiedUniverse, booksByToken, previousSnapshot = null)
       spread: parseNumber(market.spread),
       liquidity: entry.liquidity,
       volume24hr: entry.volume24hr,
-      oneHourChangePct,
-      oneDayChangePct,
-      oneWeekChangePct,
+      oneHourChangePct: oneHourChangePct == null ? null : oneHourChangePct * 100,
+      oneDayChangePct: oneDayChangePct == null ? null : oneDayChangePct * 100,
+      oneWeekChangePct: oneWeekChangePct == null ? null : oneWeekChangePct * 100,
       nearBidDepth,
       nearAskDepth,
       pressureLabel: pressureLabel(nearBidDepth, nearAskDepth),
