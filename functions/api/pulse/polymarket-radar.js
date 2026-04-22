@@ -507,24 +507,25 @@ function selectUniverse(markets) {
 
 function detectAnomalies(currentItems, baselineItems = []) {
   const baselineMap = new Map((baselineItems || []).map((item) => [String(item.id), item]));
-  return currentItems
+  const hasBaseline = baselineMap.size > 0;
+  const scored = currentItems
     .map((item) => {
       const prev = baselineMap.get(String(item.id));
-      const yesDeltaPct = prev ? item.yesPct - Number(prev.yesPct || 0) : 0;
-      const volumeDelta = prev ? item.volume24hr - Number(prev.volume24hr || 0) : 0;
-      const scoreDelta = prev ? item.score - Number(prev.score || 0) : 0;
+      const yesDeltaPct = prev ? item.yesPct - Number(prev.yesPct || 0) : Number(item.oneHourChangePct || 0);
+      const volumeDelta = prev ? item.volume24hr - Number(prev.volume24hr || 0) : Math.max(0, Number(item.volume24hr || 0) * 0.15);
+      const scoreDelta = prev ? item.score - Number(prev.score || 0) : Number(item.score || 0) * 0.08;
       const wallDelta = prev
         ? Math.abs(item.nearBidDepth - item.nearAskDepth) - Math.abs(Number(prev.nearBidDepth || 0) - Number(prev.nearAskDepth || 0))
-        : 0;
+        : Math.abs(Number(item.nearBidDepth || 0) - Number(item.nearAskDepth || 0)) * 0.12;
       const anomalyScore = Math.abs(yesDeltaPct) * 8
         + Math.min(Math.abs(volumeDelta) / 4000, 18)
         + Math.min(Math.abs(scoreDelta) * 0.7, 14)
         + Math.min(Math.abs(wallDelta) / 3000, 12);
-      let trigger = '1 小时内整体变化不大';
+      let trigger = hasBaseline ? '1 小时内整体变化不大' : '基线未满，先按当前 1 小时活跃度展示';
       if (Math.abs(yesDeltaPct) >= 4) trigger = `1 小时概率跳变 ${pctText(yesDeltaPct)}`;
       else if (Math.abs(volumeDelta) >= 25000) trigger = `1 小时放量 ${moneyText(volumeDelta > 0 ? volumeDelta : -volumeDelta)}`;
-      else if (Math.abs(wallDelta) >= 18000) trigger = '1 小时内近价盘口厚度明显重排';
-      else if (Math.abs(scoreDelta) >= 10) trigger = `1 小时综合优先级抬升 ${scoreDelta > 0 ? '+' : ''}${scoreDelta.toFixed(1)}`;
+      else if (Math.abs(wallDelta) >= 18000) trigger = hasBaseline ? '1 小时内近价盘口厚度明显重排' : '当前盘口厚度变化值得关注';
+      else if (Math.abs(scoreDelta) >= 10) trigger = hasBaseline ? `1 小时综合优先级抬升 ${scoreDelta > 0 ? '+' : ''}${scoreDelta.toFixed(1)}` : '当前综合优先级靠前';
       return {
         ...item,
         yesDeltaPct: Math.round(yesDeltaPct * 10) / 10,
@@ -535,8 +536,12 @@ function detectAnomalies(currentItems, baselineItems = []) {
         anomalyTrigger: trigger,
       };
     })
-    .filter((item) => item.anomalyScore >= 9)
-    .sort((a, b) => b.anomalyScore - a.anomalyScore)
+    .sort((a, b) => b.anomalyScore - a.anomalyScore);
+
+  const strictHits = scored.filter((item) => item.anomalyScore >= 9).slice(0, MAX_ANOMALIES);
+  if (strictHits.length) return strictHits;
+  return scored
+    .filter((item) => Math.abs(Number(item.oneHourChangePct || 0)) >= 0.8 || Math.abs(Number(item.oneDayChangePct || 0)) >= 2 || Number(item.score || 0) >= 60)
     .slice(0, MAX_ANOMALIES);
 }
 
