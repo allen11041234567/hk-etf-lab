@@ -1,4 +1,19 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116446193585410965": {
+    "content_zh_cn": "联邦大陪审团以“仇恨评级”相关欺诈罪名起诉南方贫困法律中心：https://justthenews.com/nation/crime/justice-department-launches-criminal-investigation-against-southern-poverty-law-center",
+    "content_zh_hk": "聯邦大陪審團就「仇恨評級」相關欺詐罪名起訴南方貧困法律中心：https://justthenews.com/nation/crime/justice-department-launches-criminal-investigation-against-southern-poverty-law-center",
+    "content_ko": "연방 대배심, ‘혐오 등급’ 관련 사기 혐의로 서던 포버티 로 센터를 기소: https://justthenews.com/nation/crime/justice-department-launches-criminal-investigation-against-southern-poverty-law-center"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116446191940811375": {
+    "content_zh_cn": "美国情报部门一份备忘录显示，其曾秘密标记出2020年大选中的重大漏洞，包括选民数据问题：https://justthenews.com/politics-policy/elections/us-intel-flagged-major-2020-election-vulnerabilities-including-voter",
+    "content_zh_hk": "美國情報部門一份備忘錄顯示，其曾秘密標記出2020年大選中的重大漏洞，包括選民數據問題：https://justthenews.com/politics-policy/elections/us-intel-flagged-major-2020-election-vulnerabilities-including-voter",
+    "content_ko": "미국 정보당국이 유권자 데이터 문제를 포함한 2020년 대선의 중대한 취약점을 비밀리에 표시해뒀다고 메모가 밝혔다: https://justthenews.com/politics-policy/elections/us-intel-flagged-major-2020-election-vulnerabilities-including-voter"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116446189168001047": {
+    "content_zh_cn": "太糟糕了！\nhttps://justthenews.com/accountability/whistleblowers/ided-witness-2-helped-ukraine-whistleblower-worked-strzok-wrote-2016",
+    "content_zh_hk": "太糟糕了！\nhttps://justthenews.com/accountability/whistleblowers/ided-witness-2-helped-ukraine-whistleblower-worked-strzok-wrote-2016",
+    "content_ko": "끔찍하다!\nhttps://justthenews.com/accountability/whistleblowers/ided-witness-2-helped-ukraine-whistleblower-worked-strzok-wrote-2016"
+  },
   "https://truthsocial.com/@realDonaldTrump/116445894900653474": {
     "content_zh_cn": "萨利娜·齐托：特朗普深谙宾夕法尼亚之道。这篇采访说明了原因。\nhttps://www.washingtonpost.com/opinions/2025/11/19/trump-interview-pennsylvania-steel-tariffs/",
     "content_zh_hk": "薩利娜·齊托：特朗普深諳賓夕法尼亞之道。這篇訪問說明了原因。\nhttps://www.washingtonpost.com/opinions/2025/11/19/trump-interview-pennsylvania-steel-tariffs/",
