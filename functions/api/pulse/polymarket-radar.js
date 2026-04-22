@@ -214,6 +214,19 @@ function scoreMarket(market, nearBidDepth, nearAskDepth, topic, discoveryText) {
   ) * 100) / 100;
 }
 
+function toZhDate(label = '') {
+  const months = {
+    january: '1', february: '2', march: '3', april: '4', may: '5', june: '6',
+    july: '7', august: '8', september: '9', october: '10', november: '11', december: '12'
+  };
+  const m = String(label).trim().match(/^([A-Za-z]+)\s+(\d{1,2})(?:,\s*(\d{4}))?$/);
+  if (!m) return label;
+  const month = months[m[1].toLowerCase()] || m[1];
+  const day = String(Number(m[2]));
+  const year = m[3] || '2026';
+  return `${year} 年 ${month} 月 ${day} 日`;
+}
+
 function shortZhTitle(question = '') {
   let q = (question || '').trim();
   if (!q) return '--';
@@ -225,9 +238,12 @@ function shortZhTitle(question = '') {
     [/^Will Bitcoin hit \$([\d.]+[kKmM]?) by December 31, 2026\?$/i, (_, p) => `比特币会在 2026 年 12 月 31 日前触及 ${p} 美元吗`],
     [/^US recession by end of 2026\?$/i, '美国会在 2026 年底前陷入衰退吗'],
     [/^USD\.AI FDV above \$([\d.]+[kKmM]?) one day after launch\?$/i, (_, p) => `USD.AI 上线一天后估值会高于 ${p} 美元吗`],
-    [/^US x Iran diplomatic meeting by ([A-Za-z]+ \d{1,2}, 2026)\?$/i, (_, d) => `美国与伊朗会在 ${d} 前举行外交会晤吗`],
-    [/^US x Iran ceasefire extended by ([A-Za-z]+ \d{1,2}, 2026)\?$/i, (_, d) => `美国与伊朗停火会在 ${d} 前延长吗`],
-    [/^特朗普 agree to Iranian enrichment of uranium in April$/i, '特朗普会在 4 月同意伊朗进行铀浓缩吗'],
+    [/^US x Iran diplomatic meeting by ([A-Za-z]+ \d{1,2}, 2026)\?$/i, (_, d) => `美国与伊朗会在 ${toZhDate(d)}前举行外交会晤吗`],
+    [/^US x Iran ceasefire extended by ([A-Za-z]+ \d{1,2}, 2026)\?$/i, (_, d) => `美国与伊朗停火会在 ${toZhDate(d)}前延长吗`],
+    [/^Will Steve Witkoff have a diplomatic meeting with Iran by ([A-Za-z]+ \d{1,2})\??$/i, (_, d) => `Steve Witkoff 会在 ${toZhDate(d)}前与伊朗举行外交会晤吗`],
+    [/^Will J\.D\. Vance have a diplomatic meeting with Iran by ([A-Za-z]+ \d{1,2})\??$/i, (_, d) => `J.D. Vance 会在 ${toZhDate(d)}前与伊朗举行外交会晤吗`],
+    [/^Will Iran agree to end enrichment of uranium by ([A-Za-z]+ \d{1,2})\??$/i, (_, d) => `伊朗会在 ${toZhDate(d)}前同意停止铀浓缩吗`],
+    [/^Will Trump agree to Iranian enrichment of uranium in April\??$/i, '特朗普会在 4 月同意伊朗进行铀浓缩吗'],
   ];
   for (const [re, value] of exactRules) {
     const m = q.match(re);
@@ -237,9 +253,10 @@ function shortZhTitle(question = '') {
   q = q.replace(/^Will\s+/i, '');
   q = q.replace(/\?$/, '');
   q = q.replace(/ by end of 2026$/i, '（到 2026 年底）');
-  q = q.replace(/ by December 31, 2026$/i, '（到 2026-12-31）');
-  q = q.replace(/ by June 30, 2026$/i, '（到 2026-06-30）');
-  q = q.replace(/ by April (\d{1,2}), 2026$/i, '（到 2026-04-$1）');
+  q = q.replace(/ by December 31, 2026$/i, '（到 2026 年 12 月 31 日）');
+  q = q.replace(/ by June 30, 2026$/i, '（到 2026 年 6 月 30 日）');
+  q = q.replace(/ by ([A-Za-z]+ \d{1,2}, 2026)$/i, (_, d) => `（到 ${toZhDate(d)}）`);
+  q = q.replace(/ by ([A-Za-z]+ \d{1,2})$/i, (_, d) => `（到 ${toZhDate(d)}）`);
   q = q.replace(/ one day after launch$/i, '（上线 1 天后）');
   q = q.replace(/ above \$/ig, '高于 ');
   q = q.replace(/ below \$/ig, '低于 ');
@@ -255,12 +272,15 @@ function shortZhTitle(question = '') {
     [/Trump/g, '特朗普'],
     [/Russia/g, '俄罗斯'],
     [/Ukraine/g, '乌克兰'],
+    [/Iranian/ig, '伊朗'],
     [/Iran/g, '伊朗'],
     [/US x /g, '美国与'],
     [/US /g, '美国 '],
     [/recession/ig, '衰退'],
     [/ceasefire/ig, '停火'],
     [/diplomatic meeting/ig, '外交会晤'],
+    [/agree to end enrichment of uranium/ig, '同意停止铀浓缩'],
+    [/agree to enrichment of uranium/ig, '同意进行铀浓缩'],
     [/inflation/ig, '通胀'],
     [/tariff/ig, '关税'],
     [/gold/ig, '黄金'],
@@ -269,6 +289,8 @@ function shortZhTitle(question = '') {
     [/launch/ig, '上线'],
     [/OpenAI/g, 'OpenAI'],
     [/best AI model/ig, '最佳 AI 模型'],
+    [/have a /ig, '进行'],
+    [/ with /ig, '与'],
   ];
   for (const [re, to] of dict) q = q.replace(re, to);
   return q.trim();
