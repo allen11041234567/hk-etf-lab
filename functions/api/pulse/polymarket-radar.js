@@ -875,6 +875,7 @@ async function buildSmartMoneyLayer(snapshot) {
       const tilt = item.buyCount > item.sellCount ? '偏买入' : item.sellCount > item.buyCount ? '偏卖出' : '多空分歧';
       const leaders = [...item.wallets.values()].sort((a, b) => b.smartScore - a.smartScore).slice(0, 3);
       const strongest = item.topTrades.sort((a, b) => b.usdcSize - a.usdcSize)[0] || null;
+      const themeScore = Math.round((Math.min(item.totalNotional / 5000, 30) + item.wallets.size * 8 + (item.buyCount + item.sellCount) * 2) * 10) / 10;
       return {
         topic: item.topic,
         tilt,
@@ -883,12 +884,13 @@ async function buildSmartMoneyLayer(snapshot) {
         buyCount: item.buyCount,
         sellCount: item.sellCount,
         totalNotional: item.totalNotional,
+        themeScore,
         leaders,
         strongestTitleZh: strongest?.titleZh || '--',
         strongestSummaryZh: strongest ? `${strongest.displayName || strongest.walletShort} 在 ${strongest.titleZh} 上 ${strongest.side === 'BUY' ? '偏主动买入' : '偏主动卖出'}，名义金额约 ${moneyText(strongest.usdcSize)}。` : '暂无代表性动作。',
       };
     })
-    .sort((a, b) => b.totalNotional - a.totalNotional || b.walletCount - a.walletCount);
+    .sort((a, b) => b.themeScore - a.themeScore || b.totalNotional - a.totalNotional || b.walletCount - a.walletCount);
 
   const smartParticipation = [...smartParticipationMap.entries()].map(([conditionId, data]) => ({
     conditionId,
@@ -937,11 +939,44 @@ async function buildRadarSnapshot(previousSnapshot = null) {
       intelLine: intelLine({ ...base, ...resonance }),
     };
   });
+  const enrichedAnomalies = enrichWithParticipation(snapshot.anomalySignals || []);
+  const enrichedTopSignals = enrichWithParticipation(snapshot.topSignals || []);
+  const enrichedMarkets = enrichWithParticipation(snapshot.markets || []);
+  const bestByTopic = new Map();
+  for (const item of enrichedMarkets) {
+    const current = bestByTopic.get(item.topic);
+    const rank = (item.resonanceParts || []).length * 100 + Number(item.anomalyScore || 0) + Math.abs(Number(item.oneDayChangePct || 0));
+    if (!current || rank > current.rank) {
+      bestByTopic.set(item.topic, { rank, item });
+    }
+  }
+  const topicLeaders = (smartMoneyLayer.smartMoneyThemes || []).map((theme) => {
+    const candidates = enrichedMarkets
+      .filter((item) => item.topic === theme.topic)
+      .sort((a, b) => ((b.resonanceParts || []).length - (a.resonanceParts || []).length) || (Number(b.anomalyScore || 0) - Number(a.anomalyScore || 0)) || (Math.abs(Number(b.oneDayChangePct || 0)) - Math.abs(Number(a.oneDayChangePct || 0))))
+      .slice(0, 3);
+    return {
+      ...theme,
+      representativeMarkets: candidates.map((item) => ({
+        titleZh: item.titleZh,
+        resonanceLevel: item.resonanceLevel,
+        intelLine: item.intelLine,
+      })),
+      leadMarket: candidates[0]?.titleZh || bestByTopic.get(theme.topic)?.item?.titleZh || '--',
+    };
+  });
+  const resonanceSignals = [...enrichedAnomalies]
+    .filter((item) => (item.resonanceParts || []).length >= 2)
+    .sort((a, b) => ((b.resonanceParts || []).length - (a.resonanceParts || []).length) || (Number(b.anomalyScore || 0) - Number(a.anomalyScore || 0)) || (Math.abs(Number(b.oneDayChangePct || 0)) - Math.abs(Number(a.oneDayChangePct || 0))))
+    .slice(0, 8);
   return {
     ...snapshot,
     ...smartMoneyLayer,
-    anomalySignals: enrichWithParticipation(snapshot.anomalySignals || []),
-    topSignals: enrichWithParticipation(snapshot.topSignals || []),
+    smartMoneyThemes: topicLeaders,
+    anomalySignals: enrichedAnomalies,
+    topSignals: enrichedTopSignals,
+    markets: enrichedMarkets,
+    resonanceSignals,
   };
 }
 
