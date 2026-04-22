@@ -423,10 +423,35 @@ function anomalyNarrative(item) {
   const oneWeek = Number(item.oneWeekChangePct || 0);
   const dayText = oneDay >= 0 ? `24 小时也在走强 ${pctText(oneDay)}` : `但 24 小时仍偏弱 ${pctText(oneDay)}`;
   const weekText = Math.abs(oneWeek) >= 6 ? `，近一周累计 ${pctText(oneWeek)}` : '';
-  if (Math.abs(oneHour) >= 6) return `这不是轻微波动，1 小时概率已经明显改价 ${pctText(oneHour)}，${dayText}${weekText}。`;
-  if (Math.abs(oneHour) >= 3) return `这笔变化已经够上榜，1 小时概率变化 ${pctText(oneHour)}，${dayText}${weekText}。`;
-  if (Math.abs(oneDay) >= 6) return `1 小时不算爆炸，但 24 小时方向已经很清楚，${dayText}${weekText}。`;
-  return `短时异动还不算极端，但结合盘口和成交，已经值得盯。${dayText}${weekText}。`;
+  if (Math.abs(oneHour) >= 6) return `1 小时明显改价 ${pctText(oneHour)}，${dayText}${weekText}。`;
+  if (Math.abs(oneHour) >= 3) return `1 小时变化 ${pctText(oneHour)}，${dayText}${weekText}。`;
+  if (Math.abs(oneDay) >= 6) return `短时不是爆点，但 24 小时方向已经清楚，${dayText}${weekText}。`;
+  return `短时异动不算极端，但结合盘口和成交，已经值得盯。${dayText}${weekText}。`;
+}
+
+function buildResonance(item) {
+  const hasAnomaly = Number(item.anomalyScore || 0) >= 9 || Math.abs(Number(item.yesDeltaPct || 0)) >= 3;
+  const trendStrength = Math.abs(Number(item.oneDayChangePct || 0)) >= 4 || Math.abs(Number(item.oneWeekChangePct || 0)) >= 8;
+  const smartMoney = (item.smartParticipation?.walletCount || 0) > 0;
+  const parts = [];
+  if (hasAnomaly) parts.push('异动');
+  if (trendStrength) parts.push('趋势');
+  if (smartMoney) parts.push('重点账户');
+  let level = '单点观察';
+  if (parts.length === 3) level = '三重共振';
+  else if (parts.length === 2) level = '双重共振';
+  const summary = parts.length ? `${level}，当前同时满足 ${parts.join(' + ')}` : '当前以单点信息为主';
+  return { resonanceLevel: level, resonanceParts: parts, resonanceSummary: summary };
+}
+
+function intelLine(item) {
+  const move = Math.abs(Number(item.yesDeltaPct || 0)) >= 3
+    ? `1 小时概率 ${pctText(item.yesDeltaPct)}`
+    : `24 小时趋势 ${pctText(item.oneDayChangePct)}`;
+  const money = item.smartParticipation?.walletCount
+    ? `${item.smartParticipation.walletCount} 个重点账户参与，${item.smartParticipation.buyCount > item.smartParticipation.sellCount ? '偏买入' : item.smartParticipation.sellCount > item.smartParticipation.buyCount ? '偏卖出' : '多空都有'}`
+    : '暂未看到重点账户共振';
+  return `${item.titleZh}，${move}，${money}。`;
 }
 
 function financeMapping(item) {
@@ -890,19 +915,26 @@ async function buildRadarSnapshot(previousSnapshot = null) {
   const participationMap = new Map((smartMoneyLayer.smartParticipation || []).map((x) => [x.conditionId, x]));
   const enrichWithParticipation = (items = []) => items.map((item) => {
     const participation = participationMap.get(item.conditionId);
-    if (!participation) {
+    const base = participation ? (() => {
+      const tilt = participation.buyCount > participation.sellCount ? '偏买入' : participation.sellCount > participation.buyCount ? '偏卖出' : '多空都有';
+      const leaders = (participation.topWallets || []).map((x) => x.displayName || x.walletShort).join('、');
       return {
         ...item,
-        smartMoneyFlag: '暂无聪明钱联动',
-        smartMoneyNote: '当前没有抓到重点钱包在这个市场的明显动作。',
+        smartParticipation: participation,
+        smartMoneyFlag: `${participation.walletCount} 个重点钱包参与`,
+        smartMoneyNote: `最近抓到 ${participation.walletCount} 个重点钱包参与，动作倾向 ${tilt}，代表账户包括 ${leaders || '若干账户'}。`,
       };
-    }
-    const tilt = participation.buyCount > participation.sellCount ? '偏买入' : participation.sellCount > participation.buyCount ? '偏卖出' : '多空都有';
-    const leaders = (participation.topWallets || []).map((x) => x.displayName || x.walletShort).join('、');
-    return {
+    })() : {
       ...item,
-      smartMoneyFlag: `${participation.walletCount} 个重点钱包参与`,
-      smartMoneyNote: `最近抓到 ${participation.walletCount} 个重点钱包参与，动作倾向 ${tilt}，代表账户包括 ${leaders || '若干账户'}。`,
+      smartParticipation: null,
+      smartMoneyFlag: '暂无聪明钱联动',
+      smartMoneyNote: '当前没有抓到重点钱包在这个市场的明显动作。',
+    };
+    const resonance = buildResonance(base);
+    return {
+      ...base,
+      ...resonance,
+      intelLine: intelLine({ ...base, ...resonance }),
     };
   });
   return {

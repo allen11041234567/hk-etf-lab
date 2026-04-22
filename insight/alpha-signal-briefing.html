@@ -180,6 +180,11 @@
     </section>
 
     <section class="section">
+      <div class="section-title"><h2>共振信号</h2><div class="hint">优先看异动、趋势、重点账户同时共振的市场</div></div>
+      <div class="timeline" id="resonance-list"></div>
+    </section>
+
+    <section class="section">
       <div class="section-title"><h2>阅读说明</h2><div class="hint">先看异动，再看趋势，最后看重点账户动作</div></div>
       <div class="story-grid">
         <div class="story-card"><div class="k">先看</div><div class="v">异动榜</div><div class="d">优先识别短时间内概率、成交和结构同时发生变化的市场。</div></div>
@@ -224,7 +229,7 @@
       return `<div class="heat-item"><div><div class="heat-k">${x.topic}</div><div class="heat-v">${x.hottestTitle}</div></div><div style="text-align:right"><div class="heat-num">${x.count}</div><div class="heat-k">平均波动 ${fmtPct(x.avgWeekChangePct)}</div></div></div>`;
     }
     function renderAnomaly(x) {
-      return `<div class="signal-item"><div class="signal-top"><div class="signal-name">${x.titleZh}</div><div class="score">1h 分 ${x.anomalyScore}</div></div><div class="signal-meta">${pill(`1h 概率 ${fmtPct(x.yesDeltaPct)}`, Math.abs(x.yesDeltaPct) >= 3 ? 'hot' : '')}${pill(`1h 成交 ${x.volumeDelta >= 0 ? '+' : '-'}${fmtMoney(Math.abs(x.volumeDelta || 0))}`)}${pill(`市场原生1h ${fmtPct(x.oneHourChangePct)}`)}${pill(`24h ${fmtPct(x.oneDayChangePct)}`)}${pill(x.smartMoneyFlag || '暂无聪明钱联动', 'violet')}</div><div class="signal-note">${x.anomalyTrigger}。${x.anomalyNarrative || ''}</div><div class="signal-map">${x.financeLine}。${x.smartMoneyNote || ''}</div></div>`;
+      return `<div class="signal-item"><div class="signal-top"><div class="signal-name">${x.titleZh}</div><div class="score">${x.resonanceLevel || ('1h 分 ' + x.anomalyScore)}</div></div><div class="signal-meta">${pill(`1h 概率 ${fmtPct(x.yesDeltaPct)}`, Math.abs(x.yesDeltaPct) >= 3 ? 'hot' : '')}${pill(`1h 成交 ${x.volumeDelta >= 0 ? '+' : '-'}${fmtMoney(Math.abs(x.volumeDelta || 0))}`)}${pill(`24h ${fmtPct(x.oneDayChangePct)}`)}${pill(x.smartMoneyFlag || '暂无聪明钱联动', 'violet')}</div><div class="signal-note">${x.intelLine || x.anomalyNarrative || x.noteZh}</div><div class="signal-map">${x.resonanceSummary || x.financeLine}。${x.smartMoneyNote || ''}</div></div>`;
     }
     function renderLiquid(x) {
       return `<div class="time-item"><div class="time-top"><div class="signal-name">${x.titleZh}</div><div class="time-stamp up">24小时 ${fmtMoney(x.volume24hr)}</div></div><div class="time-desc">近价买盘 ${fmtMoney(x.nearBidDepth)}，近价卖盘 ${fmtMoney(x.nearAskDepth)}，${x.pressureLabel}。${x.financeLine}</div></div>`;
@@ -240,14 +245,14 @@
       return `<div class="time-item"><div class="time-top"><div class="signal-name">${x.actionLabel}</div><div class="time-stamp up">${x.walletShort}</div></div><div class="time-desc">${x.summaryZh} Smart Score ${x.smartScore}，${x.financeLine || ''}</div></div>`;
     }
     function renderTrendExplanation(x) {
-      return `<div class="time-item"><div class="time-top"><div class="signal-name">${x.titleZh}</div><div class="time-stamp">${x.trendLabel || '24 小时趋势'}</div></div><div class="time-desc">${x.anomalyNarrative || x.noteZh} ${x.smartMoneyNote || ''}</div></div>`;
+      return `<div class="time-item"><div class="time-top"><div class="signal-name">${x.titleZh}</div><div class="time-stamp">${x.resonanceLevel || x.trendLabel || '24 小时趋势'}</div></div><div class="time-desc">${x.intelLine || x.anomalyNarrative || x.noteZh} ${x.smartMoneyNote || ''}</div></div>`;
     }
     function renderSmartMoneyTheme(x) {
       const leaders = (x.leaders || []).map(v => v.displayName || v.walletShort).join('、') || '暂无';
       return `<div class="time-item"><div class="time-top"><div class="signal-name">${x.topic}</div><div class="time-stamp warm">${x.tilt}</div></div><div class="time-desc">最近有 ${x.walletCount} 个重点钱包、${x.tradeCount} 笔动作，累计名义金额约 ${fmtMoney(x.totalNotional || 0)}。代表账户：${leaders}。${x.strongestSummaryZh}</div></div>`;
     }
     function renderMarket(x) {
-      return `<div class="market-card"><div class="market-top"><div><div class="market-name">${x.titleZh}</div><div class="market-sub">${x.topic} · 截止 ${timeText(x.endDate)}</div></div><div class="score">发生概率 ${x.yesPct.toFixed(1)}%</div></div><div class="market-meta">${pill(`1小时 ${fmtPct(x.oneHourChangePct)}`)}${pill(`1天 ${fmtPct(x.oneDayChangePct)}`)}${pill(`24小时 ${fmtMoney(x.volume24hr)}`)}${pill(`买盘 ${fmtMoney(x.nearBidDepth)}`)}${pill(`卖盘 ${fmtMoney(x.nearAskDepth)}`)}</div><div class="market-note">${x.noteZh}</div><div class="market-map">${x.financeLine}</div><a class="market-link" href="${x.url}" target="_blank" rel="noopener noreferrer">查看原始市场</a></div>`;
+      return `<div class="market-card"><div class="market-top"><div><div class="market-name">${x.titleZh}</div><div class="market-sub">${x.topic} · 截止 ${timeText(x.endDate)}</div></div><div class="score">${x.resonanceLevel || ('发生概率 ' + x.yesPct.toFixed(1) + '%')}</div></div><div class="market-meta">${pill(`1小时 ${fmtPct(x.oneHourChangePct)}`)}${pill(`1天 ${fmtPct(x.oneDayChangePct)}`)}${pill(`24小时 ${fmtMoney(x.volume24hr)}`)}${pill(`买盘 ${fmtMoney(x.nearBidDepth)}`)}${pill(`卖盘 ${fmtMoney(x.nearAskDepth)}`)}</div><div class="market-note">${x.intelLine || x.noteZh}</div><div class="market-map">${x.financeLine}。${x.resonanceSummary || ''}</div><a class="market-link" href="${x.url}" target="_blank" rel="noopener noreferrer">查看原始市场</a></div>`;
     }
 
     let refreshTimer = null;
@@ -291,6 +296,7 @@
         $('wall-signals').innerHTML = (data.wallSignals || []).map(x => renderSignalItem(x, 'wall')).join('') || '<div class="empty">暂无数据</div>';
         $('liquid-signals').innerHTML = (data.liquidSignals || []).map(renderLiquid).join('') || '<div class="empty">暂无数据</div>';
         $('market-list').innerHTML = (data.markets || []).map(renderMarket).join('') || '<div class="empty">暂无数据</div>';
+        $('resonance-list').innerHTML = ((data.anomalySignals || []).filter(x => (x.resonanceParts || []).length >= 2).slice(0,8)).map(renderTrendExplanation).join('') || '<div class="empty">当前暂无明显共振市场</div>';
 
         const nextMs = Math.max(15000, Number(data.refreshMs || 20000));
         if (refreshTimer) clearTimeout(refreshTimer);
