@@ -104,32 +104,32 @@
     <div class="error" id="error-box"></div>
 
     <section class="section">
-      <div class="section-title"><h2>现在最值得看的 1 个信号</h2><div class="hint">先给结论，再给解释和映射</div></div>
+      <div class="section-title"><h2>1 小时异动</h2><div class="hint">页面最核心入口，先看这里</div></div>
       <div class="grid-3">
         <div class="lead-card">
-          <div class="label">TOP SIGNAL</div>
+          <div class="label">TOP 1H MOVE</div>
           <div class="lead-title" id="lead-title">--</div>
           <div class="lead-desc" id="lead-desc">--</div>
           <div class="lead-map" id="lead-map">--</div>
           <div class="stat-row" id="lead-pills"></div>
         </div>
         <div class="panel">
-          <div class="section-title" style="margin-bottom:10px"><h2 style="font-size:18px">异动榜</h2><div class="hint">优先级最高</div></div>
-          <div class="signal-list" id="top-signals"></div>
+          <div class="section-title" style="margin-bottom:10px"><h2 style="font-size:18px">异动榜</h2><div class="hint" id="anomaly-hint">优先抓 1 小时里明显变快的市场</div></div>
+          <div class="signal-list" id="anomaly-signals"></div>
         </div>
         <div class="panel">
-          <div class="section-title" style="margin-bottom:10px"><h2 style="font-size:18px">主题热度</h2><div class="hint">先抓主线，再下钻</div></div>
-          <div class="heat-list" id="topic-summary"></div>
+          <div class="section-title" style="margin-bottom:10px"><h2 style="font-size:18px">共振信号</h2><div class="hint">异动 + 趋势 + 重点账户</div></div>
+          <div class="timeline" id="resonance-list"></div>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="section-title"><h2>1 小时异动检测</h2><div class="hint">基于最近 1 小时变化识别最值得盯的市场</div></div>
+      <div class="section-title"><h2>主线与重点账户</h2><div class="hint">再看哪条线最强，以及谁在参与</div></div>
       <div class="grid-2">
         <div class="panel">
-          <div class="section-title" style="margin-bottom:10px"><h2 style="font-size:18px">概率 / 成交异动榜</h2><div class="hint" id="anomaly-hint">优先抓 1 小时里明显变快的市场</div></div>
-          <div class="signal-list" id="anomaly-signals"></div>
+          <div class="section-title" style="margin-bottom:10px"><h2 style="font-size:18px">最强主线</h2><div class="hint">先抓主线，再下钻</div></div>
+          <div class="timeline" id="smart-money-themes"></div>
         </div>
         <div class="panel">
           <div class="section-title" style="margin-bottom:10px"><h2 style="font-size:18px">重点账户最近在做什么</h2><div class="hint">聚焦最近的代表性动作</div></div>
@@ -139,58 +139,22 @@
     </section>
 
     <section class="section">
-      <div class="section-title"><h2>聪明钱追踪</h2><div class="hint">先看谁值得盯，再看他刚刚做了什么</div></div>
+      <div class="section-title"><h2>补充观察</h2><div class="hint">只保留最有帮助的辅助层</div></div>
       <div class="grid-2">
-        <div class="panel">
-          <div class="section-title" style="margin-bottom:10px"><h2 style="font-size:18px">高质量账户观察名单</h2><div class="hint">按高优先级市场里的表现聚合</div></div>
-          <div class="timeline" id="smart-money-overview"></div>
-        </div>
-        <div class="panel">
-          <div class="section-title" style="margin-bottom:10px"><h2 style="font-size:18px">重点钱包正在下注哪条线</h2><div class="hint">按主题看持续下注，不只看单市场</div></div>
-          <div class="timeline" id="smart-money-themes"></div>
-        </div>
         <div class="panel">
           <div class="section-title" style="margin-bottom:10px"><h2 style="font-size:18px">24 小时趋势解释</h2><div class="hint">把异动放回更长一点的时间轴</div></div>
           <div class="timeline" id="trend-explanations"></div>
         </div>
         <div class="panel">
-          <div class="section-title" style="margin-bottom:10px"><h2 style="font-size:18px">订单流候选池</h2><div class="hint">这层继续保留，辅助看结构</div></div>
-          <div class="timeline" id="smart-money-signals"></div>
+          <div class="section-title" style="margin-bottom:10px"><h2 style="font-size:18px">高质量账户观察名单</h2><div class="hint">只保留少量重点账户</div></div>
+          <div class="timeline" id="smart-money-overview"></div>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="section-title"><h2>结构信号</h2><div class="hint">不只看概率，也看深度和活跃度</div></div>
-      <div class="grid-2">
-        <div class="panel">
-          <div class="section-title" style="margin-bottom:10px"><h2 style="font-size:18px">Wall Shift，盘口结构榜</h2><div class="hint">近价承接 vs 近价抛压</div></div>
-          <div class="signal-list" id="wall-signals"></div>
-        </div>
-        <div class="panel">
-          <div class="section-title" style="margin-bottom:10px"><h2 style="font-size:18px">流动性优先榜</h2><div class="hint">成交和深度都不弱</div></div>
-          <div class="timeline" id="liquid-signals"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-title"><h2>当前监控市场</h2><div class="hint">查看重点市场的实时状态与原始市场链接</div></div>
+      <div class="section-title"><h2>更多市场</h2><div class="hint">只在需要时下钻</div></div>
       <div class="markets" id="market-list"></div>
-    </section>
-
-    <section class="section">
-      <div class="section-title"><h2>共振信号</h2><div class="hint">优先看异动、趋势、重点账户同时共振的市场</div></div>
-      <div class="timeline" id="resonance-list"></div>
-    </section>
-
-    <section class="section">
-      <div class="section-title"><h2>阅读说明</h2><div class="hint">先看异动，再看趋势，最后看重点账户动作</div></div>
-      <div class="story-grid">
-        <div class="story-card"><div class="k">先看</div><div class="v">异动榜</div><div class="d">优先识别短时间内概率、成交和结构同时发生变化的市场。</div></div>
-        <div class="story-card"><div class="k">再看</div><div class="v">趋势解释</div><div class="d">把短时变化放回 24 小时和更长一点的背景里，减少误判。</div></div>
-        <div class="story-card"><div class="k">最后看</div><div class="v">重点账户动作</div><div class="d">确认是否有持续盈利账户参与，以及它们在押注哪条主线。</div></div>
-      </div>
     </section>
   </div>
 
@@ -286,8 +250,6 @@
           ].join('');
         }
 
-        $('top-signals').innerHTML = (data.topSignals || []).map(x => renderSignalItem(x, 'score')).join('') || '<div class="empty">暂无数据</div>';
-        $('topic-summary').innerHTML = (data.topicSummary || []).map(renderTopic).join('') || '<div class="empty">暂无数据</div>';
         $('anomaly-signals').innerHTML = (data.anomalySignals || []).map(renderAnomaly).join('') || '<div class="empty">最近 1 小时暂无明显异动</div>';
         $('smart-money-actions').innerHTML = (data.smartMoneyActions || []).map(renderSmartMoneyAction).join('') || '<div class="empty">最近暂无重点钱包动作</div>';
         $('smart-money-overview').innerHTML = (data.smartMoneyOverview || []).map(renderSmartMoneyOverview).join('') || '<div class="empty">聪明钱观察名单暂时为空</div>';
