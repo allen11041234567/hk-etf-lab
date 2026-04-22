@@ -3,10 +3,10 @@ const CLOB_BASE = 'https://clob.polymarket.com';
 const SNAPSHOT_TTL_SECONDS = 20;
 const STALE_TTL_SECONDS = 180;
 const DISCOVERY_LIMIT = 1000;
-const MAX_BOOK_CANDIDATES = 140;
-const MAX_RENDERED_MARKETS = 72;
+const MAX_BOOK_CANDIDATES = 120;
+const MAX_RENDERED_MARKETS = 48;
 const MAX_TOP_SIGNALS = 10;
-const MAX_TOPIC_BUCKET = 12;
+const MAX_TOPIC_BUCKET = 10;
 const USER_AGENT = 'Mozilla/5.0 (compatible; HK-ETF-Lab/1.0; +https://hketf-lab.pages.dev/)';
 
 const FINANCE_INCLUDE_RE = new RegExp([
@@ -149,29 +149,29 @@ function classifyTopic(text) {
 }
 
 function topicBaseWeight(topic) {
-  if (topic === '美联储与利率') return 34;
-  if (topic === '宏观数据') return 30;
-  if (topic === '大宗商品') return 24;
-  if (topic === '外汇') return 23;
-  if (topic === '股票与风险偏好') return 21;
+  if (topic === '美联储与利率') return 42;
+  if (topic === '宏观数据') return 38;
+  if (topic === '大宗商品') return 31;
+  if (topic === '外汇') return 29;
+  if (topic === '股票与风险偏好') return 24;
   if (topic === '地缘风险') return 18;
-  if (topic === '加密资产') return 13;
-  if (topic === '美国政治') return 10;
+  if (topic === '加密资产') return 9;
+  if (topic === '美国政治') return 8;
   return 0;
 }
 
 function financeIntentScore(text) {
   const t = text.toLowerCase();
   let score = 0;
-  if (/\bfed\b|\bfomc\b|rate cut|rate cuts|rate hike|interest rate|terminal rate/.test(t)) score += 34;
-  if (/\bcpi\b|\bpce\b|\bppi\b|\bpmis?\b|inflation|recession|\bgdp\b|payrolls|unemployment|jobless/.test(t)) score += 28;
-  if (/gold|silver|copper|oil|crude|brent|wti|nat gas|natural gas|lng|commodity|uranium/.test(t)) score += 24;
-  if (/usd\/jpy|usd\/cny|usdcny|eurusd|dxy|dollar index|yen|yuan|foreign exchange|\bfx\b/.test(t)) score += 22;
-  if (/nasdaq|\bqqq\b|\bspy\b|s&p|dow jones|\bvix\b|russell 2000|nikkei|hang seng|hsi/.test(t)) score += 21;
-  if (/\bnvda\b|\btsla\b|\baapl\b|\bmsft\b|\bmeta\b|\bamzn\b|\bgoogl\b|\bgoogle\b|\bmstr\b|\bcoin\b/.test(t)) score += 14;
-  if (/bitcoin|\bbtc\b|ethereum|\beth\b|solana|\bsol\b|crypto|stablecoin|altcoin/.test(t)) score += 12;
+  if (/\bfed\b|\bfomc\b|rate cut|rate cuts|rate hike|interest rate|terminal rate/.test(t)) score += 42;
+  if (/\bcpi\b|\bpce\b|\bppi\b|\bpmis?\b|inflation|recession|\bgdp\b|payrolls|unemployment|jobless/.test(t)) score += 36;
+  if (/gold|silver|copper|oil|crude|brent|wti|nat gas|natural gas|lng|commodity|uranium/.test(t)) score += 28;
+  if (/usd\/jpy|usd\/cny|usdcny|eurusd|dxy|dollar index|yen|yuan|foreign exchange|\bfx\b/.test(t)) score += 26;
+  if (/nasdaq|\bqqq\b|\bspy\b|s&p|dow jones|\bvix\b|russell 2000|nikkei|hang seng|hsi/.test(t)) score += 22;
+  if (/\bnvda\b|\btsla\b|\baapl\b|\bmsft\b|\bmeta\b|\bamzn\b|\bgoogl\b|\bgoogle\b|\bmstr\b|\bcoin\b/.test(t)) score += 10;
+  if (/bitcoin|\bbtc\b|ethereum|\beth\b|solana|\bsol\b|crypto|stablecoin|altcoin/.test(t)) score += 6;
   if (/ukraine|russia|ceasefire|nato|iran|israel|gaza|war|geopolit|sanction|trade war/.test(t)) score += 10;
-  if (/trump|tariff|government shutdown|debt ceiling/.test(t)) score += 8;
+  if (/trump|tariff|government shutdown|debt ceiling/.test(t)) score += 7;
   return score;
 }
 
@@ -202,16 +202,9 @@ function scoreMarket(market, nearBidDepth, nearAskDepth, topic, discoveryText) {
   const spread = parseNumber(market.spread);
   const imbalance = liquidity > 0 ? Math.abs(nearBidDepth - nearAskDepth) / Math.max(nearBidDepth + nearAskDepth, 1) : 0;
   const financePriority = topicBaseWeight(topic) + financeIntentScore(discoveryText);
-  return Math.round((
-    financePriority +
-    oneHour * 1.15 +
-    oneDay * 0.95 +
-    oneWeek * 0.40 +
-    Math.min((volume24hr / Math.max(liquidity, 1)) * 24, 20) +
-    Math.min(Math.log10(volume24hr + 1) * 7, 18) +
-    Math.max(0, (0.03 - spread) * 220) +
-    imbalance * 16
-  ) * 100) / 100;
+  const eventMoveScore = oneHour * 0.9 + oneDay * 0.85 + oneWeek * 0.35;
+  const tradabilityScore = Math.min((volume24hr / Math.max(liquidity, 1)) * 20, 16) + Math.min(Math.log10(volume24hr + 1) * 6, 15) + Math.max(0, (0.025 - spread) * 220) + imbalance * 14;
+  return Math.round((financePriority * 1.4 + eventMoveScore + tradabilityScore) * 100) / 100;
 }
 
 function toZhDate(label = '') {
