@@ -1,5 +1,6 @@
 const GAMMA_BASE = 'https://gamma-api.polymarket.com';
 const CLOB_BASE = 'https://clob.polymarket.com';
+const DATA_API_BASE = 'https://data-api.polymarket.com';
 const SNAPSHOT_TTL_SECONDS = 20;
 const STALE_TTL_SECONDS = 180;
 const ANOMALY_BASELINE_SECONDS = 3600;
@@ -10,6 +11,9 @@ const MAX_TOP_SIGNALS = 10;
 const MAX_TOPIC_BUCKET = 10;
 const MAX_ANOMALIES = 8;
 const MAX_SMART_MONEY = 8;
+const MAX_SMART_MONEY_MARKETS = 4;
+const MAX_SMART_WALLETS = 6;
+const MAX_SMART_ACTIONS = 8;
 const USER_AGENT = 'Mozilla/5.0 (compatible; HK-ETF-Lab/1.0; +https://hketf-lab.pages.dev/)';
 
 const FINANCE_INCLUDE_RE = new RegExp([
@@ -92,6 +96,18 @@ function chunk(items, size) {
   return out;
 }
 
+function maskWallet(address = '') {
+  const text = String(address || '');
+  if (text.length < 12) return text || '--';
+  return `${text.slice(0, 6)}...${text.slice(-4)}`;
+}
+
+function signedMoneyText(value) {
+  const n = Number(value || 0);
+  const sign = n > 0 ? '+' : n < 0 ? '-' : '';
+  return `${sign}${moneyText(Math.abs(n))}`;
+}
+
 async function fetchJson(url, init = {}) {
   const resp = await fetch(url, {
     ...init,
@@ -127,6 +143,32 @@ async function fetchBooksForTokens(tokenIds) {
     if (Array.isArray(books)) all.push(...books);
   }
   return all;
+}
+
+async function fetchMarketPositions(conditionId, limit = 6) {
+  const url = new URL(`${DATA_API_BASE}/v1/market-positions`);
+  url.searchParams.set('market', conditionId);
+  url.searchParams.set('limit', String(limit));
+  url.searchParams.set('sortBy', 'TOTAL_PNL');
+  url.searchParams.set('sortDirection', 'DESC');
+  url.searchParams.set('status', 'OPEN');
+  return await fetchJson(url.toString());
+}
+
+async function fetchUserValue(wallet) {
+  const url = new URL(`${DATA_API_BASE}/value`);
+  url.searchParams.set('user', wallet);
+  const rows = await fetchJson(url.toString());
+  return Array.isArray(rows) ? Number(rows[0]?.value || 0) : 0;
+}
+
+async function fetchUserTrades(wallet, markets = [], limit = 12) {
+  const url = new URL(`${DATA_API_BASE}/trades`);
+  url.searchParams.set('user', wallet);
+  url.searchParams.set('limit', String(limit));
+  url.searchParams.set('takerOnly', 'true');
+  if (markets.length) url.searchParams.set('market', markets.join(','));
+  return await fetchJson(url.toString());
 }
 
 function getMarketText(market) {
@@ -301,6 +343,17 @@ function shortZhTitle(question = '') {
   return q.trim();
 }
 
+function trendLabel(item) {
+  const day = Number(item.oneDayChangePct || 0);
+  const week = Number(item.oneWeekChangePct || 0);
+  if (day >= 6) return '24 小时趋势很强';
+  if (day >= 2) return '24 小时趋势偏强';
+  if (day <= -6) return '24 小时趋势很弱';
+  if (day <= -2) return '24 小时趋势偏弱';
+  if (Math.abs(week) >= 10) return '日内一般，但周趋势不小';
+  return '24 小时趋势中性';
+}
+
 function explainMarket(item) {
   const prob = `${item.yesPct.toFixed(1)}%`;
   const shortMove = Math.abs(item.oneHourChangePct) >= 0.1 ? `最近 1 小时变化 ${pctText(item.oneHourChangePct)}` : `最近 1 天变化 ${pctText(item.oneDayChangePct)}`;
@@ -336,6 +389,18 @@ function explainMarket(item) {
   }
 
   return `当前市场给这件事 ${prob} 的概率定价，${shortMove}，近一周 ${week}，盘口上看 ${pressure}。${marketLine}${assetLine}`;
+}
+
+function anomalyNarrative(item) {
+  const oneHour = Number(item.yesDeltaPct || 0);
+  const oneDay = Number(item.oneDayChangePct || 0);
+  const oneWeek = Number(item.oneWeekChangePct || 0);
+  const dayText = oneDay >= 0 ? `24 小时也在走强 ${pctText(oneDay)}` : `但 24 小时仍偏弱 ${pctText(oneDay)}`;
+  const weekText = Math.abs(oneWeek) >= 6 ? `，近一周累计 ${pctText(oneWeek)}` : '';
+  if (Math.abs(oneHour) >= 6) return `这不是轻微波动，1 小时概率已经明显改价 ${pctText(oneHour)}，${dayText}${weekText}。`;
+  if (Math.abs(oneHour) >= 3) return `这笔变化已经够上榜，1 小时概率变化 ${pctText(oneHour)}，${dayText}${weekText}。`;
+  if (Math.abs(oneDay) >= 6) return `1 小时不算爆炸，但 24 小时方向已经很清楚，${dayText}${weekText}。`;
+  return `短时异动还不算极端，但结合盘口和成交，已经值得盯。${dayText}${weekText}。`;
 }
 
 function financeMapping(item) {
@@ -463,6 +528,7 @@ function buildSnapshot(qualifiedUniverse, booksByToken, previousSnapshot = null)
       question: market.question,
       titleZh: shortZhTitle(market.question || ''),
       topic: entry.topic,
+      conditionId: market.conditionId || null,
       url: market.slug ? `https://polymarket.com/event/${market.slug}` : 'https://polymarket.com',
       icon: market.icon || market.image || market.events?.[0]?.icon || market.events?.[0]?.image || null,
       endDate: market.endDate || market.endDateIso || market.events?.[0]?.endDate || null,
@@ -485,6 +551,8 @@ function buildSnapshot(qualifiedUniverse, booksByToken, previousSnapshot = null)
       financeLine: financeMapping({ topic: entry.topic }),
     };
     item.noteZh = explainMarket(item);
+    item.trendLabel = trendLabel(item);
+    item.anomalyNarrative = '';
     return item;
   });
 
@@ -518,7 +586,10 @@ function buildSnapshot(qualifiedUniverse, booksByToken, previousSnapshot = null)
     avgPriority: items.reduce((sum, item) => sum + item.financePriority, 0) / Math.max(items.length, 1),
   })).sort((a, b) => b.avgPriority - a.avgPriority || b.count - a.count);
 
-  const anomalySignals = detectAnomalies(rendered, previousSnapshot?.markets || []);
+  const anomalySignals = detectAnomalies(rendered, previousSnapshot?.markets || []).map((item) => ({
+    ...item,
+    anomalyNarrative: anomalyNarrative(item),
+  }));
   const smartMoneyCandidates = buildSmartMoneyCandidates(rendered);
   const lead = anomalySignals[0] || topSignals[0] || null;
   return {
@@ -546,13 +617,145 @@ function buildSnapshot(qualifiedUniverse, booksByToken, previousSnapshot = null)
   };
 }
 
+async function buildSmartMoneyLayer(snapshot) {
+  const focusMarkets = [];
+  for (const item of [...(snapshot.anomalySignals || []), ...(snapshot.topSignals || [])]) {
+    if (!item?.conditionId) continue;
+    if (focusMarkets.some((x) => x.conditionId === item.conditionId)) continue;
+    focusMarkets.push({ conditionId: item.conditionId, titleZh: item.titleZh, topic: item.topic, financeLine: item.financeLine });
+    if (focusMarkets.length >= MAX_SMART_MONEY_MARKETS) break;
+  }
+  if (!focusMarkets.length) return { smartMoneyOverview: [], smartMoneyActions: [] };
+
+  const marketRows = await Promise.all(focusMarkets.map(async (m) => {
+    try {
+      const rows = await fetchMarketPositions(m.conditionId, 6);
+      return { ...m, rows: Array.isArray(rows) ? rows : [] };
+    } catch {
+      return { ...m, rows: [] };
+    }
+  }));
+
+  const walletMap = new Map();
+  for (const market of marketRows) {
+    for (const tokenBlock of market.rows || []) {
+      for (const pos of tokenBlock.positions || []) {
+        const wallet = String(pos.proxyWallet || '');
+        if (!wallet) continue;
+        const current = walletMap.get(wallet) || {
+          wallet,
+          displayName: pos.name || pos.pseudonym || maskWallet(wallet),
+          verified: Boolean(pos.verified),
+          totalPnl: 0,
+          currentValue: 0,
+          markets: [],
+          bestPosition: null,
+        };
+        current.totalPnl += Number(pos.totalPnl || 0);
+        current.currentValue += Number(pos.currentValue || 0);
+        current.markets.push({
+          conditionId: market.conditionId,
+          titleZh: market.titleZh,
+          topic: market.topic,
+          financeLine: market.financeLine,
+          outcome: pos.outcome,
+          size: Number(pos.size || 0),
+          currentValue: Number(pos.currentValue || 0),
+          totalPnl: Number(pos.totalPnl || 0),
+        });
+        if (!current.bestPosition || Number(pos.totalPnl || 0) > Number(current.bestPosition.totalPnl || 0)) {
+          current.bestPosition = {
+            titleZh: market.titleZh,
+            outcome: pos.outcome,
+            size: Number(pos.size || 0),
+            currentValue: Number(pos.currentValue || 0),
+            totalPnl: Number(pos.totalPnl || 0),
+          };
+        }
+        walletMap.set(wallet, current);
+      }
+    }
+  }
+
+  const topWallets = [...walletMap.values()]
+    .map((wallet) => {
+      const diversity = new Set(wallet.markets.map((m) => m.conditionId)).size;
+      const smartScore = Math.round((Math.min(Math.log10(Math.max(wallet.totalPnl, 1) + 1) * 22, 46)
+        + Math.min(Math.log10(wallet.currentValue + 1) * 14, 20)
+        + diversity * 6
+        + (wallet.verified ? 6 : 0)) * 10) / 10;
+      return { ...wallet, diversity, smartScore };
+    })
+    .filter((wallet) => wallet.totalPnl > 0 || wallet.currentValue > 500)
+    .sort((a, b) => b.smartScore - a.smartScore)
+    .slice(0, MAX_SMART_WALLETS);
+
+  const focusConditionIds = focusMarkets.map((m) => m.conditionId);
+  const detailedWallets = await Promise.all(topWallets.map(async (wallet) => {
+    try {
+      const [value, trades] = await Promise.all([
+        fetchUserValue(wallet.wallet).catch(() => wallet.currentValue),
+        fetchUserTrades(wallet.wallet, focusConditionIds, 10).catch(() => []),
+      ]);
+      const recentTrades = Array.isArray(trades) ? trades.slice(0, 3).map((trade) => ({
+        wallet: wallet.wallet,
+        displayName: wallet.displayName,
+        smartScore: wallet.smartScore,
+        verified: wallet.verified,
+        side: trade.side,
+        titleZh: shortZhTitle(trade.title || ''),
+        outcome: trade.outcome,
+        size: Number(trade.size || 0),
+        price: Number(trade.price || 0),
+        usdcSize: Number(trade.size || 0) * Number(trade.price || 0),
+        timestamp: Number(trade.timestamp || 0),
+        topic: wallet.markets.find((m) => m.conditionId === trade.conditionId)?.topic || '',
+        financeLine: wallet.markets.find((m) => m.conditionId === trade.conditionId)?.financeLine || '',
+      })) : [];
+      return { ...wallet, portfolioValue: Number(value || wallet.currentValue || 0), recentTrades };
+    } catch {
+      return { ...wallet, portfolioValue: wallet.currentValue || 0, recentTrades: [] };
+    }
+  }));
+
+  const smartMoneyOverview = detailedWallets.map((wallet) => ({
+    wallet: wallet.wallet,
+    walletShort: maskWallet(wallet.wallet),
+    displayName: wallet.displayName,
+    verified: wallet.verified,
+    smartScore: wallet.smartScore,
+    totalPnl: wallet.totalPnl,
+    portfolioValue: wallet.portfolioValue,
+    diversity: wallet.diversity,
+    focusTitleZh: wallet.bestPosition?.titleZh || '--',
+    focusOutcome: wallet.bestPosition?.outcome || '--',
+    focusPnl: Number(wallet.bestPosition?.totalPnl || 0),
+    summaryZh: `${wallet.displayName || maskWallet(wallet.wallet)} 最近在高优先级市场里更像持续型盈利账户，当前更重仓 ${wallet.bestPosition?.titleZh || '重点市场'} 的 ${wallet.bestPosition?.outcome || '--'} 方向。`,
+  }));
+
+  const smartMoneyActions = detailedWallets
+    .flatMap((wallet) => wallet.recentTrades || [])
+    .sort((a, b) => b.timestamp - a.timestamp)
+    .slice(0, MAX_SMART_ACTIONS)
+    .map((trade) => ({
+      ...trade,
+      walletShort: maskWallet(trade.wallet),
+      actionLabel: `${trade.displayName || maskWallet(trade.wallet)} ${trade.side === 'BUY' ? '买入' : '卖出'} ${trade.outcome}`,
+      summaryZh: `${trade.displayName || maskWallet(trade.wallet)} 在 ${trade.titleZh} 上 ${trade.side === 'BUY' ? '继续加' : '开始减'} ${trade.outcome}，成交价 ${pctText(trade.price * 100)}，名义金额约 ${moneyText(trade.usdcSize)}。`,
+    }));
+
+  return { smartMoneyOverview, smartMoneyActions };
+}
+
 async function buildRadarSnapshot(previousSnapshot = null) {
   const discovered = await fetchMarkets();
   const qualifiedUniverse = selectUniverse(Array.isArray(discovered) ? discovered : []);
   const bookCandidates = qualifiedUniverse.slice(0, MAX_BOOK_CANDIDATES);
   const books = await fetchBooksForTokens(bookCandidates.map((entry) => entry.yesTokenId));
   const booksByToken = new Map(books.map((book) => [String(book.asset_id), book]));
-  return buildSnapshot(qualifiedUniverse, booksByToken, previousSnapshot);
+  const snapshot = buildSnapshot(qualifiedUniverse, booksByToken, previousSnapshot);
+  const smartMoneyLayer = await buildSmartMoneyLayer(snapshot).catch(() => ({ smartMoneyOverview: [], smartMoneyActions: [] }));
+  return { ...snapshot, ...smartMoneyLayer };
 }
 
 export async function onRequestGet(context) {
