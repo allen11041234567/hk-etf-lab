@@ -454,6 +454,36 @@ function intelLine(item) {
   return `${item.titleZh}，${move}，${money}。`;
 }
 
+function marketPriority(item) {
+  return (item.resonanceParts || []).length * 100
+    + Number(item.anomalyScore || 0)
+    + Math.abs(Number(item.oneDayChangePct || 0))
+    + Math.abs(Number(item.yesDeltaPct || 0)) * 2
+    + ((item.smartParticipation?.walletCount || 0) * 6);
+}
+
+function buildHeadlineSummary(themes = [], mustWatch = []) {
+  const topTheme = themes[0] || null;
+  const secondTheme = themes[1] || null;
+  const leadMarket = mustWatch[0] || null;
+  if (!topTheme && !leadMarket) {
+    return {
+      short: '当前金融预测市场整体偏分散，暂时没有特别强的集中主线。',
+      long: '当前更适合先盯 1 小时异动和重点账户最近动作，等待更明确的主线聚焦。',
+    };
+  }
+  const themeLine = topTheme
+    ? `当前最强主线是${topTheme.topic}，整体${topTheme.tilt}`
+    : '当前市场主线还不够集中';
+  const secondLine = secondTheme ? `，其次是${secondTheme.topic}` : '';
+  const marketLine = leadMarket ? `。最值得盯的市场是${leadMarket.titleZh}` : '。';
+  const moneyLine = topTheme ? `重点账户这条线最近有 ${topTheme.walletCount} 个账户、${topTheme.tradeCount} 笔动作` : '';
+  return {
+    short: `${themeLine}${secondLine}${marketLine}`,
+    long: `${themeLine}${secondLine}，${moneyLine || '先看异动再等主线确认'}。${leadMarket ? leadMarket.intelLine : ''}`,
+  };
+}
+
 function financeMapping(item) {
   if (item.topic === '美联储与利率') return '对应资产：美债 / 黄金 / 纳指 / 美元';
   if (item.topic === '加密资产') return '对应资产：比特币 / 以太坊 / COIN / MSTR';
@@ -972,8 +1002,12 @@ async function buildRadarSnapshot(previousSnapshot = null) {
   });
   const resonanceSignals = [...enrichedAnomalies]
     .filter((item) => (item.resonanceParts || []).length >= 2)
-    .sort((a, b) => ((b.resonanceParts || []).length - (a.resonanceParts || []).length) || (Number(b.anomalyScore || 0) - Number(a.anomalyScore || 0)) || (Math.abs(Number(b.oneDayChangePct || 0)) - Math.abs(Number(a.oneDayChangePct || 0))))
+    .sort((a, b) => marketPriority(b) - marketPriority(a))
     .slice(0, 8);
+  const mustWatch = [...enrichedMarkets]
+    .sort((a, b) => marketPriority(b) - marketPriority(a))
+    .slice(0, 3);
+  const headlineSummary = buildHeadlineSummary(topicLeaders, mustWatch);
   return {
     ...snapshot,
     ...smartMoneyLayer,
@@ -982,6 +1016,8 @@ async function buildRadarSnapshot(previousSnapshot = null) {
     topSignals: enrichedTopSignals,
     markets: enrichedMarkets,
     resonanceSignals,
+    mustWatch,
+    headlineSummary,
   };
 }
 
