@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116454478250206122": {
+    "content_zh_cn": "哇！“哭包”查克·舒默刚刚当着全世界的面说：“没有人尊重边境巡逻队或ICE（美国移民与海关执法局）。”\n这是我从一个“职业”政客口中听过的最恶劣、最错误、最不爱国、也最危险的言论之一。\n他必须立即向这些伟大的爱国者道歉，我是说——现在！\n美国总统 唐纳德·J·特朗普",
+    "content_zh_hk": "嘩！「愛哭鬼」查克·舒默剛剛當着全世界的面說：「沒有人尊重邊境巡邏隊或ICE（美國移民與海關執法局）。」\n這是我從一個「職業」政客口中聽過最惡劣、最錯誤、最不愛國、也最危險的言論之一。\n他必須立即向這些偉大的愛國者道歉，我是說——現在！\n美國總統 唐納德·J·特朗普",
+    "content_ko": "와! “울보” 척 슈머가 방금 전 전 세계가 듣는 앞에서 “아무도 국경순찰대나 ICE를 존중하지 않는다”고 말했다.\n이것은 내가 “직업” 정치인에게서 들어본 발언 중 가장 지독하고, 틀렸으며, 비애국적이고, 위험한 발언 가운데 하나다.\n그는 이 위대한 애국자들에게 즉시 사과해야 한다. 내 말은, 지금 당장이다!\n미국 대통령 도널드 J. 트럼프"
+  },
   "https://truthsocial.com/@realDonaldTrump/116454250724920799": {
     "content_zh_cn": "千真万确！！！\n特朗普总统（DJT）\n\n马克·蒂森：特朗普无需达成协议，也能从伊朗那里得到他想要的结果： https://www.washingtonpost.com/opinions/2026/04/22/trump-best-move-iran-negotiations/",
     "content_zh_hk": "千真萬確！！！\n特朗普總統（DJT）\n\n馬克·蒂森：特朗普無需達成協議，也能從伊朗那裏得到他想要的結果： https://www.washingtonpost.com/opinions/2026/04/22/trump-best-move-iran-negotiations/",
