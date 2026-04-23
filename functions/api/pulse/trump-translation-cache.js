@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116454250724920799": {
+    "content_zh_cn": "千真万确！！！\n特朗普总统（DJT）\n\n马克·蒂森：特朗普无需达成协议，也能从伊朗那里得到他想要的结果： https://www.washingtonpost.com/opinions/2026/04/22/trump-best-move-iran-negotiations/",
+    "content_zh_hk": "千真萬確！！！\n特朗普總統（DJT）\n\n馬克·蒂森：特朗普無需達成協議，也能從伊朗那裏得到他想要的結果： https://www.washingtonpost.com/opinions/2026/04/22/trump-best-move-iran-negotiations/",
+    "content_ko": "정말로 맞는 말이다!!!\n도널드 J. 트럼프 대통령\n\n마크 티슨: 트럼프는 이란으로부터 자신이 원하는 것을 얻기 위해 반드시 합의가 필요한 것은 아니다: https://www.washingtonpost.com/opinions/2026/04/22/trump-best-move-iran-negotiations/"
+  },
   "https://truthsocial.com/@realDonaldTrump/116454200707517482": {
     "content_zh_cn": "伊朗现在连谁是他们的领导人都很难搞清楚！他们根本不知道！\n“强硬派”和“温和派”之间的内斗，简直疯了！前者在战场上惨败连连，后者则一点也不温和（但正在赢得尊重！）。\n我们已完全控制霍尔木兹海峡。未经美国海军批准，任何船只都不得进出。现在这里已被“严密封锁”，除非伊朗能够达成协议！！！\n感谢大家对此事的关注。\n总统 唐纳德·J·特朗普",
     "content_zh_hk": "伊朗現在連誰是他們的領導人都很難搞清楚！他們根本不知道！\n「強硬派」和「溫和派」之間的內鬥，簡直瘋了！前者在戰場上節節敗退，後者則一點也不溫和（但正在贏得尊重！）。\n我們已完全控制霍爾木茲海峽。未經美國海軍批准，任何船隻都不得進出。現在這裡已被「嚴密封鎖」，除非伊朗能夠達成協議！！！\n感謝大家對此事的關注。\n總統 唐納德·J·特朗普",
