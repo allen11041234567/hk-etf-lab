@@ -1,4 +1,34 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116451794319444191": {
+    "content_zh_cn": "特朗普称，在他要求伊朗释放她们后，伊朗将不会处决这8名女性：https://nypost.com/2026/04/22/us-news/trump-says-iran-wont-execute-8-women-after-he-pleaded-for-their-release/",
+    "content_zh_hk": "特朗普稱，在他要求伊朗釋放她們後，伊朗將不會處決這8名女性：https://nypost.com/2026/04/22/us-news/trump-says-iran-wont-execute-8-women-after-he-pleaded-for-their-release/",
+    "content_ko": "트럼프는 자신이 석방을 요구한 뒤 이란이 여성 8명을 처형하지 않을 것이라고 말했다: https://nypost.com/2026/04/22/us-news/trump-says-iran-wont-execute-8-women-after-he-pleaded-for-their-release/"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116451791676032346": {
+    "content_zh_cn": "诺姆·艾森是个十足的卑劣之徒。没几个人能比他更下作了！！！",
+    "content_zh_hk": "諾姆·艾森係個十足嘅卑劣之徒。冇幾多人會比佢更下作！！！",
+    "content_ko": "노름 아이젠은 아주 비열한 인간이다. 그보다 더 추한 사람은 거의 없다!!!"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116451783206320481": {
+    "content_zh_cn": "戴夫·博西：在特朗普的战争部，自由兵工厂再次轰鸣：https://dailycaller.com/2026/03/14/opinion-at-trumps-war-department-the-arsenal-of-freedom-roars-again-dave-bossie/",
+    "content_zh_hk": "戴夫·博西：在特朗普的戰爭部，自由兵工廠再次轟鳴：https://dailycaller.com/2026/03/14/opinion-at-trumps-war-department-the-arsenal-of-freedom-roars-again-dave-bossie/",
+    "content_ko": "데이브 보시: 트럼프의 전쟁부에서, 자유의 병기창이 다시 포효한다: https://dailycaller.com/2026/03/14/opinion-at-trumps-war-department-the-arsenal-of-freedom-roars-again-dave-bossie/"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116451781911005042": {
+    "content_zh_cn": "戴夫·博西：参议院共和党人必须坚定立场，通过《拯救美国法案》：https://dailycaller.com/2026/02/14/opinion-senate-republicans-must-stand-tall-and-pass-the-save-america-act-dave-bosie-opinion/",
+    "content_zh_hk": "戴夫·博西：參議院共和黨人必須堅定立場，通過《拯救美國法案》：https://dailycaller.com/2026/02/14/opinion-senate-republicans-must-stand-tall-and-pass-the-save-america-act-dave-bosie-opinion/",
+    "content_ko": "데이브 보시: 상원 공화당은 굳건히 나서 SAVE America Act를 통과시켜야 한다: https://dailycaller.com/2026/02/14/opinion-senate-republicans-must-stand-tall-and-pass-the-save-america-act-dave-bosie-opinion/"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116451779493321892": {
+    "content_zh_cn": "联邦政府必须加大力度，确保选举公正：https://www.washingtontimes.com/news/2026/jan/27/federal-government-must-step-election-integrity/",
+    "content_zh_hk": "聯邦政府必須加大力度，確保選舉公正：https://www.washingtontimes.com/news/2026/jan/27/federal-government-must-step-election-integrity/",
+    "content_ko": "연방정부는 선거의 공정성을 위해 반드시 더 적극적으로 나서야 한다: https://www.washingtontimes.com/news/2026/jan/27/federal-government-must-step-election-integrity/"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116451778358145321": {
+    "content_zh_cn": "戴夫·博西：就任一年来，特朗普正强力打破华盛顿特区已告失败的旧有秩序：https://dailycaller.com/2026/01/18/opinion-one-year-since-taking-office-trump-is-decimating-failed-dc-status-quo-dave-bossie/",
+    "content_zh_hk": "戴夫·博西：上任一年來，特朗普正強力打破華盛頓特區已告失敗的舊有秩序：https://dailycaller.com/2026/01/18/opinion-one-year-since-taking-office-trump-is-decimating-failed-dc-status-quo-dave-bossie/",
+    "content_ko": "데이브 보시: 취임 1년 만에 트럼프는 실패한 워싱턴 DC의 기존 질서를 강하게 허물고 있다: https://dailycaller.com/2026/01/18/opinion-one-year-since-taking-office-trump-is-decimating-failed-dc-status-quo-dave-bossie/"
+  },
   "https://truthsocial.com/@realDonaldTrump/116449943298064625": {
     "content_zh_cn": "莫莉·海明威是一位才华非凡的作家、备受尊敬的评论员，也是一位真正善良的人。她写出了一本极具分量的新书——《阿利托：重塑最高法院并重申宪法的法官》。阿利托大法官深知，维护法治、捍卫我们的宪法——正如开国元勋所期望的那样——需要怎样的智慧与勇气。他是一位了不起的大法官，并将作为有史以来最优秀的大法官之一而载入史册！每个人都应该读一读这本书，并从他的榜样中汲取启发。今天就获取你的副本：https://a.co/d/00SMqkvt",
     "content_zh_hk": "莫莉·海明威是一位才華非凡的作家、備受尊敬的評論員，也是一位真正善良的人。她寫出了一本極具分量的新書——《阿利托：重塑最高法院並重申憲法的大法官》。阿利托大法官深知，維護法治、捍衛我們的憲法——正如開國先賢所期望的那樣——需要怎樣的智慧與勇氣。他是一位了不起的大法官，並將作為有史以來最優秀的大法官之一而載入史冊！每個人都應該讀一讀這本書，並從他的榜樣中汲取啟發。今天就獲取你的副本：https://a.co/d/00SMqkvt",
