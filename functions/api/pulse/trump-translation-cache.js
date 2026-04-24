@@ -1,4 +1,14 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116459464443597925": {
+    "content_zh_cn": "特朗普推动限制“出生公民权”获意外助力：自由派民调机构也提供了支持： https://justthenews.com/politics-policy/all-things-trump/trump-push-restrain-birthright-citizenship-gets-ammo-unlikely",
+    "content_zh_hk": "特朗普推動限制「出生公民權」獲意外助力：自由派民調機構也提供了支持： https://justthenews.com/politics-policy/all-things-trump/trump-push-restrain-birthright-citizenship-gets-ammo-unlikely",
+    "content_ko": "트럼프의 ‘출생시민권’ 제한 추진이 뜻밖의 출처로부터 힘을 얻다: 진보 성향 여론조사 기관: https://justthenews.com/politics-policy/all-things-trump/trump-push-restrain-birthright-citizenship-gets-ammo-unlikely"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116459463235747487": {
+    "content_zh_cn": "报道：左翼机构SPLC前负责人玛格丽特·黄将该组织武器化，用来针对保守派：https://www.breitbart.com/politics/2026/04/23/report-leftist-splcs-former-head-margaret-huang-weaponized-group-against-conservatives/",
+    "content_zh_hk": "報道：左翼機構SPLC前負責人瑪格麗特·黃將該組織武器化，用來針對保守派：https://www.breitbart.com/politics/2026/04/23/report-leftist-splcs-former-head-margaret-huang-weaponized-group-against-conservatives/",
+    "content_ko": "보도: 좌파 성향의 SPLC 전 대표 마거릿 황이 해당 단체를 보수 진영을 겨냥하는 무기로 활용했다: https://www.breitbart.com/politics/2026/04/23/report-leftist-splcs-former-head-margaret-huang-weaponized-group-against-conservatives/"
+  },
   "https://truthsocial.com/@realDonaldTrump/116458331768962924": {
     "content_zh_cn": "《施魏泽独家》：赴美生子产业正被步步围堵，但我们必须立即行动\n第392期 - 4/23/26：\nhttps://web.breitbart.com/videos/schweizer-exclusive-walls-are-closing-in-on-birth-tourism-industry-but-we-must-act-now",
     "content_zh_hk": "《施魏澤獨家》：赴美生子產業正被步步圍堵，但我們必須立即行動\n第392期 - 4/23/26：\nhttps://web.breitbart.com/videos/schweizer-exclusive-walls-are-closing-in-on-birth-tourism-industry-but-we-must-act-now",
