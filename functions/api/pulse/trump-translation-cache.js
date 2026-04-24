@@ -1,4 +1,14 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116458331768962924": {
+    "content_zh_cn": "《施魏泽独家》：赴美生子产业正被步步围堵，但我们必须立即行动\n第392期 - 4/23/26：\nhttps://web.breitbart.com/videos/schweizer-exclusive-walls-are-closing-in-on-birth-tourism-industry-but-we-must-act-now",
+    "content_zh_hk": "《施魏澤獨家》：赴美生子產業正被步步圍堵，但我們必須立即行動\n第392期 - 4/23/26：\nhttps://web.breitbart.com/videos/schweizer-exclusive-walls-are-closing-in-on-birth-tourism-industry-but-we-must-act-now",
+    "content_ko": "슈바이처 단독: 원정출산 산업에 대한 포위망이 좁혀오고 있지만, 우리는 지금 행동해야 합니다\n에피소드 392 - 4/23/26:\nhttps://web.breitbart.com/videos/schweizer-exclusive-walls-are-closing-in-on-birth-tourism-industry-but-we-must-act-now"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116458329742658852": {
+    "content_zh_cn": "https://x.com/elonmusk/status/2047224780374610091?s=10",
+    "content_zh_hk": "https://x.com/elonmusk/status/2047224780374610091?s=10",
+    "content_ko": "https://x.com/elonmusk/status/2047224780374610091?s=10"
+  },
   "https://truthsocial.com/@realDonaldTrump/116457972455781406": {
     "content_zh_cn": "南方贫困法律中心——美国历史上最大的政治骗局之一——已被指控涉嫌欺诈。这又是民主党人的一场骗局，ActBlue以及许多其他事件也都如此。若情况属实，2020年总统选举就应被永久从史册中抹去，不再具有任何效力或作用！感谢各位对此事的关注。\n特朗普总统",
     "content_zh_hk": "南方貧困法律中心——美國歷史上最大的政治騙局之一——已被指控涉嫌欺詐。這又是民主黨人的一場騙局，ActBlue以及許多其他事件亦然。若情況屬實，2020年總統選舉就應被永久從史冊中抹去，不再具有任何效力或作用！感謝各位對此事的關注。\n特朗普總統",
