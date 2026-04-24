@@ -1,4 +1,14 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116457756634688413": {
+    "content_zh_cn": "伟大的爱国者们！！！\n特朗普总统（DJT）",
+    "content_zh_hk": "偉大的愛國者們！！！\n特朗普總統（DJT）",
+    "content_ko": "위대한 애국자들이여!!!\n트럼프 대통령(DJT)"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116457753768206600": {
+    "content_zh_cn": "“爱哭的”查克·舒默应该为此辞职。他不会有人怀念！总统DJT",
+    "content_zh_hk": "「愛哭的」查克·舒默應該為此辭職。他不會有人懷念！總統DJT",
+    "content_ko": "‘울보’ 척 슈머는 이 일로 사임해야 한다. 그가 없어도 아쉬울 사람은 없을 것이다! 대통령 DJT"
+  },
   "https://truthsocial.com/@realDonaldTrump/116457698503699594": {
     "content_zh_cn": "特朗普政府实时更新：总统宣布，以色列—黎巴嫩停火延长3周：https://nypost.com/2026/04/20/us-news/trump-admin-live-updates-april-20-21-22-23-24/",
     "content_zh_hk": "特朗普政府即時更新：總統宣布，以色列—黎巴嫩停火延長3周：https://nypost.com/2026/04/20/us-news/trump-admin-live-updates-april-20-21-22-23-24/",
