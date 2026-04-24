@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116461251395384536": {
+    "content_zh_cn": "那些数十年来一直占我们国家便宜的个人和公司，居然因为美国最高法院就关税作出的那项糟糕且荒谬的裁决，现在还要拿回1,590亿美元。其实他们只需要加上短短半句话——“美国无须退还已经支付的款项”——我们的国家就能多出1,590亿美元。这比大多数国家的全部价值还要高！想想看——仅仅半句话，我们本来就能省下1,590亿美元。难道他们就不能为我们的国家这么做吗？\n唐纳德·J·特朗普总统",
+    "content_zh_hk": "那些數十年來一直佔我們國家便宜的個人和公司，居然因為美國最高法院就關稅作出的那項糟糕且荒謬的裁決，現在還要取回1,590億美元。其實他們只需要加上短短半句話——「美國無須退還已經支付的款項」——我們的國家就能多出1,590億美元。這比大多數國家的全部價值還要高！想想看——僅僅半句話，我們本來就能省下1,590億美元。難道他們就不能為我們的國家這樣做嗎？\n唐納德·J·特朗普總統",
+    "content_ko": "수십 년 동안 우리 나라를 이용해 온 사람들과 기업들이, 관세에 관한 미국 연방대법원의 끔찍하고도 터무니없는 판결 때문에, 이제 1,590억 달러를 돌려받게 됐습니다. 그들이 해야 했던 일은 짧은 반 문장 하나를 넣는 것뿐이었습니다. “미국은 이미 지급된 금액을 환급할 필요가 없다” — 그랬다면 우리 나라는 1,590억 달러만큼 더 부유해졌을 것입니다. 이 금액은 대부분의 나라가 가진 가치보다도 큽니다! 생각해 보십시오 — 반 문장 하나만 있었어도 우리는 1,590억 달러를 아낄 수 있었습니다. 우리 나라를 위해 그 정도도 할 수 없었단 말입니까?\n도널드 J. 트럼프 대통령"
+  },
   "https://truthsocial.com/@realDonaldTrump/116459464443597925": {
     "content_zh_cn": "特朗普推动限制“出生公民权”获意外助力：自由派民调机构也提供了支持： https://justthenews.com/politics-policy/all-things-trump/trump-push-restrain-birthright-citizenship-gets-ammo-unlikely",
     "content_zh_hk": "特朗普推動限制「出生公民權」獲意外助力：自由派民調機構也提供了支持： https://justthenews.com/politics-policy/all-things-trump/trump-push-restrain-birthright-citizenship-gets-ammo-unlikely",
