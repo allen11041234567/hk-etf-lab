@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116473381652573189": {
+    "content_zh_cn": "特朗普限制“出生公民权”的推动，意外获得一股助力：来自自由派民调机构：https://justthenews.com/politics-policy/all-things-trump/trump-push-restrain-birthright-citizenship-gets-ammo-unlikely",
+    "content_zh_hk": "特朗普限制「出生公民權」的推動，意外獲得一股助力：來自自由派民調機構：https://justthenews.com/politics-policy/all-things-trump/trump-push-restrain-birthright-citizenship-gets-ammo-unlikely",
+    "content_ko": "트럼프의 ‘출생시민권’ 제한 추진이 뜻밖의 곳에서 힘을 얻고 있다: 진보 성향 여론조사 기관: https://justthenews.com/politics-policy/all-things-trump/trump-push-restrain-birthright-citizenship-gets-ammo-unlikely"
+  },
   "https://truthsocial.com/@realDonaldTrump/116472726275191719": {
     "content_zh_cn": "我今晚将于美国东部时间晚7点接受哥伦比亚广播公司（CBS）电视网《60分钟》节目采访——敬请收看！\n总统 唐纳德·J·特朗普",
     "content_zh_hk": "我今晚將於美國東部時間晚上7點接受哥倫比亞廣播公司（CBS）電視網《60分鐘》節目訪問——敬請收看！\n總統 唐納德·J·特朗普",
