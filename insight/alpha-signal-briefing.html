@@ -75,8 +75,10 @@
     .market-link::after{content:'↗'}
     .empty,.error{padding:14px 16px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:#cbd8e8}
     .error{display:none;background:#3b1820;border-color:#6a2633;color:#ffd7df}
+    .mobile-toggle{display:none;margin-top:10px;padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:#cfe0f4;font-size:13px;font-weight:700;text-align:center;cursor:pointer}
+    .collapsed-mobile{display:block}
     @media (max-width:980px){h1{font-size:34px}.hero-side{min-width:0;width:100%}.grid-3,.grid-2,.story-grid,.markets{grid-template-columns:1fr}}
-    @media (max-width:560px){.wrap{width:calc(100vw - 14px);padding:12px 0 24px}.hero{padding:16px 14px 14px;border-radius:22px}.eyebrow{font-size:12px;padding:7px 10px}h1{font-size:26px;line-height:1.14;margin:10px 0 8px}.sub{font-size:13px;line-height:1.65}.hero-meta{gap:8px;margin-top:10px}.hero-meta .pill:nth-child(n+3){display:none}.pill{font-size:12px;padding:7px 10px}.hero-side{grid-template-columns:1fr 1fr;gap:8px}.hero-stat{padding:12px;border-radius:16px}.hero-stat .v{font-size:20px}.section{margin-top:10px;padding:12px;border-radius:18px}.section-title{margin-bottom:10px}.section-title h2{font-size:18px}.section-title .hint{display:none}.lead-card{padding:14px;border-radius:18px}.lead-title{font-size:21px}.lead-desc{font-size:13px;line-height:1.6}.lead-map{font-size:12px;line-height:1.5}.desktop-only{display:none}.mobile-only{display:block}.signal-item,.market-card,.ticker-item,.time-item,.story-card{padding:11px 12px;border-radius:14px}.signal-name,.market-name,.ticker-title{font-size:13px}.signal-note,.market-note,.time-desc,.story-card .d{font-size:12px;line-height:1.55}.signal-map,.market-map{font-size:11px;line-height:1.45}.lead-title#headline-summary-short{font-size:20px;line-height:1.35}.story-card .v{font-size:16px}}
+    @media (max-width:560px){.wrap{width:calc(100vw - 14px);padding:12px 0 24px}.hero{padding:16px 14px 14px;border-radius:22px}.eyebrow{font-size:12px;padding:7px 10px}h1{font-size:26px;line-height:1.14;margin:10px 0 8px}.sub{font-size:13px;line-height:1.65}.hero-meta{gap:8px;margin-top:10px}.hero-meta .pill:nth-child(n+3){display:none}.pill{font-size:12px;padding:7px 10px}.hero-side{grid-template-columns:1fr 1fr;gap:8px}.hero-stat{padding:12px;border-radius:16px}.hero-stat .v{font-size:20px}.section{margin-top:10px;padding:12px;border-radius:18px}.section-title{margin-bottom:10px}.section-title h2{font-size:18px}.section-title .hint{display:none}.lead-card{padding:14px;border-radius:18px}.lead-title{font-size:21px}.lead-desc{font-size:13px;line-height:1.6}.lead-map{font-size:12px;line-height:1.5}.desktop-only{display:none}.mobile-only{display:block}.signal-item,.market-card,.ticker-item,.time-item,.story-card{padding:11px 12px;border-radius:14px}.signal-name,.market-name,.ticker-title{font-size:13px}.signal-note,.market-note,.time-desc,.story-card .d{font-size:12px;line-height:1.55}.signal-map,.market-map{font-size:11px;line-height:1.45}.lead-title#headline-summary-short{font-size:20px;line-height:1.35}.story-card .v{font-size:16px}.mobile-toggle{display:block}.collapsed-mobile{display:none}}
   </style>
 </head>
 <body>
@@ -116,14 +118,16 @@
           <div class="lead-map desktop-only" id="lead-map">--</div>
           <div class="stat-row" id="lead-pills"></div>
         </div>
-        <div class="panel">
+        <div class="panel collapsed-mobile" id="anomaly-panel">
           <div class="section-title" style="margin-bottom:10px"><h2 style="font-size:18px">异动榜</h2><div class="hint" id="anomaly-hint">优先抓 1 小时里明显变快的市场</div></div>
           <div class="signal-list" id="anomaly-signals"></div>
         </div>
-        <div class="panel">
+        <div class="panel collapsed-mobile" id="resonance-panel">
           <div class="section-title" style="margin-bottom:10px"><h2 style="font-size:18px">共振信号</h2><div class="hint">异动 + 趋势 + 重点账户</div></div>
           <div class="timeline" id="resonance-list"></div>
         </div>
+      </div>
+      <div class="mobile-toggle" id="toggle-anomaly-extra">展开异动榜与共振信号</div>
       </div>
     </section>
 
@@ -172,6 +176,7 @@
     <section class="section">
       <div class="section-title"><h2>更多市场</h2><div class="hint">只在需要时下钻</div></div>
       <div class="markets" id="market-list"></div>
+      <div class="mobile-toggle" id="toggle-markets">展开更多市场</div>
     </section>
   </div>
 
