@@ -99,11 +99,11 @@
 
       <section class='panel'>
         <div class='section-title'>韩国市场资讯速递</div>
-        <div class='hint'>这里直接做成资讯新闻流，不写成长文。默认抓韩国本地英文媒体和海外财经聚合，按时间滚动展示。</div>
+        <div class='hint'>这里直接做成轻量实时新闻流，页面打开自动拉取，之后定时刷新，不走晨报样式。</div>
         <div class='news-box'>
           <div class='news-top'>
-            <div class='news-api'>接口地址：/api/pulse/korea-market-digest</div>
-            <button class='refresh-btn' id='refresh-news'>刷新资讯</button>
+            <div class='news-api'>接口驱动 · 自动刷新</div>
+            <button class='refresh-btn' id='refresh-news'>立即刷新</button>
           </div>
           <div class='news-list' id='news-list'>
             <div class='news-item'>
@@ -178,6 +178,7 @@
     }
     document.getElementById('refresh-news').addEventListener('click', loadNews);
     loadNews();
+    setInterval(loadNews, 300000);
   </script>
 </body>
 </html>
