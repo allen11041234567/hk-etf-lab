@@ -100,10 +100,10 @@
 
       <section class='panel'>
         <div class='section-title'>韩国市场资讯速递</div>
-        <div class='hint'>这里直接做成轻量实时新闻流，页面打开自动拉取，之后定时刷新，不走晨报样式。</div>
+        <div class='hint'>这里改成后台快照优先展示，前端再尝试实时刷新。即便实时接口没刷出来，也先展示上一版已翻译中文的稳定内容。</div>
         <div class='news-box'>
           <div class='news-top'>
-            <div class='news-api'>接口驱动 · 自动刷新</div>
+            <div class='news-api'>后台快照 + 实时接口双保险</div>
             <button class='refresh-btn' id='refresh-news'>立即刷新</button>
           </div>
           <div class='news-status' id='news-status'>等待首次拉取...</div>
@@ -111,7 +111,7 @@
             <div class='news-item'>
               <div class='news-time'>--:--</div>
               <div class='news-source'>系统</div>
-              <div class='news-main'><div class='news-title'>正在载入韩国市场最新资讯</div><div class='news-body'>如果接口暂时未返回，会先显示占位说明，不影响页面交付。</div></div>
+              <div class='news-main'><div class='news-title'>正在载入韩国市场最新资讯</div><div class='news-body'>优先读取后台快照，如实时接口可用会自动覆盖更新。</div></div>
             </div>
           </div>
         </div>
@@ -151,41 +151,67 @@
   </div>
 
   <script>
-    async function loadNews() {
+    function renderNews(items) {
       const list = document.getElementById('news-list');
+      list.innerHTML = items.slice(0, 16).map(item => `
+        <article class="news-item">
+          <div class="news-time">${item.time || '--:--'}</div>
+          <div class="news-source">${item.source || '新闻源'}</div>
+          <div class="news-main">
+            <div class="news-title"><a href="${item.url || '#'}" target="_blank" rel="noopener noreferrer">${item.zhTitle || item.title || '未命名资讯'}</a></div>
+            <div class="news-body">${item.category || '韩国市场'}</div>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    async function loadStaticNews() {
       const status = document.getElementById('news-status');
-      status.textContent = '刷新中...';
-      list.innerHTML = "<div class='news-item'><div class='news-time'>--:--</div><div class='news-source'>系统</div><div class='news-main'><div class='news-title'>正在获取最新资讯</div><div class='news-body'>请稍等片刻...</div></div></div>";
+      const staticUrl = `${location.origin}/assets/data/korea-market-digest.json?t=${Date.now()}`;
+      const resp = await fetch(staticUrl, { cache: 'no-store' });
+      const data = await resp.json();
+      if (!data || !data.ok || !Array.isArray(data.items) || !data.items.length) throw new Error('empty static');
+      renderNews(data.items);
+      status.textContent = `已显示后台快照 ${data.fetchedAt ? new Date(data.fetchedAt).toLocaleString('zh-CN', { hour12:false }) : ''}`;
+      return data;
+    }
+
+    async function refreshLiveNews() {
+      const status = document.getElementById('news-status');
       try {
         const apiUrl = `${location.origin}/api/pulse/korea-market-digest?t=${Date.now()}`;
         const resp = await fetch(apiUrl, { cache: 'no-store' });
         const data = await resp.json();
-        if (!data || !data.ok || !Array.isArray(data.items) || !data.items.length) throw new Error('empty');
-        status.textContent = `已刷新 ${data.fetchedAt ? new Date(data.fetchedAt).toLocaleString('zh-CN', { hour12:false }) : ''}`;
-        list.innerHTML = data.items.slice(0, 12).map(item => `
-          <article class="news-item">
-            <div class="news-time">${item.time || '--:--'}</div>
-            <div class="news-source">${item.source || '新闻源'}</div>
-            <div class="news-main">
-              <div class="news-title"><a href="${item.url || '#'}" target="_blank" rel="noopener noreferrer">${item.zhTitle || item.title || '未命名资讯'}</a></div>
-              <div class="news-body">${item.category || '韩国市场'}</div>
-            </div>
-          </article>
-        `).join('');
+        if (!data || !data.ok || !Array.isArray(data.items) || !data.items.length) throw new Error('empty live');
+        renderNews(data.items);
+        status.textContent = `已刷新实时接口 ${data.fetchedAt ? new Date(data.fetchedAt).toLocaleString('zh-CN', { hour12:false }) : ''}`;
       } catch (err) {
-        status.textContent = '刷新失败';
-        list.innerHTML = `
-          <article class="news-item">
-            <div class="news-time">--:--</div>
-            <div class="news-source">系统</div>
-            <div class="news-main"><div class="news-title">韩国市场资讯流暂时未返回</div><div class="news-body">接口已接好，稍后可继续刷新；如果个别新闻源不稳定，我会继续调源，但页面结构不变。</div></div>
-          </article>
-        `;
+        if (!document.querySelector('.news-item')) {
+          document.getElementById('news-list').innerHTML = `
+            <article class="news-item">
+              <div class="news-time">--:--</div>
+              <div class="news-source">系统</div>
+              <div class="news-main"><div class="news-title">韩国市场资讯流暂时未返回</div><div class="news-body">后台快照和实时接口都未成功返回，稍后重试。</div></div>
+            </article>
+          `;
+        }
       }
     }
-    document.getElementById('refresh-news').addEventListener('click', loadNews);
-    loadNews();
-    setInterval(loadNews, 300000);
+
+    async function bootNews() {
+      const status = document.getElementById('news-status');
+      status.textContent = '正在加载后台快照...';
+      try {
+        await loadStaticNews();
+      } catch (err) {
+        status.textContent = '后台快照暂时未返回，尝试实时接口...';
+      }
+      await refreshLiveNews();
+    }
+
+    document.getElementById('refresh-news').addEventListener('click', refreshLiveNews);
+    bootNews();
+    setInterval(refreshLiveNews, 300000);
   </script>
 </body>
 </html>
