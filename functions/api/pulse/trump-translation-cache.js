@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116474402720502063": {
+    "content_zh_cn": "Lee 和 Kim Greenwood，这两位非常了不起的人，于4月17日迎来了他们的第一个孙辈。\n他们从一开始就与我并肩同行——始终忠心耿耿，而 Lee 还送给了我史上最棒的出场歌曲，根本无可比拟！！！\n祝贺你们二位！！！\n爱你们，DJT总统",
+    "content_zh_hk": "Lee 和 Kim Greenwood，這兩位非常了不起的人，於4月17日迎來了他們的第一個孫輩。\n他們從一開始就與我並肩同行——始終忠心耿耿，而 Lee 還送給了我史上最出色的出場歌曲，根本無可比擬！！！\n祝賀你們二位！！！\n愛你們，DJT總統",
+    "content_ko": "Lee와 Kim Greenwood, 정말 대단한 두 사람이 4월 17일 첫 손주를 맞이했습니다.\n그들은 맨 처음부터 저와 함께해 왔습니다 - 완전한 충성심, 그리고 Lee는 제게 역대 최고의 등장곡을 안겨줬습니다. 비교할 만한 것이 전혀 없습니다!!!\n두 분 모두 축하합니다!!!\n사랑을 담아, DJT 대통령"
+  },
   "https://truthsocial.com/@realDonaldTrump/116473381652573189": {
     "content_zh_cn": "特朗普限制“出生公民权”的推动，意外获得一股助力：来自自由派民调机构：https://justthenews.com/politics-policy/all-things-trump/trump-push-restrain-birthright-citizenship-gets-ammo-unlikely",
     "content_zh_hk": "特朗普限制「出生公民權」的推動，意外獲得一股助力：來自自由派民調機構：https://justthenews.com/politics-policy/all-things-trump/trump-push-restrain-birthright-citizenship-gets-ammo-unlikely",
