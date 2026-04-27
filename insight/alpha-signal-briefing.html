@@ -249,6 +249,41 @@
     }
 
     let refreshTimer = null;
+    let anomalyExpanded = false;
+    let marketsExpanded = false;
+
+    function applyMobileToggles() {
+      const isMobile = window.innerWidth <= 560;
+      const anomalyPanel = $('anomaly-panel');
+      const resonancePanel = $('resonance-panel');
+      const toggleAnomaly = $('toggle-anomaly-extra');
+      const marketList = $('market-list');
+      const toggleMarkets = $('toggle-markets');
+      if (anomalyPanel && resonancePanel && toggleAnomaly) {
+        if (isMobile) {
+          anomalyPanel.style.display = anomalyExpanded ? 'block' : 'none';
+          resonancePanel.style.display = anomalyExpanded ? 'block' : 'none';
+          toggleAnomaly.textContent = anomalyExpanded ? '收起异动榜与共振信号' : '展开异动榜与共振信号';
+          toggleAnomaly.style.display = 'block';
+        } else {
+          anomalyPanel.style.display = 'block';
+          resonancePanel.style.display = 'block';
+          toggleAnomaly.style.display = 'none';
+        }
+      }
+      if (marketList && toggleMarkets) {
+        const cards = [...marketList.children];
+        if (isMobile) {
+          cards.forEach((el, idx) => { el.style.display = (marketsExpanded || idx < 3) ? 'block' : 'none'; });
+          toggleMarkets.textContent = marketsExpanded ? '收起更多市场' : '展开更多市场';
+          toggleMarkets.style.display = cards.length > 3 ? 'block' : 'none';
+        } else {
+          cards.forEach((el) => { el.style.display = 'block'; });
+          toggleMarkets.style.display = 'none';
+        }
+      }
+    }
+
     async function load() {
       try {
         const resp = await fetch(API_URL + '?v=' + Date.now(), { cache:'no-store' });
@@ -291,6 +326,7 @@
         $('market-list').innerHTML = (data.markets || []).map(renderMarket).join('') || '<div class="empty">暂无数据</div>';
         $('resonance-list').innerHTML = (data.resonanceSignals || []).map(renderTrendExplanation).join('') || '<div class="empty">当前暂无明显共振市场</div>';
 
+        applyMobileToggles();
         const nextMs = Math.max(15000, Number(data.refreshMs || 20000));
         if (refreshTimer) clearTimeout(refreshTimer);
         refreshTimer = setTimeout(load, nextMs);
@@ -302,6 +338,9 @@
       }
     }
 
+    $('toggle-anomaly-extra')?.addEventListener('click', () => { anomalyExpanded = !anomalyExpanded; applyMobileToggles(); });
+    $('toggle-markets')?.addEventListener('click', () => { marketsExpanded = !marketsExpanded; applyMobileToggles(); });
+    window.addEventListener('resize', applyMobileToggles);
     load();
   </script>
 </body>
