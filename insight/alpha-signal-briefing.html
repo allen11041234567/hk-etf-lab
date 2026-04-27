@@ -42,6 +42,8 @@
     .lead-title{margin-top:8px;font-size:28px;font-weight:800;line-height:1.25}
     .lead-desc{margin-top:10px;font-size:15px;line-height:1.78;color:#c9d6e5}
     .lead-map{margin-top:10px;font-size:13px;color:#ffd6ae;line-height:1.6}
+    .mobile-only{display:none}
+    .desktop-only{display:block}
     .stat-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
     .mini-pill{padding:7px 10px;border-radius:999px;font-size:12px;font-weight:700;border:1px solid var(--line);background:rgba(255,255,255,.04);color:#d7e2ef}
     .mini-pill.hot{color:#ffd2d2;border-color:rgba(255,107,107,.28);background:rgba(255,107,107,.08)}
@@ -74,7 +76,7 @@
     .empty,.error{padding:14px 16px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:#cbd8e8}
     .error{display:none;background:#3b1820;border-color:#6a2633;color:#ffd7df}
     @media (max-width:980px){h1{font-size:34px}.hero-side{min-width:0;width:100%}.grid-3,.grid-2,.story-grid,.markets{grid-template-columns:1fr}}
-    @media (max-width:560px){.wrap{width:calc(100vw - 14px);padding:12px 0 24px}.hero{padding:16px 14px 14px;border-radius:22px}.eyebrow{font-size:12px;padding:7px 10px}h1{font-size:26px;line-height:1.14;margin:10px 0 8px}.sub{font-size:13px;line-height:1.7}.hero-meta{gap:8px;margin-top:10px}.pill{font-size:12px;padding:7px 10px}.hero-side{grid-template-columns:1fr 1fr;gap:8px}.hero-stat{padding:12px;border-radius:16px}.hero-stat .v{font-size:20px}.section{margin-top:10px;padding:12px;border-radius:18px}.section-title{margin-bottom:10px}.section-title h2{font-size:18px}.section-title .hint{font-size:12px}.lead-card{padding:14px;border-radius:18px}.lead-title{font-size:21px}.lead-desc{font-size:13px;line-height:1.68}.signal-name,.market-name,.ticker-title{font-size:13px}.story-card .v{font-size:16px}}
+    @media (max-width:560px){.wrap{width:calc(100vw - 14px);padding:12px 0 24px}.hero{padding:16px 14px 14px;border-radius:22px}.eyebrow{font-size:12px;padding:7px 10px}h1{font-size:26px;line-height:1.14;margin:10px 0 8px}.sub{font-size:13px;line-height:1.65}.hero-meta{gap:8px;margin-top:10px}.hero-meta .pill:nth-child(n+3){display:none}.pill{font-size:12px;padding:7px 10px}.hero-side{grid-template-columns:1fr 1fr;gap:8px}.hero-stat{padding:12px;border-radius:16px}.hero-stat .v{font-size:20px}.section{margin-top:10px;padding:12px;border-radius:18px}.section-title{margin-bottom:10px}.section-title h2{font-size:18px}.section-title .hint{display:none}.lead-card{padding:14px;border-radius:18px}.lead-title{font-size:21px}.lead-desc{font-size:13px;line-height:1.6}.lead-map{font-size:12px;line-height:1.5}.desktop-only{display:none}.mobile-only{display:block}.signal-item,.market-card,.ticker-item,.time-item,.story-card{padding:11px 12px;border-radius:14px}.signal-name,.market-name,.ticker-title{font-size:13px}.signal-note,.market-note,.time-desc,.story-card .d{font-size:12px;line-height:1.55}.signal-map,.market-map{font-size:11px;line-height:1.45}.lead-title#headline-summary-short{font-size:20px;line-height:1.35}.story-card .v{font-size:16px}}
   </style>
 </head>
 <body>
@@ -84,7 +86,8 @@
         <div>
           <div class="eyebrow">API 驱动实时版</div>
           <h1>Polymarket 金融预测信号台</h1>
-          <div class="sub" id="headline-summary-long">聚焦金融预测市场中的关键异动、趋势变化与重点账户动作，帮助你更快识别现在最值得盯的交易主线，以及它们可能映射的资产方向。</div>
+          <div class="sub desktop-only" id="headline-summary-long">聚焦金融预测市场中的关键异动、趋势变化与重点账户动作，帮助你更快识别现在最值得盯的交易主线，以及它们可能映射的资产方向。</div>
+          <div class="sub mobile-only" id="headline-summary-mobile">先看异动，再看主线和重点账户，快速判断现在最值得盯的金融预测方向。</div>
           <div class="hero-meta">
             <div class="pill">官方 Gamma + CLOB 公开接口</div>
             <div class="pill">重点账户持续跟踪</div>
@@ -110,7 +113,7 @@
           <div class="label">TOP 1H MOVE</div>
           <div class="lead-title" id="lead-title">--</div>
           <div class="lead-desc" id="lead-desc">--</div>
-          <div class="lead-map" id="lead-map">--</div>
+          <div class="lead-map desktop-only" id="lead-map">--</div>
           <div class="stat-row" id="lead-pills"></div>
         </div>
         <div class="panel">
@@ -129,7 +132,7 @@
       <div class="lead-card" style="padding:16px 18px;border-radius:20px;">
         <div class="label">TODAY'S TAKE</div>
         <div class="lead-title" id="headline-summary-short" style="font-size:24px;">--</div>
-        <div class="lead-desc" id="headline-summary-extra" style="margin-top:8px;">--</div>
+        <div class="lead-desc desktop-only" id="headline-summary-extra" style="margin-top:8px;">--</div>
       </div>
     </section>
 
@@ -258,6 +261,7 @@
         $('headline-summary-short').textContent = data.headlineSummary?.short || '--';
         $('headline-summary-extra').textContent = data.headlineSummary?.long || '--';
         $('headline-summary-long').textContent = data.headlineSummary?.long || $('headline-summary-long').textContent;
+        $('headline-summary-mobile').textContent = data.headlineSummary?.short || $('headline-summary-mobile').textContent;
 
         const lead = data.lead;
         if (lead) {
