@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116474434041424846": {
+    "content_zh_cn": "好主意！！！就这么办。\n美国总统唐纳德·J·特朗普",
+    "content_zh_hk": "好主意！！！就這麼辦。\n美國總統唐納德·J·特朗普",
+    "content_ko": "좋은 생각이다!!! 그렇게 하라.\n도널드 J. 트럼프 대통령"
+  },
   "https://truthsocial.com/@realDonaldTrump/116474402720502063": {
     "content_zh_cn": "Lee 和 Kim Greenwood，这两位非常了不起的人，于4月17日迎来了他们的第一个孙辈。\n他们从一开始就与我并肩同行——始终忠心耿耿，而 Lee 还送给了我史上最棒的出场歌曲，根本无可比拟！！！\n祝贺你们二位！！！\n爱你们，DJT总统",
     "content_zh_hk": "Lee 和 Kim Greenwood，這兩位非常了不起的人，於4月17日迎來了他們的第一個孫輩。\n他們從一開始就與我並肩同行——始終忠心耿耿，而 Lee 還送給了我史上最出色的出場歌曲，根本無可比擬！！！\n祝賀你們二位！！！\n愛你們，DJT總統",
