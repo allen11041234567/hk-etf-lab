@@ -1,35 +1,8 @@
 {
   "ok": true,
-  "fetchedAt": "2026-04-27T15:14:35.806892+00:00",
-  "itemCount": 36,
+  "fetchedAt": "2026-04-27T15:19:25.614007+00:00",
+  "itemCount": 24,
   "items": [
-    {
-      "title": "After the tsunami, a wildfire: one Japanese firefighter's tale",
-      "originalTitle": "After the tsunami, a wildfire: one Japanese firefighter's tale",
-      "zhTitle": "After the tsunami, a wildfire: one Japanese firefighter's tale",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOd2g2Sndfb0xpM3UxZlVTUk9WSzQ4c05GYnFjSGJ4Zk9IMmxmMmdRc1pVaGE4RGVuYWFwLTZFRXBqRW9ZaDdjYUlOclB6aWFHOWpGTWp6QjFkdmZMUmFaRV9SZUozOVZWMWZ5TUd3MDNCcndvUjAyaEQ1S2dDVlllMEpTdw?oc=5",
-      "time": "04/27 19:00",
-      "source": "Reuters",
-      "category": "海外财经"
-    },
-    {
-      "title": "Check out VanEck Semiconductor ETF's stock price (SMH) in real time",
-      "originalTitle": "Check out VanEck Semiconductor ETF's stock price (SMH) in real time",
-      "zhTitle": "Check out VanEck 半导体 ETF's 股票 price (SMH) in real time",
-      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFA4ZndyWUhIckZUWTBRaFVVOFQ2SVM2cUhHNS1RNmtQTE1LSXJmZTgtN3hyQndSSWlwWG41b0hTeUx4NWF3NlE?oc=5",
-      "time": "04/27 18:38",
-      "source": "CNBC",
-      "category": "海外财经"
-    },
-    {
-      "title": "Chinese EV battery maker CATL launches $5 billion Hong Kong share sale",
-      "originalTitle": "Chinese EV battery maker CATL launches $5 billion Hong Kong share sale",
-      "zhTitle": "Chinese EV battery maker CATL launches $5 billion Hong Kong share sale",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNbUs3NDZVMlpHRGJ4X3BGRUxjWTd4RE93T1VWMnhrOFQ3alAzMEQwMVQ0eVZYaWV2M2FQY2V3MDF4VlVzZ1pDSnd4cU1kV09RVVZEcXVzOWgxb3QyclcyVVRDWS1KSnVmb0NwVUc1MkRURmp1OGJWT3NrTGJfcWN6M09IRklkUXh5YlA3aDVBQkx3ak1MNm5Uamk1MDR3NFZjdlRPTjNMOFdsZjllTndTTVV4RkJzaFFMRkw2MzRmaEdSdw?oc=5",
-      "time": "04/27 18:32",
-      "source": "Reuters",
-      "category": "海外财经"
-    },
     {
       "title": "Google to build AI campus in South Korea, presidential office says",
       "originalTitle": "Google to build AI campus in South Korea, presidential office says",
@@ -40,39 +13,12 @@
       "category": "海外财经"
     },
     {
-      "title": "HS Hyosung Advanced Q1 net income down 33.1 pct to 6.7 bln won",
-      "originalTitle": "HS Hyosung Advanced Q1 net income down 33.1 pct to 6.7 bln won",
-      "zhTitle": "HS Hyosung Advanced Q1 net income down 33.1 pct to 6.7 bln 韩元",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5hbE83VWFZaVpVNjA4TjE5RVNjLUdHYUd5ZUFUd0g5a25QNkJtVWZ1V21vZUNpNkhYMkVKenFIVlVNQ3JtTDZOVXpJU2JFX2FkVU9QS2ZZaFFtdw?oc=5",
-      "time": "04/27 16:38",
-      "source": "Yonhap",
-      "category": "韩国快讯"
-    },
-    {
-      "title": "ASEAN specialist defines Presidnt Lees South Asian tour as move for strategic survival",
-      "originalTitle": "ASEAN specialist defines Presidnt Lees South Asian tour as move for strategic survival",
-      "zhTitle": "ASEAN specialist defines Presidnt Lees South Asian tour as move for strategic survival",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5HSFk1c01RNzBJZnlVN3NnSjZoRjgzc2RPVmZ4QnRnZUhYWnQ5MWdsY3djUUxqWHJ3MDE1ZVdSVDhQWUtvSnhMaTZQbnp2UzNMYkU0cG5HONIBV0FVX3lxTE5HSFk1c01RNzBJZnlVN3NnSjZoRjgzc2RPVmZ4QnRnZUhYWnQ5MWdsY3djUUxqWHJ3MDE1ZVdSVDhQWUtvSnhMaTZQbnp2UzNMYkU0cG5HOA?oc=5",
-      "time": "04/27 16:30",
-      "source": "Aju Press",
-      "category": "韩股与韩元"
-    },
-    {
       "title": "Samsung, SK hynix morph into AI foundries as Big Tech reshapes chipmaking",
       "originalTitle": "Samsung, SK hynix morph into AI foundries as Big Tech reshapes chipmaking",
       "zhTitle": "在科技巨头重塑芯片制造格局下，三星与SK海力士加速转向 AI 晶圆与存储链",
       "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9HSFhMQlhNdUJidEQzU0VISEZZYWVOOFk0cFdtWHhTZ2V0RVRfc0UxejdncFlpMGpQOEZxQ2pJMHN1U1l4MWlCSlE5RS1aUV9aOU1yQmNpNNIBV0FVX3lxTE9HSFhMQlhNdUJidEQzU0VISEZZYWVOOFk0cFdtWHhTZ2V0RVRfc0UxejdncFlpMGpQOEZxQ2pJMHN1U1l4MWlCSlE5RS1aUV9aOU1yQmNpNA?oc=5",
       "time": "04/27 15:51",
       "source": "Aju Press",
-      "category": "韩国产业"
-    },
-    {
-      "title": "WeRide and Lenovo Collaborate to Deploy 200,000 Autonomous Vehicles Globally Over Five Years",
-      "originalTitle": "WeRide and Lenovo Collaborate to Deploy 200,000 Autonomous Vehicles Globally Over Five Years",
-      "zhTitle": "WeRide and Lenovo Collaborate to Deploy 200,000 Autonomous Vehicles Globally Over Five Years",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPd2oxUHNVR1dPYUtFY3ZfemtoZGhkQUt1QzlyMWRvUkJDVmhZcllnbTFXbWs3NEVaa1h0MWpjX3YwMVlGMGpRUUtVYnBiLXkzUXlCNGptQTMtRGVXTnlNek8wOTNBMExlc0hoT2hnalAwQmxvSDdUaGRDU2dOMm1ranVTbTF1akhGbVc3WXVDdEY5QTk0eWQza3VXV2R0dUdnVjhsajBfV0VueTVUbk1DZWdXLWlIOTJMVk5yQVFDdw?oc=5",
-      "time": "04/27 15:48",
-      "source": "Koreabizwire",
       "category": "韩国产业"
     },
     {
@@ -130,15 +76,6 @@
       "category": "韩国产业"
     },
     {
-      "title": "Mirae Asset’s Tiger 200 IT ETF tops W1tr on AI demand",
-      "originalTitle": "Mirae Asset’s Tiger 200 IT ETF tops W1tr on AI demand",
-      "zhTitle": "Mirae Asset’s Tiger 200 IT ETF tops W1tr on AI demand",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5ZYzRIZjFsRmtObEpfLWdqTnJHbngwUjU3czFub0NwVlRDSEhLcC1JLU9fQ2sxT1QxTGV0dEJFeVZrNXNHZTBydGp4ZG1HOXFVdUJ6S3lfcw?oc=5",
-      "time": "04/27 14:48",
-      "source": "Korea Herald",
-      "category": "市场与公司"
-    },
-    {
       "title": "Samsung union flags 18% output hit, raises stakes with 18-day strike threat",
       "originalTitle": "Samsung union flags 18% output hit, raises stakes with 18-day strike threat",
       "zhTitle": "三星 union flags 18% output hit, raises stakes with 18-day strike threat",
@@ -146,15 +83,6 @@
       "time": "04/27 14:48",
       "source": "Aju Press",
       "category": "韩国产业"
-    },
-    {
-      "title": "Asia Economy",
-      "originalTitle": "Asia Economy",
-      "zhTitle": "Asia Economy",
-      "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE1QN1BkZDZaaENzRFlaZnk2MEE5SWlDZGM2dmJJalNCRUVZbjh4OFQwclZIaHMwY3d5QkcxQXdCUHpIREYwRDVoYVdn?oc=5",
-      "time": "04/27 14:46",
-      "source": "CNBC",
-      "category": "海外财经"
     },
     {
       "title": "Korea Publishing Advisers Warn of AI-Driven Web Novel Competition, Seek Bigger Budget",
@@ -175,78 +103,6 @@
       "category": "韩国快讯"
     },
     {
-      "title": "Samsung SDS, LG CNS Sign Reseller Deals for OpenAI’s ChatGPT Edu in Korea",
-      "originalTitle": "Samsung SDS, LG CNS Sign Reseller Deals for OpenAI’s ChatGPT Edu in Korea",
-      "zhTitle": "三星 SDS, LG CNS Sign Reseller Deals for OpenAI’s ChatGPT Edu in 韩国",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9Ydnk4MkVnbVl3REROUDFRc0QwYWRwYUF0WHRkLVEtX0dLN0RlZnBNZ2txa1ZEZHB4cWJYYndSSmtnM0VyNEZCVDZuUUZ1VVBUbjN0QVlqONIBV0FVX3lxTE9Ydnk4MkVnbVl3REROUDFRc0QwYWRwYUF0WHRkLVEtX0dLN0RlZnBNZ2txa1ZEZHB4cWJYYndSSmtnM0VyNEZCVDZuUUZ1VVBUbjN0QVlqOA?oc=5",
-      "time": "04/27 14:34",
-      "source": "Aju Press",
-      "category": "韩国产业"
-    },
-    {
-      "title": "(LEAD) Hanwha Systems swings to Q1 loss on equity losses tied to U.S. shipyard",
-      "originalTitle": "(LEAD) Hanwha Systems swings to Q1 loss on equity losses tied to U.S. shipyard",
-      "zhTitle": "(LEAD) Hanwha Systems swings to Q1 loss on equity losses tied to U.S. shipyard",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNdlFZWUpCZWkxQV9OVm52ZS1mWWpuQXk2OTV6a2RLWjZxc1R2bENPQUxtZ0dxdHFmQkFhcnU4ZmVjMGQzNks5ZHZ0YVV5bGZUUUZYUE5UWl8yVXpVUmtaMWE5bHd0Ry1peDB5cUo2dkM5TkQ2VGlTTVp5MEFyREZhRGx4UDk?oc=5",
-      "time": "04/27 14:32",
-      "source": "Yonhap",
-      "category": "韩国快讯"
-    },
-    {
-      "title": "Dollar quoted at 1,472.5 won DN from 1,484.5 won, as of 3:30 p.m. (KST)",
-      "originalTitle": "Dollar quoted at 1,472.5 won DN from 1,484.5 won, as of 3:30 p.m. (KST)",
-      "zhTitle": "Dollar quoted at 1,472.5 韩元 DN from 1,484.5 韩元, as of 3:30 p.m. (KST)",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFB4MlNGSFk3bUJmMVdJM2V5MV9XaFl3Z1hVWlVkYXVENy1qMi1zX250THJyeDR4eW1TelNoTHpFaWJBb3pnbTF1ZlJDbkN6Q0k4UHNzeG1kRWs2Zw?oc=5",
-      "time": "04/27 14:30",
-      "source": "Yonhap",
-      "category": "韩国快讯"
-    },
-    {
-      "title": "K-pop's most powerful man Bang Si-hyuk may be its biggest risk",
-      "originalTitle": "K-pop's most powerful man Bang Si-hyuk may be its biggest risk",
-      "zhTitle": "K-pop's most powerful man Bang Si-hyuk may be its biggest risk",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFAtTUtIck1sRVdQWm1FNkdkTHFLR3lxamtJd25LSGNRb2pucHdxUWozX2V0UFk3VEh1STc1ckphWUk0T3BBM2cxX1ZYT01YMkx3SXdvcVBoQQ?oc=5",
-      "time": "04/27 14:18",
-      "source": "Korea Herald",
-      "category": "市场与公司"
-    },
-    {
-      "title": "Kospi rally pushes Korea market cap above W6,000tr",
-      "originalTitle": "Kospi rally pushes Korea market cap above W6,000tr",
-      "zhTitle": "韩股走强，韩国市场总市值升破 W6,000tr",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5JVGRZZVJueFFTdmlLWTFjOXNuTFVFc0dzd1ZPSHhjRWZXMmQ2cWtSLW1VS3c1NWV5SEVwdzBTTmRnTmhqcDNFMzY5Y041MVBfLVM0cTFGVQ?oc=5",
-      "time": "04/27 14:16",
-      "source": "Korea Herald",
-      "category": "市场与公司"
-    },
-    {
-      "title": "Hanwha Ocean beats Q1 forecasts on LNG-led profits",
-      "originalTitle": "Hanwha Ocean beats Q1 forecasts on LNG-led profits",
-      "zhTitle": "Hanwha Ocean beats Q1 forecasts on LNG-led profits",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5VWW5FXzJJdk9NVEE2Tmh5Qk1SOEFHNU5mZWppbXZydlc5ZnMzNThGNWRCaGFDN2VCdFlfbjlwcDFlcTM0MUpCUHZPRktmTUlRbzhVdVVHNA?oc=5",
-      "time": "04/27 14:12",
-      "source": "Korea Herald",
-      "category": "市场与公司"
-    },
-    {
-      "title": "Samsung Biologics sweats over strike threat",
-      "originalTitle": "Samsung Biologics sweats over strike threat",
-      "zhTitle": "三星 Biologics sweats over strike threat",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFA4TEoxbG5UYUp3T2tibzVEWDZEenRpbkF0MGs0WTVlVEZCbVdMNlgwd3RQSWQtdURLa3Rfb0NKeVp2X2F0SkFyeldYZGlybHRYQ2F0VUtNcw?oc=5",
-      "time": "04/27 14:06",
-      "source": "Korea Herald",
-      "category": "市场与公司"
-    },
-    {
-      "title": "Brokerages emerge as profit engines for financial groups",
-      "originalTitle": "Brokerages emerge as profit engines for financial groups",
-      "zhTitle": "Brokerages emerge as profit engines for financial groups",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFA2ekpFcV9JX1Bxd3h1WC1QUDdHQXZPVGVvZmpERTRwTTdqMGd6cTRNbkF6UmdTX1FkUDBBVDQxSFhFbExuUVc2anZDLTA3VnczcGUtV2xxMA?oc=5",
-      "time": "04/27 13:58",
-      "source": "Korea Herald",
-      "category": "市场与公司"
-    },
-    {
       "title": "Retail investors split over Samsung, SK hynix as KOSPI hits record high",
       "originalTitle": "Retail investors split over Samsung, SK hynix as KOSPI hits record high",
       "zhTitle": "Retail investors split over 三星, SK海力士 as 韩国综合指数 hits 历史新高",
@@ -254,42 +110,6 @@
       "time": "04/27 13:54",
       "source": "Korea Times",
       "category": "韩国市场"
-    },
-    {
-      "title": "Meet Korea’s priciest stock — and find out why it’s surging",
-      "originalTitle": "Meet Korea’s priciest stock — and find out why it’s surging",
-      "zhTitle": "Meet 韩国’s priciest 股票 — and find out why it’s surging",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE8wTkNqcmxaRk92Rk1NellfbXd2Z1NpU2g3LVBwazI3UHJzRzhaM1E3M3RiU2p2ZkF1cnR4YW9VSy1OaGtvaGxNc0dUZmFwREdYdUZSbXRyRQ?oc=5",
-      "time": "04/27 13:51",
-      "source": "Korea Herald",
-      "category": "市场与公司"
-    },
-    {
-      "title": "Hanwha Systems swings to loss in Q1",
-      "originalTitle": "Hanwha Systems swings to loss in Q1",
-      "zhTitle": "Hanwha Systems swings to loss in Q1",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE05cE9TQjVwQVFJU2dZUTlSd084WnAwZVU4V1FTRDFLbGZsT2JEUTgtZXR0UlpJTXNackJ5ZHdkSklycmFLb19UQm1jNXB4bVF0a0czTWMwWmNmUQ?oc=5",
-      "time": "04/27 13:40",
-      "source": "Yonhap",
-      "category": "韩国快讯"
-    },
-    {
-      "title": "Lee Boo-jin buyback lifts Hotel Shilla to 52-week high",
-      "originalTitle": "Lee Boo-jin buyback lifts Hotel Shilla to 52-week high",
-      "zhTitle": "Lee Boo-jin buyback lifts Hotel Shilla to 52-week high",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE40ZE51b3FFdWRWbjhrMEpoR3RNaHpVc2F2UzVUVFRraDN1VEozQ3BiOWdZZjBvMkpsWDV1a2tDRklua2NQeGVUNkJfakR3U3VMU0VtRGwzNA?oc=5",
-      "time": "04/27 13:37",
-      "source": "Korea Herald",
-      "category": "市场与公司"
-    },
-    {
-      "title": "AI boom moves down the supply chain, lifting Samsung Electro-Mechanics",
-      "originalTitle": "AI boom moves down the supply chain, lifting Samsung Electro-Mechanics",
-      "zhTitle": "AI 热潮向供应链传导，带动三星电机走强",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBYRDRtbldycnJUM1lsZWhNYUxCNG55ZWVROVJJOWZNWVhyNXczdElfNkJHdklMdFJqNEt0YXFKYXNvTkk2dHdxX2E3aE55NmhXeHRKOWNWSQ?oc=5",
-      "time": "04/27 13:35",
-      "source": "Korea Herald",
-      "category": "市场与公司"
     },
     {
       "title": "Samsung’s Foundry Bets on Tesla Tie-Up to Turn Around Losses",
@@ -301,24 +121,6 @@
       "category": "韩国产业"
     },
     {
-      "title": "CJ CheilJedang deepens ties with Bach Hoa XANH to expand K-food in Vietnam",
-      "originalTitle": "CJ CheilJedang deepens ties with Bach Hoa XANH to expand K-food in Vietnam",
-      "zhTitle": "CJ CheilJedang deepens ties with Bach Hoa XANH to expand K-food in Vietnam",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPOThQOEM0M1ZxWGpLbXJsZXo4eTFMNy00ZXRaekhxZklqSVlPYmhJd0E2NlZLNVBkREVWZ19YUXZXSHNDT19OX0U2S3UtczlnRTJqVk9VOG53ZTRHbnVCaVdQTEw3aGxHMmxvMTZQOHlHdjZMdXoxQlpicVB5UnVOLUlJckxZOXFoNTFvLWdZTXpWcmtYeGhMQ1RRMVdiS1NnWWFZbUxzYXZfQ29GRUJ1YjdkZXk4S2Zvbmk5X2UyOHFYczJHLWdJVFJxNNIB0AFBVV95cUxOM2dKZlBZcDVEUFQ1SHJDeURQalhyS2hGaXRtRHhpVGVjeGN4MlNYUjRYREtubEpXRlJfbF84OGUybG9YNFNGeWJSWE5QNXgwdnBjSklzRnB4NlRUZ0M2SEp1X1ZkSDdyRC1tS0l4cVVXZy1EOHlHZ3V2em56Wi1UYmloQTRPa2RRRC1WbkdlZi1ma0ozaUJ6VmVHYXY5R0dlZ0VBVEdvT3BaZ0NxbVhNelo3QWx2WFVzaF9ZUkRXUHNUcnNCdHMwbXdLa3BGa1JW?oc=5",
-      "time": "04/27 13:33",
-      "source": "Korea Times",
-      "category": "韩国市场"
-    },
-    {
-      "title": "Iran reportedly proposes Hormuz Strait deal to U.S. Here’s where things stand — and what’s next for markets",
-      "originalTitle": "Iran reportedly proposes Hormuz Strait deal to U.S. Here’s where things stand — and what’s next for markets",
-      "zhTitle": "Iran reportedly proposes Hormuz Strait deal to U.S. Here’s where things stand — and what’s next for markets",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxONGh0SjhhUUsxRGNVaUVyUEltbUhNcnJtTTUwV3RReUxWUG52UkdCTTVod0VSdUx6TTE4NS1ac0hqT1pxUmFiSnpFQTFhWllxZUxhdUUyQWJtYXYxNHFyRVJrNHJLYzJJVkZBMlF0blZvamZSTzNwOFNzVlJLTUd4U094eHplTkdEV2JfbDZGelFYd09IMTJhbko1a3VoeTTSAaQBQVVfeXFMTzhoNGQyZjFSVlFwN2NyemZHQ0NqWmVyUFpPR0FyM2lSZmk3ZW9kUm1aVXlkbG9EcEtSbThMMlhvY1pzejk3aEtPd0JXSVlkeVRUb2pXdnBSblIweDNhd0RnX0s1LTBJVWk3Q3JHek9SUGRETkw5MlQ0aDdYSFZSTnJjdlpfUGJkUzdSOURJam9CcUpkZkFvZG1WenBOQU9MZHZTS04?oc=5",
-      "time": "04/27 13:10",
-      "source": "CNBC",
-      "category": "海外财经"
-    },
-    {
       "title": "Gangnam Unni looks abroad as foreign users top 700,000",
       "originalTitle": "Gangnam Unni looks abroad as foreign users top 700,000",
       "zhTitle": "Gangnam Unni looks abroad as foreign users top 700,000",
@@ -326,6 +128,96 @@
       "time": "04/27 13:10",
       "source": "Korea Times",
       "category": "韩国市场"
+    },
+    {
+      "title": "North Korea's Kim vows to keep backing Russia, state media says",
+      "originalTitle": "North Korea's Kim vows to keep backing Russia, state media says",
+      "zhTitle": "North 韩国's Kim vows to keep backing Russia, state media says",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPWVNfOExoam02cTRnaFltVFpnN3JCQ0ZIWUFUX2k4azZXVXpnV3FZVExhR3I0d3Y2cTR1V0FRenVwcG83RW50MXY1c0k0QU9lSDFwU0xvdldlVE5KanM0RVFrdG4zVGVHR3dQd21fWnlYM09xRF9nS1VyVVFtODhWejVNTEpULVhHektzRXdNR05YcGtLSDBj?oc=5",
+      "time": "04/27 12:53",
+      "source": "Reuters",
+      "category": "海外财经"
+    },
+    {
+      "title": "Korea needs to fix mobility market before robotaxis arrive",
+      "originalTitle": "Korea needs to fix mobility market before robotaxis arrive",
+      "zhTitle": "韩国 needs to fix mobility market before robotaxis arrive",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxObjBiZURTU0hEc2JubVdCVjRZSVJMRjJOdjY0akJ3V3NtMWZuRi1wTFZZUTllc1lVaC1NYXZyU1I4MVVQdDRneXJBVm9IMmZRUk5jWlRpQlFrQ3otc25WRWNwb1A1MzhOYzBFTF9EWENwSld2cVRuTUZVa3JabHZRMlBtbGNpMUdfMHRLZXgySXZJejZoenNzbTJCN0p5bjFfdXBoeVFrUdIBrAFBVV95cUxPN0hzZGZwaUZFVHZPU29qVnlZOTlSN2g1VWFXSDhlbGsySTV3d2ZIS0RlWE9YYTF6MUl2eTR1MU1YcGhsV2h1OU1SdnFEWDlJNlFidE9WcDBzbTZSd1o4ZzBpOU9QcW1FVkt0VzY5Z2M2WWpvME54alAtRnF1b3haWjFQck84aXlxTUZibVdfaERJX0h2QnhOSHFIZDFGZGltdVpLNXBYblIxTS1V?oc=5",
+      "time": "04/27 12:50",
+      "source": "Korea Times",
+      "category": "韩国市场"
+    },
+    {
+      "title": "Korea Adopts ‘One-Strike’ Rule for Coaches Who Hide Abuse",
+      "originalTitle": "Korea Adopts ‘One-Strike’ Rule for Coaches Who Hide Abuse",
+      "zhTitle": "韩国 Adopts ‘One-Strike’ Rule for Coaches Who Hide Abuse",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQaDJTelRJaEZiX2FiVHJ1VWYzY1BKZWljMHR2N24wMzFaRmhvVVUxYmQzaGttcWZnNG1LSFBxNGFSSDVhd0F2SkNHUjYtLXo1b0Fic29qQVhOeG1iYUdJQ01yTHRKRmRuV0VqbHBrbmlrcnhtRzBfenVDV25fcUxCNGxqSHBkaU43cURUWUJxcw?oc=5",
+      "time": "04/27 12:45",
+      "source": "Koreabizwire",
+      "category": "韩国产业"
+    },
+    {
+      "title": "Leverage Fever Builds as Korea Prepares Chip ETFs Tied to Samsung and SK Hynix",
+      "originalTitle": "Leverage Fever Builds as Korea Prepares Chip ETFs Tied to Samsung and SK Hynix",
+      "zhTitle": "韩国筹备挂钩三星与SK海力士的芯片 ETF，杠杆交易热度升温",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNSzhxSzQ2emVhcEpyMzVvbmhRbENSX0xXYUtHNUcxVlVCbHZULUp1dVlnenhIWk11M1BxQ1pyQy1VMFp0Ni1EYXhzdDlQQURudDVFdGh4QjlKcjI5TnAycjdsb2dEalhoa3BVVDF3bnVKdWNScHdfa2dOUU9RR2JxQ3BDckVlVk5lVlVaYmd6TUpBYVdmeFhqaU5Nb29xYzUyczgyM1MtNW9lRE1JYUE?oc=5",
+      "time": "04/27 12:35",
+      "source": "Koreabizwire",
+      "category": "韩国产业"
+    },
+    {
+      "title": "SK Hynix shares rally 7% to a record high, beating Samsung's 2.5% gain",
+      "originalTitle": "SK Hynix shares rally 7% to a record high, beating Samsung's 2.5% gain",
+      "zhTitle": "SK海力士 股价 走强 7% to a 历史新高, beating 三星's 2.5% gain",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxObUtmRGgzS2xqY0RzckRJaUMzUXdoM2REVnFnWk1XZU5mQnNiUy1IcmlpM3RpbzRPdHQ0ckVpT2ZVVENXYW0zZmt3SEFicXBIWDVlV19rZzRPbTNVS2hBcV9NeXlPRjFJQmhyc3ZoZkl4YXlhczFxNVhObG8zWFkwQkpGRjRKWXVWMndmeWY0djBJNFNUeFJjcXRDZS1EbnR3eTU4WEo4UE1mUVBYVm9aMFdXNEk2Zw?oc=5",
+      "time": "04/27 12:12",
+      "source": "Reuters",
+      "category": "海外财经"
+    },
+    {
+      "title": "SK hynix Tops 1.3 Million Won, Hits Record High on HBM Demand Hopes",
+      "originalTitle": "SK hynix Tops 1.3 Million Won, Hits Record High on HBM Demand Hopes",
+      "zhTitle": "SK海力士 Tops 1.3 Million 韩元, Hits 历史新高 on HBM Demand Hopes",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9zaHd5R3BHS2Juc0U0RV9IT1VJSkhsekZRMzh0OHU0Q1pTX2tUREdabVdreWNxTkRoaTdua08wd1RiTTR2a0FfWDJGdjl4bjhhMFdoSnEzSWpzZXPSAVdBVV95cUxNNE5yYnB0d0dwdENrRzRvTnMxV09kZFctSHI3WmVWZFRVeFJkM1U5ZVJTTjlxS24xV0pTX3pBTXVoMkgxZzVQUkRKZzlFMzZkUnBNT1U4eEE?oc=5",
+      "time": "04/27 12:06",
+      "source": "Aju Press",
+      "category": "韩国产业"
+    },
+    {
+      "title": "Market cap of Korean-listed companies surpasses 6,000 tril. won for 1st time: data",
+      "originalTitle": "Market cap of Korean-listed companies surpasses 6,000 tril. won for 1st time: data",
+      "zhTitle": "市值 of 韩国n-listed companies surpasses 6,000 tril. 韩元 for 1st time: data",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNRDVWcS1BOFY5RkNVSFZEUzRqeV85ay0tdzVWNy1aRFYzXzY3X1ZpMWdzNTZuNEs2cHQyb0ZrMkZsUmdaenc3cHRFVXNBczNpX0RLempIR0dZTFprb005dzhRS0l4bmkwRXRVU0tiMUdRajNDUmk1LTZDd2pERTV5V3daaUJuUHA0eWt0TG5KZWpEWDNBWVZ5dkZnTXk4Q2FxWXE0YXdhZlk4Y3VwSGNYVFg1b3dZRFJHWk5tQWs3aGtOckdwYW1HM9IByAFBVV95cUxNRDVWcS1BOFY5RkNVSFZEUzRqeV85ay0tdzVWNy1aRFYzXzY3X1ZpMWdzNTZuNEs2cHQyb0ZrMkZsUmdaenc3cHRFVXNBczNpX0RLempIR0dZTFprb005dzhRS0l4bmkwRXRVU0tiMUdRajNDUmk1LTZDd2pERTV5V3daaUJuUHA0eWt0TG5KZWpEWDNBWVZ5dkZnTXk4Q2FxWXE0YXdhZlk4Y3VwSGNYVFg1b3dZRFJHWk5tQWs3aGtOckdwYW1HMw?oc=5",
+      "time": "04/27 11:12",
+      "source": "Korea Times",
+      "category": "韩国市场"
+    },
+    {
+      "title": "South Korea to Hold Largest-Ever Youth Jobs Fair With About 700 Companies",
+      "originalTitle": "South Korea to Hold Largest-Ever Youth Jobs Fair With About 700 Companies",
+      "zhTitle": "韩国 to Hold Largest-Ever Youth Jobs Fair With About 700 Companies",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE13NWFUY3pzb08wZ1hLR1ZwZGhIUU11OTJBWlRjMl84bGxfNlV6VHZNdV92bklQcXRpT1pXdElBbFI0eXp0R2h2MnBtNDJiR18tTEVwUE1CTWtqbjDSAVdBVV95cUxPQTRyZWFWbHpiSHVRMk5oRjVlU2o2Z21naE9kWXFfMXRyNGZqaFpmLTlUWW43MGdILWgxWkFPbEE4LVl2THN4RWs3UjUxMkxWNGx3VF9aVkE?oc=5",
+      "time": "04/27 11:10",
+      "source": "Aju Press",
+      "category": "韩国产业"
+    },
+    {
+      "title": "Market cap of S. Korean-listed companies surpasses 6,000 tln won for 1st time: data",
+      "originalTitle": "Market cap of S. Korean-listed companies surpasses 6,000 tln won for 1st time: data",
+      "zhTitle": "市值 of S. 韩国n-listed companies surpasses 6,000 tln 韩元 for 1st time: data",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1YR3RXR0dZdWZUOEV6WVhyaFhOUWx0YUYtSlY0SE03dEpGTTVhQm1DUGhmUXd2SDI0YlNFUTRaTVRWYm50RjVNVk9zRWoybTNLQkc4U2VSTHdtQQ?oc=5",
+      "time": "04/27 10:49",
+      "source": "Yonhap",
+      "category": "韩国快讯"
+    },
+    {
+      "title": "Seoul stocks up sharply late Mon. morning on bullish corporate earnings expectations",
+      "originalTitle": "Seoul stocks up sharply late Mon. morning on bullish corporate earnings expectations",
+      "zhTitle": "Seoul 股市 up sharply late Mon. morning on bullish corporate earnings expectations",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQeWdSR29xZ2N1UjdRS205V0NDME1fOE9KNWJpNlg0RTh1bnhkcVZld0UtajNiNS14d3ZIcHp0MEhHcUx4bEpxMzdPbThiYW8xLWpRTnFzM0xjRGNCbXFtSWw4UUFraDJZczlFQi1VMTBKZDFBMmxSQVcxTDNPYzQxOFRFSFQ?oc=5",
+      "time": "04/27 10:39",
+      "source": "Yonhap",
+      "category": "韩国快讯"
     }
   ]
 }
