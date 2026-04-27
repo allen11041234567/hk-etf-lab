@@ -28,14 +28,16 @@
     .tag{display:inline-block;padding:5px 9px;border-radius:999px;background:#eef4ff;color:var(--brand);font-size:12px;font-weight:700}
     .news-box{padding:16px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,#fff 0%,#f7fbfa 100%)} .news-top{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:10px}
     .news-api{font-size:12px;color:var(--brand2);font-weight:800} .refresh-btn{border:none;background:#0f766e;color:#fff;padding:10px 14px;border-radius:999px;font-size:13px;font-weight:800;cursor:pointer}
-    .news-list{display:grid;gap:10px} .news-item{padding:12px 0;border-bottom:1px dashed var(--line)} .news-item:last-child{border-bottom:none;padding-bottom:0}
-    .news-meta{font-size:12px;color:var(--muted);margin-bottom:5px} .news-title{font-size:15px;font-weight:800;line-height:1.6;margin-bottom:4px} .news-body{font-size:13px;color:#475569;line-height:1.75}
+    .news-list{display:grid;gap:0} .news-item{display:grid;grid-template-columns:72px 86px 1fr;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px dashed var(--line)} .news-item:last-child{border-bottom:none;padding-bottom:0}
+    .news-time{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:2px} .news-source{font-size:12px;color:var(--brand2);font-weight:800;padding-top:2px}
+    .news-main{min-width:0} .news-title{font-size:15px;font-weight:800;line-height:1.6;margin-bottom:2px} .news-title a{text-decoration:none} .news-body{font-size:12px;color:#64748b;line-height:1.65}
     .products{margin-top:16px} .etf-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px} .etf-card{display:block;text-decoration:none;padding:16px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,#fff 0%,#f8fbff 100%)}
     .etf-head{display:flex;justify-content:space-between;gap:8px;margin-bottom:8px} .etf-code{font-size:12px;color:var(--muted)} .etf-market{font-size:12px;color:var(--brand);font-weight:700}
     .etf-name{font-size:22px;font-weight:800;margin-bottom:6px} .etf-desc{font-size:14px;color:#475569;line-height:1.75;min-height:74px} .etf-meta{margin-top:10px;font-size:12px;color:var(--muted)} .cta{margin-top:10px;font-size:13px;color:var(--brand);font-weight:800}
     .footer-note{margin-top:14px;font-size:13px;color:var(--muted);line-height:1.75}
     @media (max-width:960px){.hero-grid,.grid{grid-template-columns:1fr}.deep-grid,.etf-grid{grid-template-columns:1fr}h1{font-size:31px}}
-    @media (max-width:620px){.wrap{padding:14px 12px 28px}.hero,.panel{border-radius:20px}.hero{padding:20px 16px}.panel{padding:16px}.hero-kpis{grid-template-columns:1fr 1fr;gap:8px}.kpi{padding:10px 10px 9px}.kpi-v{font-size:17px}h1{font-size:26px}.sub{font-size:14px}.section-title{font-size:22px}}
+    @media (max-width:700px){.news-item{grid-template-columns:64px 72px 1fr;gap:8px}}
+    @media (max-width:620px){.wrap{padding:14px 12px 28px}.hero,.panel{border-radius:20px}.hero{padding:20px 16px}.panel{padding:16px}.hero-kpis{grid-template-columns:1fr 1fr;gap:8px}.kpi{padding:10px 10px 9px}.kpi-v{font-size:17px}h1{font-size:26px}.sub{font-size:14px}.section-title{font-size:22px}.news-item{grid-template-columns:58px 64px 1fr;gap:8px}}
   </style>
 </head>
 <body>
@@ -97,7 +99,7 @@
 
       <section class='panel'>
         <div class='section-title'>韩国市场资讯速递</div>
-        <div class='hint'>这一块已经预留成接口刷新版，优先抓韩国科技、半导体、KOSPI、韩元与跨境资金线索。默认聚合海外财经与主流新闻源。</div>
+        <div class='hint'>这里直接做成资讯新闻流，不写成长文。默认抓韩国本地英文媒体和海外财经聚合，按时间滚动展示。</div>
         <div class='news-box'>
           <div class='news-top'>
             <div class='news-api'>接口地址：/api/pulse/korea-market-digest</div>
@@ -105,9 +107,9 @@
           </div>
           <div class='news-list' id='news-list'>
             <div class='news-item'>
-              <div class='news-meta'>初始化中</div>
-              <div class='news-title'>正在载入韩国市场最新资讯</div>
-              <div class='news-body'>如果接口暂时未返回，会先显示占位说明，不影响页面交付。</div>
+              <div class='news-time'>--:--</div>
+              <div class='news-source'>系统</div>
+              <div class='news-main'><div class='news-title'>正在载入韩国市场最新资讯</div><div class='news-body'>如果接口暂时未返回，会先显示占位说明，不影响页面交付。</div></div>
             </div>
           </div>
         </div>
@@ -149,24 +151,27 @@
   <script>
     async function loadNews() {
       const list = document.getElementById('news-list');
-      list.innerHTML = "<div class='news-item'><div class='news-meta'>刷新中</div><div class='news-title'>正在获取最新资讯</div><div class='news-body'>请稍等片刻...</div></div>";
+      list.innerHTML = "<div class='news-item'><div class='news-time'>--:--</div><div class='news-source'>系统</div><div class='news-main'><div class='news-title'>正在获取最新资讯</div><div class='news-body'>请稍等片刻...</div></div></div>";
       try {
         const resp = await fetch('/api/pulse/korea-market-digest', { cache: 'no-store' });
         const data = await resp.json();
         if (!data || !data.ok || !Array.isArray(data.items) || !data.items.length) throw new Error('empty');
-        list.innerHTML = data.items.slice(0, 8).map(item => `
+        list.innerHTML = data.items.slice(0, 12).map(item => `
           <article class="news-item">
-            <div class="news-meta">${item.time || '--'} · ${item.source || '新闻源'} · ${item.category || '韩国市场'}</div>
-            <div class="news-title"><a href="${item.url || '#'}" target="_blank" rel="noopener noreferrer">${item.title || '未命名资讯'}</a></div>
-            <div class="news-body">${item.summary || '暂无摘要'}</div>
+            <div class="news-time">${item.time || '--:--'}</div>
+            <div class="news-source">${item.source || '新闻源'}</div>
+            <div class="news-main">
+              <div class="news-title"><a href="${item.url || '#'}" target="_blank" rel="noopener noreferrer">${item.zhTitle || item.title || '未命名资讯'}</a></div>
+              <div class="news-body">${item.category || '韩国市场'}</div>
+            </div>
           </article>
         `).join('');
       } catch (err) {
         list.innerHTML = `
           <article class="news-item">
-            <div class="news-meta">接口暂未返回</div>
-            <div class="news-title">韩国市场资讯速递已预留为接口刷新位</div>
-            <div class="news-body">当前版本已完成页面接线。后续如某个新闻源不稳定，我会继续调整源头，但页面结构不需要重做。</div>
+            <div class="news-time">--:--</div>
+            <div class="news-source">系统</div>
+            <div class="news-main"><div class="news-title">韩国市场资讯流暂时未返回</div><div class="news-body">接口已接好，稍后可继续刷新；如果个别新闻源不稳定，我会继续调源，但页面结构不变。</div></div>
           </article>
         `;
       }
