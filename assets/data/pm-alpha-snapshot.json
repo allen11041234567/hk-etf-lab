@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-28T08:33:14.382767+00:00",
+  "generatedAt": "2026-04-28T08:35:40.056893+00:00",
   "source": "Polymarket Gamma + CLOB public endpoints",
   "marketCount": 14,
   "allQualifiedCount": 84,
@@ -25,12 +25,12 @@
       "endDate": "2026-07-01T04:00:00Z",
       "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/BTC+fullsize.png",
       "url": "https://polymarket.com/event/will-bitcoin-hit-150k-by-june-30-2026",
-      "nearBidDepth": 6433271.59,
+      "nearBidDepth": 6433374.56,
       "nearAskDepth": 3923.16,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": -44.83,
-      "askDepthDelta": 3.49,
+      "bidDepthDelta": 102.97,
+      "askDepthDelta": 0.0,
       "noteZh": "该事件当前 Yes 概率约 1.4%，下方承接更强，更适合与 BTC / ETH 现货情绪一起看。"
     },
     {
@@ -53,11 +53,11 @@
       "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/how-many-fed-rate-cuts-in-2025-9qstZkSL1dn0.jpg",
       "url": "https://polymarket.com/event/will-no-fed-rate-cuts-happen-in-2026",
       "nearBidDepth": 23887.35,
-      "nearAskDepth": 9340.79,
+      "nearAskDepth": 10226.14,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": -128.0,
-      "askDepthDelta": -32.97,
+      "bidDepthDelta": 0.0,
+      "askDepthDelta": 885.35,
       "noteZh": "该事件当前 Yes 概率约 38.5%，下方承接更强，可映射到美债、黄金和成长股方向。"
     },
     {
@@ -83,7 +83,7 @@
       "nearAskDepth": 24856.6,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": 1539.33,
+      "bidDepthDelta": 0.0,
       "askDepthDelta": 0.0,
       "noteZh": "该事件当前 Yes 概率约 0.4%，下方承接更强，可映射到美债、黄金和成长股方向。"
     },
@@ -107,11 +107,11 @@
       "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/balance-of-power-2024-election-r-Fp-y4ONJBS.jpg",
       "url": "https://polymarket.com/event/2026-balance-of-power-other-131",
       "nearBidDepth": 648253.91,
-      "nearAskDepth": 20663.61,
+      "nearAskDepth": 20623.61,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": 39.77,
-      "askDepthDelta": 0.0,
+      "bidDepthDelta": -0.0,
+      "askDepthDelta": -40.0,
       "noteZh": "该事件当前 Yes 概率约 0.9%，下方承接更强，政治定价变化可能影响风险偏好。"
     },
     {
@@ -134,11 +134,11 @@
       "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/how-many-fed-rate-cuts-in-2025-9qstZkSL1dn0.jpg",
       "url": "https://polymarket.com/event/will-6-fed-rate-cuts-happen-in-2026",
       "nearBidDepth": 881615.07,
-      "nearAskDepth": 51775.03,
+      "nearAskDepth": 51770.03,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": 100.0,
-      "askDepthDelta": 0.0,
+      "bidDepthDelta": 0.0,
+      "askDepthDelta": -5.0,
       "noteZh": "该事件当前 Yes 概率约 0.6%，下方承接更强，可映射到美债、黄金和成长股方向。"
     },
     {
@@ -160,12 +160,12 @@
       "endDate": "2026-12-31T00:00:00Z",
       "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/how-many-fed-rate-cuts-in-2025-9qstZkSL1dn0.jpg",
       "url": "https://polymarket.com/event/will-10-fed-rate-cuts-happen-in-2026",
-      "nearBidDepth": 416231.93,
-      "nearAskDepth": 98761.17,
+      "nearBidDepth": 416169.53,
+      "nearAskDepth": 98698.77,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": -81.13,
-      "askDepthDelta": -81.13,
+      "bidDepthDelta": -62.4,
+      "askDepthDelta": -62.4,
       "noteZh": "该事件当前 Yes 概率约 0.2%，下方承接更强，可映射到美债、黄金和成长股方向。"
     }
   ],
@@ -189,12 +189,12 @@
       "endDate": "2026-07-01T04:00:00Z",
       "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/BTC+fullsize.png",
       "url": "https://polymarket.com/event/will-bitcoin-hit-150k-by-june-30-2026",
-      "nearBidDepth": 6433271.59,
+      "nearBidDepth": 6433374.56,
       "nearAskDepth": 3923.16,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": -44.83,
-      "askDepthDelta": 3.49,
+      "bidDepthDelta": 102.97,
+      "askDepthDelta": 0.0,
       "noteZh": "该事件当前 Yes 概率约 1.4%，下方承接更强，更适合与 BTC / ETH 现货情绪一起看。"
     },
     {
@@ -247,7 +247,7 @@
       "nearAskDepth": 24856.6,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": 1539.33,
+      "bidDepthDelta": 0.0,
       "askDepthDelta": 0.0,
       "noteZh": "该事件当前 Yes 概率约 0.4%，下方承接更强，可映射到美债、黄金和成长股方向。"
     },
@@ -271,11 +271,11 @@
       "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/how-many-fed-rate-cuts-in-2025-9qstZkSL1dn0.jpg",
       "url": "https://polymarket.com/event/will-6-fed-rate-cuts-happen-in-2026",
       "nearBidDepth": 881615.07,
-      "nearAskDepth": 51775.03,
+      "nearAskDepth": 51770.03,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": 100.0,
-      "askDepthDelta": 0.0,
+      "bidDepthDelta": 0.0,
+      "askDepthDelta": -5.0,
       "noteZh": "该事件当前 Yes 概率约 0.6%，下方承接更强，可映射到美债、黄金和成长股方向。"
     },
     {
@@ -301,7 +301,7 @@
       "nearAskDepth": 52284.43,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": 300.0,
+      "bidDepthDelta": 0.0,
       "askDepthDelta": 0.0,
       "noteZh": "该事件当前 Yes 概率约 0.5%，下方承接更强，政治定价变化可能影响风险偏好。"
     },
@@ -325,11 +325,11 @@
       "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/balance-of-power-2024-election-r-Fp-y4ONJBS.jpg",
       "url": "https://polymarket.com/event/2026-balance-of-power-other-131",
       "nearBidDepth": 648253.91,
-      "nearAskDepth": 20663.61,
+      "nearAskDepth": 20623.61,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": 39.77,
-      "askDepthDelta": 0.0,
+      "bidDepthDelta": -0.0,
+      "askDepthDelta": -40.0,
       "noteZh": "该事件当前 Yes 概率约 0.9%，下方承接更强，政治定价变化可能影响风险偏好。"
     }
   ],
@@ -353,12 +353,12 @@
       "endDate": "2026-07-01T04:00:00Z",
       "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/BTC+fullsize.png",
       "url": "https://polymarket.com/event/will-bitcoin-hit-150k-by-june-30-2026",
-      "nearBidDepth": 6433271.59,
+      "nearBidDepth": 6433374.56,
       "nearAskDepth": 3923.16,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": -44.83,
-      "askDepthDelta": 3.49,
+      "bidDepthDelta": 102.97,
+      "askDepthDelta": 0.0,
       "noteZh": "该事件当前 Yes 概率约 1.4%，下方承接更强，更适合与 BTC / ETH 现货情绪一起看。"
     },
     {
@@ -381,11 +381,11 @@
       "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/how-many-fed-rate-cuts-in-2025-9qstZkSL1dn0.jpg",
       "url": "https://polymarket.com/event/will-no-fed-rate-cuts-happen-in-2026",
       "nearBidDepth": 23887.35,
-      "nearAskDepth": 9340.79,
+      "nearAskDepth": 10226.14,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": -128.0,
-      "askDepthDelta": -32.97,
+      "bidDepthDelta": 0.0,
+      "askDepthDelta": 885.35,
       "noteZh": "该事件当前 Yes 概率约 38.5%，下方承接更强，可映射到美债、黄金和成长股方向。"
     },
     {
@@ -411,7 +411,7 @@
       "nearAskDepth": 24856.6,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": 1539.33,
+      "bidDepthDelta": 0.0,
       "askDepthDelta": 0.0,
       "noteZh": "该事件当前 Yes 概率约 0.4%，下方承接更强，可映射到美债、黄金和成长股方向。"
     },
@@ -435,11 +435,11 @@
       "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/balance-of-power-2024-election-r-Fp-y4ONJBS.jpg",
       "url": "https://polymarket.com/event/2026-balance-of-power-other-131",
       "nearBidDepth": 648253.91,
-      "nearAskDepth": 20663.61,
+      "nearAskDepth": 20623.61,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": 39.77,
-      "askDepthDelta": 0.0,
+      "bidDepthDelta": -0.0,
+      "askDepthDelta": -40.0,
       "noteZh": "该事件当前 Yes 概率约 0.9%，下方承接更强，政治定价变化可能影响风险偏好。"
     },
     {
@@ -462,11 +462,11 @@
       "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/how-many-fed-rate-cuts-in-2025-9qstZkSL1dn0.jpg",
       "url": "https://polymarket.com/event/will-6-fed-rate-cuts-happen-in-2026",
       "nearBidDepth": 881615.07,
-      "nearAskDepth": 51775.03,
+      "nearAskDepth": 51770.03,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": 100.0,
-      "askDepthDelta": 0.0,
+      "bidDepthDelta": 0.0,
+      "askDepthDelta": -5.0,
       "noteZh": "该事件当前 Yes 概率约 0.6%，下方承接更强，可映射到美债、黄金和成长股方向。"
     },
     {
@@ -488,12 +488,12 @@
       "endDate": "2026-12-31T00:00:00Z",
       "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/how-many-fed-rate-cuts-in-2025-9qstZkSL1dn0.jpg",
       "url": "https://polymarket.com/event/will-10-fed-rate-cuts-happen-in-2026",
-      "nearBidDepth": 416231.93,
-      "nearAskDepth": 98761.17,
+      "nearBidDepth": 416169.53,
+      "nearAskDepth": 98698.77,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": -81.13,
-      "askDepthDelta": -81.13,
+      "bidDepthDelta": -62.4,
+      "askDepthDelta": -62.4,
       "noteZh": "该事件当前 Yes 概率约 0.2%，下方承接更强，可映射到美债、黄金和成长股方向。"
     }
   ],
@@ -549,12 +549,12 @@
       "endDate": "2026-07-01T04:00:00Z",
       "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/BTC+fullsize.png",
       "url": "https://polymarket.com/event/will-bitcoin-hit-150k-by-june-30-2026",
-      "nearBidDepth": 6433271.59,
+      "nearBidDepth": 6433374.56,
       "nearAskDepth": 3923.16,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": -44.83,
-      "askDepthDelta": 3.49,
+      "bidDepthDelta": 102.97,
+      "askDepthDelta": 0.0,
       "noteZh": "该事件当前 Yes 概率约 1.4%，下方承接更强，更适合与 BTC / ETH 现货情绪一起看。"
     },
     {
@@ -577,11 +577,11 @@
       "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/how-many-fed-rate-cuts-in-2025-9qstZkSL1dn0.jpg",
       "url": "https://polymarket.com/event/will-no-fed-rate-cuts-happen-in-2026",
       "nearBidDepth": 23887.35,
-      "nearAskDepth": 9340.79,
+      "nearAskDepth": 10226.14,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": -128.0,
-      "askDepthDelta": -32.97,
+      "bidDepthDelta": 0.0,
+      "askDepthDelta": 885.35,
       "noteZh": "该事件当前 Yes 概率约 38.5%，下方承接更强，可映射到美债、黄金和成长股方向。"
     },
     {
@@ -607,7 +607,7 @@
       "nearAskDepth": 24856.6,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": 1539.33,
+      "bidDepthDelta": 0.0,
       "askDepthDelta": 0.0,
       "noteZh": "该事件当前 Yes 概率约 0.4%，下方承接更强，可映射到美债、黄金和成长股方向。"
     },
@@ -631,11 +631,11 @@
       "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/balance-of-power-2024-election-r-Fp-y4ONJBS.jpg",
       "url": "https://polymarket.com/event/2026-balance-of-power-other-131",
       "nearBidDepth": 648253.91,
-      "nearAskDepth": 20663.61,
+      "nearAskDepth": 20623.61,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": 39.77,
-      "askDepthDelta": 0.0,
+      "bidDepthDelta": -0.0,
+      "askDepthDelta": -40.0,
       "noteZh": "该事件当前 Yes 概率约 0.9%，下方承接更强，政治定价变化可能影响风险偏好。"
     },
     {
@@ -658,11 +658,11 @@
       "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/how-many-fed-rate-cuts-in-2025-9qstZkSL1dn0.jpg",
       "url": "https://polymarket.com/event/will-6-fed-rate-cuts-happen-in-2026",
       "nearBidDepth": 881615.07,
-      "nearAskDepth": 51775.03,
+      "nearAskDepth": 51770.03,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": 100.0,
-      "askDepthDelta": 0.0,
+      "bidDepthDelta": 0.0,
+      "askDepthDelta": -5.0,
       "noteZh": "该事件当前 Yes 概率约 0.6%，下方承接更强，可映射到美债、黄金和成长股方向。"
     },
     {
@@ -684,12 +684,12 @@
       "endDate": "2026-12-31T00:00:00Z",
       "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/how-many-fed-rate-cuts-in-2025-9qstZkSL1dn0.jpg",
       "url": "https://polymarket.com/event/will-10-fed-rate-cuts-happen-in-2026",
-      "nearBidDepth": 416231.93,
-      "nearAskDepth": 98761.17,
+      "nearBidDepth": 416169.53,
+      "nearAskDepth": 98698.77,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": -81.13,
-      "askDepthDelta": -81.13,
+      "bidDepthDelta": -62.4,
+      "askDepthDelta": -62.4,
       "noteZh": "该事件当前 Yes 概率约 0.2%，下方承接更强，可映射到美债、黄金和成长股方向。"
     },
     {
@@ -742,7 +742,7 @@
       "nearAskDepth": 52284.43,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": 300.0,
+      "bidDepthDelta": 0.0,
       "askDepthDelta": 0.0,
       "noteZh": "该事件当前 Yes 概率约 0.5%，下方承接更强，政治定价变化可能影响风险偏好。"
     },
@@ -766,11 +766,11 @@
       "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/balance-of-power-2024-election-r-Fp-y4ONJBS.jpg",
       "url": "https://polymarket.com/event/2026-balance-of-power-d-senate-d-house-949",
       "nearBidDepth": 35945.48,
-      "nearAskDepth": 27327.92,
+      "nearAskDepth": 27277.92,
       "pressureLabel": "盘口相对均衡",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": -2500.0,
-      "askDepthDelta": -2450.0,
+      "bidDepthDelta": -0.0,
+      "askDepthDelta": -50.0,
       "noteZh": "该事件当前 Yes 概率约 49.5%，盘口相对均衡，政治定价变化可能影响风险偏好。"
     },
     {
@@ -792,12 +792,12 @@
       "endDate": "2026-12-31T00:00:00Z",
       "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/russia-x-ukraine-ceasefire-in-2025-w2voYOygx80B.jpg",
       "url": "https://polymarket.com/event/russia-x-ukraine-ceasefire-before-2027",
-      "nearBidDepth": 213558.2,
-      "nearAskDepth": 5321.2,
+      "nearBidDepth": 216588.31,
+      "nearAskDepth": 7321.2,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": -2030.21,
-      "askDepthDelta": -1000.0,
+      "bidDepthDelta": 3030.11,
+      "askDepthDelta": 2000.0,
       "noteZh": "该事件当前 Yes 概率约 25.5%，下方承接更强，适合与避险资产和地缘风险交易并看。"
     },
     {
@@ -819,12 +819,12 @@
       "endDate": "2026-11-03T00:00:00Z",
       "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-the-democratic-party-control-the-senate-after-the-2026-midterm-elections-JJ9h02JGR09z.png",
       "url": "https://polymarket.com/event/will-the-democratic-party-control-the-senate-after-the-2026-midterm-elections",
-      "nearBidDepth": 41684.75,
-      "nearAskDepth": 37770.36,
+      "nearBidDepth": 41752.75,
+      "nearAskDepth": 37838.36,
       "pressureLabel": "盘口相对均衡",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": -2796.57,
-      "askDepthDelta": -2605.72,
+      "bidDepthDelta": 68.0,
+      "askDepthDelta": 68.0,
       "noteZh": "该事件当前 Yes 概率约 51.5%，盘口相对均衡，政治定价变化可能影响风险偏好。"
     },
     {
@@ -851,7 +851,7 @@
       "pressureLabel": "盘口相对均衡",
       "priceDeltaSinceLastPp": 0.0,
       "bidDepthDelta": 0.0,
-      "askDepthDelta": 0.0,
+      "askDepthDelta": -0.0,
       "noteZh": "该事件当前 Yes 概率约 56.5%，盘口相对均衡，政治定价变化可能影响风险偏好。"
     },
     {
@@ -873,12 +873,12 @@
       "endDate": "2027-01-31T00:00:00Z",
       "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-recession-in-2025-01ZjnLjvO4a3.jpg",
       "url": "https://polymarket.com/event/us-recession-by-end-of-2026",
-      "nearBidDepth": 46031.83,
-      "nearAskDepth": 30245.75,
+      "nearBidDepth": 45791.83,
+      "nearAskDepth": 30005.75,
       "pressureLabel": "盘口相对均衡",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": 481.0,
-      "askDepthDelta": 441.27,
+      "bidDepthDelta": -240.0,
+      "askDepthDelta": -240.0,
       "noteZh": "该事件当前 Yes 概率约 25.5%，盘口相对均衡，更适合放进宏观节奏与风险偏好框架里解读。"
     },
     {
