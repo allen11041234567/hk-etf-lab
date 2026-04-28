@@ -162,6 +162,11 @@ function scoreItem(item) {
   return score;
 }
 
+function parseTimestamp(input) {
+  const d = new Date(input);
+  return Number.isNaN(d.getTime()) ? 0 : d.getTime();
+}
+
 function toBeijingTime(input) {
   const d = new Date(input);
   if (Number.isNaN(d.getTime())) return '--:--';
@@ -277,7 +282,11 @@ export async function onRequestGet(context) {
         seen.add(key);
         return true;
       })
-      .sort((a, b) => scoreItem(b) - scoreItem(a))
+      .map((item) => ({
+        ...item,
+        ts: parseTimestamp(item.time),
+      }))
+      .sort((a, b) => (b.ts - a.ts) || (scoreItem(b) - scoreItem(a)))
       .slice(0, 28)
       .map((item) => ({
         ...item,
