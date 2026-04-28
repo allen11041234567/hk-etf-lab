@@ -1,22 +1,8 @@
 {
   "ok": true,
-  "fetchedAt": "2026-04-28T14:00:12.299628+00:00",
+  "fetchedAt": "2026-04-28T14:12:40.383123+00:00",
   "itemCount": 30,
   "items": [
-    {
-      "id": "samsung mulls tv pullout option after smartphone",
-      "title": "三星 mulls TV pullout option after smartphone",
-      "originalTitle": "Samsung mulls TV pullout option after smartphone-like defeat in China",
-      "zhTitle": "三星 mulls TV pullout option after smartphone",
-      "summaryZh": "摘要：这条消息直接指向韩国科技与半导体主线，属于当前最核心的市场叙事。",
-      "whyZh": "看点：重点观察是否继续强化三星、SK海力士和AI硬件链的强势预期。",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1OLWhFT1RiMmIzZG00bWZ2c0F6c3VrdHlGeWQwaWlfRll0X1Ricy01LUFrOWF3cTRoZ3hhamQ4bkRNWE1NQTByeDc2UldGUEx0dmNpQjl2b9IBV0FVX3lxTE1OLWhFT1RiMmIzZG00bWZ2c0F6c3VrdHlGeWQwaWlfRll0X1Ricy01LUFrOWF3cTRoZ3hhamQ4bkRNWE1NQTByeDc2UldGUEx0dmNpQjl2bw?oc=5",
-      "source": "Aju Press",
-      "category": "半导体",
-      "time": "04/28 19:17",
-      "ts": 1777375067.0,
-      "fetchedAt": "2026-04-28T13:49:48.832385+00:00"
-    },
     {
       "id": "sk inc boosts stake in sk ecoplant to back chip ai push",
       "title": "SK集团增持 SK Ecoplant，以支持芯片与 AI 布局",
@@ -33,17 +19,17 @@
     },
     {
       "id": "kospi extends rally hitting new milestone",
-      "title": "韩国综合指数 extends rally, hitting new milestone",
+      "title": "韩国综合指数延续涨势，再创阶段里程碑",
       "originalTitle": "KOSPI extends rally, hitting new milestone",
-      "zhTitle": "韩国综合指数 extends rally, hitting new milestone",
-      "summaryZh": "摘要：这条消息主要反映韩股大盘强弱和市场风险偏好的变化。",
-      "whyZh": "看点：指数创新高或持续走强，通常意味着科技权重仍在主导盘面。",
+      "zhTitle": "韩国综合指数延续涨势，再创阶段里程碑",
+      "summaryZh": "摘要：这条消息主要反映韩股大盘强弱与市场风险偏好的变化。",
+      "whyZh": "看点：若指数持续创新高，通常意味着韩国科技权重仍在主导盘面。",
       "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5ZTWlnY2RqZ0RQd1M1QWVYck45UzBMV1gzeXlCckZMdEczc2tvZW1HTEZEVWNJbE9CaFZBV0lOWkQtcms3Wk5ObjM1dFJaLXJ5QS05c09Wc9IBV0FVX3lxTE5ZTWlnY2RqZ0RQd1M1QWVYck45UzBMV1gzeXlCckZMdEczc2tvZW1HTEZEVWNJbE9CaFZBV0lOWkQtcms3Wk5ObjM1dFJaLXJ5QS05c09Wcw?oc=5",
       "source": "Aju Press",
       "category": "韩股",
       "time": "04/28 16:58",
       "ts": 1777366704.0,
-      "fetchedAt": "2026-04-28T13:49:48.831759+00:00"
+      "fetchedAt": "2026-04-28T14:12:40.357582+00:00"
     },
     {
       "id": "kospi hits record high races toward 7 000",
@@ -58,20 +44,6 @@
       "time": "04/28 16:56",
       "ts": 1777366601.0,
       "fetchedAt": "2026-04-28T13:49:48.823543+00:00"
-    },
-    {
-      "id": "south korea appeals court sentences ex",
-      "title": "韩国 appeals court sentences Ex",
-      "originalTitle": "South Korea appeals court sentences Ex-First Lady Kim Keon Hee to 4 years in jail",
-      "zhTitle": "韩国 appeals court sentences Ex",
-      "summaryZh": "摘要：这条消息是韩国市场的重要增量信息，适合纳入日常资讯追踪。",
-      "whyZh": "看点：可作为判断韩国市场主线是否延续的补充线索。",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOLTJ5Ul8yR0l5TFROXzBKZGlnX0JmLTRxWTFjYlB2QlNWT213bjBqcUpDaFlWZmJZSGs1d0dSUGVZazRpTDNqS0xic1hud1RQQVZhMkl6RHdqbm5wc0hUcmZ5bVI0aDh0TE5oZUpiRVNZNzVBYTB2VGdVSmxnalpsbW02Snc5TVhOd1QxREJrbHBEOUc4MGhnWGNYaERIYk40M3Q3b2FEUjJ2LWpyMmlGTm1jREJzd25NWmRSTTZzb0pHTEF4TjBrTw?oc=5",
-      "source": "Reuters",
-      "category": "产业",
-      "time": "04/28 16:50",
-      "ts": 1777366251.0,
-      "fetchedAt": "2026-04-28T13:49:48.833358+00:00"
     },
     {
       "id": "seoul stocks again at fresh peak ahead of us big tech earnings",
@@ -89,31 +61,31 @@
     },
     {
       "id": "korean stock market rises to 8th globally overtakes uk on chip rally",
-      "title": "韩国n 股票 market rises to 8th globally, overtakes UK on 芯片 rally",
+      "title": "韩国 股票 market 升至全球第八, 超过英国 on 芯片 rally",
       "originalTitle": "Korean stock market rises to 8th globally, overtakes UK on chip rally",
-      "zhTitle": "韩国n 股票 market rises to 8th globally, overtakes UK on 芯片 rally",
-      "summaryZh": "摘要：这条消息直接指向韩国科技与半导体主线，属于当前最核心的市场叙事。",
-      "whyZh": "看点：重点观察是否继续强化三星、SK海力士和AI硬件链的强势预期。",
+      "zhTitle": "韩国 股票 market 升至全球第八, 超过英国 on 芯片 rally",
+      "summaryZh": "摘要：这条消息直指韩国半导体与AI硬件主线，对科技板块定价最敏感。",
+      "whyZh": "看点：继续观察资金是否进一步集中到三星、SK海力士及其产业链。",
       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNUDdwNk92SW5vTE5taXFuUDlHZWhKSVJFLUkyVlRPSmhJaW5nSFJtZnlyZ3VObzBNUGh2aXVMcWNjc19aWG83cm5EU1JJUlVBMmZnTUtHSVFITnM5dlc2dkgwNFNSOU5aZ1lndnpiZVJfSTRrbi0tbUdXVWlBbjExMm9GOWphZU1uZnR3WFlvcnZfdFo1X3JoZkFMNmNfOUlnZVRLSmVnZkdJSmZpWnU3S2dNZjFsWjVySTg0MFRR0gHDAUFVX3lxTE1OMi0zZDdvMXpwOUZQMHEtSWlYcTlRMkh1T0lqTnQ4WE03M2ppcWt2UzYzcW51dmpNZ0pmaVlkRVVWX0d5UG9uRUcyczBqbTR2SGplVFZDRDMwa3ROVFNhenBycHlJYVRsYlJ0R2xlNFkyelJvTG50MjFtVjM0OTFnaDAtY0wxOG5Zb1JZZWsyZExlaVl5c2Z5XzNoSjBBdEo5M3NBcG1nN1ZuUHZ1ZUtFMXVUc19rb3U1emVMeEVWd3VRTQ?oc=5",
       "source": "Korea Times",
       "category": "半导体",
       "time": "04/28 15:27",
       "ts": 1777361222.0,
-      "fetchedAt": "2026-04-28T13:49:48.827589+00:00"
+      "fetchedAt": "2026-04-28T14:12:40.353577+00:00"
     },
     {
       "id": "seoul stocks briefly top 6 700 set for another milestone",
-      "title": "首尔股市一度站上 6700 点, set for another milestone",
+      "title": "首尔股市一度站上 6700 点, 继续冲击新里程碑",
       "originalTitle": "Seoul stocks briefly top 6,700, set for another milestone",
-      "zhTitle": "首尔股市一度站上 6700 点, set for another milestone",
-      "summaryZh": "摘要：这条消息主要反映韩股大盘强弱和市场风险偏好的变化。",
-      "whyZh": "看点：指数创新高或持续走强，通常意味着科技权重仍在主导盘面。",
+      "zhTitle": "首尔股市一度站上 6700 点, 继续冲击新里程碑",
+      "summaryZh": "摘要：这条消息主要反映韩股大盘强弱与市场风险偏好的变化。",
+      "whyZh": "看点：若指数持续创新高，通常意味着韩国科技权重仍在主导盘面。",
       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1DNmZ1Wk53dnVMTWdfUFptNFlIVXFROG1DczBlQnh5Vmp6Mk54cXdTN2JwNU9jNGhIYzFsQm13ek5TZDFMM3Z6QVRCOFFEQ3duZ1YtTnBXZzRrZw?oc=5",
       "source": "Yonhap",
       "category": "韩股",
       "time": "04/28 15:26",
       "ts": 1777361203.0,
-      "fetchedAt": "2026-04-28T13:49:48.819986+00:00"
+      "fetchedAt": "2026-04-28T14:12:40.344786+00:00"
     },
     {
       "id": "hyundai e c q1 net rises 24 pct on weak won asset revaluation",
@@ -128,20 +100,6 @@
       "time": "04/28 14:51",
       "ts": 1777359088.0,
       "fetchedAt": "2026-04-28T13:49:48.822206+00:00"
-    },
-    {
-      "id": "seoul shares down exporters hit by us outlook",
-      "title": "首尔 shares down; 出口ers hit by U.S. outlook",
-      "originalTitle": "Seoul shares down; exporters hit by U.S. outlook",
-      "zhTitle": "首尔 shares down; 出口ers hit by U.S. outlook",
-      "summaryZh": "摘要：这条消息偏宏观和汇率层面，会影响外资风险偏好与韩国资产定价。",
-      "whyZh": "看点：宏观变量变化往往会先影响韩元，再逐步传导到权益市场。",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPRjQyM3hsVFlBQ0tJUjFpOGp4dEQzaEFxbkdSUUM1eVBPQWZmLXpRcVBMQ2FQN0ZFZXEtN0hUU093R1RZd3VjaDhuTk56cC1ZSTNvNlRqdGpnSDVUekVlMG9kRWYzRlJWMkdWT3BMejhuNGNxY0JEM1lOdmNtNTdBSjNwRUR0ZllXeW53dFR0Q0pQeUt0UVZpczYxbVVGSGFsMDlZ?oc=5",
-      "source": "Reuters",
-      "category": "宏观",
-      "time": "04/28 14:44",
-      "ts": 1777358678.0,
-      "fetchedAt": "2026-04-28T14:00:12.273732+00:00"
     },
     {
       "id": "india turns net exporter of finished steel in 2025 26 data shows",
@@ -187,17 +145,17 @@
     },
     {
       "id": "kospi extends rally with fresh high",
-      "title": "韩国综合指数 extends rally with fresh high",
+      "title": "韩国综合指数 延续涨势 with fresh high",
       "originalTitle": "Kospi extends rally with fresh high",
-      "zhTitle": "韩国综合指数 extends rally with fresh high",
-      "summaryZh": "摘要：这条消息主要反映韩股大盘强弱和市场风险偏好的变化。",
-      "whyZh": "看点：指数创新高或持续走强，通常意味着科技权重仍在主导盘面。",
+      "zhTitle": "韩国综合指数 延续涨势 with fresh high",
+      "summaryZh": "摘要：这条消息主要反映韩股大盘强弱与市场风险偏好的变化。",
+      "whyZh": "看点：若指数持续创新高，通常意味着韩国科技权重仍在主导盘面。",
       "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBCa0FpMXFkcHJoOHRCcEFRckpXYW82TS04eE9nVnVxYURkYV9PWjdDVWFkQWpsZ2g1VWFhSGFQejE0ZVNxdWJfU25laTkzaDlWTzJKMWJBdw?oc=5",
       "source": "Korea Herald",
       "category": "韩股",
       "time": "04/28 14:01",
       "ts": 1777356065.0,
-      "fetchedAt": "2026-04-28T13:49:48.823608+00:00"
+      "fetchedAt": "2026-04-28T14:12:40.349073+00:00"
     },
     {
       "id": "airbnb s asia pacific chief",
@@ -226,20 +184,6 @@
       "time": "04/28 13:37",
       "ts": 1777354660.0,
       "fetchedAt": "2026-04-28T13:49:48.825555+00:00"
-    },
-    {
-      "id": "how samsung apple are overcoming china s smartphone chip crunch",
-      "title": "How 三星, Apple are overcoming China’s smartphone 芯片 crunch",
-      "originalTitle": "How Samsung, Apple are overcoming China’s smartphone chip crunch",
-      "zhTitle": "How 三星, Apple are overcoming China’s smartphone 芯片 crunch",
-      "summaryZh": "摘要：这条消息直接指向韩国科技与半导体主线，属于当前最核心的市场叙事。",
-      "whyZh": "看点：重点观察是否继续强化三星、SK海力士和AI硬件链的强势预期。",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5tb09zQU9JMGYzb0JoYS01TkxoQU1YU0g5MHpROU91dzBXNHEta3pzbTBGS01TaVNnVjh3Y0hSZmlianY0UlNTWmZoT3FlNTAza1EzdFhjRQ?oc=5",
-      "source": "Korea Herald",
-      "category": "半导体",
-      "time": "04/28 13:22",
-      "ts": 1777353775.0,
-      "fetchedAt": "2026-04-28T13:49:48.824339+00:00"
     },
     {
       "id": "samsung sdi narrows loss on ai",
@@ -282,20 +226,6 @@
       "time": "04/28 10:44",
       "ts": 1777344252.0,
       "fetchedAt": "2026-04-28T13:49:48.832482+00:00"
-    },
-    {
-      "id": "kospi extends record",
-      "title": "韩国综合指数 extends record",
-      "originalTitle": "KOSPI extends record-setting rally as chip halo trickles down",
-      "zhTitle": "韩国综合指数 extends record",
-      "summaryZh": "摘要：这条消息主要反映韩股大盘强弱和市场风险偏好的变化。",
-      "whyZh": "看点：指数创新高或持续走强，通常意味着科技权重仍在主导盘面。",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBVVVlTa1NWam5CQm1rNXhOdEM2WVlnYXVVb2hLZWxNaFBtV1Z6QXRfZEkzNEk2cXI3RXlqUWdmZW9IbjVrbmIwVlFYNXZxWjJDc1Z0ZlJ0c9IBV0FVX3lxTFBVVVlTa1NWam5CQm1rNXhOdEM2WVlnYXVVb2hLZWxNaFBtV1Z6QXRfZEkzNEk2cXI3RXlqUWdmZW9IbjVrbmIwVlFYNXZxWjJDc1Z0ZlJ0cw?oc=5",
-      "source": "Aju Press",
-      "category": "韩股",
-      "time": "04/28 10:30",
-      "ts": 1777343459.0,
-      "fetchedAt": "2026-04-28T13:49:48.832292+00:00"
     },
     {
       "id": "seoul stocks up late tues morning driven by large",
@@ -422,6 +352,76 @@
       "time": "04/28 08:04",
       "ts": 1777334684.0,
       "fetchedAt": "2026-04-28T13:49:48.820801+00:00"
+    },
+    {
+      "id": "micron and sandisk continue rally as demand for memory expected to persist",
+      "title": "Micron and Sandisk continue rally as demand for 存储 expected to persist",
+      "originalTitle": "Micron and Sandisk continue rally as demand for memory expected to persist",
+      "zhTitle": "Micron and Sandisk continue rally as demand for 存储 expected to persist",
+      "summaryZh": "摘要：这条消息直接指向韩国科技与半导体主线，属于当前最核心的市场叙事。",
+      "whyZh": "看点：重点观察是否继续强化三星、SK海力士和AI硬件链的强势预期。",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOcElraEFvSlMzZ3YwUlpkb3NsLTVGS1BLS3NaQlhqSGhlYWNPa3cxdEZLTGQydnp3VE9OaXRzdm9xNG4xSlRkWlhDbmRRRUtPRTNaMjk1R3FsRXZwejVxZzRHckx4NXhsOTRKd2k5WThuWjhDZFZIaU5HTzl3dm8yM0hNcDVqNHhEakM2SFpvRmpkTnhsQnpvOEtkcW1aZ25zN0NWYk5fZ9IBrAFBVV95cUxOWmxMV3N0N2xtSE5qZGRhUUtWNE53cW16SWNXLWJXQlNnR09OU1pUSTFxX0U5UDIwaTdlbXFsNXQzZVQ0b3IxemtUZWFOX1FrNVlOZTQxSGF1blRIWU05d2NnZE9XSEp0SG5fUGZxY21sTFlEcTlteGpLTWpHVG83TTdSdE9kRmVzZEJhdThFU3M1ZzdDM1gxeGpTcHlVRF9GdjFJdkhsa0Y4NkFs?oc=5",
+      "source": "CNBC",
+      "category": "半导体",
+      "time": "04/28 04:26",
+      "ts": 1777321591.0,
+      "fetchedAt": "2026-04-28T13:49:48.834444+00:00"
+    },
+    {
+      "id": "japan s arms export shift set to intensify naval shipbuilding rivalry with korea",
+      "title": "Japan's arms 出口 shift set to intensify naval shipbuilding rivalry with 韩国",
+      "originalTitle": "Japan's arms export shift set to intensify naval shipbuilding rivalry with Korea",
+      "zhTitle": "Japan's arms 出口 shift set to intensify naval shipbuilding rivalry with 韩国",
+      "summaryZh": "摘要：这条消息偏宏观和汇率层面，会影响外资风险偏好与韩国资产定价。",
+      "whyZh": "看点：宏观变量变化往往会先影响韩元，再逐步传导到权益市场。",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQM3I3SU9hUDd6dTZ1anA5Y05paUwwdTJOWFoxZ2lXWXMwbWl3eWItZFU3THNtSDdCZkFHbWFRNlFSbHRIUFRxQ19aa3VnNVlDMFJCZ0RveE80ano4cW5qTkEzZXZ3ZTJNNkU0Y0dvbFBXVER6eXM3N3EzMEFObjdGNTEwN1oyOEFiUXdoVGd2ODhxaEViOVdTZTBIS09MUC1LcC1HcmppbVFESGlaN1NXQmNoWUJaWkNDNGIwd2J0bHhGdGo1b2ZEdG1Sa0JaZHp3V0HSAdcBQVVfeXFMUDRSSXNBREhqV2UxLW1YRWpSRldqd3RYXzVGRjhmbXhaR3RUeG9XVE1ZNlV2d2xvVzA5RlVJdDY0WXRGaUtOSFIxQ0M2YjAySTBKRVZZVmU3OXRUcC1leDdhVDhyZkstQmdIWDhHSlgyVFU3NjdGQnJFLXc4T1dlWWhpaVNGOC1GSDdrbXpYLU5TLW00TXY0cWxDYXlZbEctT1VaMVFVSm9wLWFjZC10Wl9xcnhFSEU0cFRfQldrUnNKNHg4WF9XWXBDaXZOUnBzVWZ6dGQ5N0U?oc=5",
+      "source": "Korea Times",
+      "category": "宏观",
+      "time": "04/28 00:00",
+      "ts": 1777305600.0,
+      "fetchedAt": "2026-04-28T13:49:48.826374+00:00"
+    },
+    {
+      "id": "two months into iran war economic strain mounts across emerging markets",
+      "title": "Two months into Iran war, economic strAIn mounts across emerging markets",
+      "originalTitle": "Two months into Iran war, economic strain mounts across emerging markets",
+      "zhTitle": "Two months into Iran war, economic strAIn mounts across emerging markets",
+      "summaryZh": "摘要：这条消息是韩国市场的重要增量信息，适合纳入日常资讯追踪。",
+      "whyZh": "看点：可作为判断韩国市场主线是否延续的补充线索。",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQZlNramd1a0Qxc1JMb2lsVUJVVjdubnVBNnZ0WjJsMUZYdkZ1TnZ6MERBMTB5RXZNdDBoelRKWTJ6eFYySDBOa0wtTkV5V3hFcjdOUDd1cFE2bGR6U0NOdjhjS2xWMWJNV05FS1licXlMYnZFWFBOUFZTSXZ4ajRMNlZlOG1tUm9KM012YzFrMHJGVVN3a3BpdDBLdHdFb2E0SDB3TjlUeWhldHF4Y3Y4VllJUlcyYVZlSUs3WHg1UlR0aXpk?oc=5",
+      "source": "Reuters",
+      "category": "产业",
+      "time": "04/27 21:40",
+      "ts": 1777297202.0,
+      "fetchedAt": "2026-04-28T13:49:48.833516+00:00"
+    },
+    {
+      "id": "chinese ev battery maker catl launches 5 billion hong kong share sale",
+      "title": "Chinese EV 电池 maker CATL launches $5 billion Hong Kong share sale",
+      "originalTitle": "Chinese EV battery maker CATL launches $5 billion Hong Kong share sale",
+      "zhTitle": "Chinese EV 电池 maker CATL launches $5 billion Hong Kong share sale",
+      "summaryZh": "摘要：这条消息是韩国市场的重要增量信息，适合纳入日常资讯追踪。",
+      "whyZh": "看点：可作为判断韩国市场主线是否延续的补充线索。",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNbUs3NDZVMlpHRGJ4X3BGRUxjWTd4RE93T1VWMnhrOFQ3alAzMEQwMVQ0eVZYaWV2M2FQY2V3MDF4VlVzZ1pDSnd4cU1kV09RVVZEcXVzOWgxb3QyclcyVVRDWS1KSnVmb0NwVUc1MkRURmp1OGJWT3NrTGJfcWN6M09IRklkUXh5YlA3aDVBQkx3ak1MNm5Uamk1MDR3NFZjdlRPTjNMOFdsZjllTndTTVV4RkJzaFFMRkw2MzRmaEdSdw?oc=5",
+      "source": "Reuters",
+      "category": "产业",
+      "time": "04/27 18:32",
+      "ts": 1777285967.0,
+      "fetchedAt": "2026-04-28T13:49:48.833826+00:00"
+    },
+    {
+      "id": "diesel jet fuel exports from northeast asia to recover in may sources say",
+      "title": "Diesel, jet fuel 出口 from northeast Asia to recover in May, sources say",
+      "originalTitle": "Diesel, jet fuel exports from northeast Asia to recover in May, sources say",
+      "zhTitle": "Diesel, jet fuel 出口 from northeast Asia to recover in May, sources say",
+      "summaryZh": "摘要：这条消息偏宏观和汇率层面，会影响外资风险偏好与韩国资产定价。",
+      "whyZh": "看点：宏观变量变化往往会先影响韩元，再逐步传导到权益市场。",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQbkNPdFRuYk9QaUVUZ1RDdXEzYjdMeEREYVlLX0RENDRybEoxNlN3OFAxd0lCNnlhWlF2QzNaNm02VVZrRGhWWXpiSm5rcUlYaGMydmhUdkNaOHI0NzYzT19JVkhmTVlCdGU2WmQyc0VpSGFPVXBpSUFZTEY0LWloNE5ndVRDSEw2ZXQ3MzA2WVM5aGpkdG1iNkY2Q2N4S2ZkYzQ4OWJwbEV5T3RFTkZWeGNFdF8?oc=5",
+      "source": "Reuters",
+      "category": "宏观",
+      "time": "04/27 17:02",
+      "ts": 1777280529.0,
+      "fetchedAt": "2026-04-28T13:49:48.833103+00:00"
     }
   ]
 }
