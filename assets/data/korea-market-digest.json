@@ -1,27 +1,67 @@
 {
   "ok": true,
-  "fetchedAt": "2026-04-28T00:38:45.732707+00:00",
+  "fetchedAt": "2026-04-28T03:23:09.312926+00:00",
   "itemCount": 30,
   "items": [
+    {
+      "title": "Seoul stocks up late Tues. morning driven by large-cap tech shares",
+      "originalTitle": "Seoul stocks up late Tues. morning driven by large-cap tech shares",
+      "zhTitle": "首尔 股市 up late Tues. morning driven by large-cap tech 股价",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBseUNGbFh1dVdPRk5HNjZCeDhCaDBkWWlmM2s5LTFUbFFJbGI2T3FaNDhtdnlQT3VBMHE4dkU2MGY2QXRnb3N3NTFhN09kRVRYQ05PdXUwY1V1dw?oc=5",
+      "time": "04/28 10:30",
+      "source": "Yonhap",
+      "category": "韩股",
+      "ts": 1777343436.0
+    },
+    {
+      "title": "Seoul stocks briefly top 6,700 on tech rally, ahead of M7 earnings",
+      "originalTitle": "Seoul stocks briefly top 6,700 on tech rally, ahead of M7 earnings",
+      "zhTitle": "首尔 股市 briefly top 6,700 on tech 走强, ahead of M7 earnings",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1QdE54VVFxZnI0anhMdlJ4TlZONXBwWjNneXFkREN0aC15MVlZRTBlVVZKSmcySTc0VjhKWEpjTkhZQmlHNjZqZDRIUUpxUWUxSnJHZzd4b01Idw?oc=5",
+      "time": "04/28 10:25",
+      "source": "Yonhap",
+      "category": "韩股",
+      "ts": 1777343147.0
+    },
+    {
+      "title": "The Korea Interbank Offered Rates (KORIBOR)",
+      "originalTitle": "The Korea Interbank Offered Rates (KORIBOR)",
+      "zhTitle": "The 韩国 Interbank Offered Rates (KORIBOR)",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE80RjhxQTJiejVBQ1B5bzNrMEJsR0J6NFVCQzQ5WHpXd2t0Q0Y4U2l6QjNzdkxNUVgyNnlaZ2JhODREZFRKRUZpSU5BdVpNMzk5UmQzcGJEUzNPUQ?oc=5",
+      "time": "04/28 10:13",
+      "source": "Yonhap",
+      "category": "宏观",
+      "ts": 1777342383.0
+    },
+    {
+      "title": "S. Korean envoy calls N. Korea's nukes 'most urgent' challenge to nonproliferation regime",
+      "originalTitle": "S. Korean envoy calls N. Korea's nukes 'most urgent' challenge to nonproliferation regime",
+      "zhTitle": "S. 韩国 envoy calls N. 韩国's nukes 'most urgent' challenge to nonproliferation regime",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE03b1BYcnQtel85SWRVczFKenFva0FFZGNTNWwweVlXSEVoS1BCbXlaTnBqaUxtNDF6OVlQTzhJQnFXWV94S0lPOTFkM0ZfU3M3aHBMYmZYM2NDUQ?oc=5",
+      "time": "04/28 09:11",
+      "source": "Yonhap",
+      "category": "宏观",
+      "ts": 1777338674.0
+    },
     {
       "title": "Samsung SDI swings to Q1 profit on ESS battery growth",
       "originalTitle": "Samsung SDI swings to Q1 profit on ESS battery growth",
       "zhTitle": "三星 SDI swings to Q1 利润 on ESS 电池 growth",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBRZjRiZ0h3WTVtMGdfMS1GTDNPRkVVQTVkS2NyQjd1NXUwTks4NEs2RG5JMzNxZ1oweWRPajdXYTFVcV96OE9ES1Zkd3hsdG5NNk5GR1NvRDQ2UQ?oc=5",
-      "time": "04/28 08:35",
-      "source": "Yonhap",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE0tNkhOeGNYcTFsNjR2NF9IdEU1WlRqajJZRkMxTl9ISzFxeGdnaWg0eTFQR3lZRTg4UnhSWkpYNGtpNXBuQjJ1SENlQkR4UUltbFJzNWZkTQ?oc=5",
+      "time": "04/28 08:57",
+      "source": "Korea Herald",
       "category": "半导体",
-      "ts": 1777336506.0
+      "ts": 1777337851.0
     },
     {
-      "title": "N. Korea's executions over S. Korean cultural content surge after COVID-19 border closure: report",
-      "originalTitle": "N. Korea's executions over S. Korean cultural content surge after COVID-19 border closure: report",
-      "zhTitle": "N. 韩国's executions over S. 韩国 cultural content 飙升 after COVID-19 border closure: report",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9rNmVvUGVhLWlOdnJhX2FtdTkwcmxLM2JZZmF2NS13N2RRSGxpNEZyTUpOdTh0OUdDVFBiRFlHWHN0bnB2VC1hWWNtU3NhYTM5b1FIeFBVLURzSmlVQVFwbnQtVXZLcVdJeGJHRA?oc=5",
-      "time": "04/28 08:32",
-      "source": "Yonhap",
-      "category": "宏观",
-      "ts": 1777336350.0
+      "title": "Seoul stocks open at record high ahead of US big tech earnings",
+      "originalTitle": "Seoul stocks open at record high ahead of US big tech earnings",
+      "zhTitle": "首尔 股市 open at 历史新高 ahead of US big tech earnings",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBNQlpsV3JoZ3lpcHE0TzJNeHdtOTRUOG01UWtIOTc4dVFHMzA4Y1ZTeGhDekhJNkF0OEIyQ3Bwdkl4Z2d2ZG11cUpNTmo0eFhINXdBY19aUQ?oc=5",
+      "time": "04/28 08:39",
+      "source": "Korea Herald",
+      "category": "韩股",
+      "ts": 1777336765.0
     },
     {
       "title": "Seoul stocks open at record high ahead of U.S. big tech earnings",
@@ -44,6 +84,16 @@
       "ts": 1777336131.0
     },
     {
+      "title": "Korea betting on AI to fix productivity will make problem worse",
+      "originalTitle": "Korea betting on AI to fix productivity will make problem worse",
+      "zhTitle": "韩国 betting on AI to fix productivity will make problem worse",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOSmVMcThVVGsxYThUT291YUJaZDdBM0tlbExXT0gtbFhYYUVOam5aeVNaYVVCeG9zTkM1UDlpY3p4eDkwazYxVjN5STRvaU85ZHBIdTEtejJGbGlQSVNpeU5rSXhkdEZaVkFSYWZSR0J4YmxmX0RjcWUtMV9DdGpyN3NKZWxsdXpseVhXWk5zTG11cjhqenQ0amFNMnlSUnFuLWtFNEJoMDhjTnhzZjVnbDVJb9IBswFBVV95cUxOSmVMcThVVGsxYThUT291YUJaZDdBM0tlbExXT0gtbFhYYUVOam5aeVNaYVVCeG9zTkM1UDlpY3p4eDkwazYxVjN5STRvaU85ZHBIdTEtejJGbGlQSVNpeU5rSXhkdEZaVkFSYWZSR0J4YmxmX0RjcWUtMV9DdGpyN3NKZWxsdXpseVhXWk5zTG11cjhqenQ0amFNMnlSUnFuLWtFNEJoMDhjTnhzZjVnbDVJbw?oc=5",
+      "time": "04/28 08:10",
+      "source": "Korea Times",
+      "category": "产业",
+      "ts": 1777335000.0
+    },
+    {
       "title": "Seoul stocks open higher ahead U.S. big tech earnings",
       "originalTitle": "Seoul stocks open higher ahead U.S. big tech earnings",
       "zhTitle": "首尔 股市 open higher ahead U.S. big tech earnings",
@@ -52,16 +102,6 @@
       "source": "Yonhap",
       "category": "韩股",
       "ts": 1777334684.0
-    },
-    {
-      "title": "End-of-Life Decisions Top 500,000 as South Korea Sees Rise in Patient Autonomy",
-      "originalTitle": "End-of-Life Decisions Top 500,000 as South Korea Sees Rise in Patient Autonomy",
-      "zhTitle": "End-of-Life Decisions Top 500,000 as 韩国 Sees Rise in Patient Autonomy",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQV2htUUlBQkpfVk5sVTY3cFAzdlhqN2V6UzJxclhXbHBWOTlDSzBZZ1VUMmljT2xUcHBRM0I0R0FZNkRwYTU2cU5JXzluVmJlb05lNy14dUJwYUtveGhQTEVkTGZJcllXa3liWHpleDhZRDI4NHVtTnI3b0FwaGtEUnRYRlk4aFJ6SmRJaTllQkRFMDlwQWtDOXZneXdjWWI5cVRUSm1OMVVKZU9U?oc=5",
-      "time": "04/28 08:01",
-      "source": "Koreabizwire",
-      "category": "产业",
-      "ts": 1777334509.0
     },
     {
       "title": "Seoul shares down; exporters hit by U.S. outlook",
@@ -84,16 +124,6 @@
       "ts": 1777327410.0
     },
     {
-      "title": "Semiconductors",
-      "originalTitle": "Semiconductors",
-      "zhTitle": "半导体s",
-      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5WcE0yOHlLeU5xQndZN2dqaTBqNGgtbUJLZnF4dEpyWFhpNXo0WVVYRlBnemgtR3NWZFhoRDBuZEFBZ0pWOWRmMUxFN0w?oc=5",
-      "time": "04/28 05:49",
-      "source": "CNBC",
-      "category": "半导体",
-      "ts": 1777326547.0
-    },
-    {
       "title": "[Lim Woong]The dangers of Korean lobbying in Washington",
       "originalTitle": "[Lim Woong]The dangers of Korean lobbying in Washington",
       "zhTitle": "[Lim Woong]The dangers of 韩国 lobbying in Washington",
@@ -112,26 +142,6 @@
       "source": "CNBC",
       "category": "半导体",
       "ts": 1777321591.0
-    },
-    {
-      "title": "As Korea cracks down on English kindergartens, Seoul districts open their own for free",
-      "originalTitle": "As Korea cracks down on English kindergartens, Seoul districts open their own for free",
-      "zhTitle": "As 韩国 cracks down on English kindergartens, 首尔 districts open their own for free",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOdnlTU2pWWF9IMVB6QjQ5aldLLXNmRnhubkNtUVk3VW12MVhSeXNDa1BmS0loeWVMNWlQTEFBeDA4VHdlbTdoUzRhRkF1WG5qeUU5ZTZZcktCb29SOGlXR2N0TkV3MkY2STlnVU1CdEhLNzk1RjB5c243d2hXOXVSUlhweE1kejEtV2w4UUhtV0I5YVhDQjd6cmNNV1lVQjRpTVZvUUZUeE9ZanBZSm1qa2FrU2RKVF9heWpyVHhBUkplWHprSl9KR3owTml5TWRyZEF1dE1jenN5d9IB3wFBVV95cUxORGRXQUVsSUVQLXZTOUsxRS1OcFpzZ01TZXdLa01FY05xamFvVDNSQVlJWUI4R1hUTlF0NGhXNFhtX2lrajdJRnY5U0hGYlpoSnVVTFlUYllmWDdpd1NGOTNYd3M4c21lYnRLaHNfWVVWME5WN1hqcVR6N0V0cWxMUWVPU2tjR2dENWh3V2JIZjlUVXhpekNRV0ZRdnJ1RDBCVTRuOHEzQmFYMDFHX2pRd3h0SU9oTEtsWmN6UHNlSTl1M0dMYWFjZXQ0ejRNbG5zbkF1R0tTUTZOb2dSd2d3?oc=5",
-      "time": "04/28 00:00",
-      "source": "Korea Times",
-      "category": "公司",
-      "ts": 1777305600.0
-    },
-    {
-      "title": "Drinking no longer default for Korea's Gen Z",
-      "originalTitle": "Drinking no longer default for Korea's Gen Z",
-      "zhTitle": "Drinking no longer default for 韩国's Gen Z",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOWXYxOTZVb3Jad2NCaGY3RERhZUEyWE5zaS1YSmJKTTJqZm5RTGo2UVQzNnI1ZDlZVjFkSUdyM2RYeHdYVE1FTkZiWlFOQ0h5bE1kclVHRVlOS3Rpdk4xTE5Bd2FhSnZPTDJpcUMwbFRDbjI5cWtMSlBIeUFfZzIxTFFNV0FfSWdzNDNkanJ2MXBTc294QVhncmRjTWtLeWPSAaQBQVVfeXFMT3EtX3JwOVhmeS1aeXFiTWk0RzlLVkVmR200dDBJX0pjWFgyVVdnMkNCRC03THdQVWlKWTFCMl9SSHhkQV9Ka3RuM0czbXZvRW5ad3h2ZHBCZV9URGEtM2U2MTRYbmMwVGdLTkpQRnZHNWJWbEdTaXZ2WE1xTGljUDJfUUtlSmo5Q2oxaG50bEc1NWVwM2IwWVVhRE43N3cwazhYUkU?oc=5",
-      "time": "04/28 00:00",
-      "source": "Korea Times",
-      "category": "公司",
-      "ts": 1777305600.0
     },
     {
       "title": "S.Korea jobless rate steady but data bodes ill on spending",
@@ -172,6 +182,16 @@
       "source": "Reuters",
       "category": "公司",
       "ts": 1777280019.0
+    },
+    {
+      "title": "Topic: samsungsds",
+      "originalTitle": "Topic: samsungsds",
+      "zhTitle": "Topic: 三星sds",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBrbGMwVWtTcEpPLUN1MnRCLWlqbnpDQUU4ZlZodHhzQWxsNk02ek9lR3JXMUItRXUwalFjZ0hkOWI4UWtwV1l1NkYxV0Z3RGgxaTFwSXptUWdXMWlGQWNB?oc=5",
+      "time": "04/27 16:37",
+      "source": "Korea Times",
+      "category": "半导体",
+      "ts": 1777279033.0
     },
     {
       "title": "Seoul's top envoy to U.S., FM Cho discuss N.K. intel controversy, Coupang issue",
@@ -237,7 +257,7 @@
       "title": "(2nd LD) Seoul stocks close at a new record high amid AI-led tech rally",
       "originalTitle": "(2nd LD) Seoul stocks close at a new record high amid AI-led tech rally",
       "zhTitle": "(2nd LD) 首尔股市在 AI 科技股带动下收于历史新高",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1jOV9DWjRxOHlDRWQycFpXYzI1cXFwSFFjZFJDOWtFR0RlUFdBZ1VjTTB4Y0pqcUlEVnJFLTdZbFFSVTN1VlBEdWQ2eHRvQ0tDc21JY1dpUm9qdWZKcGExclRIRFQ5TUIwOTh5emxCc0REdl9ZTXc?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1RaEJKZzlhdDlYNGN4QlpzekdFM09VdjFLLXhLZmp3ajVyWnNQMU0yZk5MWkQ2WGNOamxyZzBSQlM0Unk2U0ZBNWVYY2xSa2toZGhzVUs2aDNIUQ?oc=5",
       "time": "04/27 15:41",
       "source": "Yonhap",
       "category": "韩股",
@@ -274,16 +294,6 @@
       "ts": 1777274393.0
     },
     {
-      "title": "Tax agency collects $23 mil. unpaid taxes by uncovering hidden overseas assets",
-      "originalTitle": "Tax agency collects $23 mil. unpaid taxes by uncovering hidden overseas assets",
-      "zhTitle": "Tax agency collects $23 mil. unpaid taxes by uncovering hidden overseas assets",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOWFIzX1VLWHo1ZXhxaFJrdGhnTEVyNEVzTHJFWnlZQ0tpZ2Vld0Jfa0ZDVmNOdE5aZjhYbGR0MVBmRXFnVEhiaVBra0NiV1gyNjlxTWRpYkk2SG5zYnVzaVZOSHNiZ2tCcGhwRlpXVjBzdk11WW5xeDBXLTNUQWlOeFpaYUstYl9McG43RkJ3ZDRlTXJhT2xPdWtCcTJwdVZSUm9TR2s3cUp0aVBfYXB6d2hnU1MzUjNnNzFtNHo5QXRuNm9HZnM0ONIBzgFBVV95cUxNMVpOWFI3dzNZc3N2Snh6bHVJS18ySDdoX0dQR3RhS2Z6STRfTFpacFE3WmkzXzlpamtYOWxyQnZ1T3VDUk5tLW9WakpYSHo5R09NYUhDQ3h6d1hoNE1NVUs2UFZVTzJkUmJLRVZjUXY1ekVxeDVEUTdhUHFYVzVYZFpqaUJQZS00bktRdEJzRGdTRDJ0cWVWaVpxcjdYRFRvSHpleUVLVDJsVGNIUjR3anI5dEd0Tk5FUVJrNDlMcG5wOUVPSkNPOW1IMTZGQQ?oc=5",
-      "time": "04/27 15:17",
-      "source": "Korea Times",
-      "category": "产业",
-      "ts": 1777274223.0
-    },
-    {
       "title": "Korean stocks top $4 tril. in market cap for 1st time",
       "originalTitle": "Korean stocks top $4 tril. in market cap for 1st time",
       "zhTitle": "韩国 股市 top $4 tril. in 市值 for 1st time",
@@ -292,16 +302,6 @@
       "source": "Korea Times",
       "category": "韩股",
       "ts": 1777274102.0
-    },
-    {
-      "title": "Seoul stocks close at a new record high amid AI-led tech rally",
-      "originalTitle": "Seoul stocks close at a new record high amid AI-led tech rally",
-      "zhTitle": "首尔股市在 AI 科技股带动下收于历史新高",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE8xMzlzWl9oaVRtYlJQYkVEeWVaUE9wamRPVEpIQ0VyMzk4V2VISEtKWUVmOTl6RlIwbXFnWXFjMWRfbFhYcDEtLVU4MDNDRlQwQlozYVRra1lNQQ?oc=5",
-      "time": "04/27 15:14",
-      "source": "Yonhap",
-      "category": "韩股",
-      "ts": 1777274057.0
     }
   ]
 }
