@@ -30,16 +30,16 @@
     .news-api{font-size:12px;color:var(--brand2);font-weight:800} .refresh-btn{border:none;background:#0f766e;color:#fff;padding:10px 14px;border-radius:999px;font-size:13px;font-weight:800;cursor:pointer}
     .news-status{font-size:12px;color:var(--muted);margin-bottom:8px}
     .news-more{margin-bottom:8px;font-size:13px;color:#2563eb;font-weight:700}
-    .news-list{display:grid;gap:0} .news-item{display:grid;grid-template-columns:72px 86px 1fr;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px dashed var(--line)} .news-item:last-child{border-bottom:none;padding-bottom:0}
-    .news-time{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:2px} .news-source{font-size:12px;color:var(--brand2);font-weight:800;padding-top:2px}
-    .news-main{min-width:0} .news-title{font-size:15px;font-weight:800;line-height:1.6;margin-bottom:2px} .news-title a{text-decoration:none} .news-body{font-size:12px;color:#64748b;line-height:1.65}
+    .news-list{display:grid;gap:0} .news-item{display:grid;grid-template-columns:72px 110px 1fr;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px dashed var(--line)} .news-item:last-child{border-bottom:none;padding-bottom:0}
+    .news-time{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:2px} .news-source-wrap{display:grid;gap:6px;padding-top:2px} .news-source{font-size:12px;color:var(--brand2);font-weight:800} .news-cat{display:inline-flex;align-items:center;justify-content:center;width:max-content;padding:4px 8px;border-radius:999px;background:#eef4ff;color:#1d4ed8;font-size:11px;font-weight:800}
+    .news-main{min-width:0} .news-title{font-size:15px;font-weight:800;line-height:1.65;margin-bottom:6px} .news-title a{text-decoration:none} .news-body{font-size:12px;color:#64748b;line-height:1.72} .news-body strong{color:#334155}
     .products{margin-top:16px} .etf-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px} .etf-card{display:block;text-decoration:none;padding:16px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,#fff 0%,#f8fbff 100%)}
     .etf-head{display:flex;justify-content:space-between;gap:8px;margin-bottom:8px} .etf-code{font-size:12px;color:var(--muted)} .etf-market{font-size:12px;color:var(--brand);font-weight:700}
     .etf-name{font-size:22px;font-weight:800;margin-bottom:6px} .etf-desc{font-size:14px;color:#475569;line-height:1.75;min-height:74px} .etf-meta{margin-top:10px;font-size:12px;color:var(--muted)} .cta{margin-top:10px;font-size:13px;color:var(--brand);font-weight:800}
     .footer-note{margin-top:14px;font-size:13px;color:var(--muted);line-height:1.75}
     @media (max-width:960px){.hero-grid,.grid{grid-template-columns:1fr}.deep-grid,.etf-grid{grid-template-columns:1fr}h1{font-size:31px}}
-    @media (max-width:700px){.news-item{grid-template-columns:64px 72px 1fr;gap:8px}}
-    @media (max-width:620px){.wrap{padding:14px 12px 28px}.hero,.panel{border-radius:20px}.hero{padding:20px 16px}.panel{padding:16px}.hero-kpis{grid-template-columns:1fr 1fr;gap:8px}.kpi{padding:10px 10px 9px}.kpi-v{font-size:17px}h1{font-size:26px}.sub{font-size:14px}.section-title{font-size:22px}.news-item{grid-template-columns:58px 64px 1fr;gap:8px}}
+    @media (max-width:700px){.news-item{grid-template-columns:64px 88px 1fr;gap:8px}}
+    @media (max-width:620px){.wrap{padding:14px 12px 28px}.hero,.panel{border-radius:20px}.hero{padding:20px 16px}.panel{padding:16px}.hero-kpis{grid-template-columns:1fr 1fr;gap:8px}.kpi{padding:10px 10px 9px}.kpi-v{font-size:17px}h1{font-size:26px}.sub{font-size:14px}.section-title{font-size:22px}.news-item{grid-template-columns:58px 84px 1fr;gap:8px}}
   </style>
 </head>
 <body>
@@ -67,19 +67,12 @@
         <div class='seller-box'>
           <h3>韩国卖方观点</h3>
           <p>主判断：韩国这组的有效判断是，韩国景气仍然高度绑定半导体和AI链，出口与存储器周期没掉头前，韩国资产相对强势逻辑还在。</p>
-          <ul><li>美银美林《美银美林-行业-科技-全球半导体-半导体-SK海力士-AI-周报-全球存储技术周报：HBM/LTA预期降温，长期短缺与基板/MLCC上行》｜美银研报指出，存储芯片商对HBM扩产热情降温，转向高利传统DRAM。</li><li>野村《野村-公司-SK海力士-韩国-半导体-台湾科技-野村：SK海力士1Q26业绩超预期，长期协议助力盈利可持续，上调目标价至234万韩元》｜野村重申SK海力士买入评级，目标价上调21%至234万韩元。</li><li>汇丰《汇丰-公司-SK海力士-韩国-半导体-台湾科技-AI-科技-SK海力士：强劲一季度后盈利持续扩张，维持买入评级》｜汇丰维持SK海力士(000660 KP)买入评级，目标价180万韩元（上行空间47.2%）。</li></ul>
+          <ul><li>野村《野村-亚洲固收-韩国-印度-亚洲-经济-亚洲经济-央行政策-策略-日本-外汇-野村：韩国宏观经济与亚洲利率策略：K型复苏下的政策反应与交易机会》｜野村研报指出，韩国经济呈K型复苏，国内需求疲软削弱货币政策传导，预计韩国央行将维持“鹰派暂停”，2027年底前终端利率料为2.50%。</li><li>美银美林《美银美林-亚洲经济-经济-资金流-地缘-中国台湾-韩国-亚洲除中国外资金流向：3月情况恶化》｜美银美林报告显示，受西亚战争及油价飙升影响，3月亚洲除中国外股市场遭遇大规模抛售。</li><li>《公司-SK海力士-韩国-半导体-科技-SK海力士2026年第一季度财报电话会纪要》｜SK海力士2026Q1营收52.6万亿韩元（+60%QoQ/+198%YoY），营业利润37.6万亿（利润率72%），净利40.3万亿，均创新高。</li></ul>
           <div class='deep-grid'>
         <a class='deep-card' href='../csop-daily-briefing-latest.html' target='_blank' rel='noopener noreferrer'>
           <div class='deep-label'>韩国精读</div>
-          <div class='deep-title'>美银美林《美银美林-行业-科技-全球半导体-半导体-SK海力士-AI-周报-全球存储技术周报：HBM/LTA预期降温，长</div>
-          <div class='deep-summary'>美银美林《美银美林-行业-科技-全球半导体-半导体-SK海力士-AI-周报-全球存储技术周报：HBM/LTA预期降温，长期短缺与基板/MLCC上行》｜美银研报指出，存储芯片商对HBM扩产热情降温，转向高利传统DRAM。</div>
-          <div class='deep-cta'>打开原页查看 →</div>
-        </a>
-        
-        <a class='deep-card' href='../csop-daily-briefing-latest.html' target='_blank' rel='noopener noreferrer'>
-          <div class='deep-label'>韩国精读</div>
-          <div class='deep-title'>野村《野村-公司-SK海力士-韩国-半导体-台湾科技-野村：SK海力士1Q26业绩超预期，长期协议助力盈利可持续，上调目</div>
-          <div class='deep-summary'>野村《野村-公司-SK海力士-韩国-半导体-台湾科技-野村：SK海力士1Q26业绩超预期，长期协议助力盈利可持续，上调目标价至234万韩元》｜野村重申SK海力士买入评级，目标价上调21%至234万韩元。</div>
+          <div class='deep-title'>美银美林-股票策略-中国-科技-半导体-策略-AI-中股-股票-中国经济-经济-中国股市为何跑输全球：盈利分化与AI冲击下的结构性重估</div>
+          <div class='deep-summary'>这篇能把单一市场现象翻译成跨资产语言，更接近客户真正需要的配置解释。</div>
           <div class='deep-cta'>打开原页查看 →</div>
         </a>
         </div>
@@ -106,105 +99,106 @@
             <button class='refresh-btn' id='refresh-news'>立即刷新</button>
           </div>
           <div class='news-status' id='news-status'>本地快照 2026-04-28T14:12:40.383123+00:00</div>
+          <div class='hint' style='margin:0 0 8px'>稳定保留最近 30 到 50 条韩国市场有效资讯，优先覆盖半导体、韩股指数、宏观汇率、电池汽车与重点公司业绩。</div>
           <div class='news-more'><a href='./news.html'>查看全部资讯 →</a></div>
           <div class='news-list' id='news-list'>
             <article class='news-item'>
               <div class='news-time'>04/28 16:59</div>
-              <div class='news-source'>Korea Herald</div>
+              <div class='news-source-wrap'><div class='news-source'>Korea Herald</div><div class='news-cat'>半导体</div></div>
               <div class='news-main'>
                 <div class='news-title'><a href='https://news.google.com/rss/articles/CBMiV0FVX3lxTFBLSS1ZOEhNNnhvZDVLWFlzQS1UMmxvd25nNTlPRWdxczVZdGljMjNBc1lPbmhVUFV2Q1V5cGVzbFlwYVNwejU0TGdDZ3M0S1F6YzRfUmJ6WQ?oc=5' target='_blank' rel='noopener noreferrer'>SK集团增持 SK Ecoplant，以支持芯片与 AI 布局</a></div>
-                <div class='news-body'>摘要：这条消息直接指向韩国科技与半导体主线，属于当前最核心的市场叙事。</div>
-                <div class='news-body'>看点：重点观察是否继续强化三星、SK海力士和AI硬件链的强势预期。</div>
+                <div class='news-body'><strong>摘要：</strong>摘要：这条消息直接指向韩国科技与半导体主线，属于当前最核心的市场叙事。</div>
+                <div class='news-body'><strong>解读：</strong>看点：重点观察是否继续强化三星、SK海力士和AI硬件链的强势预期。</div>
               </div>
             </article>
         
             <article class='news-item'>
               <div class='news-time'>04/28 16:58</div>
-              <div class='news-source'>Aju Press</div>
+              <div class='news-source-wrap'><div class='news-source'>Aju Press</div><div class='news-cat'>韩股</div></div>
               <div class='news-main'>
                 <div class='news-title'><a href='https://news.google.com/rss/articles/CBMiV0FVX3lxTE5ZTWlnY2RqZ0RQd1M1QWVYck45UzBMV1gzeXlCckZMdEczc2tvZW1HTEZEVWNJbE9CaFZBV0lOWkQtcms3Wk5ObjM1dFJaLXJ5QS05c09Wc9IBV0FVX3lxTE5ZTWlnY2RqZ0RQd1M1QWVYck45UzBMV1gzeXlCckZMdEczc2tvZW1HTEZEVWNJbE9CaFZBV0lOWkQtcms3Wk5ObjM1dFJaLXJ5QS05c09Wcw?oc=5' target='_blank' rel='noopener noreferrer'>韩国综合指数延续涨势，再创阶段里程碑</a></div>
-                <div class='news-body'>摘要：这条消息主要反映韩股大盘强弱与市场风险偏好的变化。</div>
-                <div class='news-body'>看点：若指数持续创新高，通常意味着韩国科技权重仍在主导盘面。</div>
+                <div class='news-body'><strong>摘要：</strong>摘要：这条消息主要反映韩股大盘强弱与市场风险偏好的变化。</div>
+                <div class='news-body'><strong>解读：</strong>看点：若指数持续创新高，通常意味着韩国科技权重仍在主导盘面。</div>
               </div>
             </article>
         
             <article class='news-item'>
               <div class='news-time'>04/28 16:56</div>
-              <div class='news-source'>Korea Herald</div>
+              <div class='news-source-wrap'><div class='news-source'>Korea Herald</div><div class='news-cat'>韩股</div></div>
               <div class='news-main'>
                 <div class='news-title'><a href='https://news.google.com/rss/articles/CBMiV0FVX3lxTE04U0JFLXVmVXJ0V21fTE5TZXFOVjJrNTBBaEFzMkdZYW1oaGhRSl9GOEV4UFNqU2xWZ21GY3RqZ2g0RWdYejN6d2xVTUY2TW95TlFGZjhNWQ?oc=5' target='_blank' rel='noopener noreferrer'>韩国综合指数创历史新高，逼近 7000 点</a></div>
-                <div class='news-body'>摘要：这条消息主要反映韩股大盘强弱和市场风险偏好的变化。</div>
-                <div class='news-body'>看点：指数创新高或持续走强，通常意味着科技权重仍在主导盘面。</div>
+                <div class='news-body'><strong>摘要：</strong>摘要：这条消息主要反映韩股大盘强弱和市场风险偏好的变化。</div>
+                <div class='news-body'><strong>解读：</strong>看点：指数创新高或持续走强，通常意味着科技权重仍在主导盘面。</div>
               </div>
             </article>
         
             <article class='news-item'>
               <div class='news-time'>04/28 15:36</div>
-              <div class='news-source'>Yonhap</div>
+              <div class='news-source-wrap'><div class='news-source'>Yonhap</div><div class='news-cat'>韩股</div></div>
               <div class='news-main'>
                 <div class='news-title'><a href='https://news.google.com/rss/articles/CBMiWkFVX3lxTE8zQUM2Q2YtTDF1bUZ5VTk2eDNVSnJKX3E3QjJEcnJ1RmFzOEc0UTdFX183UGVXRW9mYkVzVXdydHBNcFhHdjhVNXpmeHZQUDlTQ2EtU28wV2x6dw?oc=5' target='_blank' rel='noopener noreferrer'>首尔股市在美股科技巨头财报前再创阶段新高</a></div>
-                <div class='news-body'>摘要：这条消息主要反映韩股大盘强弱和市场风险偏好的变化。</div>
-                <div class='news-body'>看点：指数创新高或持续走强，通常意味着科技权重仍在主导盘面。</div>
+                <div class='news-body'><strong>摘要：</strong>摘要：这条消息主要反映韩股大盘强弱和市场风险偏好的变化。</div>
+                <div class='news-body'><strong>解读：</strong>看点：指数创新高或持续走强，通常意味着科技权重仍在主导盘面。</div>
               </div>
             </article>
         
             <article class='news-item'>
               <div class='news-time'>04/28 15:27</div>
-              <div class='news-source'>Korea Times</div>
+              <div class='news-source-wrap'><div class='news-source'>Korea Times</div><div class='news-cat'>半导体</div></div>
               <div class='news-main'>
                 <div class='news-title'><a href='https://news.google.com/rss/articles/CBMivgFBVV95cUxNUDdwNk92SW5vTE5taXFuUDlHZWhKSVJFLUkyVlRPSmhJaW5nSFJtZnlyZ3VObzBNUGh2aXVMcWNjc19aWG83cm5EU1JJUlVBMmZnTUtHSVFITnM5dlc2dkgwNFNSOU5aZ1lndnpiZVJfSTRrbi0tbUdXVWlBbjExMm9GOWphZU1uZnR3WFlvcnZfdFo1X3JoZkFMNmNfOUlnZVRLSmVnZkdJSmZpWnU3S2dNZjFsWjVySTg0MFRR0gHDAUFVX3lxTE1OMi0zZDdvMXpwOUZQMHEtSWlYcTlRMkh1T0lqTnQ4WE03M2ppcWt2UzYzcW51dmpNZ0pmaVlkRVVWX0d5UG9uRUcyczBqbTR2SGplVFZDRDMwa3ROVFNhenBycHlJYVRsYlJ0R2xlNFkyelJvTG50MjFtVjM0OTFnaDAtY0wxOG5Zb1JZZWsyZExlaVl5c2Z5XzNoSjBBdEo5M3NBcG1nN1ZuUHZ1ZUtFMXVUc19rb3U1emVMeEVWd3VRTQ?oc=5' target='_blank' rel='noopener noreferrer'>韩国 股票 market 升至全球第八, 超过英国 on 芯片 rally</a></div>
-                <div class='news-body'>摘要：这条消息直指韩国半导体与AI硬件主线，对科技板块定价最敏感。</div>
-                <div class='news-body'>看点：继续观察资金是否进一步集中到三星、SK海力士及其产业链。</div>
+                <div class='news-body'><strong>摘要：</strong>摘要：这条消息直指韩国半导体与AI硬件主线，对科技板块定价最敏感。</div>
+                <div class='news-body'><strong>解读：</strong>看点：继续观察资金是否进一步集中到三星、SK海力士及其产业链。</div>
               </div>
             </article>
         
             <article class='news-item'>
               <div class='news-time'>04/28 15:26</div>
-              <div class='news-source'>Yonhap</div>
+              <div class='news-source-wrap'><div class='news-source'>Yonhap</div><div class='news-cat'>韩股</div></div>
               <div class='news-main'>
                 <div class='news-title'><a href='https://news.google.com/rss/articles/CBMiWkFVX3lxTE1DNmZ1Wk53dnVMTWdfUFptNFlIVXFROG1DczBlQnh5Vmp6Mk54cXdTN2JwNU9jNGhIYzFsQm13ek5TZDFMM3Z6QVRCOFFEQ3duZ1YtTnBXZzRrZw?oc=5' target='_blank' rel='noopener noreferrer'>首尔股市一度站上 6700 点, 继续冲击新里程碑</a></div>
-                <div class='news-body'>摘要：这条消息主要反映韩股大盘强弱与市场风险偏好的变化。</div>
-                <div class='news-body'>看点：若指数持续创新高，通常意味着韩国科技权重仍在主导盘面。</div>
+                <div class='news-body'><strong>摘要：</strong>摘要：这条消息主要反映韩股大盘强弱与市场风险偏好的变化。</div>
+                <div class='news-body'><strong>解读：</strong>看点：若指数持续创新高，通常意味着韩国科技权重仍在主导盘面。</div>
               </div>
             </article>
         
             <article class='news-item'>
               <div class='news-time'>04/28 14:51</div>
-              <div class='news-source'>Yonhap</div>
+              <div class='news-source-wrap'><div class='news-source'>Yonhap</div><div class='news-cat'>宏观</div></div>
               <div class='news-main'>
                 <div class='news-title'><a href='https://news.google.com/rss/articles/CBMiWkFVX3lxTE4tVmVwY2pzeTl3MXhPWTc1aTZBQjNLTG05eUFhdDJkRldsMVBfMldFMnZ2QmlJWXMxSDF3cXl6QUhpVk9mWW1URHVYZ09lS3dreVZHQ0xPeHk2dw?oc=5' target='_blank' rel='noopener noreferrer'>HyundAI E&amp;C Q1 net rises 24 pct on weak 韩元, asset revaluation</a></div>
-                <div class='news-body'>摘要：这条消息偏宏观和汇率层面，会影响外资风险偏好与韩国资产定价。</div>
-                <div class='news-body'>看点：宏观变量变化往往会先影响韩元，再逐步传导到权益市场。</div>
+                <div class='news-body'><strong>摘要：</strong>摘要：这条消息偏宏观和汇率层面，会影响外资风险偏好与韩国资产定价。</div>
+                <div class='news-body'><strong>解读：</strong>看点：宏观变量变化往往会先影响韩元，再逐步传导到权益市场。</div>
               </div>
             </article>
         
             <article class='news-item'>
               <div class='news-time'>04/28 14:26</div>
-              <div class='news-source'>Reuters</div>
+              <div class='news-source-wrap'><div class='news-source'>Reuters</div><div class='news-cat'>宏观</div></div>
               <div class='news-main'>
                 <div class='news-title'><a href='https://news.google.com/rss/articles/CBMiqAFBVV95cUxPeVEtWXhZaXBMSV8zZVExMFRObmE1X1J1d2lSakZzVVl1T3Y0N1haTkZvVGxUQUdpcVczYlA3Sy1JTG05S2dyZERselNXWnB4ZGhiS0o2aEMwSFk0RWdELTBJOEk5R0VfN05fZkRrNmU3M3FVa21nUEI5M01wWEFLeXJTX203ZHpqY0o3eU9wOTE3elBOMkZNOXhlMG9UV3E3WHh4RzZ6dDU?oc=5' target='_blank' rel='noopener noreferrer'>India turns net 出口er of finished steel in 2025/26, data shows</a></div>
-                <div class='news-body'>摘要：这条消息偏宏观和汇率层面，会影响外资风险偏好与韩国资产定价。</div>
-                <div class='news-body'>看点：宏观变量变化往往会先影响韩元，再逐步传导到权益市场。</div>
+                <div class='news-body'><strong>摘要：</strong>摘要：这条消息偏宏观和汇率层面，会影响外资风险偏好与韩国资产定价。</div>
+                <div class='news-body'><strong>解读：</strong>看点：宏观变量变化往往会先影响韩元，再逐步传导到权益市场。</div>
               </div>
             </article>
         
             <article class='news-item'>
               <div class='news-time'>04/28 14:24</div>
-              <div class='news-source'>Korea Herald</div>
+              <div class='news-source-wrap'><div class='news-source'>Korea Herald</div><div class='news-cat'>韩股</div></div>
               <div class='news-main'>
                 <div class='news-title'><a href='https://news.google.com/rss/articles/CBMiV0FVX3lxTE1EQWdPVUVWNnBQemtIM3JGcGlQanEzanFQMF9SekstRkJiY2FDV0sxc01PcTN0bEcxMDh5U1Fad09GSmg1Z2dESUFNamE2X3plZWdDYkxzMA?oc=5' target='_blank' rel='noopener noreferrer'>韩国股市总市值超过英国，升至全球第八</a></div>
-                <div class='news-body'>摘要：这条消息主要反映韩股大盘强弱和市场风险偏好的变化。</div>
-                <div class='news-body'>看点：指数创新高或持续走强，通常意味着科技权重仍在主导盘面。</div>
+                <div class='news-body'><strong>摘要：</strong>摘要：这条消息主要反映韩股大盘强弱和市场风险偏好的变化。</div>
+                <div class='news-body'><strong>解读：</strong>看点：指数创新高或持续走强，通常意味着科技权重仍在主导盘面。</div>
               </div>
             </article>
         
             <article class='news-item'>
               <div class='news-time'>04/28 14:22</div>
-              <div class='news-source'>CNBC</div>
+              <div class='news-source-wrap'><div class='news-source'>CNBC</div><div class='news-cat'>产业</div></div>
               <div class='news-main'>
                 <div class='news-title'><a href='https://news.google.com/rss/articles/CBMimAFBVV95cUxPbmxjemV3TE9vWGZ1aUFWMFBNS2Fkc2FOREZoMmNNODdWZXhocjZVX2M1NVAyVlhzcmhaZUx6VTBDOU9BNkRnX3ZFMEJ0WFZyRUVHWnJub3U4d2xjb25qYnBMQzJQUkR6YVd0QUQ0bmJxSG9PWTJmTFZDVUR4aFVzZG1TVmtIS1hyU0FTdXRqRXJiWUd4bTU5ZdIBngFBVV95cUxQSzhOWTJhd2RibUwwd2NEQTRGcFQtczZ2cDJBZHJCM194b2pPVjBSTlFDY2NpYzk3VTcyamRFTW5VRmMwNHVpVHpjV2I1ZmF0UmdqbFdtclBNSzBDRHJPRlY0ZDVEVzFxMnBzbnV3TE1FQ2dSWEZ0a3ZGODBKa2FNXzA1N3QwVHp2eEVoNjliY0x6R2lZQno0RTV4NWdrUQ?oc=5' target='_blank' rel='noopener noreferrer'>CNBC DAIly Open: Hawkish hold from BOJ sets central bank stage</a></div>
-                <div class='news-body'>摘要：这条消息是韩国市场的重要增量信息，适合纳入日常资讯追踪。</div>
-                <div class='news-body'>看点：可作为判断韩国市场主线是否延续的补充线索。</div>
+                <div class='news-body'><strong>摘要：</strong>摘要：这条消息是韩国市场的重要增量信息，适合纳入日常资讯追踪。</div>
+                <div class='news-body'><strong>解读：</strong>看点：可作为判断韩国市场主线是否延续的补充线索。</div>
               </div>
             </article>
         </div>
@@ -253,11 +247,11 @@
       const rows = items.slice(0, 10).map(item => `
         <article class="news-item">
           <div class="news-time">${item.time || '--:--'}</div>
-          <div class="news-source">${item.source || '新闻源'}</div>
+          <div class="news-source-wrap"><div class="news-source">${item.source || '新闻源'}</div><div class="news-cat">${item.category || '韩国市场'}</div></div>
           <div class="news-main">
             <div class="news-title"><a href="${item.url || '#'}" target="_blank" rel="noopener noreferrer">${item.zhTitle || item.title || '未命名资讯'}</a></div>
-            <div class="news-body">${item.summaryZh || item.category || '韩国市场'}</div>
-            <div class="news-body">${item.whyZh || ''}</div>
+            <div class="news-body"><strong>摘要：</strong>${item.summaryZh || '韩国市场增量信息'}</div>
+            <div class="news-body"><strong>解读：</strong>${item.whyZh || ''}</div>
           </div>
         </article>
       `).join('');
