@@ -29,6 +29,7 @@
     .news-box{padding:16px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,#fff 0%,#f7fbfa 100%)} .news-top{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:8px}
     .news-api{font-size:12px;color:var(--brand2);font-weight:800} .refresh-btn{border:none;background:#0f766e;color:#fff;padding:10px 14px;border-radius:999px;font-size:13px;font-weight:800;cursor:pointer}
     .news-status{font-size:12px;color:var(--muted);margin-bottom:8px}
+    .news-more{margin-bottom:8px;font-size:13px;color:#2563eb;font-weight:700}
     .news-list{display:grid;gap:0} .news-item{display:grid;grid-template-columns:72px 86px 1fr;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px dashed var(--line)} .news-item:last-child{border-bottom:none;padding-bottom:0}
     .news-time{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:2px} .news-source{font-size:12px;color:var(--brand2);font-weight:800;padding-top:2px}
     .news-main{min-width:0} .news-title{font-size:15px;font-weight:800;line-height:1.6;margin-bottom:2px} .news-title a{text-decoration:none} .news-body{font-size:12px;color:#64748b;line-height:1.65}
@@ -52,9 +53,9 @@
         </div>
         <div class='hero-kpis'>
           <div class='kpi'><div class='kpi-k'>内容模块</div><div class='kpi-v'>投研 + 持仓 + 资讯</div></div>
-          <div class='kpi'><div class='kpi-k'>更新机制</div><div class='kpi-v'>人工补充 + 接口刷新</div></div>
-          <div class='kpi'><div class='kpi-k'>ETF 二级页</div><div class='kpi-v'>3 个</div></div>
-          <div class='kpi'><div class='kpi-k'>买方观点沉淀</div><div class='kpi-v'>历史追加保留</div></div>
+          <div class='kpi'><div class='kpi-k'>更新机制</div><div class='kpi-v'>自动刷新</div></div>
+          <div class='kpi'><div class='kpi-k'>资讯池</div><div class='kpi-v'>稳定 30 条</div></div>
+          <div class='kpi'><div class='kpi-k'>首页展示</div><div class='kpi-v'>最新 10 条</div></div>
         </div>
       </div>
     </section>
@@ -84,7 +85,6 @@
         </div>
         </div>
         <div class='timeline'>
-          
         <article class='timeline-item'>
           <div class='timeline-dot'></div>
           <div class='timeline-card'>
@@ -94,19 +94,19 @@
             <p>这部分等你给到具体内容后，我会按时间倒序持续追加，保留历史记录，不覆盖旧内容。建议每条按“日期 + 标题 + 核心观点摘要”发我，我直接贴进时间轴。</p>
           </div>
         </article>
-        
         </div>
       </section>
 
       <section class='panel'>
         <div class='section-title'>韩国市场资讯速递</div>
-        <div class='hint'>这里改成后台快照优先展示，前端再尝试实时刷新。即便实时接口没刷出来，也先展示上一版已翻译中文的稳定内容。</div>
+        <div class='hint'>首页只显示最新 10 条，其他内容放进资讯二级页。前端优先读取后台快照，再尝试实时刷新。</div>
         <div class='news-box'>
           <div class='news-top'>
-            <div class='news-api'>后台快照 + 实时接口双保险</div>
+            <div class='news-api'>稳定 30 条资讯池</div>
             <button class='refresh-btn' id='refresh-news'>立即刷新</button>
           </div>
           <div class='news-status' id='news-status'>等待首次拉取...</div>
+          <div class='news-more'><a href='./news.html'>查看全部资讯 →</a></div>
           <div class='news-list' id='news-list'>
             <div class='news-item'>
               <div class='news-time'>--:--</div>
@@ -149,11 +149,10 @@
       <div class='footer-note'>后续你只要把三只产品的新持仓、以及新的买方路演观点直接发我，我按现有结构更新就行，不需要重新设计页面。</div>
     </section>
   </div>
-
   <script>
     function renderNews(items) {
       const list = document.getElementById('news-list');
-      list.innerHTML = items.slice(0, 16).map(item => `
+      const rows = items.slice(0, 10).map(item => `
         <article class="news-item">
           <div class="news-time">${item.time || '--:--'}</div>
           <div class="news-source">${item.source || '新闻源'}</div>
@@ -163,6 +162,7 @@
           </div>
         </article>
       `).join('');
+      list.innerHTML = rows;
     }
 
     async function loadStaticNews() {
@@ -172,7 +172,7 @@
       const data = await resp.json();
       if (!data || !data.ok || !Array.isArray(data.items) || !data.items.length) throw new Error('empty static');
       renderNews(data.items);
-      status.textContent = `已显示后台快照 ${data.fetchedAt ? new Date(data.fetchedAt).toLocaleString('zh-CN', { hour12:false }) : ''}`;
+      status.textContent = `更新 ${data.fetchedAt ? new Date(data.fetchedAt).toLocaleString('zh-CN', { hour12:false }) : ''}`;
       return data;
     }
 
@@ -184,27 +184,17 @@
         const data = await resp.json();
         if (!data || !data.ok || !Array.isArray(data.items) || !data.items.length) throw new Error('empty live');
         renderNews(data.items);
-        status.textContent = `已刷新实时接口 ${data.fetchedAt ? new Date(data.fetchedAt).toLocaleString('zh-CN', { hour12:false }) : ''}`;
-      } catch (err) {
-        if (!document.querySelector('.news-item')) {
-          document.getElementById('news-list').innerHTML = `
-            <article class="news-item">
-              <div class="news-time">--:--</div>
-              <div class="news-source">系统</div>
-              <div class="news-main"><div class="news-title">韩国市场资讯流暂时未返回</div><div class="news-body">后台快照和实时接口都未成功返回，稍后重试。</div></div>
-            </article>
-          `;
-        }
-      }
+        status.textContent = `更新 ${data.fetchedAt ? new Date(data.fetchedAt).toLocaleString('zh-CN', { hour12:false }) : ''}`;
+      } catch (err) {}
     }
 
     async function bootNews() {
       const status = document.getElementById('news-status');
-      status.textContent = '正在加载后台快照...';
+      status.textContent = '加载中...';
       try {
         await loadStaticNews();
       } catch (err) {
-        status.textContent = '后台快照暂时未返回，尝试实时接口...';
+        status.textContent = '暂无数据';
       }
       await refreshLiveNews();
     }
@@ -212,6 +202,6 @@
     document.getElementById('refresh-news').addEventListener('click', refreshLiveNews);
     bootNews();
     setInterval(refreshLiveNews, 300000);
-  </script>
+    </script>
 </body>
 </html>

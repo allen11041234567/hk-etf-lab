@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang='zh-CN'>
+<head>
+  <meta charset='utf-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <meta name='robots' content='noindex,nofollow,noarchive' />
+  <title>韩国市场全部资讯</title>
+  <style>
+    :root{--bg:#f3f6fb;--panel:#ffffff;--text:#0f172a;--muted:#64748b;--line:#dbe3ef;--brand:#0f766e;--shadow:0 18px 42px rgba(15,23,42,.08)}
+    *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;background:linear-gradient(180deg,#f8fbff 0%,#eef3f9 100%);color:var(--text)}
+    .wrap{max-width:1100px;margin:0 auto;padding:24px 16px 40px} .panel{background:#fff;border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:var(--shadow)}
+    .back{display:inline-block;margin-bottom:12px;color:#2563eb;text-decoration:none;font-size:14px;font-weight:800} h1{margin:0 0 10px;font-size:34px} .sub{color:var(--muted);font-size:14px;line-height:1.8}
+    .topbar{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:10px 0 14px} .status{font-size:12px;color:var(--muted)} .btn{border:none;background:#0f766e;color:#fff;padding:10px 14px;border-radius:999px;font-size:13px;font-weight:800;cursor:pointer}
+    .news-list{display:grid;gap:0} .news-item{display:grid;grid-template-columns:72px 86px 1fr;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px dashed var(--line)} .news-item:last-child{border-bottom:none;padding-bottom:0}
+    .news-time{font-size:12px;color:var(--muted)} .news-source{font-size:12px;color:var(--brand);font-weight:800} .news-title{font-size:15px;font-weight:800;line-height:1.6;margin-bottom:2px} .news-title a{text-decoration:none} .news-body{font-size:12px;color:#64748b;line-height:1.65}
+    @media (max-width:620px){h1{font-size:28px}.news-item{grid-template-columns:58px 64px 1fr;gap:8px}}
+  </style>
+</head>
+<body>
+  <div class='wrap'>
+    <div class='panel'>
+      <a class='back' href='./index.html'>← 返回韩国市场合作客户观察站</a>
+      <h1>韩国市场全部资讯</h1>
+      <div class='sub'>这里稳定保留最近 30 条左右资讯，按时间倒序展示。首页只放最新 10 条。</div>
+      <div class='topbar'><div class='status' id='news-status'>等待首次拉取...</div><button class='btn' id='refresh-news'>立即刷新</button></div>
+      <div class='news-list' id='news-list'></div>
+    </div>
+  </div>
+  <script>
+    function renderNews(items) {
+      const list = document.getElementById('news-list');
+      const rows = items.slice(0, 30).map(item => `
+        <article class="news-item">
+          <div class="news-time">${item.time || '--:--'}</div>
+          <div class="news-source">${item.source || '新闻源'}</div>
+          <div class="news-main">
+            <div class="news-title"><a href="${item.url || '#'}" target="_blank" rel="noopener noreferrer">${item.zhTitle || item.title || '未命名资讯'}</a></div>
+            <div class="news-body">${item.category || '韩国市场'}</div>
+          </div>
+        </article>
+      `).join('');
+      list.innerHTML = rows;
+    }
+
+    async function loadStaticNews() {
+      const status = document.getElementById('news-status');
+      const staticUrl = `${location.origin}/assets/data/korea-market-digest.json?t=${Date.now()}`;
+      const resp = await fetch(staticUrl, { cache: 'no-store' });
+      const data = await resp.json();
+      if (!data || !data.ok || !Array.isArray(data.items) || !data.items.length) throw new Error('empty static');
+      renderNews(data.items);
+      status.textContent = `更新 ${data.fetchedAt ? new Date(data.fetchedAt).toLocaleString('zh-CN', { hour12:false }) : ''}`;
+      return data;
+    }
+
+    async function refreshLiveNews() {
+      const status = document.getElementById('news-status');
+      try {
+        const apiUrl = `${location.origin}/api/pulse/korea-market-digest?t=${Date.now()}`;
+        const resp = await fetch(apiUrl, { cache: 'no-store' });
+        const data = await resp.json();
+        if (!data || !data.ok || !Array.isArray(data.items) || !data.items.length) throw new Error('empty live');
+        renderNews(data.items);
+        status.textContent = `更新 ${data.fetchedAt ? new Date(data.fetchedAt).toLocaleString('zh-CN', { hour12:false }) : ''}`;
+      } catch (err) {}
+    }
+
+    async function bootNews() {
+      const status = document.getElementById('news-status');
+      status.textContent = '加载中...';
+      try {
+        await loadStaticNews();
+      } catch (err) {
+        status.textContent = '暂无数据';
+      }
+      await refreshLiveNews();
+    }
+
+    document.getElementById('refresh-news').addEventListener('click', refreshLiveNews);
+    bootNews();
+    setInterval(refreshLiveNews, 300000);
+    </script>
+</body>
+</html>

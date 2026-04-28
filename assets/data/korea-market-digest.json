@@ -1,8 +1,48 @@
 {
   "ok": true,
-  "fetchedAt": "2026-04-28T00:25:06.111282+00:00",
-  "itemCount": 32,
+  "fetchedAt": "2026-04-28T00:38:45.732707+00:00",
+  "itemCount": 30,
   "items": [
+    {
+      "title": "Samsung SDI swings to Q1 profit on ESS battery growth",
+      "originalTitle": "Samsung SDI swings to Q1 profit on ESS battery growth",
+      "zhTitle": "三星 SDI swings to Q1 利润 on ESS 电池 growth",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBRZjRiZ0h3WTVtMGdfMS1GTDNPRkVVQTVkS2NyQjd1NXUwTks4NEs2RG5JMzNxZ1oweWRPajdXYTFVcV96OE9ES1Zkd3hsdG5NNk5GR1NvRDQ2UQ?oc=5",
+      "time": "04/28 08:35",
+      "source": "Yonhap",
+      "category": "半导体",
+      "ts": 1777336506.0
+    },
+    {
+      "title": "N. Korea's executions over S. Korean cultural content surge after COVID-19 border closure: report",
+      "originalTitle": "N. Korea's executions over S. Korean cultural content surge after COVID-19 border closure: report",
+      "zhTitle": "N. 韩国's executions over S. 韩国 cultural content 飙升 after COVID-19 border closure: report",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9rNmVvUGVhLWlOdnJhX2FtdTkwcmxLM2JZZmF2NS13N2RRSGxpNEZyTUpOdTh0OUdDVFBiRFlHWHN0bnB2VC1hWWNtU3NhYTM5b1FIeFBVLURzSmlVQVFwbnQtVXZLcVdJeGJHRA?oc=5",
+      "time": "04/28 08:32",
+      "source": "Yonhap",
+      "category": "宏观",
+      "ts": 1777336350.0
+    },
+    {
+      "title": "Seoul stocks open at record high ahead of U.S. big tech earnings",
+      "originalTitle": "Seoul stocks open at record high ahead of U.S. big tech earnings",
+      "zhTitle": "首尔 股市 open at 历史新高 ahead of U.S. big tech earnings",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5GLTRqU3pHUFlKMDgwcGdUQ3dJMHRJNlJZcGpCdXJMRkRXeGlhQ2FFaG0xWmJZTmV2WjlSblV4WFpyN2l3LUotdkxtSGloQ3Y0X2c0WXJ0cHdBQQ?oc=5",
+      "time": "04/28 08:31",
+      "source": "Yonhap",
+      "category": "韩股",
+      "ts": 1777336285.0
+    },
+    {
+      "title": "KOSPI rises",
+      "originalTitle": "KOSPI rises",
+      "zhTitle": "韩国综合指数 rises",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBZcXhLSUktSDZCcHR3M200UUttSUQ0TXdMNjQxNGdzQkVmQ0plT3IyVTNObVhHMm9IVWxuLWlfeFI1czQwcldWZ0x1TnFEWDR5RWo4aGlvU0RxSDZnSjg2bFoyd090Ty1oVnIyY3R5MWhCdXR3THRB?oc=5",
+      "time": "04/28 08:28",
+      "source": "Yonhap",
+      "category": "韩股",
+      "ts": 1777336131.0
+    },
     {
       "title": "Seoul stocks open higher ahead U.S. big tech earnings",
       "originalTitle": "Seoul stocks open higher ahead U.S. big tech earnings",
@@ -74,6 +114,16 @@
       "ts": 1777321591.0
     },
     {
+      "title": "As Korea cracks down on English kindergartens, Seoul districts open their own for free",
+      "originalTitle": "As Korea cracks down on English kindergartens, Seoul districts open their own for free",
+      "zhTitle": "As 韩国 cracks down on English kindergartens, 首尔 districts open their own for free",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOdnlTU2pWWF9IMVB6QjQ5aldLLXNmRnhubkNtUVk3VW12MVhSeXNDa1BmS0loeWVMNWlQTEFBeDA4VHdlbTdoUzRhRkF1WG5qeUU5ZTZZcktCb29SOGlXR2N0TkV3MkY2STlnVU1CdEhLNzk1RjB5c243d2hXOXVSUlhweE1kejEtV2w4UUhtV0I5YVhDQjd6cmNNV1lVQjRpTVZvUUZUeE9ZanBZSm1qa2FrU2RKVF9heWpyVHhBUkplWHprSl9KR3owTml5TWRyZEF1dE1jenN5d9IB3wFBVV95cUxORGRXQUVsSUVQLXZTOUsxRS1OcFpzZ01TZXdLa01FY05xamFvVDNSQVlJWUI4R1hUTlF0NGhXNFhtX2lrajdJRnY5U0hGYlpoSnVVTFlUYllmWDdpd1NGOTNYd3M4c21lYnRLaHNfWVVWME5WN1hqcVR6N0V0cWxMUWVPU2tjR2dENWh3V2JIZjlUVXhpekNRV0ZRdnJ1RDBCVTRuOHEzQmFYMDFHX2pRd3h0SU9oTEtsWmN6UHNlSTl1M0dMYWFjZXQ0ejRNbG5zbkF1R0tTUTZOb2dSd2d3?oc=5",
+      "time": "04/28 00:00",
+      "source": "Korea Times",
+      "category": "公司",
+      "ts": 1777305600.0
+    },
+    {
       "title": "Drinking no longer default for Korea's Gen Z",
       "originalTitle": "Drinking no longer default for Korea's Gen Z",
       "zhTitle": "Drinking no longer default for 韩国's Gen Z",
@@ -124,16 +174,6 @@
       "ts": 1777280019.0
     },
     {
-      "title": "HS Hyosung Advanced Q1 net income down 33.1 pct to 6.7 bln won",
-      "originalTitle": "HS Hyosung Advanced Q1 net income down 33.1 pct to 6.7 bln won",
-      "zhTitle": "HS Hyosung Advanced Q1 net income down 33.1 pct to 6.7 bln 韩元",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5hbE83VWFZaVpVNjA4TjE5RVNjLUdHYUd5ZUFUd0g5a25QNkJtVWZ1V21vZUNpNkhYMkVKenFIVlVNQ3JtTDZOVXpJU2JFX2FkVU9QS2ZZaFFtdw?oc=5",
-      "time": "04/27 16:38",
-      "source": "Yonhap",
-      "category": "宏观",
-      "ts": 1777279081.0
-    },
-    {
       "title": "Seoul's top envoy to U.S., FM Cho discuss N.K. intel controversy, Coupang issue",
       "originalTitle": "Seoul's top envoy to U.S., FM Cho discuss N.K. intel controversy, Coupang issue",
       "zhTitle": "首尔's top envoy to U.S., FM Cho discuss N.K. intel controversy, Coupang issue",
@@ -172,16 +212,6 @@
       "source": "Korea Herald",
       "category": "韩股",
       "ts": 1777276989.0
-    },
-    {
-      "title": "Ex-President Moon urges N. Korean leader to return to dialogue on summit anniv.",
-      "originalTitle": "Ex-President Moon urges N. Korean leader to return to dialogue on summit anniv.",
-      "zhTitle": "Ex-President Moon urges N. 韩国 leader to return to dialogue on summit anniv.",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE12NzNIb0dQSU80TG5USWFiN01RbFlwMF9jQnBYZGxXS01tQ1RxU0ZHSnJEcFlTV3RjRVJmSDA2OWlFVGFLRlFjUTUxbUFoOV9LZkd0T1cwcnBhQQ?oc=5",
-      "time": "04/27 15:58",
-      "source": "Yonhap",
-      "category": "韩股",
-      "ts": 1777276696.0
     },
     {
       "title": "Samsung, SK hynix morph into AI foundries as Big Tech reshapes chipmaking",
@@ -272,56 +302,6 @@
       "source": "Yonhap",
       "category": "韩股",
       "ts": 1777274057.0
-    },
-    {
-      "title": "KOSPI at new record high",
-      "originalTitle": "KOSPI at new record high",
-      "zhTitle": "韩国综合指数 at new 历史新高",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBDY2w3TnhyUmFpR1F1Rkk2RkJuU0RrWTNaU3FUaEx6aWQyd3U5MDNiN1hTX0c3c216ZWxkaDZ4Qmx1aTZwNVpQYnJnNW1zOUZPdXRsOVh6c0ZHcnhCOWdqMV9abTZTc3RPd1lJVkhPRjhtaFRzaFdN?oc=5",
-      "time": "04/27 14:59",
-      "source": "Yonhap",
-      "category": "韩股",
-      "ts": 1777273166.0
-    },
-    {
-      "title": "Record Profits Leave Investors Split on Samsung and SK Hynix Outlook",
-      "originalTitle": "Record Profits Leave Investors Split on Samsung and SK Hynix Outlook",
-      "zhTitle": "创纪录利润之后，投资者对三星与SK海力士后市分歧加大",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNRGVtMWRaVm5kTmsxaVRuLXlwNnZaZmdVN0k2UnRIbWJCTTgtX1NyQ3ZfRGZITzd0bTN6UmViSVFuSXNEazUxbGQtNTRjYWZjeVU4d3U0T0Q2TC12YmFuZU95Vm9QN0Q0TUU1SEZvU3gxLTU2N2ZBMzVyUVRnSTlaZTJ4Vmkwd1l2RFN0YXFVelcxdXlQRmNBMXBEbk9PTDlO?oc=5",
-      "time": "04/27 14:53",
-      "source": "Koreabizwire",
-      "category": "半导体",
-      "ts": 1777272796.0
-    },
-    {
-      "title": "Mirae Asset’s Tiger 200 IT ETF tops W1tr on AI demand",
-      "originalTitle": "Mirae Asset’s Tiger 200 IT ETF tops W1tr on AI demand",
-      "zhTitle": "Mirae Asset’s Tiger 200 IT ETF tops W1tr on AI demand",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5ZYzRIZjFsRmtObEpfLWdqTnJHbngwUjU3czFub0NwVlRDSEhLcC1JLU9fQ2sxT1QxTGV0dEJFeVZrNXNHZTBydGp4ZG1HOXFVdUJ6S3lfcw?oc=5",
-      "time": "04/27 14:48",
-      "source": "Korea Herald",
-      "category": "产业",
-      "ts": 1777272503.0
-    },
-    {
-      "title": "Samsung union flags 18% output hit, raises stakes with 18-day strike threat",
-      "originalTitle": "Samsung union flags 18% output hit, raises stakes with 18-day strike threat",
-      "zhTitle": "三星 union flags 18% output hit, raises stakes with 18-day strike threat",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5CN01FWENmdVNlMVZMaGxqc1B6bmYxVWpXTndHQnlMbTlFRGpaMHEzMEwycElsQkVJdVFZUW5hU2Rhazh3bV9GclQ2aEl2RGduSWJVQlRSUdIBV0FVX3lxTE5CN01FWENmdVNlMVZMaGxqc1B6bmYxVWpXTndHQnlMbTlFRGpaMHEzMEwycElsQkVJdVFZUW5hU2Rhazh3bV9GclQ2aEl2RGduSWJVQlRSUQ?oc=5",
-      "time": "04/27 14:48",
-      "source": "Aju Press",
-      "category": "半导体",
-      "ts": 1777272499.0
-    },
-    {
-      "title": "Korea Publishing Advisers Warn of AI-Driven Web Novel Competition, Seek Bigger Budget",
-      "originalTitle": "Korea Publishing Advisers Warn of AI-Driven Web Novel Competition, Seek Bigger Budget",
-      "zhTitle": "韩国 Publishing Advisers Warn of AI-Driven Web Novel Competition, Seek Bigger Budget",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1wOGk4RERaTnJNQXNIal92OWZpSGF5dXlmWG1qOVRrQzE5VktvdzdHbzFLbzVBTkFRdjAxNTU2T2d6eW1JUGJ0cnJkeHhCN3dUM0dyYVpMQ3VWNEXSAVdBVV95cUxQNENMdnZVMkNHS3NrWVI0VDVkNzZvR3dZSHB0RklTLW9ZUlRhc055VUN5UHE5UERjRG1jbFNyN1ZBWmZpRmhCb3ViV0RLb094cmpNdnRBZVU?oc=5",
-      "time": "04/27 14:45",
-      "source": "Aju Press",
-      "category": "产业",
-      "ts": 1777272300.0
     }
   ]
 }
