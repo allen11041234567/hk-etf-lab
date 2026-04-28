@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116482505797913052": {
+    "content_zh_cn": "哇，真不错。我一直都想住进白金汉宫！！！我过几分钟就会和国王、王后谈这件事！！！总统DJT",
+    "content_zh_hk": "嘩，真不錯。我一直都想住進白金漢宮！！！我過幾分鐘就會和國王、王后談這件事！！！總統DJT",
+    "content_ko": "와, 정말 좋네요. 저는 늘 버킹엄궁에서 살아보고 싶었습니다!!! 몇 분 후에 국왕과 왕비와 이 일에 대해 이야기하겠습니다!!! 대통령 DJT"
+  },
   "https://truthsocial.com/@realDonaldTrump/116482210260744436": {
     "content_zh_cn": "仇恨股份公司：左派的不容忍机器，恐将永远改变安全格局：https://justthenews.com/government/security/tuehate-incorporated-lefts-intolerance-machine-threatens-change-security",
     "content_zh_hk": "仇恨股份公司：左派的不容忍機器，恐將永久改變安全格局：https://justthenews.com/government/security/tuehate-incorporated-lefts-intolerance-machine-threatens-change-security",
