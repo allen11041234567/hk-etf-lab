@@ -35,7 +35,8 @@
           <div class="news-source">${item.source || '新闻源'}</div>
           <div class="news-main">
             <div class="news-title"><a href="${item.url || '#'}" target="_blank" rel="noopener noreferrer">${item.zhTitle || item.title || '未命名资讯'}</a></div>
-            <div class="news-body">${item.category || '韩国市场'}</div>
+            <div class="news-body">${item.summaryZh || item.category || '韩国市场'}</div>
+            <div class="news-body">${item.whyZh || ''}</div>
           </div>
         </article>
       `).join('');
@@ -53,18 +54,6 @@
       return data;
     }
 
-    async function refreshLiveNews() {
-      const status = document.getElementById('news-status');
-      try {
-        const apiUrl = `${location.origin}/api/pulse/korea-market-digest?t=${Date.now()}`;
-        const resp = await fetch(apiUrl, { cache: 'no-store' });
-        const data = await resp.json();
-        if (!data || !data.ok || !Array.isArray(data.items) || !data.items.length) throw new Error('empty live');
-        renderNews(data.items);
-        status.textContent = `更新 ${data.fetchedAt ? new Date(data.fetchedAt).toLocaleString('zh-CN', { hour12:false }) : ''}`;
-      } catch (err) {}
-    }
-
     async function bootNews() {
       const status = document.getElementById('news-status');
       status.textContent = '加载中...';
@@ -73,12 +62,11 @@
       } catch (err) {
         status.textContent = '暂无数据';
       }
-      await refreshLiveNews();
     }
 
-    document.getElementById('refresh-news').addEventListener('click', refreshLiveNews);
+    document.getElementById('refresh-news').addEventListener('click', loadStaticNews);
     bootNews();
-    setInterval(refreshLiveNews, 300000);
+    setInterval(loadStaticNews, 300000);
     </script>
 </body>
 </html>

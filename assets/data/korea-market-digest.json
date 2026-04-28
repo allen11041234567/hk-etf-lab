@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-04-28T03:23:09.312926+00:00",
+  "fetchedAt": "2026-04-28T04:00:06.417593+00:00",
   "itemCount": 30,
   "items": [
     {
@@ -11,7 +11,9 @@
       "time": "04/28 10:30",
       "source": "Yonhap",
       "category": "韩股",
-      "ts": 1777343436.0
+      "ts": 1777343436.0,
+      "summaryZh": "摘要：这是一条与韩国市场相关的最新动态，可作为当日市场线索补充。",
+      "whyZh": "看点：适合放进韩国市场情报台里持续跟踪。"
     },
     {
       "title": "Seoul stocks briefly top 6,700 on tech rally, ahead of M7 earnings",
@@ -21,7 +23,9 @@
       "time": "04/28 10:25",
       "source": "Yonhap",
       "category": "韩股",
-      "ts": 1777343147.0
+      "ts": 1777343147.0,
+      "summaryZh": "摘要：这是一条与韩国市场相关的最新动态，可作为当日市场线索补充。",
+      "whyZh": "看点：适合放进韩国市场情报台里持续跟踪。"
     },
     {
       "title": "The Korea Interbank Offered Rates (KORIBOR)",
@@ -31,17 +35,9 @@
       "time": "04/28 10:13",
       "source": "Yonhap",
       "category": "宏观",
-      "ts": 1777342383.0
-    },
-    {
-      "title": "S. Korean envoy calls N. Korea's nukes 'most urgent' challenge to nonproliferation regime",
-      "originalTitle": "S. Korean envoy calls N. Korea's nukes 'most urgent' challenge to nonproliferation regime",
-      "zhTitle": "S. 韩国 envoy calls N. 韩国's nukes 'most urgent' challenge to nonproliferation regime",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE03b1BYcnQtel85SWRVczFKenFva0FFZGNTNWwweVlXSEVoS1BCbXlaTnBqaUxtNDF6OVlQTzhJQnFXWV94S0lPOTFkM0ZfU3M3aHBMYmZYM2NDUQ?oc=5",
-      "time": "04/28 09:11",
-      "source": "Yonhap",
-      "category": "宏观",
-      "ts": 1777338674.0
+      "ts": 1777342383.0,
+      "summaryZh": "摘要：这条更偏宏观与汇率层面，影响外资风险偏好和韩国资产定价。",
+      "whyZh": "看点：韩元与利率预期变化，常常先于部分权益资产反应。"
     },
     {
       "title": "Samsung SDI swings to Q1 profit on ESS battery growth",
@@ -51,7 +47,9 @@
       "time": "04/28 08:57",
       "source": "Korea Herald",
       "category": "半导体",
-      "ts": 1777337851.0
+      "ts": 1777337851.0,
+      "summaryZh": "摘要：三星相关业务盈利或景气出现边际改善，市场会重新评估韩国科技链的盈利韧性。",
+      "whyZh": "看点：这类消息通常会强化韩国科技与高端制造主线。"
     },
     {
       "title": "Seoul stocks open at record high ahead of US big tech earnings",
@@ -61,7 +59,9 @@
       "time": "04/28 08:39",
       "source": "Korea Herald",
       "category": "韩股",
-      "ts": 1777336765.0
+      "ts": 1777336765.0,
+      "summaryZh": "摘要：这是一条与韩国市场相关的最新动态，可作为当日市场线索补充。",
+      "whyZh": "看点：适合放进韩国市场情报台里持续跟踪。"
     },
     {
       "title": "Seoul stocks open at record high ahead of U.S. big tech earnings",
@@ -71,7 +71,9 @@
       "time": "04/28 08:31",
       "source": "Yonhap",
       "category": "韩股",
-      "ts": 1777336285.0
+      "ts": 1777336285.0,
+      "summaryZh": "摘要：这是一条与韩国市场相关的最新动态，可作为当日市场线索补充。",
+      "whyZh": "看点：适合放进韩国市场情报台里持续跟踪。"
     },
     {
       "title": "KOSPI rises",
@@ -81,7 +83,9 @@
       "time": "04/28 08:28",
       "source": "Yonhap",
       "category": "韩股",
-      "ts": 1777336131.0
+      "ts": 1777336131.0,
+      "summaryZh": "摘要：这条消息反映的是韩股大盘强弱变化，适合用来判断市场风险偏好。",
+      "whyZh": "看点：如果指数创新高或放量走强，往往意味着科技权重仍在主导盘面。"
     },
     {
       "title": "Korea betting on AI to fix productivity will make problem worse",
@@ -91,7 +95,9 @@
       "time": "04/28 08:10",
       "source": "Korea Times",
       "category": "产业",
-      "ts": 1777335000.0
+      "ts": 1777335000.0,
+      "summaryZh": "摘要：消息偏向韩国AI与科技投资主线，反映企业资本开支或产业方向变化。",
+      "whyZh": "看点：如果持续出现这类消息，说明韩国科技叙事仍在增强。"
     },
     {
       "title": "Seoul stocks open higher ahead U.S. big tech earnings",
@@ -101,7 +107,9 @@
       "time": "04/28 08:04",
       "source": "Yonhap",
       "category": "韩股",
-      "ts": 1777334684.0
+      "ts": 1777334684.0,
+      "summaryZh": "摘要：这是一条与韩国市场相关的最新动态，可作为当日市场线索补充。",
+      "whyZh": "看点：适合放进韩国市场情报台里持续跟踪。"
     },
     {
       "title": "Seoul shares down; exporters hit by U.S. outlook",
@@ -111,17 +119,9 @@
       "time": "04/28 06:27",
       "source": "Reuters",
       "category": "宏观",
-      "ts": 1777328860.0
-    },
-    {
-      "title": "Top headlines in major S. Korean newspapers",
-      "originalTitle": "Top headlines in major S. Korean newspapers",
-      "zhTitle": "Top headlines in major S. 韩国 newspapers",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE80czItYXF2dW9DbTNoZUgyTEc5T2hNTG9WMDRqcjRFM0hTSWNmbjAxbUlSajBzWkw4Zi1taXBJa1c0amhsX1ZscXMyQV80X0RlblgtcWlmZEh4UQ?oc=5",
-      "time": "04/28 06:03",
-      "source": "Yonhap",
-      "category": "韩股",
-      "ts": 1777327410.0
+      "ts": 1777328860.0,
+      "summaryZh": "摘要：这条更偏宏观与汇率层面，影响外资风险偏好和韩国资产定价。",
+      "whyZh": "看点：韩元与利率预期变化，常常先于部分权益资产反应。"
     },
     {
       "title": "[Lim Woong]The dangers of Korean lobbying in Washington",
@@ -131,7 +131,9 @@
       "time": "04/28 04:30",
       "source": "Korea Herald",
       "category": "韩股",
-      "ts": 1777321800.0
+      "ts": 1777321800.0,
+      "summaryZh": "摘要：这是一条与韩国市场相关的最新动态，可作为当日市场线索补充。",
+      "whyZh": "看点：适合放进韩国市场情报台里持续跟踪。"
     },
     {
       "title": "Micron and Sandisk continue rally as demand for memory expected to persist",
@@ -141,7 +143,9 @@
       "time": "04/28 04:26",
       "source": "CNBC",
       "category": "半导体",
-      "ts": 1777321591.0
+      "ts": 1777321591.0,
+      "summaryZh": "摘要：这是一条与韩国市场相关的最新动态，可作为当日市场线索补充。",
+      "whyZh": "看点：适合放进韩国市场情报台里持续跟踪。"
     },
     {
       "title": "S.Korea jobless rate steady but data bodes ill on spending",
@@ -151,17 +155,9 @@
       "time": "04/27 21:06",
       "source": "Reuters",
       "category": "宏观",
-      "ts": 1777295180.0
-    },
-    {
-      "title": "Struggling Eagles reliever Kim Seo-hyeon demoted to minors",
-      "originalTitle": "Struggling Eagles reliever Kim Seo-hyeon demoted to minors",
-      "zhTitle": "Struggling Eagles reliever Kim Seo-hyeon demoted to minors",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE90WU01ZVV0aE0xX2lLMmlOelFkeUF5cjFQai1oMVg5ZUF5bFJNN0xLZksxUVAxV2owSmg5Q21HWEVsdEEtWGU4OW0wTFdvckxMX1VOWUtTaw?oc=5",
-      "time": "04/27 18:18",
-      "source": "Korea Herald",
-      "category": "公司",
-      "ts": 1777285090.0
+      "ts": 1777295180.0,
+      "summaryZh": "摘要：这条更偏宏观与汇率层面，影响外资风险偏好和韩国资产定价。",
+      "whyZh": "看点：韩元与利率预期变化，常常先于部分权益资产反应。"
     },
     {
       "title": "Diesel, jet fuel exports from northeast Asia to recover in May, sources say",
@@ -171,7 +167,9 @@
       "time": "04/27 17:02",
       "source": "Reuters",
       "category": "宏观",
-      "ts": 1777280529.0
+      "ts": 1777280529.0,
+      "summaryZh": "摘要：这条更偏宏观与汇率层面，影响外资风险偏好和韩国资产定价。",
+      "whyZh": "看点：韩元与利率预期变化，常常先于部分权益资产反应。"
     },
     {
       "title": "Google to build AI campus in South Korea, presidential office says",
@@ -181,7 +179,9 @@
       "time": "04/27 16:53",
       "source": "Reuters",
       "category": "公司",
-      "ts": 1777280019.0
+      "ts": 1777280019.0,
+      "summaryZh": "摘要：消息偏向韩国AI与科技投资主线，反映企业资本开支或产业方向变化。",
+      "whyZh": "看点：如果持续出现这类消息，说明韩国科技叙事仍在增强。"
     },
     {
       "title": "Topic: samsungsds",
@@ -191,17 +191,9 @@
       "time": "04/27 16:37",
       "source": "Korea Times",
       "category": "半导体",
-      "ts": 1777279033.0
-    },
-    {
-      "title": "Seoul's top envoy to U.S., FM Cho discuss N.K. intel controversy, Coupang issue",
-      "originalTitle": "Seoul's top envoy to U.S., FM Cho discuss N.K. intel controversy, Coupang issue",
-      "zhTitle": "首尔's top envoy to U.S., FM Cho discuss N.K. intel controversy, Coupang issue",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5WOGNNR0ZWRjlTLXJzenVmUEsxcVd5bmlMWWtITEhfbXg1Q2YzdVh0V3pKeXdyb2tqSlpPbEdTRkx6RmJLc3Y5ejdDRTg0eGZuWXkwOFFXbFF0dw?oc=5",
-      "time": "04/27 16:33",
-      "source": "Yonhap",
-      "category": "韩股",
-      "ts": 1777278808.0
+      "ts": 1777279033.0,
+      "summaryZh": "摘要：这是一条与韩国市场相关的最新动态，可作为当日市场线索补充。",
+      "whyZh": "看点：适合放进韩国市场情报台里持续跟踪。"
     },
     {
       "title": "Ex-MLB player Choi Ji-man determined to prove worth on S. Korean minor league team",
@@ -211,7 +203,9 @@
       "time": "04/27 16:18",
       "source": "Yonhap",
       "category": "韩股",
-      "ts": 1777277909.0
+      "ts": 1777277909.0,
+      "summaryZh": "摘要：这是一条与韩国市场相关的最新动态，可作为当日市场线索补充。",
+      "whyZh": "看点：适合放进韩国市场情报台里持续跟踪。"
     },
     {
       "title": "KOSPI, Nikkei close at all-time highs on chip rally, strong institutional buying",
@@ -221,17 +215,9 @@
       "time": "04/27 16:16",
       "source": "Aju Press",
       "category": "韩股",
-      "ts": 1777277776.0
-    },
-    {
-      "title": "More Koreans are splitting their food and groceries with strangers",
-      "originalTitle": "More Koreans are splitting their food and groceries with strangers",
-      "zhTitle": "More 韩国s are splitting their food and groceries with strangers",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9adkJybnJEZV9Gdm56X0h0X1N0OGJicUlhU0xNOGhnd1N2amdGUFo4aGRneXFxM2NuYlBNUGJZRmczV3RycWpQa0FrSWdScVR5SUZBUzlMOA?oc=5",
-      "time": "04/27 16:03",
-      "source": "Korea Herald",
-      "category": "韩股",
-      "ts": 1777276989.0
+      "ts": 1777277776.0,
+      "summaryZh": "摘要：这条消息反映的是韩股大盘强弱变化，适合用来判断市场风险偏好。",
+      "whyZh": "看点：如果指数创新高或放量走强，往往意味着科技权重仍在主导盘面。"
     },
     {
       "title": "Samsung, SK hynix morph into AI foundries as Big Tech reshapes chipmaking",
@@ -241,7 +227,9 @@
       "time": "04/27 15:51",
       "source": "Aju Press",
       "category": "半导体",
-      "ts": 1777276302.0
+      "ts": 1777276302.0,
+      "summaryZh": "摘要：消息直接指向韩国存储与AI硬件链，对半导体主线最敏感。",
+      "whyZh": "看点：海力士往往是观察韩国科技风险偏好的核心温度计。"
     },
     {
       "title": "Korea, Google DeepMind team up to boost AI-driven science",
@@ -251,7 +239,9 @@
       "time": "04/27 15:51",
       "source": "Korea Herald",
       "category": "产业",
-      "ts": 1777276302.0
+      "ts": 1777276302.0,
+      "summaryZh": "摘要：消息偏向韩国AI与科技投资主线，反映企业资本开支或产业方向变化。",
+      "whyZh": "看点：如果持续出现这类消息，说明韩国科技叙事仍在增强。"
     },
     {
       "title": "(2nd LD) Seoul stocks close at a new record high amid AI-led tech rally",
@@ -261,7 +251,9 @@
       "time": "04/27 15:41",
       "source": "Yonhap",
       "category": "韩股",
-      "ts": 1777275701.0
+      "ts": 1777275701.0,
+      "summaryZh": "摘要：这条消息反映的是韩股大盘强弱变化，适合用来判断市场风险偏好。",
+      "whyZh": "看点：如果指数创新高或放量走强，往往意味着科技权重仍在主导盘面。"
     },
     {
       "title": "LG CNS, Samsung SDS partner with OpenAI to bring ChatGPT Edu to campuses",
@@ -271,17 +263,9 @@
       "time": "04/27 15:28",
       "source": "Korea Times",
       "category": "半导体",
-      "ts": 1777274883.0
-    },
-    {
-      "title": "U.S. restricts intelligence-sharing with S. Korea on N. Korea's nuclear facilities: sources",
-      "originalTitle": "U.S. restricts intelligence-sharing with S. Korea on N. Korea's nuclear facilities: sources",
-      "zhTitle": "U.S. restricts intelligence-sharing with S. 韩国 on N. 韩国's nuclear facilities: sources",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1XU1p0YjhuNXlxVlg1ZlRjYjFTYUs5XzJqbnhrdHdjdFpPYUFxMjJ1TWRBcU5yUm5fcGMzWEtLY3E0SUFMckVCdl9wdU9jUXowbE56TDlrbXlwUQ?oc=5",
-      "time": "04/27 15:23",
-      "source": "Yonhap",
-      "category": "韩股",
-      "ts": 1777274631.0
+      "ts": 1777274883.0,
+      "summaryZh": "摘要：消息偏向韩国AI与科技投资主线，反映企业资本开支或产业方向变化。",
+      "whyZh": "看点：如果持续出现这类消息，说明韩国科技叙事仍在增强。"
     },
     {
       "title": "S. Korea partners with Google DeepMind for AI-led science innovation project",
@@ -291,7 +275,9 @@
       "time": "04/27 15:19",
       "source": "Yonhap",
       "category": "产业",
-      "ts": 1777274393.0
+      "ts": 1777274393.0,
+      "summaryZh": "摘要：消息偏向韩国AI与科技投资主线，反映企业资本开支或产业方向变化。",
+      "whyZh": "看点：如果持续出现这类消息，说明韩国科技叙事仍在增强。"
     },
     {
       "title": "Korean stocks top $4 tril. in market cap for 1st time",
@@ -301,7 +287,81 @@
       "time": "04/27 15:15",
       "source": "Korea Times",
       "category": "韩股",
-      "ts": 1777274102.0
+      "ts": 1777274102.0,
+      "summaryZh": "摘要：这是一条与韩国市场相关的最新动态，可作为当日市场线索补充。",
+      "whyZh": "看点：适合放进韩国市场情报台里持续跟踪。"
+    },
+    {
+      "title": "Seoul stocks close at a new record high amid AI-led tech rally",
+      "originalTitle": "Seoul stocks close at a new record high amid AI-led tech rally",
+      "zhTitle": "首尔股市在 AI 科技股带动下收于历史新高",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE8xMzlzWl9oaVRtYlJQYkVEeWVaUE9wamRPVEpIQ0VyMzk4V2VISEtKWUVmOTl6RlIwbXFnWXFjMWRfbFhYcDEtLVU4MDNDRlQwQlozYVRra1lNQQ?oc=5",
+      "time": "04/27 15:14",
+      "source": "Yonhap",
+      "category": "韩股",
+      "ts": 1777274057.0,
+      "summaryZh": "摘要：这条消息反映的是韩股大盘强弱变化，适合用来判断市场风险偏好。",
+      "whyZh": "看点：如果指数创新高或放量走强，往往意味着科技权重仍在主导盘面。"
+    },
+    {
+      "title": "KOSPI at new record high",
+      "originalTitle": "KOSPI at new record high",
+      "zhTitle": "韩国综合指数 at new 历史新高",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBDY2w3TnhyUmFpR1F1Rkk2RkJuU0RrWTNaU3FUaEx6aWQyd3U5MDNiN1hTX0c3c216ZWxkaDZ4Qmx1aTZwNVpQYnJnNW1zOUZPdXRsOVh6c0ZHcnhCOWdqMV9abTZTc3RPd1lJVkhPRjhtaFRzaFdN?oc=5",
+      "time": "04/27 14:59",
+      "source": "Yonhap",
+      "category": "韩股",
+      "ts": 1777273166.0,
+      "summaryZh": "摘要：这条消息反映的是韩股大盘强弱变化，适合用来判断市场风险偏好。",
+      "whyZh": "看点：如果指数创新高或放量走强，往往意味着科技权重仍在主导盘面。"
+    },
+    {
+      "title": "Record Profits Leave Investors Split on Samsung and SK Hynix Outlook",
+      "originalTitle": "Record Profits Leave Investors Split on Samsung and SK Hynix Outlook",
+      "zhTitle": "创纪录利润之后，投资者对三星与SK海力士后市分歧加大",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNRGVtMWRaVm5kTmsxaVRuLXlwNnZaZmdVN0k2UnRIbWJCTTgtX1NyQ3ZfRGZITzd0bTN6UmViSVFuSXNEazUxbGQtNTRjYWZjeVU4d3U0T0Q2TC12YmFuZU95Vm9QN0Q0TUU1SEZvU3gxLTU2N2ZBMzVyUVRnSTlaZTJ4Vmkwd1l2RFN0YXFVelcxdXlQRmNBMXBEbk9PTDlO?oc=5",
+      "time": "04/27 14:53",
+      "source": "Koreabizwire",
+      "category": "半导体",
+      "ts": 1777272796.0,
+      "summaryZh": "摘要：三星相关业务盈利或景气出现边际改善，市场会重新评估韩国科技链的盈利韧性。",
+      "whyZh": "看点：这类消息通常会强化韩国科技与高端制造主线。"
+    },
+    {
+      "title": "Mirae Asset’s Tiger 200 IT ETF tops W1tr on AI demand",
+      "originalTitle": "Mirae Asset’s Tiger 200 IT ETF tops W1tr on AI demand",
+      "zhTitle": "Mirae Asset’s Tiger 200 IT ETF tops W1tr on AI demand",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5ZYzRIZjFsRmtObEpfLWdqTnJHbngwUjU3czFub0NwVlRDSEhLcC1JLU9fQ2sxT1QxTGV0dEJFeVZrNXNHZTBydGp4ZG1HOXFVdUJ6S3lfcw?oc=5",
+      "time": "04/27 14:48",
+      "source": "Korea Herald",
+      "category": "产业",
+      "ts": 1777272503.0,
+      "summaryZh": "摘要：消息偏向韩国AI与科技投资主线，反映企业资本开支或产业方向变化。",
+      "whyZh": "看点：如果持续出现这类消息，说明韩国科技叙事仍在增强。"
+    },
+    {
+      "title": "Samsung union flags 18% output hit, raises stakes with 18-day strike threat",
+      "originalTitle": "Samsung union flags 18% output hit, raises stakes with 18-day strike threat",
+      "zhTitle": "三星 union flags 18% output hit, raises stakes with 18-day strike threat",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5CN01FWENmdVNlMVZMaGxqc1B6bmYxVWpXTndHQnlMbTlFRGpaMHEzMEwycElsQkVJdVFZUW5hU2Rhazh3bV9GclQ2aEl2RGduSWJVQlRSUdIBV0FVX3lxTE5CN01FWENmdVNlMVZMaGxqc1B6bmYxVWpXTndHQnlMbTlFRGpaMHEzMEwycElsQkVJdVFZUW5hU2Rhazh3bV9GclQ2aEl2RGduSWJVQlRSUQ?oc=5",
+      "time": "04/27 14:48",
+      "source": "Aju Press",
+      "category": "半导体",
+      "ts": 1777272499.0,
+      "summaryZh": "摘要：这是一条与韩国市场相关的最新动态，可作为当日市场线索补充。",
+      "whyZh": "看点：适合放进韩国市场情报台里持续跟踪。"
+    },
+    {
+      "title": "NewJeans in prep for comeback: Ador",
+      "originalTitle": "NewJeans in prep for comeback: Ador",
+      "zhTitle": "NewJeans in prep for comeback: Ador",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOdkhlNkhLZHAzQmNSNDVUUFRMS0pMQzBHbmVpZnBkd2FUd3loNk5yUHgyOTRBNlFRN0diQkVieWNCa3h3eW1rcUpTNVN6VDlJX0VBUEsxa1lfSXpQcjJXOGctbDRnbUVheVVLSHRyaHlOVWlKVVl5OV9lTkhyYXV4LXhFMmd3ODZORmo2WXZIWTJYbGFyZ2JIdkdpNEN4ZlgyNnBURmNFMUM1bW5GMVNkb2lPZ0bSAboBQVVfeXFMT1kzRlNxVjkycm1GbHhWakRpNTB5SDU5UGcyb21rb0xqbmJSSEhjTTNUS3pVVmxJQUlHM2ZJRWJQMm9TLW1XM1RnQ3BSZmlFSWlOa0lYck1Rb2VLelpXQkJSaDI5WmlQVlhycExoZzh4T3lwWkdadUxxbkV3YzlwQVktMlFuZ3hPM282NVU3S2RIOWIwMUtrN1pOTEQ4ckx3a2Q3enR2YUtlS09FUEtCWUhOM0FuX21RZWV3?oc=5",
+      "time": "04/27 14:46",
+      "source": "Korea Times",
+      "category": "公司",
+      "ts": 1777272367.0,
+      "summaryZh": "摘要：这条主要影响韩国重点公司层面的预期变化。",
+      "whyZh": "看点：适合用来追踪龙头公司基本面与市场情绪。"
     }
   ]
 }
