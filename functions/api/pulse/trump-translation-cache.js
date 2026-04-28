@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116482210260744436": {
+    "content_zh_cn": "仇恨股份公司：左派的不容忍机器，恐将永远改变安全格局：https://justthenews.com/government/security/tuehate-incorporated-lefts-intolerance-machine-threatens-change-security",
+    "content_zh_hk": "仇恨股份公司：左派的不容忍機器，恐將永久改變安全格局：https://justthenews.com/government/security/tuehate-incorporated-lefts-intolerance-machine-threatens-change-security",
+    "content_ko": "증오 주식회사: 좌파의 불관용 기계가 안보 지형을 영원히 바꿔놓을 위협을 가하고 있다: https://justthenews.com/government/security/tuehate-incorporated-lefts-intolerance-machine-threatens-change-security"
+  },
   "https://truthsocial.com/@realDonaldTrump/116479452865634973": {
     "content_zh_cn": "美国的选举被操弄、被窃取，沦为全世界的笑柄。我们要么把它们纠正过来，要么这个国家将不复存在。我要求所有共和党人为以下事项而战：\n\n拯救美国法案！\n\n1. 所有选民都必须出示选民身份证明（身份证明！）。\n\n2. 所有选民都必须出示公民身份的证明，方可投票。\n\n3. 禁止邮寄选票（疾病、残障、军人或出行情况除外！）。",
     "content_zh_hk": "美國的選舉被操弄、被竊取，淪為全世界的笑柄。我們要麼把它們糾正過來，要麼這個國家將不復存在。我要求所有共和黨人為以下事項而戰：\n\n拯救美國法案！\n\n1. 所有選民都必須出示選民身份證明（身份證明！）。\n\n2. 所有選民都必須出示公民身份證明，方可投票。\n\n3. 禁止郵寄選票（疾病、殘障、軍人或出行情況除外！）。",
