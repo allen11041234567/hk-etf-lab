@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-04-28T13:49:48.858187+00:00",
+  "fetchedAt": "2026-04-28T14:00:12.299628+00:00",
   "itemCount": 30,
   "items": [
     {
@@ -128,6 +128,20 @@
       "time": "04/28 14:51",
       "ts": 1777359088.0,
       "fetchedAt": "2026-04-28T13:49:48.822206+00:00"
+    },
+    {
+      "id": "seoul shares down exporters hit by us outlook",
+      "title": "首尔 shares down; 出口ers hit by U.S. outlook",
+      "originalTitle": "Seoul shares down; exporters hit by U.S. outlook",
+      "zhTitle": "首尔 shares down; 出口ers hit by U.S. outlook",
+      "summaryZh": "摘要：这条消息偏宏观和汇率层面，会影响外资风险偏好与韩国资产定价。",
+      "whyZh": "看点：宏观变量变化往往会先影响韩元，再逐步传导到权益市场。",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPRjQyM3hsVFlBQ0tJUjFpOGp4dEQzaEFxbkdSUUM1eVBPQWZmLXpRcVBMQ2FQN0ZFZXEtN0hUU093R1RZd3VjaDhuTk56cC1ZSTNvNlRqdGpnSDVUekVlMG9kRWYzRlJWMkdWT3BMejhuNGNxY0JEM1lOdmNtNTdBSjNwRUR0ZllXeW53dFR0Q0pQeUt0UVZpczYxbVVGSGFsMDlZ?oc=5",
+      "source": "Reuters",
+      "category": "宏观",
+      "time": "04/28 14:44",
+      "ts": 1777358678.0,
+      "fetchedAt": "2026-04-28T14:00:12.273732+00:00"
     },
     {
       "id": "india turns net exporter of finished steel in 2025 26 data shows",
@@ -408,20 +422,6 @@
       "time": "04/28 08:04",
       "ts": 1777334684.0,
       "fetchedAt": "2026-04-28T13:49:48.820801+00:00"
-    },
-    {
-      "id": "micron and sandisk continue rally as demand for memory expected to persist",
-      "title": "Micron and Sandisk continue rally as demand for 存储 expected to persist",
-      "originalTitle": "Micron and Sandisk continue rally as demand for memory expected to persist",
-      "zhTitle": "Micron and Sandisk continue rally as demand for 存储 expected to persist",
-      "summaryZh": "摘要：这条消息直接指向韩国科技与半导体主线，属于当前最核心的市场叙事。",
-      "whyZh": "看点：重点观察是否继续强化三星、SK海力士和AI硬件链的强势预期。",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOcElraEFvSlMzZ3YwUlpkb3NsLTVGS1BLS3NaQlhqSGhlYWNPa3cxdEZLTGQydnp3VE9OaXRzdm9xNG4xSlRkWlhDbmRRRUtPRTNaMjk1R3FsRXZwejVxZzRHckx4NXhsOTRKd2k5WThuWjhDZFZIaU5HTzl3dm8yM0hNcDVqNHhEakM2SFpvRmpkTnhsQnpvOEtkcW1aZ25zN0NWYk5fZ9IBrAFBVV95cUxOWmxMV3N0N2xtSE5qZGRhUUtWNE53cW16SWNXLWJXQlNnR09OU1pUSTFxX0U5UDIwaTdlbXFsNXQzZVQ0b3IxemtUZWFOX1FrNVlOZTQxSGF1blRIWU05d2NnZE9XSEp0SG5fUGZxY21sTFlEcTlteGpLTWpHVG83TTdSdE9kRmVzZEJhdThFU3M1ZzdDM1gxeGpTcHlVRF9GdjFJdkhsa0Y4NkFs?oc=5",
-      "source": "CNBC",
-      "category": "半导体",
-      "time": "04/28 04:26",
-      "ts": 1777321591.0,
-      "fetchedAt": "2026-04-28T13:49:48.834444+00:00"
     }
   ]
 }
