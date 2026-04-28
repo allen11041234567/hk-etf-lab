@@ -31,9 +31,20 @@
     const STATIC_JSON = '/assets/data/korea-market-digest.json';
     const STORAGE_KEY = 'korea-market-digest-cache-v2';
 
+    function newsVisible(item) {
+      const title = String(item.zhTitle || item.title || '');
+      const source = String(item.source || '');
+      const badPatterns = [/Airbnb/i,/CNBC Daily Open/i,/India turns/i,/network fees/i,/procurement/i,/personal choice/i,/Woori falls behind/i,/Intel-Tesla tie/i,/Trump Jr/i,/concert/i,/BOJ/i,/Government buying power/i,/targets \$2tr global procurement/i,/From price to strategy/i];
+      if (!['Yonhap','Korea Herald'].includes(source)) return false;
+      if (badPatterns.some(p => p.test(title))) return false;
+      const zhCount = (title.match(/[一-鿿]/g) || []).length;
+      if (zhCount < 4) return false;
+      return true;
+    }
+
     function renderNews(items) {
       const list = document.getElementById('news-list');
-      const rows = items.slice(0, 30).map(item => `
+      const rows = items.filter(newsVisible).slice(0, 30).map(item => `
         <article class="news-item">
           <div class="news-time">${item.time || '--:--'}</div>
           <div class="news-source-wrap"><div class="news-source">${item.source || '新闻源'}</div><div class="news-cat">${item.category || '韩国市场'}</div></div>
