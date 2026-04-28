@@ -1,4 +1,14 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116479452865634973": {
+    "content_zh_cn": "美国的选举被操弄、被窃取，沦为全世界的笑柄。我们要么把它们纠正过来，要么这个国家将不复存在。我要求所有共和党人为以下事项而战：\n\n拯救美国法案！\n\n1. 所有选民都必须出示选民身份证明（身份证明！）。\n\n2. 所有选民都必须出示公民身份的证明，方可投票。\n\n3. 禁止邮寄选票（疾病、残障、军人或出行情况除外！）。",
+    "content_zh_hk": "美國的選舉被操弄、被竊取，淪為全世界的笑柄。我們要麼把它們糾正過來，要麼這個國家將不復存在。我要求所有共和黨人為以下事項而戰：\n\n拯救美國法案！\n\n1. 所有選民都必須出示選民身份證明（身份證明！）。\n\n2. 所有選民都必須出示公民身份證明，方可投票。\n\n3. 禁止郵寄選票（疾病、殘障、軍人或出行情況除外！）。",
+    "content_ko": "미국의 선거는 조작되고, 도둑맞았으며, 전 세계의 웃음거리가 됐습니다. 우리는 이를 바로잡든지, 아니면 더 이상 나라를 유지하지 못하게 될 것입니다. 저는 모든 공화당원이 다음 사항을 위해 싸워줄 것을 촉구합니다:\n\n미국 구하기 법안!\n\n1. 모든 유권자는 반드시 유권자 신분증을 제시해야 합니다(신분증명!).\n\n2. 모든 유권자는 투표를 하기 위해 반드시 시민권 증빙을 제시해야 합니다.\n\n3. 우편투표 금지(질병, 장애, 군 복무 또는 여행의 경우는 예외!)."
+  },
+  "https://truthsocial.com/@realDonaldTrump/116479450564881147": {
+    "content_zh_cn": "https://www.usatoday.com/story/graphics/2024/11/15/how-did-america-vote-2024-election-analysis/76292995007/",
+    "content_zh_hk": "https://www.usatoday.com/story/graphics/2024/11/15/how-did-america-vote-2024-election-analysis/76292995007/",
+    "content_ko": "https://www.usatoday.com/story/graphics/2024/11/15/how-did-america-vote-2024-election-analysis/76292995007/"
+  },
   "https://truthsocial.com/@realDonaldTrump/116478462755354807": {
     "content_zh_cn": "前州长罗伊·库珀酿成了这场悲剧。请投票支持迈克尔·沃特利！",
     "content_zh_hk": "前州長羅伊·庫珀造成了這場悲劇。請投票支持邁克爾·沃特利！",
