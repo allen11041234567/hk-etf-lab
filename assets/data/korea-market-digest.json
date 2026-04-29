@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-04-29T00:05:00Z",
+  "fetchedAt": "2026-04-29T00:30:00Z",
   "itemCount": 10,
   "poolSize": 10,
   "sources": ["Yonhap", "Korea Herald"],
@@ -15,9 +15,9 @@
       "url": "https://www.koreaherald.com/article/10727686",
       "source": "Korea Herald",
       "category": "半导体",
-      "time": "04/29 00:05",
-      "ts": 1777430700,
-      "fetchedAt": "2026-04-29T00:05:00Z"
+      "time": "04/29 08:30",
+      "ts": 1777432200,
+      "fetchedAt": "2026-04-29T00:30:00Z"
     },
     {
       "id": "kh-kospi-7000",
@@ -29,9 +29,9 @@
       "url": "https://www.koreaherald.com/article/10727684",
       "source": "Korea Herald",
       "category": "韩股",
-      "time": "04/29 00:05",
-      "ts": 1777430690,
-      "fetchedAt": "2026-04-29T00:05:00Z"
+      "time": "04/29 08:30",
+      "ts": 1777432190,
+      "fetchedAt": "2026-04-29T00:30:00Z"
     },
     {
       "id": "kh-kospi-fresh-high",
@@ -43,9 +43,9 @@
       "url": "https://www.koreaherald.com/article/10727476",
       "source": "Korea Herald",
       "category": "韩股",
-      "time": "04/29 00:05",
-      "ts": 1777430680,
-      "fetchedAt": "2026-04-29T00:05:00Z"
+      "time": "04/29 08:30",
+      "ts": 1777432180,
+      "fetchedAt": "2026-04-29T00:30:00Z"
     },
     {
       "id": "kh-marketcap-uk",
@@ -57,9 +57,9 @@
       "url": "https://www.koreaherald.com/article/10727510",
       "source": "Korea Herald",
       "category": "韩股",
-      "time": "04/29 00:05",
-      "ts": 1777430670,
-      "fetchedAt": "2026-04-29T00:05:00Z"
+      "time": "04/29 08:30",
+      "ts": 1777432170,
+      "fetchedAt": "2026-04-29T00:30:00Z"
     },
     {
       "id": "kh-hyundai-battery-subscription",
@@ -71,9 +71,9 @@
       "url": "https://www.koreaherald.com/article/10727428",
       "source": "Korea Herald",
       "category": "电池汽车",
-      "time": "04/29 00:05",
-      "ts": 1777430660,
-      "fetchedAt": "2026-04-29T00:05:00Z"
+      "time": "04/29 08:30",
+      "ts": 1777432160,
+      "fetchedAt": "2026-04-29T00:30:00Z"
     },
     {
       "id": "yna-seoul-fresh-peak",
@@ -85,9 +85,9 @@
       "url": "https://en.yna.co.kr/view/AEN20260428011400315?section=k-biz/index",
       "source": "Yonhap",
       "category": "韩股",
-      "time": "04/28 15:36",
+      "time": "04/28 23:36",
       "ts": 1777361760,
-      "fetchedAt": "2026-04-29T00:05:00Z"
+      "fetchedAt": "2026-04-29T00:30:00Z"
     },
     {
       "id": "yna-seoul-6700",
@@ -99,9 +99,9 @@
       "url": "https://en.yna.co.kr/view/AEN20260428008400320?section=k-biz/index",
       "source": "Yonhap",
       "category": "韩股",
-      "time": "04/28 15:26",
+      "time": "04/28 23:26",
       "ts": 1777361160,
-      "fetchedAt": "2026-04-29T00:05:00Z"
+      "fetchedAt": "2026-04-29T00:30:00Z"
     },
     {
       "id": "yna-hyundai-ec-q1",
@@ -113,9 +113,9 @@
       "url": "https://en.yna.co.kr/view/AEN20260428007300320?section=k-biz/index",
       "source": "Yonhap",
       "category": "宏观",
-      "time": "04/28 14:51",
+      "time": "04/28 22:51",
       "ts": 1777359060,
-      "fetchedAt": "2026-04-29T00:05:00Z"
+      "fetchedAt": "2026-04-29T00:30:00Z"
     },
     {
       "id": "yna-kumho-tire-q1",
@@ -127,9 +127,9 @@
       "url": "https://en.yna.co.kr/view/AEN20260428009200320?section=k-biz/index",
       "source": "Yonhap",
       "category": "公司",
-      "time": "04/28 16:51",
+      "time": "04/29 00:51",
       "ts": 1777366260,
-      "fetchedAt": "2026-04-29T00:05:00Z"
+      "fetchedAt": "2026-04-29T00:30:00Z"
     },
     {
       "id": "yna-doosan-robotics-q1",
@@ -141,9 +141,9 @@
       "url": "https://en.yna.co.kr/view/AEN20260428008400320?section=k-biz/index",
       "source": "Yonhap",
       "category": "公司",
-      "time": "04/28 16:09",
+      "time": "04/29 00:09",
       "ts": 1777363740,
-      "fetchedAt": "2026-04-29T00:05:00Z"
+      "fetchedAt": "2026-04-29T00:30:00Z"
     }
   ]
 }

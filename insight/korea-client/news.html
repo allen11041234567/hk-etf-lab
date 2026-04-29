@@ -65,8 +65,8 @@
 
     function setStatus(prefix, data) {
       const status = document.getElementById('news-status');
-      const ts = data && data.fetchedAt ? new Date(data.fetchedAt).toLocaleString('zh-CN', { hour12:false }) : '';
-      status.textContent = ts ? `${prefix}${ts}` : prefix;
+      const ts = data && data.fetchedAt ? new Date(data.fetchedAt).toLocaleString('zh-CN', { hour12:false, timeZone: 'Asia/Shanghai' }) : '';
+      status.textContent = ts ? `${prefix}${ts}（北京时间）` : prefix;
     }
 
     function saveLocal(data) {
