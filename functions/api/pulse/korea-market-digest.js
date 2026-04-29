@@ -42,6 +42,7 @@ function categoryFor(text) {
 }
 
 function translate(title) {
+  title = cleanText(title);
   const specials = [
     [/^SK Inc\. boosts stake in SK Ecoplant to back chip, AI push$/i, 'SK集团增持SK Ecoplant，继续押注芯片与AI产业链'],
     [/^Kospi hits record high, races toward 7,000$/i, '韩国综合指数创历史新高，逼近7000点'],
@@ -66,6 +67,10 @@ function translate(title) {
 }
 
 function summary(title, category) {
+  const t = String(title || '');
+  if (/market cap|record high|fresh high|seoul stocks|kospi/i.test(t)) {
+    return ['这条资讯主要反映韩股指数与市场风险偏好，适合用来判断韩国科技权重是否仍在带动全市场。', '如果是创新高或放量上行，更偏风险偏好强化。'];
+  }
   if (category === '半导体') return ['这条资讯落在韩国最核心的半导体主线，通常会直接影响三星、SK海力士以及相关ETF的风险偏好。', '重点看需求、价格与资本开支预期是否继续上修。'];
   if (category === '韩股') return ['这条资讯主要反映韩股指数与市场风险偏好，适合用来判断韩国科技权重是否仍在带动全市场。', '如果是创新高或放量上行，更偏风险偏好强化。'];
   if (category === '宏观') return ['这条资讯更偏宏观与汇率层，会先影响韩元和外资预期，再传导到韩国股票与主题ETF定价。', '读法上先看政策或数据方向，再看它会不会改变外资回流和出口周期。'];
@@ -74,7 +79,7 @@ function summary(title, category) {
 }
 
 function badItem(text) {
-  return /(network fees|procurement|Trump Jr|concert|Woori falls behind|personal choice|Airbnb|CNBC Daily Open|India turns|Intel-Tesla tie|Government buying power|Photo News)/i.test(text);
+  return /(network fees|procurement|Trump Jr|concert|Woori falls behind|personal choice|Airbnb|CNBC Daily Open|India turns|Intel-Tesla tie|Government buying power|Photo News|open lower on renewed ai woes|where do korea’s top ceos really live|top ceos really live)/i.test(text);
 }
 
 function itemObj({ id, title, originalTitle, url, source, category, time, ts }) {
@@ -146,6 +151,7 @@ async function buildDirectPayload() {
   const items = [];
   for (const x of all.sort((a, b) => b.ts - a.ts)) {
     if (seen.has(x.zhTitle)) continue;
+    if ((x.zhTitle.match(/[\u4e00-\u9fff]/g) || []).length < 4) continue;
     seen.add(x.zhTitle);
     items.push(x);
     if (items.length >= 20) break;
