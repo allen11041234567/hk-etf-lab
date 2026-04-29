@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116490493540315586": {
+    "content_zh_cn": "罗伯特·哈德曼写了一本了不起的书，讲述了深受爱戴、备受尊敬的伊丽莎白二世女王非凡而精彩的一生。在研究过程中，罗伯特发掘了许多关于女王、查尔斯国王以及其他王室成员的有趣内容。罗伯特的新书《Elizabeth II: In Private. In Public. Her Story》势必成为一部“必读”之作，可在亚马逊以及各大书店购买。祝贺这本书即将成为畅销书！\n特朗普总统 唐纳德·J·特朗普\nhttps://www.amazon.com/Elizabeth-II-Private-Public-Story/dp/B0FXVC6PHH/ref=tmm_hrd_swatch_0",
+    "content_zh_hk": "羅伯特·哈德曼寫了一本了不起的書，講述深受愛戴、備受尊敬的伊利沙伯二世女王非凡而精彩的一生。在研究過程中，羅伯特發掘了許多關於女王、查理斯國王及其他王室成員的有趣內容。羅伯特的新書《Elizabeth II: In Private. In Public. Her Story》勢必成為一部「必讀」之作，可於 Amazon 以及各大書店購買。祝賀這本書即將成為暢銷書！\n特朗普總統 唐納德·J·特朗普\nhttps://www.amazon.com/Elizabeth-II-Private-Public-Story/dp/B0FXVC6PHH/ref=tmm_hrd_swatch_0",
+    "content_ko": "로버트 하드먼은 많은 사랑과 깊은 존경을 받아온 엘리자베스 2세 여왕의 놀랍도록 특별한 삶을 다룬 훌륭한 책을 썼습니다. 연구 과정에서 로버트는 여왕, 찰스 국왕, 그리고 다른 왕실 구성원들에 관한 매우 흥미로운 사실들을 많이 밝혀냈습니다. 로버트의 책 『Elizabeth II: In Private. In Public. Her Story』는 반드시 읽어야 할 책이 될 것이며, 아마존과 모든 주요 서점에서 구매할 수 있습니다. 곧 베스트셀러가 될 이 책에 축하를 보냅니다!\n도널드 J. 트럼프 대통령\nhttps://www.amazon.com/Elizabeth-II-Private-Public-Story/dp/B0FXVC6PHH/ref=tmm_hrd_swatch_0"
+  },
   "https://truthsocial.com/@realDonaldTrump/116490320065457761": {
     "content_zh_cn": "英特尔股价继续上涨。我为这家公司感到非常自豪，因为仅这只股票，在过去90天里，我就让美利坚合众国赚了超过300亿美元。还有其他一些公司同样如此——通过以支持换取部分股权，我也取得了非常成功的成果。祝贺英特尔表现如此出色；更重要的是，祝贺美国人民做出了一笔如此成功的投资！\n\n总统 唐纳德·J·特朗普",
     "content_zh_hk": "英特爾股價持續上升。我為這家公司感到非常自豪，因為單是這隻股票，在過去90天內，我就讓美利堅合眾國賺取了超過300億美元。還有其他一些公司也是如此——透過以支持換取部分股權，我同樣取得了非常成功的成果。祝賀英特爾表現如此出色；更重要的是，祝賀美國人民作出了一項如此成功的投資！\n\n總統 唐納德·J·特朗普",
