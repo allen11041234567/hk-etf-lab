@@ -111,12 +111,12 @@
             <div class='news-api'>韩国市场重点资讯</div>
             <button class='refresh-btn' id='refresh-news'>立即刷新</button>
           </div>
-          <div class='news-status' id='news-status'>正在连接实时资讯接口...</div>
+          <div class='news-status' id='news-status'>资讯同步中</div>
           <div class='news-brief'><strong>今日主线：</strong>先盯韩国半导体与韩股指数，再用宏观与公司业绩做交叉验证。这个模块不是简单堆链接，而是帮读者快速看清今天韩国市场在交易什么。</div>
           <div class='news-tags'><span class='news-tag'>半导体主线</span><span class='news-tag'>韩股指数</span><span class='news-tag'>宏观汇率</span><span class='news-tag'>公司业绩</span></div>
           <div class='group-grid'><div class='group-card'><div class='group-title'>半导体主线</div><div class='group-thesis'>核心看点是需求、价格与资本开支是否继续共振。</div><ul><li><a href='https://www.koreaherald.com/article/10727686' target='_blank' rel='noopener noreferrer'>SK集团增持SK Ecoplant，继续押注芯片与AI产业链</a></li></ul></div><div class='group-card'><div class='group-title'>韩股指数</div><div class='group-thesis'>核心看点是指数强势能否继续由科技权重扩散到更广泛板块。</div><ul><li><a href='https://www.koreaherald.com/article/10727684' target='_blank' rel='noopener noreferrer'>韩国综合指数创历史新高，逼近7000点</a></li><li><a href='https://www.koreaherald.com/article/10727476' target='_blank' rel='noopener noreferrer'>韩国综合指数延续涨势，再创新高</a></li></ul></div><div class='group-card'><div class='group-title'>宏观与汇率</div><div class='group-thesis'>核心看点是韩元、外资预期与宏观变量是否改变风险偏好。</div><ul><li><a href='https://www.koreaherald.com/article/10727428' target='_blank' rel='noopener noreferrer'>现代汽车启动电动车电池订阅试点</a></li><li><a href='https://en.yna.co.kr/view/AEN20260428007300320?section=k-biz/index' target='_blank' rel='noopener noreferrer'>现代建设一季度净利润改善，受韩元走弱与资产重估带动</a></li></ul></div><div class='group-card'><div class='group-title'>公司跟踪</div><div class='group-thesis'>核心看点是业绩、订单与战略动作是否带来估值重定价。</div><ul><li><a href='https://en.yna.co.kr/view/AEN20260428009200320?section=k-biz/index' target='_blank' rel='noopener noreferrer'>锦湖轮胎一季度净利润同比增长</a></li><li><a href='https://en.yna.co.kr/view/AEN20260428008400320?section=k-biz/index' target='_blank' rel='noopener noreferrer'>斗山机器人一季度仍录得亏损</a></li></ul></div></div>
           <div class='news-more'><a href='./news.html'>查看全部资讯 →</a></div>
-          <div class='news-list' id='news-list'><div class='news-item'><div class='news-time'>--:--</div><div class='news-source'>系统</div><div class='news-main'><div class='news-title'>正在拉取最新韩国市场资讯</div><div class='news-body'>页面打开后会直接请求实时接口，并自动替换为最新内容。</div></div></div></div>
+          <div class='news-list' id='news-list'><div class='news-item'><div class='news-time'>--:--</div><div class='news-source'>更新中</div><div class='news-main'><div class='news-title'>最新资讯同步中</div><div class='news-body'>最新市场资讯正在载入，请稍候查看。</div></div></div></div>
         </div>
       </section>
     </div>
@@ -252,10 +252,10 @@
         renderNews(local.items);
         setStatus('本地缓存 ', local);
       } else {
-        document.getElementById('news-status').textContent = '加载中...';
+        document.getElementById('news-status').textContent = '资讯同步中';
       }
       try { await refreshNews(); }
-      catch (err) { document.getElementById('news-status').textContent = '暂无数据'; }
+      catch (err) { document.getElementById('news-status').textContent = '资讯暂不可用'; }
     }
 
     document.getElementById('refresh-news').addEventListener('click', refreshNews);
