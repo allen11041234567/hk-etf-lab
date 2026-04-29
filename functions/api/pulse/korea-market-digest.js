@@ -79,7 +79,7 @@ function summary(title, category) {
 }
 
 function badItem(text) {
-  return /(network fees|procurement|Trump Jr|concert|Woori falls behind|personal choice|Airbnb|CNBC Daily Open|India turns|Intel-Tesla tie|Government buying power|Photo News|open lower on renewed ai woes|where do korea’s top ceos really live|top ceos really live)/i.test(text);
+  return /(network fees|procurement|Trump Jr|concert|Woori falls behind|personal choice|Airbnb|CNBC Daily Open|India turns|Intel-Tesla tie|Government buying power|Photo News|open lower on renewed ai woes|where do korea’s top ceos really live|top ceos really live|financial hub push|3d display|retail shelves|deputy prime minister|amcham)/i.test(text);
 }
 
 function itemObj({ id, title, originalTitle, url, source, category, time, ts }) {
@@ -95,48 +95,62 @@ async function fetchText(url) {
 
 async function fetchYonhap() {
   const text = await fetchText('https://en.yna.co.kr/k-biz/news');
-  const re = /<article>[\s\S]*?<a href="(https:\/\/en\.yna\.co\.kr\/view\/[^"]+)"[\s\S]*?<strong class="tit">\s*<a href="[^"]+">([\s\S]*?)<\/a>[\s\S]*?<span class="txt">([\s\S]*?)<\/span>[\s\S]*?<span class="date">([\s\S]*?)<\/span>/g;
+  const patterns = [
+    /<article>[\s\S]*?<a href="(https:\/\/en\.yna\.co\.kr\/view\/[^"]+)"[\s\S]*?<strong class="tit">\s*<a href="[^"]+">([\s\S]*?)<\/a>[\s\S]*?<span class="txt">([\s\S]*?)<\/span>[\s\S]*?<span class="date">([\s\S]*?)<\/span>/g,
+    /<article>[\s\S]*?<strong class="tit">\s*<a href="(https:\/\/en\.yna\.co\.kr\/view\/[^"]+)">([\s\S]*?)<\/a>[\s\S]*?<span class="date">([\s\S]*?)<\/span>/g,
+  ];
   const items = [];
-  let m;
+  const seen = new Set();
   const now = new Date();
-  while ((m = re.exec(text))) {
-    const url = m[1];
-    const originalTitle = cleanText(m[2]);
-    const desc = cleanText(m[3]);
-    const timeText = cleanText(m[4]);
-    if (badItem(`${originalTitle} ${desc}`)) continue;
-    const category = categoryFor(`${originalTitle} ${desc}`);
-    const title = translate(originalTitle);
-    const zhCount = (title.match(/[\u4e00-\u9fff]/g) || []).length;
-    if (zhCount < 4) continue;
-    const ts = Date.parse(now.toISOString()) / 1000;
-    items.push(itemObj({ id: originalTitle.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(), title, originalTitle, url, source: 'Yonhap', category, time: formatBeijing(now), ts }));
-    if (items.length >= 12) break;
+  for (const re of patterns) {
+    let m;
+    while ((m = re.exec(text))) {
+      const url = m[1];
+      if (seen.has(url)) continue;
+      seen.add(url);
+      const originalTitle = cleanText(m[2]);
+      const desc = cleanText(m[3] || '');
+      if (badItem(`${originalTitle} ${desc}`)) continue;
+      const category = categoryFor(`${originalTitle} ${desc}`);
+      const title = translate(originalTitle);
+      const zhCount = (title.match(/[\u4e00-\u9fff]/g) || []).length;
+      if (zhCount < 4) continue;
+      const ts = Date.parse(now.toISOString()) / 1000;
+      items.push(itemObj({ id: originalTitle.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(), title, originalTitle, url, source: 'Yonhap', category, time: formatBeijing(now), ts }));
+      if (items.length >= 18) break;
+    }
+    if (items.length >= 18) break;
   }
   return items;
 }
 
 async function fetchKoreaHerald() {
   const text = await fetchText('https://www.koreaherald.com/Business');
-  const re = /<a href="(https:\/\/www\.koreaherald\.com\/article\/\d+)"[^>]*>[\s\S]*?<p class="news_title">([\s\S]*?)<\/p>[\s\S]*?<p class="news_text[^>]*">([\s\S]*?)<\/p>/g;
+  const patterns = [
+    /<a href="(https:\/\/www\.koreaherald\.com\/article\/\d+)"[^>]*>[\s\S]*?<p class="news_title">([\s\S]*?)<\/p>[\s\S]*?<p class="news_text[^>]*">([\s\S]*?)<\/p>/g,
+    /<a href="(https:\/\/www\.koreaherald\.com\/article\/\d+)"[^>]*>[\s\S]*?<p class="news_title">([\s\S]*?)<\/p>/g,
+  ];
   const items = [];
   const seen = new Set();
-  let m;
-  while ((m = re.exec(text))) {
-    const url = m[1];
-    if (seen.has(url)) continue;
-    seen.add(url);
-    const originalTitle = cleanText(m[2]);
-    const desc = cleanText(m[3]);
-    if (badItem(`${originalTitle} ${desc}`)) continue;
-    const category = categoryFor(`${originalTitle} ${desc}`);
-    const title = translate(originalTitle);
-    const zhCount = (title.match(/[\u4e00-\u9fff]/g) || []).length;
-    if (zhCount < 4) continue;
-    const now = new Date();
-    const ts = Date.now() / 1000;
-    items.push(itemObj({ id: originalTitle.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(), title, originalTitle, url, source: 'Korea Herald', category, time: formatBeijing(now), ts }));
-    if (items.length >= 12) break;
+  for (const re of patterns) {
+    let m;
+    while ((m = re.exec(text))) {
+      const url = m[1];
+      if (seen.has(url)) continue;
+      seen.add(url);
+      const originalTitle = cleanText(m[2]);
+      const desc = cleanText(m[3] || '');
+      if (badItem(`${originalTitle} ${desc}`)) continue;
+      const category = categoryFor(`${originalTitle} ${desc}`);
+      const title = translate(originalTitle);
+      const zhCount = (title.match(/[\u4e00-\u9fff]/g) || []).length;
+      if (zhCount < 4) continue;
+      const now = new Date();
+      const ts = Date.now() / 1000;
+      items.push(itemObj({ id: originalTitle.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(), title, originalTitle, url, source: 'Korea Herald', category, time: formatBeijing(now), ts }));
+      if (items.length >= 18) break;
+    }
+    if (items.length >= 18) break;
   }
   return items;
 }
