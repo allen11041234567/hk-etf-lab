@@ -4,6 +4,20 @@ const CACHE_VERSION = 'v6-direct';
 const USER_AGENT = 'Mozilla/5.0 (compatible; HK-ETF-Lab/2.2; +https://hketf-lab.pages.dev/)';
 const SNAPSHOT_URL = 'https://hketf-lab.pages.dev/assets/data/korea-market-digest.json';
 
+function formatBeijing(dateLike = new Date()) {
+  const d = dateLike instanceof Date ? dateLike : new Date(dateLike);
+  const parts = new Intl.DateTimeFormat('zh-CN', {
+    timeZone: 'Asia/Shanghai',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false,
+  }).formatToParts(d);
+  const get = type => parts.find(x => x.type === type)?.value || '00';
+  return `${get('month')}/${get('day')} ${get('hour')}:${get('minute')}`;
+}
+
 function headers(cacheControl, state) {
   return {
     'content-type': 'application/json; charset=utf-8',
@@ -91,7 +105,7 @@ async function fetchYonhap() {
     const zhCount = (title.match(/[\u4e00-\u9fff]/g) || []).length;
     if (zhCount < 4) continue;
     const ts = Date.parse(now.toISOString()) / 1000;
-    items.push(itemObj({ id: originalTitle.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(), title, originalTitle, url, source: 'Yonhap', category, time: timeText || '--:--', ts }));
+    items.push(itemObj({ id: originalTitle.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(), title, originalTitle, url, source: 'Yonhap', category, time: formatBeijing(now), ts }));
     if (items.length >= 12) break;
   }
   return items;
@@ -114,8 +128,9 @@ async function fetchKoreaHerald() {
     const title = translate(originalTitle);
     const zhCount = (title.match(/[\u4e00-\u9fff]/g) || []).length;
     if (zhCount < 4) continue;
+    const now = new Date();
     const ts = Date.now() / 1000;
-    items.push(itemObj({ id: originalTitle.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(), title, originalTitle, url, source: 'Korea Herald', category, time: new Date().toISOString().slice(5, 16).replace('T', ' '), ts }));
+    items.push(itemObj({ id: originalTitle.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(), title, originalTitle, url, source: 'Korea Herald', category, time: formatBeijing(now), ts }));
     if (items.length >= 12) break;
   }
   return items;
