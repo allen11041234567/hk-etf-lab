@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang='zh-CN'>
+<head>
+  <meta charset='utf-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <meta name='robots' content='noindex,nofollow,noarchive' />
+  <title>韩国市场全部资讯</title>
+  <style>
+    :root{--bg:#f3f6fb;--panel:#ffffff;--text:#0f172a;--muted:#64748b;--line:#dbe3ef;--brand:#0f766e;--shadow:0 18px 42px rgba(15,23,42,.08)}
+    *{box-sizing:border-box} html{-webkit-text-size-adjust:100%} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;background:linear-gradient(180deg,#f8fbff 0%,#eef3f9 100%);color:var(--text);overflow-x:hidden}
+    .wrap{max-width:1100px;margin:0 auto;padding:24px 16px 40px} .panel{background:#fff;border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:var(--shadow)}
+    .hero-top{display:grid;grid-template-columns:minmax(0,1fr) 190px;gap:18px;align-items:start}.back{display:inline-block;margin-bottom:12px;color:#2563eb;text-decoration:none;font-size:14px;font-weight:800} h1{margin:0 0 10px;font-size:34px} .sub{color:var(--muted);font-size:14px;line-height:1.8}
+    .topbar{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:10px 0 14px} .status{font-size:12px;color:var(--muted)} .btn{border:none;background:#0f766e;color:#fff;padding:10px 14px;border-radius:999px;font-size:13px;font-weight:800;cursor:pointer}
+    .lead-box{padding:14px 16px;border:1px solid #dbe8e3;border-radius:18px;background:#fbfffd;margin-bottom:14px} .lead-box strong{color:#0f172a}
+    .news-groups{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px} .news-group-chip{display:inline-flex;align-items:center;padding:6px 10px;border-radius:999px;background:#eef7f4;color:#0f766e;font-size:12px;font-weight:800}
+    .news-list{display:grid;gap:0} .news-item{display:grid;grid-template-columns:110px 1fr;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px dashed var(--line)} .news-item:last-child{border-bottom:none;padding-bottom:0}
+    .news-source-wrap{display:grid;gap:6px} .news-source{font-size:12px;color:var(--brand);font-weight:800} .news-cat{display:inline-flex;align-items:center;justify-content:center;width:max-content;padding:4px 8px;border-radius:999px;background:#eef4ff;color:#1d4ed8;font-size:11px;font-weight:800} .news-title{font-size:15px;font-weight:800;line-height:1.65;margin-bottom:6px} .news-title a{text-decoration:none} .news-body{font-size:12px;color:#64748b;line-height:1.72} .news-body strong{color:#334155}
+    .qr-card{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:14px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,#fff 0%,#f8fbff 100%)} .qr-card img{width:132px;height:132px;border-radius:12px;background:#fff} .qr-note{margin-top:10px;font-size:12px;line-height:1.6;color:var(--muted);text-align:center}
+    @media (max-width:620px){.wrap{padding:14px 12px 28px}.panel{padding:16px;border-radius:18px}.hero-top,.topbar,.news-item{grid-template-columns:1fr}h1{font-size:28px}.qr-card{max-width:220px;margin:0 auto}.news-item{gap:6px}.news-source-wrap{grid-template-columns:auto auto;align-items:center;gap:8px}.group-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class='wrap'>
+    <div class='panel'>
+      <a class='back' href='./index.html'>← 返回韩国科技与市场观察</a>
+      <div class='hero-top'>
+        <div>
+          <h1>韩国市场全部资讯</h1>
+          <div class='sub'>本页集中展示韩国市场重点资讯，按时间倒序排列，并围绕半导体、韩股指数、宏观与公司四条主线组织阅读。</div>
+        </div>
+        <div class='qr-card'>
+          <img src='https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https%3A%2F%2Fhketf-lab.pages.dev%2Finsight%2Fkorea-client%2Fnews.html' alt='韩国资讯页二维码' />
+          <div class='qr-note'>扫码查看当前页面最新版<br>持续关注持仓信息变化</div>
+        </div>
+      </div>
+      <div class='topbar'><div class='status' id='news-status'>资讯同步中</div><button class='btn' id='refresh-news'>立即刷新</button></div>
+      <div class='lead-box'><strong>阅读顺序：</strong>建议先看半导体，再看韩股指数，最后结合宏观与公司业绩判断行情是否具备扩散性与持续性。</div>
+      <div class='news-groups'><span class='news-group-chip'>半导体</span><span class='news-group-chip'>韩股指数</span><span class='news-group-chip'>宏观汇率</span><span class='news-group-chip'>公司跟踪</span></div>
+      <div class='group-grid'><div class='group-card'><div class='group-title'>半导体主线</div><div class='group-thesis'>核心看点是需求、价格与资本开支是否继续共振。</div><ul><li><a href='https://www.koreaherald.com/article/10727686' target='_blank' rel='noopener noreferrer'>SK集团增持SK Ecoplant，继续押注芯片与AI产业链</a></li></ul></div><div class='group-card'><div class='group-title'>韩股指数</div><div class='group-thesis'>核心看点是指数强势能否继续由科技权重扩散到更广泛板块。</div><ul><li><a href='https://www.koreaherald.com/article/10727684' target='_blank' rel='noopener noreferrer'>韩国综合指数创历史新高，逼近7000点</a></li><li><a href='https://www.koreaherald.com/article/10727476' target='_blank' rel='noopener noreferrer'>韩国综合指数延续涨势，再创新高</a></li><li><a href='https://www.koreaherald.com/article/10727510' target='_blank' rel='noopener noreferrer'>韩国股市总市值超过英国，升至全球第八</a></li></ul></div><div class='group-card'><div class='group-title'>宏观与汇率</div><div class='group-thesis'>核心看点是韩元、外资预期与宏观变量是否改变风险偏好。</div><ul><li><a href='https://www.koreaherald.com/article/10727428' target='_blank' rel='noopener noreferrer'>现代汽车启动电动车电池订阅试点</a></li><li><a href='https://en.yna.co.kr/view/AEN20260428007300320?section=k-biz/index' target='_blank' rel='noopener noreferrer'>现代建设一季度净利润改善，受韩元走弱与资产重估带动</a></li></ul></div><div class='group-card'><div class='group-title'>公司跟踪</div><div class='group-thesis'>核心看点是业绩、订单与战略动作是否带来估值重定价。</div><ul><li><a href='https://en.yna.co.kr/view/AEN20260428009200320?section=k-biz/index' target='_blank' rel='noopener noreferrer'>锦湖轮胎一季度净利润同比增长</a></li><li><a href='https://en.yna.co.kr/view/AEN20260428008400320?section=k-biz/index' target='_blank' rel='noopener noreferrer'>斗山机器人一季度仍录得亏损</a></li></ul></div></div>
+      <div class='news-list' id='news-list'><div class='news-item'><div class='news-source'>更新中</div><div class='news-main'><div class='news-title'>最新资讯同步中</div><div class='news-body'>最新市场资讯正在载入，请稍候查看。</div></div></div></div>
+    </div>
+  </div>
+  <script>
+    const LIVE_API = '/api/pulse/korea-market-digest';
+    const STATIC_JSON = '/assets/data/korea-market-digest.json';
+    const STORAGE_KEY = 'korea-market-digest-cache-v2';
+
+    function newsVisible(item) {
+      const title = String(item.zhTitle || item.title || '');
+      const source = String(item.source || '');
+      const badPatterns = [/Airbnb/i,/CNBC Daily Open/i,/India turns/i,/network fees/i,/procurement/i,/personal choice/i,/Woori falls behind/i,/Intel-Tesla tie/i,/Trump Jr/i,/concert/i,/BOJ/i,/Government buying power/i,/targets \$2tr global procurement/i,/From price to strategy/i,/open lower on renewed AI woes/i,/top ceos really live/i];
+      if (!['Yonhap','Korea Herald'].includes(source)) return false;
+      if (badPatterns.some(p => p.test(title))) return false;
+      const zhCount = (title.match(/[一-鿿]/g) || []).length;
+      if (zhCount < 4) return false;
+      return true;
+    }
+
+    function renderNews(items) {
+      const list = document.getElementById('news-list');
+      const rows = items.filter(newsVisible).slice(0, 30).map(item => `
+        <article class="news-item">
+          
+          <div class="news-source-wrap"><div class="news-source">${item.source || '新闻源'}</div><div class="news-cat">${item.category || '韩国市场'}</div></div>
+          <div class="news-main">
+            <div class="news-title"><a href="${item.url || '#'}" target="_blank" rel="noopener noreferrer">${item.zhTitle || item.title || '未命名资讯'}</a></div>
+            <div class="news-body">${item.summaryZh || '韩国市场增量信息'}</div>
+            <div class="news-body">${item.whyZh || ''}</div>
+          </div>
+        </article>
+      `).join('');
+      if (rows) list.innerHTML = rows;
+    }
+
+    function setStatus(prefix, data) {
+      const status = document.getElementById('news-status');
+      status.textContent = prefix;
+    }
+
+    function saveLocal(data) {
+      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); } catch (err) {}
+    }
+
+    function loadLocal() {
+      try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return null;
+        const data = JSON.parse(raw);
+        if (!data || !Array.isArray(data.items) || !data.items.length) return null;
+        return data;
+      } catch (err) {
+        return null;
+      }
+    }
+
+    async function fetchJson(url) {
+      const resp = await fetch(`${url}?t=${Date.now()}`, { cache: 'no-store' });
+      if (!resp.ok) throw new Error(`http ${resp.status}`);
+      const data = await resp.json();
+      if (!data || !data.ok || !Array.isArray(data.items) || !data.items.length) throw new Error('empty');
+      return data;
+    }
+
+    async function loadLiveNews() {
+      const data = await fetchJson(`${location.origin}${LIVE_API}`);
+      renderNews(data.items);
+      saveLocal(data);
+      setStatus('资讯库已更新', data);
+      return data;
+    }
+
+    async function loadStaticNews() {
+      const data = await fetchJson(`${location.origin}${STATIC_JSON}`);
+      renderNews(data.items);
+      saveLocal(data);
+      setStatus('资讯库已更新', data);
+      return data;
+    }
+
+    async function refreshNews() {
+      try { return await loadLiveNews(); }
+      catch (liveErr) {
+        try { return await loadStaticNews(); }
+        catch (staticErr) {
+          const local = loadLocal();
+          if (local) {
+            renderNews(local.items);
+            setStatus('资讯库已载入', local);
+            return local;
+          }
+          throw staticErr;
+        }
+      }
+    }
+
+    async function bootNews() {
+      const local = loadLocal();
+      if (local) {
+        renderNews(local.items);
+        setStatus('资讯库已载入', local);
+      } else {
+        document.getElementById('news-status').textContent = '资讯同步中';
+      }
+      try { await refreshNews(); }
+      catch (err) { document.getElementById('news-status').textContent = '资讯暂不可用'; }
+    }
+
+    document.getElementById('refresh-news').addEventListener('click', refreshNews);
+    bootNews();
+    setInterval(refreshNews, 300000);
+    </script>
+</body>
+</html>
