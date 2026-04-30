@@ -13,9 +13,9 @@
     .topbar{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:10px 0 14px} .status{font-size:12px;color:var(--muted)} .btn{border:none;background:#0f766e;color:#fff;padding:10px 14px;border-radius:999px;font-size:13px;font-weight:800;cursor:pointer}
     .lead-box{padding:14px 16px;border:1px solid #dbe8e3;border-radius:18px;background:#fbfffd;margin-bottom:14px} .lead-box strong{color:#0f172a}
     .news-groups{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px} .news-group-chip{display:inline-flex;align-items:center;padding:6px 10px;border-radius:999px;background:#eef7f4;color:#0f766e;font-size:12px;font-weight:800}
-    .news-list{display:grid;gap:0} .news-item{display:grid;grid-template-columns:72px 110px 1fr;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px dashed var(--line)} .news-item:last-child{border-bottom:none;padding-bottom:0}
-    .news-time{font-size:12px;color:var(--muted)} .news-source-wrap{display:grid;gap:6px} .news-source{font-size:12px;color:var(--brand);font-weight:800} .news-cat{display:inline-flex;align-items:center;justify-content:center;width:max-content;padding:4px 8px;border-radius:999px;background:#eef4ff;color:#1d4ed8;font-size:11px;font-weight:800} .news-title{font-size:15px;font-weight:800;line-height:1.65;margin-bottom:6px} .news-title a{text-decoration:none} .news-body{font-size:12px;color:#64748b;line-height:1.72} .news-body strong{color:#334155}
-    @media (max-width:620px){h1{font-size:28px}.news-item{grid-template-columns:58px 84px 1fr;gap:8px}.group-grid{grid-template-columns:1fr}}
+    .news-list{display:grid;gap:0} .news-item{display:grid;grid-template-columns:110px 1fr;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px dashed var(--line)} .news-item:last-child{border-bottom:none;padding-bottom:0}
+    .news-source-wrap{display:grid;gap:6px} .news-source{font-size:12px;color:var(--brand);font-weight:800} .news-cat{display:inline-flex;align-items:center;justify-content:center;width:max-content;padding:4px 8px;border-radius:999px;background:#eef4ff;color:#1d4ed8;font-size:11px;font-weight:800} .news-title{font-size:15px;font-weight:800;line-height:1.65;margin-bottom:6px} .news-title a{text-decoration:none} .news-body{font-size:12px;color:#64748b;line-height:1.72} .news-body strong{color:#334155}
+    @media (max-width:620px){h1{font-size:28px}.news-item{grid-template-columns:84px 1fr;gap:8px}.group-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -28,7 +28,7 @@
       <div class='lead-box'><strong>阅读顺序：</strong>建议先看半导体，再看韩股指数，最后结合宏观与公司业绩判断行情是否具备扩散性与持续性。</div>
       <div class='news-groups'><span class='news-group-chip'>半导体</span><span class='news-group-chip'>韩股指数</span><span class='news-group-chip'>宏观汇率</span><span class='news-group-chip'>公司跟踪</span></div>
       <div class='group-grid'><div class='group-card'><div class='group-title'>半导体主线</div><div class='group-thesis'>核心看点是需求、价格与资本开支是否继续共振。</div><ul><li><a href='https://www.koreaherald.com/article/10727686' target='_blank' rel='noopener noreferrer'>SK集团增持SK Ecoplant，继续押注芯片与AI产业链</a></li></ul></div><div class='group-card'><div class='group-title'>韩股指数</div><div class='group-thesis'>核心看点是指数强势能否继续由科技权重扩散到更广泛板块。</div><ul><li><a href='https://www.koreaherald.com/article/10727684' target='_blank' rel='noopener noreferrer'>韩国综合指数创历史新高，逼近7000点</a></li><li><a href='https://www.koreaherald.com/article/10727476' target='_blank' rel='noopener noreferrer'>韩国综合指数延续涨势，再创新高</a></li><li><a href='https://www.koreaherald.com/article/10727510' target='_blank' rel='noopener noreferrer'>韩国股市总市值超过英国，升至全球第八</a></li></ul></div><div class='group-card'><div class='group-title'>宏观与汇率</div><div class='group-thesis'>核心看点是韩元、外资预期与宏观变量是否改变风险偏好。</div><ul><li><a href='https://www.koreaherald.com/article/10727428' target='_blank' rel='noopener noreferrer'>现代汽车启动电动车电池订阅试点</a></li><li><a href='https://en.yna.co.kr/view/AEN20260428007300320?section=k-biz/index' target='_blank' rel='noopener noreferrer'>现代建设一季度净利润改善，受韩元走弱与资产重估带动</a></li></ul></div><div class='group-card'><div class='group-title'>公司跟踪</div><div class='group-thesis'>核心看点是业绩、订单与战略动作是否带来估值重定价。</div><ul><li><a href='https://en.yna.co.kr/view/AEN20260428009200320?section=k-biz/index' target='_blank' rel='noopener noreferrer'>锦湖轮胎一季度净利润同比增长</a></li><li><a href='https://en.yna.co.kr/view/AEN20260428008400320?section=k-biz/index' target='_blank' rel='noopener noreferrer'>斗山机器人一季度仍录得亏损</a></li></ul></div></div>
-      <div class='news-list' id='news-list'><div class='news-item'><div class='news-time'>--:--</div><div class='news-source'>更新中</div><div class='news-main'><div class='news-title'>最新资讯同步中</div><div class='news-body'>最新市场资讯正在载入，请稍候查看。</div></div></div></div>
+      <div class='news-list' id='news-list'><div class='news-item'><div class='news-source-wrap'><div class='news-source'>更新中</div><div class='news-cat'>韩国市场</div></div><div class='news-main'><div class='news-title'>最新资讯同步中</div><div class='news-body'>最新市场资讯正在载入，请稍候查看。</div></div></div></div>
     </div>
   </div>
   <script>
@@ -51,7 +51,6 @@
       const list = document.getElementById('news-list');
       const rows = items.filter(newsVisible).slice(0, 30).map(item => `
         <article class="news-item">
-          <div class="news-time">${item.time || '--:--'}</div>
           <div class="news-source-wrap"><div class="news-source">${item.source || '新闻源'}</div><div class="news-cat">${item.category || '韩国市场'}</div></div>
           <div class="news-main">
             <div class="news-title"><a href="${item.url || '#'}" target="_blank" rel="noopener noreferrer">${item.zhTitle || item.title || '未命名资讯'}</a></div>
@@ -65,8 +64,7 @@
 
     function setStatus(prefix, data) {
       const status = document.getElementById('news-status');
-      const ts = data && data.fetchedAt ? new Date(data.fetchedAt).toLocaleString('zh-CN', { hour12:false, timeZone: 'Asia/Shanghai' }) : '';
-      status.textContent = ts ? `${prefix}${ts}（北京时间）` : prefix;
+      status.textContent = prefix;
     }
 
     function saveLocal(data) {
