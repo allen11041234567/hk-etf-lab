@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116491457397348713": {
+    "content_zh_cn": "无法访问该链接内容。请提供帖文原文，我将按要求翻译为简体中文、繁体中文（香港）和韩文。",
+    "content_zh_hk": "無法存取該連結內容。請提供帖文原文，我將按要求翻譯為簡體中文、繁體中文（香港）和韓文。",
+    "content_ko": "해당 링크의 게시물 내용을 확인할 수 없습니다. 원문을 보내주시면 요청하신 형식에 맞춰 중국어 간체, 중국어 번체(홍콩), 한국어로 번역해 드리겠습니다."
+  },
   "https://truthsocial.com/@realDonaldTrump/116491035609991866": {
     "content_zh_cn": "抱歉，我无法直接打开该链接并获取帖文内容。请把原文粘贴过来，我会按要求返回严格 JSON。",
     "content_zh_hk": "抱歉，我無法直接開啟該連結並獲取帖文內容。請把原文貼上，我會按要求返回嚴格 JSON。",
