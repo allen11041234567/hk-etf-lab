@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116491035609991866": {
+    "content_zh_cn": "抱歉，我无法直接打开该链接并获取帖文内容。请把原文粘贴过来，我会按要求返回严格 JSON。",
+    "content_zh_hk": "抱歉，我無法直接開啟該連結並獲取帖文內容。請把原文貼上，我會按要求返回嚴格 JSON。",
+    "content_ko": "죄송하지만 해당 링크를 직접 열어 게시물 내용을 확인할 수 없습니다. 원문을 붙여 주시면 요청하신 형식의 엄격한 JSON으로 반환하겠습니다."
+  },
   "https://truthsocial.com/@realDonaldTrump/116490493540315586": {
     "content_zh_cn": "罗伯特·哈德曼写了一本了不起的书，讲述了深受爱戴、备受尊敬的伊丽莎白二世女王非凡而精彩的一生。在研究过程中，罗伯特发掘了许多关于女王、查尔斯国王以及其他王室成员的有趣内容。罗伯特的新书《Elizabeth II: In Private. In Public. Her Story》势必成为一部“必读”之作，可在亚马逊以及各大书店购买。祝贺这本书即将成为畅销书！\n特朗普总统 唐纳德·J·特朗普\nhttps://www.amazon.com/Elizabeth-II-Private-Public-Story/dp/B0FXVC6PHH/ref=tmm_hrd_swatch_0",
     "content_zh_hk": "羅伯特·哈德曼寫了一本了不起的書，講述深受愛戴、備受尊敬的伊利沙伯二世女王非凡而精彩的一生。在研究過程中，羅伯特發掘了許多關於女王、查理斯國王及其他王室成員的有趣內容。羅伯特的新書《Elizabeth II: In Private. In Public. Her Story》勢必成為一部「必讀」之作，可於 Amazon 以及各大書店購買。祝賀這本書即將成為暢銷書！\n特朗普總統 唐納德·J·特朗普\nhttps://www.amazon.com/Elizabeth-II-Private-Public-Story/dp/B0FXVC6PHH/ref=tmm_hrd_swatch_0",
