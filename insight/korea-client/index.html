@@ -7,7 +7,7 @@
   <title>韩国科技与市场观察</title>
   <style>
     :root{--bg:#f3f6fb;--panel:#ffffff;--soft:#f8fbff;--text:#0f172a;--muted:#64748b;--line:#dbe3ef;--brand:#1d4ed8;--brand2:#0f766e;--shadow:0 18px 42px rgba(15,23,42,.08)}
-    *{box-sizing:border-box} html{-webkit-text-size-adjust:100%} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;background:linear-gradient(180deg,#f8fbff 0%,#eef3f9 100%);color:var(--text);overflow-x:hidden}
+    *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;background:linear-gradient(180deg,#f8fbff 0%,#eef3f9 100%);color:var(--text)}
     a{color:inherit} .wrap{max-width:1220px;margin:0 auto;padding:28px 16px 46px}
     .hero,.panel{background:var(--panel);border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow)}
     .hero{padding:26px 24px;margin-bottom:16px;background:linear-gradient(135deg,#0f2341 0%,#173a68 60%,#225ea2 100%);color:#fff;border:none}
@@ -33,16 +33,16 @@
     .news-tags{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 10px} .news-tag{display:inline-flex;align-items:center;padding:6px 10px;border-radius:999px;background:#eef7f4;color:#0f766e;font-size:12px;font-weight:800}
     .group-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:0 0 12px} .group-card{padding:12px 14px;border:1px solid #dbe8e3;border-radius:16px;background:#fff} .group-title{font-size:13px;font-weight:800;color:#0f766e;margin-bottom:6px} .group-thesis{font-size:12px;color:#64748b;line-height:1.65;margin-bottom:8px} .group-card ul{margin:0;padding-left:18px;color:#334155;line-height:1.7} .group-card li+li{margin-top:6px} .group-card a{text-decoration:none}
     .news-more{margin-bottom:8px;font-size:13px;color:#2563eb;font-weight:700}
-    .news-list{display:grid;gap:0} .news-item{display:grid;grid-template-columns:110px 1fr;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px dashed var(--line)} .news-item:last-child{border-bottom:none;padding-bottom:0}
-    .news-source-wrap{display:grid;gap:6px;padding-top:2px} .news-source{font-size:12px;color:var(--brand2);font-weight:800} .news-cat{display:inline-flex;align-items:center;justify-content:center;width:max-content;padding:4px 8px;border-radius:999px;background:#eef4ff;color:#1d4ed8;font-size:11px;font-weight:800}
+    .news-list{display:grid;gap:0} .news-item{display:grid;grid-template-columns:72px 110px 1fr;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px dashed var(--line)} .news-item:last-child{border-bottom:none;padding-bottom:0}
+    .news-time{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:2px} .news-source-wrap{display:grid;gap:6px;padding-top:2px} .news-source{font-size:12px;color:var(--brand2);font-weight:800} .news-cat{display:inline-flex;align-items:center;justify-content:center;width:max-content;padding:4px 8px;border-radius:999px;background:#eef4ff;color:#1d4ed8;font-size:11px;font-weight:800}
     .news-main{min-width:0} .news-title{font-size:15px;font-weight:800;line-height:1.65;margin-bottom:6px} .news-title a{text-decoration:none} .news-body{font-size:12px;color:#64748b;line-height:1.72} .news-body strong{color:#334155}
     .products{margin-top:16px} .etf-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px} .etf-card{display:block;text-decoration:none;padding:16px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,#fff 0%,#f8fbff 100%)}
     .etf-head{display:flex;justify-content:space-between;gap:8px;margin-bottom:8px} .etf-code{font-size:12px;color:var(--muted)} .etf-market{font-size:12px;color:var(--brand);font-weight:700}
     .etf-name{font-size:22px;font-weight:800;margin-bottom:6px} .etf-desc{font-size:14px;color:#475569;line-height:1.75;min-height:74px} .etf-meta{margin-top:10px;font-size:12px;color:var(--muted)} .cta{margin-top:10px;font-size:13px;color:var(--brand);font-weight:800}
     .footer-note{margin-top:14px;font-size:13px;color:var(--muted);line-height:1.75}
     @media (max-width:960px){.hero-grid,.grid,.group-grid{grid-template-columns:1fr}.deep-grid,.etf-grid{grid-template-columns:1fr}h1{font-size:31px}}
-    @media (max-width:700px){.news-item{grid-template-columns:88px 1fr;gap:8px}}
-    @media (max-width:620px){.wrap{padding:14px 12px 28px}.hero,.panel{border-radius:20px}.hero{padding:20px 16px}.panel{padding:16px}.hero-kpis{grid-template-columns:1fr 1fr;gap:8px}.kpi{padding:10px 10px 9px}.kpi-v{font-size:17px}h1{font-size:26px}.sub{font-size:14px;line-height:1.75}.section-title{font-size:22px}.hint,.footer-note{font-size:12px;line-height:1.7}.etf-card{padding:14px;border-radius:18px}.etf-head{flex-direction:column;gap:4px}.etf-name{font-size:20px}.etf-desc{min-height:auto;font-size:13px;line-height:1.7}.news-top{align-items:stretch;flex-direction:column}.refresh-btn{width:100%}.news-item{grid-template-columns:1fr;gap:6px;padding:12px 0}.news-source-wrap{grid-template-columns:auto auto;align-items:center;gap:8px}.group-grid,.deep-grid{grid-template-columns:1fr}.timeline-item{padding-left:24px}.timeline-card{padding:13px 14px}}
+    @media (max-width:700px){.news-item{grid-template-columns:64px 88px 1fr;gap:8px}}
+    @media (max-width:620px){.wrap{padding:14px 12px 28px}.hero,.panel{border-radius:20px}.hero{padding:20px 16px}.panel{padding:16px}.hero-kpis{grid-template-columns:1fr 1fr;gap:8px}.kpi{padding:10px 10px 9px}.kpi-v{font-size:17px}h1{font-size:26px}.sub{font-size:14px}.section-title{font-size:22px}.news-item{grid-template-columns:58px 84px 1fr;gap:8px}}
   </style>
 </head>
 <body>
@@ -52,7 +52,7 @@
         <div>
           <div class='eyebrow'>韩国科技与市场观察</div>
           <h1>韩国科技与市场观察</h1>
-          <div class='sub'>围绕韩国科技、半导体、ETF 持仓与投研观点，构建面向客户的持续跟踪页面，聚焦市场主线、产品持仓与最新资讯变化及跟踪节奏。</div>
+          <div class='sub'>围绕韩国科技、半导体、ETF 持仓与投研观点，构建面向客户的持续跟踪页面，聚焦市场主线、产品持仓与资讯动态。</div>
         </div>
         <div class='hero-kpis'>
           <div class='kpi'><div class='kpi-k'>内容模块</div><div class='kpi-v'>投研 + 持仓 + 资讯</div></div>
@@ -101,12 +101,19 @@
         <div class='seller-box'>
           <h3>韩国卖方观点</h3>
           <p>主判断：韩国这组的有效判断是，韩国景气仍然高度绑定半导体和AI链，出口与存储器周期没掉头前，韩国资产相对强势逻辑还在。</p>
-          <ul><li>野村《野村-亚洲固收-韩国-印度-亚洲-经济-亚洲经济-央行政策-策略-日本-外汇-野村：韩国宏观经济与亚洲利率策略：K型复苏下的政策反应与交易机会》｜野村研报指出，韩国经济呈K型复苏，国内需求疲软削弱货币政策传导，预计韩国央行将维持“鹰派暂停”，2027年底前终端利率料为2.50%。</li><li>美银美林《美银美林-亚洲经济-经济-资金流-地缘-中国台湾-韩国-亚洲除中国外资金流向：3月情况恶化》｜美银美林报告显示，受西亚战争及油价飙升影响，3月亚洲除中国外股市场遭遇大规模抛售。</li><li>《公司-SK海力士-韩国-半导体-科技-SK海力士2026年第一季度财报电话会纪要》｜SK海力士2026Q1营收52.6万亿韩元（+60%QoQ/+198%YoY），营业利润37.6万亿（利润率72%），净利40.3万亿，均创新高。</li></ul>
+          <ul><li>摩根大通《摩根大通-日本科技-台湾科技-中国科技-韩国-半导体-科技-亚洲-行业-亚洲科技-AI-公司-三星电子-摩根大通：亚太科技股更新 - 看好三星SDI、NEC及马来西亚科技硬件，维持英特尔减持评级》｜摩根大通重申三星SDI增持评级，目标价上调至72万韩元，看好AI数据中心电池需求；维持英特尔减持评级，虽Q1业绩超预期但担忧份额流失；上调马来西亚科技硬件板块评级，偏好前端半导体；看好存储市场，推荐…</li><li>野村《野村-亚洲固收-韩国-印度-亚洲-经济-亚洲经济-央行政策-策略-日本-外汇-野村：韩国宏观经济与亚洲利率策略：K型复苏下的政策反应与交易机会》｜野村研报指出，韩国经济呈K型复苏，国内需求疲软削弱货币政策传导，预计韩国央行将维持“鹰派暂停”，2027年底前终端利率料为2.50%。</li><li>美银美林《美银美林-经济-外汇-全球贸易金融-地缘-亚洲-亚洲经济-韩国-美元-韩国对外直接投资趋势：美韩协议下的资本外流压力》｜美银美林指出，尽管韩国贸易顺差强劲，但韩元仍承压。</li></ul>
           <div class='deep-grid'>
         <a class='deep-card' href='../csop-daily-briefing-latest.html' target='_blank' rel='noopener noreferrer'>
           <div class='deep-label'>韩国精读</div>
-          <div class='deep-title'>美银美林-股票策略-中国-科技-半导体-策略-AI-中股-股票-中国经济-经济-中国股市为何跑输全球：盈利分化与AI冲击下的结构性重估</div>
-          <div class='deep-summary'>这篇能把单一市场现象翻译成跨资产语言，更接近客户真正需要的配置解释。</div>
+          <div class='deep-title'>摩根大通《摩根大通-日本科技-台湾科技-中国科技-韩国-半导体-科技-亚洲-行业-亚洲科技-AI-公司-三星电子-摩根大</div>
+          <div class='deep-summary'>摩根大通《摩根大通-日本科技-台湾科技-中国科技-韩国-半导体-科技-亚洲-行业-亚洲科技-AI-公司-三星电子-摩根大通：亚太科技股更新 - 看好三星SDI、NEC及马来西亚科技硬件，维持英特尔减持评级》｜摩根大通重申三星SDI增持评级，目标价上调至72万韩元，看好AI数据中心电池需求；维持英特尔减持评级，虽Q1业绩超预期但担忧份额流失；上调马来西亚科技硬件板块评级，偏好前端半导体；看好存储市场，推荐…</div>
+          <div class='deep-cta'>打开原页查看 →</div>
+        </a>
+        
+        <a class='deep-card' href='../csop-daily-briefing-latest.html' target='_blank' rel='noopener noreferrer'>
+          <div class='deep-label'>韩国精读</div>
+          <div class='deep-title'>野村《野村-亚洲固收-韩国-印度-亚洲-经济-亚洲经济-央行政策-策略-日本-外汇-野村：韩国宏观经济与亚洲利率策略：K</div>
+          <div class='deep-summary'>野村《野村-亚洲固收-韩国-印度-亚洲-经济-亚洲经济-央行政策-策略-日本-外汇-野村：韩国宏观经济与亚洲利率策略：K型复苏下的政策反应与交易机会》｜野村研报指出，韩国经济呈K型复苏，国内需求疲软削弱货币政策传导，预计韩国央行将维持“鹰派暂停”，2027年底前终端利率料为2.50%。</div>
           <div class='deep-cta'>打开原页查看 →</div>
         </a>
         </div>
@@ -147,7 +154,7 @@
           <div class='news-tags'><span class='news-tag'>半导体主线</span><span class='news-tag'>韩股指数</span><span class='news-tag'>宏观汇率</span><span class='news-tag'>公司业绩</span></div>
           <div class='group-grid'><div class='group-card'><div class='group-title'>半导体主线</div><div class='group-thesis'>核心看点是需求、价格与资本开支是否继续共振。</div><ul><li><a href='https://www.koreaherald.com/article/10727686' target='_blank' rel='noopener noreferrer'>SK集团增持SK Ecoplant，继续押注芯片与AI产业链</a></li></ul></div><div class='group-card'><div class='group-title'>韩股指数</div><div class='group-thesis'>核心看点是指数强势能否继续由科技权重扩散到更广泛板块。</div><ul><li><a href='https://www.koreaherald.com/article/10727684' target='_blank' rel='noopener noreferrer'>韩国综合指数创历史新高，逼近7000点</a></li><li><a href='https://www.koreaherald.com/article/10727476' target='_blank' rel='noopener noreferrer'>韩国综合指数延续涨势，再创新高</a></li></ul></div><div class='group-card'><div class='group-title'>宏观与汇率</div><div class='group-thesis'>核心看点是韩元、外资预期与宏观变量是否改变风险偏好。</div><ul><li><a href='https://www.koreaherald.com/article/10727428' target='_blank' rel='noopener noreferrer'>现代汽车启动电动车电池订阅试点</a></li><li><a href='https://en.yna.co.kr/view/AEN20260428007300320?section=k-biz/index' target='_blank' rel='noopener noreferrer'>现代建设一季度净利润改善，受韩元走弱与资产重估带动</a></li></ul></div><div class='group-card'><div class='group-title'>公司跟踪</div><div class='group-thesis'>核心看点是业绩、订单与战略动作是否带来估值重定价。</div><ul><li><a href='https://en.yna.co.kr/view/AEN20260428009200320?section=k-biz/index' target='_blank' rel='noopener noreferrer'>锦湖轮胎一季度净利润同比增长</a></li><li><a href='https://en.yna.co.kr/view/AEN20260428008400320?section=k-biz/index' target='_blank' rel='noopener noreferrer'>斗山机器人一季度仍录得亏损</a></li></ul></div></div>
           <div class='news-more'><a href='./news.html'>查看全部资讯 →</a></div>
-          <div class='news-list' id='news-list'><div class='news-item'><div class='news-source'>更新中</div><div class='news-main'><div class='news-title'>最新资讯同步中</div><div class='news-body'>最新市场资讯正在载入，请稍候查看。</div></div></div></div>
+          <div class='news-list' id='news-list'><div class='news-item'><div class='news-time'>--:--</div><div class='news-source'>更新中</div><div class='news-main'><div class='news-title'>最新资讯同步中</div><div class='news-body'>最新市场资讯正在载入，请稍候查看。</div></div></div></div>
         </div>
       </section>
     </div>
@@ -172,7 +179,7 @@
       const list = document.getElementById('news-list');
       const rows = items.filter(newsVisible).slice(0, 10).map(item => `
         <article class="news-item">
-          
+          <div class="news-time">${item.time || '--:--'}</div>
           <div class="news-source-wrap"><div class="news-source">${item.source || '新闻源'}</div><div class="news-cat">${item.category || '韩国市场'}</div></div>
           <div class="news-main">
             <div class="news-title"><a href="${item.url || '#'}" target="_blank" rel="noopener noreferrer">${item.zhTitle || item.title || '未命名资讯'}</a></div>
@@ -186,7 +193,8 @@
 
     function setStatus(prefix, data) {
       const status = document.getElementById('news-status');
-      status.textContent = prefix;
+      const ts = data && data.fetchedAt ? new Date(data.fetchedAt).toLocaleString('zh-CN', { hour12:false, timeZone: 'Asia/Shanghai' }) : '';
+      status.textContent = ts ? `${prefix}${ts}（北京时间）` : prefix;
     }
 
     function saveLocal(data) {
@@ -217,7 +225,7 @@
       const data = await fetchJson(`${location.origin}${LIVE_API}`);
       renderNews(data.items);
       saveLocal(data);
-      setStatus('资讯库已更新', data);
+      setStatus('实时更新 ', data);
       return data;
     }
 
@@ -225,7 +233,7 @@
       const data = await fetchJson(`${location.origin}${STATIC_JSON}`);
       renderNews(data.items);
       saveLocal(data);
-      setStatus('资讯库已更新', data);
+      setStatus('本地快照 ', data);
       return data;
     }
 
@@ -237,7 +245,7 @@
           const local = loadLocal();
           if (local) {
             renderNews(local.items);
-            setStatus('资讯库已载入', local);
+            setStatus('本地缓存 ', local);
             return local;
           }
           throw staticErr;
@@ -249,7 +257,7 @@
       const local = loadLocal();
       if (local) {
         renderNews(local.items);
-        setStatus('资讯库已载入', local);
+        setStatus('本地缓存 ', local);
       } else {
         document.getElementById('news-status').textContent = '资讯同步中';
       }
