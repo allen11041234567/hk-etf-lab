@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HK ETF Lab</title>
+  <style>
+    :root{
+      --bg:#f4f7fb;
+      --panel:#ffffff;
+      --text:#0f172a;
+      --muted:#64748b;
+      --line:#e2e8f0;
+      --blue:#2563eb;
+      --purple:#7c3aed;
+      --green:#059669;
+      --shadow:0 14px 40px rgba(15,23,42,.06);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#f6f8fc 0%,#eef3fb 100%);
+      color:var(--text);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    }
+    .wrap{max-width:1120px;margin:0 auto;padding:32px 20px 48px}
+    .hero,.panel{
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:28px;
+      box-shadow:var(--shadow);
+    }
+    .hero{padding:34px 32px 28px;margin-bottom:18px}
+    .eyebrow{
+      display:inline-block;
+      padding:8px 12px;
+      border-radius:999px;
+      background:#eef4ff;
+      color:#1d4ed8;
+      border:1px solid #cfe0ff;
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:.02em;
+    }
+    h1{margin:14px 0 12px;font-size:42px;line-height:1.12}
+    .sub{font-size:17px;line-height:1.9;color:#475569;max-width:860px}
+    .panel{padding:20px;margin-bottom:18px}
+    .section-title{font-size:24px;font-weight:800;margin:4px 4px 16px}
+    .feature-link{
+      display:flex;
+      gap:16px;
+      align-items:center;
+      text-decoration:none;
+      color:inherit;
+      background:linear-gradient(180deg,#ffffff 0%,#fbfdff 100%);
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:16px;
+      box-shadow:0 8px 24px rgba(15,23,42,.04);
+      margin:0 0 16px;
+      transition:transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+    }
+    .feature-link:hover{transform:translateY(-2px);border-color:#bfd3ff;box-shadow:0 14px 34px rgba(37,99,235,.10)}
+    .feature-thumb{width:108px;height:108px;border-radius:18px;object-fit:cover;flex:0 0 108px;border:1px solid var(--line);background:#f8fafc}
+    .feature-k{font-size:13px;color:var(--muted);font-weight:700;letter-spacing:.03em}
+    .feature-v{margin-top:6px;font-size:24px;font-weight:800;line-height:1.35}
+    .feature-d{margin-top:8px;font-size:15px;line-height:1.8;color:#475569}
+    .grid{display:grid;grid-template-columns:1fr;gap:14px}
+    .card{
+      display:block;
+      text-decoration:none;
+      color:inherit;
+      background:linear-gradient(180deg,#ffffff 0%,#fbfdff 100%);
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:22px 22px 18px;
+      box-shadow:0 8px 24px rgba(15,23,42,.04);
+      transition:transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+    }
+    .card-media{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:8px}
+    .card-copy{flex:1 1 auto;min-width:0}
+    .card-thumb{width:84px;height:84px;object-fit:cover;object-position:center;border-radius:14px;border:1px solid var(--line);background:#f8fafc;display:block;flex:0 0 84px}
+    .card:hover{
+      transform:translateY(-2px);
+      border-color:#bfd3ff;
+      box-shadow:0 14px 34px rgba(37,99,235,.10);
+    }
+    .top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .tag{
+      display:inline-block;
+      padding:7px 11px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:700;
+      border:1px solid #dbe4f0;
+      background:#f8fafc;
+      color:#334155;
+      white-space:nowrap;
+    }
+    .k{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+    .v{margin-top:8px;font-size:28px;font-weight:800;line-height:1.3}
+    .d{margin-top:10px;font-size:15px;line-height:1.85;color:#475569}
+    .hint{margin-top:12px;font-size:13px;color:#64748b}
+    .footer{padding:4px 6px 0;color:#6b7280;font-size:13px;line-height:1.8}
+    .accent-blue{border-left:6px solid var(--blue)}
+    .accent-purple{border-left:6px solid var(--purple)}
+    .accent-green{border-left:6px solid var(--green)}
+    @media (min-width:860px){
+      .grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+      .card{min-height:260px}
+    }
+    @media (max-width:640px){
+      .wrap{padding:16px 12px 28px}
+      .hero{padding:22px 16px 18px;border-radius:22px}
+      .panel{padding:14px;border-radius:20px;margin-bottom:12px}
+      h1{font-size:28px;line-height:1.18;margin:10px 0 8px}
+      .sub{font-size:14px;line-height:1.72}
+      .section-title{font-size:19px;margin:2px 2px 10px}
+      .grid{gap:10px}
+      .card{padding:14px 14px 12px;border-radius:18px;min-height:auto}
+      .card-media{gap:10px;margin-bottom:6px}
+      .card-copy{min-width:0}
+      .card-thumb{width:56px;height:56px;flex-basis:56px;border-radius:12px}
+      .top{align-items:flex-start;gap:8px;flex-wrap:wrap}
+      .tag{font-size:11px;padding:6px 8px}
+      .k{font-size:12px}
+      .v{font-size:21px;line-height:1.28;margin-top:6px}
+      .d{font-size:13px;line-height:1.68;margin-top:8px}
+      .hint{font-size:12px;line-height:1.6;margin-top:8px}
+      .feature-link{align-items:flex-start;padding:12px;border-radius:18px;gap:10px;margin-bottom:12px}
+      .feature-thumb{width:68px;height:68px;flex-basis:68px;border-radius:12px}
+      .feature-k{font-size:11px;line-height:1.45}
+      .feature-v{font-size:16px;line-height:1.34;margin-top:2px}
+      .feature-d{font-size:13px;line-height:1.62;margin-top:5px}
+      .footer{font-size:12px;padding:2px 2px 0}
+    }
+    @media (max-width:420px){
+      .wrap{padding:14px 10px 24px}
+      .hero{padding:18px 14px 16px}
+      .panel{padding:12px}
+      h1{font-size:25px}
+      .feature-link{padding:10px;gap:9px}
+      .feature-thumb{width:60px;height:60px;flex-basis:60px}
+      .feature-v{font-size:15px}
+      .card-thumb{width:52px;height:52px;flex-basis:52px}
+      .v{font-size:19px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <span class="eyebrow">港股老韭菜的 ETF 实验室</span>
+      <h1>港股老韭菜的ETF实验室</h1>
+      <div class="sub">
+        一个临近退休的程序员，也是一名在港股市场摸爬滚打多年的老韭菜。眼看时代越跑越快，很多老本事也在被 AI 重新洗牌，于是索性把注意力真正放到港股 ETF 这件事上，认真用指标、价格结构和更快的信息面，给自己的判断多找几分依据。江湖一遭，认识就是缘分。最后祝大家恭喜发财，KUNG HEI FAT CHOY。
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="section-title">今日最值得看</div>
+      <a class="feature-link" href="./insight/trump-truth-archive.html">
+        <img class="feature-thumb" src="./assets/home/trump-home.jpg" alt="特朗普发言时间线" />
+        <div>
+          <div class="feature-k">每分钟更新，实时追踪 Trump 发言动态</div>
+          <div class="feature-v">一顿分析猛如虎，涨跌全看特朗普</div>
+          <div class="feature-d">集中查看特朗普最新发言、互动热度与时间线变化，帮助快速感受全球市场情绪与话题驱动方向。</div>
+        </div>
+      </a>
+      <a class="feature-link" href="./insight/korea-tech-briefing.html">
+        <img class="feature-thumb" src="./assets/home/korea-home.jpg" alt="韩国科技看板" />
+        <div>
+          <div class="feature-k">无延时数据，跟踪韩股行情</div>
+          <div class="feature-v">今天韩股谁带节奏，就看三星海力士谁先上头</div>
+          <div class="feature-d">把三星电子和 SK 海力士的盘中异动、强弱变化和相关产品线索放到一页里，想看韩国科技今天是谁在带情绪，点进来就够了。</div>
+        </div>
+      </a>
+      <a class="feature-link" href="./insight/korea-client/">
+        <img class="feature-thumb" src="./assets/home/korea-home.jpg" alt="韩国科技与市场观察" />
+        <div>
+          <div class="feature-k">客户页主入口，已定稿版本</div>
+          <div class="feature-v">韩国科技与市场观察</div>
+          <div class="feature-d">把韩国科技主线、买方观点、重点资讯和相关产品持仓集中在一个更适合客户直接查看的页面里，后续就按这个版本持续维护。</div>
+        </div>
+      </a>
+      <a class="feature-link" href="./daily/morning-report.html">
+        <img class="feature-thumb" src="./assets/home/morning-home.jpg" alt="每日晨报" />
+        <div>
+          <div class="feature-k">每日晨报主入口</div>
+          <div class="feature-v">今晨热点与市场主线，3分钟先抓住今天最重要的事</div>
+          <div class="feature-d">用更简洁的方式汇总宏观扰动、交易方向与讨论焦点，便于客户在开盘前快速进入当天市场节奏。</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="panel">
+      <div class="section-title">更多内容</div>
+      <div class="section-title" style="font-size:18px;margin:6px 4px 14px;color:#475569;">轻松测一测</div>
+      <div class="grid" style="margin-bottom:18px;">
+        <a class="card accent-blue" href="https://etf.house">
+          <div class="card-media">
+            <div class="card-copy">
+              <div class="top">
+                <div class="k">风格测试</div>
+                <span class="tag">互动体验</span>
+              </div>
+              <div class="v">ETFTI ETF人格测试</div>
+            </div>
+            <img class="card-thumb" src="./assets/etfti-persona.jpg" alt="ETFTI ETF人格测试" />
+          </div>
+          <div class="d">通过轻量测试快速了解自己的资金偏好与产品风格取向，适合作为客户破冰和兴趣引导入口。</div>
+          <div class="hint">适合先做轻互动体验</div>
+        </a>
+
+        <a class="card accent-purple" href="./research/masters-hk-etf.html">
+          <div class="card-media">
+            <div class="card-copy">
+              <div class="top">
+                <div class="k">投资风格测试</div>
+                <span class="tag">客户互动</span>
+              </div>
+              <div class="v">测测你的投资思路最像哪位顶级投资大师</div>
+            </div>
+            <img class="card-thumb" src="./assets/home/buffett-home.jpg" alt="投资大师测试" />
+          </div>
+          <div class="d">用更轻松的方式帮助客户理解自己的投资偏好，再继续延伸到对应的大师框架与市场应用。</div>
+          <div class="hint">适合做风格识别与交流开场</div>
+        </a>
+      </div>
+
+      <div class="section-title" style="font-size:18px;margin:6px 4px 14px;color:#475569;">研究与工具</div>
+      <div class="grid">
+        <a class="card accent-green" href="./logbias/pool-state.html">
+          <div class="top">
+            <div class="k">市场温度</div>
+            <span class="tag">全池观察</span>
+          </div>
+          <div class="v">香港ETF强弱状态总表</div>
+          <div class="d">快速查看主要产品当前所处的强弱位置、结构变化与相对排序，先建立对市场状态的整体判断。</div>
+          <div class="hint">适合做全局判断</div>
+        </a>
+
+        <a class="card accent-purple" href="./logbias/pool/overview.html">
+          <div class="top">
+            <div class="k">策略框架</div>
+            <span class="tag">核心总览</span>
+          </div>
+          <div class="v">香港ETF LOGBIAS 策略总览</div>
+          <div class="d">帮助客户理解不同产品更适合哪一类策略节奏，更直观地把握左侧、右侧与持有型差异。</div>
+          <div class="hint">适合理解策略分型</div>
+        </a>
+
+        <a class="card accent-purple" href="./dev/index.html">
+          <div class="top">
+            <div class="k">策略跟踪</div>
+            <span class="tag">持续更新</span>
+          </div>
+          <div class="v">开发中的新策略和回测表现</div>
+          <div class="d">集中展示仍在研究、优化与验证阶段的新策略页面，方便持续跟踪试验进展与阶段成果。</div>
+          <div class="hint">适合持续关注研究进展</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer">
+      HK ETF Lab · 持续更新中
+    </div>
+  </div>
+</body>
+</html>
