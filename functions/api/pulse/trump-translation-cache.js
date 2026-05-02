@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116502902374252861": {
+    "content_zh_cn": "这就是我们国家在“特朗普”之前，以及之后的样子！",
+    "content_zh_hk": "這就是我們國家在「特朗普」之前，以及之後的樣子！",
+    "content_ko": "이것이 바로 우리나라의 “트럼프!” 이전과 이후의 모습입니다!"
+  },
   "https://truthsocial.com/@realDonaldTrump/116502796687355089": {
     "content_zh_cn": "低智商的民主党少数党领袖哈基姆·杰弗里斯，根本就是个暴徒，对我们的国家构成威胁！\n\n总统 唐纳德·J·特朗普",
     "content_zh_hk": "低智商的民主黨少數黨領袖哈基姆·傑弗里斯，根本就是個暴徒，對我們的國家構成威脅！\n\n總統 唐納德·J·特朗普",
