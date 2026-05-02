@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116502796687355089": {
+    "content_zh_cn": "低智商的民主党少数党领袖哈基姆·杰弗里斯，根本就是个暴徒，对我们的国家构成威胁！\n\n总统 唐纳德·J·特朗普",
+    "content_zh_hk": "低智商的民主黨少數黨領袖哈基姆·傑弗里斯，根本就是個暴徒，對我們的國家構成威脅！\n\n總統 唐納德·J·特朗普",
+    "content_ko": "저지능의 민주당 소수당 원내대표 하킴 제프리스는 한낱 깡패에 불과하며, 우리 나라에 위험한 존재다!\n\n대통령 도널드 J. 트럼프"
+  },
   "https://truthsocial.com/@realDonaldTrump/116501816483688599": {
     "content_zh_cn": "致印第安纳州第41州参议院选区了不起的爱国者们：请一定出来投票，支持一位极其出色的候选人——Michelle Davis。她是一位备受尊敬的州众议员，也是一位真正的MAGA斗士，并获得我完全、彻底的背书。提前投票将于5月4日截止，正式选举日为5月5日。这场SD-41共和党初选至关重要——你们可以帮助Michelle赢下这场选举！\n\n与现任议员Greg Walker这个“RINO”失败者不同，他把印第安纳州这些优秀民众辜负得一塌糊涂，MICHELLE DAVIS是一位赢家，永远不会让你们失望。请在5月5日前出来投票支持MICHELLE DAVIS！\n\n查询你的投票地点： https://swampthevoteusa.com/indiana/",
     "content_zh_hk": "致印第安納州第41州參議院選區了不起的愛國者們：請一定出來投票，支持一位極其出色的候選人——Michelle Davis。她是一位備受尊敬的州眾議員，也是一位真正的MAGA鬥士，並獲得我完全、徹底的背書。提前投票將於5月4日截止，正式選舉日為5月5日。這場SD-41共和黨初選至關重要——你們可以幫助Michelle贏下這場選舉！\n\n與現任議員Greg Walker這個「RINO」失敗者不同，他把印第安納州這些優秀民眾辜負得一塌糊塗，MICHELLE DAVIS是一位贏家，永遠不會讓你們失望。請在5月5日前出來投票支持MICHELLE DAVIS！\n\n查詢你的投票地點： https://swampthevoteusa.com/indiana/",
