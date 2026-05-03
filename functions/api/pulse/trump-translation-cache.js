@@ -1,4 +1,14 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116511293838078879": {
+    "content_zh_cn": "特朗普对德国总理默茨表示：“先把你那破败的国家整顿好”，并考虑从西班牙和意大利撤出美军：https://www.breitbart.com/europe/2026/05/01/trump-tells-german-chancellor-merz-to-fix-his-broken-country-mulls-pulling-u-s-troops-from-spain-and-italy/",
+    "content_zh_hk": "特朗普對德國總理默茨表示：「先把你那個破敗的國家整頓好」，並考慮從西班牙及意大利撤走美軍：https://www.breitbart.com/europe/2026/05/01/trump-tells-german-chancellor-merz-to-fix-his-broken-country-mulls-pulling-u-s-troops-from-spain-and-italy/",
+    "content_ko": "트럼프, 독일 총리 메르츠에게 “망가진 당신 나라부터 바로잡으라” 촉구… 스페인·이탈리아 주둔 미군 철수도 검토: https://www.breitbart.com/europe/2026/05/01/trump-tells-german-chancellor-merz-to-fix-his-broken-country-mulls-pulling-u-s-troops-from-spain-and-italy/"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116511291851057573": {
+    "content_zh_cn": "五角大楼称，特朗普政府将从北约盟友德国撤出数千名驻军：https://www.breitbart.com/europe/2026/05/02/trump-admin-to-withdraw-thousands-of-troops-from-nato-ally-germany/",
+    "content_zh_hk": "五角大樓稱，特朗普政府將從北約盟友德國撤出數千名駐軍：https://www.breitbart.com/europe/2026/05/02/trump-admin-to-withdraw-thousands-of-troops-from-nato-ally-germany/",
+    "content_ko": "미 국방부에 따르면, 트럼프 행정부는 NATO 동맹국 독일에서 수천 명의 주둔 미군을 철수할 예정입니다: https://www.breitbart.com/europe/2026/05/02/trump-admin-to-withdraw-thousands-of-troops-from-nato-ally-germany/"
+  },
   "https://truthsocial.com/@realDonaldTrump/116511160749911403": {
     "content_zh_cn": "独家——意大利副总理马泰奥·萨尔维尼：特朗普为“文化根基”所展现的“勇气”，对西方的生存至关重要：https://www.breitbart.com/politics/2026/05/03/exclusive-deputy-italian-prime-minister-matteo-salvini-trumps-courage-for-cultural-foundation-critical-to-survival-of-the-west/",
     "content_zh_hk": "獨家——意大利副總理馬泰奧·薩爾維尼：特朗普為「文化根基」所展現的「勇氣」，對西方的生存至關重要：https://www.breitbart.com/politics/2026/05/03/exclusive-deputy-italian-prime-minister-matteo-salvini-trumps-courage-for-cultural-foundation-critical-to-survival-of-the-west/",
