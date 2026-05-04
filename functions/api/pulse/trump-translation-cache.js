@@ -1,4 +1,14 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116517823265377690": {
+    "content_zh_cn": "我在8个月内为美国赚了450亿美元！",
+    "content_zh_hk": "我在8個月內為美國賺了450億美元！",
+    "content_ko": "나는 8개월 만에 미국에 450억 달러를 벌어다줬다!"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116517816855483204": {
+    "content_zh_cn": "“太迟了”对美国来说就是一场灾难！利率太高了！",
+    "content_zh_hk": "「太遲了」對美國來說就是一場災難！利率太高了！",
+    "content_ko": "“너무 늦었다”는 미국에 재앙이다! 금리가 너무 높다!"
+  },
   "https://truthsocial.com/@realDonaldTrump/116517774797366596": {
     "content_zh_cn": "肯尼迪中心代表对Newsmax表示：前任管理层把这座设施经营得一塌糊涂：https://www.newsmax.com/newsmax-tv/roma-daravi-newsmax-trump-kennedy-center/2026/02/16/id/1246314/",
     "content_zh_hk": "甘迺迪中心代表向Newsmax表示：前任管理層把這座設施經營得一塌糊塗：https://www.newsmax.com/newsmax-tv/roma-daravi-newsmax-trump-kennedy-center/2026/02/16/id/1246314/",
