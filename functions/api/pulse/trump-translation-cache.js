@@ -1,4 +1,19 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116517774797366596": {
+    "content_zh_cn": "肯尼迪中心代表对Newsmax表示：前任管理层把这座设施经营得一塌糊涂：https://www.newsmax.com/newsmax-tv/roma-daravi-newsmax-trump-kennedy-center/2026/02/16/id/1246314/",
+    "content_zh_hk": "甘迺迪中心代表向Newsmax表示：前任管理層把這座設施經營得一塌糊塗：https://www.newsmax.com/newsmax-tv/roma-daravi-newsmax-trump-kennedy-center/2026/02/16/id/1246314/",
+    "content_ko": "케네디 센터 관계자, 뉴스맥스에 밝혀: 이전 경영진이 시설 운영을 완전히 망쳐놨다: https://www.newsmax.com/newsmax-tv/roma-daravi-newsmax-trump-kennedy-center/2026/02/16/id/1246314/"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116517773335418303": {
+    "content_zh_cn": "租金支票检验：特朗普政策转向如何缓解房价上涨：https://www.realclearmarkets.com/articles/2026/02/19/rent_check_test_how_trumps_policy_shift_is_easing_home_prices_1165698.html",
+    "content_zh_hk": "租金支票檢驗：特朗普政策轉向如何緩和樓價升勢：https://www.realclearmarkets.com/articles/2026/02/19/rent_check_test_how_trumps_policy_shift_is_easing_home_prices_1165698.html",
+    "content_ko": "월세 수표 테스트: 트럼프의 정책 전환이 주택가격 상승세를 어떻게 완화하고 있는가: https://www.realclearmarkets.com/articles/2026/02/19/rent_check_test_how_trumps_policy_shift_is_easing_home_prices_1165698.html"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116517769886308639": {
+    "content_zh_cn": "来自得州副州长丹·帕特里克：\n\n“总统先生，\n\n这是我与您分享的内容。\n\n1. 在得州，您在共和党人中的总体支持率为89%；在自认是保守派的人群中，这一比例为97%。\n\n2. 我测试了21条关于我政绩的信息，反响都很好。\n\n然而，人们会投票给我的首要原因是您。\n\n这是压倒任何政策议题的头号信息。”",
+    "content_zh_hk": "來自德州副州長丹·帕特里克：\n\n「總統先生，\n\n這是我與您分享的內容。\n\n1. 在德州，您在共和黨人中的整體支持率為89%；在自認為保守派的人群中，這一比例為97%。\n\n2. 我測試了21條有關我政績的信息，反應都很好。\n\n然而，人們會投票給我的首要原因是您。\n\n這是凌駕於任何政策議題之上的頭號信息。」",
+    "content_ko": "텍사스 부지사 댄 패트릭:\n\n“대통령님,\n\n제가 대통령님께 공유드린 내용입니다.\n\n1. 텍사스에서 공화당원들 사이 대통령님에 대한 전반적 지지율은 89%입니다. 자신을 보수주의자라고 밝힌 이들 사이에서는 97%입니다.\n\n2. 제 업적에 관한 메시지 21개를 테스트했는데, 모두 좋은 반응을 받았습니다.\n\n그러나 사람들이 저에게 투표하는 가장 큰 이유는 바로 대통령님입니다.\n\n이는 어떤 정책 이슈보다도 가장 강력한 메시지입니다.”"
+  },
   "https://truthsocial.com/@realDonaldTrump/116517763130501652": {
     "content_zh_cn": "格雷格·阿博特（Greg Abbott）是德克萨斯州一位强有力、备受尊敬的州长。这个州我非常热爱，而且我曾三次在这里大获全胜，包括在2024年拿下640万张选票（遥遥领先地创下历史最高得票）！\n\n在格雷格果断而卓有成效的领导下，随着新的、更公平且大幅改进的国会选区地图获得通过，德州优秀的人民将在2026年中期选举中有机会选出5位新的MAGA共和党人——这对“孤星州”的共和党人以及全美共和党人而言，都是一次重大胜利！作为州长，格雷格还在不懈奋战，捍卫德州价值观、推动经济增长、削减税负和监管、支持我们了不起的农民和牧场主、推进“美国制造”、释放美国能源主导地位、推广择校、守住我们如今非常安全的边境，阻止移民犯罪分子、杀人犯和其他罪犯非法进入我们的国家，确保法律与秩序，保护我们勇敢的军人、退伍军人和执法人员，并捍卫我们始终处于围攻之下的《第二修正案》。\n\n格雷格·阿博特竞选连任，获得我完全、全面的支持。他是一位杰出的州长，也是杰出的人——他绝不会让你们失望！",
     "content_zh_hk": "Greg Abbott是德州一位強勢且備受尊敬的州長。這個州我非常熱愛，而且我曾三次在這裡大勝，包括在2024年拿下640萬張選票（以壓倒性優勢創下歷來最高得票）！\n\n在Greg果斷而高效的領導下，隨着全新、更公平且大幅改良的國會選區地圖獲得通過，德州優秀的人民將有機會在2026年中期選舉中選出5位新的MAGA共和黨人——這對「孤星州」以及全國的共和黨而言，都是一次重大勝利！作為州長，Greg亦一直不懈奮戰，捍衛德州價值、推動經濟增長、減稅及放寬監管、支持我們出色的農民和牧場主、推進「美國製造」、釋放美國能源主導優勢、推廣學校選擇、守住我們現在非常安全的邊境，阻止移民罪犯、兇手及其他罪犯非法進入我們的國家，確保法律與秩序，保護我們勇敢的軍人、退伍軍人和執法人員，並捍衛我們一直備受衝擊的《第二修正案》。\n\nGreg Abbott競逐連任，獲得我完全及全面的支持。他是一位卓越的州長，也是一位卓越的人——他絕對不會讓你們失望！",
