@@ -48,7 +48,8 @@
     .community-link::after{content:'↗';font-size:12px;line-height:1}
     .community-link:hover{background:linear-gradient(180deg,#ffedd5 0%,#fed7aa 100%)}
     .price { font-size:clamp(38px,5vw,60px); font-weight:800; letter-spacing:-0.04em; margin:10px 0 6px; }
-    .change { display:flex; flex-wrap:wrap; gap:12px; align-items:center; font-size:17px; font-weight:700; margin-bottom:18px; }
+    .change { display:flex; flex-wrap:wrap; gap:12px; align-items:center; font-size:17px; font-weight:700; margin-bottom:8px; }
+    .market-phase{margin-bottom:18px;font-size:12px;color:var(--muted);line-height:1.6}
     .up { color:var(--up); } .down { color:var(--down); } .flat { color:var(--flat); }
     .mini-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:16px; }
     .stat { padding:14px 14px 12px; border:1px solid var(--line); border-radius:16px; background:rgba(248,250,252,0.8); }
@@ -81,7 +82,8 @@
       .subtitle { font-size:14px; line-height:1.7; }
       .card { padding:18px; border-radius:20px; }
       .price { font-size:42px; }
-      .change { font-size:15px; gap:10px; margin-bottom:14px; }
+      .change { font-size:15px; gap:10px; margin-bottom:6px; }
+      .market-phase{margin-bottom:12px;font-size:12px;}
       .mini-grid { gap:10px; margin-top:14px; }
       .stat { padding:12px; border-radius:14px; }
       .stat-value { font-size:18px; }
@@ -125,7 +127,8 @@
       .name { font-size:22px; }
       .community-link{padding:7px 10px;font-size:11px;width:100%;justify-content:center}
       .price { font-size:34px; margin:8px 0 4px; }
-      .change { font-size:13px; gap:6px; margin-bottom:10px; }
+      .change { font-size:13px; gap:6px; margin-bottom:4px; }
+      .market-phase{margin-bottom:10px;font-size:11px;}
       .mini-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin-top:10px; }
       .stat-label { font-size:11px; margin-bottom:4px; }
       .stat-value { font-size:15px; line-height:1.35; word-break:break-word; }
@@ -221,6 +224,7 @@
       <div class="name-row"><div class="name"></div><a class="community-link" target="_blank" rel="noopener noreferrer"></a></div>
       <div class="price"></div>
       <div class="change"><span class="day-change"></span></div>
+      <div class="market-phase"></div>
       <div class="mini-grid">
         <div class="stat"><div class="stat-label">开盘</div><div class="stat-value open"></div></div>
         <div class="stat"><div class="stat-label">前收</div><div class="stat-value previous-close"></div></div>
@@ -304,6 +308,16 @@
       if(text === '보합') return '持平';
       return zhText(text);
     }
+    function marketPhaseText(market){
+      const v = String(market || '').toUpperCase();
+      if(!v) return '交易状态：--';
+      if(v.includes('CLOSE')) return '交易状态：已收盘';
+      if(v.includes('OPEN')) return '交易状态：交易中';
+      if(v.includes('PREOPEN')) return '交易状态：开盘前';
+      if(v.includes('HALT') || v.includes('STOP')) return '交易状态：停牌';
+      if(v.includes('HOLIDAY') || v.includes('CLOSED') || v.includes('休')) return '交易状态：休市';
+      return `交易状态：${zhText(market)}`;
+    }
     function getDirectionClass(value){ if(value > 0) return 'up'; if(value < 0) return 'down'; return 'flat'; }
     function chartUrl(code,type,range){ return `${CHART}?code=${encodeURIComponent(code)}&type=${encodeURIComponent(type)}&range=${encodeURIComponent(range)}`; }
     function updateChart(card, force=false){ const code=card.dataset.code,type=card.dataset.chartType||'area',range=card.dataset.chartRange||'day'; const img=card.querySelector('.chart-image'); const next=chartUrl(code,type,range); if(force || img.dataset.src!==next){ img.src=next; img.dataset.src=next; } img.alt=`${code} chart`; }
@@ -312,7 +326,7 @@
     function applyCardVisibility(targetCode){ document.querySelectorAll('.switch-btn').forEach((btn)=>btn.classList.toggle('active', btn.dataset.targetCode===targetCode)); document.querySelectorAll('#cards .card').forEach((card)=>{ card.style.display = card.dataset.code===targetCode ? '' : 'none'; }); }
     function renderMarketSummary(summary){ if(!summary) return; document.getElementById('summary-kospi').textContent = summary.kospi ? summary.kospi.price : '--'; document.getElementById('summary-kospi-d').textContent = summary.kospi ? fmtPctMaybe(summary.kospi.changePct) : '--'; document.getElementById('summary-kosdaq').textContent = summary.kosdaq ? summary.kosdaq.price : '--'; document.getElementById('summary-kosdaq-d').textContent = summary.kosdaq ? fmtPctMaybe(summary.kosdaq.changePct) : '--'; document.getElementById('summary-usdkrw').textContent = summary.usdkrw ? summary.usdkrw.value : '--'; document.getElementById('summary-usdkrw-d').textContent = summary.usdkrw ? `${mapUsdDirection(summary.usdkrw.direction)} ${summary.usdkrw.change}` : '--'; document.getElementById('summary-semi').textContent = summary.semiconductorTone || '--'; }
     function renderInvestor(snapshot){ investorMap.set(snapshot.code, snapshot); const card=ensureCard(snapshot.code); card.querySelector('.foreign-net').textContent = fmtShares(snapshot.foreignNetToday); card.querySelector('.institution-net').textContent = fmtShares(snapshot.institutionNetToday); card.querySelector('.foreign-rate').textContent = zhText(snapshot.foreignHoldingRate || '--'); card.querySelector('.foreign-rate-delta').textContent = snapshot.foreignHoldingRateDelta == null ? '' : ` （较昨日${snapshot.foreignHoldingRateDelta>0?'+':''}${snapshot.foreignHoldingRateDelta.toFixed(2)}pct）`; card.querySelector('.week52-position').textContent = zhText(snapshot.week52Position || '--'); card.querySelector('.volume-trend').textContent = zhText(snapshot.volumeTrend || '--'); card.querySelector('.foreign-trend').textContent = zhText(snapshot.foreign5dTrend || '--'); card.querySelector('.institution-trend').textContent = zhText(snapshot.institution5dTrend || '--'); card.querySelector('.trend-table').innerHTML = (snapshot.recentTrendRows||[]).map((row)=>`<div>${row.date}｜${zhText(row.pct || '--')}｜外资 ${zhText(row.foreignNet)}｜机构 ${zhText(row.institutionNet)}｜散户 ${zhText(row.retailNet)}</div>`).join('') || '--'; }
-    function renderQuote(quote){ const card=ensureCard(quote.code); previousMap.set(quote.code,quote); card.querySelector('.code').textContent=`${quote.code} · 韩股`; card.querySelector('.name').textContent=zhText(quote.name); const community=card.querySelector('.community-link'); community.href='http://9pdd.cn/2g2V0V'; community.textContent='加入资讯交流群'; card.querySelector('.price').textContent=quote.unavailable?'加载失败':fmtNumber(quote.current); const dayEl=card.querySelector('.day-change'); dayEl.className=`day-change ${getDirectionClass(quote.dayChange)}`; dayEl.textContent=quote.unavailable?'数据暂不可用':`当日涨跌 ${fmtSigned(quote.dayChange)} · ${fmtPct(quote.dayChangePercent)}`; card.querySelector('.open').textContent=fmtNumber(quote.open); card.querySelector('.previous-close').textContent=fmtNumber(quote.previousClose); card.querySelector('.high').textContent=fmtNumber(quote.high); card.querySelector('.low').textContent=fmtNumber(quote.low); card.querySelector('.value').textContent=fmtKrwMillion(quote.value); card.querySelector('.week52-range').textContent=`${zhText(quote.week52High || '--')} / ${zhText(quote.week52Low || '--')}`; card.querySelector('.per-eps').textContent=`${zhText(quote.per || '--')} / ${zhText(quote.eps || '--')}`; card.querySelector('.pbr-bps').textContent=`${zhText(quote.pbr || '--')} / ${zhText(quote.bps || '--')}`; updateChart(card, !card.dataset.initialized); card.dataset.initialized='1'; const investor = investorMap.get(quote.code); if(investor) renderInvestor(investor); }
+    function renderQuote(quote){ const card=ensureCard(quote.code); previousMap.set(quote.code,quote); card.querySelector('.code').textContent=`${quote.code} · 韩股`; card.querySelector('.name').textContent=zhText(quote.name); const community=card.querySelector('.community-link'); community.href='http://9pdd.cn/2g2V0V'; community.textContent='加入资讯交流群'; card.querySelector('.price').textContent=quote.unavailable?'加载失败':fmtNumber(quote.current); const dayEl=card.querySelector('.day-change'); dayEl.className=`day-change ${getDirectionClass(quote.dayChange)}`; dayEl.textContent=quote.unavailable?'数据暂不可用':`当日涨跌 ${fmtSigned(quote.dayChange)} · ${fmtPct(quote.dayChangePercent)}`; card.querySelector('.market-phase').textContent=quote.unavailable?'交易状态：--':marketPhaseText(quote.market); card.querySelector('.open').textContent=fmtNumber(quote.open); card.querySelector('.previous-close').textContent=fmtNumber(quote.previousClose); card.querySelector('.high').textContent=fmtNumber(quote.high); card.querySelector('.low').textContent=fmtNumber(quote.low); card.querySelector('.value').textContent=fmtKrwMillion(quote.value); card.querySelector('.week52-range').textContent=`${zhText(quote.week52High || '--')} / ${zhText(quote.week52Low || '--')}`; card.querySelector('.per-eps').textContent=`${zhText(quote.per || '--')} / ${zhText(quote.eps || '--')}`; card.querySelector('.pbr-bps').textContent=`${zhText(quote.pbr || '--')} / ${zhText(quote.bps || '--')}`; updateChart(card, !card.dataset.initialized); card.dataset.initialized='1'; const investor = investorMap.get(quote.code); if(investor) renderInvestor(investor); }
     async function refreshInvestor(){ try{ const resp=await fetch(INVESTOR_FEED,{cache:'no-store'}); if(!resp.ok) throw new Error(`HTTP ${resp.status}`); const data=await resp.json(); if(!data.ok) throw new Error(data.error||'unknown error'); renderMarketSummary(data.marketSummary); for(const snapshot of data.snapshots||[]) renderInvestor(snapshot); }catch(error){ console.error('investor refresh failed', error); } }
     async function refresh(){ if(document.hidden) return; try{ const resp=await fetch(FEED,{cache:'no-store'}); if(!resp.ok) throw new Error(`HTTP ${resp.status}`); const data=await resp.json(); if(!data.ok) throw new Error(data.error||'unknown error'); errorBox.style.display='none'; for(const quote of data.quotes) renderQuote(quote); }catch(error){ errorBox.textContent='当前数据更新稍慢，请稍后刷新重试'; errorBox.style.display='block'; } }
     document.querySelectorAll('.switch-btn').forEach((btn)=>btn.addEventListener('click',()=>applyCardVisibility(btn.dataset.targetCode)));
