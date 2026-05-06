@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow,noarchive" />
+  <title>2026年一季度 全球存储公司盈利榜</title>
+  <style>
+    :root{
+      --bg:#07111f;
+      --bg2:#0b1730;
+      --panel:rgba(10,20,40,.82);
+      --panel2:rgba(8,18,36,.92);
+      --line:rgba(111,168,255,.18);
+      --text:#eef4ff;
+      --muted:#9fb1cf;
+      --blue:#63a8ff;
+      --cyan:#38d0ff;
+      --green:#23d18b;
+      --gold:#ffcc66;
+      --orange:#ff9b54;
+      --pink:#ff6fa6;
+      --shadow:0 28px 80px rgba(0,0,0,.38);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:radial-gradient(circle at top,#11264f 0%,#091325 40%,#050b14 100%);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif}
+    a{text-decoration:none;color:inherit}
+    .wrap{max-width:1360px;margin:0 auto;padding:26px 18px 56px}
+    .hero{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:30px;padding:26px 24px 22px;background:linear-gradient(180deg,rgba(18,35,72,.88),rgba(8,16,33,.94));box-shadow:var(--shadow)}
+    .hero:before,.hero:after{content:"";position:absolute;border-radius:999px;filter:blur(12px);opacity:.22;pointer-events:none}
+    .hero:before{width:240px;height:240px;right:-60px;top:-80px;background:radial-gradient(circle,var(--cyan),transparent 64%)}
+    .hero:after{width:280px;height:280px;left:-120px;bottom:-120px;background:radial-gradient(circle,var(--pink),transparent 64%)}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid rgba(255,255,255,.12);border-radius:999px;background:rgba(255,255,255,.06);font-size:12px;font-weight:800;color:#cfe1ff}
+    h1{margin:14px 0 8px;font-size:42px;line-height:1.12;letter-spacing:-.03em}
+    .sub{max-width:980px;color:#c5d3ec;font-size:15px;line-height:1.85}
+    .hero-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:18px}
+    .kpi{padding:14px 16px;border:1px solid rgba(255,255,255,.1);border-radius:20px;background:rgba(255,255,255,.05);backdrop-filter:blur(10px)}
+    .kpi-k{font-size:12px;color:#aebddb}
+    .kpi-v{margin-top:6px;font-size:22px;font-weight:900;letter-spacing:-.02em}
+
+    .main{display:grid;grid-template-columns:340px 1fr;gap:16px;margin-top:16px;align-items:start}
+    .panel{border:1px solid var(--line);border-radius:28px;background:linear-gradient(180deg,rgba(13,25,49,.88),rgba(7,15,30,.96));box-shadow:var(--shadow)}
+    .sidebar{padding:18px}
+    .section-title{font-size:24px;font-weight:900;margin:0 0 8px}
+    .section-desc{font-size:13px;color:var(--muted);line-height:1.8;margin:0 0 14px}
+    .fund-grid{display:grid;gap:10px}
+    .fund-card{display:block;padding:14px 14px 13px;border:1px solid rgba(255,255,255,.08);border-radius:20px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.025));transition:transform .18s ease,border-color .18s ease,background .18s ease}
+    .fund-card:hover{transform:translateY(-2px);border-color:rgba(116,176,255,.34);background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.03))}
+    .fund-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+    .fund-code{font-size:12px;color:#8cb4ff;font-weight:800;letter-spacing:.05em}
+    .fund-tag{font-size:11px;padding:4px 8px;border-radius:999px;background:rgba(99,168,255,.14);color:#cde0ff}
+    .fund-name{margin-top:6px;font-size:20px;font-weight:900}
+    .fund-desc{margin-top:6px;font-size:12px;color:var(--muted);line-height:1.7}
+    .fund-link{margin-top:8px;font-size:12px;color:#84c8ff;font-weight:800}
+
+    .board{padding:18px}
+    .board-header{display:flex;justify-content:space-between;gap:12px;align-items:end;margin-bottom:14px}
+    .board-note{font-size:12px;color:var(--muted);line-height:1.75;max-width:640px}
+    .rank-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .rank-card{position:relative;overflow:hidden;padding:18px;border-radius:24px;border:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg,rgba(8,21,43,.96),rgba(10,18,35,.92))}
+    .rank-card:before{content:"";position:absolute;inset:auto -40px -40px auto;width:160px;height:160px;border-radius:999px;filter:blur(24px);opacity:.18}
+    .rank-card.blue:before{background:radial-gradient(circle,var(--blue),transparent 64%)}
+    .rank-card.cyan:before{background:radial-gradient(circle,var(--cyan),transparent 64%)}
+    .rank-card.gold:before{background:radial-gradient(circle,var(--gold),transparent 64%)}
+    .rank-card.orange:before{background:radial-gradient(circle,var(--orange),transparent 64%)}
+    .rank-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+    .rank-left{display:flex;gap:12px;align-items:center;min-width:0}
+    .badge{width:38px;height:38px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900;color:#07111f}
+    .b1{background:linear-gradient(135deg,#8dd6ff,#d5f0ff)}
+    .b2{background:linear-gradient(135deg,#54f0ff,#b8f7ff)}
+    .b3{background:linear-gradient(135deg,#ffd269,#fff0bb)}
+    .b4{background:linear-gradient(135deg,#ff9e61,#ffd3af)}
+    .company{min-width:0}
+    .company h3{margin:0;font-size:24px;line-height:1.15}
+    .mini{margin-top:4px;font-size:12px;color:var(--muted)}
+    .profit{text-align:right}
+    .profit .num{font-size:36px;font-weight:900;line-height:1;letter-spacing:-.03em}
+    .profit .unit{margin-top:6px;font-size:12px;color:#c8d4eb}
+    .bar-wrap{margin-top:14px}
+    .bar-title{display:flex;justify-content:space-between;font-size:12px;color:#b6c6e1;margin-bottom:8px}
+    .bar{height:10px;background:rgba(255,255,255,.06);border-radius:999px;overflow:hidden}
+    .bar i{display:block;height:100%;border-radius:999px}
+    .bar1 i{width:100%;background:linear-gradient(90deg,#66b5ff,#d5ebff)}
+    .bar2 i{width:76%;background:linear-gradient(90deg,#41e0ff,#baf6ff)}
+    .bar3 i{width:46%;background:linear-gradient(90deg,#ffca62,#fff0b8)}
+    .bar4 i{width:12%;background:linear-gradient(90deg,#ff9550,#ffd5b3)}
+    .thesis{margin-top:12px;font-size:13px;color:#dbe7ff;line-height:1.8}
+    .foot{display:grid;grid-template-columns:1.15fr .85fr;gap:14px;margin-top:14px}
+    .small-panel{padding:16px 18px;border:1px solid rgba(255,255,255,.08);border-radius:24px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.02))}
+    .small-title{font-size:18px;font-weight:900;margin:0 0 10px}
+    .list{display:grid;gap:10px}
+    .li{padding:12px 14px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.05)}
+    .li strong{display:block;font-size:14px;margin-bottom:4px}
+    .li span{font-size:12px;color:var(--muted);line-height:1.7}
+    .source{margin-top:12px;font-size:11px;line-height:1.8;color:#90a5c7}
+    .source strong{color:#dce8ff}
+
+    @media (max-width:1080px){
+      .main{grid-template-columns:1fr}
+      .rank-grid,.foot,.hero-kpis{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:760px){
+      .wrap{padding:14px 10px 28px}
+      .hero,.panel{border-radius:22px}
+      .hero{padding:18px 16px}
+      h1{font-size:30px}
+      .sub{font-size:14px}
+      .hero-kpis,.rank-grid,.foot{grid-template-columns:1fr}
+      .board,.sidebar{padding:14px}
+      .company h3{font-size:22px}
+      .profit .num{font-size:31px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="eyebrow">💾 2026 年一季度 · 全球存储公司盈利榜</div>
+      <h1>全球最赚钱的存储公司，谁在吃下这一轮 AI 存储红利？</h1>
+      <div class="sub">这是一张写死版展示页，按 2026 年一季度附近已披露财报口径整理。排序以<strong>营业利润 / 经营利润（Operating Income）</strong>为主，并统一折算成美元；若公司披露口径与自然季度略有错位，则采用最接近 2026 年一季度的已披露季度数据。</div>
+      <div class="hero-kpis">
+        <div class="kpi"><div class="kpi-k">榜单主口径</div><div class="kpi-v">营业利润</div></div>
+        <div class="kpi"><div class="kpi-k">绝对龙头</div><div class="kpi-v">三星 + SK</div></div>
+        <div class="kpi"><div class="kpi-k">本轮核心主线</div><div class="kpi-v">HBM / DRAM / 企业级NAND</div></div>
+        <div class="kpi"><div class="kpi-k">页面形态</div><div class="kpi-v">可继续改成长图</div></div>
+      </div>
+    </section>
+
+    <div class="main">
+      <aside class="panel sidebar">
+        <h2 class="section-title">左侧产品映射</h2>
+        <p class="section-desc">你提到的相关基金我先都塞进来，做成“谁受益这轮存储景气”的侧边产品栏。这里先以解释映射逻辑为主，不追求严格持仓一一对应。</p>
+        <div class="fund-grid">
+          <a class="fund-card" href="./korea-client/03431.html">
+            <div class="fund-top"><span class="fund-code">03431</span><span class="fund-tag">港股</span></div>
+            <div class="fund-name">港韩科技</div>
+            <div class="fund-desc">最适合作为这张图的“主入口产品”，韩国半导体链是核心受益方向，适合承接三星电子、SK 海力士这条线。</div>
+            <div class="fund-link">打开产品页 →</div>
+          </a>
+          <a class="fund-card" href="./korea-client/159687.html">
+            <div class="fund-top"><span class="fund-code">159687</span><span class="fund-tag">A股</span></div>
+            <div class="fund-name">亚太精选</div>
+            <div class="fund-desc">更适合放在“亚太科技受益篮子”的位置，不只押存储，但能承接韩国、台湾、日本科技景气外溢。</div>
+            <div class="fund-link">打开产品页 →</div>
+          </a>
+          <a class="fund-card" href="./korea-client/zhk-semiconductor.html">
+            <div class="fund-top"><span class="fund-code">513310</span><span class="fund-tag">A股</span></div>
+            <div class="fund-name">中韩半导体</div>
+            <div class="fund-desc">如果要强调“中韩半导体共振”，这个放左栏非常顺手，既能接韩国存储，也能接A股设备、设计、算力链。</div>
+            <div class="fund-link">打开产品页 →</div>
+          </a>
+          <a class="fund-card" href="../logbias/07709/community.html">
+            <div class="fund-top"><span class="fund-code">07709</span><span class="fund-tag">港股杠杆</span></div>
+            <div class="fund-name">SK 海力士每日杠杆 (2x)</div>
+            <div class="fund-desc">最直接映射 SK 海力士盈利爆发。若页面要更强交易感，这张卡放在左栏会很抓眼。</div>
+            <div class="fund-link">打开观察页 →</div>
+          </a>
+          <a class="fund-card" href="../logbias/07747/community.html">
+            <div class="fund-top"><span class="fund-code">07747</span><span class="fund-tag">港股杠杆</span></div>
+            <div class="fund-name">三星每日杠杆 (2x)</div>
+            <div class="fund-desc">对应三星电子这条线。适合把“全球存储盈利第一”直接映射到可交易表达上。</div>
+            <div class="fund-link">打开观察页 →</div>
+          </a>
+          <div class="fund-card">
+            <div class="fund-top"><span class="fund-code">DRAM 指数</span><span class="fund-tag">景气代理</span></div>
+            <div class="fund-name">DRAM / NAND 价格主线</div>
+            <div class="fund-desc">这轮盈利爆发的底层不是情绪，而是 AI 服务器带来的 HBM 紧缺，叠加 DRAM / NAND 合约价上行。左栏放一个“指数代理卡”，视觉上也更完整。</div>
+            <div class="fund-link">可后续接入实时数据</div>
+          </div>
+        </div>
+      </aside>
+
+      <section class="panel board">
+        <div class="board-header">
+          <div>
+            <h2 class="section-title">盈利榜主体</h2>
+            <div class="board-note">先做成“全球已披露口径的头部玩家榜”。如果你满意，我下一步可以把这页进一步改成更像短视频封面的单屏长图版，或者再补一栏“中国存储链未上市核心公司观察”。</div>
+          </div>
+        </div>
+
+        <div class="rank-grid">
+          <article class="rank-card blue">
+            <div class="rank-head">
+              <div class="rank-left">
+                <div class="badge b1">1</div>
+                <div class="company">
+                  <h3>三星电子</h3>
+                  <div class="mini">半导体业务 DS，核心驱动来自存储</div>
+                </div>
+              </div>
+              <div class="profit">
+                <div class="num">35.5</div>
+                <div class="unit">十亿美元</div>
+              </div>
+            </div>
+            <div class="bar-wrap">
+              <div class="bar-title"><span>利润强度</span><span>53.7 万亿韩元</span></div>
+              <div class="bar bar1"><i></i></div>
+            </div>
+            <div class="thesis">这一轮存储周期里，三星重新把规模优势吃满了。HBM 追赶、传统 DRAM 涨价、NAND 价格修复一起发力，直接把半导体业务利润推到断层第一。</div>
+          </article>
+
+          <article class="rank-card cyan">
+            <div class="rank-head">
+              <div class="rank-left">
+                <div class="badge b2">2</div>
+                <div class="company">
+                  <h3>SK 海力士</h3>
+                  <div class="mini">HBM 龙头，存储景气弹性最强</div>
+                </div>
+              </div>
+              <div class="profit">
+                <div class="num">27.1</div>
+                <div class="unit">十亿美元</div>
+              </div>
+            </div>
+            <div class="bar-wrap">
+              <div class="bar-title"><span>利润强度</span><span>37.61 万亿韩元</span></div>
+              <div class="bar bar2"><i></i></div>
+            </div>
+            <div class="thesis">如果说三星赢在体量，SK 海力士更像赢在景气纯度。HBM 供给偏紧、AI 订单可见度极高，它是这一轮“存储盈利大爆发”最纯粹的核心受益者。</div>
+          </article>
+
+          <article class="rank-card gold">
+            <div class="rank-head">
+              <div class="rank-left">
+                <div class="badge b3">3</div>
+                <div class="company">
+                  <h3>美光科技</h3>
+                  <div class="mini">2026 财年 Q2，最接近自然季度 Q1 的已披露数据</div>
+                </div>
+              </div>
+              <div class="profit">
+                <div class="num">16.5</div>
+                <div class="unit">十亿美元</div>
+              </div>
+            </div>
+            <div class="bar-wrap">
+              <div class="bar-title"><span>利润强度</span><span>Operating income</span></div>
+              <div class="bar bar3"><i></i></div>
+            </div>
+            <div class="thesis">美光已经不是“跟涨”的角色，而是北美 AI 存储链的直接兑现者。高带宽内存与高端 DRAM 一起把利润率拉上去，盈利能力正式进入全球第一梯队。</div>
+          </article>
+
+          <article class="rank-card orange">
+            <div class="rank-head">
+              <div class="rank-left">
+                <div class="badge b4">4</div>
+                <div class="company">
+                  <h3>西部数据</h3>
+                  <div class="mini">2026 财年 Q3，Flash 修复已明显兑现</div>
+                </div>
+              </div>
+              <div class="profit">
+                <div class="num">1.19</div>
+                <div class="unit">十亿美元</div>
+              </div>
+            </div>
+            <div class="bar-wrap">
+              <div class="bar-title"><span>利润强度</span><span>GAAP operating income</span></div>
+              <div class="bar bar4"><i></i></div>
+            </div>
+            <div class="thesis">和前三名相比体量差一大截，但 WD 也已经明显走出 NAND 底部。它更像是“价格修复确认”的标志位，而不是这轮周期的绝对王者。</div>
+          </article>
+        </div>
+
+        <div class="foot">
+          <div class="small-panel">
+            <h3 class="small-title">我建议这张图往外讲的三句话</h3>
+            <div class="list">
+              <div class="li"><strong>1. 这不是普通半导体反弹，而是 AI 把存储重新变成了盈利中心。</strong><span>HBM 供给偏紧，DRAM / NAND 同步涨价，利润不再只集中在 GPU，开始向存储链条大规模转移。</span></div>
+              <div class="li"><strong>2. 韩国双雄几乎吃掉了本轮全球存储盈利的大头。</strong><span>三星靠体量和全产品线，SK 海力士靠 HBM 纯度和弹性，两者合起来已经形成断层优势。</span></div>
+              <div class="li"><strong>3. 相关基金更适合讲“谁映射这条景气主线”，不必生搬成一一对应。</strong><span>03431 / 亚太精选 / 中韩半导体适合讲产业映射，07709 / 07747适合讲高弹性交易表达。</span></div>
+            </div>
+          </div>
+          <div class="small-panel">
+            <h3 class="small-title">未纳入或待补的名字</h3>
+            <div class="list">
+              <div class="li"><strong>Kioxia</strong><span>截至目前我没拿到足够干净、可直接引用的最新季度营业利润口径，所以先不硬塞进榜单。</span></div>
+              <div class="li"><strong>长江存储 / 长鑫存储 / Solidigm</strong><span>要么未上市、要么公开财务披露不足，做“公司盈利排行榜”时强行排位容易失真。</span></div>
+              <div class="li"><strong>可选升级</strong><span>后续可以再做一张“中国存储链观察版”，把产业位置、估值想象空间和二级市场映射产品单独展开。</span></div>
+            </div>
+            <div class="source"><strong>数据说明：</strong>三星电子、SK 海力士采用 2026 年一季度已披露经营利润口径并折算美元；美光采用 2026 财年 Q2 已披露 operating income；西部数据采用 2026 财年 Q3 GAAP operating income。页面为静态展示页，金额取近似值，便于视觉呈现。</div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
