@@ -1,4 +1,19 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116527632284101725": {
+    "content_zh_cn": "美国司法部高层官员预测：最高法院将裁定 AR-15 步枪在全美范围内合法：https://justthenews.com/politics-policy/gun-rights/wedtop-doj-official-predicts-supreme-court-will-declare-ar-15-rifles",
+    "content_zh_hk": "美國司法部高層官員預測：最高法院將裁定 AR-15 步槍在全美範圍內合法：https://justthenews.com/politics-policy/gun-rights/wedtop-doj-official-predicts-supreme-court-will-declare-ar-15-rifles",
+    "content_ko": "미 법무부 고위 당국자 전망: 연방대법원이 AR-15 소총의 미국 전역 합법성을 선언할 것 https://justthenews.com/politics-policy/gun-rights/wedtop-doj-official-predicts-supreme-court-will-declare-ar-15-rifles"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116527632274782112": {
+    "content_zh_cn": "美国司法部高级官员预测：最高法院将宣布AR-15步枪在全美范围内合法：https://justthenews.com/politics-policy/gun-rights/wedtop-doj-official-predicts-supreme-court-will-declare-ar-15-rifles",
+    "content_zh_hk": "美國司法部高級官員預測：最高法院將宣布AR-15步槍在全美範圍內合法：https://justthenews.com/politics-policy/gun-rights/wedtop-doj-official-predicts-supreme-court-will-declare-ar-15-rifles",
+    "content_ko": "미국 법무부 고위 당국자, 연방대법원이 AR-15 소총의 미국 전역 합법화를 선언할 것이라고 전망: https://justthenews.com/politics-policy/gun-rights/wedtop-doj-official-predicts-supreme-court-will-declare-ar-15-rifles"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116527630774740942": {
+    "content_zh_cn": "特朗普推动的新型政府改革文化，正为退伍军人带来更多挽救生命的福祉： https://justthenews.com/government/white-house/trumps-culture-government-reform-and-reduction-brings-life-saving-benefits",
+    "content_zh_hk": "特朗普推動的新型政府改革文化，正為退伍軍人帶來更多拯救生命的裨益： https://justthenews.com/government/white-house/trumps-culture-government-reform-and-reduction-brings-life-saving-benefits",
+    "content_ko": "트럼프의 새로운 정부 개혁 문화가 재향군인들에게 더 많은 생명을 구하는 혜택을 제공하고 있습니다: https://justthenews.com/government/white-house/trumps-culture-government-reform-and-reduction-brings-life-saving-benefits"
+  },
   "https://truthsocial.com/@realDonaldTrump/116527444859592032": {
     "content_zh_cn": "假设伊朗同意履行已经达成的安排——这或许是个很大的假设——这场已堪称传奇的“史诗之怒”将告一段落，而这场极为有效的封锁将使霍尔木兹海峡向所有国家开放，包括伊朗。\n如果他们不同意，轰炸将开始，而且遗憾的是，其规模和强度都将远高于此前。\n感谢对此事的关注！\n总统 唐纳德·J·特朗普",
     "content_zh_hk": "假設伊朗同意履行已經達成的安排——這或許是個很大的假設——這場已堪稱傳奇的「史詩之怒」將告一段落，而這場極為有效的封鎖將令霍爾木茲海峽向所有國家開放，包括伊朗。\n如果他們不同意，轟炸將開始，而且遺憾的是，其規模和強度都將遠高於此前。\n感謝對此事的關注！\n總統 唐納德·J·特朗普",
