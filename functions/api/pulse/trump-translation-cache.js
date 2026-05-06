@@ -1,4 +1,14 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116528258570841677": {
+    "content_zh_cn": "礼来宣布向印第安纳州各生产基地追加投资45亿美元，并启用首个专注于遗传医学的专用工厂：https://investor.lilly.com/news-releases/news-release-details/lilly-commits-additional-45-billion-across-indiana-manufacturing",
+    "content_zh_hk": "禮來宣布向印第安納州各生產基地追加投資45億美元，並啟用首個專注於遺傳醫學的專用設施：https://investor.lilly.com/news-releases/news-release-details/lilly-commits-additional-45-billion-across-indiana-manufacturing",
+    "content_ko": "릴리는 인디애나주 제조 거점 전반에 걸쳐 45억 달러를 추가 투자하고, 유전의학 전용 첫 시설을 개소했습니다: https://investor.lilly.com/news-releases/news-release-details/lilly-commits-additional-45-billion-across-indiana-manufacturing"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116528208383447126": {
+    "content_zh_cn": "特德·特纳，这位史上最伟大的人物之一，刚刚去世。\n他创办了CNN，后来将其出售，而这笔交易也让他本人深受打击，因为新东家接手后，把CNN——他的“孩子”——给毁了。它变得过度政治正确，完全背离了他的理念。\n也许新的买家——很了不起的人——能够让它重拾昔日的公信力与荣光。\n无论如何，他都是广播史上最伟大的人物之一，也是我的朋友。每当我需要他时，他都在，始终愿意为正义事业挺身而出！\n唐纳德·J·特朗普总统",
+    "content_zh_hk": "Ted Turner，這位史上最偉大的人物之一，剛剛離世。\n他創辦了CNN，後來將其出售，而這宗交易也令他本人深受打擊，因為新東家接手後，把CNN——他的「孩子」——給毀了。它變得過度政治正確，完全背離了他的理念。\n也許新的買家——很了不起的人——能夠讓它重拾昔日的公信力與榮光。\n無論如何，他都是廣播史上最偉大的人物之一，也是我的朋友。每當我需要他時，他都在，始終願意為正義事業挺身而出！\n總統 Donald J. Trump",
+    "content_ko": "역사상 가장 위대한 인물들 중 한 명인 테드 터너가 방금 세상을 떠났습니다.\n그는 CNN을 창립했고, 이후 이를 매각했습니다. 그리고 그 거래로 인해 본인은 큰 상처를 받았습니다. 새 주인이 CNN, 그의 “아이”를 넘겨받아 망가뜨렸기 때문입니다. CNN은 지나치게 정치적으로 올바른 방향으로 변했고, 그것은 그가 추구하던 것과는 전혀 달랐습니다.\n어쩌면 새로운 인수자들, 훌륭한 사람들이 CNN을 예전의 신뢰와 영광으로 되돌릴 수 있을지도 모릅니다.\n그럼에도 그는 방송 역사상 가장 위대한 인물들 중 한 명이었고, 나의 친구였습니다. 내가 그를 필요로 할 때마다 그는 늘 그 자리에 있었고, 언제나 대의를 위해 기꺼이 싸우려 했습니다!\n대통령 DONALD J. TRUMP"
+  },
   "https://truthsocial.com/@realDonaldTrump/116527632284101725": {
     "content_zh_cn": "美国司法部高层官员预测：最高法院将裁定 AR-15 步枪在全美范围内合法：https://justthenews.com/politics-policy/gun-rights/wedtop-doj-official-predicts-supreme-court-will-declare-ar-15-rifles",
     "content_zh_hk": "美國司法部高層官員預測：最高法院將裁定 AR-15 步槍在全美範圍內合法：https://justthenews.com/politics-policy/gun-rights/wedtop-doj-official-predicts-supreme-court-will-declare-ar-15-rifles",
