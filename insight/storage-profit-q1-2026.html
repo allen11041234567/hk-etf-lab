@@ -25,14 +25,14 @@
     *{box-sizing:border-box}
     html,body{margin:0;padding:0;background:radial-gradient(circle at top,#11264f 0%,#091325 40%,#050b14 100%);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif}
     a{text-decoration:none;color:inherit}
-    .wrap{max-width:1360px;margin:0 auto;padding:26px 18px 56px}
+    .wrap{max-width:1240px;margin:0 auto;padding:18px 14px 40px}
     .hero{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:30px;padding:26px 24px 22px;background:linear-gradient(180deg,rgba(18,35,72,.88),rgba(8,16,33,.94));box-shadow:var(--shadow)}
     .hero:before,.hero:after{content:"";position:absolute;border-radius:999px;filter:blur(12px);opacity:.22;pointer-events:none}
     .hero:before{width:240px;height:240px;right:-60px;top:-80px;background:radial-gradient(circle,var(--cyan),transparent 64%)}
     .hero:after{width:280px;height:280px;left:-120px;bottom:-120px;background:radial-gradient(circle,var(--pink),transparent 64%)}
     .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid rgba(255,255,255,.12);border-radius:999px;background:rgba(255,255,255,.06);font-size:12px;font-weight:800;color:#cfe1ff}
-    h1{margin:14px 0 8px;font-size:42px;line-height:1.12;letter-spacing:-.03em}
-    .sub{max-width:980px;color:#c5d3ec;font-size:15px;line-height:1.85}
+    h1{margin:12px 0 8px;font-size:38px;line-height:1.08;letter-spacing:-.04em}
+    .sub{max-width:920px;color:#c5d3ec;font-size:14px;line-height:1.75}
     .hero-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:18px}
     .kpi{padding:14px 16px;border:1px solid rgba(255,255,255,.1);border-radius:20px;background:rgba(255,255,255,.05);backdrop-filter:blur(10px)}
     .kpi-k{font-size:12px;color:#aebddb}
@@ -42,8 +42,9 @@
     .panel{border:1px solid var(--line);border-radius:28px;background:linear-gradient(180deg,rgba(13,25,49,.88),rgba(7,15,30,.96));box-shadow:var(--shadow)}
     .section-title{font-size:24px;font-weight:900;margin:0 0 8px}
     .section-desc{font-size:13px;color:var(--muted);line-height:1.8;margin:0 0 14px}
-    .product-panel,.board{padding:18px}
+    .product-panel,.board{padding:16px}
     .fund-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+    .headline-strip{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
     .fund-card{display:block;padding:14px 14px 13px;border:1px solid rgba(255,255,255,.08);border-radius:20px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.025));transition:transform .18s ease,border-color .18s ease,background .18s ease}
     .fund-card:hover{transform:translateY(-2px);border-color:rgba(116,176,255,.34);background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.03))}
     .fund-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
@@ -56,8 +57,8 @@
     .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
     .board-header{display:flex;justify-content:space-between;gap:12px;align-items:end;margin-bottom:14px}
     .board-note{font-size:12px;color:var(--muted);line-height:1.75;max-width:640px}
-    .rank-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    .rank-card{position:relative;overflow:hidden;padding:18px;border-radius:24px;border:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg,rgba(8,21,43,.96),rgba(10,18,35,.92))}
+    .rank-grid{display:grid;grid-template-columns:1fr;gap:12px}
+    .rank-card{position:relative;overflow:hidden;padding:16px;border-radius:22px;border:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg,rgba(8,21,43,.96),rgba(10,18,35,.92))}
     .rank-card:before{content:"";position:absolute;inset:auto -40px -40px auto;width:160px;height:160px;border-radius:999px;filter:blur(24px);opacity:.18}
     .rank-card.blue:before{background:radial-gradient(circle,var(--blue),transparent 64%)}
     .rank-card.cyan:before{background:radial-gradient(circle,var(--cyan),transparent 64%)}
@@ -72,10 +73,10 @@
     .b3{background:linear-gradient(135deg,#ffd269,#fff0bb)}
     .b4{background:linear-gradient(135deg,#ff9e61,#ffd3af)}
     .company{min-width:0}
-    .company h3{margin:0;font-size:24px;line-height:1.15}
-    .mini{margin-top:4px;font-size:12px;color:var(--muted)}
+    .company h3{margin:0;font-size:23px;line-height:1.1}
+    .mini{margin-top:4px;font-size:11px;color:var(--muted)}
     .profit{text-align:right}
-    .profit .num{font-size:36px;font-weight:900;line-height:1;letter-spacing:-.03em}
+    .profit .num{font-size:40px;font-weight:900;line-height:1;letter-spacing:-.04em}
     .profit .unit{margin-top:6px;font-size:12px;color:#c8d4eb}
     .bar-wrap{margin-top:14px}
     .bar-title{display:flex;justify-content:space-between;font-size:12px;color:#b6c6e1;margin-bottom:8px}
@@ -86,8 +87,8 @@
     .bar3 i{width:47%;background:linear-gradient(90deg,#ffca62,#fff0b8)}
     .bar4 i{width:34%;background:linear-gradient(90deg,#ff9550,#ffd5b3)}
     .bar5 i{width:12%;background:linear-gradient(90deg,#ff74aa,#ffd0e3)}
-    .thesis{margin-top:12px;font-size:13px;color:#dbe7ff;line-height:1.8}
-    .foot{display:grid;grid-template-columns:1.15fr .85fr;gap:14px;margin-top:14px}
+    .thesis{margin-top:10px;font-size:12px;color:#dbe7ff;line-height:1.65}
+    .foot{display:grid;grid-template-columns:1fr;gap:12px;margin-top:12px}
     .small-panel{padding:16px 18px;border:1px solid rgba(255,255,255,.08);border-radius:24px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.02))}
     .small-title{font-size:18px;font-weight:900;margin:0 0 10px}
     .list{display:grid;gap:10px}
@@ -98,23 +99,27 @@
     .source strong{color:#dce8ff}
 
     @media (max-width:1080px){
-      .compare-grid,.fund-grid{grid-template-columns:1fr}
-      .rank-grid,.foot,.hero-kpis{grid-template-columns:1fr 1fr}
+      .compare-grid,.fund-grid,.headline-strip{grid-template-columns:1fr}
+      .hero-kpis{grid-template-columns:1fr 1fr}
     }
     @media (max-width:760px){
-      .wrap{padding:10px 8px 24px}
-      .hero,.panel{border-radius:20px}
-      .hero{padding:16px 14px}
-      h1{font-size:28px}
-      .sub{font-size:13px;line-height:1.7}
-      .hero-kpis,.rank-grid,.foot,.fund-grid{grid-template-columns:1fr}
-      .board,.product-panel{padding:12px}
-      .company h3{font-size:20px}
-      .profit .num{font-size:34px}
-      .profit .unit,.mini,.bar-title,.fund-desc,.board-note,.section-desc{font-size:11px}
-      .rank-card{padding:16px}
-      .thesis{font-size:12px;line-height:1.65}
-      .small-panel{padding:14px}
+      .wrap{padding:8px 6px 20px}
+      .hero,.panel{border-radius:18px}
+      .hero{padding:14px 12px}
+      h1{font-size:26px}
+      .sub{font-size:12px;line-height:1.6}
+      .hero-kpis,.fund-grid,.headline-strip{grid-template-columns:1fr}
+      .board,.product-panel{padding:10px}
+      .company h3{font-size:19px}
+      .profit .num{font-size:36px}
+      .profit .unit,.mini,.bar-title,.fund-desc,.board-note,.section-desc{font-size:10px}
+      .rank-card{padding:14px;border-radius:18px}
+      .thesis{font-size:11px;line-height:1.55}
+      .small-panel{padding:12px}
+      .kpi{padding:10px 12px;border-radius:16px}
+      .kpi-v{font-size:18px}
+      .section-title{font-size:20px}
+      .fund-name{font-size:18px}
     }
   </style>
 </head>
@@ -176,15 +181,27 @@
         </div>
       </section>
 
+      <div class="headline-strip">
+        <section class="panel board">
+          <div class="board-header">
+            <div>
+              <h2 class="section-title">海外存储盈利榜</h2>
+              <div class="board-note">手机截图优先版，单列大卡展示，先看利润绝对值，再看谁代表 HBM / NAND / 企业级存储的不同盈利来源。</div>
+            </div>
+          </div>
+        </section>
+        <section class="panel board">
+          <div class="board-header">
+            <div>
+              <h2 class="section-title">中国存储链观察榜</h2>
+              <div class="board-note">中国这边同样用大卡，但把 A 股已兑现利润和未上市主轴的产业位置分开理解，截图时一眼就能看明白。</div>
+            </div>
+          </div>
+        </section>
+      </div>
+
       <div class="compare-grid">
       <section class="panel board">
-        <div class="board-header">
-          <div>
-            <h2 class="section-title">海外存储盈利榜</h2>
-            <div class="board-note">按 2026 年一季度附近已披露经营利润口径整理，统一折算为美元，突出谁真正吃下了这一轮 AI 存储红利。</div>
-          </div>
-        </div>
-
         <div class="rank-grid">
           <article class="rank-card blue">
             <div class="rank-head">
@@ -314,13 +331,6 @@
       </section>
 
       <section class="panel board">
-        <div class="board-header">
-          <div>
-            <h2 class="section-title">中国存储链观察榜</h2>
-            <div class="board-note">同样做成卡片式数据可视化，但口径分成两类，A 股用公开营收与归母净利润，未上市龙头用收入、份额和拐点阶段来表示。</div>
-          </div>
-        </div>
-
         <div class="rank-grid">
           <article class="rank-card blue">
             <div class="rank-head">
