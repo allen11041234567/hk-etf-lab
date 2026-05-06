@@ -38,12 +38,12 @@
     .kpi-k{font-size:12px;color:#aebddb}
     .kpi-v{margin-top:6px;font-size:22px;font-weight:900;letter-spacing:-.02em}
 
-    .main{display:grid;grid-template-columns:340px 1fr;gap:16px;margin-top:16px;align-items:start}
+    .main{display:grid;grid-template-columns:1fr;gap:16px;margin-top:16px;align-items:start}
     .panel{border:1px solid var(--line);border-radius:28px;background:linear-gradient(180deg,rgba(13,25,49,.88),rgba(7,15,30,.96));box-shadow:var(--shadow)}
-    .sidebar{padding:18px}
     .section-title{font-size:24px;font-weight:900;margin:0 0 8px}
     .section-desc{font-size:13px;color:var(--muted);line-height:1.8;margin:0 0 14px}
-    .fund-grid{display:grid;gap:10px}
+    .product-panel,.board{padding:18px}
+    .fund-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
     .fund-card{display:block;padding:14px 14px 13px;border:1px solid rgba(255,255,255,.08);border-radius:20px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.025));transition:transform .18s ease,border-color .18s ease,background .18s ease}
     .fund-card:hover{transform:translateY(-2px);border-color:rgba(116,176,255,.34);background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.03))}
     .fund-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
@@ -52,15 +52,8 @@
     .fund-name{margin-top:6px;font-size:20px;font-weight:900}
     .fund-desc{margin-top:6px;font-size:12px;color:var(--muted);line-height:1.7}
     .fund-link{margin-top:8px;font-size:12px;color:#84c8ff;font-weight:800}
-    .side-split{height:1px;border:none;background:rgba(255,255,255,.08);margin:14px 0}
-    .watch-grid{display:grid;gap:10px}
-    .watch-card{padding:14px;border:1px solid rgba(255,255,255,.08);border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02))}
-    .watch-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
-    .watch-name{font-size:18px;font-weight:900}
-    .watch-role{margin-top:4px;font-size:12px;color:#8fc4ff}
-    .watch-point{margin-top:8px;font-size:12px;color:var(--muted);line-height:1.75}
 
-    .board{padding:18px}
+    .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
     .board-header{display:flex;justify-content:space-between;gap:12px;align-items:end;margin-bottom:14px}
     .board-note{font-size:12px;color:var(--muted);line-height:1.75;max-width:640px}
     .rank-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
@@ -103,7 +96,7 @@
     .source strong{color:#dce8ff}
 
     @media (max-width:1080px){
-      .main{grid-template-columns:1fr}
+      .compare-grid,.fund-grid{grid-template-columns:1fr}
       .rank-grid,.foot,.hero-kpis{grid-template-columns:1fr 1fr}
     }
     @media (max-width:760px){
@@ -112,8 +105,8 @@
       .hero{padding:18px 16px}
       h1{font-size:30px}
       .sub{font-size:14px}
-      .hero-kpis,.rank-grid,.foot{grid-template-columns:1fr}
-      .board,.sidebar{padding:14px}
+      .hero-kpis,.rank-grid,.foot,.fund-grid{grid-template-columns:1fr}
+      .board,.product-panel{padding:14px}
       .company h3{font-size:22px}
       .profit .num{font-size:31px}
     }
@@ -134,85 +127,55 @@
     </section>
 
     <div class="main">
-      <aside class="panel sidebar">
-        <h2 class="section-title">左侧产品映射</h2>
-        <p class="section-desc">这次把左栏改成更实用的版本，产品卡直接跳到东财或富途详情页，方便你从“盈利主线”直接切到具体产品。</p>
+      <section class="panel product-panel">
+        <h2 class="section-title">相关产品映射</h2>
+        <p class="section-desc">先把可交易表达单独放一排，这样下面中国和海外两边都能平视展示，不再是一边主榜一边备注的感觉。</p>
         <div class="fund-grid">
           <a class="fund-card" href="https://quote.eastmoney.com/hk/03431.html" target="_blank" rel="noopener noreferrer">
             <div class="fund-top"><span class="fund-code">03431</span><span class="fund-tag">东财</span></div>
             <div class="fund-name">港韩科技</div>
-            <div class="fund-desc">最适合作为这张图的主入口产品，韩国半导体链是核心受益方向，适合承接三星电子、SK 海力士这条线。</div>
+            <div class="fund-desc">适合承接三星电子、SK 海力士这条韩国存储主线。</div>
             <div class="fund-link">进入东方财富详情页 →</div>
           </a>
           <a class="fund-card" href="https://fund.eastmoney.com/159687.html" target="_blank" rel="noopener noreferrer">
             <div class="fund-top"><span class="fund-code">159687</span><span class="fund-tag">东财</span></div>
             <div class="fund-name">亚太精选</div>
-            <div class="fund-desc">更适合放在亚太科技受益篮子的位置，不只押存储，但能承接韩国、台湾、日本科技景气外溢。</div>
+            <div class="fund-desc">偏亚太科技篮子表达，适合承接韩国、台湾、日本科技景气外溢。</div>
             <div class="fund-link">进入东方财富详情页 →</div>
           </a>
           <a class="fund-card" href="https://fund.eastmoney.com/513310.html" target="_blank" rel="noopener noreferrer">
             <div class="fund-top"><span class="fund-code">513310</span><span class="fund-tag">东财</span></div>
             <div class="fund-name">中韩半导体</div>
-            <div class="fund-desc">如果要强调中韩半导体共振，这个放左栏最顺手，既能接韩国存储，也能接 A 股设备、设计、算力链。</div>
+            <div class="fund-desc">中韩半导体共振的集中表达，适合承接中国链条与韩国链条。</div>
             <div class="fund-link">进入东方财富详情页 →</div>
           </a>
           <a class="fund-card" href="https://www.futunn.com/stock/07709-HK" target="_blank" rel="noopener noreferrer">
             <div class="fund-top"><span class="fund-code">07709</span><span class="fund-tag">富途</span></div>
             <div class="fund-name">SK 海力士每日杠杆 (2x)</div>
-            <div class="fund-desc">最直接映射 SK 海力士盈利爆发。若页面要更强交易感，这张卡放在左栏会很抓眼。</div>
+            <div class="fund-desc">最直接映射 SK 海力士盈利爆发，高弹性交易表达。</div>
             <div class="fund-link">进入富途详情页 →</div>
           </a>
           <a class="fund-card" href="https://www.futunn.com/stock/07747-HK" target="_blank" rel="noopener noreferrer">
             <div class="fund-top"><span class="fund-code">07747</span><span class="fund-tag">富途</span></div>
             <div class="fund-name">三星每日杠杆 (2x)</div>
-            <div class="fund-desc">对应三星电子这条线。适合把全球存储盈利第一，直接映射到可交易表达上。</div>
+            <div class="fund-desc">把三星电子这条盈利龙头线，直接映射到可交易表达上。</div>
             <div class="fund-link">进入富途详情页 →</div>
           </a>
           <a class="fund-card" href="https://quote.eastmoney.com/hk/07709.html" target="_blank" rel="noopener noreferrer">
             <div class="fund-top"><span class="fund-code">DRAM 指数</span><span class="fund-tag">景气代理</span></div>
             <div class="fund-name">DRAM / NAND 价格主线</div>
-            <div class="fund-desc">这轮盈利爆发的底层不是情绪，而是 AI 服务器带来的 HBM 紧缺，叠加 DRAM / NAND 合约价上行。这里先放一个景气代理入口。</div>
+            <div class="fund-desc">景气底层来自 HBM 紧缺与 DRAM / NAND 价格上行。</div>
             <div class="fund-link">先看相关详情页 →</div>
           </a>
         </div>
+      </section>
 
-        <hr class="side-split" />
-
-        <h2 class="section-title">中国存储链观察</h2>
-        <p class="section-desc">中国这边更适合分成两组看，一组是已经把利润做出来的 A 股公司，另一组是位置极强、但公开利润口径还不完整的未上市主轴。</p>
-        <div class="watch-grid">
-          <div class="watch-card">
-            <div class="watch-top"><div><div class="watch-name">长江存储</div><div class="watch-role">国产 NAND 主轴</div></div><span class="fund-tag">未上市</span></div>
-            <div class="watch-point"><strong>Q1 收入据称已超 200 亿元、同比翻倍，全球 NAND 份额超 10%</strong>。现在最重要的不是抠单季净利，而是确认它已经从“国产替代故事”走到“全球份额玩家”阶段。</div>
-          </div>
-          <div class="watch-card">
-            <div class="watch-top"><div><div class="watch-name">长鑫科技</div><div class="watch-role">国产 DRAM 主轴</div></div><span class="fund-tag">招股书口径</span></div>
-            <div class="watch-point"><strong>2025H1 营收 154.38 亿元，净利润 -40.88 亿元；2025Q1-Q3 营收 320.84 亿元</strong>。核心信号不是眼下还亏多少，而是 DRAM 规模已经起来，离盈利拐点越来越近。</div>
-          </div>
-          <div class="watch-card">
-            <div class="watch-top"><div><div class="watch-name">江波龙</div><div class="watch-role">A股盈利弹性最强样本</div></div><span class="fund-tag">A股</span></div>
-            <div class="watch-point"><strong>2026Q1 营收 99.09 亿元，归母净利润 38.62 亿元</strong>。这说明景气已经不是上游厂商自己的事，渠道、品牌和企业级产品线也在吃利润。</div>
-          </div>
-          <div class="watch-card">
-            <div class="watch-top"><div><div class="watch-name">佰维存储</div><div class="watch-role">模组 / 封测 / 端侧AI映射</div></div><span class="fund-tag">A股</span></div>
-            <div class="watch-point"><strong>2026Q1 营收 68.14 亿元，归母净利润 28.99 亿元</strong>。它代表的是端侧 AI、模组和品牌链条也已经进入高景气兑现区。</div>
-          </div>
-          <div class="watch-card">
-            <div class="watch-top"><div><div class="watch-name">兆易创新</div><div class="watch-role">设计侧盈利验证</div></div><span class="fund-tag">A股</span></div>
-            <div class="watch-point"><strong>2026Q1 营收 41.88 亿元，归母净利润 14.61 亿元</strong>。它不是制造龙头，但很适合当作中国存储设计侧利润修复的代表样本。</div>
-          </div>
-          <div class="watch-card">
-            <div class="watch-top"><div><div class="watch-name">北京君正等</div><div class="watch-role">二级市场延伸抓手</div></div><span class="fund-tag">观察层</span></div>
-            <div class="watch-point">如果往交易层再拆，中国存储链还会沿着控制器、利基存储、车载、模组和品牌继续扩散。这些名字更适合做轮动观察，不必硬挤进全球盈利榜。</div>
-          </div>
-        </div>
-      </aside>
-
+      <div class="compare-grid">
       <section class="panel board">
         <div class="board-header">
           <div>
-            <h2 class="section-title">盈利榜主体</h2>
-            <div class="board-note">现在这页已经补上了中国存储链观察侧栏，主区继续保留全球已披露口径的盈利榜，左侧则负责承接产品映射和中国本土链条的位置判断。</div>
+            <h2 class="section-title">海外存储盈利榜</h2>
+            <div class="board-note">按 2026 年一季度附近已披露经营利润口径整理，统一折算为美元，突出谁真正吃下了这一轮 AI 存储红利。</div>
           </div>
         </div>
 
@@ -322,6 +285,121 @@
           </div>
         </div>
       </section>
+
+      <section class="panel board">
+        <div class="board-header">
+          <div>
+            <h2 class="section-title">中国存储链观察榜</h2>
+            <div class="board-note">同样做成卡片式数据可视化，但口径分成两类，A 股用公开营收与归母净利润，未上市龙头用收入、份额和拐点阶段来表示。</div>
+          </div>
+        </div>
+
+        <div class="rank-grid">
+          <article class="rank-card blue">
+            <div class="rank-head">
+              <div class="rank-left">
+                <div class="badge b1">1</div>
+                <div class="company">
+                  <h3>江波龙</h3>
+                  <div class="mini">A股盈利弹性最强样本</div>
+                </div>
+              </div>
+              <div class="profit">
+                <div class="num">38.62</div>
+                <div class="unit">亿元净利润</div>
+              </div>
+            </div>
+            <div class="bar-wrap">
+              <div class="bar-title"><span>营收 / 归母净利润</span><span>99.09 亿 / 38.62 亿</span></div>
+              <div class="bar bar1"><i></i></div>
+            </div>
+            <div class="thesis">景气已经不是上游晶圆厂自己的事，渠道、品牌和企业级产品线也在吃利润。江波龙是这轮 A 股存储链里最醒目的利润兑现样本之一。</div>
+          </article>
+
+          <article class="rank-card cyan">
+            <div class="rank-head">
+              <div class="rank-left">
+                <div class="badge b2">2</div>
+                <div class="company">
+                  <h3>佰维存储</h3>
+                  <div class="mini">模组 / 封测 / 端侧AI映射</div>
+                </div>
+              </div>
+              <div class="profit">
+                <div class="num">28.99</div>
+                <div class="unit">亿元净利润</div>
+              </div>
+            </div>
+            <div class="bar-wrap">
+              <div class="bar-title"><span>营收 / 归母净利润</span><span>68.14 亿 / 28.99 亿</span></div>
+              <div class="bar bar2"><i></i></div>
+            </div>
+            <div class="thesis">它代表的是端侧 AI、模组和品牌链条也已经进入高景气兑现区。换句话说，存储行情已经沿着产业链往下游明显扩散。</div>
+          </article>
+
+          <article class="rank-card gold">
+            <div class="rank-head">
+              <div class="rank-left">
+                <div class="badge b3">3</div>
+                <div class="company">
+                  <h3>兆易创新</h3>
+                  <div class="mini">设计侧盈利验证</div>
+                </div>
+              </div>
+              <div class="profit">
+                <div class="num">14.61</div>
+                <div class="unit">亿元净利润</div>
+              </div>
+            </div>
+            <div class="bar-wrap">
+              <div class="bar-title"><span>营收 / 归母净利润</span><span>41.88 亿 / 14.61 亿</span></div>
+              <div class="bar bar3"><i></i></div>
+            </div>
+            <div class="thesis">它不是重资产制造龙头，但很适合作为中国存储设计侧利润修复的代表样本。市场要找“报表里已经兑现”的名字，兆易很有代表性。</div>
+          </article>
+
+          <article class="rank-card orange">
+            <div class="rank-head">
+              <div class="rank-left">
+                <div class="badge b4">4</div>
+                <div class="company">
+                  <h3>长江存储 / 长鑫科技</h3>
+                  <div class="mini">未上市主轴，用收入和份额看位置</div>
+                </div>
+              </div>
+              <div class="profit">
+                <div class="num">200+</div>
+                <div class="unit">亿元收入线索</div>
+              </div>
+            </div>
+            <div class="bar-wrap">
+              <div class="bar-title"><span>位置判断</span><span>长江存储 Q1收入>200亿，长鑫 2025Q1-Q3营收320.84亿</span></div>
+              <div class="bar bar4"><i style="width:78%"></i></div>
+            </div>
+            <div class="thesis">中国最关键的两条主轴，一个是 NAND 的长江存储，一个是 DRAM 的长鑫科技。虽然口径不适合和海外龙头做单季利润硬排，但产业位置已经足够重，观察重点是份额、扩产和盈利拐点。</div>
+          </article>
+        </div>
+
+        <div class="foot">
+          <div class="small-panel">
+            <h3 class="small-title">中国这边怎么读</h3>
+            <div class="list">
+              <div class="li"><strong>1. 已披露利润的 A 股公司，说明景气已经真实进表。</strong><span>江波龙、佰维、兆易这类名字，不再只是主题映射，而是已经在 2026Q1 直接体现为利润爆发。</span></div>
+              <div class="li"><strong>2. 未上市主轴看的是位置，不是当期净利排名。</strong><span>长江存储看 NAND 份额与扩产，长鑫科技看 DRAM 规模、产品结构和拐点节奏。</span></div>
+              <div class="li"><strong>3. 中国链条不是替代海外，而是在跟着景气一起抬升。</strong><span>真正强的页面表达，不是说“中国也有”，而是说“中国这条链也开始出现自己的报表与份额支撑”。</span></div>
+            </div>
+          </div>
+          <div class="small-panel">
+            <h3 class="small-title">数据口径说明</h3>
+            <div class="list">
+              <div class="li"><strong>A 股公司</strong><span>江波龙、佰维存储、兆易创新均采用 2026Q1 公开营收 / 归母净利润口径。</span></div>
+              <div class="li"><strong>未上市龙头</strong><span>长江存储采用媒体反复引用的 Q1 收入与份额线索，长鑫科技采用招股书口径中的营收与历史盈利阶段信息。</span></div>
+              <div class="li"><strong>页面原则</strong><span>中国栏改成和海外栏同级的可视化形式，但不强行伪装成完全同口径利润榜。</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      </div>
     </div>
   </div>
 </body>
