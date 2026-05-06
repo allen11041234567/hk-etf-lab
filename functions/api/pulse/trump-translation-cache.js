@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116529029015091841": {
+    "content_zh_cn": "州众议员“让美国再次伟大”梅格·温伯格是一位“美国优先”的爱国者，在代表佛罗里达州第94州众议院选区方面表现极为出色！\n\n梅格是彻头彻尾的“让美国再次伟大”派，从一开始就与我们并肩同行，推动我们的“美国优先”议程。在州众议院，她不知疲倦地致力于发展我们的经济、削减税收和监管、捍卫美国能源DOMINANCE、推动“美国制造”、确保我们的边境安全、制止移民犯罪、强化我们的军队/退伍军人、维护选举安全，并捍卫我们始终遭受围攻的《第二修正案》。\n\n“让美国再次伟大”梅格·温伯格获得我完全且彻底的连任背书——她绝不会让你失望！",
+    "content_zh_hk": "州眾議員「讓美國再次偉大」梅格·溫伯格是一位「美國優先」的愛國者，在代表佛羅里達州第94州眾議院選區方面表現極為出色！\n\n梅格是徹頭徹尾的「讓美國再次偉大」派，從一開始就與我們並肩同行，推動我們的「美國優先」議程。在州眾議院，她不知疲倦地致力於發展我們的經濟、削減稅收和監管、捍衛美國能源DOMINANCE、推動「美國製造」、確保我們的邊境安全、制止移民犯罪、強化我們的軍隊/退伍軍人、維護選舉安全，並捍衛我們始終飽受衝擊的《第二修正案》。\n\n「讓美國再次偉大」梅格·溫伯格獲得我完全且徹底的連任背書——她絕不會讓你失望！",
+    "content_ko": "주 하원의원 “MAGA” 멕 와인버거는 ‘아메리카 퍼스트’ 애국자로, 플로리다주 제94주 하원 선거구를 대표하는 데 있어 놀라운 성과를 내고 있습니다!\n\n멕은 철저한 MAGA 인사로, 맨 처음부터 우리와 함께하며 우리의 AMERICA FIRST 어젠다를 진전시키는 데 힘써 왔습니다. 주 하원에서 그녀는 경제 성장, 세금 및 규제 완화, 미국 에너지 DOMINANCE 수호, MADE IN THE U.S.A. 촉진, 국경 안보 강화, 이민자 범죄 저지, 군/재향군인 지원 강화, 선거 보호, 그리고 늘 공격받고 있는 수정헌법 제2조 수호를 위해 쉼 없이 일하고 있습니다.\n\n“MAGA” 멕 와인버거는 재선과 관련해 나의 완전하고 전적인 지지를 받습니다 — 그녀는 결코 여러분을 실망시키지 않을 것입니다!"
+  },
   "https://truthsocial.com/@realDonaldTrump/116528258570841677": {
     "content_zh_cn": "礼来宣布向印第安纳州各生产基地追加投资45亿美元，并启用首个专注于遗传医学的专用工厂：https://investor.lilly.com/news-releases/news-release-details/lilly-commits-additional-45-billion-across-indiana-manufacturing",
     "content_zh_hk": "禮來宣布向印第安納州各生產基地追加投資45億美元，並啟用首個專注於遺傳醫學的專用設施：https://investor.lilly.com/news-releases/news-release-details/lilly-commits-additional-45-billion-across-indiana-manufacturing",
