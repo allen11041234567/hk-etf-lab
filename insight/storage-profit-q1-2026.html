@@ -63,6 +63,7 @@
     .rank-card.cyan:before{background:radial-gradient(circle,var(--cyan),transparent 64%)}
     .rank-card.gold:before{background:radial-gradient(circle,var(--gold),transparent 64%)}
     .rank-card.orange:before{background:radial-gradient(circle,var(--orange),transparent 64%)}
+    .rank-card.pink:before{background:radial-gradient(circle,var(--pink),transparent 64%)}
     .rank-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
     .rank-left{display:flex;gap:12px;align-items:center;min-width:0}
     .badge{width:38px;height:38px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900;color:#07111f}
@@ -82,8 +83,9 @@
     .bar i{display:block;height:100%;border-radius:999px}
     .bar1 i{width:100%;background:linear-gradient(90deg,#66b5ff,#d5ebff)}
     .bar2 i{width:76%;background:linear-gradient(90deg,#41e0ff,#baf6ff)}
-    .bar3 i{width:46%;background:linear-gradient(90deg,#ffca62,#fff0b8)}
-    .bar4 i{width:12%;background:linear-gradient(90deg,#ff9550,#ffd5b3)}
+    .bar3 i{width:47%;background:linear-gradient(90deg,#ffca62,#fff0b8)}
+    .bar4 i{width:34%;background:linear-gradient(90deg,#ff9550,#ffd5b3)}
+    .bar5 i{width:12%;background:linear-gradient(90deg,#ff74aa,#ffd0e3)}
     .thesis{margin-top:12px;font-size:13px;color:#dbe7ff;line-height:1.8}
     .foot{display:grid;grid-template-columns:1.15fr .85fr;gap:14px;margin-top:14px}
     .small-panel{padding:16px 18px;border:1px solid rgba(255,255,255,.08);border-radius:24px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.02))}
@@ -100,15 +102,19 @@
       .rank-grid,.foot,.hero-kpis{grid-template-columns:1fr 1fr}
     }
     @media (max-width:760px){
-      .wrap{padding:14px 10px 28px}
-      .hero,.panel{border-radius:22px}
-      .hero{padding:18px 16px}
-      h1{font-size:30px}
-      .sub{font-size:14px}
+      .wrap{padding:10px 8px 24px}
+      .hero,.panel{border-radius:20px}
+      .hero{padding:16px 14px}
+      h1{font-size:28px}
+      .sub{font-size:13px;line-height:1.7}
       .hero-kpis,.rank-grid,.foot,.fund-grid{grid-template-columns:1fr}
-      .board,.product-panel{padding:14px}
-      .company h3{font-size:22px}
-      .profit .num{font-size:31px}
+      .board,.product-panel{padding:12px}
+      .company h3{font-size:20px}
+      .profit .num{font-size:34px}
+      .profit .unit,.mini,.bar-title,.fund-desc,.board-note,.section-desc{font-size:11px}
+      .rank-card{padding:16px}
+      .thesis{font-size:12px;line-height:1.65}
+      .small-panel{padding:14px}
     }
   </style>
 </head>
@@ -248,8 +254,29 @@
               <div class="rank-left">
                 <div class="badge b4">4</div>
                 <div class="company">
+                  <h3>Sandisk</h3>
+                  <div class="mini">2026 财年 Q3，NAND 盈利爆发</div>
+                </div>
+              </div>
+              <div class="profit">
+                <div class="num">4.22</div>
+                <div class="unit">十亿美元</div>
+              </div>
+            </div>
+            <div class="bar-wrap">
+              <div class="bar-title"><span>利润强度</span><span>Non-GAAP operating income</span></div>
+              <div class="bar bar4"><i></i></div>
+            </div>
+            <div class="thesis">这一轮如果只看 NAND 修复，Sandisk 不能缺席。它比西部数据更像纯 NAND 盈利爆发样本，说明高价值客户与价格上行已经把闪存链条的利润重新打出来了。</div>
+          </article>
+
+          <article class="rank-card pink">
+            <div class="rank-head">
+              <div class="rank-left">
+                <div class="badge b4">5</div>
+                <div class="company">
                   <h3>西部数据</h3>
-                  <div class="mini">2026 财年 Q3，Flash 修复已明显兑现</div>
+                  <div class="mini">2026 财年 Q3，Flash 修复确认</div>
                 </div>
               </div>
               <div class="profit">
@@ -259,9 +286,9 @@
             </div>
             <div class="bar-wrap">
               <div class="bar-title"><span>利润强度</span><span>GAAP operating income</span></div>
-              <div class="bar bar4"><i></i></div>
+              <div class="bar bar5"><i></i></div>
             </div>
-            <div class="thesis">和前三名相比体量差一大截，但 WD 也已经明显走出 NAND 底部。它更像是“价格修复确认”的标志位，而不是这轮周期的绝对王者。</div>
+            <div class="thesis">和前四名相比体量差一大截，但 WD 依然是闪存价格修复的重要确认样本。它更像景气从底部回来后的跟涨验证位。</div>
           </article>
         </div>
 
@@ -270,7 +297,7 @@
             <h3 class="small-title">我建议这张图往外讲的三句话</h3>
             <div class="list">
               <div class="li"><strong>1. 这不是普通半导体反弹，而是 AI 把存储重新变成了盈利中心。</strong><span>HBM 供给偏紧，DRAM / NAND 同步涨价，利润不再只集中在 GPU，开始向存储链条大规模转移。</span></div>
-              <div class="li"><strong>2. 韩国双雄几乎吃掉了本轮全球存储盈利的大头。</strong><span>三星靠体量和全产品线，SK 海力士靠 HBM 纯度和弹性，两者合起来已经形成断层优势。</span></div>
+              <div class="li"><strong>2. 韩国双雄吃掉的是利润大头，Sandisk 吃到的是 NAND 修复弹性。</strong><span>三星靠体量和全产品线，SK 海力士靠 HBM 纯度，Sandisk则代表闪存链条也已经明显进入高盈利区。</span></div>
               <div class="li"><strong>3. 相关基金更适合讲“谁映射这条景气主线”，不必生搬成一一对应。</strong><span>03431 / 亚太精选 / 中韩半导体适合讲产业映射，07709 / 07747适合讲高弹性交易表达。</span></div>
             </div>
           </div>
@@ -278,10 +305,10 @@
             <h3 class="small-title">未纳入或待补的名字</h3>
             <div class="list">
               <div class="li"><strong>Kioxia</strong><span>截至目前我没拿到足够干净、可直接引用的最新季度营业利润口径，所以先不硬塞进全球主榜。</span></div>
-              <div class="li"><strong>长江存储 / 长鑫科技</strong><span>这次已经补进左侧观察栏，但处理方式是按产业位置、营收和拐点描述，不把不够统一的口径硬做成利润横排。</span></div>
+              <div class="li"><strong>Sandisk / WD</strong><span>这次已经拆开处理，Sandisk 放进更靠前位置代表 NAND 盈利爆发，WD 保留为较低位的修复确认样本。</span></div>
               <div class="li"><strong>兆易 / 佰维 / 江波龙</strong><span>这三家有更清晰的 2026Q1 公开盈利口径，适合当作中国存储链在 A 股报表层面的盈利验证样本。</span></div>
             </div>
-            <div class="source"><strong>数据说明：</strong>三星电子、SK 海力士采用 2026 年一季度已披露经营利润口径并折算美元；美光采用 2026 财年 Q2 已披露 operating income；西部数据采用 2026 财年 Q3 GAAP operating income。中国侧栏中，兆易创新、佰维存储、江波龙采用 2026Q1 公开营收 / 归母净利润口径；长江存储、长鑫科技则以媒体反复引用或招股书可见的营收 / 历史盈利阶段信息呈现。页面为静态展示页，金额取近似值，便于视觉呈现。</div>
+            <div class="source"><strong>数据说明：</strong>三星电子、SK 海力士采用 2026 年一季度已披露经营利润口径并折算美元；美光采用 2026 财年 Q2 已披露 operating income；Sandisk 采用 2026 财年 Q3 non-GAAP operating income 约 42.18 亿美元；西部数据采用 2026 财年 Q3 GAAP operating income。中国侧栏中，兆易创新、佰维存储、江波龙采用 2026Q1 公开营收 / 归母净利润口径；长江存储、长鑫科技则以媒体反复引用或招股书可见的营收 / 历史盈利阶段信息呈现。页面为静态展示页，金额取近似值，便于视觉呈现。</div>
           </div>
         </div>
       </section>
