@@ -52,6 +52,13 @@
     .fund-name{margin-top:6px;font-size:20px;font-weight:900}
     .fund-desc{margin-top:6px;font-size:12px;color:var(--muted);line-height:1.7}
     .fund-link{margin-top:8px;font-size:12px;color:#84c8ff;font-weight:800}
+    .side-split{height:1px;border:none;background:rgba(255,255,255,.08);margin:14px 0}
+    .watch-grid{display:grid;gap:10px}
+    .watch-card{padding:14px;border:1px solid rgba(255,255,255,.08);border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02))}
+    .watch-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+    .watch-name{font-size:18px;font-weight:900}
+    .watch-role{margin-top:4px;font-size:12px;color:#8fc4ff}
+    .watch-point{margin-top:8px;font-size:12px;color:var(--muted);line-height:1.75}
 
     .board{padding:18px}
     .board-header{display:flex;justify-content:space-between;gap:12px;align-items:end;margin-bottom:14px}
@@ -129,43 +136,66 @@
     <div class="main">
       <aside class="panel sidebar">
         <h2 class="section-title">左侧产品映射</h2>
-        <p class="section-desc">你提到的相关基金我先都塞进来，做成“谁受益这轮存储景气”的侧边产品栏。这里先以解释映射逻辑为主，不追求严格持仓一一对应。</p>
+        <p class="section-desc">这次把左栏改成更实用的版本，产品卡直接跳到东财或富途详情页，方便你从“盈利主线”直接切到具体产品。</p>
         <div class="fund-grid">
-          <a class="fund-card" href="./korea-client/03431.html">
-            <div class="fund-top"><span class="fund-code">03431</span><span class="fund-tag">港股</span></div>
+          <a class="fund-card" href="https://quote.eastmoney.com/hk/03431.html" target="_blank" rel="noopener noreferrer">
+            <div class="fund-top"><span class="fund-code">03431</span><span class="fund-tag">东财</span></div>
             <div class="fund-name">港韩科技</div>
-            <div class="fund-desc">最适合作为这张图的“主入口产品”，韩国半导体链是核心受益方向，适合承接三星电子、SK 海力士这条线。</div>
-            <div class="fund-link">打开产品页 →</div>
+            <div class="fund-desc">最适合作为这张图的主入口产品，韩国半导体链是核心受益方向，适合承接三星电子、SK 海力士这条线。</div>
+            <div class="fund-link">进入东方财富详情页 →</div>
           </a>
-          <a class="fund-card" href="./korea-client/159687.html">
-            <div class="fund-top"><span class="fund-code">159687</span><span class="fund-tag">A股</span></div>
+          <a class="fund-card" href="https://fund.eastmoney.com/159687.html" target="_blank" rel="noopener noreferrer">
+            <div class="fund-top"><span class="fund-code">159687</span><span class="fund-tag">东财</span></div>
             <div class="fund-name">亚太精选</div>
-            <div class="fund-desc">更适合放在“亚太科技受益篮子”的位置，不只押存储，但能承接韩国、台湾、日本科技景气外溢。</div>
-            <div class="fund-link">打开产品页 →</div>
+            <div class="fund-desc">更适合放在亚太科技受益篮子的位置，不只押存储，但能承接韩国、台湾、日本科技景气外溢。</div>
+            <div class="fund-link">进入东方财富详情页 →</div>
           </a>
-          <a class="fund-card" href="./korea-client/zhk-semiconductor.html">
-            <div class="fund-top"><span class="fund-code">513310</span><span class="fund-tag">A股</span></div>
+          <a class="fund-card" href="https://fund.eastmoney.com/513310.html" target="_blank" rel="noopener noreferrer">
+            <div class="fund-top"><span class="fund-code">513310</span><span class="fund-tag">东财</span></div>
             <div class="fund-name">中韩半导体</div>
-            <div class="fund-desc">如果要强调“中韩半导体共振”，这个放左栏非常顺手，既能接韩国存储，也能接A股设备、设计、算力链。</div>
-            <div class="fund-link">打开产品页 →</div>
+            <div class="fund-desc">如果要强调中韩半导体共振，这个放左栏最顺手，既能接韩国存储，也能接 A 股设备、设计、算力链。</div>
+            <div class="fund-link">进入东方财富详情页 →</div>
           </a>
-          <a class="fund-card" href="../logbias/07709/community.html">
-            <div class="fund-top"><span class="fund-code">07709</span><span class="fund-tag">港股杠杆</span></div>
+          <a class="fund-card" href="https://www.futunn.com/stock/07709-HK" target="_blank" rel="noopener noreferrer">
+            <div class="fund-top"><span class="fund-code">07709</span><span class="fund-tag">富途</span></div>
             <div class="fund-name">SK 海力士每日杠杆 (2x)</div>
             <div class="fund-desc">最直接映射 SK 海力士盈利爆发。若页面要更强交易感，这张卡放在左栏会很抓眼。</div>
-            <div class="fund-link">打开观察页 →</div>
+            <div class="fund-link">进入富途详情页 →</div>
           </a>
-          <a class="fund-card" href="../logbias/07747/community.html">
-            <div class="fund-top"><span class="fund-code">07747</span><span class="fund-tag">港股杠杆</span></div>
+          <a class="fund-card" href="https://www.futunn.com/stock/07747-HK" target="_blank" rel="noopener noreferrer">
+            <div class="fund-top"><span class="fund-code">07747</span><span class="fund-tag">富途</span></div>
             <div class="fund-name">三星每日杠杆 (2x)</div>
-            <div class="fund-desc">对应三星电子这条线。适合把“全球存储盈利第一”直接映射到可交易表达上。</div>
-            <div class="fund-link">打开观察页 →</div>
+            <div class="fund-desc">对应三星电子这条线。适合把全球存储盈利第一，直接映射到可交易表达上。</div>
+            <div class="fund-link">进入富途详情页 →</div>
           </a>
-          <div class="fund-card">
+          <a class="fund-card" href="https://quote.eastmoney.com/hk/07709.html" target="_blank" rel="noopener noreferrer">
             <div class="fund-top"><span class="fund-code">DRAM 指数</span><span class="fund-tag">景气代理</span></div>
             <div class="fund-name">DRAM / NAND 价格主线</div>
-            <div class="fund-desc">这轮盈利爆发的底层不是情绪，而是 AI 服务器带来的 HBM 紧缺，叠加 DRAM / NAND 合约价上行。左栏放一个“指数代理卡”，视觉上也更完整。</div>
-            <div class="fund-link">可后续接入实时数据</div>
+            <div class="fund-desc">这轮盈利爆发的底层不是情绪，而是 AI 服务器带来的 HBM 紧缺，叠加 DRAM / NAND 合约价上行。这里先放一个景气代理入口。</div>
+            <div class="fund-link">先看相关详情页 →</div>
+          </a>
+        </div>
+
+        <hr class="side-split" />
+
+        <h2 class="section-title">中国存储链观察</h2>
+        <p class="section-desc">这部分不做硬排名，只讲各家在产业链里的位置。逻辑上更像“谁在这轮 AI 存储周期里卡住关键环节”。</p>
+        <div class="watch-grid">
+          <div class="watch-card">
+            <div class="watch-top"><div><div class="watch-name">长江存储</div><div class="watch-role">NAND 核心玩家</div></div><span class="fund-tag">未上市</span></div>
+            <div class="watch-point">位置上最关键的是国产 3D NAND 能力。它不是这页里按利润排位的公司，但在中国存储链里，长江存储更像“国产 NAND 主轴”，决定的是中国在企业级 SSD、数据中心闪存这条线能走多远。</div>
+          </div>
+          <div class="watch-card">
+            <div class="watch-top"><div><div class="watch-name">长鑫存储</div><div class="watch-role">DRAM 核心玩家</div></div><span class="fund-tag">未上市</span></div>
+            <div class="watch-point">如果说长江存储卡的是 NAND，长鑫存储卡的就是 DRAM。放在这轮 AI 周期里，它最值得看的不是短期利润，而是能否沿着 DDR5、服务器内存、高端 DRAM 继续往上走。</div>
+          </div>
+          <div class="watch-card">
+            <div class="watch-top"><div><div class="watch-name">兆易创新</div><div class="watch-role">利基存储 + 设计平台</div></div><span class="fund-tag">A股映射</span></div>
+            <div class="watch-point">兆易更适合被理解为中国存储链里的“高弹性设计入口”。它不是三星、SK 这种重资产晶圆厂模式，但在 NOR Flash、MCU 与存储控制相关链条上，具有市场映射和交易认知度。</div>
+          </div>
+          <div class="watch-card">
+            <div class="watch-top"><div><div class="watch-name">北京君正 / 佰维 / 江波龙</div><div class="watch-role">控制器、模组与渠道映射</div></div><span class="fund-tag">二级市场</span></div>
+            <div class="watch-point">如果要从 A 股去承接“存储涨价 + AI 扩散”这条线，市场往往不会只盯晶圆制造，也会去看控制器、模组封测、品牌与渠道这些利润传导环节，这几类公司更像二级市场的观察抓手。</div>
           </div>
         </div>
       </aside>
@@ -174,7 +204,7 @@
         <div class="board-header">
           <div>
             <h2 class="section-title">盈利榜主体</h2>
-            <div class="board-note">先做成“全球已披露口径的头部玩家榜”。如果你满意，我下一步可以把这页进一步改成更像短视频封面的单屏长图版，或者再补一栏“中国存储链未上市核心公司观察”。</div>
+            <div class="board-note">现在这页已经补上了中国存储链观察侧栏，主区继续保留全球已披露口径的盈利榜，左侧则负责承接产品映射和中国本土链条的位置判断。</div>
           </div>
         </div>
 
