@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116533004958135086": {
+    "content_zh_cn": "https://stocks.apple.com/symbol/%5EDJI",
+    "content_zh_hk": "https://stocks.apple.com/symbol/%5EDJI",
+    "content_ko": "https://stocks.apple.com/symbol/%5EDJI"
+  },
   "https://truthsocial.com/@realDonaldTrump/116532960075277957": {
     "content_zh_cn": "这是对“瞌睡乔”拜登政府极其准确的写照。造成了巨大的损害，但，\n我们回来了！！！特朗普总统",
     "content_zh_hk": "這是對「瞌睡喬」拜登政府極其準確的寫照。造成了巨大的損害，但，\n我們回來了！！！特朗普總統",
