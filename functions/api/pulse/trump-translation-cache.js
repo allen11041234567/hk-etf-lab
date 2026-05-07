@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116530958523656778": {
+    "content_zh_cn": "哇。看看这张图表！特朗普总统",
+    "content_zh_hk": "嘩。看看這張圖表！特朗普總統",
+    "content_ko": "와. 이 차트를 보라! 트럼프 대통령"
+  },
   "https://truthsocial.com/@realDonaldTrump/116530659808023358": {
     "content_zh_cn": "特朗普新版反恐战略提高了对安提法（Antifa）等左翼团体威胁的重视程度：https://justthenews.com/government/security/new-trump-counterterrorism-strategy-elevates-threats-leftists-group-antifa",
     "content_zh_hk": "特朗普新版反恐戰略提高了對安提法（Antifa）等左翼團體威脅的重視程度：https://justthenews.com/government/security/new-trump-counterterrorism-strategy-elevates-threats-leftists-group-antifa",
