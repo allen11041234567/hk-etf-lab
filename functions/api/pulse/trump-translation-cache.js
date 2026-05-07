@@ -1,4 +1,19 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116530659808023358": {
+    "content_zh_cn": "特朗普新版反恐战略提高了对安提法（Antifa）等左翼团体威胁的重视程度：https://justthenews.com/government/security/new-trump-counterterrorism-strategy-elevates-threats-leftists-group-antifa",
+    "content_zh_hk": "特朗普新版反恐戰略提高了對安提法（Antifa）等左翼團體威脅的重視程度：https://justthenews.com/government/security/new-trump-counterterrorism-strategy-elevates-threats-leftists-group-antifa",
+    "content_ko": "트럼프의 새로운 대테러 전략은 안티파(Antifa)와 같은 좌파 단체의 위협에 대한 경계 수위를 높였습니다: https://justthenews.com/government/security/new-trump-counterterrorism-strategy-elevates-threats-leftists-group-antifa"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116530650590886544": {
+    "content_zh_cn": "股市今天创下历史新高。就业和401(k)退休账户都在强劲增长！！！",
+    "content_zh_hk": "股市今天創下歷史新高。就業和401(k)退休賬戶都在強勁增長！！！",
+    "content_ko": "오늘 증시가 사상 최고치를 기록했다. 일자리와 401(k) 은퇴계좌도 폭발적으로 늘고 있다!!!"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116530635363991354": {
+    "content_zh_cn": "华盛顿特区的犯罪率已降至30年来最低水平，另外！特朗普总统",
+    "content_zh_hk": "華盛頓特區的犯罪率已降至30年來最低水平，另外！特朗普總統",
+    "content_ko": "워싱턴 D.C.의 범죄율이 30년 만에 최저 수준을 기록했습니다, 추가로! 트럼프 대통령"
+  },
   "https://truthsocial.com/@realDonaldTrump/116530619109975255": {
     "content_zh_cn": "查克·德沃尔（Chuck Devore），陆军情报系统出身，今晚在 Jesse Watters 节目中的表现非常出色。谢谢你，查克！！！\n——总统 DJT",
     "content_zh_hk": "查克·德沃爾（Chuck Devore），出身陸軍情報系統，今晚在 Jesse Watters 節目中的表現非常出色。謝謝你，查克！！！\n——總統 DJT",
