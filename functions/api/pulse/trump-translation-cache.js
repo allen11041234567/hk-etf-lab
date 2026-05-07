@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116532960075277957": {
+    "content_zh_cn": "这是对“瞌睡乔”拜登政府极其准确的写照。造成了巨大的损害，但，\n我们回来了！！！特朗普总统",
+    "content_zh_hk": "這是對「瞌睡喬」拜登政府極其準確的寫照。造成了巨大的損害，但，\n我們回來了！！！特朗普總統",
+    "content_ko": "이는 “졸린 조” 바이든 행정부를 매우 정확하게 묘사한 것이다. 엄청난 피해를 초래했지만,\n우리가 돌아왔다!!! 트럼프 대통령"
+  },
   "https://truthsocial.com/@realDonaldTrump/116530958523656778": {
     "content_zh_cn": "哇。看看这张图表！特朗普总统",
     "content_zh_hk": "嘩。看看這張圖表！特朗普總統",
