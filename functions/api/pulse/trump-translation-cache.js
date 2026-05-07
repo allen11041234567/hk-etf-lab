@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116533234584336287": {
+    "content_zh_cn": "真正的大买卖——黄金——就在迈阿密多拉尔。\n由伟大的美国爱国者安放于此！！！特朗普总统",
+    "content_zh_hk": "真正的大買賣——黃金——就在邁阿密多拉爾。\n由偉大的美國愛國者安放於此！！！特朗普總統",
+    "content_ko": "진짜 핵심은 - GOLD - 마이애미 도럴에 있습니다.\n위대한 미국의 애국자들이 이곳에 세웠습니다!!! 트럼프 대통령"
+  },
   "https://truthsocial.com/@realDonaldTrump/116533004958135086": {
     "content_zh_cn": "https://stocks.apple.com/symbol/%5EDJI",
     "content_zh_hk": "https://stocks.apple.com/symbol/%5EDJI",
