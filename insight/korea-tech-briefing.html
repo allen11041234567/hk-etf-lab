@@ -17,6 +17,14 @@
     .subtitle { margin-top:8px; color:var(--muted); font-size:15px; line-height:1.6; }
     .meta { display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
     .pill { border:1px solid var(--line); background:rgba(255,255,255,0.78); color:var(--muted); border-radius:999px; padding:8px 12px; font-size:13px; backdrop-filter:blur(10px); }
+    .quick-strip{margin:0 0 18px;padding:14px 16px;border:1px solid rgba(255,255,255,.7);border-radius:22px;background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(247,250,255,.96));box-shadow:var(--shadow)}
+    .quick-item{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid rgba(15,23,42,.08)}
+    .quick-item:last-child{border-bottom:none;padding-bottom:0}
+    .quick-item:first-child{padding-top:0}
+    .quick-label{font-size:13px;color:#475569;font-weight:700}
+    .quick-value{font-size:20px;font-weight:800;letter-spacing:-.02em}
+    .quick-cta{display:flex;justify-content:center;padding-top:4px}
+    .quick-cta .community-link{width:100%;max-width:320px}
     .summary-wrap{margin-bottom:18px}
     .summary-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
     .summary-card{padding:14px 16px;border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,0.96),rgba(247,250,255,0.96));border:1px solid rgba(255,255,255,0.7);box-shadow:var(--shadow)}
@@ -105,6 +113,10 @@
       .subtitle { margin-top:6px; font-size:13px; line-height:1.58; }
       .meta { gap:6px; }
       .pill { padding:7px 10px; font-size:12px; }
+      .quick-strip{margin-bottom:10px;padding:12px 12px 10px;border-radius:18px}
+      .quick-item{padding:8px 0;gap:10px}
+      .quick-label{font-size:12px}
+      .quick-value{font-size:18px}
       .summary-wrap{margin-bottom:10px}
       .summary-grid{grid-template-columns:1fr 1fr;gap:8px}
       .summary-card{padding:12px;border-radius:14px}
@@ -174,6 +186,20 @@
         <div class="pill">高频更新</div>
       </div>
     </section>
+    <section class="quick-strip" id="quick-strip">
+      <div class="quick-item">
+        <div class="quick-label">SK海力士 即时涨跌幅</div>
+        <div class="quick-value up" id="quick-hynix">--</div>
+      </div>
+      <div class="quick-item">
+        <div class="quick-label">三星电子 即时涨跌幅</div>
+        <div class="quick-value up" id="quick-samsung">--</div>
+      </div>
+      <div class="quick-cta">
+        <a class="community-link" href="http://9pdd.cn/2g2V0V" target="_blank" rel="noopener noreferrer">加入资讯交流群</a>
+      </div>
+    </section>
+
     <section class="summary-wrap">
       <div class="related-title">韩股大盘小摘要</div>
       <div class="summary-grid">
@@ -333,7 +359,7 @@
     function applyCardVisibility(targetCode){ document.querySelectorAll('.switch-btn').forEach((btn)=>btn.classList.toggle('active', btn.dataset.targetCode===targetCode)); document.querySelectorAll('#cards .card').forEach((card)=>{ card.style.display = card.dataset.code===targetCode ? '' : 'none'; }); }
     function renderMarketSummary(summary){ if(!summary) return; document.getElementById('summary-kospi').textContent = summary.kospi ? summary.kospi.price : '--'; document.getElementById('summary-kospi-d').textContent = summary.kospi ? fmtPctMaybe(summary.kospi.changePct) : '--'; document.getElementById('summary-kosdaq').textContent = summary.kosdaq ? summary.kosdaq.price : '--'; document.getElementById('summary-kosdaq-d').textContent = summary.kosdaq ? fmtPctMaybe(summary.kosdaq.changePct) : '--'; document.getElementById('summary-usdkrw').textContent = summary.usdkrw ? summary.usdkrw.value : '--'; document.getElementById('summary-usdkrw-d').textContent = summary.usdkrw ? `${mapUsdDirection(summary.usdkrw.direction)} ${summary.usdkrw.change}` : '--'; document.getElementById('summary-semi').textContent = summary.semiconductorTone || '--'; }
     function renderInvestor(snapshot){ investorMap.set(snapshot.code, snapshot); const card=ensureCard(snapshot.code); card.querySelector('.foreign-net').textContent = fmtShares(snapshot.foreignNetToday); card.querySelector('.institution-net').textContent = fmtShares(snapshot.institutionNetToday); card.querySelector('.foreign-rate').textContent = zhText(snapshot.foreignHoldingRate || '--'); card.querySelector('.foreign-rate-delta').textContent = snapshot.foreignHoldingRateDelta == null ? '' : ` （较昨日${snapshot.foreignHoldingRateDelta>0?'+':''}${snapshot.foreignHoldingRateDelta.toFixed(2)}pct）`; card.querySelector('.week52-position').textContent = zhText(snapshot.week52Position || '--'); card.querySelector('.volume-trend').textContent = zhText(snapshot.volumeTrend || '--'); card.querySelector('.foreign-trend').textContent = zhText(snapshot.foreign5dTrend || '--'); card.querySelector('.institution-trend').textContent = zhText(snapshot.institution5dTrend || '--'); card.querySelector('.trend-table').innerHTML = (snapshot.recentTrendRows||[]).map((row)=>`<div>${row.date}｜${zhText(row.pct || '--')}｜外资 ${zhText(row.foreignNet)}｜机构 ${zhText(row.institutionNet)}｜散户 ${zhText(row.retailNet)}</div>`).join('') || '--'; }
-    function renderQuote(quote){ const card=ensureCard(quote.code); previousMap.set(quote.code,quote); card.querySelector('.code').textContent=`${quote.code} · 韩股`; card.querySelector('.name').textContent=zhText(quote.name); const community=card.querySelector('.community-link'); community.href='http://9pdd.cn/2g2V0V'; community.textContent='加入资讯交流群'; card.querySelector('.price').textContent=quote.unavailable?'加载失败':fmtNumber(quote.current); const dayEl=card.querySelector('.day-change'); dayEl.className=`day-change ${getDirectionClass(quote.dayChange)}`; dayEl.textContent=quote.unavailable?'数据暂不可用':`当日涨跌 ${fmtSigned(quote.dayChange)} · ${fmtPct(quote.dayChangePercent)}`; card.querySelector('.market-phase').textContent=quote.unavailable?'交易状态：--':marketPhaseText(quote.market, quote.localTradedAt); card.querySelector('.open').textContent=fmtNumber(quote.open); card.querySelector('.previous-close').textContent=fmtNumber(quote.previousClose); card.querySelector('.high').textContent=fmtNumber(quote.high); card.querySelector('.low').textContent=fmtNumber(quote.low); card.querySelector('.value').textContent=fmtKrwMillion(quote.value); card.querySelector('.week52-range').textContent=`${zhText(quote.week52High || '--')} / ${zhText(quote.week52Low || '--')}`; card.querySelector('.per-eps').textContent=`${zhText(quote.per || '--')} / ${zhText(quote.eps || '--')}`; card.querySelector('.pbr-bps').textContent=`${zhText(quote.pbr || '--')} / ${zhText(quote.bps || '--')}`; updateChart(card, !card.dataset.initialized); card.dataset.initialized='1'; const investor = investorMap.get(quote.code); if(investor) renderInvestor(investor); }
+    function renderQuote(quote){ const card=ensureCard(quote.code); previousMap.set(quote.code,quote); card.querySelector('.code').textContent=`${quote.code} · 韩股`; card.querySelector('.name').textContent=zhText(quote.name); const community=card.querySelector('.community-link'); community.href='http://9pdd.cn/2g2V0V'; community.textContent='加入资讯交流群'; card.querySelector('.price').textContent=quote.unavailable?'加载失败':fmtNumber(quote.current); const dayEl=card.querySelector('.day-change'); dayEl.className=`day-change ${getDirectionClass(quote.dayChange)}`; dayEl.textContent=quote.unavailable?'数据暂不可用':`当日涨跌 ${fmtSigned(quote.dayChange)} · ${fmtPct(quote.dayChangePercent)}`; card.querySelector('.market-phase').textContent=quote.unavailable?'交易状态：--':marketPhaseText(quote.market, quote.localTradedAt); card.querySelector('.open').textContent=fmtNumber(quote.open); card.querySelector('.previous-close').textContent=fmtNumber(quote.previousClose); card.querySelector('.high').textContent=fmtNumber(quote.high); card.querySelector('.low').textContent=fmtNumber(quote.low); card.querySelector('.value').textContent=fmtKrwMillion(quote.value); card.querySelector('.week52-range').textContent=`${zhText(quote.week52High || '--')} / ${zhText(quote.week52Low || '--')}`; card.querySelector('.per-eps').textContent=`${zhText(quote.per || '--')} / ${zhText(quote.eps || '--')}`; card.querySelector('.pbr-bps').textContent=`${zhText(quote.pbr || '--')} / ${zhText(quote.bps || '--')}`; const quickEl = quote.code === '000660' ? document.getElementById('quick-hynix') : (quote.code === '005930' ? document.getElementById('quick-samsung') : null); if (quickEl) { quickEl.className = `quick-value ${getDirectionClass(quote.dayChange)}`; quickEl.textContent = quote.unavailable ? '--' : fmtPct(quote.dayChangePercent); } updateChart(card, !card.dataset.initialized); card.dataset.initialized='1'; const investor = investorMap.get(quote.code); if(investor) renderInvestor(investor); }
     async function refreshInvestor(){ try{ const resp=await fetch(INVESTOR_FEED,{cache:'no-store'}); if(!resp.ok) throw new Error(`HTTP ${resp.status}`); const data=await resp.json(); if(!data.ok) throw new Error(data.error||'unknown error'); renderMarketSummary(data.marketSummary); for(const snapshot of data.snapshots||[]) renderInvestor(snapshot); }catch(error){ console.error('investor refresh failed', error); } }
     async function refresh(){ if(document.hidden) return; try{ const resp=await fetch(FEED,{cache:'no-store'}); if(!resp.ok) throw new Error(`HTTP ${resp.status}`); const data=await resp.json(); if(!data.ok) throw new Error(data.error||'unknown error'); errorBox.style.display='none'; for(const quote of data.quotes) renderQuote(quote); }catch(error){ errorBox.textContent='当前数据更新稍慢，请稍后刷新重试'; errorBox.style.display='block'; } }
     document.querySelectorAll('.switch-btn').forEach((btn)=>btn.addEventListener('click',()=>applyCardVisibility(btn.dataset.targetCode)));
