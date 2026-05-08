@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116538296068946492": {
+    "content_zh_cn": "6月14日。史上最大！！！DJT",
+    "content_zh_hk": "6月14日。史上最大！！！DJT",
+    "content_ko": "6월 14일. 사상 최대!!! DJT"
+  },
   "https://truthsocial.com/@realDonaldTrump/116537018709721851": {
     "content_zh_cn": "哈基姆·杰弗里斯再次加码“最大化战争”言论，并对批评者表示：“我根本不在乎”：https://www.foxnews.com/politics/hakeem-jeffries-doubles-maximum-warfare-rhetoric-tells-critics-dont-give-damn",
     "content_zh_hk": "哈基姆·傑弗里斯再次加碼「最大化戰爭」言論，並對批評者表示：「我根本不在乎」：https://www.foxnews.com/politics/hakeem-jeffries-doubles-maximum-warfare-rhetoric-tells-critics-dont-give-damn",
