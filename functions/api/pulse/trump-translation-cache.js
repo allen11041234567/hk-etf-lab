@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116537018709721851": {
+    "content_zh_cn": "哈基姆·杰弗里斯再次加码“最大化战争”言论，并对批评者表示：“我根本不在乎”：https://www.foxnews.com/politics/hakeem-jeffries-doubles-maximum-warfare-rhetoric-tells-critics-dont-give-damn",
+    "content_zh_hk": "哈基姆·傑弗里斯再次加碼「最大化戰爭」言論，並對批評者表示：「我根本不在乎」：https://www.foxnews.com/politics/hakeem-jeffries-doubles-maximum-warfare-rhetoric-tells-critics-dont-give-damn",
+    "content_ko": "하킴 제프리스, ‘최대 전쟁’ 수사를 한층 더 강화하며 비판론자들에게 “난 전혀 신경 쓰지 않는다” 일축: https://www.foxnews.com/politics/hakeem-jeffries-doubles-maximum-warfare-rhetoric-tells-critics-dont-give-damn"
+  },
   "https://truthsocial.com/@realDonaldTrump/116535672760322109": {
     "content_zh_cn": "三艘世界级美国驱逐舰刚刚在遭受攻击的情况下，非常成功地驶出霍尔木兹海峡。三艘驱逐舰毫发无损，但伊朗袭击者遭受了巨大打击。他们被彻底摧毁，连同大量小型快艇一起覆灭——这些快艇正被用来替代其已被彻底“斩首”的海军。这些船只迅速而高效地沉入海底。\n\n导弹曾射向我们的驱逐舰，但都被轻松击落。同样，无人机来袭，也在空中被焚毁。它们极其“优美”地坠向海面，简直就像一只蝴蝶坠入自己的坟墓！\n\n一个正常的国家本会允许这些驱逐舰通过，但伊朗不是一个正常的国家。他们由一群疯子领导，如果有机会动用核武器，他们毫无疑问会这么做——但他们永远不会有这个机会。就像我们今天再次把他们打垮一样，如果他们不尽快签署协议，未来我们会以更猛烈、更强硬的方式把他们彻底击垮！\n\n我们的三艘驱逐舰及其出色的船员现在将重新加入我们的海上封锁，那真是一道“钢铁之墙”。\n\n总统 唐纳德·J·特朗普",
     "content_zh_hk": "三艘世界級美國驅逐艦剛剛在遭受攻擊的情況下，非常成功地駛出霍爾木茲海峽。三艘驅逐艦毫髮無損，但伊朗襲擊者遭受了巨大打擊。他們被徹底摧毀，連同大量小型快艇一併覆滅——這些快艇正被用來取代其已被徹底「斬首」的海軍。這些船隻迅速而高效地沉入海底。\n\n導彈曾射向我們的驅逐艦，但都被輕鬆擊落。同樣，無人機來襲，也在空中被焚毀。它們極其「優美」地墜向海面，簡直就像一隻蝴蝶墜入自己的墳墓！\n\n一個正常的國家本會容許這些驅逐艦通過，但伊朗不是一個正常的國家。他們由一群瘋子領導，如果有機會動用核武器，他們毫無疑問會這麼做——但他們永遠不會有這個機會。就像我們今天再次把他們擊潰一樣，如果他們不盡快簽署協議，未來我們會以更猛烈、更強硬的方式把他們徹底擊垮！\n\n我們的三艘驅逐艦及其出色的船員現在將重新加入我們的海上封鎖，那真是一道「鋼鐵之牆」。\n\n總統 唐納德·J·特朗普",
