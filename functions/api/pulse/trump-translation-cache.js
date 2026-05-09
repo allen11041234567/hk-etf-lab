@@ -1,4 +1,14 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116544667871983111": {
+    "content_zh_cn": "FBI就2020年大选刑事调查搜查富尔顿县选举中心：https://justthenews.com/politics-policy/fbi-searches-fulton-county-election-hub",
+    "content_zh_hk": "FBI就2020年大選刑事調查搜查富爾頓縣選舉中心：https://justthenews.com/politics-policy/fbi-searches-fulton-county-election-hub",
+    "content_ko": "FBI, 2020년 대선 관련 형사 수사의 일환으로 풀턴카운티 선거센터 압수수색: https://justthenews.com/politics-policy/fbi-searches-fulton-county-election-hub"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116544665997769022": {
+    "content_zh_cn": "非常重要。这正是我们国家当前所处的立场！！！\n特朗普总统\nhttps://justthenews.com/government/security/majority-say-preventing-iran-acquiring-nukes-more-important-ending-war-poll",
+    "content_zh_hk": "非常重要。這正是我們國家當前所處的立場！！！\n特朗普總統\nhttps://justthenews.com/government/security/majority-say-preventing-iran-acquiring-nukes-more-important-ending-war-poll",
+    "content_ko": "매우 중요합니다. 이것이 바로 우리 나라의 입장입니다!!!\n트럼프 대통령\nhttps://justthenews.com/government/security/majority-say-preventing-iran-acquiring-nukes-more-important-ending-war-poll"
+  },
   "https://truthsocial.com/@realDonaldTrump/116542198092493172": {
     "content_zh_cn": "祝贺约翰·斯温尼成功连任苏格兰首席部长。他是一位优秀的人士，为苏格兰优质威士忌争取关税减免付出了巨大努力，并与英国国王和王后一道积极推进此事——他理应赢得这场重大的选举胜利！\n\n总统 唐纳德·J·特朗普",
     "content_zh_hk": "祝賀約翰·斯溫尼成功連任蘇格蘭首席大臣。他是一位出色的人，為蘇格蘭優質威士忌爭取關稅減免付出了巨大努力，並與英國國王和王后一同積極推動此事——他理應贏得這場重大的選舉勝利！\n\n總統 唐納德·J·特朗普",
