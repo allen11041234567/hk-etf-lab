@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116552219842825125": {
+    "content_zh_cn": "激进左派“蠢驴党”必须失败——我们的国家正处于危急关头！\n总统 唐纳德·J·特朗普",
+    "content_zh_hk": "激進左派「蠢驢黨」必須失敗——我們的國家正處於危急關頭！\n總統 當勞·J·特朗普",
+    "content_ko": "급진 좌파 ‘멍청한 민주당’은 반드시 실패해야 한다 — 우리 나라가 위태롭다!\n도널드 J. 트럼프 대통령"
+  },
   "https://truthsocial.com/@realDonaldTrump/116552102914488206": {
     "content_zh_cn": "我刚刚读了伊朗所谓“代表”的回复。我不喜欢——完全不可接受！\n感谢你们对此事的关注。\n总统 唐纳德·J·特朗普",
     "content_zh_hk": "我剛剛讀了伊朗所謂「代表」的回覆。我不喜歡——完全不可接受！\n感謝你們對此事的關注。\n總統 唐納德·J·特朗普",
