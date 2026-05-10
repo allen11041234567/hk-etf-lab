@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116547434147907478": {
+    "content_zh_cn": "有人会相信这家伙吗？？？一个黑警！！！",
+    "content_zh_hk": "有人會相信這傢伙嗎？？？一個黑警！！！",
+    "content_ko": "누가 이 사람을 믿겠습니까??? 부패한 경찰이다!!!"
+  },
   "https://truthsocial.com/@realDonaldTrump/116547422429575656": {
     "content_zh_cn": "太可悲了！！！",
     "content_zh_hk": "太可悲了！！！",
