@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116547422429575656": {
+    "content_zh_cn": "太可悲了！！！",
+    "content_zh_hk": "太可悲了！！！",
+    "content_ko": "한심하다!!!"
+  },
   "https://truthsocial.com/@realDonaldTrump/116544667871983111": {
     "content_zh_cn": "FBI就2020年大选刑事调查搜查富尔顿县选举中心：https://justthenews.com/politics-policy/fbi-searches-fulton-county-election-hub",
     "content_zh_hk": "FBI就2020年大選刑事調查搜查富爾頓縣選舉中心：https://justthenews.com/politics-policy/fbi-searches-fulton-county-election-hub",
