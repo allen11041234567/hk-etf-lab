@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116550345428812734": {
+    "content_zh_cn": "独家：以色列外长萨尔称赞特朗普“卓越领导力”：https://www.newsmax.com/newsmax-tv/israel-gideon-saar-donald-trump/2026/03/08/id/1248756/",
+    "content_zh_hk": "獨家：以色列外長薩爾讚揚特朗普「卓越領導力」：https://www.newsmax.com/newsmax-tv/israel-gideon-saar-donald-trump/2026/03/08/id/1248756/",
+    "content_ko": "단독: 이스라엘 외무장관 사르, 트럼프의 탁월한 리더십을 찬사: https://www.newsmax.com/newsmax-tv/israel-gideon-saar-donald-trump/2026/03/08/id/1248756/"
+  },
   "https://truthsocial.com/@realDonaldTrump/116547434147907478": {
     "content_zh_cn": "有人会相信这家伙吗？？？一个黑警！！！",
     "content_zh_hk": "有人會相信這傢伙嗎？？？一個黑警！！！",
