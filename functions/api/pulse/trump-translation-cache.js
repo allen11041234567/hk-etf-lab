@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116552102914488206": {
+    "content_zh_cn": "我刚刚读了伊朗所谓“代表”的回复。我不喜欢——完全不可接受！\n感谢你们对此事的关注。\n总统 唐纳德·J·特朗普",
+    "content_zh_hk": "我剛剛讀了伊朗所謂「代表」的回覆。我不喜歡——完全不可接受！\n感謝你們對此事的關注。\n總統 唐納德·J·特朗普",
+    "content_ko": "방금 이란의 이른바 “대표들”의 답변을 읽었습니다. 마음에 들지 않습니다 — 전적으로 받아들일 수 없습니다!\n이 사안에 대한 여러분의 관심에 감사드립니다.\n도널드 J. 트럼프 대통령"
+  },
   "https://truthsocial.com/@realDonaldTrump/116552089783940030": {
     "content_zh_cn": "独家——库尔德领导人：特朗普是“交易大师”，有望促成一项重大协议，结束伊朗战争，并带动全球经济繁荣：https://www.breitbart.com/politics/2026/05/10/exclusive-kurdish-leader-trump-is-master-of-the-deal-can-land-major-deal-to-end-iran-war-and-create-worldwide-economic-boom/",
     "content_zh_hk": "獨家——庫爾德領袖：特朗普是「交易大師」，有望促成一項重大協議，結束伊朗戰爭，並帶動全球經濟繁榮：https://www.breitbart.com/politics/2026/05/10/exclusive-kurdish-leader-trump-is-master-of-the-deal-can-land-major-deal-to-end-iran-war-and-create-worldwide-economic-boom/",
