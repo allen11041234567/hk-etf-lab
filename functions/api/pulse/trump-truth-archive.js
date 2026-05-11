@@ -13,8 +13,20 @@ const BAD_TRANSLATION_PATTERNS = [
   '请提供帖文原文',
   '抱歉，我无法仅根据链接内容进行翻译',
   '我无法仅根据链接内容进行翻译',
+  '无法直接打开或读取该链接内容',
+  '無法直接開啟或讀取該連結內容',
+  '无法直接访问该链接内容',
+  '無法直接存取該連結內容',
+  '请把原文帖子正文粘贴过来',
+  '請把原文帖文正文貼過來',
+  '请把原文贴给我',
+  '請把原文貼給我',
+  '无法直接打开或读取该链接中的内容',
+  '無法直接開啟或讀取該連結中的內容',
   '해당 링크의 내용을 확인할 수 없습니다',
+  '해당 링크의 내용을 직접 열거나 읽을 수 없습니다',
   '게시물 원문을 보내주시면',
+  '원문 게시글 내용을 붙여 주시면',
 ];
 
 function headers(cacheControl, state) {
@@ -113,7 +125,25 @@ function hasBadTranslation(text = '') {
   if (/^链接内容无法直接访问/i.test(raw)) return true;
   if (/^無法/i.test(raw)) return true;
   if (/^请提供/i.test(raw) || /^請提供/i.test(raw)) return true;
+  if (/^抱歉，我无法/i.test(raw) || /^抱歉，我無法/i.test(raw)) return true;
+  if (/^죄송하지만/i.test(raw)) return true;
   return false;
+}
+
+function isUrlOnlyContent(text = '') {
+  const raw = String(text || '').trim();
+  if (!raw) return false;
+  return /^https?:\/\/\S+$/i.test(raw);
+}
+
+function fallbackDisplayText(post, lang) {
+  const raw = String(post?.content || '').trim();
+  if (isUrlOnlyContent(raw)) {
+    if (lang === 'zh_hk') return '這是一則轉發／引用連結，請點擊下方「查看原文」閱讀原帖內容。';
+    if (lang === 'ko') return '이 게시물은 원문 링크를 공유한 리포스트/인용 글입니다. 아래의 원문 보기 링크를 눌러 확인해 주세요.';
+    return '这是一则转发／引用链接，请点击下方“查看原文”阅读原帖内容。';
+  }
+  return raw;
 }
 
 function encodeMediaId(url = '') {
@@ -128,9 +158,15 @@ function proxyMedia(url, origin) {
 function enrichFromArchive(posts, avatarUrl, origin) {
   return posts.map((post) => {
     const translated = TRUMP_TRANSLATION_CACHE[post.url] || {};
-    const content_zh_cn = hasBadTranslation(translated.content_zh_cn) ? (post.content || '') : (translated.content_zh_cn || '');
-    const content_zh_hk = hasBadTranslation(translated.content_zh_hk) ? (post.content || '') : (translated.content_zh_hk || '');
-    const content_ko = hasBadTranslation(translated.content_ko) ? (post.content || '') : (translated.content_ko || '');
+    const content_zh_cn = hasBadTranslation(translated.content_zh_cn)
+      ? fallbackDisplayText(post, 'zh_cn')
+      : (translated.content_zh_cn || fallbackDisplayText(post, 'zh_cn'));
+    const content_zh_hk = hasBadTranslation(translated.content_zh_hk)
+      ? fallbackDisplayText(post, 'zh_hk')
+      : (translated.content_zh_hk || fallbackDisplayText(post, 'zh_hk'));
+    const content_ko = hasBadTranslation(translated.content_ko)
+      ? fallbackDisplayText(post, 'ko')
+      : (translated.content_ko || fallbackDisplayText(post, 'ko'));
     const media = (Array.isArray(post.media) ? post.media : []).map((m) => ({ ...m, url: proxyMedia(m.url, origin), poster_url: proxyMedia(m.poster_url, origin) }));
     return {
       ...post,
@@ -196,8 +232,8 @@ export async function onRequestGet(context) {
   const { request } = context;
   const url = new URL(request.url);
   const cache = caches.default;
-  const liveKey = new Request(`${url.origin}/__edge/pulse/trump-truth-archive/live-v4`);
-  const staleKey = new Request(`${url.origin}/__edge/pulse/trump-truth-archive/stale-v4`);
+  const liveKey = new Request(`${url.origin}/__edge/pulse/trump-truth-archive/live-v5`);
+  const staleKey = new Request(`${url.origin}/__edge/pulse/trump-truth-archive/stale-v5`);
 
   try {
     const cached = await cache.match(liveKey);
