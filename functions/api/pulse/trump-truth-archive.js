@@ -218,8 +218,25 @@ function dropVideoPosts(posts) {
   return (posts || []).filter((post) => !hasVideoMedia(post));
 }
 
-function dropUrlOnlyPosts(posts) {
-  return (posts || []).filter((post) => !isUrlOnlyContent(post?.content || ''));
+function isAnchorOnlyHtml(html = '') {
+  const raw = String(html || '').trim();
+  if (!raw) return false;
+  return /^<p>\s*<a\b[\s\S]*?<\/a>\s*<\/p>$/i.test(raw);
+}
+
+function isLowSignalPost(post) {
+  const content = String(post?.content || '').trim();
+  const html = String(post?.content_html || '').trim();
+  if (!content) return true;
+  if (isUrlOnlyContent(content)) return true;
+  if (isAnchorOnlyHtml(html)) return true;
+  if (/^https?:\/\/truthsocial\.com\/users\//i.test(content)) return true;
+  if (/^https?:\/\/[^\s]+\s+.{0,40}$/i.test(content)) return true;
+  return false;
+}
+
+function dropLowSignalPosts(posts) {
+  return (posts || []).filter((post) => !isLowSignalPost(post));
 }
 
 function keepRecentPosts(posts, hours = RECENT_HOURS) {
@@ -260,8 +277,8 @@ export async function onRequestGet(context) {
     const mergedPosts = enrichFromArchive(posts, avatarUrl, url.origin);
     const dedupedPosts = dedupePosts(mergedPosts);
     const noVideoPosts = dropVideoPosts(dedupedPosts);
-    const noUrlOnlyPosts = dropUrlOnlyPosts(noVideoPosts);
-    const finalPosts = keepRecentPosts(noUrlOnlyPosts);
+    const highSignalPosts = dropLowSignalPosts(noVideoPosts);
+    const finalPosts = keepRecentPosts(highSignalPosts);
     const body = JSON.stringify({
       ok: true,
       fetchedAt: new Date().toISOString(),
