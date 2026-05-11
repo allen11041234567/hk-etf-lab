@@ -1,18 +1,58 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116553586537498656": {
+    "content_zh_cn": "https://truthsocial.com/users/lauramarks/statuses/116553381753696135",
+    "content_zh_hk": "https://truthsocial.com/users/lauramarks/statuses/116553381753696135",
+    "content_ko": "https://truthsocial.com/users/lauramarks/statuses/116553381753696135"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116553585376826272": {
+    "content_zh_cn": "抱歉，我无法直接打开或读取该链接中的内容。\n\n请把原文帖文内容粘贴过来，我会按你的要求返回严格 JSON，包含：content_zh_cn、content_zh_hk、content_ko。",
+    "content_zh_hk": "抱歉，我無法直接開啟或讀取該連結中的內容。\n\n請把原文帖文內容貼上，我會按你的要求返回嚴格 JSON，包含：content_zh_cn、content_zh_hk、content_ko。",
+    "content_ko": "죄송하지만 해당 링크의 내용을 직접 열거나 읽을 수 없습니다.\n\n원문 게시글 내용을 붙여 주시면 요청하신 형식에 맞춰 content_zh_cn, content_zh_hk, content_ko 키만 포함한 엄격한 JSON으로 반환하겠습니다."
+  },
+  "https://truthsocial.com/@realDonaldTrump/116553583052530415": {
+    "content_zh_cn": "抱歉，我无法直接打开或读取该链接内容。请把帖文原文粘贴过来，我会按要求为你翻译成简体中文、繁体中文（香港）和韩文，并严格以 JSON 返回。",
+    "content_zh_hk": "抱歉，我無法直接開啟或讀取該連結內容。請把帖文原文貼上，我會按要求為你翻譯成簡體中文、繁體中文（香港）和韓文，並嚴格以 JSON 返回。",
+    "content_ko": "죄송하지만 해당 링크의 내용을 직접 열거나 읽을 수 없습니다. 게시물 원문을 붙여 주시면 요청하신 형식에 맞춰 중국어 간체, 중국어 번체(홍콩), 한국어로 번역해 엄격한 JSON 형식으로 반환하겠습니다."
+  },
+  "https://truthsocial.com/@realDonaldTrump/116553580222628953": {
+    "content_zh_cn": "很抱歉，我无法访问该链接内容。请将帖子原文粘贴过来，我会按您的要求返回严格 JSON。",
+    "content_zh_hk": "很抱歉，我無法存取該連結內容。請將帖文原文貼上，我會按您的要求返回嚴格 JSON。",
+    "content_ko": "죄송하지만 해당 링크의 내용을 직접 확인할 수 없습니다. 게시물 원문을 붙여 주시면 요청하신 형식의 엄격한 JSON으로 반환하겠습니다."
+  },
+  "https://truthsocial.com/@realDonaldTrump/116553576558537687": {
+    "content_zh_cn": "未能获取该链接中的原文内容。请提供帖文全文，我将按要求翻译为简体中文、繁體中文（香港）和韩文。",
+    "content_zh_hk": "未能取得該連結中的原文內容。請提供帖文全文，我將按要求翻譯為簡體中文、繁體中文（香港）和韓文。",
+    "content_ko": "해당 링크의 원문 내용을 확인할 수 없습니다. 게시물 전문을 보내주시면 요청하신 형식에 맞춰 중국어 간체, 중국어 번체(홍콩), 한국어로 번역해 드리겠습니다."
+  },
+  "https://truthsocial.com/@realDonaldTrump/116553573082083140": {
+    "content_zh_cn": "抱歉，我无法直接访问该链接内容。请把帖文原文粘贴过来，我会按要求翻译并仅返回严格 JSON。",
+    "content_zh_hk": "抱歉，我無法直接存取該連結內容。請把帖文原文貼上，我會按要求翻譯並僅返回嚴格 JSON。",
+    "content_ko": "죄송하지만 해당 링크의 게시물 내용을 직접 확인할 수 없습니다. 원문을 붙여 주시면 요청하신 형식에 맞춰 번역하고 엄격한 JSON만 반환하겠습니다."
+  },
+  "https://truthsocial.com/@realDonaldTrump/116553571606271755": {
+    "content_zh_cn": "它正在快速上涨！！！",
+    "content_zh_hk": "它正在快速上升！！！",
+    "content_ko": "빠르게 오르고 있다!!!"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116553568884302823": {
+    "content_zh_cn": "无法访问原始帖文内容。请提供帖文全文，以便我准确翻译。",
+    "content_zh_hk": "無法存取原始帖文內容。請提供帖文全文，以便我準確翻譯。",
+    "content_ko": "원문 게시물 내용에 접근할 수 없습니다. 정확한 번역을 위해 게시물 전체 내용을 제공해 주세요."
+  },
   "https://truthsocial.com/@realDonaldTrump/116553567787329878": {
     "content_zh_cn": "抱歉，我无法直接打开该链接或读取其中的内容。请把原文贴出来，我会按你的要求返回严格 JSON，并提供 content_zh_cn、content_zh_hk、content_ko。",
     "content_zh_hk": "抱歉，我無法直接打開該連結或讀取其中的內容。請把原文貼出來，我會按你的要求返回嚴格 JSON，並提供 content_zh_cn、content_zh_hk、content_ko。",
     "content_ko": "죄송하지만 해당 링크를 직접 열거나 그 안의 내용을 읽을 수 없습니다. 원문을 붙여 주시면 요청하신 형식에 맞춰 strict JSON으로 content_zh_cn, content_zh_hk, content_ko를 제공하겠습니다."
   },
   "https://truthsocial.com/@realDonaldTrump/116553565539501959": {
-    "content_zh_cn": "链接内容无法直接访问。请提供该帖文的原文内容，我将按要求返回严格 JSON 翻译结果。",
-    "content_zh_hk": "無法直接存取連結內容。請提供該帖文的原文內容，我將按要求返回嚴格 JSON 翻譯結果。",
-    "content_ko": "링크 내용을 직접 확인할 수 없습니다. 게시물 원문을 보내주시면 요청하신 형식의 엄격한 JSON 번역 결과를 반환하겠습니다."
+    "content_zh_cn": "我与伊朗就伊朗核问题将于下周四举行会谈。感谢大家对此事的关注！",
+    "content_zh_hk": "我與伊朗就伊朗核問題將於下週四舉行會談。感謝大家對此事的關注！",
+    "content_ko": "저는 다음 주 목요일 이란 핵 문제와 관련해 이란과 회담을 가질 예정입니다. 이 사안에 관심을 가져주셔서 감사합니다!"
   },
   "https://truthsocial.com/@realDonaldTrump/116553563962076412": {
-    "content_zh_cn": "无法访问该链接中的原文内容。请粘贴帖子全文，我将按要求翻译为简体中文、繁体中文（香港）和韩文。",
-    "content_zh_hk": "無法存取該連結中的原文內容。請貼上帖子全文，我將按要求翻譯為簡體中文、繁體中文（香港）和韓文。",
-    "content_ko": "해당 링크의 원문 내용을 확인할 수 없습니다. 게시물 전문을 붙여 주시면 요청하신 형식에 맞춰 중국어 간체, 중국어 번체(홍콩), 한국어로 번역해 드리겠습니다."
+    "content_zh_cn": "无法访问该链接内容。请提供原文，我将按要求翻译。",
+    "content_zh_hk": "無法存取該連結內容。請提供原文，我將按要求翻譯。",
+    "content_ko": "해당 링크의 본문에 접근할 수 없습니다. 원문을 보내주시면 요청하신 형식으로 번역해드리겠습니다."
   },
   "https://truthsocial.com/@realDonaldTrump/116553562619701021": {
     "content_zh_cn": "请访问原帖链接查看原文内容：\nhttps://truthsocial.com/users/GNorberg/statuses/116553381326742011",
@@ -25,9 +65,9 @@ export const TRUMP_TRANSLATION_CACHE = {
     "content_ko": "죄송하지만 해당 링크의 내용을 직접 확인할 수 없습니다. 원문을 붙여 주시면 요청하신 형식의 엄격한 JSON으로 반환하겠습니다."
   },
   "https://truthsocial.com/@realDonaldTrump/116553557139673047": {
-    "content_zh_cn": "无法访问所提供链接中的帖子内容。请粘贴原文，我将按要求翻译。",
-    "content_zh_hk": "無法存取所提供連結中的帖文內容。請貼上原文，我將按要求翻譯。",
-    "content_ko": "제공된 링크의 게시물 내용을 확인할 수 없습니다. 원문을 붙여 주시면 요청하신 형식에 맞춰 번역하겠습니다."
+    "content_zh_cn": "美国与中国今天举行了一场非常好的会谈，在很多方面都达成了一致。\n双方以友好但建设性的方式，就全面重启进行了磋商。为实现中美两国的利益，我们希望看到中国进一步向美国企业开放。这取得了巨大进展！！！\n\n感谢大家对此事的关注！",
+    "content_zh_hk": "美國與中國今天舉行了一場非常好的會談，在很多方面都達成了一致。\n雙方以友好但具建設性的方式，就全面重啟進行了磋商。為了中美兩國的利益，我們希望看到中國進一步向美國企業開放。這取得了巨大進展！！！\n\n感謝大家對此事的關注！",
+    "content_ko": "미국과 중국은 오늘 매우 좋은 회담을 가졌으며, 많은 사안에서 합의에 도달했습니다.\n양측은 우호적이면서도 건설적인 방식으로 전면적인 재가동에 대해 논의했습니다. 미중 양국의 이익을 위해 우리는 중국이 미국 기업들에 더 많이 개방되기를 바랍니다. 엄청난 진전이 있었습니다!!!\n\n이 사안에 관심을 가져주셔서 감사합니다!"
   },
   "https://truthsocial.com/@realDonaldTrump/116553376180343363": {
     "content_zh_cn": "民调数据非常亮眼。谢谢！",
