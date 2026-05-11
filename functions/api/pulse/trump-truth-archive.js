@@ -23,6 +23,13 @@ const BAD_TRANSLATION_PATTERNS = [
   '請把原文貼給我',
   '无法直接打开或读取该链接中的内容',
   '無法直接開啟或讀取該連結中的內容',
+  '这是链接，未提供可见原文内容，无法进行准确翻译',
+  '這是連結，未提供可見原文內容，無法進行準確翻譯',
+  '请提供帖文全文',
+  '請提供帖文全文',
+  '未提供可见原文内容',
+  '未提供可見原文內容',
+  '해당 링크는 원문 본문이 보이지 않아 정확한 번역이 어렵습니다',
   '해당 링크의 내용을 확인할 수 없습니다',
   '해당 링크의 내용을 직접 열거나 읽을 수 없습니다',
   '게시물 원문을 보내주시면',
@@ -137,13 +144,7 @@ function isUrlOnlyContent(text = '') {
 }
 
 function fallbackDisplayText(post, lang) {
-  const raw = String(post?.content || '').trim();
-  if (isUrlOnlyContent(raw)) {
-    if (lang === 'zh_hk') return '這是一則轉發／引用連結，請點擊下方「查看原文」閱讀原帖內容。';
-    if (lang === 'ko') return '이 게시물은 원문 링크를 공유한 리포스트/인용 글입니다. 아래의 원문 보기 링크를 눌러 확인해 주세요.';
-    return '这是一则转发／引用链接，请点击下方“查看原文”阅读原帖内容。';
-  }
-  return raw;
+  return String(post?.content || '').trim();
 }
 
 function encodeMediaId(url = '') {
