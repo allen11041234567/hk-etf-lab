@@ -1,4 +1,34 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116553567787329878": {
+    "content_zh_cn": "抱歉，我无法直接打开该链接或读取其中的内容。请把原文贴出来，我会按你的要求返回严格 JSON，并提供 content_zh_cn、content_zh_hk、content_ko。",
+    "content_zh_hk": "抱歉，我無法直接打開該連結或讀取其中的內容。請把原文貼出來，我會按你的要求返回嚴格 JSON，並提供 content_zh_cn、content_zh_hk、content_ko。",
+    "content_ko": "죄송하지만 해당 링크를 직접 열거나 그 안의 내용을 읽을 수 없습니다. 원문을 붙여 주시면 요청하신 형식에 맞춰 strict JSON으로 content_zh_cn, content_zh_hk, content_ko를 제공하겠습니다."
+  },
+  "https://truthsocial.com/@realDonaldTrump/116553565539501959": {
+    "content_zh_cn": "链接内容无法直接访问。请提供该帖文的原文内容，我将按要求返回严格 JSON 翻译结果。",
+    "content_zh_hk": "無法直接存取連結內容。請提供該帖文的原文內容，我將按要求返回嚴格 JSON 翻譯結果。",
+    "content_ko": "링크 내용을 직접 확인할 수 없습니다. 게시물 원문을 보내주시면 요청하신 형식의 엄격한 JSON 번역 결과를 반환하겠습니다."
+  },
+  "https://truthsocial.com/@realDonaldTrump/116553563962076412": {
+    "content_zh_cn": "无法访问该链接中的原文内容。请粘贴帖子全文，我将按要求翻译为简体中文、繁体中文（香港）和韩文。",
+    "content_zh_hk": "無法存取該連結中的原文內容。請貼上帖子全文，我將按要求翻譯為簡體中文、繁體中文（香港）和韓文。",
+    "content_ko": "해당 링크의 원문 내용을 확인할 수 없습니다. 게시물 전문을 붙여 주시면 요청하신 형식에 맞춰 중국어 간체, 중국어 번체(홍콩), 한국어로 번역해 드리겠습니다."
+  },
+  "https://truthsocial.com/@realDonaldTrump/116553562619701021": {
+    "content_zh_cn": "请访问原帖链接查看原文内容：\nhttps://truthsocial.com/users/GNorberg/statuses/116553381326742011",
+    "content_zh_hk": "請訪問原帖連結查看原文內容：\nhttps://truthsocial.com/users/GNorberg/statuses/116553381326742011",
+    "content_ko": "원문 내용은 아래 게시물 링크에서 확인해 주세요:\nhttps://truthsocial.com/users/GNorberg/statuses/116553381326742011"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116553558549486258": {
+    "content_zh_cn": "抱歉，我无法直接访问该链接内容。请把原文贴给我，我会按要求返回严格 JSON。",
+    "content_zh_hk": "抱歉，我無法直接存取該連結內容。請把原文貼給我，我會按要求返回嚴格 JSON。",
+    "content_ko": "죄송하지만 해당 링크의 내용을 직접 확인할 수 없습니다. 원문을 붙여 주시면 요청하신 형식의 엄격한 JSON으로 반환하겠습니다."
+  },
+  "https://truthsocial.com/@realDonaldTrump/116553557139673047": {
+    "content_zh_cn": "无法访问所提供链接中的帖子内容。请粘贴原文，我将按要求翻译。",
+    "content_zh_hk": "無法存取所提供連結中的帖文內容。請貼上原文，我將按要求翻譯。",
+    "content_ko": "제공된 링크의 게시물 내용을 확인할 수 없습니다. 원문을 붙여 주시면 요청하신 형식에 맞춰 번역하겠습니다."
+  },
   "https://truthsocial.com/@realDonaldTrump/116553376180343363": {
     "content_zh_cn": "民调数据非常亮眼。谢谢！",
     "content_zh_hk": "民調數據非常亮眼。謝謝！",
