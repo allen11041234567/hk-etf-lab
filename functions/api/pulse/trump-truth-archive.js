@@ -218,6 +218,10 @@ function dropVideoPosts(posts) {
   return (posts || []).filter((post) => !hasVideoMedia(post));
 }
 
+function dropUrlOnlyPosts(posts) {
+  return (posts || []).filter((post) => !isUrlOnlyContent(post?.content || ''));
+}
+
 function keepRecentPosts(posts, hours = RECENT_HOURS) {
   const cutoff = Date.now() - hours * 60 * 60 * 1000;
   const recent = (posts || []).filter((post) => {
@@ -256,7 +260,8 @@ export async function onRequestGet(context) {
     const mergedPosts = enrichFromArchive(posts, avatarUrl, url.origin);
     const dedupedPosts = dedupePosts(mergedPosts);
     const noVideoPosts = dropVideoPosts(dedupedPosts);
-    const finalPosts = keepRecentPosts(noVideoPosts);
+    const noUrlOnlyPosts = dropUrlOnlyPosts(noVideoPosts);
+    const finalPosts = keepRecentPosts(noUrlOnlyPosts);
     const body = JSON.stringify({
       ok: true,
       fetchedAt: new Date().toISOString(),
