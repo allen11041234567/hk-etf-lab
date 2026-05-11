@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116555813332345064": {
+    "content_zh_cn": "红州正效仿特朗普的模式，寻求清除伊斯兰主义在地方立法中的影响：https://justthenews.com/politics-policy/red-states-follow-trumps-model-seek-de-islamify-homeland",
+    "content_zh_hk": "紅州正仿效特朗普的模式，尋求清除伊斯蘭主義在地方立法中的影響：https://justthenews.com/politics-policy/red-states-follow-trumps-model-seek-de-islamify-homeland",
+    "content_ko": "공화당 우세 주들은 트럼프의 모델을 따라, 지역 입법에서 이슬람주의 영향력을 제거하려 하고 있다: https://justthenews.com/politics-policy/red-states-follow-trumps-model-seek-de-islamify-homeland"
+  },
   "https://truthsocial.com/@realDonaldTrump/116553591692058270": {
     "content_zh_cn": "抱歉，我无法直接打开或读取该链接内容。请把原文帖子正文粘贴过来，我会按你的要求返回严格 JSON（content_zh_cn、content_zh_hk、content_ko）。",
     "content_zh_hk": "抱歉，我無法直接開啟或讀取該連結內容。請把原文帖文正文貼過來，我會按你的要求返回嚴格 JSON（content_zh_cn、content_zh_hk、content_ko）。",
