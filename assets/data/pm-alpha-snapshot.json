@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-12T01:07:35.036678+00:00",
+  "generatedAt": "2026-05-12T01:11:32.800215+00:00",
   "source": "Polymarket Gamma + CLOB public endpoints",
   "marketCount": 17,
   "allQualifiedCount": 64,
@@ -110,7 +110,7 @@
       "nearAskDepth": 11422.07,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": -46.23,
+      "bidDepthDelta": 0.0,
       "askDepthDelta": 0.0,
       "noteZh": "该事件当前 Yes 概率约 1.0%，下方承接更强，适合与避险资产和地缘风险交易并看。"
     },
@@ -134,11 +134,11 @@
       "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/balance-of-power-2024-election-r-Fp-y4ONJBS.jpg",
       "url": "https://polymarket.com/event/2026-balance-of-power-r-senate-r-house-537",
       "nearBidDepth": 36716.84,
-      "nearAskDepth": 14105.91,
+      "nearAskDepth": 14430.53,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": -10.0,
-      "askDepthDelta": 0.0,
+      "bidDepthDelta": 0.0,
+      "askDepthDelta": 324.62,
       "noteZh": "该事件当前 Yes 概率约 22.5%，下方承接更强，政治定价变化可能影响风险偏好。"
     },
     {
@@ -160,11 +160,11 @@
       "endDate": "2026-10-10T00:00:00Z",
       "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-julian-assange-win-the-nobel-peace-prize-in-2025-t2xPtLKW17Qk.png",
       "url": "https://polymarket.com/event/will-julian-assange-win-the-nobel-peace-prize-in-2026-899",
-      "nearBidDepth": 323367.22,
+      "nearBidDepth": 323298.06,
       "nearAskDepth": 14280.62,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": 0.0,
+      "bidDepthDelta": -69.16,
       "askDepthDelta": 0.0,
       "noteZh": "该事件当前 Yes 概率约 0.5%，下方承接更强，适合与避险资产和地缘风险交易并看。"
     }
@@ -247,7 +247,7 @@
       "nearAskDepth": 100180.56,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": 3480.0,
+      "bidDepthDelta": 0.0,
       "askDepthDelta": 0.0,
       "noteZh": "该事件当前 Yes 概率约 0.4%，下方承接更强，可映射到美债、黄金和成长股方向。"
     },
@@ -274,7 +274,7 @@
       "nearAskDepth": 28504.78,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": -1775.0,
+      "bidDepthDelta": 0.0,
       "askDepthDelta": 0.0,
       "noteZh": "该事件当前 Yes 概率约 0.4%，下方承接更强，可映射到美债、黄金和成长股方向。"
     },
@@ -325,11 +325,11 @@
       "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/balance-of-power-2024-election-r-Fp-y4ONJBS.jpg",
       "url": "https://polymarket.com/event/2026-balance-of-power-other-131",
       "nearBidDepth": 776240.31,
-      "nearAskDepth": 54226.56,
+      "nearAskDepth": 53524.35,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": -702.22,
-      "askDepthDelta": 0.0,
+      "bidDepthDelta": 0.0,
+      "askDepthDelta": -702.21,
       "noteZh": "该事件当前 Yes 概率约 0.7%，下方承接更强，政治定价变化可能影响风险偏好。"
     }
   ],
@@ -438,7 +438,7 @@
       "nearAskDepth": 11422.07,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": -46.23,
+      "bidDepthDelta": 0.0,
       "askDepthDelta": 0.0,
       "noteZh": "该事件当前 Yes 概率约 1.0%，下方承接更强，适合与避险资产和地缘风险交易并看。"
     },
@@ -462,11 +462,11 @@
       "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/balance-of-power-2024-election-r-Fp-y4ONJBS.jpg",
       "url": "https://polymarket.com/event/2026-balance-of-power-r-senate-r-house-537",
       "nearBidDepth": 36716.84,
-      "nearAskDepth": 14105.91,
+      "nearAskDepth": 14430.53,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": -10.0,
-      "askDepthDelta": 0.0,
+      "bidDepthDelta": 0.0,
+      "askDepthDelta": 324.62,
       "noteZh": "该事件当前 Yes 概率约 22.5%，下方承接更强，政治定价变化可能影响风险偏好。"
     },
     {
@@ -488,11 +488,11 @@
       "endDate": "2026-10-10T00:00:00Z",
       "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-julian-assange-win-the-nobel-peace-prize-in-2025-t2xPtLKW17Qk.png",
       "url": "https://polymarket.com/event/will-julian-assange-win-the-nobel-peace-prize-in-2026-899",
-      "nearBidDepth": 323367.22,
+      "nearBidDepth": 323298.06,
       "nearAskDepth": 14280.62,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": 0.0,
+      "bidDepthDelta": -69.16,
       "askDepthDelta": 0.0,
       "noteZh": "该事件当前 Yes 概率约 0.5%，下方承接更强，适合与避险资产和地缘风险交易并看。"
     }
@@ -634,7 +634,7 @@
       "nearAskDepth": 11422.07,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": -46.23,
+      "bidDepthDelta": 0.0,
       "askDepthDelta": 0.0,
       "noteZh": "该事件当前 Yes 概率约 1.0%，下方承接更强，适合与避险资产和地缘风险交易并看。"
     },
@@ -658,11 +658,11 @@
       "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/balance-of-power-2024-election-r-Fp-y4ONJBS.jpg",
       "url": "https://polymarket.com/event/2026-balance-of-power-r-senate-r-house-537",
       "nearBidDepth": 36716.84,
-      "nearAskDepth": 14105.91,
+      "nearAskDepth": 14430.53,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": -10.0,
-      "askDepthDelta": 0.0,
+      "bidDepthDelta": 0.0,
+      "askDepthDelta": 324.62,
       "noteZh": "该事件当前 Yes 概率约 22.5%，下方承接更强，政治定价变化可能影响风险偏好。"
     },
     {
@@ -684,11 +684,11 @@
       "endDate": "2026-10-10T00:00:00Z",
       "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-julian-assange-win-the-nobel-peace-prize-in-2025-t2xPtLKW17Qk.png",
       "url": "https://polymarket.com/event/will-julian-assange-win-the-nobel-peace-prize-in-2026-899",
-      "nearBidDepth": 323367.22,
+      "nearBidDepth": 323298.06,
       "nearAskDepth": 14280.62,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": 0.0,
+      "bidDepthDelta": -69.16,
       "askDepthDelta": 0.0,
       "noteZh": "该事件当前 Yes 概率约 0.5%，下方承接更强，适合与避险资产和地缘风险交易并看。"
     },
@@ -715,7 +715,7 @@
       "nearAskDepth": 28504.78,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": -1775.0,
+      "bidDepthDelta": 0.0,
       "askDepthDelta": 0.0,
       "noteZh": "该事件当前 Yes 概率约 0.4%，下方承接更强，可映射到美债、黄金和成长股方向。"
     },
@@ -738,12 +738,12 @@
       "endDate": "2026-11-03T00:00:00Z",
       "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/balance-of-power-2024-election-r-Fp-y4ONJBS.jpg",
       "url": "https://polymarket.com/event/2026-balance-of-power-d-senate-d-house-949",
-      "nearBidDepth": 127355.82,
-      "nearAskDepth": 33736.07,
+      "nearBidDepth": 126210.44,
+      "nearAskDepth": 33615.58,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": 1060.9,
-      "askDepthDelta": 1137.0,
+      "bidDepthDelta": -1145.38,
+      "askDepthDelta": -120.49,
       "noteZh": "该事件当前 Yes 概率约 44.5%，下方承接更强，政治定价变化可能影响风险偏好。"
     },
     {
@@ -823,7 +823,7 @@
       "nearAskDepth": 100180.56,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": 3480.0,
+      "bidDepthDelta": 0.0,
       "askDepthDelta": 0.0,
       "noteZh": "该事件当前 Yes 概率约 0.4%，下方承接更强，可映射到美债、黄金和成长股方向。"
     },
@@ -846,12 +846,12 @@
       "endDate": "2026-12-31T00:00:00Z",
       "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/how-many-fed-rate-cuts-in-2025-9qstZkSL1dn0.jpg",
       "url": "https://polymarket.com/event/will-no-fed-rate-cuts-happen-in-2026",
-      "nearBidDepth": 40366.8,
-      "nearAskDepth": 15533.64,
+      "nearBidDepth": 39916.8,
+      "nearAskDepth": 14612.56,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": 1633.0,
-      "askDepthDelta": -61.19,
+      "bidDepthDelta": -450.0,
+      "askDepthDelta": -921.08,
       "noteZh": "该事件当前 Yes 概率约 58.0%，下方承接更强，可映射到美债、黄金和成长股方向。"
     },
     {
@@ -877,8 +877,8 @@
       "nearAskDepth": 32379.72,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": -10.0,
-      "askDepthDelta": -198.0,
+      "bidDepthDelta": 0.0,
+      "askDepthDelta": 0.0,
       "noteZh": "该事件当前 Yes 概率约 22.5%，下方承接更强，政治定价变化可能影响风险偏好。"
     },
     {
@@ -905,7 +905,7 @@
       "pressureLabel": "上方卖压更重",
       "priceDeltaSinceLastPp": 0.0,
       "bidDepthDelta": 0.0,
-      "askDepthDelta": -1.93,
+      "askDepthDelta": -0.0,
       "noteZh": "该事件当前 Yes 概率约 77.5%，上方卖压更重，政治定价变化可能影响风险偏好。"
     },
     {
@@ -928,11 +928,11 @@
       "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/balance-of-power-2024-election-r-Fp-y4ONJBS.jpg",
       "url": "https://polymarket.com/event/2026-balance-of-power-other-131",
       "nearBidDepth": 776240.31,
-      "nearAskDepth": 54226.56,
+      "nearAskDepth": 53524.35,
       "pressureLabel": "下方承接更强",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": -702.22,
-      "askDepthDelta": 0.0,
+      "bidDepthDelta": 0.0,
+      "askDepthDelta": -702.21,
       "noteZh": "该事件当前 Yes 概率约 0.7%，下方承接更强，政治定价变化可能影响风险偏好。"
     },
     {
@@ -958,7 +958,7 @@
       "nearAskDepth": 6929.92,
       "pressureLabel": "盘口相对均衡",
       "priceDeltaSinceLastPp": 0.0,
-      "bidDepthDelta": 30.0,
+      "bidDepthDelta": 0.0,
       "askDepthDelta": 0.0,
       "noteZh": "该事件当前 Yes 概率约 22.5%，盘口相对均衡，更适合放进宏观节奏与风险偏好框架里解读。"
     },
