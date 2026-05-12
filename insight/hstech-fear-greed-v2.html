@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex,nofollow,noarchive" />
+  <title>恒生科技短期恐贪指数 V2</title>
+  <style>
+    :root { --bg:#f6f8fc; --card:#ffffff; --line:#e6ebf2; --text:#162033; --muted:#6b7280; --cool:#2563eb; --mid:#64748b; --warm:#ea580c; --hot:#dc2626; --good:#059669; --shadow:0 14px 35px rgba(15,23,42,.08); }
+    * { box-sizing:border-box; }
+    body { margin:0; background:linear-gradient(180deg,#f8fbff 0%,#f3f7fc 100%); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif; }
+    .wrap { width:min(1180px, calc(100vw - 28px)); margin:0 auto; padding:22px 0 36px; }
+    .hero,.panel { background:var(--card); border:1px solid var(--line); border-radius:24px; box-shadow:var(--shadow); }
+    .hero { padding:24px; margin-bottom:14px; }
+    .eyebrow { display:inline-block; padding:7px 11px; border-radius:999px; background:#eef4ff; color:#315efb; font-size:12px; font-weight:700; border:1px solid #d9e6ff; }
+    h1 { margin:12px 0 8px; font-size:38px; line-height:1.12; letter-spacing:-.03em; }
+    .sub { color:var(--muted); font-size:15px; line-height:1.75; max-width:920px; }
+    .chips { display:flex; gap:8px; flex-wrap:wrap; margin-top:14px; }
+    .chip { padding:8px 11px; border-radius:999px; font-size:12px; border:1px solid var(--line); background:#fafcff; color:#475569; }
+    .grid4 { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin:14px 0; }
+    .grid2 { display:grid; grid-template-columns:1.2fr .8fr; gap:14px; margin-top:14px; }
+    .panel { padding:18px; }
+    .stat .k { font-size:12px; color:var(--muted); }
+    .stat .v { margin-top:8px; font-size:30px; font-weight:800; letter-spacing:-.03em; }
+    .stat .d { margin-top:6px; font-size:12px; color:#64748b; line-height:1.6; }
+    .cool { color:var(--cool); } .mid { color:var(--mid); } .warm { color:var(--warm); } .hot { color:var(--hot); } .good { color:var(--good); }
+    table { width:100%; border-collapse:collapse; font-size:13px; }
+    th,td { padding:10px 8px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+    th { color:#64748b; font-size:12px; font-weight:700; background:#fbfcff; }
+    tr:last-child td { border-bottom:none; }
+    .title-row { display:flex; justify-content:space-between; gap:12px; align-items:flex-end; margin-bottom:10px; }
+    .title-row h2 { margin:0; font-size:22px; }
+    .hint { font-size:12px; color:var(--muted); }
+    .lead { padding:16px 18px; border-radius:18px; background:linear-gradient(180deg,#f9fbff 0%,#f5f8fd 100%); border:1px solid var(--line); }
+    .lead .label { font-size:12px; color:var(--muted); }
+    .lead .text { margin-top:8px; font-size:22px; font-weight:800; line-height:1.4; }
+    .two { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    .note { color:var(--muted); font-size:13px; line-height:1.7; }
+    @media (max-width: 900px) { .grid4,.grid2,.two { grid-template-columns:1fr; } h1 { font-size:28px; } .wrap { width:calc(100vw - 16px); padding:12px 0 24px; } .hero,.panel { border-radius:18px; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <span class="eyebrow">隐藏页，无首页入口</span>
+      <h1>恒生科技短期恐贪指数 V2</h1>
+      <div class="sub">这页只看一件事，短期恒生科技现在到底偏冷还是偏热，以及按“低于阈值买入，高于阈值卖出”的规则，历史上这套东西表现如何。当前版本优先服务交易触发，不追求宏观叙事。</div>
+      <div class="chips">
+        <div class="chip">标的：HSTECH</div>
+        <div class="chip">口径：短期版 V2</div>
+        <div class="chip">核心：VHSI + 10日回撤 + 20日低点 + 动量 + 短线成交热度</div>
+        <div class="chip">更新时间：2026-05-12 04:54 UTC</div>
+      </div>
+    </section>
+
+    <div class="grid4">
+      <section class="panel stat">
+        <div class="k">最新总分</div>
+        <div class="v mid">43.27</div>
+        <div class="d">中性震荡</div>
+      </section>
+      <section class="panel stat">
+        <div class="k">恐惧快层</div>
+        <div class="v cool">21.55</div>
+        <div class="d">越低越接近短期恐慌</div>
+      </section>
+      <section class="panel stat">
+        <div class="k">贪婪快层</div>
+        <div class="v warm">65.00</div>
+        <div class="d">越高越偏热、偏拥挤</div>
+      </section>
+      <section class="panel stat">
+        <div class="k">最新 HSTECH</div>
+        <div class="v">5104.89</div>
+        <div class="d">日期 2026-05-11</div>
+      </section>
+    </div>
+
+    <div class="grid2">
+      <section class="panel">
+        <div class="title-row"><h2>当前一句话判断</h2><div class="hint">只说交易相关</div></div>
+        <div class="lead">
+          <div class="label">NOW</div>
+          <div class="text mid">当前总分 43.27，恐惧快层 21.55，贪婪快层 65.00，说明市场短期已有明显降温，但还没进入那种极端恐慌、闭眼抄底的级别。</div>
+        </div>
+        <div class="two" style="margin-top:12px;">
+          <div class="lead"><div class="label">最佳历史阈值</div><div class="text good">低于 35 买，高于 65 卖</div><div class="note">样本收益 +43.87%，交易动作 11 次，完整 round trip 5 次。</div></div>
+          <div class="lead"><div class="label">次优历史阈值</div><div class="text">低于 40 买，高于 60 卖</div><div class="note">样本收益 +41.06%，交易动作 30 次，完整 round trip 15 次。</div></div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="title-row"><h2>这版怎么组成</h2><div class="hint">短期触发优先</div></div>
+        <div class="note"><b>恐惧快层</b>：VHSI 水平、VHSI 3日变化、VHSI 相对 MA10、10日最大回撤、距离20日低点。<br><br><b>贪婪快层</b>：3日收益、10日收益、30日动量、3日/10日成交热度。<br><br>最后把两层等权合成一个 0 到 100 的总分，再用“低于阈值买入，高于阈值卖出”的规则直接回测。</div>
+      </section>
+    </div>
+
+    <div class="grid2">
+      <section class="panel">
+        <div class="title-row"><h2>阈值回测摘要</h2><div class="hint">基准买入持有 +20.13%</div></div>
+        <table>
+          <thead><tr><th>规则</th><th>收益</th><th>动作数</th><th>Round Trip</th><th>评价</th></tr></thead>
+          <tbody>
+            <tr><td>≤ 20 买 / ≥ 80 卖</td><td class=''>+6.80%</td><td>1</td><td>0</td><td>一般/偏弱</td></tr><tr><td>≤ 25 买 / ≥ 75 卖</td><td class=''>-12.69%</td><td>2</td><td>1</td><td>一般/偏弱</td></tr><tr><td>≤ 30 买 / ≥ 70 卖</td><td class=''>-2.31%</td><td>3</td><td>1</td><td>一般/偏弱</td></tr><tr><td>≤ 35 买 / ≥ 65 卖</td><td class='good'>+43.87%</td><td>11</td><td>5</td><td>优于买入持有</td></tr><tr><td>≤ 40 买 / ≥ 60 卖</td><td class='good'>+41.06%</td><td>30</td><td>15</td><td>优于买入持有</td></tr><tr><td>≤ 45 买 / ≥ 55 卖</td><td class=''>-12.51%</td><td>106</td><td>53</td><td>一般/偏弱</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="panel">
+        <div class="title-row"><h2>10日后表现分桶</h2><div class="hint">看低分和高分后的差异</div></div>
+        <table>
+          <thead><tr><th>分数区间</th><th>样本数</th><th>未来10日均值</th></tr></thead>
+          <tbody><tr><td>0_20</td><td>1</td><td>-4.14%</td></tr><tr><td>20_35</td><td>26</td><td>-0.47%</td></tr><tr><td>35_65</td><td>890</td><td>+0.43%</td></tr><tr><td>65_80</td><td>29</td><td>-1.89%</td></tr><tr><td>80_100</td><td>2</td><td>-10.86%</td></tr></tbody>
+        </table>
+      </section>
+    </div>
+
+    <section class="panel" style="margin-top:14px;">
+      <div class="title-row"><h2>最近 10 个交易日</h2><div class="hint">看短期温度有没有快速变化</div></div>
+      <table>
+        <thead><tr><th>日期</th><th>HSTECH</th><th>总分</th><th>恐惧快层</th><th>贪婪快层</th><th>状态</th></tr></thead>
+        <tbody><tr><td>2026-04-27</td><td>4827.19</td><td class='mid'>60.75</td><td>54.83</td><td>66.67</td><td>中性震荡</td></tr><tr><td>2026-04-28</td><td>4910.02</td><td class='mid'>59.84</td><td>49.47</td><td>70.21</td><td>中性震荡</td></tr><tr><td>2026-04-29</td><td>4871.32</td><td class='mid'>54.78</td><td>53.31</td><td>56.25</td><td>中性震荡</td></tr><tr><td>2026-05-03</td><td>4976.70</td><td class='mid'>53.75</td><td>33.75</td><td>73.75</td><td>中性震荡</td></tr><tr><td>2026-05-04</td><td>4929.68</td><td class='mid'>51.52</td><td>48.04</td><td>55.00</td><td>中性震荡</td></tr><tr><td>2026-05-05</td><td>4969.20</td><td class='mid'>55.21</td><td>46.87</td><td>63.54</td><td>中性震荡</td></tr><tr><td>2026-05-06</td><td>5121.10</td><td class='mid'>58.89</td><td>31.96</td><td>85.83</td><td>中性震荡</td></tr><tr><td>2026-05-07</td><td>5102.79</td><td class='mid'>62.63</td><td>32.34</td><td>92.92</td><td>中性震荡</td></tr><tr><td>2026-05-10</td><td>5106.40</td><td class='mid'>52.81</td><td>18.33</td><td>87.29</td><td>中性震荡</td></tr><tr><td>2026-05-11</td><td>5104.89</td><td class='mid'>43.27</td><td>21.55</td><td>65.00</td><td>中性震荡</td></tr></tbody>
+      </table>
+    </section>
+
+    <section class="panel" style="margin-top:14px;">
+      <div class="title-row"><h2>最佳阈值最近交易记录</h2><div class="hint">当前采用 35/65 观察最顺手</div></div>
+      <table>
+        <thead><tr><th>日期</th><th>动作</th><th>分数</th><th>HSTECH</th></tr></thead>
+        <tbody><tr><td>2022-07-03</td><td>BUY</td><td>34.38</td><td>4884.18</td></tr><tr><td>2022-07-17</td><td>SELL</td><td>70.15</td><td>4574.40</td></tr><tr><td>2022-10-10</td><td>BUY</td><td>34.28</td><td>3278.24</td></tr><tr><td>2023-02-01</td><td>SELL</td><td>69.59</td><td>4696.55</td></tr><tr><td>2023-04-05</td><td>BUY</td><td>31.56</td><td>4237.63</td></tr><tr><td>2023-12-27</td><td>SELL</td><td>67.40</td><td>3763.90</td></tr><tr><td>2024-01-29</td><td>BUY</td><td>31.00</td><td>3098.87</td></tr><tr><td>2024-04-22</td><td>SELL</td><td>66.90</td><td>3449.10</td></tr><tr><td>2024-10-15</td><td>BUY</td><td>32.05</td><td>4402.37</td></tr><tr><td>2025-06-23</td><td>SELL</td><td>67.37</td><td>5297.96</td></tr><tr><td>2025-07-27</td><td>BUY</td><td>34.27</td><td>5664.02</td></tr></tbody>
+      </table>
+    </section>
+  </div>
+</body>
+</html>
