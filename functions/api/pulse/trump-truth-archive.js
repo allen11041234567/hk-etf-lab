@@ -249,8 +249,7 @@ export async function onRequestGet(context) {
     const avatarUrl = `${url.origin}/assets/home/trump-home.jpg`;
     const mergedPosts = enrichFromArchive(posts, avatarUrl, url.origin);
     const dedupedPosts = dedupePosts(mergedPosts);
-    const cleanedPosts = dropPlaceholderPosts(dedupedPosts);
-    const finalPosts = keepLatestPosts(cleanedPosts);
+    const finalPosts = keepLatestPosts(dedupedPosts);
     const body = JSON.stringify({
       ok: true,
       fetchedAt: new Date().toISOString(),
