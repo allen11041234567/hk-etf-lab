@@ -3,8 +3,7 @@ import { TRUMP_TRANSLATION_CACHE } from './trump-translation-cache.js';
 const SOURCE_URL = 'https://www.trumpstruth.org/?sort=desc&per_page=80&removed=include';
 const CACHE_SECONDS = 120;
 const STALE_SECONDS = 600;
-const RECENT_HOURS = 48;
-const MAX_POSTS = 80;
+const MAX_POSTS = 20;
 const BAD_TRANSLATION_PATTERNS = [
   '无法访问',
   '無法存取',
@@ -207,18 +206,6 @@ function dedupePosts(posts) {
   return deduped;
 }
 
-function hasVideoMedia(post) {
-  return Array.isArray(post?.media) && post.media.some((item) => {
-    const type = String(item?.type || '').toLowerCase();
-    const mediaUrl = String(item?.url || '');
-    return type.includes('video') || /\.(mp4|mov|webm)(\?|$)/i.test(mediaUrl);
-  });
-}
-
-function dropVideoPosts(posts) {
-  return (posts || []).filter((post) => !hasVideoMedia(post));
-}
-
 function isPlaceholderPost(post) {
   const content = String(post?.content || '').trim();
   const zh = String(post?.content_zh_cn || '').trim();
@@ -231,14 +218,8 @@ function dropPlaceholderPosts(posts) {
   return (posts || []).filter((post) => !isPlaceholderPost(post));
 }
 
-function keepRecentPosts(posts, hours = RECENT_HOURS) {
-  const cutoff = Date.now() - hours * 60 * 60 * 1000;
-  const recent = (posts || []).filter((post) => {
-    const ts = post.created_at ? new Date(post.created_at).getTime() : NaN;
-    return Number.isFinite(ts) && ts >= cutoff;
-  });
-  if (recent.length) return recent.slice(0, MAX_POSTS);
-  return (posts || []).slice(0, Math.min(MAX_POSTS, 20));
+function keepLatestPosts(posts) {
+  return (posts || []).slice(0, MAX_POSTS);
 }
 
 export async function onRequestGet(context) {
@@ -268,15 +249,14 @@ export async function onRequestGet(context) {
     const avatarUrl = `${url.origin}/assets/home/trump-home.jpg`;
     const mergedPosts = enrichFromArchive(posts, avatarUrl, url.origin);
     const dedupedPosts = dedupePosts(mergedPosts);
-    const noVideoPosts = dropVideoPosts(dedupedPosts);
-    const cleanedPosts = dropPlaceholderPosts(noVideoPosts);
-    const finalPosts = keepRecentPosts(cleanedPosts);
+    const cleanedPosts = dropPlaceholderPosts(dedupedPosts);
+    const finalPosts = keepLatestPosts(cleanedPosts);
     const body = JSON.stringify({
       ok: true,
       fetchedAt: new Date().toISOString(),
       count: finalPosts.length,
       source: 'trumpstruth.org',
-      windowHours: RECENT_HOURS,
+      latestCount: MAX_POSTS,
       posts: finalPosts,
     });
 
