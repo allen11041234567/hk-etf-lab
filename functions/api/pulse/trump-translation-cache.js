@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116580615618774330": {
+    "content_zh_cn": "释放TINA！",
+    "content_zh_hk": "釋放TINA！",
+    "content_ko": "티나를 석방하라!"
+  },
   "https://truthsocial.com/@realDonaldTrump/116579282279382399": {
     "content_zh_cn": "亨利·克莱与美国实力的构建：https://www.washingtontimes.com/news/2026/apr/14/henry-clay-architecture-american-strength/",
     "content_zh_hk": "亨利·克萊與美國實力的構建：https://www.washingtontimes.com/news/2026/apr/14/henry-clay-architecture-american-strength/",
