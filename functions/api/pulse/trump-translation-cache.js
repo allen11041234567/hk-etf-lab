@@ -1,4 +1,19 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116586355498518168": {
+    "content_zh_cn": "https://x.com/lauraloomer/status/2055609922935496847?s=42",
+    "content_zh_hk": "https://x.com/lauraloomer/status/2055609922935496847?s=42",
+    "content_ko": "https://x.com/lauraloomer/status/2055609922935496847?s=42"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116586354590478390": {
+    "content_zh_cn": "https://x.com/lauraloomer/status/2054317665624129800?s=42",
+    "content_zh_hk": "https://x.com/lauraloomer/status/2054317665624129800?s=42",
+    "content_ko": "https://x.com/lauraloomer/status/2054317665624129800?s=42"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116586353731791213": {
+    "content_zh_cn": "https://www.foxnews.com/politics/massies-ex-girlfriend-alleges-he-arranged-her-capitol-hill-job-offered-5000-drop-termination-suit/",
+    "content_zh_hk": "https://www.foxnews.com/politics/massies-ex-girlfriend-alleges-he-arranged-her-capitol-hill-job-offered-5000-drop-termination-suit/",
+    "content_ko": "https://www.foxnews.com/politics/massies-ex-girlfriend-alleges-he-arranged-her-capitol-hill-job-offered-5000-drop-termination-suit/"
+  },
   "https://truthsocial.com/@realDonaldTrump/116585319912915479": {
     "content_zh_cn": "能与一位受各方尊敬的领导人同在，深感荣幸！\n——总统 唐纳德·J·特朗普",
     "content_zh_hk": "能與一位受各方尊敬的領袖同在，深感榮幸！\n——總統 唐納德·J·特朗普",
