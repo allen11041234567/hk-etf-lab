@@ -1,4 +1,19 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116584141254236893": {
+    "content_zh_cn": "Judicial Watch提起诉讼，要求公开一笔向与斯泰西·艾布拉姆斯有关联的非营利组织提供20亿美元拨款的相关记录：https://justthenews.com/government/courts-law/judicial-watch-files-lawsuit-seeking-records-2-billion-grant-nonprofit-tied",
+    "content_zh_hk": "Judicial Watch提出訴訟，要求公開一筆向與史黛西·艾布拉姆斯有關聯的非牟利組織提供20億美元撥款的相關紀錄：https://justthenews.com/government/courts-law/judicial-watch-files-lawsuit-seeking-records-2-billion-grant-nonprofit-tied",
+    "content_ko": "Judicial Watch가 스테이시 에이브럼스와 연계된 비영리단체에 대한 20억 달러 보조금 관련 기록 공개를 요구하는 소송을 제기했다: https://justthenews.com/government/courts-law/judicial-watch-files-lawsuit-seeking-records-2-billion-grant-nonprofit-tied"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116584133846676301": {
+    "content_zh_cn": "《欺诈之下的国家》：特朗普政府揭露大规模福利与公民身份滥用行为：https://justthenews.com/accountability/waste-fraud-and-abuse/one-nation-under-fraud-trump-admin-uncovers-mass-welfare",
+    "content_zh_hk": "《欺詐之下的國家》：特朗普政府揭露大規模福利及公民身份濫用行為：https://justthenews.com/accountability/waste-fraud-and-abuse/one-nation-under-fraud-trump-admin-uncovers-mass-welfare",
+    "content_ko": "사기 아래의 하나의 국가: 트럼프 행정부, 대규모 복지 및 시민권 남용 적발: https://justthenews.com/accountability/waste-fraud-and-abuse/one-nation-under-fraud-trump-admin-uncovers-mass-welfare"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116584131846427272": {
+    "content_zh_cn": "“拜登治下的FBI”在特朗普卸任后，秘密布局推动对其提起刑事指控，‘Arctic Frost’备忘录显示：https://justthenews.com/government/courts-law/fbi-and-jack-smith-prosecutor-sought-hold-anti-trump-evidence-until-he-left",
+    "content_zh_hk": "「拜登治下的FBI」在特朗普離任後，秘密佈局推動對其提出刑事起訴，『Arctic Frost』備忘錄顯示：https://justthenews.com/government/courts-law/fbi-and-jack-smith-prosecutor-sought-hold-anti-trump-evidence-until-he-left",
+    "content_ko": "바이든 치하의 FBI가 트럼프가 퇴임한 뒤 그를 기소하도록 비밀리에 판을 짰다는 정황이 ‘Arctic Frost’ 메모에서 드러났습니다: https://justthenews.com/government/courts-law/fbi-and-jack-smith-prosecutor-sought-hold-anti-trump-evidence-until-he-left"
+  },
   "https://truthsocial.com/@realDonaldTrump/116582139808210458": {
     "content_zh_cn": "今晚，在我的指示下，英勇的美国部队与尼日利亚武装部队无懈可击地执行了一项经过周密策划、且极其复杂的任务，将全球最活跃的恐怖分子从战场上清除。ISIS全球二号人物阿布-比拉勒·阿尔-米努基原以为自己可以藏身非洲，但他不知道的是，我们掌握着消息来源，持续掌握他的一举一动。他将不再恐吓非洲人民，也无法再协助策划针对美国人的行动。随着他的被清除，ISIS的全球行动能力已被大幅削弱。感谢尼日利亚政府在此次行动中的合作。上帝保佑美国！\n美国总统 唐纳德·J·特朗普",
     "content_zh_hk": "今晚，在我的指示下，英勇的美國部隊與尼日利亞武裝部隊完美執行了一項經過周密策劃、且極其複雜的任務，將全球最活躍的恐怖分子從戰場上清除。ISIS全球二號人物阿布-比拉勒·阿爾-米努基原以為自己可以藏身非洲，但他不知道的是，我們掌握消息來源，持續掌握他的一舉一動。他將不再恐嚇非洲人民，也無法再協助策劃針對美國人的行動。隨着他的被清除，ISIS的全球行動能力已被大幅削弱。感謝尼日利亞政府在此次行動中的合作。上帝保佑美國！\n美國總統 唐納德·J·特朗普",
