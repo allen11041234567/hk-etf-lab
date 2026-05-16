@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116584165982667871": {
+    "content_zh_cn": "约翰·所罗门深度解析有关詹姆斯·科米的一项重磅披露：https://justthenews.com/podcasts/john-solomon-reports/john-solomon-unpacks-bombshell-revelation-about-james-comey",
+    "content_zh_hk": "約翰·所羅門深入剖析有關占士·科米的一項重磅披露：https://justthenews.com/podcasts/john-solomon-reports/john-solomon-unpacks-bombshell-revelation-about-james-comey",
+    "content_ko": "존 솔로몬이 제임스 코미에 관한 충격적인 폭로를 심층 해설합니다: https://justthenews.com/podcasts/john-solomon-reports/john-solomon-unpacks-bombshell-revelation-about-james-comey"
+  },
   "https://truthsocial.com/@realDonaldTrump/116584141254236893": {
     "content_zh_cn": "Judicial Watch提起诉讼，要求公开一笔向与斯泰西·艾布拉姆斯有关联的非营利组织提供20亿美元拨款的相关记录：https://justthenews.com/government/courts-law/judicial-watch-files-lawsuit-seeking-records-2-billion-grant-nonprofit-tied",
     "content_zh_hk": "Judicial Watch提出訴訟，要求公開一筆向與史黛西·艾布拉姆斯有關聯的非牟利組織提供20億美元撥款的相關紀錄：https://justthenews.com/government/courts-law/judicial-watch-files-lawsuit-seeking-records-2-billion-grant-nonprofit-tied",
