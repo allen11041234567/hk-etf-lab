@@ -1,4 +1,14 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116584295494641153": {
+    "content_zh_cn": "众议院司法委员会主席在一份重磅报告发布后，敦促司法部永久撤销针对特朗普的所有案件：https://justthenews.com/accountability/political-ethics/house-judiciary-chairman-urges-doj-permanently-dismiss-all-trump",
+    "content_zh_hk": "眾議院司法委員會主席在一份重磅報告發布後，敦促司法部永久撤銷針對特朗普的所有案件：https://justthenews.com/accountability/political-ethics/house-judiciary-chairman-urges-doj-permanently-dismiss-all-trump",
+    "content_ko": "하원 법사위원장이 충격적인 보고서 공개 이후 법무부에 트럼프 관련 모든 사건을 영구 기각할 것을 촉구: https://justthenews.com/accountability/political-ethics/house-judiciary-chairman-urges-doj-permanently-dismiss-all-trump"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116584293530067315": {
+    "content_zh_cn": "共和党人在重新划区竞赛中已占据领先，而且这一优势还将进一步扩大：https://justthenews.com/politics-policy/wkdrepublicans-have-lead-redistricting-race-its-about-get-bigger",
+    "content_zh_hk": "共和黨人在重新劃區競賽中已佔據領先，而且這一優勢還將進一步擴大：https://justthenews.com/politics-policy/wkdrepublicans-have-lead-redistricting-race-its-about-get-bigger",
+    "content_ko": "공화당이 선거구 재조정 경쟁에서 우위를 점하고 있으며, 그 격차는 더 커질 전망입니다: https://justthenews.com/politics-policy/wkdrepublicans-have-lead-redistricting-race-its-about-get-bigger"
+  },
   "https://truthsocial.com/@realDonaldTrump/116584165982667871": {
     "content_zh_cn": "约翰·所罗门深度解析有关詹姆斯·科米的一项重磅披露：https://justthenews.com/podcasts/john-solomon-reports/john-solomon-unpacks-bombshell-revelation-about-james-comey",
     "content_zh_hk": "約翰·所羅門深入剖析有關占士·科米的一項重磅披露：https://justthenews.com/podcasts/john-solomon-reports/john-solomon-unpacks-bombshell-revelation-about-james-comey",
