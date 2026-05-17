@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116587963981678416": {
+    "content_zh_cn": "Julia今晚的胜选演讲非常精彩！！！\n——总统DJT\nhttps://www.youtube.com/watch?v=299wWZKTdus",
+    "content_zh_hk": "Julia今晚的勝選演講非常精彩！！！\n——總統DJT\nhttps://www.youtube.com/watch?v=299wWZKTdus",
+    "content_ko": "오늘 밤 Julia의 승리 연설은 정말 훌륭했습니다!!!\n— 대통령 DJT\nhttps://www.youtube.com/watch?v=299wWZKTdus"
+  },
   "https://truthsocial.com/@realDonaldTrump/116587648609362496": {
     "content_zh_cn": "比尔·卡西迪在其从政生涯中虚假利用他与我的“关系”，并借此赢得选举，随后却以荒谬至极的指控投票支持弹劾我——这些指控当时是假的，现在看更是疯狂到近乎犯罪！\n\n他对那个让他当选的人如此不忠，如今已成为传奇的一部分，而看到他的政治生涯彻底结束，真是令人欣慰！\n\n我要感谢路易斯安那州伟大的人民，这场重大胜利只会让我更加努力，为你们的成功，以及随之而来的一切而奋斗。\n\n我爱你们所有人。让美国再次伟大！\n\n总统 唐纳德·J·特朗普",
     "content_zh_hk": "比爾·卡西迪在其從政生涯中虛假利用他與我的「關係」，並藉此贏得選舉，隨後卻以荒謬至極的指控投票支持彈劾我——這些指控當時是假的，現在看更是瘋狂到近乎犯罪！\n\n他對那個讓他當選的人如此不忠，如今已成為傳奇的一部分，而看到他的政治生涯徹底結束，實在令人欣慰！\n\n我要感謝路易斯安那州偉大的人民，這場重大勝利只會讓我更加努力，為你們的成功，以及隨之而來的一切而奮鬥。\n\n我愛你們所有人。讓美國再次偉大！\n\n總統 唐納德·J·特朗普",
