@@ -17,6 +17,13 @@
     .subtitle { margin-top:8px; color:var(--muted); font-size:15px; line-height:1.6; }
     .meta { display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
     .pill { border:1px solid var(--line); background:rgba(255,255,255,0.78); color:var(--muted); border-radius:999px; padding:8px 12px; font-size:13px; backdrop-filter:blur(10px); }
+    .live-pill{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(22,163,74,.18);background:rgba(240,253,244,.95);color:#166534;border-radius:999px;padding:8px 12px;font-size:13px;font-weight:800;box-shadow:0 10px 24px rgba(22,163,74,.08)}
+    .live-dot{width:9px;height:9px;border-radius:999px;background:#16a34a;box-shadow:0 0 0 6px rgba(34,197,94,.12)}
+    .live-board{margin:0 0 18px;padding:14px 16px;border:1px solid rgba(22,163,74,.14);border-radius:20px;background:linear-gradient(180deg,rgba(240,253,244,.96),rgba(255,255,255,.96));box-shadow:var(--shadow)}
+    .live-board-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .live-board-title{font-size:14px;font-weight:800;color:#166534}
+    .live-board-sub{margin-top:6px;font-size:13px;line-height:1.7;color:#475569}
+    .live-board-time{font-size:13px;font-weight:800;color:#166534}
     .quick-strip{margin:0 0 18px;padding:14px 16px;border:1px solid rgba(255,255,255,.7);border-radius:22px;background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(247,250,255,.96));box-shadow:var(--shadow)}
     .quick-item{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid rgba(15,23,42,.08)}
     .quick-item:last-child{border-bottom:none;padding-bottom:0}
@@ -58,7 +65,11 @@
     .community-link:hover{background:linear-gradient(180deg,#ff8a3d 0%,#f36f21 100%);transform:none}
     .price { font-size:clamp(38px,5vw,60px); font-weight:800; letter-spacing:-0.04em; margin:10px 0 6px; }
     .change { display:flex; flex-wrap:wrap; gap:12px; align-items:center; font-size:17px; font-weight:700; margin-bottom:8px; }
-    .market-phase{margin-bottom:18px;font-size:12px;color:var(--muted);line-height:1.6}
+    .market-phase{margin-bottom:10px;font-size:12px;color:var(--muted);line-height:1.6}
+    .price-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 14px}
+    .price-refresh{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:#f0fdf4;border:1px solid rgba(22,163,74,.16);color:#166534;font-size:12px;font-weight:800}
+    .price-refresh .dot{width:7px;height:7px;border-radius:999px;background:#16a34a}
+    .price-refresh.secondary{background:#f8fafc;border-color:rgba(15,23,42,.08);color:#475569}
     .up { color:var(--up); } .down { color:var(--down); } .flat { color:var(--flat); }
     .mini-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:16px; }
     .stat { padding:14px 14px 12px; border:1px solid var(--line); border-radius:16px; background:rgba(248,250,252,0.8); }
@@ -113,6 +124,10 @@
       .subtitle { margin-top:6px; font-size:13px; line-height:1.58; }
       .meta { gap:6px; }
       .pill { padding:7px 10px; font-size:12px; }
+      .live-pill{font-size:12px;padding:7px 10px}
+      .live-board{margin-bottom:10px;padding:12px;border-radius:16px}
+      .live-board-title{font-size:13px}
+      .live-board-sub,.live-board-time{font-size:12px}
       .quick-strip{margin-bottom:10px;padding:12px 12px 10px;border-radius:18px}
       .quick-item{padding:8px 0;gap:10px}
       .quick-label{font-size:12px}
@@ -141,7 +156,9 @@
       .community-link{padding:10px 12px;font-size:12px;width:100%;justify-content:center;box-shadow:0 12px 24px rgba(243,111,33,.24),0 0 0 3px rgba(255,138,61,.10)}
       .price { font-size:34px; margin:8px 0 4px; }
       .change { font-size:13px; gap:6px; margin-bottom:4px; }
-      .market-phase{margin-bottom:10px;font-size:11px;}
+      .market-phase{margin-bottom:8px;font-size:11px;}
+      .price-meta{gap:6px;margin:0 0 10px}
+      .price-refresh{font-size:11px;padding:5px 8px}
       .mini-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin-top:10px; }
       .stat-label { font-size:11px; margin-bottom:4px; }
       .stat-value { font-size:15px; line-height:1.35; word-break:break-word; }
@@ -184,6 +201,16 @@
       <div class="meta">
         <div class="pill">无延时数据，跟踪韩股行情</div>
         <div class="pill">高频更新</div>
+        <div class="live-pill"><span class="live-dot"></span><span>盘中价格每15秒自动更新</span></div>
+      </div>
+    </section>
+    <section class="live-board" id="live-board">
+      <div class="live-board-top">
+        <div>
+          <div class="live-board-title">这是会自动更新的页面</div>
+          <div class="live-board-sub">盘中价格默认每 15 秒自动刷新一次，资金风向等较慢数据按小时级刷新。</div>
+        </div>
+        <div class="live-board-time" id="live-board-time">最近更新：--</div>
       </div>
     </section>
     <section class="quick-strip" id="quick-strip">
@@ -250,6 +277,7 @@
       <div class="code"></div>
       <div class="name-row"><div class="name"></div><div class="community-link" role="img" aria-label="群聊二维码入口"><img src="/assets/qr/group-chat-20260512.jpg" alt="群聊二维码" /><span>扫码加入群聊</span></div></div>
       <div class="price"></div>
+      <div class="price-meta"><span class="price-refresh"><span class="dot"></span><span class="refresh-text">每15秒自动更新</span></span><span class="price-refresh secondary last-update">最近更新：--</span></div>
       <div class="change"><span class="day-change"></span></div>
       <div class="market-phase"></div>
       <div class="mini-grid">
@@ -300,6 +328,7 @@
     const previousMap = new Map();
     const investorMap = new Map();
     const cardsEl = document.getElementById('cards');
+    let latestRefreshTs = null;
     const tpl = document.getElementById('card-template');
     const errorBox = document.getElementById('error-box');
     function fmtNumber(value){ return new Intl.NumberFormat('en-US').format(Math.round(value || 0)); }
@@ -371,6 +400,9 @@
       return `交易状态：${zhText(market)}`;
     }
     function getDirectionClass(value){ if(value > 0) return 'up'; if(value < 0) return 'down'; return 'flat'; }
+    function pad2(v){ return String(v).padStart(2,'0'); }
+    function formatBeijingTime(date){ const d = new Date(date.toLocaleString('en-US', { timeZone:'Asia/Shanghai' })); return `北京时间 ${pad2(d.getHours())}:${pad2(d.getMinutes())}:${pad2(d.getSeconds())}`; }
+    function updateLiveTime(ts){ latestRefreshTs = ts || new Date(); const text = `最近更新：${formatBeijingTime(latestRefreshTs)}`; const board = document.getElementById('live-board-time'); if(board) board.textContent = text; document.querySelectorAll('.last-update').forEach((el)=>{ el.textContent = text; }); }
     function chartUrl(code,type,range){ return `${CHART}?code=${encodeURIComponent(code)}&type=${encodeURIComponent(type)}&range=${encodeURIComponent(range)}`; }
     function updateChart(card, force=false){ const code=card.dataset.code,type=card.dataset.chartType||'area',range=card.dataset.chartRange||'day'; const img=card.querySelector('.chart-image'); const next=chartUrl(code,type,range); if(force || img.dataset.src!==next){ img.src=next; img.dataset.src=next; } img.alt=`${code} chart`; }
     function bindChartControls(card){ card.querySelectorAll('.chip').forEach((chip)=>{ chip.addEventListener('click',()=>{ const kind=chip.dataset.kind,value=chip.dataset.value; if(kind==='type'){ card.dataset.chartType=value; card.querySelectorAll('[data-kind="type"]').forEach((el)=>el.classList.toggle('active', el===chip)); } if(kind==='range'){ card.dataset.chartRange=value; card.querySelectorAll('[data-kind="range"]').forEach((el)=>el.classList.toggle('active', el===chip)); } updateChart(card, true); }); }); }
@@ -378,9 +410,9 @@
     function applyCardVisibility(targetCode){ document.querySelectorAll('.switch-btn').forEach((btn)=>btn.classList.toggle('active', btn.dataset.targetCode===targetCode)); document.querySelectorAll('#cards .card').forEach((card)=>{ card.style.display = card.dataset.code===targetCode ? '' : 'none'; }); }
     function renderMarketSummary(summary){ if(!summary) return; document.getElementById('summary-kospi').textContent = summary.kospi ? summary.kospi.price : '--'; document.getElementById('summary-kospi-d').textContent = summary.kospi ? fmtPctMaybe(summary.kospi.changePct) : '--'; document.getElementById('summary-kosdaq').textContent = summary.kosdaq ? summary.kosdaq.price : '--'; document.getElementById('summary-kosdaq-d').textContent = summary.kosdaq ? fmtPctMaybe(summary.kosdaq.changePct) : '--'; document.getElementById('summary-usdkrw').textContent = summary.usdkrw ? summary.usdkrw.value : '--'; document.getElementById('summary-usdkrw-d').textContent = summary.usdkrw ? `${mapUsdDirection(summary.usdkrw.direction)} ${summary.usdkrw.change}` : '--'; document.getElementById('summary-semi').textContent = summary.semiconductorTone || '--'; }
     function renderInvestor(snapshot){ investorMap.set(snapshot.code, snapshot); const card=ensureCard(snapshot.code); card.querySelector('.foreign-net').textContent = fmtShares(snapshot.foreignNetToday); card.querySelector('.institution-net').textContent = fmtShares(snapshot.institutionNetToday); card.querySelector('.foreign-rate').textContent = zhText(snapshot.foreignHoldingRate || '--'); card.querySelector('.foreign-rate-delta').textContent = snapshot.foreignHoldingRateDelta == null ? '' : ` （较昨日${snapshot.foreignHoldingRateDelta>0?'+':''}${snapshot.foreignHoldingRateDelta.toFixed(2)}pct）`; card.querySelector('.week52-position').textContent = zhText(snapshot.week52Position || '--'); card.querySelector('.volume-trend').textContent = zhText(snapshot.volumeTrend || '--'); card.querySelector('.foreign-trend').textContent = zhText(snapshot.foreign5dTrend || '--'); card.querySelector('.institution-trend').textContent = zhText(snapshot.institution5dTrend || '--'); card.querySelector('.trend-table').innerHTML = (snapshot.recentTrendRows||[]).map((row)=>`<div>${row.date}｜${zhText(row.pct || '--')}｜外资 ${zhText(row.foreignNet)}｜机构 ${zhText(row.institutionNet)}｜散户 ${zhText(row.retailNet)}</div>`).join('') || '--'; }
-    function renderQuote(quote){ const card=ensureCard(quote.code); previousMap.set(quote.code,quote); card.querySelector('.code').textContent=`${quote.code} · 韩股`; card.querySelector('.name').textContent=zhText(quote.name); const community=card.querySelector('.community-link'); community.innerHTML='<img src="/assets/qr/group-chat-20260512.jpg" alt="群聊二维码" /><span>扫码加入群聊</span>'; card.querySelector('.price').textContent=quote.unavailable?'加载失败':fmtNumber(quote.current); const dayEl=card.querySelector('.day-change'); dayEl.className=`day-change ${getDirectionClass(quote.dayChange)}`; dayEl.textContent=quote.unavailable?'数据暂不可用':`当日涨跌 ${fmtSigned(quote.dayChange)} · ${fmtPct(quote.dayChangePercent)}`; const phaseText = quote.unavailable?'交易状态：--':marketPhaseText(quote.market, quote.localTradedAt); card.querySelector('.market-phase').textContent=phaseText; card.querySelector('.open').textContent=fmtNumber(quote.open); card.querySelector('.previous-close').textContent=fmtNumber(quote.previousClose); card.querySelector('.high').textContent=fmtNumber(quote.high); card.querySelector('.low').textContent=fmtNumber(quote.low); card.querySelector('.value').textContent=fmtKrwMillion(quote.value); card.querySelector('.week52-range').textContent=`${zhText(quote.week52High || '--')} / ${zhText(quote.week52Low || '--')}`; card.querySelector('.per-eps').textContent=`${zhText(quote.per || '--')} / ${zhText(quote.eps || '--')}`; card.querySelector('.pbr-bps').textContent=`${zhText(quote.pbr || '--')} / ${zhText(quote.bps || '--')}`; const quickEl = quote.code === '000660' ? document.getElementById('quick-hynix') : (quote.code === '005930' ? document.getElementById('quick-samsung') : null); if (quickEl) { quickEl.className = `quick-value ${getDirectionClass(quote.dayChange)}`; if(phaseText === '交易状态：开盘前' && Number(quote.dayChangePercent || 0) === 0){ quickEl.className = 'quick-value flat'; } quickEl.textContent = quote.unavailable ? '--' : fmtPct(quote.dayChangePercent); } updateChart(card, !card.dataset.initialized); card.dataset.initialized='1'; const investor = investorMap.get(quote.code); if(investor) renderInvestor(investor); }
+    function renderQuote(quote){ const card=ensureCard(quote.code); previousMap.set(quote.code,quote); card.querySelector('.code').textContent=`${quote.code} · 韩股`; card.querySelector('.name').textContent=zhText(quote.name); const community=card.querySelector('.community-link'); community.innerHTML='<img src="/assets/qr/group-chat-20260512.jpg" alt="群聊二维码" /><span>扫码加入群聊</span>'; card.querySelector('.price').textContent=quote.unavailable?'加载失败':fmtNumber(quote.current); const dayEl=card.querySelector('.day-change'); dayEl.className=`day-change ${getDirectionClass(quote.dayChange)}`; dayEl.textContent=quote.unavailable?'数据暂不可用':`当日涨跌 ${fmtSigned(quote.dayChange)} · ${fmtPct(quote.dayChangePercent)}`; const phaseText = quote.unavailable?'交易状态：--':marketPhaseText(quote.market, quote.localTradedAt); card.querySelector('.market-phase').textContent=phaseText; card.querySelector('.open').textContent=fmtNumber(quote.open); card.querySelector('.previous-close').textContent=fmtNumber(quote.previousClose); card.querySelector('.high').textContent=fmtNumber(quote.high); card.querySelector('.low').textContent=fmtNumber(quote.low); card.querySelector('.value').textContent=fmtKrwMillion(quote.value); card.querySelector('.week52-range').textContent=`${zhText(quote.week52High || '--')} / ${zhText(quote.week52Low || '--')}`; card.querySelector('.per-eps').textContent=`${zhText(quote.per || '--')} / ${zhText(quote.eps || '--')}`; card.querySelector('.pbr-bps').textContent=`${zhText(quote.pbr || '--')} / ${zhText(quote.bps || '--')}`; const quickEl = quote.code === '000660' ? document.getElementById('quick-hynix') : (quote.code === '005930' ? document.getElementById('quick-samsung') : null); if (quickEl) { quickEl.className = `quick-value ${getDirectionClass(quote.dayChange)}`; if(phaseText === '交易状态：开盘前' && Number(quote.dayChangePercent || 0) === 0){ quickEl.className = 'quick-value flat'; } quickEl.textContent = quote.unavailable ? '--' : fmtPct(quote.dayChangePercent); } card.querySelector('.refresh-text').textContent = '每15秒自动更新'; updateChart(card, !card.dataset.initialized); card.dataset.initialized='1'; const investor = investorMap.get(quote.code); if(investor) renderInvestor(investor); }
     async function refreshInvestor(){ try{ const resp=await fetch(INVESTOR_FEED,{cache:'no-store'}); if(!resp.ok) throw new Error(`HTTP ${resp.status}`); const data=await resp.json(); if(!data.ok) throw new Error(data.error||'unknown error'); renderMarketSummary(data.marketSummary); for(const snapshot of data.snapshots||[]) renderInvestor(snapshot); }catch(error){ console.error('investor refresh failed', error); } }
-    async function refresh(){ if(document.hidden) return; try{ const resp=await fetch(FEED,{cache:'no-store'}); if(!resp.ok) throw new Error(`HTTP ${resp.status}`); const data=await resp.json(); if(!data.ok) throw new Error(data.error||'unknown error'); errorBox.style.display='none'; for(const quote of data.quotes) renderQuote(quote); }catch(error){ errorBox.textContent='当前数据更新稍慢，请稍后刷新重试'; errorBox.style.display='block'; } }
+    async function refresh(){ if(document.hidden) return; try{ const resp=await fetch(FEED,{cache:'no-store'}); if(!resp.ok) throw new Error(`HTTP ${resp.status}`); const data=await resp.json(); if(!data.ok) throw new Error(data.error||'unknown error'); errorBox.style.display='none'; for(const quote of data.quotes) renderQuote(quote); updateLiveTime(new Date()); }catch(error){ errorBox.textContent='当前数据更新稍慢，请稍后刷新重试'; errorBox.style.display='block'; } }
     document.querySelectorAll('.switch-btn').forEach((btn)=>btn.addEventListener('click',()=>applyCardVisibility(btn.dataset.targetCode)));
     document.addEventListener('visibilitychange',()=>{ if(!document.hidden) { refresh(); refreshInvestor(); } });
     refresh(); refreshInvestor(); setInterval(refresh, REFRESH_MS); setInterval(refreshInvestor, INVESTOR_REFRESH_MS); setTimeout(()=>applyCardVisibility('000660'), 0);
