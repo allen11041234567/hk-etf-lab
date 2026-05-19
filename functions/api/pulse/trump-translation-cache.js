@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116598739883570394": {
+    "content_zh_cn": "感谢伟大的爱国者萨莱娜·齐托撰写这篇精彩文章！总统 唐纳德·J·特朗普\nhttps://www.washingtonexaminer.com/opinion/4556928/experts-miss-trumps-enduring-presence-in-american-politics-in-indiana-races/",
+    "content_zh_hk": "感謝偉大的愛國者薩萊娜·齊托撰寫這篇精彩文章！總統 唐納德·J·特朗普\nhttps://www.washingtonexaminer.com/opinion/4556928/experts-miss-trumps-enduring-presence-in-american-politics-in-indiana-races/",
+    "content_ko": "훌륭한 애국자 살레나 지토의 이 멋진 기사에 감사드립니다! 도널드 J. 트럼프 대통령\nhttps://www.washingtonexaminer.com/opinion/4556928/experts-miss-trumps-enduring-presence-in-american-politics-in-indiana-races/"
+  },
   "https://truthsocial.com/@realDonaldTrump/116598566704332049": {
     "content_zh_cn": "在倒影池进行小范围水域测试，眺望林肯纪念堂！\n总统 唐纳德·J·特朗普",
     "content_zh_hk": "在倒影池進行小範圍水域測試，眺望林肯紀念堂！\n總統 唐納德·J·特朗普",
