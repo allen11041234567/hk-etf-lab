@@ -9,6 +9,7 @@
     :root{--bg:#f3f6fb;--panel:#ffffff;--soft:#f8fbff;--text:#0f172a;--muted:#64748b;--line:#dbe3ef;--brand:#1d4ed8;--brand2:#0f766e;--shadow:0 18px 42px rgba(15,23,42,.08)}
     *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;background:linear-gradient(180deg,#f8fbff 0%,#eef3f9 100%);color:var(--text)}
     a{color:inherit} .wrap{max-width:1220px;margin:0 auto;padding:28px 16px 46px}
+    .topnav{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}.navchip{display:inline-block;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.92);border:1px solid var(--line);font-size:13px;color:#374151;text-decoration:none}.navchip.active{background:#0f172a;color:#fff;border-color:#0f172a;box-shadow:0 10px 24px rgba(15,23,42,.14)}
     .hero,.panel{background:var(--panel);border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow)}
     .hero{padding:26px 24px;margin-bottom:16px;background:linear-gradient(135deg,#0f2341 0%,#173a68 60%,#225ea2 100%);color:#fff;border:none}
     .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.12);font-size:12px;font-weight:700}
@@ -42,11 +43,20 @@
     .footer-note{margin-top:14px;font-size:13px;color:var(--muted);line-height:1.75}
     @media (max-width:960px){.hero-grid,.grid,.group-grid{grid-template-columns:1fr}.deep-grid,.etf-grid{grid-template-columns:1fr}h1{font-size:31px}}
     @media (max-width:700px){.news-item{grid-template-columns:88px 1fr;gap:8px}}
-    @media (max-width:620px){.wrap{padding:14px 12px 28px}.hero,.panel{border-radius:20px}.hero{padding:20px 16px}.panel{padding:16px}.hero-kpis{grid-template-columns:1fr 1fr;gap:8px}.kpi{padding:10px 10px 9px}.kpi-v{font-size:17px}h1{font-size:26px}.sub{font-size:14px}.section-title{font-size:22px}.news-item{grid-template-columns:84px 1fr;gap:8px}}
+    @media (max-width:620px){.wrap{padding:14px 12px 28px}.topnav{gap:8px;margin-bottom:10px}.navchip{font-size:12px;padding:7px 10px}.hero,.panel{border-radius:20px}.hero{padding:20px 16px}.panel{padding:16px}.hero-kpis{grid-template-columns:1fr 1fr;gap:8px}.kpi{padding:10px 10px 9px}.kpi-v{font-size:17px}h1{font-size:26px}.sub{font-size:14px}.section-title{font-size:22px}.news-item{grid-template-columns:84px 1fr;gap:8px}}
   </style>
 </head>
 <body>
   <div class='wrap'>
+    <div class='topnav'>
+      <a class='navchip' href='../index.html'>⌂ 首页</a>
+      <a class='navchip' href='../daily/morning-report.html'>✦ 今晨晨报</a>
+      <a class='navchip' href='../korea-tech-briefing.html'>◉ 韩股科技</a>
+      <a class='navchip active' href='./'>◎ 韩国专题</a>
+      <a class='navchip' href='../trump-truth-archive.html'>☉ Trump动态</a>
+      <a class='navchip' href='../../arena/ai-analysts.html'>▣ AI擂台</a>
+      <a class='navchip' href='../../logbias/pool-state.html'>◌ 强弱状态</a>
+    </div>
     <section class='hero'>
       <div class='hero-grid'>
         <div>

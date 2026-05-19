@@ -12,6 +12,7 @@
     .wrap { width:min(1180px,calc(100vw - 32px)); margin:0 auto; padding:28px 0 40px; }
     .topnav{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
     .navchip{display:inline-block;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.88);border:1px solid var(--line);font-size:13px;color:#374151;text-decoration:none}
+    .navchip.active{background:#14213d;color:#fff;border-color:#14213d;box-shadow:0 10px 24px rgba(20,33,61,.14)}
     .hero { display:flex; flex-wrap:wrap; gap:14px; align-items:flex-end; justify-content:space-between; margin-bottom:18px; }
     .title { font-size:clamp(28px,4vw,42px); font-weight:800; letter-spacing:-0.02em; margin:0; }
     .subtitle { margin-top:8px; color:var(--muted); font-size:15px; line-height:1.6; }
@@ -190,8 +191,12 @@
   <div class="wrap">
     <div class="topnav">
       <a class="navchip" href="../index.html">⌂ 首页</a>
-      <a class="navchip" href="./trump-truth-archive.html">◉ Trump 动态</a>
       <a class="navchip" href="../daily/morning-report.html">✦ 今晨晨报</a>
+      <a class="navchip active" href="./korea-tech-briefing.html">◉ 韩股科技</a>
+      <a class="navchip" href="./korea-client/">◎ 韩国专题</a>
+      <a class="navchip" href="./trump-truth-archive.html">☉ Trump动态</a>
+      <a class="navchip" href="../arena/ai-analysts.html">▣ AI擂台</a>
+      <a class="navchip" href="../logbias/pool-state.html">◌ 强弱状态</a>
     </div>
     <section class="hero">
       <div>
