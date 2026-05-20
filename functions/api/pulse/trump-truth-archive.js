@@ -1,6 +1,7 @@
 import { TRUMP_TRANSLATION_CACHE } from './trump-translation-cache.js';
 
-const SOURCE_URL = 'https://ix.cnn.io/data/truth-social/truth_archive.json';
+const CNN_SOURCE_URL = 'https://ix.cnn.io/data/truth-social/truth_archive.json';
+const TRUMPSTRUTH_SOURCE_URL = 'https://www.trumpstruth.org/?sort=desc&per_page=120&removed=include';
 const CACHE_SECONDS = 120;
 const STALE_SECONDS = 600;
 const MAX_POSTS = 20;
@@ -99,6 +100,33 @@ function extractAttachments(chunk) {
   return deduped;
 }
 
+function extractPostsFromTrumpstruth(html) {
+  const statusesBlock = html.match(/<div class="statuses">([\s\S]*?)<div class="pagination controls__pagination">/i)?.[1] || html;
+  const chunks = statusesBlock.split(/<div class="status"\s+data-status-url=/i).slice(1);
+  return chunks.map((chunk) => {
+    const statusUrl = chunk.match(/^"([^"]+)"/)?.[1]?.trim() || null;
+    const permalink = chunk.match(/class="status-info__meta-item">([^<]+)<\/a>\s*<\/div>/i)?.[1]?.trim() || null;
+    const originalUrl = chunk.match(/href="(https:\/\/truthsocial\.com\/@realDonaldTrump\/[^"]+)"[^>]*class="status__external-link"/i)?.[1] || null;
+    const avatar = chunk.match(/<img src="([^"]+)"[^>]*class="status-info__avatar"/i)?.[1] || null;
+    const contentHtml = chunk.match(/<div class="status__body">([\s\S]*?)<\/div>/i)?.[1]
+      || chunk.match(/<div class="status__content">([\s\S]*?)<\/div>/i)?.[1]
+      || '';
+    const content = stripTags(contentHtml);
+    const createdAtText = permalink || null;
+    const createdAt = createdAtText ? new Date(createdAtText).toISOString() : null;
+    return {
+      status_url: statusUrl,
+      url: originalUrl,
+      avatar,
+      created_at: createdAt,
+      created_at_text: createdAtText,
+      content,
+      content_html: contentHtml,
+      media: extractAttachments(chunk),
+    };
+  }).filter((post) => post.content || post.url || (post.media && post.media.length));
+}
+
 function inferMediaType(url = '') {
   const raw = String(url || '').toLowerCase();
   if (/\.(mp4|mov|webm)(\?|$)/i.test(raw)) return 'video';
@@ -160,6 +188,23 @@ function encodeMediaId(url = '') {
 function proxyMedia(url, origin) {
   if (!url || !/^https?:\/\//i.test(url)) return url;
   return `${origin}/api/pulse/trump-media?id=${encodeMediaId(url)}`;
+}
+
+function mergeContentFromFallback(primaryPosts, fallbackPosts) {
+  const fallbackByUrl = new Map();
+  for (const post of fallbackPosts || []) {
+    if (post?.url && String(post.content || '').trim()) fallbackByUrl.set(post.url, post);
+  }
+  return (primaryPosts || []).map((post) => {
+    if (String(post?.content || '').trim()) return post;
+    const fb = fallbackByUrl.get(post?.url);
+    if (!fb) return post;
+    return {
+      ...post,
+      content: fb.content,
+      content_html: fb.content_html || fb.content,
+    };
+  });
 }
 
 function enrichFromArchive(posts, avatarUrl, origin) {
@@ -257,15 +302,31 @@ export async function onRequestGet(context) {
       return new Response(cached.body, { status: cached.status, headers: resHeaders });
     }
 
-    const upstream = await fetch(SOURCE_URL, {
+    const cnnUpstream = await fetch(CNN_SOURCE_URL, {
       headers: {
         'User-Agent': 'Mozilla/5.0 (compatible; HK-ETF-Lab/1.0; +https://hketf-lab.pages.dev/)',
         Accept: 'application/json,text/plain,*/*',
       },
     });
-    if (!upstream.ok) throw new Error(`upstream ${upstream.status}`);
-    const rawItems = await upstream.json();
-    const posts = normalizeCnnPosts(rawItems);
+    if (!cnnUpstream.ok) throw new Error(`cnn upstream ${cnnUpstream.status}`);
+    const rawItems = await cnnUpstream.json();
+    const cnnPosts = normalizeCnnPosts(rawItems);
+
+    let fallbackPosts = [];
+    try {
+      const tsUpstream = await fetch(TRUMPSTRUTH_SOURCE_URL, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (compatible; HK-ETF-Lab/1.0; +https://hketf-lab.pages.dev/)',
+          Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        },
+      });
+      if (tsUpstream.ok) {
+        const tsHtml = await tsUpstream.text();
+        fallbackPosts = extractPostsFromTrumpstruth(tsHtml);
+      }
+    } catch (_) {}
+
+    const posts = mergeContentFromFallback(cnnPosts, fallbackPosts);
     const avatarUrl = `${url.origin}/assets/home/trump-home.jpg`;
     const mergedPosts = enrichFromArchive(posts, avatarUrl, url.origin);
     const dedupedPosts = dedupePosts(mergedPosts);
