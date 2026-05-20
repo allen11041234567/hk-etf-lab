@@ -107,7 +107,9 @@ function extractPosts(html) {
     const permalink = chunk.match(/class="status-info__meta-item">([^<]+)<\/a>\s*<\/div>/i)?.[1]?.trim() || null;
     const originalUrl = chunk.match(/href="(https:\/\/truthsocial\.com\/@realDonaldTrump\/[^"]+)"[^>]*class="status__external-link"/i)?.[1] || null;
     const avatar = chunk.match(/<img src="([^"]+)"[^>]*class="status-info__avatar"/i)?.[1] || null;
-    const contentHtml = chunk.match(/<div class="status__content">([\s\S]*?)<\/div>/i)?.[1] || '';
+    const contentHtml = chunk.match(/<div class="status__body">([\s\S]*?)<\/div>/i)?.[1]
+      || chunk.match(/<div class="status__content">([\s\S]*?)<\/div>/i)?.[1]
+      || '';
     const content = stripTags(contentHtml);
     const createdAtText = permalink || null;
     const createdAt = createdAtText ? new Date(createdAtText).toISOString() : null;
@@ -218,6 +220,16 @@ function dropVideoPosts(posts) {
   return (posts || []).filter((post) => !hasVideoMedia(post));
 }
 
+function hasRenderableText(post) {
+  const raw = String(post?.content || '').trim();
+  const zh = String(post?.content_zh_cn || '').trim();
+  return !!(raw || zh) && !isUrlOnlyContent(raw);
+}
+
+function dropEmptyBodyPosts(posts) {
+  return (posts || []).filter((post) => hasRenderableText(post));
+}
+
 function keepLatestPosts(posts) {
   return (posts || []).slice(0, MAX_POSTS);
 }
@@ -250,7 +262,8 @@ export async function onRequestGet(context) {
     const mergedPosts = enrichFromArchive(posts, avatarUrl, url.origin);
     const dedupedPosts = dedupePosts(mergedPosts);
     const noVideoPosts = dropVideoPosts(dedupedPosts);
-    const finalPosts = keepLatestPosts(noVideoPosts);
+    const textPosts = dropEmptyBodyPosts(noVideoPosts);
+    const finalPosts = keepLatestPosts(textPosts);
     const body = JSON.stringify({
       ok: true,
       fetchedAt: new Date().toISOString(),
