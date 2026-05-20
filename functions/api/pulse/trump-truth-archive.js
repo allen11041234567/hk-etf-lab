@@ -220,14 +220,17 @@ function dropVideoPosts(posts) {
   return (posts || []).filter((post) => !hasVideoMedia(post));
 }
 
-function hasRenderableText(post) {
+function hasRenderableBodyOrMedia(post) {
   const raw = String(post?.content || '').trim();
   const zh = String(post?.content_zh_cn || '').trim();
-  return !!(raw || zh) && !isUrlOnlyContent(raw);
+  const hasMedia = Array.isArray(post?.media) && post.media.length > 0;
+  if (hasMedia) return true;
+  if (!raw && !zh) return false;
+  return !isUrlOnlyContent(raw);
 }
 
-function dropEmptyBodyPosts(posts) {
-  return (posts || []).filter((post) => hasRenderableText(post));
+function dropTrulyEmptyPosts(posts) {
+  return (posts || []).filter((post) => hasRenderableBodyOrMedia(post));
 }
 
 function keepLatestPosts(posts) {
@@ -262,8 +265,8 @@ export async function onRequestGet(context) {
     const mergedPosts = enrichFromArchive(posts, avatarUrl, url.origin);
     const dedupedPosts = dedupePosts(mergedPosts);
     const noVideoPosts = dropVideoPosts(dedupedPosts);
-    const textPosts = dropEmptyBodyPosts(noVideoPosts);
-    const finalPosts = keepLatestPosts(textPosts);
+    const displayablePosts = dropTrulyEmptyPosts(noVideoPosts);
+    const finalPosts = keepLatestPosts(displayablePosts);
     const body = JSON.stringify({
       ok: true,
       fetchedAt: new Date().toISOString(),
