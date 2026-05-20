@@ -102,7 +102,7 @@ function extractAttachments(chunk) {
 function extractPosts(html) {
   const statusesBlock = html.match(/<div class="statuses">([\s\S]*?)<div class="pagination controls__pagination">/i)?.[1] || html;
   const chunks = statusesBlock.split(/<div class="status"\s+data-status-url=/i).slice(1);
-  return chunks.slice(0, MAX_POSTS).map((chunk) => {
+  return chunks.map((chunk) => {
     const statusUrl = chunk.match(/^"([^"]+)"/)?.[1]?.trim() || null;
     const permalink = chunk.match(/class="status-info__meta-item">([^<]+)<\/a>\s*<\/div>/i)?.[1]?.trim() || null;
     const originalUrl = chunk.match(/href="(https:\/\/truthsocial\.com\/@realDonaldTrump\/[^"]+)"[^>]*class="status__external-link"/i)?.[1] || null;
