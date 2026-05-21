@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex,nofollow,noarchive" />
+  <title>黄金预购参考</title>
+  <style>
+    :root {
+      --bg:#0f1115;
+      --bg-soft:#151922;
+      --card:rgba(255,255,255,0.05);
+      --card-strong:rgba(255,255,255,0.08);
+      --line:rgba(230,201,140,0.18);
+      --line-strong:rgba(230,201,140,0.32);
+      --text:#f6f1e8;
+      --muted:#b9ad98;
+      --gold:#e7c98b;
+      --gold-strong:#f2d7a6;
+      --accent:#d7b46a;
+      --shadow:0 22px 60px rgba(0,0,0,0.35);
+      --up:#f6d28a;
+      --down:#c7b18c;
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(231,201,139,0.10), transparent 28%),
+        radial-gradient(circle at top left, rgba(231,201,139,0.06), transparent 24%),
+        linear-gradient(180deg, #12151c 0%, #0f1115 48%, #0b0d11 100%);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+      min-height:100vh;
+    }
+    .wrap { width:min(1180px, calc(100vw - 32px)); margin:0 auto; padding:28px 0 56px; }
+    .topnav { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:18px; }
+    .navchip {
+      display:inline-flex; align-items:center; gap:8px; padding:9px 13px; border-radius:999px;
+      text-decoration:none; color:var(--muted); background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.07);
+      font-size:13px;
+    }
+    .navchip.active { color:#1b1b1b; background:linear-gradient(135deg,var(--gold-strong),var(--accent)); border-color:transparent; }
+    .hero {
+      display:grid; grid-template-columns:1.3fr .9fr; gap:18px; align-items:stretch; margin-bottom:18px;
+    }
+    .hero-card, .panel {
+      background:linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03));
+      border:1px solid var(--line); border-radius:28px; box-shadow:var(--shadow); backdrop-filter:blur(12px);
+    }
+    .hero-card { padding:32px; position:relative; overflow:hidden; }
+    .hero-card::after {
+      content:''; position:absolute; inset:auto -40px -60px auto; width:260px; height:260px;
+      background:radial-gradient(circle, rgba(231,201,139,0.20), transparent 66%); pointer-events:none;
+    }
+    .eyebrow {
+      display:inline-flex; align-items:center; gap:8px; font-size:12px; letter-spacing:.12em; text-transform:uppercase;
+      color:var(--gold); padding:8px 12px; border-radius:999px; border:1px solid var(--line-strong); background:rgba(231,201,139,0.08);
+    }
+    h1 { margin:18px 0 12px; font-size:clamp(34px, 5vw, 56px); line-height:1.02; letter-spacing:-0.04em; }
+    .hero-sub { color:var(--muted); font-size:16px; line-height:1.8; max-width:760px; }
+    .hero-actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:24px; }
+    .btn {
+      display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:46px; padding:0 18px; border-radius:999px;
+      text-decoration:none; font-size:14px; font-weight:700; transition:.18s ease; cursor:pointer;
+    }
+    .btn.primary { color:#1a1712; background:linear-gradient(135deg,var(--gold-strong),var(--accent)); }
+    .btn.secondary { color:var(--text); border:1px solid var(--line-strong); background:rgba(255,255,255,0.03); }
+    .hero-side { display:grid; gap:16px; }
+    .hero-stat { padding:22px; }
+    .label { color:var(--muted); font-size:12px; letter-spacing:.08em; text-transform:uppercase; }
+    .value-xl { margin-top:10px; font-size:clamp(32px,4vw,44px); font-weight:800; letter-spacing:-.03em; }
+    .subline { margin-top:8px; color:var(--muted); font-size:13px; line-height:1.7; }
+    .section { margin-top:18px; }
+    .section-head { display:flex; justify-content:space-between; gap:12px; align-items:end; margin-bottom:12px; }
+    .section-title { font-size:24px; font-weight:800; letter-spacing:-.03em; }
+    .section-desc { color:var(--muted); font-size:14px; }
+    .live-grid { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:14px; }
+    .panel { padding:22px; }
+    .big-price { margin-top:10px; font-size:36px; font-weight:800; letter-spacing:-.03em; }
+    .pill { display:inline-flex; align-items:center; gap:8px; padding:7px 11px; border-radius:999px; font-size:12px; color:var(--muted); background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); }
+    .dot { width:8px; height:8px; border-radius:50%; background:var(--gold); box-shadow:0 0 0 5px rgba(231,201,139,0.12); }
+    .j-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+    .shop-name { font-size:24px; font-weight:800; margin:6px 0 14px; letter-spacing:-.03em; }
+    .kv { display:flex; justify-content:space-between; gap:12px; padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.06); }
+    .kv:last-child { border-bottom:none; padding-bottom:0; }
+    .kv .k { color:var(--muted); font-size:13px; }
+    .kv .v { font-weight:700; }
+    .calculator {
+      display:grid; grid-template-columns:1fr .9fr; gap:16px; align-items:stretch;
+    }
+    .input-wrap { margin-top:16px; }
+    .input-label { display:block; margin-bottom:8px; color:var(--muted); font-size:13px; }
+    .amount-input {
+      width:100%; min-height:58px; border-radius:18px; border:1px solid var(--line-strong);
+      background:rgba(255,255,255,0.04); color:var(--text); padding:0 18px; font-size:28px; font-weight:800; letter-spacing:-.02em;
+      outline:none;
+    }
+    .calc-results { display:grid; gap:12px; margin-top:18px; }
+    .result-card { padding:18px; border-radius:18px; border:1px solid rgba(255,255,255,0.07); background:rgba(255,255,255,0.04); }
+    .result-card .r-label { color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.08em; }
+    .result-card .r-value { margin-top:8px; font-size:30px; font-weight:800; letter-spacing:-.03em; }
+    .hint { color:var(--muted); font-size:13px; line-height:1.7; }
+    .footer-note { margin-top:12px; color:var(--muted); font-size:12px; line-height:1.8; }
+    .status-ok { color:var(--gold-strong); }
+    .status-bad { color:#ffb3a7; }
+    @media (max-width: 960px) {
+      .hero, .calculator, .live-grid, .j-grid { grid-template-columns:1fr; }
+      .wrap { width:min(100vw - 20px, 1180px); padding:18px 0 36px; }
+      .hero-card, .panel { border-radius:22px; }
+      .hero-card { padding:22px; }
+      h1 { font-size:34px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topnav">
+      <a class="navchip" href="../index.html">⌂ 首页</a>
+      <a class="navchip" href="../daily/morning-report.html">✦ 晨报</a>
+      <a class="navchip active" href="./gold-preorder.html">◎ 黄金预购</a>
+    </div>
+
+    <section class="hero">
+      <div class="hero-card">
+        <div class="eyebrow">香港黄金预购参考</div>
+        <h1>实时看价，快速测算，保留高净值该有的克制感。</h1>
+        <div class="hero-sub">页面展示伦敦金现货、香港三家金店参考价，并按固定汇率 USD/HKD = 7.85 计算永丰参考价，帮助客户快速判断预购金额大致可对应的盎司与克数。</div>
+        <div class="hero-actions">
+          <a class="btn primary" href="#calculator">立即测算</a>
+          <a class="btn secondary" id="preorder-link" href="#">提交预购意向</a>
+        </div>
+      </div>
+      <div class="hero-side">
+        <div class="panel hero-stat">
+          <div class="label">伦敦金现货</div>
+          <div class="value-xl" id="hero-spot">--</div>
+          <div class="subline">原单位保留为 USD/oz，30 秒自动刷新。</div>
+        </div>
+        <div class="panel hero-stat">
+          <div class="label">永丰参考价</div>
+          <div class="value-xl" id="hero-yongfeng">--</div>
+          <div class="subline">公式：伦敦金现货 + 0.5，再按固定汇率 7.85 换算为 HKD/oz。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <div class="section-title">实时金价</div>
+          <div class="section-desc">伦敦金现货保留原单位展示，只在永丰计算区做 HKD 换算。</div>
+        </div>
+        <div class="pill"><span class="dot"></span><span id="live-status">等待连接接口</span></div>
+      </div>
+      <div class="live-grid">
+        <div class="panel">
+          <div class="label">伦敦金现货</div>
+          <div class="big-price" id="spot-usd">--</div>
+          <div class="subline" id="spot-updated">最近更新：--</div>
+        </div>
+        <div class="panel">
+          <div class="label">永丰参考价（USD/oz）</div>
+          <div class="big-price" id="yongfeng-usd">--</div>
+          <div class="subline">固定加价：+0.5 USD/oz</div>
+        </div>
+        <div class="panel">
+          <div class="label">永丰参考价（HKD/oz）</div>
+          <div class="big-price" id="yongfeng-hkd">--</div>
+          <div class="subline">固定汇率：USD/HKD = 7.85</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <div class="section-title">香港金店参考价</div>
+          <div class="section-desc">当前只保留周大福、周生生、六福三家，按 HKD/両 展示。</div>
+        </div>
+        <div class="pill"><span>日更参考，非交易承诺</span></div>
+      </div>
+      <div class="j-grid" id="j-grid">
+        <div class="panel"><div class="shop-name">周大福</div><div class="kv"><div class="k">卖出价</div><div class="v">--</div></div><div class="kv"><div class="k">买入价</div><div class="v">--</div></div><div class="footer-note">正在加载今日参考价。</div></div>
+        <div class="panel"><div class="shop-name">周生生</div><div class="kv"><div class="k">卖出价</div><div class="v">--</div></div><div class="kv"><div class="k">买入价</div><div class="v">--</div></div><div class="footer-note">正在加载今日参考价。</div></div>
+        <div class="panel"><div class="shop-name">六福</div><div class="kv"><div class="k">卖出价</div><div class="v">--</div></div><div class="kv"><div class="k">买入价</div><div class="v">--</div></div><div class="footer-note">正在加载今日参考价。</div></div>
+      </div>
+    </section>
+
+    <section class="section" id="calculator">
+      <div class="section-head">
+        <div>
+          <div class="section-title">永丰购买计算器</div>
+          <div class="section-desc">输入 HKD 金额，按当前永丰参考价估算可购买的盎司与克数。</div>
+        </div>
+      </div>
+      <div class="calculator">
+        <div class="panel">
+          <div class="label">输入金额（HKD）</div>
+          <div class="input-wrap">
+            <label class="input-label" for="amount">示例：500000</label>
+            <input id="amount" class="amount-input" type="number" min="0" step="1000" value="500000" />
+          </div>
+          <div class="footer-note">计算基于固定汇率 USD/HKD = 7.85，永丰参考价 = 伦敦金现货 + 0.5 美元/盎司。</div>
+        </div>
+        <div class="panel">
+          <div class="label">估算结果</div>
+          <div class="calc-results">
+            <div class="result-card">
+              <div class="r-label">可购约</div>
+              <div class="r-value" id="result-oz">-- oz</div>
+            </div>
+            <div class="result-card">
+              <div class="r-label">约合</div>
+              <div class="r-value" id="result-g">-- g</div>
+            </div>
+          </div>
+          <div class="footer-note" id="calc-foot">等待实时金价接口返回后计算。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="panel">
+        <div class="section-title" style="font-size:22px;">提交预购意向</div>
+        <div class="hint" style="margin-top:10px;">当前先预留跳转链接位。后续只需把链接替换为正式表单地址，即可承接信息填写与资产证明上传。</div>
+        <div class="hero-actions" style="margin-top:18px;">
+          <a class="btn primary" id="preorder-link-2" href="#">前往填写预购资料</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="panel">
+        <div class="section-title" style="font-size:20px;">说明与提示</div>
+        <div class="footer-note">1. 本页面展示的国际金价与香港金店价格为公开信息整理，仅供参考。</div>
+        <div class="footer-note">2. 永丰参考价为系统按固定规则估算，不构成最终报价或交易承诺。</div>
+        <div class="footer-note">3. 香港金店价格单位为 HKD/両，实时伦敦金单位为 USD/oz，请勿直接横向比较。</div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const CONFIG = {
+      liveApi: '/api/gold/live',
+      jewellersApi: '/api/gold/hk-jewellers',
+      preorderFormUrl: '#',
+      refreshMs: 30000,
+      fixedFx: 7.85,
+    };
+
+    let currentLive = null;
+
+    function money(n, digits = 2, prefix = '') {
+      const value = Number(n);
+      if (!Number.isFinite(value)) return '--';
+      return `${prefix}${value.toLocaleString('en-HK', { minimumFractionDigits: digits, maximumFractionDigits: digits })}`;
+    }
+
+    function setPreorderLinks() {
+      document.getElementById('preorder-link').href = CONFIG.preorderFormUrl;
+      document.getElementById('preorder-link-2').href = CONFIG.preorderFormUrl;
+    }
+
+    function renderJewellers(payload) {
+      const grid = document.getElementById('j-grid');
+      if (!payload?.ok || !Array.isArray(payload.shops)) {
+        grid.innerHTML = `<div class="panel"><div class="shop-name">接口暂未返回今日价格</div><div class="footer-note status-bad">${payload?.error || '香港金店接口异常，请稍后重试。'}</div></div>`;
+        return;
+      }
+      grid.innerHTML = payload.shops.map((shop) => `
+        <div class="panel">
+          <div class="label">${payload.date || '--'}</div>
+          <div class="shop-name">${shop.name}</div>
+          <div class="kv"><div class="k">卖出价</div><div class="v">HK$${shop.sell_hkd_tael?.toLocaleString('en-HK') || '--'} / 両</div></div>
+          <div class="kv"><div class="k">买入价</div><div class="v">HK$${shop.buy_hkd_tael?.toLocaleString('en-HK') || '--'} / 両</div></div>
+          <div class="footer-note">来源：${shop.source}，最近更新：${payload.updated_at || payload.snapshot_at || '--'}</div>
+        </div>
+      `).join('');
+    }
+
+    function renderLive(payload) {
+      const status = document.getElementById('live-status');
+      if (!payload?.ok) {
+        status.textContent = payload?.config_missing ? '实时金价接口已接好，待补 T1QQ_API_KEY' : '实时金价接口暂不可用';
+        status.parentElement.classList.add('status-bad');
+        document.getElementById('calc-foot').textContent = payload?.config_missing
+          ? '实时金价接口已接线，但当前环境未配置 T1QQ_API_KEY，所以先不计算。'
+          : (payload?.error || '实时金价接口异常，请稍后重试。');
+        return;
+      }
+      currentLive = payload;
+      status.textContent = '实时金价接口已连接';
+      document.getElementById('hero-spot').textContent = `US$${money(payload.spot_usd_oz)}/oz`;
+      document.getElementById('hero-yongfeng').textContent = `HK$${money(payload.yongfeng_hkd_oz)}/oz`;
+      document.getElementById('spot-usd').textContent = `US$${money(payload.spot_usd_oz)}`;
+      document.getElementById('spot-updated').textContent = `最近更新：${payload.updated_at || '--'}`;
+      document.getElementById('yongfeng-usd').textContent = `US$${money(payload.yongfeng_usd_oz)}`;
+      document.getElementById('yongfeng-hkd').textContent = `HK$${money(payload.yongfeng_hkd_oz)}`;
+      document.getElementById('calc-foot').textContent = `按当前永丰参考价 HK$${money(payload.yongfeng_hkd_oz)}/oz 估算，固定汇率 USD/HKD = ${payload.fx_usdhkd ?? CONFIG.fixedFx}。`;
+      updateCalculator();
+    }
+
+    function updateCalculator() {
+      const amount = Number(document.getElementById('amount').value || 0);
+      if (!currentLive?.ok || !Number.isFinite(currentLive.yongfeng_hkd_oz) || currentLive.yongfeng_hkd_oz <= 0 || amount <= 0) {
+        document.getElementById('result-oz').textContent = '-- oz';
+        document.getElementById('result-g').textContent = '-- g';
+        return;
+      }
+      const oz = amount / currentLive.yongfeng_hkd_oz;
+      const grams = oz * 31.1034768;
+      document.getElementById('result-oz').textContent = `${money(oz, 4)} oz`;
+      document.getElementById('result-g').textContent = `${money(grams, 2)} g`;
+    }
+
+    async function loadJewellers() {
+      try {
+        const resp = await fetch(CONFIG.jewellersApi, { headers: { accept: 'application/json' } });
+        const payload = await resp.json();
+        renderJewellers(payload);
+      } catch (error) {
+        renderJewellers({ ok: false, error: error.message || String(error) });
+      }
+    }
+
+    async function loadLive() {
+      try {
+        const resp = await fetch(CONFIG.liveApi, { headers: { accept: 'application/json' } });
+        const payload = await resp.json();
+        renderLive(payload);
+      } catch (error) {
+        renderLive({ ok: false, error: error.message || String(error) });
+      }
+    }
+
+    document.getElementById('amount').addEventListener('input', updateCalculator);
+    setPreorderLinks();
+    loadJewellers();
+    loadLive();
+    setInterval(loadLive, CONFIG.refreshMs);
+  </script>
+</body>
+</html>
