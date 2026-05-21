@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116610177964428920": {
+    "content_zh_cn": "丰田章男火力全开，上演一场彻头彻尾的“MAGA”式魅力攻势：满眼星条旗、烤肉酱风味十足、开着F-150皮卡、带着NASCAR风格。https://www.autonews.com/toyota/an-toyota-akio-toyoda-maga-nascar-trump-japan-tariff-1116/",
+    "content_zh_hk": "豐田章男火力全開，上演一場徹頭徹尾的「MAGA」式魅力攻勢：滿眼星條旗、燒烤醬風味十足、開着F-150皮卡、帶着NASCAR風格。https://www.autonews.com/toyota/an-toyota-akio-toyoda-maga-nascar-trump-japan-tariff-1116/",
+    "content_ko": "도요다 아키오가 완전히 ‘MAGA’ 모드로 나섰다. 성조기 감성에 BBQ 소스를 듬뿍 바르고, F-150 픽업트럭을 몰며, NASCAR 스타일을 앞세운 매력 공세: https://www.autonews.com/toyota/an-toyota-akio-toyoda-maga-nascar-trump-japan-tariff-1116/"
+  },
   "https://truthsocial.com/@realDonaldTrump/116609367468774814": {
     "content_zh_cn": "特朗普称，宴会厅屋顶将设立“无人机帝国”，以保卫华盛顿特区。\nhttps://thenationalpulse.com/2026/05/19/trump-says-ballroom-roof-will-host-drone-empire-to-defend-d-c/",
     "content_zh_hk": "特朗普稱，宴會廳屋頂將設立「無人機帝國」，以保衛華盛頓特區。\nhttps://thenationalpulse.com/2026/05/19/trump-says-ballroom-roof-will-host-drone-empire-to-defend-d-c/",
