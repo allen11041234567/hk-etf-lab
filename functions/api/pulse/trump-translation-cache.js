@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116614467701219214": {
+    "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116614466038746454",
+    "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116614466038746454",
+    "content_ko": "리트윗: https://truthsocial.com/users/realDonaldTrump/statuses/116614466038746454"
+  },
   "https://truthsocial.com/@realDonaldTrump/116614451266681529": {
     "content_zh_cn": "敬请关注联合车站旁的克里斯托弗·哥伦布纪念环形喷泉即将开放！\n总统 唐纳德·J·特朗普",
     "content_zh_hk": "敬請留意位於聯合車站旁的克里斯托弗·哥倫布紀念環形噴泉即將開放！\n總統 唐納德·J·特朗普",
