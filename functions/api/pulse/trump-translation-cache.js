@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116610366261498296": {
+    "content_zh_cn": "疯狂的杰克·史密斯和他的“团伙”真是个大麻烦。绝不能再让这种事发生。他们都应该被起诉！\nhttps://justthenews.com/government/courts-law/pro-dei-prosecutor-charged-over-illegally-emailing-herself-jack-smiths-sealed",
+    "content_zh_hk": "瘋狂的傑克·史密斯和他的「團伙」真是大麻煩。絕不能再讓這種事發生。他們都應該被起訴！\nhttps://justthenews.com/government/courts-law/pro-dei-prosecutor-charged-over-illegally-emailing-herself-jack-smiths-sealed",
+    "content_ko": "미친 잭 스미스와 그의 “패거리”는 정말 큰 문제입니다. 이런 일은 다시는 절대 일어나도록 놔둬서는 안 됩니다. 그들은 모두 기소돼야 합니다!\nhttps://justthenews.com/government/courts-law/pro-dei-prosecutor-charged-over-illegally-emailing-herself-jack-smiths-sealed"
+  },
   "https://truthsocial.com/@realDonaldTrump/116610177964428920": {
     "content_zh_cn": "丰田章男火力全开，上演一场彻头彻尾的“MAGA”式魅力攻势：满眼星条旗、烤肉酱风味十足、开着F-150皮卡、带着NASCAR风格。https://www.autonews.com/toyota/an-toyota-akio-toyoda-maga-nascar-trump-japan-tariff-1116/",
     "content_zh_hk": "豐田章男火力全開，上演一場徹頭徹尾的「MAGA」式魅力攻勢：滿眼星條旗、燒烤醬風味十足、開着F-150皮卡、帶着NASCAR風格。https://www.autonews.com/toyota/an-toyota-akio-toyoda-maga-nascar-trump-japan-tariff-1116/",
