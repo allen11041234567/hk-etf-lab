@@ -9,6 +9,11 @@ export const TRUMP_TRANSLATION_CACHE = {
     "content_zh_hk": "周二晚在佐治亞州度過了一個非常美好的夜晚，並取得了巨大成功。傑夫·鄧肯這位失敗的前副州長、共和黨的恥辱，竟以民主黨人身分競選州長，結果慘敗——整整落後50個百分點！他根本毫無勝算，而我想，現在他也算是正式退出政壇了。他如今已經在兩個黨內都失敗了。這個傢伙從我第一次見到他的那天起就是個失敗者，現在，我們可以正式這麼說了！\n\n總統 唐納德·J·特朗普",
     "content_ko": "화요일 밤 조지아에서 매우 훌륭한 시간과 큰 성공을 거뒀습니다. 공화당의 수치이자 실패한 전 부지사인 제프 덩컨은 민주당원으로 주지사 선거에 출마했다가 대패했습니다 — 무려 50%포인트 차이였습니다! 그는 아예 상대가 되지 못했고, 이제는 공식적으로 정계에서 물러난 셈이라고 봅니다. 그는 이제 두 정당에서 모두 실패했습니다. 이 사람은 내가 처음 만난 날부터 패배자였고, 이제 우리는 그것을 공식적으로 그렇게 부를 수 있습니다!\n\n도널드 J. 트럼프 대통령"
   },
+  "https://truthsocial.com/@realDonaldTrump/116612644955271921": {
+    "content_zh_cn": "转发 @realDonaldTrump 非法移民带来的财政负担，正因特朗普政府而逐步消退：https://justthenews.com/government/white-house/fiscal-burden-illegal-aliens-gradually-disappearing-thanks-trump-admin",
+    "content_zh_hk": "轉發 @realDonaldTrump 非法移民帶來的財政負擔，正因特朗普政府而逐步消退：https://justthenews.com/government/white-house/fiscal-burden-illegal-aliens-gradually-disappearing-thanks-trump-admin",
+    "content_ko": "RT @realDonaldTrump 불법 이민자들이 초래한 재정 부담이 트럼프 행정부 덕분에 점차 사라지고 있다: https://justthenews.com/government/white-house/fiscal-burden-illegal-aliens-gradually-disappearing-thanks-trump-admin"
+  },
   "https://truthsocial.com/@realDonaldTrump/116612644478185135": {
     "content_zh_cn": "https://nypost.com/2026/05/01/opinion/heres-how-to-crush-tehran-in-three-moves/",
     "content_zh_hk": "https://nypost.com/2026/05/01/opinion/heres-how-to-crush-tehran-in-three-moves/",
