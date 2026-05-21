@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116612644478185135": {
+    "content_zh_cn": "https://nypost.com/2026/05/01/opinion/heres-how-to-crush-tehran-in-three-moves/",
+    "content_zh_hk": "https://nypost.com/2026/05/01/opinion/heres-how-to-crush-tehran-in-three-moves/",
+    "content_ko": "https://nypost.com/2026/05/01/opinion/heres-how-to-crush-tehran-in-three-moves/"
+  },
   "https://truthsocial.com/@realDonaldTrump/116610382814275079": {
     "content_zh_cn": "特朗普政府推动下，非法移民带来的财政负担正逐步消退：https://justthenews.com/government/white-house/fiscal-burden-illegal-aliens-gradually-disappearing-thanks-trump-admin",
     "content_zh_hk": "在特朗普政府推動下，非法移民帶來的財政負擔正逐步消退：https://justthenews.com/government/white-house/fiscal-burden-illegal-aliens-gradually-disappearing-thanks-trump-admin",
