@@ -6,6 +6,21 @@ const FETCH_URLS = [
   'https://r.jina.ai/http://www.hkgoldking.com/',
 ];
 const USER_AGENT = 'Mozilla/5.0 (compatible; HK-ETF-Lab/1.0; +https://hketf-lab.pages.dev/)';
+const FALLBACK_SNAPSHOT = {
+  ok: true,
+  source: 'hkgoldking-fallback',
+  source_url: SOURCE_URL,
+  fetched_via: 'embedded-fallback',
+  date: '2026-05-21',
+  updated_at: '2026-05-21 12:00:23',
+  unit: 'HKD/tael',
+  stale: true,
+  shops: [
+    { key: 'chow_tai_fook', name: '周大福', buy_hkd_tael: 41090, sell_hkd_tael: 51360, source: 'hkgoldking-fallback', source_url: SOURCE_URL },
+    { key: 'chow_sang_sang', name: '周生生', buy_hkd_tael: 41090, sell_hkd_tael: 51360, source: 'hkgoldking-fallback', source_url: SOURCE_URL },
+    { key: 'lukfook', name: '六福', buy_hkd_tael: 41591, sell_hkd_tael: 51356, source: 'hkgoldking-fallback', source_url: SOURCE_URL },
+  ],
+};
 
 const SHOPS = [
   { key: 'chow_tai_fook', name: '周大福', aliases: ['周大福'] },
@@ -121,12 +136,19 @@ export async function onRequestGet(context) {
     context.waitUntil(cache.put(cacheKey, response.clone()));
     return response;
   } catch (error) {
-    return new Response(JSON.stringify({ ok: false, error: error instanceof Error ? error.message : String(error) }, null, 2), {
-      status: 500,
+    const fallback = {
+      ...FALLBACK_SNAPSHOT,
+      fallback_reason: error instanceof Error ? error.message : String(error),
+      snapshot_at: new Date().toISOString(),
+      snapshot_ttl_seconds: SNAPSHOT_TTL_SECONDS,
+    };
+    return new Response(JSON.stringify(fallback, null, 2), {
+      status: 200,
       headers: {
         'content-type': 'application/json; charset=utf-8',
-        'cache-control': 'no-store',
+        'cache-control': `public, max-age=0, s-maxage=${SNAPSHOT_TTL_SECONDS}`,
         'access-control-allow-origin': '*',
+        'x-snapshot-cache': 'FALLBACK',
       },
     });
   }
