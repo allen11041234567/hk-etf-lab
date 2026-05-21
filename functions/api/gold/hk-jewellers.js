@@ -1,6 +1,9 @@
 const SNAPSHOT_TTL_SECONDS = 1800;
 const SOURCE_URL = 'https://www.hkgoldking.com/';
-const FETCH_URL = `https://markdown.new/${SOURCE_URL}`;
+const FETCH_URLS = [
+  SOURCE_URL,
+  `https://r.jina.ai/http://${SOURCE_URL}`,
+];
 const USER_AGENT = 'Mozilla/5.0 (compatible; HK-ETF-Lab/1.0; +https://hketf-lab.pages.dev/)';
 
 const SHOPS = [
@@ -70,18 +73,41 @@ export async function onRequestGet(context) {
       return new Response(cached.body, { status: cached.status, headers });
     }
 
-    const upstream = await fetch(FETCH_URL, {
-      headers: {
-        'user-agent': USER_AGENT,
-        accept: 'text/markdown,text/plain;q=0.9,*/*;q=0.8',
-      },
-    });
-    if (!upstream.ok) throw new Error(`upstream ${upstream.status}`);
-    const markdown = await upstream.text();
+    let markdown = '';
+    let fetchedVia = null;
+    let lastError = null;
+
+    for (const fetchUrl of FETCH_URLS) {
+      try {
+        const upstream = await fetch(fetchUrl, {
+          headers: {
+            'user-agent': USER_AGENT,
+            accept: 'text/html,text/markdown,text/plain;q=0.9,*/*;q=0.8',
+          },
+        });
+        if (!upstream.ok) throw new Error(`upstream ${upstream.status}`);
+        const text = await upstream.text();
+        const candidate = parsePayload(text);
+        if (candidate.ok) {
+          markdown = text;
+          fetchedVia = fetchUrl;
+          break;
+        }
+        throw new Error('parse failed');
+      } catch (error) {
+        lastError = error;
+      }
+    }
+
+    if (!markdown) {
+      throw new Error(lastError instanceof Error ? lastError.message : 'failed to fetch jeweller prices');
+    }
+
     const payload = parsePayload(markdown);
     if (!payload.ok) throw new Error('failed to parse jeweller prices');
     payload.snapshot_at = new Date().toISOString();
     payload.snapshot_ttl_seconds = SNAPSHOT_TTL_SECONDS;
+    payload.fetched_via = fetchedVia;
 
     const body = JSON.stringify(payload, null, 2);
     const headers = new Headers({
