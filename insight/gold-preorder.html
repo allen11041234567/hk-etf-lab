@@ -109,8 +109,74 @@
       .hero, .calculator, .live-grid, .j-grid { grid-template-columns:1fr; }
       .wrap { width:min(100vw - 20px, 1180px); padding:18px 0 36px; }
       .hero-card, .panel { border-radius:22px; }
-      .hero-card { padding:22px; }
+      .hero-card, .panel, .hero-stat { padding:20px; }
       h1 { font-size:34px; }
+      .section-head { flex-direction:column; align-items:flex-start; }
+      .section-desc { max-width:680px; }
+    }
+
+    @media (max-width: 720px) {
+      .wrap { width:calc(100vw - 16px); padding:14px 0 28px; }
+      .topnav { gap:8px; margin-bottom:12px; }
+      .navchip { padding:8px 11px; font-size:12px; }
+      .hero { gap:12px; margin-bottom:12px; }
+      .hero-card, .panel, .hero-stat { padding:16px; border-radius:18px; }
+      .eyebrow { font-size:11px; padding:7px 10px; letter-spacing:.1em; }
+      h1 { margin:14px 0 10px; font-size:28px; line-height:1.08; }
+      .hero-sub { font-size:14px; line-height:1.7; }
+      .hero-actions { gap:10px; margin-top:18px; }
+      .btn { min-height:44px; padding:0 16px; font-size:13px; }
+      .value-xl { font-size:30px; }
+      .section { margin-top:12px; }
+      .section-head { margin-bottom:10px; }
+      .section-title { font-size:20px; }
+      .section-desc { font-size:13px; line-height:1.65; }
+      .big-price { font-size:30px; line-height:1.12; word-break:break-word; }
+      .shop-name { font-size:22px; margin-bottom:10px; }
+      .kv { padding:8px 0; }
+      .kv .v { text-align:right; }
+      .amount-input { min-height:54px; font-size:24px; padding:0 15px; }
+      .calc-results { margin-top:14px; gap:10px; }
+      .result-card { padding:16px; border-radius:16px; }
+      .result-card .r-value { font-size:26px; }
+      .footer-note, .hint, .subline { font-size:12px; line-height:1.7; }
+    }
+
+    @media (max-width: 520px) {
+      body {
+        background:
+          radial-gradient(circle at top right, rgba(231,201,139,0.10), transparent 34%),
+          linear-gradient(180deg, #12151c 0%, #0f1115 52%, #0b0d11 100%);
+      }
+      .wrap { width:calc(100vw - 12px); padding:10px 0 24px; }
+      .topnav { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:8px; }
+      .navchip { justify-content:center; width:100%; }
+      .hero-card::after { width:180px; height:180px; inset:auto -30px -50px auto; }
+      h1 { font-size:24px; }
+      .hero-sub { font-size:13px; }
+      .hero-actions { flex-direction:column; }
+      .hero-actions .btn { width:100%; }
+      .label { font-size:11px; }
+      .value-xl { font-size:26px; }
+      .big-price { font-size:26px; }
+      .pill { width:100%; justify-content:center; }
+      .j-grid .panel, .live-grid .panel { min-width:0; }
+      .shop-name { font-size:20px; }
+      .kv { align-items:flex-start; }
+      .kv .k, .kv .v { font-size:12px; }
+      .kv .v { max-width:58%; line-height:1.5; }
+      .amount-input { font-size:22px; min-height:50px; }
+      .result-card .r-value { font-size:22px; }
+    }
+
+    @media (max-width: 380px) {
+      .wrap { width:calc(100vw - 10px); }
+      h1 { font-size:22px; }
+      .section-title { font-size:18px; }
+      .value-xl, .big-price { font-size:24px; }
+      .shop-name { font-size:18px; }
+      .amount-input { font-size:20px; }
+      .result-card .r-value { font-size:20px; }
     }
   </style>
 </head>
