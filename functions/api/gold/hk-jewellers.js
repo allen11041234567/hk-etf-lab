@@ -1,4 +1,4 @@
-const SNAPSHOT_TTL_SECONDS = 7200;
+const SNAPSHOT_TTL_SECONDS = 1800;
 const SOURCE_URL = 'https://www.hkgoldking.com/?lang=zh';
 const USER_AGENT = 'Mozilla/5.0 (compatible; HK-ETF-Lab/1.0; +https://hketf-lab.pages.dev/)';
 
