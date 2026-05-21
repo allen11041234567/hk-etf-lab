@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116610382814275079": {
+    "content_zh_cn": "特朗普政府推动下，非法移民带来的财政负担正逐步消退：https://justthenews.com/government/white-house/fiscal-burden-illegal-aliens-gradually-disappearing-thanks-trump-admin",
+    "content_zh_hk": "在特朗普政府推動下，非法移民帶來的財政負擔正逐步消退：https://justthenews.com/government/white-house/fiscal-burden-illegal-aliens-gradually-disappearing-thanks-trump-admin",
+    "content_ko": "트럼프 행정부 덕분에 불법 이민자들의 재정 부담이 점차 사라지고 있다: https://justthenews.com/government/white-house/fiscal-burden-illegal-aliens-gradually-disappearing-thanks-trump-admin"
+  },
   "https://truthsocial.com/@realDonaldTrump/116610366261498296": {
     "content_zh_cn": "疯狂的杰克·史密斯和他的“团伙”真是个大麻烦。绝不能再让这种事发生。他们都应该被起诉！\nhttps://justthenews.com/government/courts-law/pro-dei-prosecutor-charged-over-illegally-emailing-herself-jack-smiths-sealed",
     "content_zh_hk": "瘋狂的傑克·史密斯和他的「團伙」真是大麻煩。絕不能再讓這種事發生。他們都應該被起訴！\nhttps://justthenews.com/government/courts-law/pro-dei-prosecutor-charged-over-illegally-emailing-herself-jack-smiths-sealed",
