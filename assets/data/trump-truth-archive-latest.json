@@ -1,10 +1,171 @@
 {
   "ok": true,
-  "fetchedAt": "2026-05-20T15:37:18.061Z",
+  "fetchedAt": "2026-05-21T00:17:17.948Z",
   "count": 20,
-  "source": "cnn + trumpstruth fallback",
+  "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
   "posts": [
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116609367468774814",
+      "url": "https://truthsocial.com/@realDonaldTrump/116609367468774814",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-05-20T22:55:40.918Z",
+      "created_at_text": "May 20, 2026, 10:55 PM",
+      "content": "Trump Says Ballroom Roof Will Host 'Drone Empire' to Defend D.C.https://thenationalpulse.com/2026/05/19/trump-says-ballroom-roof-will-host-drone-empire-to-defend-d-c/",
+      "content_html": "Trump Says Ballroom Roof Will Host 'Drone Empire' to Defend D.C.https://thenationalpulse.com/2026/05/19/trump-says-ballroom-roof-will-host-drone-empire-to-defend-d-c/",
+      "media": [],
+      "favourites_count": 3677,
+      "reblogs_count": 987,
+      "replies_count": 473,
+      "content_zh_cn": "特朗普称，宴会厅屋顶将设立“无人机帝国”，以保卫华盛顿特区。\nhttps://thenationalpulse.com/2026/05/19/trump-says-ballroom-roof-will-host-drone-empire-to-defend-d-c/",
+      "content_zh_hk": "特朗普稱，宴會廳屋頂將設立「無人機帝國」，以保衛華盛頓特區。\nhttps://thenationalpulse.com/2026/05/19/trump-says-ballroom-roof-will-host-drone-empire-to-defend-d-c/",
+      "content_ko": "트럼프 “워싱턴 D.C.를 방어하기 위해 연회장 지붕에 ‘드론 제국’을 구축할 것”\nhttps://thenationalpulse.com/2026/05/19/trump-says-ballroom-roof-will-host-drone-empire-to-defend-d-c/",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116609320715181442",
+      "url": "https://truthsocial.com/@realDonaldTrump/116609320715181442",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-05-20T22:43:47.511Z",
+      "created_at_text": "May 20, 2026, 10:43 PM",
+      "content": "'A GIFT TO AMERICA': Trump Says New Ballroom Will Protect Presidents For Generations: https://hannity.com/media-room/a-gift-to-america-trump-says-new-ballroom-will-protect-presidents-for-generations-watch/",
+      "content_html": "'A GIFT TO AMERICA': Trump Says New Ballroom Will Protect Presidents For Generations: https://hannity.com/media-room/a-gift-to-america-trump-says-new-ballroom-will-protect-presidents-for-generations-watch/",
+      "media": [],
+      "favourites_count": 4348,
+      "reblogs_count": 1088,
+      "replies_count": 397,
+      "content_zh_cn": "“献给美国的一份礼物”：特朗普称，新宴会厅将为历代总统提供世代性的保护：https://hannity.com/media-room/a-gift-to-america-trump-says-new-ballroom-will-protect-presidents-for-generations-watch/",
+      "content_zh_hk": "「獻給美國的一份禮物」：特朗普稱，新宴會廳將為歷任總統提供世代性的保護：https://hannity.com/media-room/a-gift-to-america-trump-says-new-ballroom-will-protect-presidents-for-generations-watch/",
+      "content_ko": "‘미국에 주는 선물’: 트럼프, 새 연회장이 여러 세대에 걸쳐 대통령들을 보호할 것이라고 밝혀: https://hannity.com/media-room/a-gift-to-america-trump-says-new-ballroom-will-protect-presidents-for-generations-watch/",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116609219162789294",
+      "url": "https://truthsocial.com/@realDonaldTrump/116609219162789294",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-05-20T22:17:57.943Z",
+      "created_at_text": "May 20, 2026, 10:17 PM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi82MDkvMjE5LzAwMS85NzYvMjIwL29yaWdpbmFsLzI0OWRmZDdlMTQ3MTY2OTEucG5n",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 5084,
+      "reblogs_count": 1666,
+      "replies_count": 450,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116609215136043283",
+      "url": "https://truthsocial.com/@realDonaldTrump/116609215136043283",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-05-20T22:16:56.501Z",
+      "created_at_text": "May 20, 2026, 10:16 PM",
+      "content": "I hope the Public is watching as the Department of the Interior, Doug Burgum, and myself, are opening up many of the decades old, closed Fountains throughout the D.C. area. So far, over 20 have been revitalized, and fixed, looking better than the day they were built, many years ago. We have some left, some were in very bad and difficult condition, but we will get them all done in a short time. D.C. is being reawakened as to its Beauty, Elegance, and Charm. The \"Granddaddy\" of them all will be The Reflecting Pool — 2,500 feet long, and almost 200 feet wide, the biggest such structure ever built, but also, the most troublesome for many Administrations in that, from the time it was built in 1922, it essentially never really worked! It leaked from all angles, drew dirt, grime, and decay, was often filled with garbage, and wasn't at all representative of the two Great Monuments it connects — The Lincoln Memorial, and The Washington Monument. But, very soon, before July 4th, it will be far better than it has ever been, even going back to as long ago as 1922 — Its Original Opening! The Biden and Obama Administrations spent over 100 Million Dollars, and made it far worse! It was only open for a short while, during each Administration, before the leaks and decay took over. I, together with Doug Burgum and the Department of Interior, am fixing it the right and proper way — It will last for many decades into the future. We've had rain delays, and have substantially increased our scope of work as to quality, durability, and even including the stone and granite on the outside of the water itself — A big job, much bigger than originally conceived, but it is being done, after over a Century of \"stop and go's,\" correctly! You will see something very special at the Reflecting Pool in a short period of time. Stay tuned. In the meantime, watch as the Fountains open throughout D.C. Fountains go up, and Crime goes down! Also, watch for Lafayette Park, directly in front of the Main Entrance to the White House. I have made a major contribution toward it. The Fountains are now working, and look magnificent as the Park is being entirely rebuilt, using far better and more beautiful materials than originally used. As the Entrance to the White House, it's got to be spectacular — There is no other way! Again, check out what's going on at Lafayette Park. President DONALD J. TRUMP",
+      "content_html": "I hope the Public is watching as the Department of the Interior, Doug Burgum, and myself, are opening up many of the decades old, closed Fountains throughout the D.C. area. So far, over 20 have been revitalized, and fixed, looking better than the day they were built, many years ago. We have some left, some were in very bad and difficult condition, but we will get them all done in a short time. D.C. is being reawakened as to its Beauty, Elegance, and Charm. The \"Granddaddy\" of them all will be The Reflecting Pool — 2,500 feet long, and almost 200 feet wide, the biggest such structure ever built, but also, the most troublesome for many Administrations in that, from the time it was built in 1922, it essentially never really worked! It leaked from all angles, drew dirt, grime, and decay, was often filled with garbage, and wasn't at all representative of the two Great Monuments it connects — The Lincoln Memorial, and The Washington Monument. But, very soon, before July 4th, it will be far better than it has ever been, even going back to as long ago as 1922 — Its Original Opening! The Biden and Obama Administrations spent over 100 Million Dollars, and made it far worse! It was only open for a short while, during each Administration, before the leaks and decay took over. I, together with Doug Burgum and the Department of Interior, am fixing it the right and proper way — It will last for many decades into the future. We've had rain delays, and have substantially increased our scope of work as to quality, durability, and even including the stone and granite on the outside of the water itself — A big job, much bigger than originally conceived, but it is being done, after over a Century of \"stop and go's,\" correctly! You will see something very special at the Reflecting Pool in a short period of time. Stay tuned. In the meantime, watch as the Fountains open throughout D.C. Fountains go up, and Crime goes down! Also, watch for Lafayette Park, directly in front of the Main Entrance to the White House. I have made a major contribution toward it. The Fountains are now working, and look magnificent as the Park is being entirely rebuilt, using far better and more beautiful materials than originally used. As the Entrance to the White House, it's got to be spectacular — There is no other way! Again, check out what's going on at Lafayette Park. President DONALD J. TRUMP",
+      "media": [],
+      "favourites_count": 6920,
+      "reblogs_count": 1847,
+      "replies_count": 635,
+      "content_zh_cn": "希望公众都在关注：内政部、道格·伯格姆和我，正在重新启用华盛顿特区地区许多已关闭数十年的喷泉。\n\n到目前为止，已有20多处完成修复并恢复运转，看起来比很多年前刚建成时还要更好。还剩下一些，其中有些状况非常糟糕、修复难度也很大，但我们会在短时间内把它们全部完成。\n\n华盛顿特区正在重新焕发其美丽、优雅与魅力。\n\n其中的“祖师爷”将是倒影池——全长2,500英尺，宽近200英尺，是有史以来建造的同类设施中最大的一个，但同时，多届政府也最为头疼，因为自1922年建成以来，它实际上从来就没有真正正常运作过！它四处渗漏，容易积聚尘土、污垢和破败痕迹，常常堆满垃圾，完全无法体现它所连接的两座伟大纪念建筑——林肯纪念堂和华盛顿纪念碑——应有的形象。\n\n但是，很快，在7月4日之前，它将比以往任何时候都要好，甚至比1922年最初启用时还要更好！拜登和奥巴马政府花费了超过1亿美元，却把情况弄得更糟！两届政府任内，它每次都只开放了很短时间，随后渗漏和破败问题便卷土重来。\n\n我正与道格·伯格姆及内政部一道，以正确、妥善的方式进行修复——它将在未来持续使用很多个十年。我们曾因降雨延误工期，并且大幅提高了工程标准，强化质量和耐久性，甚至把水体外围的石材和花岗岩也纳入了施工范围——这是一项大工程，比最初设想的规模大得多，但在经历了一个多世纪的“时停时续”之后，它终于在被正确地完成！\n\n很快，你们就会在倒影池看到非常特别的成果。敬请关注。\n\n与此同时，看看华盛顿特区各处喷泉重新开启的景象。喷泉升起，犯罪下降！\n\n另外，也请关注拉斐特公园，它就在白宫正门前方。我已为此作出重大贡献。那里的喷泉现在已经恢复运作，随着公园全面重建，景观看起来壮丽非凡，而且所采用的材料远比最初使用的更优质、更美观。作为白宫的入口，它必须令人叹为观止——没有第二种选择！\n\n再次看看拉斐特公园正在发生的一切。\n\n总统 唐纳德·J·特朗普",
+      "content_zh_hk": "希望公眾都在關注：內政部、道格·伯格姆和我，正在重新啟用華盛頓特區地區許多已關閉數十年的噴泉。\n\n到目前為止，已有20多處完成修復並恢復運作，看起來比很多年前剛建成時還要更好。還剩下一些，其中有些狀況非常糟糕、修復難度也很大，但我們會在短時間內把它們全部完成。\n\n華盛頓特區正在重新煥發其美麗、優雅與魅力。\n\n其中的「祖師爺」將是倒影池——全長2,500呎，闊近200呎，是有史以來建造的同類設施中最大的一個，但同時，多屆政府也最為頭痛，因為自1922年建成以來，它實際上從來就沒有真正正常運作過！它四處滲漏，容易積聚塵土、污垢和破敗痕跡，經常堆滿垃圾，完全無法體現它所連接的兩座偉大紀念建築——林肯紀念堂和華盛頓紀念碑——應有的形象。\n\n但是，很快，在7月4日之前，它將比以往任何時候都要好，甚至比1922年最初啟用時還要更好！拜登和奧巴馬政府花費了超過1億美元，卻把情況弄得更糟！兩屆政府任內，它每次都只開放了很短時間，隨後滲漏和破敗問題便捲土重來。\n\n我正與道格·伯格姆及內政部一道，以正確、妥善的方式進行修復——它將在未來持續使用很多個十年。我們曾因降雨延誤工期，並且大幅提高了工程標準，強化質量和耐久性，甚至把水體外圍的石材和花崗岩也納入了施工範圍——這是一項大工程，比最初設想的規模大得多，但在經歷了一個多世紀的「時停時續」之後，它終於在被正確地完成！\n\n很快，你們就會在倒影池看到非常特別的成果。敬請關注。\n\n與此同時，看看華盛頓特區各處噴泉重新開啟的景象。噴泉升起，犯罪下降！\n\n另外，也請關注拉斐特公園，它就在白宮正門前方。我已為此作出重大貢獻。那裡的噴泉現在已經恢復運作，隨着公園全面重建，景觀看起來壯麗非凡，而且所採用的材料遠比最初使用的更優質、更美觀。作為白宮的入口，它必須令人嘆為觀止——沒有第二種選擇！\n\n再次看看拉斐特公園正在發生的一切。\n\n總統 唐納德·J·特朗普",
+      "content_ko": "대중이 지켜보고 있기를 바랍니다. 내무부, 더그 버검, 그리고 저는 워싱턴 D.C. 일대에서 수십 년간 폐쇄돼 있던 많은 분수들을 다시 개방하고 있습니다.\n\n지금까지 20곳 넘는 분수가 복원·수리됐으며, 수년 전 처음 지어졌던 때보다도 더 좋아 보입니다. 아직 남은 곳들도 있고, 일부는 상태가 매우 나쁘고 손보기도 쉽지 않지만, 머지않아 모두 마무리할 것입니다.\n\n워싱턴 D.C.는 그 아름다움과 우아함, 그리고 매력을 다시 되찾고 있습니다.\n\n이 가운데 모든 것의 ‘대부’는 리플렉팅 풀입니다 — 길이 2,500피트, 폭 거의 200피트로, 지금까지 지어진 동종 시설 가운데 가장 큰 규모입니다. 하지만 동시에 여러 행정부에 가장 큰 골칫거리이기도 했습니다. 1922년 처음 만들어진 이후, 사실상 제대로 작동한 적이 거의 없었기 때문입니다! 사방으로 물이 새고, 먼지와 때, 노후 흔적이 쌓였으며, 쓰레기로 가득 차는 일도 잦았습니다. 그리고 이 수로가 이어주는 두 위대한 기념물 — 링컨 기념관과 워싱턴 기념탑 — 에 걸맞은 모습과는 거리가 멀었습니다.\n\n하지만 곧, 7월 4일 이전에, 이곳은 과거 어느 때보다도 더 좋아질 것이며, 1922년 처음 개장했을 때보다도 더 나아질 것입니다! 바이든과 오바마 행정부는 1억 달러가 넘는 돈을 썼지만, 상황을 오히려 더 악화시켰습니다! 두 행정부 모두 재임 기간 중 잠시만 개방됐을 뿐, 곧 누수와 노후 문제가 다시 모든 것을 망쳐 놓았습니다.\n\n저는 더그 버검, 그리고 내무부와 함께 이 시설을 옳고 제대로 된 방식으로 고치고 있습니다 — 앞으로 수십 년 동안 버틸 수 있도록 말입니다. 비로 인해 공사가 지연되기도 했고, 품질과 내구성 측면에서 공사 범위를 대폭 확대했으며, 수면 바깥쪽의 석재와 화강암까지 포함시켰습니다 — 큰 공사입니다. 처음 구상했던 것보다 훨씬 더 큰 사업이지만, 100년이 넘는 ‘중단과 재개’를 거친 끝에, 이번에는 제대로 완성되고 있습니다!\n\n머지않아 여러분은 리플렉팅 풀에서 매우 특별한 무언가를 보게 될 것입니다. 지켜봐 주십시오.\n\n그동안 워싱턴 D.C. 전역에서 분수들이 다시 가동되는 모습을 지켜봐 주십시오. 분수는 올라가고, 범죄는 내려갑니다!\n\n또한 백악관 정문 바로 앞에 있는 라파예트 공원도 주목해 주십시오. 저는 그곳에 큰 기여를 했습니다. 분수는 이제 다시 작동하고 있으며, 공원은 전면 재정비가 진행 중입니다. 처음 사용됐던 자재보다 훨씬 더 우수하고 더 아름다운 자재를 쓰고 있어, 그 모습은 장관입니다. 백악관의 입구인 만큼, 반드시 장관이어야 합니다 — 다른 방법은 없습니다!\n\n다시 한번, 라파예트 공원에서 무슨 일이 벌어지고 있는지 확인해 보십시오.\n\n대통령 도널드 J. 트럼프",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116608209719201142",
+      "url": "https://truthsocial.com/@realDonaldTrump/116608209719201142",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-05-20T18:01:15.059Z",
+      "created_at_text": "May 20, 2026, 6:01 PM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi82MDgvMjA5LzQ0Ny8yMzYvNTY3L29yaWdpbmFsLzNiMzMzNmE1NzU5MjVjZDUuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 9659,
+      "reblogs_count": 2290,
+      "replies_count": 1202,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116608050855663507",
+      "url": "https://truthsocial.com/@realDonaldTrump/116608050855663507",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-05-20T17:20:50.991Z",
+      "created_at_text": "May 20, 2026, 5:20 PM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi82MDgvMDUwLzU5Ni8wNjIvMjE5L29yaWdpbmFsL2VmZTZjZDI3NzgyYmQxODEuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 8767,
+      "reblogs_count": 2149,
+      "replies_count": 623,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116608048911096185",
+      "url": "https://truthsocial.com/@realDonaldTrump/116608048911096185",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-05-20T17:20:21.325Z",
+      "created_at_text": "May 20, 2026, 5:20 PM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi82MDgvMDQ4LzcyOS8xNDMvMTE4L29yaWdpbmFsLzM2MDk4YTQ5NzZlNmRmNjAuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 9911,
+      "reblogs_count": 2037,
+      "replies_count": 493,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116608048268375291",
+      "url": "https://truthsocial.com/@realDonaldTrump/116608048268375291",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-05-20T17:20:11.517Z",
+      "created_at_text": "May 20, 2026, 5:20 PM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi82MDgvMDQ4LzAyOC80MDcvMzcyL29yaWdpbmFsL2E4YjFlMmYwNGMxZDZmYTAuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 10651,
+      "reblogs_count": 2256,
+      "replies_count": 336,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "stock.fengle.me"
+    },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116607551580410444",
       "url": "https://truthsocial.com/@realDonaldTrump/116607551580410444",
@@ -14,12 +175,13 @@
       "content": "Shockingly, Republicans have kept the very important position of \"Parliamentarian\" in the hands of a woman, Elizabeth MacDonough, who was appointed, long ago, by Barack Hussein Obama and a vicious Lunatic known as Senator Harry Reid, who ran the Senate for the Dumocrats with an \"iron fist.\" Over the years, she has been brutal to Republicans, but not so to the Dumocrats — So why has she not been replaced? There are many fair people who would be qualified for that vital job. The Republicans play a very soft game compared to the Dumocrats. It is their single biggest disadvantage in politics. The Dumocrats cheat, lie, and steal, especially when it comes to Votes in Elections, but stick together, whereas the Republicans allow the Elizabeth MacDonoughs of the World to stay in power, and brutalize us. We need THE SAVE AMERICA ACT passed, and NOW — And, likewise, kill the Filibuster, which would give us everything! If we don't pass at least one of these two provisions quickly, you will never see another Republican President again. The Dumocrats will end up with 2 additional States, D.C. and Puerto Rico, and all that entails, including 4 Senators, many Congressmen, and many additional Electoral Votes, and they will also get their dream of a packed United States Supreme Court with their most favorite number — 21 Justices. The Dumocrats will eliminate the Filibuster on the First Day that they get an opportunity to do so. The Republicans aren't doing it because they say the Dumocrats will never do it, but the Republicans are WRONG. Get smart and tough Republicans, or you'll all be looking for a job much sooner than you thought possible! President DONALD J. TRUMP",
       "content_html": "Shockingly, Republicans have kept the very important position of \"Parliamentarian\" in the hands of a woman, Elizabeth MacDonough, who was appointed, long ago, by Barack Hussein Obama and a vicious Lunatic known as Senator Harry Reid, who ran the Senate for the Dumocrats with an \"iron fist.\" Over the years, she has been brutal to Republicans, but not so to the Dumocrats — So why has she not been replaced? There are many fair people who would be qualified for that vital job. The Republicans play a very soft game compared to the Dumocrats. It is their single biggest disadvantage in politics. The Dumocrats cheat, lie, and steal, especially when it comes to Votes in Elections, but stick together, whereas the Republicans allow the Elizabeth MacDonoughs of the World to stay in power, and brutalize us. We need THE SAVE AMERICA ACT passed, and NOW — And, likewise, kill the Filibuster, which would give us everything! If we don't pass at least one of these two provisions quickly, you will never see another Republican President again. The Dumocrats will end up with 2 additional States, D.C. and Puerto Rico, and all that entails, including 4 Senators, many Congressmen, and many additional Electoral Votes, and they will also get their dream of a packed United States Supreme Court with their most favorite number — 21 Justices. The Dumocrats will eliminate the Filibuster on the First Day that they get an opportunity to do so. The Republicans aren't doing it because they say the Dumocrats will never do it, but the Republicans are WRONG. Get smart and tough Republicans, or you'll all be looking for a job much sooner than you thought possible! President DONALD J. TRUMP",
       "media": [],
-      "favourites_count": 1941,
-      "reblogs_count": 724,
-      "replies_count": 332,
+      "favourites_count": 31239,
+      "reblogs_count": 9409,
+      "replies_count": 4549,
       "content_zh_cn": "令人震惊的是，共和党竟然把极其重要的“议事顾问”这一职位，继续交在一名女性——伊丽莎白·麦克多诺——手中。她早在多年前就由贝拉克·侯赛因·奥巴马和一个以凶狠著称的疯子——参议员哈里·里德——任命；里德当年以“铁腕”方式为这些“笨拙民主党人”掌控参议院。多年来，她对共和党人一直极为严苛，却从未这样对待这些“笨拙民主党人”——那么，她为什么还没有被撤换？有很多公正的人，完全有资格胜任这项至关重要的工作。与这些“笨拙民主党人”相比，共和党打的是一场过于温和的比赛。这是他们在政治上的最大弱点。\n\n这些“笨拙民主党人”作弊、撒谎、偷窃，尤其是在选举投票问题上，但他们内部却紧紧抱团；而共和党却让世界上的这些“伊丽莎白·麦克多诺”继续掌权，并对我们进行打压。我们需要《拯救美国法案》获得通过，而且是现在——同样，也要废除“冗长辩论阻挠”，那将让我们得到一切！如果我们不能迅速通过这两项措施中的至少一项，你将再也看不到另一位共和党总统。那些“笨拙民主党人”最终将新增2个州——华盛顿特区和波多黎各——以及随之而来的一切，包括4名参议员、许多众议员，以及更多的选举人票；他们还将实现自己长久以来的梦想，把美国联邦最高法院扩编到他们最喜欢的数字——21名大法官。\n\n这些“笨拙民主党人”一旦有机会，第一天就会废除“冗长辩论阻挠”。共和党人现在不这么做，是因为他们说那些“笨拙民主党人”永远不会这么做，但共和党人错了。共和党人，聪明点，强硬点，否则你们所有人都会比自己想象的更早开始找工作！\n\n总统 唐纳德·J·特朗普",
       "content_zh_hk": "令人震驚的是，共和黨竟然把極其重要的「議事顧問」一職，繼續交在一名女性——伊麗莎白·麥克多諾——手中。她早在很多年前就由貝拉克·侯賽因·奧巴馬，以及一個以兇狠著稱的瘋子——參議員哈里·里德——任命；里德當年以「鐵腕」方式為這些「笨拙民主黨人」掌控參議院。多年來，她對共和黨人一直極為苛刻，卻從未如此對待這些「笨拙民主黨人」——那麼，她為甚麼還沒有被撤換？有很多公正的人，完全有資格勝任這項至關重要的工作。與這些「笨拙民主黨人」相比，共和黨打的是一場過於溫和的比賽。這是他們在政治上的最大弱點。\n\n這些「笨拙民主黨人」作弊、說謊、偷竊，尤其是在選舉投票問題上，但他們內部卻緊緊抱團；而共和黨卻讓世上的這些「伊麗莎白·麥克多諾」繼續掌權，並對我們進行打壓。我們需要《拯救美國法案》獲得通過，而且是現在——同樣，也要廢除「冗長辯論阻撓」，那將讓我們得到一切！如果我們不能迅速通過這兩項措施中的至少一項，你將再也看不到另一位共和黨總統。那些「笨拙民主黨人」最終將新增2個州——華盛頓特區和波多黎各——以及隨之而來的一切，包括4名參議員、許多眾議員，以及更多的選舉人票；他們還將實現自己長久以來的夢想，把美國聯邦最高法院擴編到他們最喜歡的數字——21名大法官。\n\n這些「笨拙民主黨人」一旦有機會，第一天就會廢除「冗長辯論阻撓」。共和黨人現在不這麼做，是因為他們說那些「笨拙民主黨人」永遠不會這麼做，但共和黨人錯了。共和黨人，聰明點，強硬點，否則你們所有人都會比自己想像的更早開始找工作！\n\n總統 唐納德·J·特朗普",
-      "content_ko": "충격적이게도, 공화당은 매우 중요한 \"의사규칙 자문관\" 직책을 한 여성인 엘리자베스 맥도너의 손에 계속 맡겨두고 있습니다. 그녀는 오래전 버락 후세인 오바마와, 민주당을 위해 \"철권\"으로 상원을 운영했던 해리 리드 상원의원이라는 악랄한 미치광이에 의해 임명됐습니다. 수년 동안 그녀는 공화당에는 잔혹했지만, 이 \"덤크랫\"들에게는 그렇지 않았습니다 — 그런데 왜 아직 교체되지 않았습니까? 그 중대한 자리를 맡을 자격이 있는 공정한 사람들은 많이 있습니다. 공화당은 이 \"덤크랫\"들에 비해 너무나 부드럽게 정치 게임을 합니다. 이것이 정치에서 그들의 가장 큰 약점입니다.\n\n이 \"덤크랫\"들은 속이고, 거짓말하고, 훔칩니다. 특히 선거 투표와 관련해서 그렇습니다. 하지만 그들은 서로 똘똘 뭉칩니다. 반면 공화당은 세상의 이런 엘리자베스 맥도너들이 계속 권력을 쥐고 우리를 짓밟도록 내버려 둡니다. 우리는 SAVE AMERICA ACT를 통과시켜야 합니다, 지금 당장 — 그리고 마찬가지로 필리버스터도 없애야 합니다. 그러면 우리에게 모든 것이 주어질 것입니다! 이 두 조치 가운데 적어도 하나라도 신속히 통과시키지 못한다면, 여러분은 다시는 공화당 출신 대통령을 보지 못할 것입니다. 이 \"덤크랫\"들은 결국 D.C.와 푸에르토리코라는 2개의 추가 주를 얻게 될 것이고, 그에 따르는 모든 것, 즉 상원의원 4명, 많은 하원의원, 그리고 더 많은 선거인단 표도 얻게 될 것입니다. 또한 그들은 자신들의 오랜 꿈인 연방대법원 정원 확대도 실현할 것이며, 그들이 가장 좋아하는 숫자 — 대법관 21명 — 을 만들 것입니다.\n\n이 \"덤크랫\"들은 기회가 생기는 첫날 필리버스터를 없앨 것입니다. 공화당이 지금 그렇게 하지 않는 이유는, 이 \"덤크랫\"들이 절대 그렇게 하지 않을 것이라고 말하기 때문입니다. 하지만 공화당은 틀렸습니다. 공화당이여, 정신 차리고 강해지십시오. 그렇지 않으면 여러분 모두는 생각했던 것보다 훨씬 더 빨리 일자리를 찾게 될 것입니다!\n\n도널드 J. 트럼프 대통령"
+      "content_ko": "충격적이게도, 공화당은 매우 중요한 \"의사규칙 자문관\" 직책을 한 여성인 엘리자베스 맥도너의 손에 계속 맡겨두고 있습니다. 그녀는 오래전 버락 후세인 오바마와, 민주당을 위해 \"철권\"으로 상원을 운영했던 해리 리드 상원의원이라는 악랄한 미치광이에 의해 임명됐습니다. 수년 동안 그녀는 공화당에는 잔혹했지만, 이 \"덤크랫\"들에게는 그렇지 않았습니다 — 그런데 왜 아직 교체되지 않았습니까? 그 중대한 자리를 맡을 자격이 있는 공정한 사람들은 많이 있습니다. 공화당은 이 \"덤크랫\"들에 비해 너무나 부드럽게 정치 게임을 합니다. 이것이 정치에서 그들의 가장 큰 약점입니다.\n\n이 \"덤크랫\"들은 속이고, 거짓말하고, 훔칩니다. 특히 선거 투표와 관련해서 그렇습니다. 하지만 그들은 서로 똘똘 뭉칩니다. 반면 공화당은 세상의 이런 엘리자베스 맥도너들이 계속 권력을 쥐고 우리를 짓밟도록 내버려 둡니다. 우리는 SAVE AMERICA ACT를 통과시켜야 합니다, 지금 당장 — 그리고 마찬가지로 필리버스터도 없애야 합니다. 그러면 우리에게 모든 것이 주어질 것입니다! 이 두 조치 가운데 적어도 하나라도 신속히 통과시키지 못한다면, 여러분은 다시는 공화당 출신 대통령을 보지 못할 것입니다. 이 \"덤크랫\"들은 결국 D.C.와 푸에르토리코라는 2개의 추가 주를 얻게 될 것이고, 그에 따르는 모든 것, 즉 상원의원 4명, 많은 하원의원, 그리고 더 많은 선거인단 표도 얻게 될 것입니다. 또한 그들은 자신들의 오랜 꿈인 연방대법원 정원 확대도 실현할 것이며, 그들이 가장 좋아하는 숫자 — 대법관 21명 — 을 만들 것입니다.\n\n이 \"덤크랫\"들은 기회가 생기는 첫날 필리버스터를 없앨 것입니다. 공화당이 지금 그렇게 하지 않는 이유는, 이 \"덤크랫\"들이 절대 그렇게 하지 않을 것이라고 말하기 때문입니다. 하지만 공화당은 틀렸습니다. 공화당이여, 정신 차리고 강해지십시오. 그렇지 않으면 여러분 모두는 생각했던 것보다 훨씬 더 빨리 일자리를 찾게 될 것입니다!\n\n도널드 J. 트럼프 대통령",
+      "source_hint": "stock.fengle.me"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116606419274009481",
@@ -35,12 +197,13 @@
           "type": "image"
         }
       ],
-      "favourites_count": 18149,
-      "reblogs_count": 5007,
-      "replies_count": 2358,
+      "favourites_count": 24709,
+      "reblogs_count": 6753,
+      "replies_count": 2861,
       "content_zh_cn": "",
       "content_zh_hk": "",
-      "content_ko": ""
+      "content_ko": "",
+      "source_hint": "stock.fengle.me"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116606416348620098",
@@ -56,12 +219,13 @@
           "type": "image"
         }
       ],
-      "favourites_count": 9314,
-      "reblogs_count": 1595,
-      "replies_count": 244,
+      "favourites_count": 13220,
+      "reblogs_count": 2274,
+      "replies_count": 322,
       "content_zh_cn": "",
       "content_zh_hk": "",
-      "content_ko": ""
+      "content_ko": "",
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116606415702346240",
@@ -77,12 +241,13 @@
           "type": "image"
         }
       ],
-      "favourites_count": 8607,
-      "reblogs_count": 1443,
-      "replies_count": 151,
+      "favourites_count": 12274,
+      "reblogs_count": 2053,
+      "replies_count": 192,
       "content_zh_cn": "",
       "content_zh_hk": "",
-      "content_ko": ""
+      "content_ko": "",
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116606415065212643",
@@ -98,12 +263,13 @@
           "type": "image"
         }
       ],
-      "favourites_count": 8364,
-      "reblogs_count": 1424,
-      "replies_count": 115,
+      "favourites_count": 11848,
+      "reblogs_count": 1999,
+      "replies_count": 153,
       "content_zh_cn": "",
       "content_zh_hk": "",
-      "content_ko": ""
+      "content_ko": "",
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116606414347937770",
@@ -119,12 +285,13 @@
           "type": "image"
         }
       ],
-      "favourites_count": 8225,
-      "reblogs_count": 1398,
-      "replies_count": 125,
+      "favourites_count": 11625,
+      "reblogs_count": 1958,
+      "replies_count": 168,
       "content_zh_cn": "",
       "content_zh_hk": "",
-      "content_ko": ""
+      "content_ko": "",
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116606413424489167",
@@ -140,12 +307,13 @@
           "type": "image"
         }
       ],
-      "favourites_count": 8051,
-      "reblogs_count": 1356,
-      "replies_count": 105,
+      "favourites_count": 11343,
+      "reblogs_count": 1898,
+      "replies_count": 134,
       "content_zh_cn": "",
       "content_zh_hk": "",
-      "content_ko": ""
+      "content_ko": "",
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116606412867659049",
@@ -161,12 +329,13 @@
           "type": "image"
         }
       ],
-      "favourites_count": 7912,
-      "reblogs_count": 1344,
-      "replies_count": 96,
+      "favourites_count": 11158,
+      "reblogs_count": 1882,
+      "replies_count": 125,
       "content_zh_cn": "",
       "content_zh_hk": "",
-      "content_ko": ""
+      "content_ko": "",
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116606412199368024",
@@ -182,12 +351,13 @@
           "type": "image"
         }
       ],
-      "favourites_count": 7828,
-      "reblogs_count": 1335,
-      "replies_count": 94,
+      "favourites_count": 11012,
+      "reblogs_count": 1862,
+      "replies_count": 121,
       "content_zh_cn": "",
       "content_zh_hk": "",
-      "content_ko": ""
+      "content_ko": "",
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116606411176268809",
@@ -203,12 +373,13 @@
           "type": "image"
         }
       ],
-      "favourites_count": 7677,
-      "reblogs_count": 1323,
-      "replies_count": 85,
+      "favourites_count": 10805,
+      "reblogs_count": 1840,
+      "replies_count": 107,
       "content_zh_cn": "",
       "content_zh_hk": "",
-      "content_ko": ""
+      "content_ko": "",
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116606410578147975",
@@ -224,12 +395,13 @@
           "type": "image"
         }
       ],
-      "favourites_count": 7598,
-      "reblogs_count": 1318,
-      "replies_count": 87,
+      "favourites_count": 10673,
+      "reblogs_count": 1833,
+      "replies_count": 108,
       "content_zh_cn": "",
       "content_zh_hk": "",
-      "content_ko": ""
+      "content_ko": "",
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116606409732863194",
@@ -245,180 +417,13 @@
           "type": "image"
         }
       ],
-      "favourites_count": 7452,
-      "reblogs_count": 1285,
-      "replies_count": 73,
+      "favourites_count": 10472,
+      "reblogs_count": 1783,
+      "replies_count": 90,
       "content_zh_cn": "",
       "content_zh_hk": "",
-      "content_ko": ""
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116606409082803810",
-      "url": "https://truthsocial.com/@realDonaldTrump/116606409082803810",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-05-20T10:23:19.597Z",
-      "created_at_text": "May 20, 2026, 10:23 AM",
-      "content": "",
-      "content_html": "",
-      "media": [
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi82MDYvNDA4LzgxNS82MzEvNzM1L29yaWdpbmFsLzZmNzFkZTJkOTZlMjQ3YWMuanBn",
-          "type": "image"
-        }
-      ],
-      "favourites_count": 7331,
-      "reblogs_count": 1274,
-      "replies_count": 71,
-      "content_zh_cn": "",
-      "content_zh_hk": "",
-      "content_ko": ""
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116606408347623369",
-      "url": "https://truthsocial.com/@realDonaldTrump/116606408347623369",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-05-20T10:23:08.377Z",
-      "created_at_text": "May 20, 2026, 10:23 AM",
-      "content": "",
-      "content_html": "",
-      "media": [
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi82MDYvNDA4LzA3Ny8yNzcvNzQ4L29yaWdpbmFsLzg4NzQ0NGU3N2VjZDUzYWQuanBn",
-          "type": "image"
-        }
-      ],
-      "favourites_count": 7281,
-      "reblogs_count": 1273,
-      "replies_count": 84,
-      "content_zh_cn": "",
-      "content_zh_hk": "",
-      "content_ko": ""
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116604205774799651",
-      "url": "https://truthsocial.com/@realDonaldTrump/116604205774799651",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-05-20T01:02:59.785Z",
-      "created_at_text": "May 20, 2026, 1:02 AM",
-      "content": "",
-      "content_html": "",
-      "media": [
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi82MDQvMjA1LzQ2NC82NzAvOTkyL29yaWdpbmFsLzU5MDRlNjJkNzQwMjVhMzUuanBn",
-          "type": "image"
-        }
-      ],
-      "favourites_count": 20541,
-      "reblogs_count": 3766,
-      "replies_count": 1147,
-      "content_zh_cn": "",
-      "content_zh_hk": "",
-      "content_ko": ""
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116604205160915746",
-      "url": "https://truthsocial.com/@realDonaldTrump/116604205160915746",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-05-20T01:02:50.416Z",
-      "created_at_text": "May 20, 2026, 1:02 AM",
-      "content": "",
-      "content_html": "",
-      "media": [
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi82MDQvMjA0LzgzMC82MzcvOTU0L29yaWdpbmFsL2EyNWE0YmM3MTAxMGJiMzguanBn",
-          "type": "image"
-        }
-      ],
-      "favourites_count": 17993,
-      "reblogs_count": 3119,
-      "replies_count": 352,
-      "content_zh_cn": "",
-      "content_zh_hk": "",
-      "content_ko": ""
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116604204410147362",
-      "url": "https://truthsocial.com/@realDonaldTrump/116604204410147362",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-05-20T01:02:38.961Z",
-      "created_at_text": "May 20, 2026, 1:02 AM",
-      "content": "",
-      "content_html": "",
-      "media": [
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi82MDQvMjA0LzE4My82MjkvMjIxL29yaWdpbmFsL2JhY2Q2M2RkZWFmZTYxOGMuanBn",
-          "type": "image"
-        }
-      ],
-      "favourites_count": 17012,
-      "reblogs_count": 2889,
-      "replies_count": 227,
-      "content_zh_cn": "",
-      "content_zh_hk": "",
-      "content_ko": ""
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116604203739307861",
-      "url": "https://truthsocial.com/@realDonaldTrump/116604203739307861",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-05-20T01:02:28.726Z",
-      "created_at_text": "May 20, 2026, 1:02 AM",
-      "content": "",
-      "content_html": "",
-      "media": [
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi82MDQvMjAzLzQ0NS80NjcvNTkxL29yaWdpbmFsLzhiNjNlYjUyZTc0MTY0MWYuanBn",
-          "type": "image"
-        }
-      ],
-      "favourites_count": 16657,
-      "reblogs_count": 2811,
-      "replies_count": 185,
-      "content_zh_cn": "",
-      "content_zh_hk": "",
-      "content_ko": ""
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116604012604208556",
-      "url": "https://truthsocial.com/@realDonaldTrump/116604012604208556",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-05-20T00:13:52.236Z",
-      "created_at_text": "May 20, 2026, 12:13 AM",
-      "content": "",
-      "content_html": "",
-      "media": [
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi82MDQvMDEyLzI1Ny8wMzUvMTgxL29yaWdpbmFsL2UwZTRlNDY3NDRjMjQyOGUuanBn",
-          "type": "image"
-        }
-      ],
-      "favourites_count": 20315,
-      "reblogs_count": 3537,
-      "replies_count": 489,
-      "content_zh_cn": "",
-      "content_zh_hk": "",
-      "content_ko": ""
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116604011927728051",
-      "url": "https://truthsocial.com/@realDonaldTrump/116604011927728051",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-05-20T00:13:41.913Z",
-      "created_at_text": "May 20, 2026, 12:13 AM",
-      "content": "",
-      "content_html": "",
-      "media": [
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi82MDQvMDExLzYzMi83NDkvMDk2L29yaWdpbmFsLzVkMDBjZGJjY2VkNDI1YjkuanBn",
-          "type": "image"
-        }
-      ],
-      "favourites_count": 19112,
-      "reblogs_count": 3167,
-      "replies_count": 227,
-      "content_zh_cn": "",
-      "content_zh_hk": "",
-      "content_ko": ""
+      "content_ko": "",
+      "source_hint": "cnn"
     }
   ]
 }
