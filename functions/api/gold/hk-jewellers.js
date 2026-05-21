@@ -1,74 +1,58 @@
-const SNAPSHOT_TTL_SECONDS = 1800;
+const SNAPSHOT_TTL_SECONDS = 7200;
 const SOURCE_URL = 'https://www.hkgoldking.com/?lang=zh';
-const FETCH_URLS = [
-  SOURCE_URL,
-  'https://r.jina.ai/http://www.hkgoldking.com/?lang=zh',
-  'https://r.jina.ai/http://www.hkgoldking.com/',
-];
 const USER_AGENT = 'Mozilla/5.0 (compatible; HK-ETF-Lab/1.0; +https://hketf-lab.pages.dev/)';
-const FALLBACK_SNAPSHOT = {
-  ok: true,
-  source: 'hkgoldking-fallback',
-  source_url: SOURCE_URL,
-  fetched_via: 'embedded-fallback',
-  date: '2026-05-21',
-  updated_at: '2026-05-21 12:00:23',
-  unit: 'HKD/tael',
-  stale: true,
-  shops: [
-    { key: 'chow_tai_fook', name: '周大福', buy_hkd_tael: 41090, sell_hkd_tael: 51360, source: 'hkgoldking-fallback', source_url: SOURCE_URL },
-    { key: 'chow_sang_sang', name: '周生生', buy_hkd_tael: 41090, sell_hkd_tael: 51360, source: 'hkgoldking-fallback', source_url: SOURCE_URL },
-    { key: 'lukfook', name: '六福', buy_hkd_tael: 41591, sell_hkd_tael: 51356, source: 'hkgoldking-fallback', source_url: SOURCE_URL },
-  ],
-};
 
-const SHOPS = [
-  { key: 'chow_tai_fook', name: '周大福', aliases: ['周大福'] },
-  { key: 'chow_sang_sang', name: '周生生', aliases: ['周生生'] },
-  { key: 'lukfook', name: '六福', aliases: ['六福'] },
+const TARGET_SHOPS = [
+  { key: 'chow_tai_fook', name: '周大福' },
+  { key: 'chow_sang_sang', name: '周生生' },
+  { key: 'lukfook', name: '六福' },
 ];
 
 function asNumber(text) {
-  const n = Number(String(text || '').replace(/,/g, '').trim());
+  const cleaned = String(text || '').replace(/HK\$/i, '').replace(/,/g, '').trim();
+  const n = Number(cleaned);
   return Number.isFinite(n) ? n : null;
 }
 
-function parseShop(markdown, aliases) {
-  for (const alias of aliases) {
-    const escaped = alias.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    const re = new RegExp(`(?:^|\\n)\\s*${escaped}\\s*(?:\\n|$)[\\s\\S]{0,120}?賣出價:\\s*\\*\\*HK\\$(\\d[\\d,]*)\\*\\*[\\s\\S]{0,80}?買入價:\\s*\\*\\*HK\\$(\\d[\\d,]*)\\*\\*`, 'i');
-    const m = markdown.match(re);
-    if (m) {
+function parsePayload(html) {
+  const dateMatch = html.match(/香港最新飾金價\s*(?:<[^>]*>\s*)?\((\d{4}-\d{2}-\d{2})\)/i);
+  const updatedMatch = html.match(/最後更新時間:\s*([^<\n]+)/i);
+  const cards = [...html.matchAll(/<div class="card">\s*<div class="card-header">\s*([^<]+?)\s*<\/div>\s*<div class="card-body">([\s\S]*?)<\/div>\s*<\/div>/gi)];
+
+  const shops = TARGET_SHOPS.map((target) => {
+    const found = cards.find((match) => String(match[1] || '').replace(/\s+/g, '') === target.name);
+    if (!found) {
       return {
-        sell_hkd_tael: asNumber(m[1]),
-        buy_hkd_tael: asNumber(m[2]),
+        key: target.key,
+        name: target.name,
+        buy_hkd_tael: null,
+        sell_hkd_tael: null,
+        source: 'hkgoldking-html',
+        source_url: SOURCE_URL,
       };
     }
-  }
-  return null;
-}
 
-function parsePayload(markdown) {
-  const updatedAt = markdown.match(/最後更新時間:\s*([0-9:\- ]{10,19})/i)?.[1]?.trim() || null;
-  const pageDate = markdown.match(/香港最新飾金價\s*\((\d{4}-\d{2}-\d{2})\)/)?.[1] || null;
-  const shops = SHOPS.map((shop) => {
-    const found = parseShop(markdown, shop.aliases);
+    const body = found[2] || '';
+    const sell = body.match(/賣出價:\s*<strong>\s*(HK\$[\d,]+|等待更新)\s*<\/strong>/i)?.[1] || null;
+    const buy = body.match(/買入價:\s*<strong>\s*(HK\$[\d,]+|等待更新)\s*<\/strong>/i)?.[1] || null;
+
     return {
-      key: shop.key,
-      name: shop.name,
-      buy_hkd_tael: found?.buy_hkd_tael ?? null,
-      sell_hkd_tael: found?.sell_hkd_tael ?? null,
-      source: 'hkgoldking',
+      key: target.key,
+      name: target.name,
+      buy_hkd_tael: buy && buy !== '等待更新' ? asNumber(buy) : null,
+      sell_hkd_tael: sell && sell !== '等待更新' ? asNumber(sell) : null,
+      source: 'hkgoldking-html',
       source_url: SOURCE_URL,
     };
   });
+
   return {
-    ok: shops.some((s) => s.buy_hkd_tael || s.sell_hkd_tael),
-    source: 'hkgoldking',
+    ok: shops.some((shop) => shop.buy_hkd_tael || shop.sell_hkd_tael),
+    source: 'hkgoldking-html',
     source_url: SOURCE_URL,
-    fetched_via: 'markdown.new',
-    date: pageDate,
-    updated_at: updatedAt,
+    fetched_via: 'direct-html',
+    date: dateMatch?.[1] || null,
+    updated_at: updatedMatch?.[1]?.trim() || null,
     unit: 'HKD/tael',
     shops,
   };
@@ -89,41 +73,20 @@ export async function onRequestGet(context) {
       return new Response(cached.body, { status: cached.status, headers });
     }
 
-    let markdown = '';
-    let fetchedVia = null;
-    let lastError = null;
+    const upstream = await fetch(SOURCE_URL, {
+      headers: {
+        'user-agent': USER_AGENT,
+        accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+      },
+    });
+    if (!upstream.ok) throw new Error(`upstream ${upstream.status}`);
 
-    for (const fetchUrl of FETCH_URLS) {
-      try {
-        const upstream = await fetch(fetchUrl, {
-          headers: {
-            'user-agent': USER_AGENT,
-            accept: 'text/html,text/markdown,text/plain;q=0.9,*/*;q=0.8',
-          },
-        });
-        if (!upstream.ok) throw new Error(`upstream ${upstream.status}`);
-        const text = await upstream.text();
-        const candidate = parsePayload(text);
-        if (candidate.ok) {
-          markdown = text;
-          fetchedVia = fetchUrl;
-          break;
-        }
-        throw new Error('parse failed');
-      } catch (error) {
-        lastError = error;
-      }
-    }
+    const html = await upstream.text();
+    const payload = parsePayload(html);
+    if (!payload.ok) throw new Error('failed to parse jeweller prices from source html');
 
-    if (!markdown) {
-      throw new Error(lastError instanceof Error ? lastError.message : 'failed to fetch jeweller prices');
-    }
-
-    const payload = parsePayload(markdown);
-    if (!payload.ok) throw new Error('failed to parse jeweller prices');
     payload.snapshot_at = new Date().toISOString();
     payload.snapshot_ttl_seconds = SNAPSHOT_TTL_SECONDS;
-    payload.fetched_via = fetchedVia;
 
     const body = JSON.stringify(payload, null, 2);
     const headers = new Headers({
@@ -136,19 +99,17 @@ export async function onRequestGet(context) {
     context.waitUntil(cache.put(cacheKey, response.clone()));
     return response;
   } catch (error) {
-    const fallback = {
-      ...FALLBACK_SNAPSHOT,
-      fallback_reason: error instanceof Error ? error.message : String(error),
-      snapshot_at: new Date().toISOString(),
-      snapshot_ttl_seconds: SNAPSHOT_TTL_SECONDS,
-    };
-    return new Response(JSON.stringify(fallback, null, 2), {
-      status: 200,
+    return new Response(JSON.stringify({
+      ok: false,
+      source: 'hkgoldking-html',
+      source_url: SOURCE_URL,
+      error: error instanceof Error ? error.message : String(error),
+    }, null, 2), {
+      status: 500,
       headers: {
         'content-type': 'application/json; charset=utf-8',
-        'cache-control': `public, max-age=0, s-maxage=${SNAPSHOT_TTL_SECONDS}`,
+        'cache-control': 'no-store',
         'access-control-allow-origin': '*',
-        'x-snapshot-cache': 'FALLBACK',
       },
     });
   }
