@@ -39,6 +39,14 @@ function collectCandidates(node, path = [], out = []) {
 }
 
 function pickSpotUsd(payload) {
+  const explicit = findNumeric(payload?.data?.LondonSpotGoldMarket?.price);
+  if (explicit !== null) {
+    return {
+      value: explicit,
+      path: 'data.LondonSpotGoldMarket.price',
+    };
+  }
+
   const candidates = collectCandidates(payload);
   const ranked = candidates
     .filter((item) => /(伦敦|london|xau|gold)/i.test(item.path))
@@ -108,6 +116,9 @@ export async function onRequestGet(context) {
       yongfeng_hkd_oz: yongfengHkdOz,
       yongfeng_addon_usd: YONGFENG_ADDON_USD,
       parsed_from: picked.path,
+      upstream_market: payload?.data?.LondonSpotGoldMarket?.market ?? null,
+      upstream_date: payload?.data?.LondonSpotGoldMarket?.date ?? null,
+      upstream_time: payload?.data?.LondonSpotGoldMarket?.updateTime ?? null,
       updated_at: new Date().toISOString(),
       raw_code: payload?.code ?? null,
       raw_msg: payload?.msg ?? null,
