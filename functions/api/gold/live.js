@@ -102,7 +102,24 @@ export async function onRequestGet(context) {
     if (!upstream.ok) throw new Error(`upstream ${upstream.status}`);
     const payload = await upstream.json();
     const picked = pickSpotUsd(payload);
-    if (!picked) throw new Error('London spot gold explicit field missing in upstream payload');
+    if (!picked) {
+      return new Response(JSON.stringify({
+        ok: false,
+        error: 'London spot gold explicit field missing in upstream payload',
+        debug_keys: payload && typeof payload === 'object' ? Object.keys(payload) : null,
+        debug_data_keys: payload?.data && typeof payload.data === 'object' ? Object.keys(payload.data) : null,
+        debug_payload: payload,
+        fx_usdhkd: FIXED_USDHKD,
+        yongfeng_addon_usd: YONGFENG_ADDON_USD,
+      }, null, 2), {
+        status: 500,
+        headers: {
+          'content-type': 'application/json; charset=utf-8',
+          'cache-control': 'no-store',
+          'access-control-allow-origin': '*',
+        },
+      });
+    }
     const spotUsdOz = Number(picked.value);
     const yongfengUsdOz = spotUsdOz + YONGFENG_ADDON_USD;
     const yongfengHkdOz = yongfengUsdOz * FIXED_USDHKD;
