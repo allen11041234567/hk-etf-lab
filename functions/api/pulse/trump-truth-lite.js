@@ -1,4 +1,6 @@
-const STOCK_FENGLE_MD_URL = 'https://markdown.new/https://stock.fengle.me';
+import { TRUMP_TRANSLATION_CACHE } from './trump-translation-cache.js';
+
+const CNN_SOURCE_URL = 'https://ix.cnn.io/data/truth-social/truth_archive.json';
 const CACHE_SECONDS = 60;
 const STALE_SECONDS = 300;
 const MAX_POSTS = 20;
@@ -13,88 +15,38 @@ function headers(cacheControl, state) {
   };
 }
 
-function parseRelativeMinutes(text = '') {
-  const raw = String(text || '').trim();
-  let m = raw.match(/^(\d+)h\s*前$/i) || raw.match(/^(\d+)\s*小时前$/i);
-  if (m) return Number(m[1]) * 60;
-  m = raw.match(/^(\d+)m\s*前$/i) || raw.match(/^(\d+)\s*分钟前$/i);
-  if (m) return Number(m[1]);
-  m = raw.match(/^(\d+)\s*天前$/i);
-  if (m) return Number(m[1]) * 1440;
-  return null;
+function inferMediaType(url = '') {
+  return /\.(mp4|mov|webm)(\?|$)/i.test(String(url || '').toLowerCase()) ? 'video' : 'image';
 }
 
-function isoFromRelative(text = '') {
-  const mins = parseRelativeMinutes(text);
-  if (mins === null) return null;
-  return new Date(Date.now() - mins * 60000).toISOString();
+function encodeMediaId(url = '') {
+  return btoa(url).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/g, '');
 }
 
-function parseFengleTrumpSection(markdownText = '', origin = '') {
-  const start = markdownText.indexOf('**Trump @ Truth Social**');
-  const end = markdownText.indexOf('扫码入群，获取更多实时投资信息');
-  if (start === -1 || end === -1 || end <= start) return [];
-  const section = markdownText.slice(start, end);
-  const parts = section.split('Donald J. Trump').slice(1);
-  const posts = [];
+function proxyMedia(url, origin) {
+  if (!url || !/^https?:\/\//i.test(url)) return url;
+  if (inferMediaType(url) !== 'image') return url;
+  return `${origin}/api/pulse/trump-media?id=${encodeMediaId(url)}`;
+}
 
-  for (const part of parts) {
-    const cleaned = part.replace(/\r/g, '');
-    const lines = cleaned.split('\n').map((x) => x.trim()).filter(Boolean);
-    const handleIdx = lines.indexOf('@realDonaldTrump');
-    if (handleIdx === -1) continue;
-    const bodyLines = lines.slice(handleIdx + 1);
-    if (!bodyLines.length) continue;
-
-    let timeIdx = -1;
-    for (let i = bodyLines.length - 1; i >= 0; i--) {
-      if (/(?:h|m)\s*前$/i.test(bodyLines[i]) || /(?:分钟|小時|小时|天)前$/.test(bodyLines[i])) {
-        timeIdx = i;
-        break;
-      }
-    }
-
-    let engagementA = timeIdx > 1 ? bodyLines[timeIdx - 2] : null;
-    let engagementB = timeIdx > 0 ? bodyLines[timeIdx - 1] : null;
-    let relativeTime = timeIdx >= 0 ? bodyLines[timeIdx] : null;
-    let contentLines = timeIdx > 1 ? bodyLines.slice(0, timeIdx - 2) : bodyLines.slice(0, 1);
-
-    const content = contentLines.join('\n').trim();
-    const urlMatch = content.match(/https:\/\/truthsocial\.com\/@realDonaldTrump\/\d+/i)
-      || content.match(/https:\/\/truthsocial\.com\/users\/realDonaldTrump\/statuses\/\d+/i)
-      || part.match(/https:\/\/truthsocial\.com\/@realDonaldTrump\/\d+/i)
-      || part.match(/https:\/\/truthsocial\.com\/users\/realDonaldTrump\/statuses\/\d+/i);
-    const url = urlMatch ? urlMatch[0] : null;
-
-    if (!content && !url) continue;
-
-    posts.push({
-      status_url: url,
-      url,
-      avatar: `${origin}/assets/home/trump-home.jpg`,
-      created_at: isoFromRelative(relativeTime),
-      created_at_text: relativeTime || null,
-      content: content === 'Preview' ? '' : content,
-      content_html: content === 'Preview' ? '' : content,
-      media: [],
-      favourites_count: engagementA ? Number(String(engagementA).replace(/[^\d.]/g, '')) || null : null,
-      reblogs_count: engagementB ? Number(String(engagementB).replace(/[^\d.]/g, '')) || null : null,
-      replies_count: null,
-      content_zh_cn: content === 'Preview' ? '' : content,
-      content_zh_hk: content === 'Preview' ? '' : content,
-      content_ko: content === 'Preview' ? '' : content,
-      source_hint: 'stock.fengle.me',
-    });
-  }
-
-  return posts;
+function formatCreatedAtText(createdAt) {
+  if (!createdAt) return null;
+  return new Date(createdAt).toLocaleString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+    hour12: true,
+    timeZone: 'UTC',
+  });
 }
 
 function dedupePosts(posts) {
   const seen = new Set();
   const out = [];
   for (const post of posts || []) {
-    const key = post.url || `${post.created_at_text || ''}__${post.content || ''}`;
+    const key = post.url || post.status_url || `${post.created_at || ''}__${post.content || ''}`;
     if (!key || seen.has(key)) continue;
     seen.add(key);
     out.push(post);
@@ -102,17 +54,46 @@ function dedupePosts(posts) {
   return out;
 }
 
-function hasRenderableBody(post) {
+function hasRenderableBodyOrMedia(post) {
   const raw = String(post?.content || '').trim();
-  return !!raw;
+  const hasMedia = Array.isArray(post?.media) && post.media.length > 0;
+  return !!raw || hasMedia;
+}
+
+function normalizeCnnPosts(items = [], origin = '') {
+  return (items || []).map((item) => {
+    const content = String(item?.content || '').trim();
+    const media = (Array.isArray(item?.media) ? item.media : [])
+      .filter(Boolean)
+      .map((url) => ({ url: proxyMedia(url, origin), type: inferMediaType(url) }));
+    const createdAt = item?.created_at || null;
+    const translated = TRUMP_TRANSLATION_CACHE[item?.url || ''] || {};
+    return {
+      status_url: item?.url || null,
+      url: item?.url || null,
+      avatar: `${origin}/assets/home/trump-home.jpg`,
+      created_at: createdAt,
+      created_at_text: formatCreatedAtText(createdAt),
+      content,
+      content_html: content,
+      media,
+      favourites_count: item?.favourites_count ?? null,
+      reblogs_count: item?.reblogs_count ?? null,
+      replies_count: item?.replies_count ?? null,
+      content_zh_cn: translated.content_zh_cn || content,
+      content_zh_hk: translated.content_zh_hk || content,
+      content_ko: translated.content_ko || content,
+      source_hint: 'cnn+translation-cache',
+    };
+  });
 }
 
 export async function onRequestGet(context) {
   const { request } = context;
   const url = new URL(request.url);
   const cache = caches.default;
-  const liveKey = new Request(`${url.origin}/__edge/pulse/trump-truth-lite/live-v2`);
-  const staleKey = new Request(`${url.origin}/__edge/pulse/trump-truth-lite/stale-v2`);
+  const liveKey = new Request(`${url.origin}/__edge/pulse/trump-truth-lite/live-v3`);
+  const staleKey = new Request(`${url.origin}/__edge/pulse/trump-truth-lite/stale-v3`);
 
   try {
     const cached = await cache.match(liveKey);
@@ -122,22 +103,24 @@ export async function onRequestGet(context) {
       return new Response(cached.body, { status: cached.status, headers: h });
     }
 
-    const upstream = await fetch(STOCK_FENGLE_MD_URL, {
+    const upstream = await fetch(CNN_SOURCE_URL, {
       headers: {
         'User-Agent': 'Mozilla/5.0 (compatible; HK-ETF-Lab/1.0; +https://hketf-lab.pages.dev/)',
-        Accept: 'text/markdown,text/plain,*/*',
+        Accept: 'application/json,text/plain,*/*',
       },
     });
-    if (!upstream.ok) throw new Error(`fengle upstream ${upstream.status}`);
-    const markdown = await upstream.text();
-    const posts = dedupePosts(parseFengleTrumpSection(markdown, url.origin)).filter(hasRenderableBody).slice(0, MAX_POSTS);
-    if (!posts.length) throw new Error('no trump posts parsed from fengle markdown');
+    if (!upstream.ok) throw new Error(`cnn upstream ${upstream.status}`);
+    const rawItems = await upstream.json();
+    const posts = dedupePosts(normalizeCnnPosts(rawItems, url.origin))
+      .filter(hasRenderableBodyOrMedia)
+      .slice(0, MAX_POSTS);
+    if (!posts.length) throw new Error('no posts from cnn');
 
     const body = JSON.stringify({
       ok: true,
       fetchedAt: new Date().toISOString(),
       count: posts.length,
-      source: 'stock.fengle.me',
+      source: 'cnn+translation-cache',
       latestCount: MAX_POSTS,
       posts,
     });
