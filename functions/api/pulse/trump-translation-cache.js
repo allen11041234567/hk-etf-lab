@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116618310463377683": {
+    "content_zh_cn": "格伦·雅各布斯在田纳西州的政治前途一片大好——一位非常了不起的人！！！\n特朗普总统",
+    "content_zh_hk": "格倫·雅各布斯在田納西州的政治前途一片大好——一位非常了不起的人！！！\n特朗普總統",
+    "content_ko": "글렌 제이컵스는 테네시주에서 정치적으로 큰 미래가 있습니다 - 정말 훌륭한 사람입니다!!!\n트럼프 대통령"
+  },
   "https://truthsocial.com/@realDonaldTrump/116617983460296482": {
     "content_zh_cn": "股市再创历史新高！",
     "content_zh_hk": "股市再創歷史新高！",
