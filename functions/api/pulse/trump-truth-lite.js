@@ -1,4 +1,5 @@
 import { TRUMP_TRANSLATION_CACHE } from './trump-translation-cache.js';
+import { TRUMP_MEDIA_FALLBACK_MAP } from './trump-media-fallback-map.js';
 
 const CNN_SOURCE_URL = 'https://ix.cnn.io/data/truth-social/truth_archive.json';
 const CACHE_SECONDS = 60;
@@ -63,9 +64,11 @@ function hasRenderableBodyOrMedia(post) {
 function normalizeCnnPosts(items = [], origin = '') {
   return (items || []).map((item) => {
     const content = String(item?.content || '').trim();
-    const media = (Array.isArray(item?.media) ? item.media : [])
-      .filter(Boolean)
-      .map((url) => ({ url: proxyMedia(url, origin), type: inferMediaType(url) }));
+    const rawMedia = (Array.isArray(item?.media) ? item.media : []).filter(Boolean);
+    const fallbackMedia = TRUMP_MEDIA_FALLBACK_MAP[item?.url || ''] || [];
+    const media = (fallbackMedia.length ? fallbackMedia : rawMedia.map((url) => ({ url: proxyMedia(url, origin), type: inferMediaType(url) })))
+      .map((m) => ({ ...m, url: m?.url || '' }))
+      .filter((m) => !!m.url);
     const createdAt = item?.created_at || null;
     const translated = TRUMP_TRANSLATION_CACHE[item?.url || ''] || {};
     return {
