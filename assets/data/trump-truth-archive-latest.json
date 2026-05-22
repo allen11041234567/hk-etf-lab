@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-05-22T23:39:47.862Z",
+  "fetchedAt": "2026-05-22T23:53:37.684Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
@@ -28,8 +28,8 @@
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-05-22T22:20:27.982Z",
       "created_at_text": "May 22, 2026, 10:20 PM",
-      "content": "",
-      "content_html": "",
+      "content": "The LEGENDARY NASCAR Driver Kyle Busch tragically and unexpectedly passed away yesterday. He was a true talent who loved NASCAR and its fans. Kyle was a WINNER! He was a two time Cup Champion, and holds the All Time Record for WINS in NASCAR's Top Three series, and even won another just last weekend. Kyle's wife, Samantha, and their two beautiful children are in our thoughts and prayers. Samantha was at the White House in October, for IVF. She truly loved Kyle! Rest in Peace Kyle Busch. You will always be a LEGEND! President DONALD J. TRUMP",
+      "content_html": "The LEGENDARY NASCAR Driver Kyle Busch tragically and unexpectedly passed away yesterday. He was a true talent who loved NASCAR and its fans. Kyle was a WINNER! He was a two time Cup Champion, and holds the All Time Record for WINS in NASCAR's Top Three series, and even won another just last weekend. Kyle's wife, Samantha, and their two beautiful children are in our thoughts and prayers. Samantha was at the White House in October, for IVF. She truly loved Kyle! Rest in Peace Kyle Busch. You will always be a LEGEND! President DONALD J. TRUMP",
       "media": [
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2MzkyLzRlMjU0ZTQxZDdjNThlMTcuanBn",
@@ -39,9 +39,9 @@
       "favourites_count": 6444,
       "reblogs_count": 1601,
       "replies_count": 670,
-      "content_zh_cn": "",
-      "content_zh_hk": "",
-      "content_ko": "",
+      "content_zh_cn": "The LEGENDARY NASCAR Driver Kyle Busch tragically and unexpectedly passed away yesterday. He was a true talent who loved NASCAR and its fans. Kyle was a WINNER! He was a two time Cup Champion, and holds the All Time Record for WINS in NASCAR's Top Three series, and even won another just last weekend. Kyle's wife, Samantha, and their two beautiful children are in our thoughts and prayers. Samantha was at the White House in October, for IVF. She truly loved Kyle! Rest in Peace Kyle Busch. You will always be a LEGEND! President DONALD J. TRUMP",
+      "content_zh_hk": "The LEGENDARY NASCAR Driver Kyle Busch tragically and unexpectedly passed away yesterday. He was a true talent who loved NASCAR and its fans. Kyle was a WINNER! He was a two time Cup Champion, and holds the All Time Record for WINS in NASCAR's Top Three series, and even won another just last weekend. Kyle's wife, Samantha, and their two beautiful children are in our thoughts and prayers. Samantha was at the White House in October, for IVF. She truly loved Kyle! Rest in Peace Kyle Busch. You will always be a LEGEND! President DONALD J. TRUMP",
+      "content_ko": "The LEGENDARY NASCAR Driver Kyle Busch tragically and unexpectedly passed away yesterday. He was a true talent who loved NASCAR and its fans. Kyle was a WINNER! He was a two time Cup Champion, and holds the All Time Record for WINS in NASCAR's Top Three series, and even won another just last weekend. Kyle's wife, Samantha, and their two beautiful children are in our thoughts and prayers. Samantha was at the White House in October, for IVF. She truly loved Kyle! Rest in Peace Kyle Busch. You will always be a LEGEND! President DONALD J. TRUMP",
       "source_hint": "stock.fengle.me"
     },
     {
