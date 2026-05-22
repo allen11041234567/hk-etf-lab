@@ -1,3 +1,4 @@
+// gold-live-explicit-v2
 const SNAPSHOT_TTL_SECONDS = 30;
 const USER_AGENT = 'Mozilla/5.0 (compatible; HK-ETF-Lab/1.0; +https://hketf-lab.pages.dev/)';
 const FIXED_USDHKD = 7.85;
@@ -101,7 +102,7 @@ export async function onRequestGet(context) {
     if (!upstream.ok) throw new Error(`upstream ${upstream.status}`);
     const payload = await upstream.json();
     const picked = pickSpotUsd(payload);
-    if (!picked) throw new Error('Failed to locate London spot gold price in upstream payload');
+    if (!picked) throw new Error('London spot gold explicit field missing in upstream payload');
     const spotUsdOz = Number(picked.value);
     const yongfengUsdOz = spotUsdOz + YONGFENG_ADDON_USD;
     const yongfengHkdOz = yongfengUsdOz * FIXED_USDHKD;
