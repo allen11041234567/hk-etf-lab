@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116617983460296482": {
+    "content_zh_cn": "股市再创历史新高！",
+    "content_zh_hk": "股市再創歷史新高！",
+    "content_ko": "증시 사상 최고치 경신!"
+  },
   "https://truthsocial.com/@realDonaldTrump/116616669222083429": {
     "content_zh_cn": "科尔伯特终于在CBS完蛋了。真难以置信，他竟然撑了这么久！没才华，没收视，没生气。他简直像个死人。随便从大街上拉个人来，都比这个十足的混蛋强。谢天谢地，他总算滚蛋了！",
     "content_zh_hk": "科爾伯特終於喺CBS玩完。真係難以置信，佢竟然捱咗咁耐！冇才華，冇收視，冇生氣。佢簡直就像個死人一樣。隨便喺街上搵個人返嚟，都比呢個十足嘅混蛋更好。謝天謝地，佢終於走咗！",
