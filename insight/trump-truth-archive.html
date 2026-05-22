@@ -86,7 +86,8 @@
   </template>
 
   <script>
-    const FEED='/api/pulse/trump-truth-lite';
+    const LIVE_FEED='/api/pulse/trump-truth-lite';
+    const FALLBACK_FEED='/assets/data/trump-truth-lite-latest.json';
     const REFRESH_MS=60000;
     let currentLang='zh';
     let latestPosts=[];
@@ -123,7 +124,8 @@
         const mediaWrap=el.querySelector('.media');
         (post.media||[]).forEach(item=>{const type=((item&&item.type)||'').toLowerCase(); const rawUrl=(typeof item==='string')?item:((item&&(item.url||item.preview_url||item.remote_url))||''); const url=normalizeMediaUrl(rawUrl); if(!url) return; if(type.includes('video') || /\.(mp4|mov|webm)(\?|$)/i.test(url)) return; const img=document.createElement('img'); img.src=url; img.alt='post media'; img.loading='lazy'; mediaWrap.appendChild(img); });
         el.querySelector('.origin-link').href=post.url||post.status_url||'https://www.trumpstruth.org/';postsEl.appendChild(el);}catch(err){console.error('render post failed', err, post);}});}
-    async function refresh(){if(document.hidden) return; try{const resp=await fetch(FEED,{cache:'no-store'});if(!resp.ok) throw new Error(`HTTP ${resp.status}`);const data=await resp.json();if(!data.ok) throw new Error(data.error||'unknown error');errorBox.style.display='none';render(data.posts||[]);}catch(err){errorBox.textContent='当前内容更新稍慢，请稍后刷新重试';errorBox.style.display='block';}}
+    async function fetchJson(url, cacheMode='no-store'){const resp=await fetch(url,{cache:cacheMode}); if(!resp.ok) throw new Error(`HTTP ${resp.status}`); return await resp.json();}
+    async function refresh(){if(document.hidden) return; try{const data=await fetchJson(LIVE_FEED,'no-store'); if(!data.ok) throw new Error(data.error||'unknown error'); errorBox.style.display='none'; render(data.posts||[]);}catch(err){try{const fallback=await fetchJson(FALLBACK_FEED,'no-store'); if(!fallback.ok) throw new Error(fallback.error||'fallback error'); errorBox.textContent='当前已切换到最近一次成功快照'; errorBox.style.display='block'; render(fallback.posts||[]);}catch(fallbackErr){errorBox.textContent='当前内容更新稍慢，请稍后刷新重试'; errorBox.style.display='block';}}}
     document.addEventListener('visibilitychange',()=>{ if(!document.hidden) refresh(); });
     bindLangToggle(); refresh(); setInterval(refresh,REFRESH_MS);
   </script>
