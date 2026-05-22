@@ -202,7 +202,7 @@
         <div class="panel hero-stat">
           <div class="label">伦敦金现货</div>
           <div class="value-xl" id="hero-spot">--</div>
-          <div class="subline">原单位保留为 USD/oz，30 秒自动刷新。</div>
+          <div class="subline">原单位保留为 USD/oz，页面每 30 秒刷新检查一次最新可得报价。</div>
         </div>
         <div class="panel hero-stat">
           <div class="label">永丰参考价</div>
@@ -216,7 +216,7 @@
       <div class="section-head">
         <div>
           <div class="section-title">实时金价</div>
-          <div class="section-desc">伦敦金现货保留原单位展示，只在永丰计算区做 HKD 换算。</div>
+          <div class="section-desc">伦敦金现货保留原单位展示，只在永丰计算区做 HKD 换算。页面每 30 秒刷新检查，上游价格按源站频率更新。</div>
         </div>
         <div class="pill"><span class="dot"></span><span id="live-status">等待连接接口</span></div>
       </div>
@@ -357,7 +357,7 @@
         return;
       }
       currentLive = payload;
-      status.textContent = '实时金价接口已连接';
+      status.textContent = '实时金价接口已连接（30 秒刷新检查）';
       document.getElementById('hero-spot').textContent = `US$${money(payload.spot_usd_oz)}/oz`;
       document.getElementById('hero-yongfeng').textContent = `HK$${money(payload.yongfeng_hkd_oz)}/oz`;
       document.getElementById('spot-usd').textContent = `US$${money(payload.spot_usd_oz)}`;
