@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-05-23T18:48:07.270Z",
+  "fetchedAt": "2026-05-23T19:02:52.324Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
@@ -79,6 +79,10 @@
       "content": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116624948733776921",
       "content_html": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116624948733776921",
       "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi82MjQvOTQ4LzUyMi81MzYvNDk3L29yaWdpbmFsL2EwZjMzOGMzMDUzNTlkMWEubXA0",
+          "type": "video"
+        },
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NDA4LzVjZWRmMTBhODg5MDdiOTYucG5n",
           "type": "image"
@@ -202,7 +206,7 @@
       "content_html": "President Trump's Fixation On Heaven Is Good For America: https://www.americanthinker.com/articles/2026/03/president\\_trump\\_s\\_fixation\\_on\\_heaven\\_is\\_good\\_for\\_america.html",
       "media": [
         {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi82MjQvOTM5LzM3MS82OTYvMTg0L29yaWdpbmFsL2Q1MWJmYWY0ZTBhYjY0OGYuanBn",
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NDAwL2Q1MWJmYWY0ZTBhYjY0OGYuanBn",
           "type": "image"
         }
       ],
