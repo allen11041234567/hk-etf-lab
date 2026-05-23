@@ -9,6 +9,16 @@ export const TRUMP_TRANSLATION_CACHE = {
     "content_zh_hk": "https://www.pressandjournal.co.uk/fp/sport/golf/7019115/trump-international-lands-colin-montgomeries-seal-of-approval/",
     "content_ko": "https://www.pressandjournal.co.uk/fp/sport/golf/7019115/trump-international-lands-colin-montgomeries-seal-of-approval/"
   },
+  "https://truthsocial.com/@realDonaldTrump/116624949486785240": {
+    "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116624948733776921",
+    "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116624948733776921",
+    "content_ko": "리트윗: https://truthsocial.com/users/realDonaldTrump/statuses/116624948733776921"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116624946382065756": {
+    "content_zh_cn": "转发 @realPatriotFreedomProject\n那些如今因特赦而情绪失控的民主党人和反特朗普人士，在美国人被不公正的刑期压垮、经济上被摧毁、并沦为被武器化司法体系政治打击的对象时，却一句话都没说。\n\n可笑的是，\"宽恕\"现在突然变得重要了。\n\n我亲眼看过检察官试图把普通定罪变成毁掉一生的判刑。我也看过一些家庭被压垮，而媒体却无动于衷，只因为被告的政治立场让他们更容易被人憎恨。\n\n有些人是无辜的。有些人显然被过度起诉。很多人面对这台机器时，从一开始就没有得到公平对待的机会。\n\n之所以设有特赦和减刑机制，就是因为这个体系并不完美，而假装它完美无缺，本身就是危险的。\n\n这正是我们最新一篇《司法武器化观察》文章要讨论的内容。@realDonaldTrump open.substack.com/pub/patriotfre…",
+    "content_zh_hk": "轉發 @realPatriotFreedomProject\n那些如今因特赦而情緒失控的民主黨人和反特朗普人士，在美國人被不公正刑期壓垮、在經濟上被摧毀，並成為被武器化司法體系政治打擊的對象時，卻一句話都沒有說。\n\n可笑的是，\"寬恕\"現在突然變得重要了。\n\n我親眼見過檢察官試圖把普通定罪變成毀掉一生的判刑。我也見過一些家庭被壓垮，而媒體卻聳聳肩、毫不在意，只因為被告的政治立場令他們更容易被人憎恨。\n\n有些人是無辜的。有些人明顯被過度起訴。很多人在面對這台機器時，從一開始就沒有得到公平對待的機會。\n\n之所以設有特赦和寬免機制，就是因為這個體系並不完美，而假裝它完美無缺，本身就是危險的。\n\n這正是我們最新一篇《司法武器化觀察》文章要談的內容。@realDonaldTrump open.substack.com/pub/patriotfre…",
+    "content_ko": "RT @realPatriotFreedomProject\n지금 사면 문제로 격앙된 민주당 인사들과 반(反)트럼프 진영은, 미국인들이 부당한 징역형에 짓눌리고 경제적으로 파괴되며, 무기화된 사법 시스템의 정치적 표적이 되었을 때는 아무 말도 하지 않았습니다.\n\n재밌는 건, 이제 와서야 \"자비\"가 갑자기 중요해졌다는 점입니다.\n\n저는 검사들이 통상의 유죄 판결을 인생을 무너뜨리는 형량으로 바꾸려 하는 모습을 지켜봤습니다. 또 피고인의 정치적 성향 때문에 사람들이 그들을 미워하기 쉬워졌다는 이유로, 가족들이 무너지는 동안 언론이 대수롭지 않게 넘기는 모습도 봤습니다.\n\n어떤 이들은 무고했습니다. 어떤 이들은 명백히 과도하게 기소됐습니다. 많은 이들은 이 시스템을 상대로 애초에 공정한 기회조차 갖지 못했습니다.\n\n사면과 형 감경 제도가 존재하는 이유는, 이 시스템이 완벽하지 않기 때문이며, 그렇지 않은 척하는 것은 위험하기 때문입니다.\n\n이것이 바로 저희의 최신 \"Weaponization Watch\" 글이 다루는 내용입니다. @realDonaldTrump open.substack.com/pub/patriotfre…"
+  },
   "https://truthsocial.com/@realDonaldTrump/116624945545360144": {
     "content_zh_cn": "https://www.foxnews.com/politics/dem-governor-hot-seat-testing-limits-authority-major-move-ice",
     "content_zh_hk": "https://www.foxnews.com/politics/dem-governor-hot-seat-testing-limits-authority-major-move-ice",
