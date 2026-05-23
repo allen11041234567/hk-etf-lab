@@ -1,4 +1,29 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116624958046118800": {
+    "content_zh_cn": "感谢埃尔多安总统！\n\n“特朗普总统是这个世界数百年来一直在等待的领导者——他不只是谈论强大——他本身就体现了这种力量。”",
+    "content_zh_hk": "感謝埃爾多安總統！\n\n「特朗普總統是這個世界數百年來一直在等待的領導者——他不只是談論強大——他本身就體現了這種力量。」",
+    "content_ko": "에르도안 대통령, 감사합니다!\n\n“트럼프 대통령은 세계가 수세기 동안 기다려온 지도자입니다 — 그는 힘을 말로만 하는 것이 아니라 — 그 자체로 힘을 구현합니다.”"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116624953059006946": {
+    "content_zh_cn": "https://www.pressandjournal.co.uk/fp/sport/golf/7019115/trump-international-lands-colin-montgomeries-seal-of-approval/",
+    "content_zh_hk": "https://www.pressandjournal.co.uk/fp/sport/golf/7019115/trump-international-lands-colin-montgomeries-seal-of-approval/",
+    "content_ko": "https://www.pressandjournal.co.uk/fp/sport/golf/7019115/trump-international-lands-colin-montgomeries-seal-of-approval/"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116624945545360144": {
+    "content_zh_cn": "https://www.foxnews.com/politics/dem-governor-hot-seat-testing-limits-authority-major-move-ice",
+    "content_zh_hk": "https://www.foxnews.com/politics/dem-governor-hot-seat-testing-limits-authority-major-move-ice",
+    "content_ko": "https://www.foxnews.com/politics/dem-governor-hot-seat-testing-limits-authority-major-move-ice"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116624942172469666": {
+    "content_zh_cn": "我们都很想念这位大忽悠！",
+    "content_zh_hk": "我們都很想念這位大忽悠！",
+    "content_ko": "우리 모두 그 허풍선이가 그립습니다!"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116624941023353466": {
+    "content_zh_cn": "特朗普总统对天堂的执念，对美国有利：https://www.americanthinker.com/articles/2026/03/president_trump_s_fixation_on_heaven_is_good_for_america.html",
+    "content_zh_hk": "特朗普總統對天堂的執念，對美國有利：https://www.americanthinker.com/articles/2026/03/president_trump_s_fixation_on_heaven_is_good_for_america.html",
+    "content_ko": "트럼프 대통령의 천국에 대한 집착은 미국에 도움이 된다: https://www.americanthinker.com/articles/2026/03/president_trump_s_fixation_on_heaven_is_good_for_america.html"
+  },
   "https://truthsocial.com/@realDonaldTrump/116624938660853680": {
     "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116624937762459378",
     "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116624937762459378",
