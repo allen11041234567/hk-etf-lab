@@ -1,4 +1,29 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116624938660853680": {
+    "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116624937762459378",
+    "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116624937762459378",
+    "content_ko": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116624937762459378"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116624936292481598": {
+    "content_zh_cn": "共和党掌控的众议院应将《SAVE America Act》附加到其提交给共和党参议院的所有议案上：https://www.dailysignal.com/2026/05/15/save-act-house-senate/",
+    "content_zh_hk": "共和黨掌控的眾議院應將《SAVE America Act》附加到其提交給共和黨參議院的所有議案上：https://www.dailysignal.com/2026/05/15/save-act-house-senate/",
+    "content_ko": "공화당이 장악한 하원은 공화당 상원에 보내는 모든 법안에 《SAVE America Act》를 반드시 붙여야 한다: https://www.dailysignal.com/2026/05/15/save-act-house-senate/"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116624935281735015": {
+    "content_zh_cn": "美国对公路的热爱，历久弥新：https://www.washingtonexaminer.com/opinion/columnists/4570231/america-love-affair-roads-automobiles/",
+    "content_zh_hk": "美國對公路的熱愛，歷久彌新：https://www.washingtonexaminer.com/opinion/columnists/4570231/america-love-affair-roads-automobiles/",
+    "content_ko": "미국의 도로에 대한 애정은 여전히 이어지고 있습니다: https://www.washingtonexaminer.com/opinion/columnists/4570231/america-love-affair-roads-automobiles/"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116624933679947822": {
+    "content_zh_cn": "大获全胜！\nhttps://www.washingtonexaminer.com/in_focus/4571185/thomas-massie-useless-tenure-congress-coming-to-an-end/",
+    "content_zh_hk": "大獲全勝！\nhttps://www.washingtonexaminer.com/in_focus/4571185/thomas-massie-useless-tenure-congress-coming-to-an-end/",
+    "content_ko": "대승했다!\nhttps://www.washingtonexaminer.com/in_focus/4571185/thomas-massie-useless-tenure-congress-coming-to-an-end/"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116624932696824292": {
+    "content_zh_cn": "特朗普的全球布局：对伊朗和委内瑞拉的打击，如何推动美国经济复苏并牵制中国：https://loomered.com/2026/04/28/trumps-global-gambit-how-strikes-on-iran-and-venezuela-are-fueling-americas-economic-comeback-and-checking-china/",
+    "content_zh_hk": "特朗普的全球布局：對伊朗和委內瑞拉的打擊，如何推動美國經濟復甦並牽制中國：https://loomered.com/2026/04/28/trumps-global-gambit-how-strikes-on-iran-and-venezuela-are-fueling-americas-economic-comeback-and-checking-china/",
+    "content_ko": "트럼프의 글로벌 승부수: 이란과 베네수엘라에 대한 타격이 어떻게 미국 경제의 회복을 이끌고 중국을 견제하고 있는가: https://loomered.com/2026/04/28/trumps-global-gambit-how-strikes-on-iran-and-venezuela-are-fueling-americas-economic-comeback-and-checking-china/"
+  },
   "https://truthsocial.com/@realDonaldTrump/116624040731909127": {
     "content_zh_cn": "一个“蠢主党”！\n别让这个满口谎言的下三滥上福克斯新闻！",
     "content_zh_hk": "一個「蠢主黨」！\n唔好畀呢個滿口謊言嘅下三濫上霍士新聞！",
