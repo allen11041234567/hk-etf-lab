@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-05-23T17:04:47.649Z",
+  "fetchedAt": "2026-05-23T17:21:28.753Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
@@ -17,9 +17,9 @@
       "favourites_count": 96,
       "reblogs_count": 28,
       "replies_count": 3,
-      "content_zh_cn": "Thank you President Erdogan!\"President Trump is the leader the world has been awaiting for centuries — He doesn't just talk about strength — He embodies it.\"",
-      "content_zh_hk": "Thank you President Erdogan!\"President Trump is the leader the world has been awaiting for centuries — He doesn't just talk about strength — He embodies it.\"",
-      "content_ko": "Thank you President Erdogan!\"President Trump is the leader the world has been awaiting for centuries — He doesn't just talk about strength — He embodies it.\"",
+      "content_zh_cn": "感谢埃尔多安总统！\n\n“特朗普总统是这个世界数百年来一直在等待的领导者——他不只是谈论强大——他本身就体现了这种力量。”",
+      "content_zh_hk": "感謝埃爾多安總統！\n\n「特朗普總統是這個世界數百年來一直在等待的領導者——他不只是談論強大——他本身就體現了這種力量。」",
+      "content_ko": "에르도안 대통령, 감사합니다!\n\n“트럼프 대통령은 세계가 수세기 동안 기다려온 지도자입니다 — 그는 힘을 말로만 하는 것이 아니라 — 그 자체로 힘을 구현합니다.”",
       "source_hint": "stock.fengle.me"
     },
     {
@@ -28,20 +28,24 @@
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-05-23T17:00:09.261Z",
       "created_at_text": "May 23, 2026, 5:00 PM",
-      "content": "",
-      "content_html": "",
+      "content": "Preview\nPreview\nPreview",
+      "content_html": "Preview\nPreview\nPreview",
       "media": [
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NDA0L2ZkNmI3YjE3ZTcxYTRhMWQuanBn",
+          "type": "image"
+        },
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NDA1LzQ1NTk3ZDY4NzZhMjM1ZGYuanBn",
           "type": "image"
         }
       ],
       "favourites_count": 125,
       "reblogs_count": 45,
       "replies_count": 9,
-      "content_zh_cn": "",
-      "content_zh_hk": "",
-      "content_ko": "",
+      "content_zh_cn": "Preview\nPreview\nPreview",
+      "content_zh_hk": "Preview\nPreview\nPreview",
+      "content_ko": "Preview\nPreview\nPreview",
       "source_hint": "stock.fengle.me"
     },
     {
@@ -54,7 +58,7 @@
       "content_html": "https://www.pressandjournal.co.uk/fp/sport/golf/7019115/trump-international-lands-colin-montgomeries-seal-of-approval/",
       "media": [
         {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi82MjQvOTUxLzM0OS8zNzcvOTg0L29yaWdpbmFsLzE0NDhiYTNjNDZlNmYwMGQuanBn",
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NDA3LzE0NDhiYTNjNDZlNmYwMGQuanBn",
           "type": "image"
         }
       ],
@@ -115,7 +119,7 @@
       "content_html": "https://www.foxnews.com/politics/dem-governor-hot-seat-testing-limits-authority-major-move-ice",
       "media": [
         {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi82MjQvOTQ1LzIwNy8xOTYvMDM2L29yaWdpbmFsLzVkMzMzMTU5MDg1MGRiZmEuanBn",
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NDExLzVkMzMzMTU5MDg1MGRiZmEuanBn",
           "type": "image"
         }
       ],
@@ -133,20 +137,20 @@
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-05-23T16:57:06.341Z",
       "created_at_text": "May 23, 2026, 4:57 PM",
-      "content": "",
-      "content_html": "",
+      "content": "https://www.foxnews.com/politics/dem-governor-hot-seat-testing-limits-authority-major-move-ice\nPreview",
+      "content_html": "https://www.foxnews.com/politics/dem-governor-hot-seat-testing-limits-authority-major-move-ice\nPreview",
       "media": [
         {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi82MjQvOTQ0LzE1NC85NjUvODAxL29yaWdpbmFsL2U3MTczNzBhMzY1YWMyMmUuanBn",
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NDEyL2U3MTczNzBhMzY1YWMyMmUuanBn",
           "type": "image"
         }
       ],
       "favourites_count": 273,
       "reblogs_count": 102,
       "replies_count": 16,
-      "content_zh_cn": "",
-      "content_zh_hk": "",
-      "content_ko": "",
+      "content_zh_cn": "https://www.foxnews.com/politics/dem-governor-hot-seat-testing-limits-authority-major-move-ice\nPreview",
+      "content_zh_hk": "https://www.foxnews.com/politics/dem-governor-hot-seat-testing-limits-authority-major-move-ice\nPreview",
+      "content_ko": "https://www.foxnews.com/politics/dem-governor-hot-seat-testing-limits-authority-major-move-ice\nPreview",
       "source_hint": "stock.fengle.me"
     },
     {
@@ -159,16 +163,16 @@
       "content_html": "We all miss the Huckster!",
       "media": [
         {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi82MjQvOTQxLzk5Ny80MDgvODA4L29yaWdpbmFsL2Y0NmQyMWQ5NThiMjU2M2UuanBn",
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NDEzL2Y0NmQyMWQ5NThiMjU2M2UuanBn",
           "type": "image"
         }
       ],
       "favourites_count": 583,
       "reblogs_count": 146,
       "replies_count": 60,
-      "content_zh_cn": "We all miss the Huckster!",
-      "content_zh_hk": "We all miss the Huckster!",
-      "content_ko": "We all miss the Huckster!",
+      "content_zh_cn": "我们都很想念这位大忽悠！",
+      "content_zh_hk": "我們都很想念這位大忽悠！",
+      "content_ko": "우리 모두 그 허풍선이가 그립습니다!",
       "source_hint": "stock.fengle.me"
     },
     {
@@ -183,9 +187,9 @@
       "favourites_count": 494,
       "reblogs_count": 154,
       "replies_count": 30,
-      "content_zh_cn": "President Trump's Fixation On Heaven Is Good For America: https://www.americanthinker.com/articles/2026/03/president_trump_s_fixation_on_heaven_is_good_for_america.html",
-      "content_zh_hk": "President Trump's Fixation On Heaven Is Good For America: https://www.americanthinker.com/articles/2026/03/president_trump_s_fixation_on_heaven_is_good_for_america.html",
-      "content_ko": "President Trump's Fixation On Heaven Is Good For America: https://www.americanthinker.com/articles/2026/03/president_trump_s_fixation_on_heaven_is_good_for_america.html",
+      "content_zh_cn": "特朗普总统对天堂的执念，对美国有利：https://www.americanthinker.com/articles/2026/03/president_trump_s_fixation_on_heaven_is_good_for_america.html",
+      "content_zh_hk": "特朗普總統對天堂的執念，對美國有利：https://www.americanthinker.com/articles/2026/03/president_trump_s_fixation_on_heaven_is_good_for_america.html",
+      "content_ko": "트럼프 대통령의 천국에 대한 집착은 미국에 도움이 된다: https://www.americanthinker.com/articles/2026/03/president_trump_s_fixation_on_heaven_is_good_for_america.html",
       "source_hint": "stock.fengle.me"
     },
     {
@@ -194,8 +198,8 @@
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-05-23T16:55:53.145Z",
       "created_at_text": "May 23, 2026, 4:55 PM",
-      "content": "",
-      "content_html": "",
+      "content": "President Trump's Fixation On Heaven Is Good For America: https://www.americanthinker.com/articles/2026/03/president\\_trump\\_s\\_fixation\\_on\\_heaven\\_is\\_good\\_for\\_america.html",
+      "content_html": "President Trump's Fixation On Heaven Is Good For America: https://www.americanthinker.com/articles/2026/03/president\\_trump\\_s\\_fixation\\_on\\_heaven\\_is\\_good\\_for\\_america.html",
       "media": [
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi82MjQvOTM5LzM3MS82OTYvMTg0L29yaWdpbmFsL2Q1MWJmYWY0ZTBhYjY0OGYuanBn",
@@ -205,9 +209,9 @@
       "favourites_count": 397,
       "reblogs_count": 120,
       "replies_count": 11,
-      "content_zh_cn": "",
-      "content_zh_hk": "",
-      "content_ko": "",
+      "content_zh_cn": "President Trump's Fixation On Heaven Is Good For America: https://www.americanthinker.com/articles/2026/03/president\\_trump\\_s\\_fixation\\_on\\_heaven\\_is\\_good\\_for\\_america.html",
+      "content_zh_hk": "President Trump's Fixation On Heaven Is Good For America: https://www.americanthinker.com/articles/2026/03/president\\_trump\\_s\\_fixation\\_on\\_heaven\\_is\\_good\\_for\\_america.html",
+      "content_ko": "President Trump's Fixation On Heaven Is Good For America: https://www.americanthinker.com/articles/2026/03/president\\_trump\\_s\\_fixation\\_on\\_heaven\\_is\\_good\\_for\\_america.html",
       "source_hint": "stock.fengle.me"
     },
     {
@@ -219,6 +223,10 @@
       "content": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116624937762459378",
       "content_html": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116624937762459378",
       "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NDAxLzc1NzA3ODZjZmQ4YTk5NGYuanBn",
+          "type": "image"
+        },
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NDAyLzdkMTcxYWJkNjQ4NTM1YTAuanBn",
           "type": "image"
