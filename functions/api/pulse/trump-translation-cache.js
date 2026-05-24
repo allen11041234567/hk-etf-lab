@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116629885537147552": {
+    "content_zh_cn": "那些“愚蠢党人”不想让大家捕鱼。\n还在法庭上跟我们对着干。\n这对环境不利。真令人惊讶！\n——特朗普总统",
+    "content_zh_hk": "那些「愚蠢黨人」不想讓大家捕魚。\n還在法庭上跟我們對着幹。\n這對環境不利。真令人驚訝！\n——特朗普總統",
+    "content_ko": "그 멍청한 민주당원들은 어업을 허용하려 하지 않습니다.\n법정에서 우리와 맞서고 있습니다.\n환경에 좋지 않습니다. 놀랍습니다!\n— 트럼프 대통령"
+  },
   "https://truthsocial.com/@realDonaldTrump/116629487458314957": {
     "content_zh_cn": "“习近平主席和特朗普总统都非常了不起！”",
     "content_zh_hk": "“習近平主席和特朗普總統都非常了不起！”",
