@@ -1,4 +1,14 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116629487458314957": {
+    "content_zh_cn": "“习近平主席和特朗普总统都非常了不起！”",
+    "content_zh_hk": "“習近平主席和特朗普總統都非常了不起！”",
+    "content_ko": "“시진핑 주석과 트럼프 대통령은 정말 훌륭합니다!”"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116629486748113104": {
+    "content_zh_cn": "“习近平主席和特朗普总统都太了不起了！”",
+    "content_zh_hk": "“習近平主席和特朗普總統都太了不起了！”",
+    "content_ko": "“시진핑 주석과 트럼프 대통령은 정말 대단합니다!”"
+  },
   "https://truthsocial.com/@realDonaldTrump/116629446282651415": {
     "content_zh_cn": "这是一群糟糕透顶的人（病态！）。他们对我们伟大的国家极具破坏性。通过将权力武器化，造成了巨大的伤害！特朗普总统",
     "content_zh_hk": "這是一群糟糕透頂的人（病態！）。他們對我們偉大的國家極具破壞性。透過將權力武器化，造成了巨大的傷害！特朗普總統",
