@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116629446282651415": {
+    "content_zh_cn": "这是一群糟糕透顶的人（病态！）。他们对我们伟大的国家极具破坏性。通过将权力武器化，造成了巨大的伤害！特朗普总统",
+    "content_zh_hk": "這是一群糟糕透頂的人（病態！）。他們對我們偉大的國家極具破壞性。透過將權力武器化，造成了巨大的傷害！特朗普總統",
+    "content_ko": "이들은 형편없는(병든!) 사람들이다. 우리 위대한 국가에 매우 파괴적이다. 권력의 무기화를 통해 엄청난 피해를 초래했다! 트럼프 대통령"
+  },
   "https://truthsocial.com/@realDonaldTrump/116627825055821275": {
     "content_zh_cn": "“出生公民权对我们的国家来说无异于自杀！”——马克·莱文",
     "content_zh_hk": "“出生公民權對我們的國家來說無異於自殺！”——馬克·萊文",
