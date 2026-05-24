@@ -1,10 +1,120 @@
 {
   "ok": true,
-  "fetchedAt": "2026-05-24T12:04:56.072Z",
+  "fetchedAt": "2026-05-24T12:22:29.771Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
   "posts": [
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116629488324725621",
+      "url": "https://truthsocial.com/@realDonaldTrump/116629488324725621",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-05-24T12:12:40.879Z",
+      "created_at_text": "May 24, 2026, 12:12 PM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NDE2LzU4ZmVkMjk2MjMzYWY1YjcuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 377,
+      "reblogs_count": 107,
+      "replies_count": 38,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116629487458314957",
+      "url": "https://truthsocial.com/@realDonaldTrump/116629487458314957",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-05-24T12:12:27.661Z",
+      "created_at_text": "May 24, 2026, 12:12 PM",
+      "content": "\"President Xi and President Trump are AMAZING!\"",
+      "content_html": "\"President Xi and President Trump are AMAZING!\"",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NDE3L2ZkNmVlMTA2NzgzZjM3NDkuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 281,
+      "reblogs_count": 58,
+      "replies_count": 19,
+      "content_zh_cn": "“习近平主席和特朗普总统都非常了不起！”",
+      "content_zh_hk": "“習近平主席和特朗普總統都非常了不起！”",
+      "content_ko": "“시진핑 주석과 트럼프 대통령은 정말 훌륭합니다!”",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116629486748113104",
+      "url": "https://truthsocial.com/@realDonaldTrump/116629486748113104",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-05-24T12:12:16.821Z",
+      "created_at_text": "May 24, 2026, 12:12 PM",
+      "content": "\"President Xi and President Trump are AMAZING!\"",
+      "content_html": "\"President Xi and President Trump are AMAZING!\"",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NDE4LzNmN2JkYzRhZDIyMmZiMDkuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 279,
+      "reblogs_count": 60,
+      "replies_count": 18,
+      "content_zh_cn": "“习近平主席和特朗普总统都太了不起了！”",
+      "content_zh_hk": "“習近平主席和特朗普總統都太了不起了！”",
+      "content_ko": "“시진핑 주석과 트럼프 대통령은 정말 대단합니다!”",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116629447379986678",
+      "url": "https://truthsocial.com/@realDonaldTrump/116629447379986678",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-05-24T12:02:16.112Z",
+      "created_at_text": "May 24, 2026, 12:02 PM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NDE0L2I4ZjMxNmFiMjBmMmMyYzQuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 1078,
+      "reblogs_count": 216,
+      "replies_count": 124,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116629446282651415",
+      "url": "https://truthsocial.com/@realDonaldTrump/116629446282651415",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-05-24T12:01:59.369Z",
+      "created_at_text": "May 24, 2026, 12:01 PM",
+      "content": "This is a bad (Sick!) group of people. Very destructive to our great Nation. Caused tremendous damage through Weaponization! President DJT",
+      "content_html": "This is a bad (Sick!) group of people. Very destructive to our great Nation. Caused tremendous damage through Weaponization! President DJT",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NDE1Lzk1ZDMyMDU1N2UwNGVlZjUuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 1680,
+      "reblogs_count": 571,
+      "replies_count": 260,
+      "content_zh_cn": "这是一群糟糕透顶的人（病态！）。他们对我们伟大的国家极具破坏性。通过将权力武器化，造成了巨大的伤害！特朗普总统",
+      "content_zh_hk": "這是一群糟糕透頂的人（病態！）。他們對我們偉大的國家極具破壞性。透過將權力武器化，造成了巨大的傷害！特朗普總統",
+      "content_ko": "이들은 형편없는(병든!) 사람들이다. 우리 위대한 국가에 매우 파괴적이다. 권력의 무기화를 통해 엄청난 피해를 초래했다! 트럼프 대통령",
+      "source_hint": "stock.fengle.me"
+    },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116627825055821275",
       "url": "https://truthsocial.com/@realDonaldTrump/116627825055821275",
@@ -14,9 +124,9 @@
       "content": "\"Birthright Citizenship is suicide for our Country!\" Mark Levin",
       "content_html": "\"Birthright Citizenship is suicide for our Country!\" Mark Levin",
       "media": [],
-      "favourites_count": 11322,
-      "reblogs_count": 2680,
-      "replies_count": 1137,
+      "favourites_count": 12520,
+      "reblogs_count": 2945,
+      "replies_count": 1214,
       "content_zh_cn": "“出生公民权对我们的国家来说无异于自杀！”——马克·莱文",
       "content_zh_hk": "“出生公民權對我們的國家來說無異於自殺！”——馬克·萊文",
       "content_ko": "“출생 시민권은 우리나라에 자살행위와 같다!” 마크 레빈",
@@ -31,9 +141,9 @@
       "content": "Thank you to our great Secret Service and Law Enforcement for the swift and professional action taken this evening against a gunman near the White House, who had a violent history and possible obsession with our Country's most cherished structure. The gunman is dead after an exchange of gunfire with Secret Service Agents near the White House gates. This event is one month removed from the White House Correspondent'Dinner shooting, and goes to show how important it is, for all future Presidents, to get, what will be, the most safe and secure space of its kind ever built in Washington, D.C. The National Security of our Country demands it!",
       "content_html": "Thank you to our great Secret Service and Law Enforcement for the swift and professional action taken this evening against a gunman near the White House, who had a violent history and possible obsession with our Country's most cherished structure. The gunman is dead after an exchange of gunfire with Secret Service Agents near the White House gates. This event is one month removed from the White House Correspondent'Dinner shooting, and goes to show how important it is, for all future Presidents, to get, what will be, the most safe and secure space of its kind ever built in Washington, D.C. The National Security of our Country demands it!",
       "media": [],
-      "favourites_count": 15882,
-      "reblogs_count": 3678,
-      "replies_count": 1348,
+      "favourites_count": 17170,
+      "reblogs_count": 3947,
+      "replies_count": 1394,
       "content_zh_cn": "感谢我们出色的特勤局和执法部门，今晚在白宫附近迅速且专业地处置了一名持枪歹徒。此人有暴力前科，并可能对白宫这一我国最珍视的建筑怀有病态执念。\n\n在白宫大门附近，这名枪手与特勤局特工发生交火后已死亡。\n\n距离白宫记者晚宴枪击事件仅过去一个月，这再次表明：为了今后所有总统，必须配备一处将成为华盛顿哥伦比亚特区有史以来最安全、戒备最严密的同类空间。\n\n这关乎我们国家的国家安全！",
       "content_zh_hk": "感謝我們出色的特勤局和執法部門，今晚在白宮附近迅速且專業地處置了一名持槍歹徒。此人有暴力前科，並可能對白宮這一我國最珍視的建築懷有病態執念。\n\n在白宮大門附近，這名槍手與特勤局特工發生交火後已死亡。\n\n距離白宮記者晚宴槍擊事件僅過去一個月，這再次表明：為了今後所有總統，必須配備一處將成為華盛頓哥倫比亞特區有史以來最安全、戒備最嚴密的同類空間。\n\n這關乎我們國家的國家安全！",
       "content_ko": "오늘 저녁 백악관 인근에서 총기를 소지한 범인에 대해 신속하고 전문적으로 대응한 훌륭한 경호국과 법 집행 기관에 감사드립니다. 이 범인은 폭력 전력이 있었으며, 우리나라가 가장 소중히 여기는 건축물에 집착했을 가능성이 있습니다.\n\n이 총격범은 백악관 정문 인근에서 경호국 요원들과 총격을 주고받은 끝에 사망했습니다.\n\n백악관 출입기자단 만찬 총격 사건이 있은 지 불과 한 달 만에 벌어진 이번 일은, 앞으로의 모든 대통령을 위해 워싱턴 D.C.에 동종 시설 가운데 가장 안전하고 가장 철저히 보호되는 공간이 반드시 마련돼야 한다는 점을 다시 보여줍니다.\n\n우리 국가의 국가안보가 그것을 요구합니다!",
@@ -48,9 +158,9 @@
       "content": "The Democrats just released an \"Autopsy\" of their 2024 Presidential Campaign, typos and all, but they refused to discuss two very important words, BAD POLICY. The candidates, Sleepy Joe and then, Kamala, weren't so \"HOT\" either! President DJT",
       "content_html": "The Democrats just released an \"Autopsy\" of their 2024 Presidential Campaign, typos and all, but they refused to discuss two very important words, BAD POLICY. The candidates, Sleepy Joe and then, Kamala, weren't so \"HOT\" either! President DJT",
       "media": [],
-      "favourites_count": 16993,
-      "reblogs_count": 3564,
-      "replies_count": 1343,
+      "favourites_count": 17631,
+      "reblogs_count": 3680,
+      "replies_count": 1367,
       "content_zh_cn": "民主党刚刚发布了他们对2024年总统竞选的“验尸报告”，连拼写错误都原封不动地保留了，但他们却拒绝讨论两个至关重要的词：糟糕政策。候选人——先是“瞌睡乔”，然后是卡玛拉——表现也并没有那么“火热”！DJT总统",
       "content_zh_hk": "民主黨剛剛發布了他們對2024年總統競選的「驗屍報告」，連拼寫錯誤都原封不動地保留了，但他們卻拒絕討論兩個至關重要的詞：糟糕政策。候選人——先是「瞌睡喬」，然後是卡瑪拉——表現也並沒有那麼「火熱」！DJT總統",
       "content_ko": "민주당은 방금 2024년 대선 캠페인에 대한 자신들의 “부검 보고서”를 공개했는데, 오탈자까지 그대로였다. 하지만 그들은 매우 중요한 두 단어, 즉 BAD POLICY는 논의하기를 거부했다. 후보들, 졸린 조와 그다음 카멀라 역시 그렇게 “HOT”하지도 않았다! DJT 대통령",
@@ -65,9 +175,9 @@
       "content": "I am in the Oval Office at the White House where we just had a very good call with President Mohammed bin Salman Al Saud, of Saudi Arabia, Mohammed bin Zayed Al Nahyan, of The United Arab Emirates, Emir Tamim bin Hamad bin Khalifa Al Thani, Prime Minister Mohammed bin Abdulrahman bin Jassim bin Jaber Al Thani, and Minister Ali al-Thawadi, of Qatar, Field Marshal Syed Asim Munir Ahmed Shah, of Pakistan, President Recep Tayyip Erdoğan, of Türkiye, President Abdel Fattah El-Sisi, of Egypt, King Abdullah II, of Jordan, and King Hamad bin Isa Al Khalifa, of Bahrain, concerning the Islamic Republic of Iran, and all things related to a Memorandum of Understanding pertaining to PEACE. An Agreement has been largely negotiated, subject to finalization between the United States of America, the Islamic Republic of Iran, and the various other Countries, as listed. Separately, I had a call with Prime Minister Bibi Netanyahu, of Israel, which, likewise, went very well. Final aspects and details of the Deal are currently being discussed, and will be announced shortly. In addition to many other elements of the Agreement, the Strait of Hormuz will be opened. Thank you for your attention to this matter! President DONALD J. TRUMP",
       "content_html": "I am in the Oval Office at the White House where we just had a very good call with President Mohammed bin Salman Al Saud, of Saudi Arabia, Mohammed bin Zayed Al Nahyan, of The United Arab Emirates, Emir Tamim bin Hamad bin Khalifa Al Thani, Prime Minister Mohammed bin Abdulrahman bin Jassim bin Jaber Al Thani, and Minister Ali al-Thawadi, of Qatar, Field Marshal Syed Asim Munir Ahmed Shah, of Pakistan, President Recep Tayyip Erdoğan, of Türkiye, President Abdel Fattah El-Sisi, of Egypt, King Abdullah II, of Jordan, and King Hamad bin Isa Al Khalifa, of Bahrain, concerning the Islamic Republic of Iran, and all things related to a Memorandum of Understanding pertaining to PEACE. An Agreement has been largely negotiated, subject to finalization between the United States of America, the Islamic Republic of Iran, and the various other Countries, as listed. Separately, I had a call with Prime Minister Bibi Netanyahu, of Israel, which, likewise, went very well. Final aspects and details of the Deal are currently being discussed, and will be announced shortly. In addition to many other elements of the Agreement, the Strait of Hormuz will be opened. Thank you for your attention to this matter! President DONALD J. TRUMP",
       "media": [],
-      "favourites_count": 57752,
-      "reblogs_count": 12599,
-      "replies_count": 10614,
+      "favourites_count": 58095,
+      "reblogs_count": 12660,
+      "replies_count": 10693,
       "content_zh_cn": "我目前正在白宫椭圆形办公室。我们刚刚与沙特阿拉伯王储兼首相穆罕默德·本·萨勒曼·阿勒沙特、阿拉伯联合酋长国总统穆罕默德·本·扎耶德·阿勒纳哈扬、卡塔尔埃米尔塔米姆·本·哈马德·本·哈利法·阿勒萨尼、卡塔尔首相穆罕默德·本·阿卜杜勒拉赫曼·本·贾西姆·本·贾比尔·阿勒萨尼、卡塔尔事务国务大臣阿里·阿勒萨瓦迪、巴基斯坦陆军元帅赛义德·阿西姆·穆尼尔·艾哈迈德·沙阿、土耳其总统雷杰普·塔伊普·埃尔多安、埃及总统阿卜杜勒-法塔赫·塞西、约旦国王阿卜杜拉二世，以及巴林国王哈马德·本·伊萨·阿勒哈利法进行了非常顺利的通话，内容涉及伊朗伊斯兰共和国，以及与和平谅解备忘录相关的一切事项。\n\n一项协议已基本谈妥，尚待最终敲定，涉及美利坚合众国、伊朗伊斯兰共和国，以及上述其他多个国家。\n\n此外，我还与以色列总理比比·内塔尼亚胡通了电话，进展同样非常顺利。该协议的最终部分和细节目前正在讨论中，并将很快公布。\n\n除协议中的许多其他内容外，霍尔木兹海峡将被开放。\n\n感谢大家对此事的关注！\n\n总统 唐纳德·J·特朗普",
       "content_zh_hk": "我現正身處白宮橢圓形辦公室。我們剛剛與沙特阿拉伯王儲兼首相穆罕默德·本·薩勒曼·阿勒沙特、阿拉伯聯合酋長國總統穆罕默德·本·扎耶德·阿勒納哈揚、卡塔爾埃米爾塔米姆·本·哈馬德·本·哈利法·阿勒薩尼、卡塔爾首相穆罕默德·本·阿卜杜勒拉赫曼·本·賈西姆·本·賈比爾·阿勒薩尼、卡塔爾事務國務大臣阿里·阿勒薩瓦迪、巴基斯坦陸軍元帥賽義德·阿西姆·穆尼爾·艾哈邁德·沙阿、土耳其總統雷傑普·塔伊普·埃爾多安、埃及總統阿卜杜勒-法塔赫·塞西、約旦國王阿卜杜拉二世，以及巴林國王哈馬德·本·伊薩·阿勒哈利法進行了一次非常順利的通話，內容涉及伊朗伊斯蘭共和國，以及與和平諒解備忘錄相關的一切事項。\n\n一項協議已大致談妥，尚待最終敲定，涉及美利堅合眾國、伊朗伊斯蘭共和國，以及上述其他多個國家。\n\n另外，我亦與以色列總理比比·內塔尼亞胡通了電話，進展同樣非常順利。該協議的最終部分及細節目前正在討論中，並將於短期內公布。\n\n除協議中的許多其他內容外，霍爾木茲海峽將會開放。\n\n感謝大家對此事的關注！\n\n總統 唐納德·J·特朗普",
       "content_ko": "저는 지금 백악관 오벌 오피스에 있습니다. 방금 우리는 사우디아라비아의 모하메드 빈 살만 알사우드 왕세자 겸 총리, 아랍에미리트의 모하메드 빈 자예드 알나하얀 대통령, 카타르의 타밈 빈 하마드 빈 칼리파 알사니 국왕, 모하메드 빈 압둘라흐만 빈 자심 빈 자베르 알사니 총리, 알리 알사와디 장관, 파키스탄의 야전원수 사이드 아심 무니르 아흐메드 샤, 튀르키예의 레제프 타이이프 에르도안 대통령, 이집트의 압델 파타 엘시시 대통령, 요르단의 압둘라 2세 국왕, 바레인의 하마드 빈 이사 알칼리파 국왕과 매우 좋은 통화를 가졌습니다. 통화 내용은 이란 이슬람 공화국, 그리고 PEACE와 관련된 양해각서에 관한 모든 사안이었습니다.\n\n미합중국, 이란 이슬람 공화국, 그리고 위에 열거한 여러 나라들 사이의 합의는 최종 확정을 전제로 대부분 협상되었습니다.\n\n별도로, 저는 이스라엘의 비비 네타냐후 총리와도 통화했으며, 이 역시 매우 잘 진행됐습니다. 현재 거래의 최종 사항과 세부 내용이 논의되고 있으며, 곧 발표될 것입니다.\n\n합의의 많은 다른 요소들에 더해, 호르무즈 해협은 개방될 것입니다.\n\n이 사안에 관심을 가져주셔서 감사합니다!\n\n대통령 도널드 J. 트럼프",
@@ -96,8 +206,8 @@
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-05-23T17:00:09.261Z",
       "created_at_text": "May 23, 2026, 5:00 PM",
-      "content": "Preview\nPreview\nPreview",
-      "content_html": "Preview\nPreview\nPreview",
+      "content": "",
+      "content_html": "",
       "media": [
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NDA0L2ZkNmI3YjE3ZTcxYTRhMWQuanBn",
@@ -112,13 +222,13 @@
           "type": "image"
         }
       ],
-      "favourites_count": 16779,
-      "reblogs_count": 3933,
-      "replies_count": 798,
-      "content_zh_cn": "Preview\nPreview\nPreview",
-      "content_zh_hk": "Preview\nPreview\nPreview",
-      "content_ko": "Preview\nPreview\nPreview",
-      "source_hint": "stock.fengle.me"
+      "favourites_count": 16912,
+      "reblogs_count": 3952,
+      "replies_count": 805,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116624953059006946",
@@ -134,13 +244,13 @@
           "type": "image"
         }
       ],
-      "favourites_count": 12203,
-      "reblogs_count": 2487,
-      "replies_count": 365,
+      "favourites_count": 12302,
+      "reblogs_count": 2498,
+      "replies_count": 369,
       "content_zh_cn": "https://www.pressandjournal.co.uk/fp/sport/golf/7019115/trump-international-lands-colin-montgomeries-seal-of-approval/",
       "content_zh_hk": "https://www.pressandjournal.co.uk/fp/sport/golf/7019115/trump-international-lands-colin-montgomeries-seal-of-approval/",
       "content_ko": "https://www.pressandjournal.co.uk/fp/sport/golf/7019115/trump-international-lands-colin-montgomeries-seal-of-approval/",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116624949486785240",
@@ -160,13 +270,13 @@
           "type": "image"
         }
       ],
-      "favourites_count": 12468,
-      "reblogs_count": 2861,
-      "replies_count": 368,
+      "favourites_count": 12564,
+      "reblogs_count": 2872,
+      "replies_count": 371,
       "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116624948733776921",
       "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116624948733776921",
       "content_ko": "리트윗: https://truthsocial.com/users/realDonaldTrump/statuses/116624948733776921",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116624946382065756",
@@ -183,7 +293,7 @@
       "content_zh_cn": "转发 @realPatriotFreedomProject\n那些如今因特赦而情绪失控的民主党人和反特朗普人士，在美国人被不公正的刑期压垮、经济上被摧毁、并沦为被武器化司法体系政治打击的对象时，却一句话都没说。\n\n可笑的是，\"宽恕\"现在突然变得重要了。\n\n我亲眼看过检察官试图把普通定罪变成毁掉一生的判刑。我也看过一些家庭被压垮，而媒体却无动于衷，只因为被告的政治立场让他们更容易被人憎恨。\n\n有些人是无辜的。有些人显然被过度起诉。很多人面对这台机器时，从一开始就没有得到公平对待的机会。\n\n之所以设有特赦和减刑机制，就是因为这个体系并不完美，而假装它完美无缺，本身就是危险的。\n\n这正是我们最新一篇《司法武器化观察》文章要讨论的内容。@realDonaldTrump open.substack.com/pub/patriotfre…",
       "content_zh_hk": "轉發 @realPatriotFreedomProject\n那些如今因特赦而情緒失控的民主黨人和反特朗普人士，在美國人被不公正刑期壓垮、在經濟上被摧毀，並成為被武器化司法體系政治打擊的對象時，卻一句話都沒有說。\n\n可笑的是，\"寬恕\"現在突然變得重要了。\n\n我親眼見過檢察官試圖把普通定罪變成毀掉一生的判刑。我也見過一些家庭被壓垮，而媒體卻聳聳肩、毫不在意，只因為被告的政治立場令他們更容易被人憎恨。\n\n有些人是無辜的。有些人明顯被過度起訴。很多人在面對這台機器時，從一開始就沒有得到公平對待的機會。\n\n之所以設有特赦和寬免機制，就是因為這個體系並不完美，而假裝它完美無缺，本身就是危險的。\n\n這正是我們最新一篇《司法武器化觀察》文章要談的內容。@realDonaldTrump open.substack.com/pub/patriotfre…",
       "content_ko": "RT @realPatriotFreedomProject\n지금 사면 문제로 격앙된 민주당 인사들과 반(反)트럼프 진영은, 미국인들이 부당한 징역형에 짓눌리고 경제적으로 파괴되며, 무기화된 사법 시스템의 정치적 표적이 되었을 때는 아무 말도 하지 않았습니다.\n\n재밌는 건, 이제 와서야 \"자비\"가 갑자기 중요해졌다는 점입니다.\n\n저는 검사들이 통상의 유죄 판결을 인생을 무너뜨리는 형량으로 바꾸려 하는 모습을 지켜봤습니다. 또 피고인의 정치적 성향 때문에 사람들이 그들을 미워하기 쉬워졌다는 이유로, 가족들이 무너지는 동안 언론이 대수롭지 않게 넘기는 모습도 봤습니다.\n\n어떤 이들은 무고했습니다. 어떤 이들은 명백히 과도하게 기소됐습니다. 많은 이들은 이 시스템을 상대로 애초에 공정한 기회조차 갖지 못했습니다.\n\n사면과 형 감경 제도가 존재하는 이유는, 이 시스템이 완벽하지 않기 때문이며, 그렇지 않은 척하는 것은 위험하기 때문입니다.\n\n이것이 바로 저희의 최신 \"Weaponization Watch\" 글이 다루는 내용입니다. @realDonaldTrump open.substack.com/pub/patriotfre…",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116624945545360144",
@@ -199,13 +309,13 @@
           "type": "image"
         }
       ],
-      "favourites_count": 11090,
-      "reblogs_count": 3280,
-      "replies_count": 872,
+      "favourites_count": 11178,
+      "reblogs_count": 3294,
+      "replies_count": 879,
       "content_zh_cn": "https://www.foxnews.com/politics/dem-governor-hot-seat-testing-limits-authority-major-move-ice",
       "content_zh_hk": "https://www.foxnews.com/politics/dem-governor-hot-seat-testing-limits-authority-major-move-ice",
       "content_ko": "https://www.foxnews.com/politics/dem-governor-hot-seat-testing-limits-authority-major-move-ice",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116624944416340192",
@@ -221,9 +331,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 10342,
-      "reblogs_count": 2821,
-      "replies_count": 340,
+      "favourites_count": 10417,
+      "reblogs_count": 2830,
+      "replies_count": 345,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -243,9 +353,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 14293,
-      "reblogs_count": 2673,
-      "replies_count": 728,
+      "favourites_count": 14398,
+      "reblogs_count": 2683,
+      "replies_count": 732,
       "content_zh_cn": "我们都很想念这位大忽悠！",
       "content_zh_hk": "我們都很想念這位大忽悠！",
       "content_ko": "우리 모두 그 허풍선이가 그립습니다!",
@@ -260,9 +370,9 @@
       "content": "President Trump's Fixation On Heaven Is Good For America: https://www.americanthinker.com/articles/2026/03/president_trump_s_fixation_on_heaven_is_good_for_america.html",
       "content_html": "President Trump's Fixation On Heaven Is Good For America: https://www.americanthinker.com/articles/2026/03/president_trump_s_fixation_on_heaven_is_good_for_america.html",
       "media": [],
-      "favourites_count": 13246,
-      "reblogs_count": 3264,
-      "replies_count": 743,
+      "favourites_count": 13335,
+      "reblogs_count": 3274,
+      "replies_count": 747,
       "content_zh_cn": "特朗普总统对天堂的执念，对美国有利：https://www.americanthinker.com/articles/2026/03/president_trump_s_fixation_on_heaven_is_good_for_america.html",
       "content_zh_hk": "特朗普總統對天堂的執念，對美國有利：https://www.americanthinker.com/articles/2026/03/president_trump_s_fixation_on_heaven_is_good_for_america.html",
       "content_ko": "트럼프 대통령의 천국에 대한 집착은 미국에 도움이 된다: https://www.americanthinker.com/articles/2026/03/president_trump_s_fixation_on_heaven_is_good_for_america.html",
@@ -282,9 +392,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 9109,
-      "reblogs_count": 2186,
-      "replies_count": 205,
+      "favourites_count": 9169,
+      "reblogs_count": 2191,
+      "replies_count": 207,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -312,106 +422,12 @@
           "type": "image"
         }
       ],
-      "favourites_count": 11115,
-      "reblogs_count": 2508,
-      "replies_count": 261,
+      "favourites_count": 11189,
+      "reblogs_count": 2514,
+      "replies_count": 264,
       "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116624937762459378",
       "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116624937762459378",
       "content_ko": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116624937762459378",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116624937762459378",
-      "url": "https://truthsocial.com/@realDonaldTrump/116624937762459378",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-05-23T16:55:24.836Z",
-      "created_at_text": "May 23, 2026, 4:55 PM",
-      "content": "",
-      "content_html": "",
-      "media": [
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NDAyLzdkMTcxYWJkNjQ4NTM1YTAuanBn",
-          "type": "image"
-        },
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NDAzLzRhYzA1YzU2NDRmZDJlODMuanBn",
-          "type": "image"
-        }
-      ],
-      "favourites_count": 9204,
-      "reblogs_count": 1748,
-      "replies_count": 137,
-      "content_zh_cn": "",
-      "content_zh_hk": "",
-      "content_ko": "",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116624936292481598",
-      "url": "https://truthsocial.com/@realDonaldTrump/116624936292481598",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-05-23T16:55:02.315Z",
-      "created_at_text": "May 23, 2026, 4:55 PM",
-      "content": "Republican House Should Staple SAVE America Act to Everything It Sends the GOP Senate: https://www.dailysignal.com/2026/05/15/save-act-house-senate/",
-      "content_html": "Republican House Should Staple SAVE America Act to Everything It Sends the GOP Senate: https://www.dailysignal.com/2026/05/15/save-act-house-senate/",
-      "media": [],
-      "favourites_count": 12473,
-      "reblogs_count": 3506,
-      "replies_count": 607,
-      "content_zh_cn": "共和党掌控的众议院应将《SAVE America Act》附加到其提交给共和党参议院的所有议案上：https://www.dailysignal.com/2026/05/15/save-act-house-senate/",
-      "content_zh_hk": "共和黨掌控的眾議院應將《SAVE America Act》附加到其提交給共和黨參議院的所有議案上：https://www.dailysignal.com/2026/05/15/save-act-house-senate/",
-      "content_ko": "공화당이 장악한 하원은 공화당 상원에 보내는 모든 법안에 《SAVE America Act》를 반드시 붙여야 한다: https://www.dailysignal.com/2026/05/15/save-act-house-senate/",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116624935281735015",
-      "url": "https://truthsocial.com/@realDonaldTrump/116624935281735015",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-05-23T16:54:46.891Z",
-      "created_at_text": "May 23, 2026, 4:54 PM",
-      "content": "America's love affair with the road endures: https://www.washingtonexaminer.com/opinion/columnists/4570231/america-love-affair-roads-automobiles/",
-      "content_html": "America's love affair with the road endures: https://www.washingtonexaminer.com/opinion/columnists/4570231/america-love-affair-roads-automobiles/",
-      "media": [],
-      "favourites_count": 8724,
-      "reblogs_count": 1929,
-      "replies_count": 192,
-      "content_zh_cn": "美国对公路的热爱，历久弥新：https://www.washingtonexaminer.com/opinion/columnists/4570231/america-love-affair-roads-automobiles/",
-      "content_zh_hk": "美國對公路的熱愛，歷久彌新：https://www.washingtonexaminer.com/opinion/columnists/4570231/america-love-affair-roads-automobiles/",
-      "content_ko": "미국의 도로에 대한 애정은 여전히 이어지고 있습니다: https://www.washingtonexaminer.com/opinion/columnists/4570231/america-love-affair-roads-automobiles/",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116624933679947822",
-      "url": "https://truthsocial.com/@realDonaldTrump/116624933679947822",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-05-23T16:54:22.450Z",
-      "created_at_text": "May 23, 2026, 4:54 PM",
-      "content": "Won Big!https://www.washingtonexaminer.com/in_focus/4571185/thomas-massie-useless-tenure-congress-coming-to-an-end/",
-      "content_html": "Won Big!https://www.washingtonexaminer.com/in_focus/4571185/thomas-massie-useless-tenure-congress-coming-to-an-end/",
-      "media": [],
-      "favourites_count": 10745,
-      "reblogs_count": 2454,
-      "replies_count": 508,
-      "content_zh_cn": "大获全胜！\nhttps://www.washingtonexaminer.com/in_focus/4571185/thomas-massie-useless-tenure-congress-coming-to-an-end/",
-      "content_zh_hk": "大獲全勝！\nhttps://www.washingtonexaminer.com/in_focus/4571185/thomas-massie-useless-tenure-congress-coming-to-an-end/",
-      "content_ko": "대승했다!\nhttps://www.washingtonexaminer.com/in_focus/4571185/thomas-massie-useless-tenure-congress-coming-to-an-end/",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116624932696824292",
-      "url": "https://truthsocial.com/@realDonaldTrump/116624932696824292",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-05-23T16:54:07.444Z",
-      "created_at_text": "May 23, 2026, 4:54 PM",
-      "content": "Trump's Global Gambit: How Strikes On Iran And Venezuela Are Fueling America's Economic Comeback And Checking China: https://loomered.com/2026/04/28/trumps-global-gambit-how-strikes-on-iran-and-venezuela-are-fueling-americas-economic-comeback-and-checking-china/",
-      "content_html": "Trump's Global Gambit: How Strikes On Iran And Venezuela Are Fueling America's Economic Comeback And Checking China: https://loomered.com/2026/04/28/trumps-global-gambit-how-strikes-on-iran-and-venezuela-are-fueling-americas-economic-comeback-and-checking-china/",
-      "media": [],
-      "favourites_count": 9035,
-      "reblogs_count": 2218,
-      "replies_count": 246,
-      "content_zh_cn": "特朗普的全球布局：对伊朗和委内瑞拉的打击，如何推动美国经济复苏并牵制中国：https://loomered.com/2026/04/28/trumps-global-gambit-how-strikes-on-iran-and-venezuela-are-fueling-americas-economic-comeback-and-checking-china/",
-      "content_zh_hk": "特朗普的全球布局：對伊朗和委內瑞拉的打擊，如何推動美國經濟復甦並牽制中國：https://loomered.com/2026/04/28/trumps-global-gambit-how-strikes-on-iran-and-venezuela-are-fueling-americas-economic-comeback-and-checking-china/",
-      "content_ko": "트럼프의 글로벌 승부수: 이란과 베네수엘라에 대한 타격이 어떻게 미국 경제의 회복을 이끌고 중국을 견제하고 있는가: https://loomered.com/2026/04/28/trumps-global-gambit-how-strikes-on-iran-and-venezuela-are-fueling-americas-economic-comeback-and-checking-china/",
       "source_hint": "cnn"
     }
   ]
