@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116635119382599342": {
+    "content_zh_cn": "迈克：感谢你在福克斯节目中的美言。我们的方向一致。继续保持出色表现。祝你节目顺利！总统 DJT",
+    "content_zh_hk": "Mike：多謝你在霍士節目中的讚賞。我們方向一致。請繼續保持出色表現。祝你節目順利！總統 DJT",
+    "content_ko": "Mike: Fox에서 해준 좋은 말에 감사드립니다. 우리는 같은 길을 가고 있습니다. 훌륭한 일을 계속해 주십시오. 방송도 잘 되길 바랍니다! 대통령 DJT"
+  },
   "https://truthsocial.com/@realDonaldTrump/116634733606433479": {
     "content_zh_cn": "“愚主党”政策糟糕，候选人也很差。除此之外，他们干得还算相当不错！\n——特朗普总统",
     "content_zh_hk": "「愚主黨」政策糟糕，候選人也很差。除此之外，他們做得還算相當不錯！\n——特朗普總統",
