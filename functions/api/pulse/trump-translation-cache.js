@@ -1,8 +1,8 @@
 export const TRUMP_TRANSLATION_CACHE = {
   "https://truthsocial.com/@realDonaldTrump/116635915970716365": {
-    "content_zh_cn": "无法访问该链接内容。请提供帖子原文，我将按要求翻译。",
-    "content_zh_hk": "無法存取該連結內容。請提供帖文原文，我將按要求翻譯。",
-    "content_ko": "해당 링크의 게시물 내용을 확인할 수 없습니다. 원문을 보내주시면 요청하신 형식에 맞춰 번역해 드리겠습니다."
+    "content_zh_cn": "https://truthsocial.com/users/dpritsky/statuses/116634745889324010",
+    "content_zh_hk": "https://truthsocial.com/users/dpritsky/statuses/116634745889324010",
+    "content_ko": "https://truthsocial.com/users/dpritsky/statuses/116634745889324010"
   },
   "https://truthsocial.com/@realDonaldTrump/116635914092231106": {
     "content_zh_cn": "我很高兴地宣布，纽约州北部和中部的普拉茨堡空军国民警卫队基地（Plattsburgh Air National Guard Base）将迎来一项重大发展——最新一批 KC-46A “飞马”加油机将进驻该基地。多年来，我一直为此奔走，因为我深知，保留并扩大普拉茨堡的军事存在，对国家安全以及当地经济都至关重要。\n\n这是一场重大胜利。KC-46A 是世界级飞机，先进、强大，将有力支持美军在全球执行任务。与此同时，这也意味着纽约州北部和中部将获得更多就业、更多投资，以及更强劲的未来。\n\n我要感谢所有为促成这一消息而努力的人，尤其是那些长期以来始终为普拉茨堡发声的杰出领袖和军方人士。我们共同实现了这一目标！\n\n让美国继续强大！",
