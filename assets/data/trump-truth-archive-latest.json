@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-05-25T21:52:29.485Z",
+  "fetchedAt": "2026-05-25T22:11:57.104Z",
   "count": 16,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
@@ -17,9 +17,9 @@
       "favourites_count": 304,
       "reblogs_count": 87,
       "replies_count": 23,
-      "content_zh_cn": "The Enriched Uranium (Nuclear Dust!) will either be immediately turned over to the United States to be brought home and destroyed or, preferably, in conjunction and coordination with the Islamic Republic of Iran, destroyed in place or, at another acceptable location, with the Atomic Energy Commission, or its equivalent, being witness to this process and event. Thank you for your attention to this matter! President DJT",
-      "content_zh_hk": "The Enriched Uranium (Nuclear Dust!) will either be immediately turned over to the United States to be brought home and destroyed or, preferably, in conjunction and coordination with the Islamic Republic of Iran, destroyed in place or, at another acceptable location, with the Atomic Energy Commission, or its equivalent, being witness to this process and event. Thank you for your attention to this matter! President DJT",
-      "content_ko": "The Enriched Uranium (Nuclear Dust!) will either be immediately turned over to the United States to be brought home and destroyed or, preferably, in conjunction and coordination with the Islamic Republic of Iran, destroyed in place or, at another acceptable location, with the Atomic Energy Commission, or its equivalent, being witness to this process and event. Thank you for your attention to this matter! President DJT",
+      "content_zh_cn": "浓缩铀（核尘埃！）将被立即移交给美国，运回本土销毁；或者，更理想的是，与伊朗伊斯兰共和国协同配合，就地销毁，或在另一处可接受地点销毁，并由原子能委员会或其同等机构见证这一过程和行动。感谢对此事的关注！总统DJT",
+      "content_zh_hk": "濃縮鈾（核塵埃！）將被立即移交給美國，運回本土銷毀；或者，更理想的是，與伊朗伊斯蘭共和國協同配合，就地銷毀，或在另一處可接受地點銷毀，並由原子能委員會或其同等機構見證這一過程和行動。感謝對此事的關注！總統DJT",
+      "content_ko": "농축 우라늄(핵 먼지!)은 즉시 미국에 넘겨져 본토로 반입된 뒤 폐기되거나, 또는 바람직하게는 이란 이슬람공화국과의 협조 및 공조하에 현지에서 폐기되거나, 혹은 다른 수용 가능한 장소에서 폐기될 것이며, 이 과정과 조치는 원자력위원회 또는 이에 준하는 기관이 입회하게 될 것입니다. 이 사안에 관심을 가져주셔서 감사합니다! 대통령 DJT",
       "source_hint": "stock.fengle.me"
     },
     {
@@ -28,8 +28,8 @@
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-05-25T17:35:13.050Z",
       "created_at_text": "May 25, 2026, 5:35 PM",
-      "content": "https://truthsocial.com/users/dpritsky/statuses/116634745889324010",
-      "content_html": "https://truthsocial.com/users/dpritsky/statuses/116634745889324010",
+      "content": "Preview\nPreview\nPreview",
+      "content_html": "Preview\nPreview\nPreview",
       "media": [
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NDMyLzZiYzczYjc3ZTYxZTc4MzAuanBn",
@@ -47,9 +47,9 @@
       "favourites_count": 9080,
       "reblogs_count": 2701,
       "replies_count": 1117,
-      "content_zh_cn": "https://truthsocial.com/users/dpritsky/statuses/116634745889324010",
-      "content_zh_hk": "https://truthsocial.com/users/dpritsky/statuses/116634745889324010",
-      "content_ko": "https://truthsocial.com/users/dpritsky/statuses/116634745889324010",
+      "content_zh_cn": "Preview\nPreview\nPreview",
+      "content_zh_hk": "Preview\nPreview\nPreview",
+      "content_ko": "Preview\nPreview\nPreview",
       "source_hint": "stock.fengle.me"
     },
     {
