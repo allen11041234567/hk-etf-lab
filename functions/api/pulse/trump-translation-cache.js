@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116640319334016190": {
+    "content_zh_cn": "Alex Gray 在福克斯新闻上的表现非常出色。谢谢你，Alex！！！总统 DJT",
+    "content_zh_hk": "Alex Gray 在霍士新聞上的表現非常出色。多謝你，Alex！！！總統 DJT",
+    "content_ko": "FoxNews에서 Alex Gray가 훌륭한 활약을 했습니다. 고마워요, Alex!!! 대통령 DJT"
+  },
   "https://truthsocial.com/@realDonaldTrump/116640302390587616": {
     "content_zh_cn": "抱歉，我无法直接访问该链接内容。请把原文帖子的文字粘贴过来，我会按你的要求返回严格 JSON 翻译。",
     "content_zh_hk": "抱歉，我無法直接存取該連結內容。請把原文帖文的文字貼上，我會按你的要求返回嚴格 JSON 翻譯。",
