@@ -1,4 +1,44 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116640290568039212": {
+    "content_zh_cn": "抱歉，我无法直接打开该链接或读取其中的帖子内容。请把帖子的原文粘贴过来，我会按你的要求返回严格 JSON：content_zh_cn、content_zh_hk、content_ko。",
+    "content_zh_hk": "抱歉，我無法直接打開該連結或讀取其中的帖文內容。請把帖文原文貼上，我會按你的要求返回嚴格 JSON：content_zh_cn、content_zh_hk、content_ko。",
+    "content_ko": "죄송하지만 해당 링크를 직접 열거나 게시물 내용을 확인할 수 없습니다. 게시물 원문을 붙여 주시면 요청하신 형식의 엄격한 JSON(content_zh_cn, content_zh_hk, content_ko)으로 반환하겠습니다."
+  },
+  "https://truthsocial.com/@realDonaldTrump/116640289354505970": {
+    "content_zh_cn": "https://truthsocial.com/users/Imaluckyangel/statuses/116634885298397647。\n得州，请投票支持肯·帕克斯顿——我们国家最优秀的总检察长！",
+    "content_zh_hk": "https://truthsocial.com/users/Imaluckyangel/statuses/116634885298397647。\n德州，請投票支持肯·帕克斯頓——我們國家最優秀的總檢察長！",
+    "content_ko": "https://truthsocial.com/users/Imaluckyangel/statuses/116634885298397647.\n텍사스, 우리 나라 최고의 법무장관인 켄 팩스턴에게 투표하세요!"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116640277391760989": {
+    "content_zh_cn": "抱歉，我无法根据一个外部链接直接读取或转写其中的内容。请将该社交帖文的原文粘贴过来，我会按要求返回严格 JSON。",
+    "content_zh_hk": "抱歉，我無法根據一個外部連結直接讀取或轉寫其中的內容。請將該社交帖文的原文貼上，我會按要求返回嚴格 JSON。",
+    "content_ko": "죄송하지만 외부 링크만으로는 해당 게시물의 내용을 직접 읽거나 옮길 수 없습니다. 게시물 원문을 붙여 주시면 요청하신 형식의 엄격한 JSON으로 반환하겠습니다."
+  },
+  "https://truthsocial.com/@realDonaldTrump/116640276418472460": {
+    "content_zh_cn": "抱歉，我无法根据仅提供的链接访问或提取该帖文内容。请直接粘贴原文，我将按要求返回严格 JSON 翻译。",
+    "content_zh_hk": "抱歉，我無法根據僅提供的連結存取或擷取該帖文內容。請直接貼上原文，我將按要求返回嚴格 JSON 翻譯。",
+    "content_ko": "죄송하지만 링크만으로는 해당 게시물 내용을 확인하거나 가져올 수 없습니다. 원문을 직접 붙여 주시면 요청하신 형식의 엄격한 JSON 번역으로 반환하겠습니다."
+  },
+  "https://truthsocial.com/@realDonaldTrump/116640270261424904": {
+    "content_zh_cn": "抱歉，我无法直接打开该链接内容。请将原文帖子全文粘贴过来，我会按你的要求返回严格 JSON（包含 content_zh_cn、content_zh_hk、content_ko）。",
+    "content_zh_hk": "抱歉，我無法直接開啟該連結內容。請將原文帖文全文貼上，我會按你的要求返回嚴格 JSON（包含 content_zh_cn、content_zh_hk、content_ko）。",
+    "content_ko": "죄송하지만 해당 링크의 내용을 직접 열람할 수 없습니다. 원문 게시글 전체를 붙여 주시면 요청하신 형식에 맞춰 strict JSON(content_zh_cn, content_zh_hk, content_ko)으로 반환하겠습니다."
+  },
+  "https://truthsocial.com/@realDonaldTrump/116640266798821002": {
+    "content_zh_cn": "请提供该帖文的原文内容。我当前无法直接打开该链接，因此无法在不查看原文的情况下完成准确翻译。",
+    "content_zh_hk": "請提供該帖文的原文內容。我目前無法直接開啟該連結，因此無法在未查看原文的情況下完成準確翻譯。",
+    "content_ko": "해당 게시물의 원문을 보내주세요. 현재 저는 해당 링크를 직접 열 수 없어, 원문을 확인하지 않은 상태에서는 정확한 번역을 제공할 수 없습니다."
+  },
+  "https://truthsocial.com/@realDonaldTrump/116640265599728280": {
+    "content_zh_cn": "抱歉，我无法打开该链接内容。请把原文正文粘贴过来，我会按要求直接返回严格 JSON。",
+    "content_zh_hk": "抱歉，我無法開啟該連結內容。請把原文正文貼上，我會按要求直接返回嚴格 JSON。",
+    "content_ko": "죄송하지만 해당 링크의 본문 내용을 열 수 없습니다. 원문 텍스트를 붙여 주시면 요청하신 형식의 엄격한 JSON으로 바로 반환하겠습니다."
+  },
+  "https://truthsocial.com/@realDonaldTrump/116640262926602501": {
+    "content_zh_cn": "https://truthsocial.com/users/IStandWithTrump47/statuses/116634832160073750",
+    "content_zh_hk": "https://truthsocial.com/users/IStandWithTrump47/statuses/116634832160073750",
+    "content_ko": "https://truthsocial.com/users/IStandWithTrump47/statuses/116634832160073750"
+  },
   "https://truthsocial.com/@realDonaldTrump/116638460441254303": {
     "content_zh_cn": "迈阿密联邦检察官起诉前检察官，向“深层政府”发出“信号”\nhttps://justthenews.com/accountability/political-ethics/us-attorney-miami-sends-message-deep-state-indictment-against-ex",
     "content_zh_hk": "邁阿密聯邦檢察官起訴前檢察官，向「深層政府」發出「訊號」\nhttps://justthenews.com/accountability/political-ethics/us-attorney-miami-sends-message-deep-state-indictment-against-ex",
