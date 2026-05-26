@@ -1,4 +1,14 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116638460441254303": {
+    "content_zh_cn": "迈阿密联邦检察官起诉前检察官，向“深层政府”发出“信号”\nhttps://justthenews.com/accountability/political-ethics/us-attorney-miami-sends-message-deep-state-indictment-against-ex",
+    "content_zh_hk": "邁阿密聯邦檢察官起訴前檢察官，向「深層政府」發出「訊號」\nhttps://justthenews.com/accountability/political-ethics/us-attorney-miami-sends-message-deep-state-indictment-against-ex",
+    "content_ko": "마이애미 연방검사가 전직 검사 기소로 ‘딥스테이트’에 ‘메시지’를 보내다\nhttps://justthenews.com/accountability/political-ethics/us-attorney-miami-sends-message-deep-state-indictment-against-ex"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116638455077643701": {
+    "content_zh_cn": "独家：备忘录显示，拜登司法部一名关键官员曾对FBI突袭海湖庄园提出警示：https://justthenews.com/government/courts-law/biden-doj-official-had-concerns-trump-declassified-documents-seized-fbis-mar",
+    "content_zh_hk": "獨家：備忘錄顯示，拜登司法部一名關鍵官員曾對FBI突襲海湖莊園提出警示：https://justthenews.com/government/courts-law/biden-doj-official-had-concerns-trump-declassified-documents-seized-fbis-mar",
+    "content_ko": "단독: 메모에 따르면, 바이든 법무부의 핵심 당국자가 FBI의 마러라고 압수수색에 대해 위험 신호를 제기했다: https://justthenews.com/government/courts-law/biden-doj-official-had-concerns-trump-declassified-documents-seized-fbis-mar"
+  },
   "https://truthsocial.com/@realDonaldTrump/116637923930386496": {
     "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116637923075105654",
     "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116637923075105654",
