@@ -1,4 +1,19 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116640630404037479": {
+    "content_zh_cn": "历史学家，而且远不止于此的维克托·戴维斯·汉森，实在是太棒了。我要说的就这些。无需再作任何解释。了不起的人！总统 DJT",
+    "content_zh_hk": "歷史學家，而且遠不止於此的維克托·戴維斯·漢森，實在是太出色了。我要講的就這些。無需再作任何解釋。了不起的人！總統 DJT",
+    "content_ko": "역사학자이자, 그 이상인 빅터 데이비스 핸슨은 정말 훌륭합니다. 제가 할 말은 그게 전부입니다. 더 이상의 설명은 필요 없습니다. 정말 대단한 인물입니다! 대통령 DJT"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116640602660695683": {
+    "content_zh_cn": "独家：备忘录显示，拜登司法部一名关键官员曾对FBI突袭海湖庄园提出警示：https://justthenews.com/government/courts-law/biden-doj-official-had-concerns-trump-declassified-documents-seized-fbis-mar",
+    "content_zh_hk": "獨家：備忘錄顯示，拜登司法部一名關鍵官員曾對FBI突襲海湖莊園提出警示：https://justthenews.com/government/courts-law/biden-doj-official-had-concerns-trump-declassified-documents-seized-fbis-mar",
+    "content_ko": "단독: 메모에 따르면, 바이든 법무부의 핵심 관계자가 FBI의 마러라고 압수수색에 대해 위험 신호를 제기했다: https://justthenews.com/government/courts-law/biden-doj-official-had-concerns-trump-declassified-documents-seized-fbis-mar"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116640601110526474": {
+    "content_zh_cn": "迈阿密联邦检察官起诉前检察官，向“深层政府”发出“警告”：https://justthenews.com/accountability/political-ethics/us-attorney-miami-sends-message-deep-state-indictment-against-ex",
+    "content_zh_hk": "邁阿密聯邦檢察官起訴前檢察官，向「深層政府」發出「警告」：https://justthenews.com/accountability/political-ethics/us-attorney-miami-sends-message-deep-state-indictment-against-ex",
+    "content_ko": "마이애미 연방검사가 전직 검사 기소로 ‘딥스테이트’에 ‘경고 메시지’ 보내: https://justthenews.com/accountability/political-ethics/us-attorney-miami-sends-message-deep-state-indictment-against-ex"
+  },
   "https://truthsocial.com/@realDonaldTrump/116640319334016190": {
     "content_zh_cn": "Alex Gray 在福克斯新闻上的表现非常出色。谢谢你，Alex！！！总统 DJT",
     "content_zh_hk": "Alex Gray 在霍士新聞上的表現非常出色。多謝你，Alex！！！總統 DJT",
