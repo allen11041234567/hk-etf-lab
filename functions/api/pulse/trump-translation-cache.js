@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116637923930386496": {
+    "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116637923075105654",
+    "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116637923075105654",
+    "content_ko": "재게시: https://truthsocial.com/users/realDonaldTrump/statuses/116637923075105654"
+  },
   "https://truthsocial.com/@realDonaldTrump/116637404995923093": {
     "content_zh_cn": "浓缩铀（核尘埃！）将被立即移交给美国，运回本土销毁；或者，更理想的是，与伊朗伊斯兰共和国协同配合，就地销毁，或在另一处可接受地点销毁，并由原子能委员会或其同等机构见证这一过程和行动。感谢对此事的关注！总统DJT",
     "content_zh_hk": "濃縮鈾（核塵埃！）將被立即移交給美國，運回本土銷毀；或者，更理想的是，與伊朗伊斯蘭共和國協同配合，就地銷毀，或在另一處可接受地點銷毀，並由原子能委員會或其同等機構見證這一過程和行動。感謝對此事的關注！總統DJT",
