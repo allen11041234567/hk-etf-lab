@@ -1,4 +1,24 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116640302390587616": {
+    "content_zh_cn": "抱歉，我无法直接访问该链接内容。请把原文帖子的文字粘贴过来，我会按你的要求返回严格 JSON 翻译。",
+    "content_zh_hk": "抱歉，我無法直接存取該連結內容。請把原文帖文的文字貼上，我會按你的要求返回嚴格 JSON 翻譯。",
+    "content_ko": "죄송하지만 해당 링크의 본문을 직접 확인할 수 없습니다. 게시물 원문 텍스트를 붙여 주시면 요청하신 형식의 엄격한 JSON으로 번역해 드리겠습니다."
+  },
+  "https://truthsocial.com/@realDonaldTrump/116640296501012524": {
+    "content_zh_cn": "https://truthsocial.com/users/Imaluckyangel/statuses/116634887599602834",
+    "content_zh_hk": "https://truthsocial.com/users/Imaluckyangel/statuses/116634887599602834",
+    "content_ko": "https://truthsocial.com/users/Imaluckyangel/statuses/116634887599602834"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116640294393468349": {
+    "content_zh_cn": "抱歉，我无法直接访问该链接内容。请将原文贴出，我会按要求返回严格 JSON，并提供简体中文、繁体中文（香港）和韩文翻译。",
+    "content_zh_hk": "抱歉，我無法直接存取該連結內容。請將原文貼上，我會按要求返回嚴格 JSON，並提供簡體中文、繁體中文（香港）和韓文翻譯。",
+    "content_ko": "죄송하지만 해당 링크의 내용을 직접 확인할 수 없습니다. 원문을 붙여 주시면 요청하신 형식의 엄격한 JSON으로 중국어 간체, 중국어 번체(홍콩), 한국어 번역을 제공하겠습니다."
+  },
+  "https://truthsocial.com/@realDonaldTrump/116640292118558842": {
+    "content_zh_cn": "https://truthsocial.com/users/1776WeThePeople1776Q/statuses/116634771557391388",
+    "content_zh_hk": "https://truthsocial.com/users/1776WeThePeople1776Q/statuses/116634771557391388",
+    "content_ko": "https://truthsocial.com/users/1776WeThePeople1776Q/statuses/116634771557391388"
+  },
   "https://truthsocial.com/@realDonaldTrump/116640290568039212": {
     "content_zh_cn": "抱歉，我无法直接打开该链接或读取其中的帖子内容。请把帖子的原文粘贴过来，我会按你的要求返回严格 JSON：content_zh_cn、content_zh_hk、content_ko。",
     "content_zh_hk": "抱歉，我無法直接打開該連結或讀取其中的帖文內容。請把帖文原文貼上，我會按你的要求返回嚴格 JSON：content_zh_cn、content_zh_hk、content_ko。",
