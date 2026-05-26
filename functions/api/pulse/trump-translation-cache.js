@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116640837468653063": {
+    "content_zh_cn": "众议员德里克·范·奥登在福克斯新闻上的表现非常出色。真正的专业人士！特朗普总统",
+    "content_zh_hk": "眾議員德里克·范·奧登在霍士新聞上的表現非常出色。真正的專業人士！特朗普總統",
+    "content_ko": "Fox News에 출연한 데릭 밴 오든 하원의원, 정말 훌륭했습니다. 진정한 프로입니다! 트럼프 대통령"
+  },
   "https://truthsocial.com/@realDonaldTrump/116640630404037479": {
     "content_zh_cn": "历史学家，而且远不止于此的维克托·戴维斯·汉森，实在是太棒了。我要说的就这些。无需再作任何解释。了不起的人！总统 DJT",
     "content_zh_hk": "歷史學家，而且遠不止於此的維克托·戴維斯·漢森，實在是太出色了。我要講的就這些。無需再作任何解釋。了不起的人！總統 DJT",
