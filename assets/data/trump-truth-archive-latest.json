@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-05-27T05:04:20.448Z",
+  "fetchedAt": "2026-05-27T05:20:34.962Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
@@ -17,9 +17,9 @@
       "favourites_count": 1,
       "reblogs_count": 0,
       "replies_count": 0,
-      "content_zh_cn": "RT @realDonaldTrumpA Crooked Politician!!!",
-      "content_zh_hk": "RT @realDonaldTrumpA Crooked Politician!!!",
-      "content_ko": "RT @realDonaldTrumpA Crooked Politician!!!",
+      "content_zh_cn": "转发 @realDonaldTrumpA 一个腐败的政客！！！",
+      "content_zh_hk": "轉發 @realDonaldTrumpA 一個腐敗的政客！！！",
+      "content_ko": "RT @realDonaldTrumpA 부패한 정치인이다!!!",
       "source_hint": "stock.fengle.me"
     },
     {
