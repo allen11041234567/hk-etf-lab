@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116647016538665889": {
+    "content_zh_cn": "这个在犯罪问题上软弱、主张开放边境的“蠢主党”政客，绝不能被允许代表伟大的德州人民。他的“价值观”完全背道而驰！！！\n——特朗普总统",
+    "content_zh_hk": "這個在犯罪問題上軟弱、主張開放邊境的「蠢主黨」政客，絕不能被允許代表偉大的德州人民。他的「價值觀」完全背道而馳！！！\n——特朗普總統",
+    "content_ko": "범죄에 약하고, 국경 개방을 주장하는 이 “Dumocrat”는 위대한 텍사스 주민들을 대표하도록 결코 허용돼서는 안 됩니다. 그의 “가치관”은 정반대입니다!!!\n— 트럼프 대통령"
+  },
   "https://truthsocial.com/@realDonaldTrump/116646638944585333": {
     "content_zh_cn": "感谢美国，给予这前所未有的支持！！！\n——总统 DJT\nhttps://www.thegatewaypundit.com/2026/05/trump-dynasty-president-trump-goes-118-118-primary/",
     "content_zh_hk": "感謝美國，給予這前所未有的支持！！！\n——總統 DJT\nhttps://www.thegatewaypundit.com/2026/05/trump-dynasty-president-trump-goes-118-118-primary/",
