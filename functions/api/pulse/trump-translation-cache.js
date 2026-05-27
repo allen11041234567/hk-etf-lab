@@ -1,4 +1,14 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116644191612081208": {
+    "content_zh_cn": "一个腐败的政客！！！",
+    "content_zh_hk": "一個腐敗的政客！！！",
+    "content_ko": "부패한 정치인!!!"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116644190724261689": {
+    "content_zh_cn": "乔·拜登起诉美国司法部，试图阻止公开与特别检察官调查相关的录音： https://justthenews.com/government/courts-law/joe-biden-sues-doj-stop-release-audio-recordings-connected-special-counsel",
+    "content_zh_hk": "祖·拜登起訴美國司法部，試圖阻止公開與特別檢察官調查相關的錄音： https://justthenews.com/government/courts-law/joe-biden-sues-doj-stop-release-audio-recordings-connected-special-counsel",
+    "content_ko": "조 바이든, 특별검사 수사와 관련된 녹음 파일 공개를 막기 위해 미 법무부를 제소: https://justthenews.com/government/courts-law/joe-biden-sues-doj-stop-release-audio-recordings-connected-special-counsel"
+  },
   "https://truthsocial.com/@realDonaldTrump/116642964849373081": {
     "content_zh_cn": "至关重要的是，必须维护美国商品期货交易委员会（CFTC）对预测市场的专属监管权，并确保这一市场蓬勃发展。 在我的领导下，我们正在制定适用于各州的“行为准则”，这将成为黄金标准。 我们绝不能让像克里斯·克里斯蒂、莱蒂希娅·詹姆斯、蒂姆·沃尔兹和JB·普利兹克这样的败类来制定规则！ 其他国家都在追逐这种新型金融市场，而我们要继续保持领先地位。 同样，甚至更重要的是，目前我们是全球加密货币（比特币等）之都，其他国家正竭力取而代之，但我们绝不会让这种情况发生。 这是一个重大的产业，我们必须保护它。 CFTC主席迈克·塞利格深受各方尊敬，干得非常出色。 谢谢你，迈克！ 唐纳德·J·特朗普总统",
     "content_zh_hk": "至關重要的是，必須維持美國商品期貨交易委員會（CFTC）對預測市場的專屬監管權，並確保這一市場蓬勃發展。 在我的領導下，我們正在制定適用於各州的「行業規則」，這將成為黃金標準。 我們絕不能讓像Chris Christie、Letitia James、Tim Walz和JB Pritzker這樣的敗類來定規矩！ 其他國家都在追逐這種新型金融市場，而我們要繼續保持領先地位。 同樣，甚至更重要的是，目前我們是全球加密貨幣（比特幣等）之都，其他國家正努力想取而代之，但我們絕不會讓這種情況發生。 這是一個重大產業，我們必須保護它。 CFTC主席Mike Selig深受各方尊敬，表現非常出色。 多謝你，Mike！ 總統 DONALD J. TRUMP",
