@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116646638944585333": {
+    "content_zh_cn": "感谢美国，给予这前所未有的支持！！！\n——总统 DJT\nhttps://www.thegatewaypundit.com/2026/05/trump-dynasty-president-trump-goes-118-118-primary/",
+    "content_zh_hk": "感謝美國，給予這前所未有的支持！！！\n——總統 DJT\nhttps://www.thegatewaypundit.com/2026/05/trump-dynasty-president-trump-goes-118-118-primary/",
+    "content_ko": "미국에 감사드립니다. 이 전례 없는 지지에 감사합니다!!!\n대통령 DJT\nhttps://www.thegatewaypundit.com/2026/05/trump-dynasty-president-trump-goes-118-118-primary/"
+  },
   "https://truthsocial.com/@realDonaldTrump/116646308242618920": {
     "content_zh_cn": "祝贺Ken Paxton取得如此巨大的胜利，也要向John Cornyn致意——他打了一场强劲而有力的选战，更重要的是，他拥有一段真正伟大的职业生涯。John在未来很长时间里都会是我的朋友，而我们也将一同见证Ken成为一位出色、讲求常识、受所有人尊敬的参议员。\n\n至于他的对手Alfred E. Neuman，可能是我见过最糟糕的得州候选人。此人强烈主张开放边境，\n对犯罪问题软弱，\n相信有6种性别，\n冒犯耶稣基督，\n永远不会支持军队，\n直到最近都还是个大力支持戴口罩的人，\n而且还是个不喜欢吃肉的纯素食者——如果你想在得州赢得选举，这可绝不是什么好路数。\n\nJasmine Crockett，这位智商非常低的人——和那位传奇边疆人物Davy Crockett毫无关系——本来会是民主党的更好人选。\n\n我会为Ken举办一些很棒、盛大、漂亮的集会。Texas，这会非常有趣！\n\nGOD BLESS AMERICA.\nPresident DJT",
     "content_zh_hk": "祝賀Ken Paxton取得如此重大的勝利，也向John Cornyn致意——他打了一場強勁而有力的選戰，但更重要的是，他擁有一段真正偉大的職業生涯。John在未來很長時間內都會是我的朋友，而我們也會一同看著Ken成為一位出色、講求常識、受所有人尊敬的參議員。\n\n至於他的對手Alfred E. Neuman，可能是我見過最差勁的德州候選人。此人大力主張開放邊境，\n對罪案問題軟弱，\n相信有6種性別，\n冒犯耶穌基督，\n永遠不會支持軍隊，\n直到最近都還是個大力支持戴口罩的人，\n而且還是個不喜歡吃肉的純素食者——如果你想在德州贏得選舉，這絕對不是甚麼好路數。\n\nJasmine Crockett，這位智商非常低的人——和那位傳奇邊疆人物Davy Crockett毫無關係——本來會是民主黨的更好人選。\n\n我會為Ken舉辦一些很棒、盛大、漂亮的集會。Texas，這將會很有趣！\n\nGOD BLESS AMERICA.\nPresident DJT",
