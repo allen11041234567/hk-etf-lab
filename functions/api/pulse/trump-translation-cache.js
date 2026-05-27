@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116644198848350274": {
+    "content_zh_cn": "转发 @realDonaldTrumpA 一个腐败的政客！！！",
+    "content_zh_hk": "轉發 @realDonaldTrumpA 一個腐敗的政客！！！",
+    "content_ko": "RT @realDonaldTrumpA 부패한 정치인이다!!!"
+  },
   "https://truthsocial.com/@realDonaldTrump/116644191612081208": {
     "content_zh_cn": "一个腐败的政客！！！",
     "content_zh_hk": "一個腐敗的政客！！！",
