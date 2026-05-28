@@ -1,4 +1,14 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116653311782130303": {
+    "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116653310430151495",
+    "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116653310430151495",
+    "content_ko": "재게시: https://truthsocial.com/users/realDonaldTrump/statuses/116653310430151495"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116653310430151495": {
+    "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116653308990055722",
+    "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116653308990055722",
+    "content_ko": "리트윗: https://truthsocial.com/users/realDonaldTrump/statuses/116653308990055722"
+  },
   "https://truthsocial.com/@realDonaldTrump/116649467728859592": {
     "content_zh_cn": "格雷格·贾勒特：长期被隐匿的文件揭示，对特朗普的第一次弹劾完全是一场骗局：https://www.foxnews.com/opinion/gregg-jarrett-long-hidden-documents-reveal-first-trump-impeachment-total-fraud",
     "content_zh_hk": "格雷格·賈勒特：長期被隱藏的文件揭示，對特朗普的首次彈劾完全是一場騙局：https://www.foxnews.com/opinion/gregg-jarrett-long-hidden-documents-reveal-first-trump-impeachment-total-fraud",
