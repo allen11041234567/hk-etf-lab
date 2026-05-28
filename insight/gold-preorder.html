@@ -107,22 +107,29 @@
     @media (max-width: 720px) {
       .wrap { width:calc(100vw - 12px); padding:8px 0 22px; }
       .hero, .panel { border-radius:18px; padding:16px; }
+      .hero { gap:12px; }
       h1 { margin:14px 0 10px; font-size:28px; }
       .hero-sub { font-size:14px; line-height:1.72; }
       .hero-note, .subline, .section-desc, .service-item, .rule-item, .step-desc, .cta-desc { font-size:11px; line-height:1.65; }
       .hero-actions { flex-direction:column; }
       .hero-actions .btn { width:100%; }
+      .section-head { flex-direction:column; align-items:flex-start; gap:8px; }
       .section-title { font-size:18px; }
       .metric-value { font-size:24px; }
       .value-xl { font-size:28px; }
       .cta-title { font-size:20px; }
+      .metric-card, .step-card { padding:16px; }
     }
     @media (max-width: 480px) {
-      .wrap { width:calc(100vw - 10px); }
+      .wrap { width:calc(100vw - 10px); padding:6px 0 18px; }
       .hero, .panel { padding:14px; border-radius:16px; }
       h1 { font-size:24px; }
+      .hero-sub { font-size:13px; line-height:1.68; }
       .metric-card, .step-card, .rule-card, .cta-card { padding:14px; border-radius:16px; }
       .metric-value, .value-xl { font-size:22px; }
+      .step-title { font-size:15px; }
+      .cta-copy, .cta-card { width:100%; }
+      .cta-card .hero-actions { width:100%; }
     }
   </style>
 </head>
