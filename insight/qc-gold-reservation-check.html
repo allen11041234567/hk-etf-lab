@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex,nofollow,noarchive" />
+  <title>预约前确认</title>
+  <style>
+    :root {
+      --bg:#0d1015; --text:#f7f2e8; --muted:#b8ad99; --gold:#e7c98b; --gold-strong:#f2d7a6;
+      --line:rgba(229,197,128,0.18); --line-strong:rgba(229,197,128,0.34); --shadow:0 24px 70px rgba(0,0,0,0.35);
+    }
+    * { box-sizing:border-box; }
+    body {
+      margin:0; min-height:100vh; color:var(--text);
+      background:linear-gradient(180deg, #12161d 0%, #0d1015 46%, #090b0f 100%);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    }
+    .wrap { width:min(980px, calc(100vw - 24px)); margin:0 auto; padding:20px 0 40px; }
+    .panel {
+      background:linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03));
+      border:1px solid var(--line); border-radius:24px; box-shadow:var(--shadow); padding:20px;
+    }
+    .eyebrow { display:inline-flex; padding:8px 12px; border-radius:999px; color:var(--gold); border:1px solid var(--line-strong); background:rgba(231,201,139,0.08); font-size:12px; letter-spacing:.12em; text-transform:uppercase; }
+    h1 { margin:16px 0 10px; font-size:clamp(30px, 5vw, 48px); letter-spacing:-.04em; }
+    .sub { color:var(--muted); font-size:14px; line-height:1.8; }
+    .grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; margin-top:16px; }
+    .card { padding:16px; border-radius:18px; border:1px solid rgba(255,255,255,0.07); background:rgba(255,255,255,0.035); }
+    .label { color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.08em; }
+    .value { margin-top:8px; font-size:28px; font-weight:800; letter-spacing:-.03em; }
+    .subline { margin-top:8px; color:var(--muted); font-size:12px; line-height:1.7; }
+    .rule-box { margin-top:16px; padding:18px; border-radius:20px; border:1px solid var(--line-strong); background:rgba(231,201,139,0.08); }
+    .rule-title { font-size:18px; font-weight:800; }
+    .rule-list { display:grid; gap:8px; margin-top:12px; color:var(--muted); font-size:13px; line-height:1.75; }
+    .confirm { margin-top:16px; display:flex; gap:10px; align-items:flex-start; color:var(--text); font-size:13px; line-height:1.75; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:18px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; min-height:46px; padding:0 18px; border-radius:999px; text-decoration:none; font-size:14px; font-weight:700; cursor:pointer; }
+    .btn.primary { color:#1a1712; background:linear-gradient(135deg,var(--gold-strong),#d7b46a); border:none; }
+    .btn.secondary { color:var(--text); border:1px solid var(--line-strong); background:rgba(255,255,255,0.03); }
+    .btn[disabled] { opacity:.45; cursor:not-allowed; }
+    .empty { color:var(--muted); font-size:13px; line-height:1.8; margin-top:16px; }
+    @media (max-width: 720px) {
+      .wrap { width:calc(100vw - 12px); padding:10px 0 24px; }
+      .panel { padding:16px; border-radius:18px; }
+      .grid { grid-template-columns:1fr; }
+      h1 { font-size:28px; }
+      .actions { flex-direction:column; }
+      .actions .btn { width:100%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="panel">
+      <div class="eyebrow">Reservation Check</div>
+      <h1>预约前确认</h1>
+      <div class="sub">请先核对本次测算结果。页面结果均为参考金价估算，实际交易报价以现场交易为准。</div>
+
+      <div id="empty-state" class="empty" style="display:none;">尚未检测到有效测算结果。请先返回计算器页面完成测算，再进入预约确认。</div>
+
+      <div id="content" style="display:none;">
+        <div class="grid">
+          <div class="card">
+            <div class="label">规格组合</div>
+            <div class="value" id="mix-text">--</div>
+            <div class="subline" id="mix-sub">--</div>
+          </div>
+          <div class="card">
+            <div class="label">QC 订单总额</div>
+            <div class="value" id="total-hkd">--</div>
+            <div class="subline" id="total-sub">--</div>
+          </div>
+          <div class="card">
+            <div class="label">总重量</div>
+            <div class="value" id="grams">--</div>
+            <div class="subline" id="qty">--</div>
+          </div>
+          <div class="card">
+            <div class="label">相较周大福等金店</div>
+            <div class="value" id="saving">--</div>
+            <div class="subline" id="saving-sub">--</div>
+          </div>
+        </div>
+
+        <div class="rule-box">
+          <div class="rule-title">预约问卷前须知</div>
+          <div class="rule-list">
+            <div>1. 预约时需上传 03030.HK 持仓证明截图。</div>
+            <div>2. 持仓证明数量必须大于对应需兑换结果的数字。</div>
+            <div>3. 若持仓证明不足，即使完成预约，预约结果也将失效。</div>
+          </div>
+          <label class="confirm">
+            <input type="checkbox" id="ack" />
+            <span>我已了解：预约需上传 03030.HK 持仓证明截图，且持仓数量必须大于本次兑换结果，否则预约无效。</span>
+          </label>
+        </div>
+
+        <div class="actions">
+          <a class="btn secondary" href="./qc-gold-calculator.html">返回重新测算</a>
+          <a class="btn secondary" href="./gold-preorder.html">返回首页</a>
+          <a class="btn primary" id="continue-btn" href="#" aria-disabled="true">继续前往预约问卷</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const CONFIG = {
+      storageKey: 'qcGoldReservationDraft',
+      questionnaireUrl: '#',
+    };
+
+    function money(n, digits = 2) {
+      const value = Number(n);
+      if (!Number.isFinite(value)) return '--';
+      return value.toLocaleString('en-HK', { minimumFractionDigits: digits, maximumFractionDigits: digits });
+    }
+
+    function loadDraft() {
+      try {
+        const raw = sessionStorage.getItem(CONFIG.storageKey);
+        if (!raw) return null;
+        return JSON.parse(raw);
+      } catch {
+        return null;
+      }
+    }
+
+    function renderDraft(draft) {
+      if (!draft || !Array.isArray(draft.lines) || !draft.lines.length) {
+        document.getElementById('empty-state').style.display = 'block';
+        return;
+      }
+      document.getElementById('content').style.display = 'block';
+      const mixText = draft.lines.map((line) => `${line.label} × ${line.quantity}`).join(' / ');
+      document.getElementById('mix-text').textContent = mixText;
+      document.getElementById('mix-sub').textContent = `参考金价时间：${draft.updatedAt || '--'}`;
+      document.getElementById('total-hkd').textContent = `HK$${money(draft.totalHkd)}`;
+      document.getElementById('total-sub').textContent = `约合 US$${money(draft.totalUsd)}，实际交易报价以现场交易为准`;
+      document.getElementById('grams').textContent = `${money(draft.totalGrams, 2)} g`;
+      document.getElementById('qty').textContent = `总块数 ${draft.totalQty}`;
+      document.getElementById('saving').textContent = Number.isFinite(draft.prioritySavingHkd) ? `HK$${money(Math.abs(draft.prioritySavingHkd))}` : '--';
+      document.getElementById('saving-sub').textContent = draft.priorityShopName
+        ? `优先按 ${draft.priorityShopName} 参考卖出价估算`
+        : '优先金店参考价暂未返回';
+    }
+
+    const draft = loadDraft();
+    renderDraft(draft);
+
+    const ack = document.getElementById('ack');
+    const btn = document.getElementById('continue-btn');
+    ack.addEventListener('change', () => {
+      const enabled = ack.checked && !!draft;
+      btn.setAttribute('aria-disabled', enabled ? 'false' : 'true');
+      if (enabled) {
+        btn.removeAttribute('disabled');
+        btn.href = CONFIG.questionnaireUrl;
+      } else {
+        btn.setAttribute('disabled', 'disabled');
+        btn.href = '#';
+      }
+    });
+    btn.setAttribute('disabled', 'disabled');
+  </script>
+</body>
+</html>
