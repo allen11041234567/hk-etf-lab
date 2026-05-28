@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-05-28T23:18:26.378Z",
+  "fetchedAt": "2026-05-28T23:46:22.348Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
@@ -27,13 +27,13 @@
           "type": "image"
         }
       ],
-      "favourites_count": 12203,
-      "reblogs_count": 3159,
-      "replies_count": 1378,
+      "favourites_count": 12826,
+      "reblogs_count": 3312,
+      "replies_count": 1465,
       "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116653310430151495",
       "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116653310430151495",
       "content_ko": "재게시: https://truthsocial.com/users/realDonaldTrump/statuses/116653310430151495",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116653310430151495",
@@ -53,13 +53,13 @@
           "type": "image"
         }
       ],
-      "favourites_count": 14170,
-      "reblogs_count": 3400,
-      "replies_count": 995,
+      "favourites_count": 14902,
+      "reblogs_count": 3578,
+      "replies_count": 1041,
       "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116653308990055722",
       "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116653308990055722",
       "content_ko": "리트윗: https://truthsocial.com/users/realDonaldTrump/statuses/116653308990055722",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116653307880436820",
@@ -75,13 +75,13 @@
           "type": "image"
         }
       ],
-      "favourites_count": 8854,
-      "reblogs_count": 2153,
-      "replies_count": 512,
+      "favourites_count": 9304,
+      "reblogs_count": 2235,
+      "replies_count": 530,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116650181129851842",
@@ -97,13 +97,13 @@
           "type": "image"
         }
       ],
-      "favourites_count": 30888,
-      "reblogs_count": 5994,
-      "replies_count": 3298,
+      "favourites_count": 31254,
+      "reblogs_count": 6053,
+      "replies_count": 3322,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116650179875807843",
@@ -119,13 +119,13 @@
           "type": "image"
         }
       ],
-      "favourites_count": 19967,
-      "reblogs_count": 4341,
-      "replies_count": 1200,
+      "favourites_count": 20185,
+      "reblogs_count": 4379,
+      "replies_count": 1209,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116649467728859592",
@@ -136,13 +136,13 @@
       "content": "GREGG JARRETT: Long-hidden documents reveal first Trump impeachment was a total fraud: https://www.foxnews.com/opinion/gregg-jarrett-long-hidden-documents-reveal-first-trump-impeachment-total-fraud",
       "content_html": "GREGG JARRETT: Long-hidden documents reveal first Trump impeachment was a total fraud: https://www.foxnews.com/opinion/gregg-jarrett-long-hidden-documents-reveal-first-trump-impeachment-total-fraud",
       "media": [],
-      "favourites_count": 23983,
-      "reblogs_count": 7418,
-      "replies_count": 1924,
+      "favourites_count": 24189,
+      "reblogs_count": 7472,
+      "replies_count": 1936,
       "content_zh_cn": "格雷格·贾勒特：长期被隐匿的文件揭示，对特朗普的第一次弹劾完全是一场骗局：https://www.foxnews.com/opinion/gregg-jarrett-long-hidden-documents-reveal-first-trump-impeachment-total-fraud",
       "content_zh_hk": "格雷格·賈勒特：長期被隱藏的文件揭示，對特朗普的首次彈劾完全是一場騙局：https://www.foxnews.com/opinion/gregg-jarrett-long-hidden-documents-reveal-first-trump-impeachment-total-fraud",
       "content_ko": "그레그 재럿: 오랫동안 숨겨져 있던 문서들이 트럼프에 대한 첫 탄핵이 완전한 사기였음을 드러낸다: https://www.foxnews.com/opinion/gregg-jarrett-long-hidden-documents-reveal-first-trump-impeachment-total-fraud",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116649465703521507",
@@ -153,13 +153,13 @@
       "content": "GREGG JARRETT: Release the Biden tapes and let Americans hear the truth for themselves: https://www.foxnews.com/opinion/gregg-jarrett-release-biden-tapes-let-americans-hear-truth",
       "content_html": "GREGG JARRETT: Release the Biden tapes and let Americans hear the truth for themselves: https://www.foxnews.com/opinion/gregg-jarrett-release-biden-tapes-let-americans-hear-truth",
       "media": [],
-      "favourites_count": 21385,
-      "reblogs_count": 6159,
-      "replies_count": 1159,
+      "favourites_count": 21546,
+      "reblogs_count": 6197,
+      "replies_count": 1168,
       "content_zh_cn": "格雷格·贾勒特：公开拜登录音，让美国人亲耳听到真相： https://www.foxnews.com/opinion/gregg-jarrett-release-biden-tapes-let-americans-hear-truth",
       "content_zh_hk": "格雷格·賈勒特：公開拜登錄音，讓美國人親耳聽到真相： https://www.foxnews.com/opinion/gregg-jarrett-release-biden-tapes-let-americans-hear-truth",
       "content_ko": "그레그 재럿: 바이든 녹음을 공개하고, 미국인들이 직접 진실을 듣게 하라: https://www.foxnews.com/opinion/gregg-jarrett-release-biden-tapes-let-americans-hear-truth",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116648998520896910",
@@ -170,13 +170,13 @@
       "content": "Prime Minister Nikol Pashinyan, of Armenia, a great friend and Leader, is making his Country strong, wealthy, and very secure! Nikol completely shares my vision of PEACE and PROSPERITY for Armenia and the entire South Caucasus region. Our Secretary of State, Marco Rubio, just traveled to Armenia, where he advanced several important Deals for both our Countries. Soon, the United States and Armenia will break ground together on the Trump Route for International Peace and Prosperity, which will transform the South Caucasus, and help our wonderful American Energy Companies gain access from Central Asia all the way to the United States. For these reasons, Nikol has my COMPLETE and TOTAL Endorsement for Re-Election on June 7, 2026. With Nikol's help, we will bring the United States, Armenia, the South Caucasus, and Central Asia to greater heights than ever before. Make (Armenia) Great Again — MAGA! President DONALD J. TRUMP",
       "content_html": "Prime Minister Nikol Pashinyan, of Armenia, a great friend and Leader, is making his Country strong, wealthy, and very secure! Nikol completely shares my vision of PEACE and PROSPERITY for Armenia and the entire South Caucasus region. Our Secretary of State, Marco Rubio, just traveled to Armenia, where he advanced several important Deals for both our Countries. Soon, the United States and Armenia will break ground together on the Trump Route for International Peace and Prosperity, which will transform the South Caucasus, and help our wonderful American Energy Companies gain access from Central Asia all the way to the United States. For these reasons, Nikol has my COMPLETE and TOTAL Endorsement for Re-Election on June 7, 2026. With Nikol's help, we will bring the United States, Armenia, the South Caucasus, and Central Asia to greater heights than ever before. Make (Armenia) Great Again — MAGA! President DONALD J. TRUMP",
       "media": [],
-      "favourites_count": 19898,
-      "reblogs_count": 4402,
-      "replies_count": 871,
+      "favourites_count": 19993,
+      "reblogs_count": 4418,
+      "replies_count": 876,
       "content_zh_cn": "亚美尼亚总理尼科尔·帕希尼扬——一位伟大的朋友和领导人——正让他的国家变得强大、富裕，而且非常安全！\n尼科尔完全认同我对亚美尼亚以及整个南高加索地区实现和平与繁荣的愿景。\n我们的国务卿马可·鲁比奥刚刚访问了亚美尼亚，在那里推动了多项对两国都十分重要的协议。\n很快，美国和亚美尼亚将共同为“特朗普国际和平与繁荣路线”破土动工，这将改变南高加索，并帮助我们优秀的美国能源企业打通从中亚一直通往美国的通道。\n基于这些原因，我对尼科尔于2026年6月7日竞选连任给予完全、彻底的背书。\n在尼科尔的帮助下，我们将把美国、亚美尼亚、南高加索和中亚带到前所未有的新高度。\n让（亚美尼亚）再次伟大——MAGA！\n唐纳德·J·特朗普总统",
       "content_zh_hk": "亞美尼亞總理尼科爾·帕希尼揚——一位偉大的朋友和領袖——正令他的國家變得強大、富裕，而且非常安全！\n尼科爾完全認同我對亞美尼亞以及整個南高加索地區實現和平與繁榮的願景。\n我們的國務卿馬可·魯比奧剛剛訪問了亞美尼亞，並在當地推動了多項對兩國都十分重要的協議。\n很快，美國和亞美尼亞將共同為「特朗普國際和平與繁榮路線」破土動工，這將改變南高加索，並幫助我們優秀的美國能源企業打通從中亞一直通往美國的通道。\n基於這些原因，我對尼科爾於2026年6月7日競選連任給予完全、徹底的背書。\n在尼科爾的幫助下，我們將把美國、亞美尼亞、南高加索和中亞帶到前所未有的新高度。\n讓（亞美尼亞）再次偉大——MAGA！\n特朗普總統 唐納德·J·特朗普",
       "content_ko": "아르메니아의 니콜 파시냔 총리는 위대한 친구이자 지도자로서, 자신의 나라를 강하고, 부유하며, 매우 안전하게 만들고 있습니다!\n니콜은 아르메니아와 남캅카스 전역의 평화와 번영에 대한 나의 비전을 전적으로 공유하고 있습니다.\n우리 국무장관 마코 루비오는 방금 아르메니아를 방문해 양국을 위한 몇 가지 중요한 합의를 진전시켰습니다.\n머지않아 미국과 아르메니아는 함께 '트럼프 국제 평화와 번영 루트' 착공에 나설 것이며, 이는 남캅카스를 바꿔 놓고, 우리의 훌륭한 미국 에너지 기업들이 중앙아시아에서 미국에 이르기까지 접근 통로를 확보하도록 도울 것입니다.\n이러한 이유로, 나는 2026년 6월 7일 재선에 도전하는 니콜에게 COMPLETE and TOTAL 지지를 보냅니다.\n니콜의 도움으로 우리는 미국, 아르메니아, 남캅카스, 그리고 중앙아시아를 그 어느 때보다 더 높은 곳으로 이끌 것입니다.\n(아르메니아)를 다시 위대하게 — MAGA!\n도널드 J. 트럼프 대통령",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116648950505497613",
@@ -187,13 +187,13 @@
       "content": "Gary Gensler and the \"Anti-Crypto Army\" nearly DESTROYED the American Crypto Industry by driving Bitcoin, Crypto Perpetuals, and INNOVATION offshore, but \"TRUMP\" SAVED IT. America is now the CRYPTO CAPITAL of the WORLD, and Builders and Entrepreneurs are coming BACK to the United States where they belong. Under my Leadership, we will codify a FUTURE-PROOF Digital Asset Market Structure that cannot be undone by the Crypto Haters. The new Frontier of Finance is being Built in America, and \"TRUMP\" will NEVER let Crypto down! President DONALD J. TRUMP",
       "content_html": "Gary Gensler and the \"Anti-Crypto Army\" nearly DESTROYED the American Crypto Industry by driving Bitcoin, Crypto Perpetuals, and INNOVATION offshore, but \"TRUMP\" SAVED IT. America is now the CRYPTO CAPITAL of the WORLD, and Builders and Entrepreneurs are coming BACK to the United States where they belong. Under my Leadership, we will codify a FUTURE-PROOF Digital Asset Market Structure that cannot be undone by the Crypto Haters. The new Frontier of Finance is being Built in America, and \"TRUMP\" will NEVER let Crypto down! President DONALD J. TRUMP",
       "media": [],
-      "favourites_count": 17081,
-      "reblogs_count": 4065,
-      "replies_count": 990,
+      "favourites_count": 17164,
+      "reblogs_count": 4086,
+      "replies_count": 992,
       "content_zh_cn": "加里·根斯勒和“反加密货币大军”险些摧毁美国加密货币产业，把比特币、加密货币永续合约以及INNOVATION赶到海外，但“TRUMP”挽救了这一切。美国如今已是世界的加密货币之都，建设者和企业家正回到他们本就属于的美国。\n\n在我的领导下，我们将把面向未来、经得起考验的数字资产市场结构写入法规，不让加密货币仇视者有机会推翻。金融的新前沿正在美国建立，而“TRUMP”绝不会让加密货币失望！\n\n总统 唐纳德·J·特朗普",
       "content_zh_hk": "Gary Gensler 和「反加密貨幣大軍」幾乎摧毀了美國加密貨幣產業，將比特幣、加密貨幣永續合約以及INNOVATION逼到海外，但「TRUMP」拯救了一切。美國如今已是世界的加密貨幣之都，建設者和企業家正重返他們本應屬於的美國。\n\n在我的領導下，我們將把面向未來、經得起考驗的數碼資產市場結構寫入法規，不讓加密貨幣仇視者有機會推翻。金融的新前沿正在美國建立，而「TRUMP」絕不會讓加密貨幣失望！\n\n總統 當勞·J·特朗普",
       "content_ko": "게리 겐슬러와 “반(反) 암호화폐 군대”는 비트코인, 암호화폐 무기한 선물, 그리고 INNOVATION을 해외로 내몰며 미국 암호화폐 산업을 거의 파괴할 뻔했지만, “TRUMP”가 이를 구해냈습니다. 이제 미국은 세계의 암호화폐 수도이며, 빌더들과 기업가들은 자신들이 있어야 할 곳인 미국으로 돌아오고 있습니다.\n\n나의 리더십 아래 우리는 암호화폐 혐오자들이 뒤집을 수 없는, 미래에도 흔들리지 않을 디지털 자산 시장 구조를 법제화할 것입니다. 금융의 새로운 프런티어는 미국에서 세워지고 있으며, “TRUMP”는 암호화폐를 절대 실망시키지 않을 것입니다!\n\n대통령 도널드 J. 트럼프",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116647893653015989",
@@ -204,13 +204,13 @@
       "content": "I am pleased to announce the nomination of Matthew Byrne to serve as Judge on the U.S. District Court for the Southern District of Ohio. As Judge on the Ohio Twelfth District Court of Appeals, Matt has distinguished himself, and delivered strong results for The Buckeye State. He comes strongly recommended by our Great Vice President, JD Vance, and Senators Bernie Moreno and Jon Husted! Matt previously worked as an attorney at two major Cincinnati Law Firms, received his J.D. from The Ohio State University Moritz College of Law, and earned his B.A. from Xavier University. The Constitutional Rights of the incredible people of Ohio are in good hands with Matt on the Federal Bench. Congratulations Matt! President DONALD J. TRUMP",
       "content_html": "I am pleased to announce the nomination of Matthew Byrne to serve as Judge on the U.S. District Court for the Southern District of Ohio. As Judge on the Ohio Twelfth District Court of Appeals, Matt has distinguished himself, and delivered strong results for The Buckeye State. He comes strongly recommended by our Great Vice President, JD Vance, and Senators Bernie Moreno and Jon Husted! Matt previously worked as an attorney at two major Cincinnati Law Firms, received his J.D. from The Ohio State University Moritz College of Law, and earned his B.A. from Xavier University. The Constitutional Rights of the incredible people of Ohio are in good hands with Matt on the Federal Bench. Congratulations Matt! President DONALD J. TRUMP",
       "media": [],
-      "favourites_count": 18471,
-      "reblogs_count": 3845,
+      "favourites_count": 18515,
+      "reblogs_count": 3851,
       "replies_count": 924,
       "content_zh_cn": "我很高兴宣布，提名马修·伯恩出任美国俄亥俄州南区联邦地区法院法官。\n\n作为俄亥俄州第十二区上诉法院法官，马特表现卓越，为“七叶树之州”取得了有力成果。他获得了我们伟大的副总统J.D. 万斯，以及联邦参议员伯尼·莫雷诺和乔恩·赫斯特德的强力推荐！\n\n马特此前曾在辛辛那提两家大型律师事务所担任律师，获俄亥俄州立大学莫里茨法学院法学博士学位，并获泽维尔大学文学学士学位。随着马特进入联邦法官席位，俄亥俄州杰出民众的宪法权利将得到妥善守护。\n\n祝贺你，马特！\n\n总统 唐纳德·J·特朗普",
       "content_zh_hk": "我很高興宣布，提名馬修·伯恩出任美國俄亥俄州南區聯邦地區法院法官。\n\n作為俄亥俄州第十二區上訴法院法官，馬特表現卓越，並為「七葉樹之州」帶來了強勁成果。他獲得了我們偉大的副總統J.D. 萬斯，以及聯邦參議員伯尼·莫雷諾和喬恩·赫斯特德的強力推薦！\n\n馬特此前曾在辛辛那提兩家大型律師事務所擔任律師，獲俄亥俄州立大學莫里茨法學院法學博士學位，並獲澤維爾大學文學學士學位。隨着馬特出任聯邦法官，俄亥俄州傑出民眾的憲法權利將得到妥善守護。\n\n恭喜你，馬特！\n\n總統 唐納德·J·特朗普",
       "content_ko": "저는 매슈 번을 미국 오하이오 남부연방지방법원 판사로 지명하게 되어 기쁘게 발표합니다.\n\n오하이오 제12구 항소법원 판사로서 매트는 탁월한 역량을 보여주었고, 버크아이 주를 위해 강력한 성과를 내왔습니다. 그는 우리의 위대한 부통령 J.D. 밴스와 버니 모레노, 존 휴스테드 상원의원들로부터 강력한 추천을 받았습니다!\n\n매트는 이전에 신시내티의 두 대형 로펌에서 변호사로 일했으며, 오하이오주립대학교 모리츠 법학대학원에서 법무박사(J.D.) 학위를 받았고, 자비에르대학교에서 학사(B.A.) 학위를 취득했습니다. 매트가 연방 법관직에 오르게 되면서, 오하이오의 훌륭한 주민들이 가진 헌법적 권리는 안전하게 지켜질 것입니다.\n\n축하합니다, 매트!\n\n대통령 도널드 J. 트럼프",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116647792196617911",
@@ -226,9 +226,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 16074,
-      "reblogs_count": 4045,
-      "replies_count": 2057,
+      "favourites_count": 16122,
+      "reblogs_count": 4052,
+      "replies_count": 2059,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -243,9 +243,9 @@
       "content": "Congratulations to the Dumocrat Party! Al Green, one of the most mentally deficient Congressmen in the history of our Country, has lost, in a landslide, his seat in Congress - But I will miss that lunatic not screaming and violently waving his cane at me during my next State of the Union Speech. MAKE AMERICA GREAT AGAIN. GOD BLESS AMERICA!!! President DJT",
       "content_html": "Congratulations to the Dumocrat Party! Al Green, one of the most mentally deficient Congressmen in the history of our Country, has lost, in a landslide, his seat in Congress - But I will miss that lunatic not screaming and violently waving his cane at me during my next State of the Union Speech. MAKE AMERICA GREAT AGAIN. GOD BLESS AMERICA!!! President DJT",
       "media": [],
-      "favourites_count": 59262,
-      "reblogs_count": 11473,
-      "replies_count": 5130,
+      "favourites_count": 59350,
+      "reblogs_count": 11487,
+      "replies_count": 5143,
       "content_zh_cn": "恭喜“愚主党”！阿尔·格林——我国历史上心智能力最差的国会议员之一——已经以压倒性劣势失去了他的国会席位——不过，在我下一次国情咨文演讲时，少了那个疯子冲着我大喊大叫、挥舞手杖的场面，我还真会有点“想念”。\n让美国再次伟大。天佑美国！！！\n总统 DJT",
       "content_zh_hk": "恭喜「愚主黨」！阿爾·格林——我國歷史上心智能力最差的國會議員之一——已經以壓倒性劣勢失去了他的國會席位——不過，在我下一次國情咨文演講時，少了那個瘋子衝着我大喊大叫、揮舞手杖的場面，我還真會有點「想念」。\n讓美國再次偉大。天佑美國！！！\n總統 DJT",
       "content_ko": "축하한다, “둠크랫당”!\n알 그린은 우리나라 역사상 가장 정신적으로 뒤떨어진 하원의원 중 한 명인데, 압도적인 표차로 의회 의석을 잃었다 - 하지만 다음 국정연설 때 그 미치광이가 나를 향해 소리 지르고 지팡이를 난폭하게 휘두르지 않는다면, 나는 그게 좀 그리울지도 모르겠다.\n미국을 다시 위대하게. 신의 축복이 미국과 함께하길!!!\n대통령 DJT",
@@ -265,9 +265,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 25734,
-      "reblogs_count": 5898,
-      "replies_count": 1363,
+      "favourites_count": 25798,
+      "reblogs_count": 5905,
+      "replies_count": 1366,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -287,8 +287,8 @@
           "type": "image"
         }
       ],
-      "favourites_count": 17982,
-      "reblogs_count": 3605,
+      "favourites_count": 18024,
+      "reblogs_count": 3610,
       "replies_count": 414,
       "content_zh_cn": "",
       "content_zh_hk": "",
@@ -309,9 +309,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 32047,
-      "reblogs_count": 7768,
-      "replies_count": 2452,
+      "favourites_count": 32108,
+      "reblogs_count": 7779,
+      "replies_count": 2457,
       "content_zh_cn": "这个在犯罪问题上软弱、主张开放边境的“蠢主党”政客，绝不能被允许代表伟大的德州人民。他的“价值观”完全背道而驰！！！\n——特朗普总统",
       "content_zh_hk": "這個在犯罪問題上軟弱、主張開放邊境的「蠢主黨」政客，絕不能被允許代表偉大的德州人民。他的「價值觀」完全背道而馳！！！\n——特朗普總統",
       "content_ko": "범죄에 약하고, 국경 개방을 주장하는 이 “Dumocrat”는 위대한 텍사스 주민들을 대표하도록 결코 허용돼서는 안 됩니다. 그의 “가치관”은 정반대입니다!!!\n— 트럼프 대통령",
@@ -331,9 +331,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 20969,
-      "reblogs_count": 4609,
-      "replies_count": 1481,
+      "favourites_count": 21026,
+      "reblogs_count": 4615,
+      "replies_count": 1484,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -353,9 +353,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 20760,
-      "reblogs_count": 4678,
-      "replies_count": 1262,
+      "favourites_count": 20818,
+      "reblogs_count": 4691,
+      "replies_count": 1268,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -370,8 +370,8 @@
       "content": "Thank you America for this unprecedented support!!! President DJThttps://www.thegatewaypundit.com/2026/05/trump-dynasty-president-trump-goes-118-118-primary/",
       "content_html": "Thank you America for this unprecedented support!!! President DJThttps://www.thegatewaypundit.com/2026/05/trump-dynasty-president-trump-goes-118-118-primary/",
       "media": [],
-      "favourites_count": 20497,
-      "reblogs_count": 4571,
+      "favourites_count": 20535,
+      "reblogs_count": 4575,
       "replies_count": 1159,
       "content_zh_cn": "感谢美国，给予这前所未有的支持！！！\n——总统 DJT\nhttps://www.thegatewaypundit.com/2026/05/trump-dynasty-president-trump-goes-118-118-primary/",
       "content_zh_hk": "感謝美國，給予這前所未有的支持！！！\n——總統 DJT\nhttps://www.thegatewaypundit.com/2026/05/trump-dynasty-president-trump-goes-118-118-primary/",
@@ -392,9 +392,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 13796,
-      "reblogs_count": 5348,
-      "replies_count": 2320,
+      "favourites_count": 13825,
+      "reblogs_count": 5362,
+      "replies_count": 2324,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
