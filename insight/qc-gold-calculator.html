@@ -139,8 +139,9 @@
     }
     .btn-mini:hover { background:rgba(255,255,255,0.06); }
     .empty-note { margin-top:14px; color:var(--muted); font-size:13px; line-height:1.75; }
+    .hero-metrics { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; margin-top:16px; }
     .savings-hero {
-      padding:18px; border-radius:20px; border:1px solid var(--line-strong); background:rgba(231,201,139,0.09); margin-top:16px;
+      padding:18px; border-radius:20px; border:1px solid var(--line-strong); background:rgba(231,201,139,0.09);
     }
     .savings-title { color:var(--gold-strong); font-size:13px; letter-spacing:.08em; text-transform:uppercase; }
     .savings-value { margin-top:8px; font-size:34px; font-weight:800; letter-spacing:-.03em; }
@@ -180,7 +181,7 @@
       h1 { font-size:28px; }
       .hero-sub { font-size:14px; line-height:1.72; }
       .section-title { font-size:20px; }
-      .compare-grid, .result-grid, .item-controls { grid-template-columns:1fr; }
+      .hero-metrics, .compare-grid, .result-grid, .item-controls { grid-template-columns:1fr; }
       input.control { font-size:22px; }
       .result-value, .savings-value { font-size:24px; }
     }
@@ -263,10 +264,17 @@
 
         <div class="panel">
           <div class="label">汇总报价结果</div>
-          <div class="savings-hero">
-            <div class="savings-title">相较优先金店，QC 预计可节约</div>
-            <div class="savings-value" id="savings-top">--</div>
-            <div class="savings-sub" id="savings-top-sub">等待金价与金店价格接口返回。</div>
+          <div class="hero-metrics">
+            <div class="savings-hero">
+              <div class="savings-title">QC 订单总额</div>
+              <div class="savings-value" id="headline-total">--</div>
+              <div class="savings-sub" id="headline-total-sub">按参考金价估算，实际交易报价以现场交易为准。</div>
+            </div>
+            <div class="savings-hero">
+              <div class="savings-title">相较优先金店，QC 预计可节约</div>
+              <div class="savings-value" id="savings-top">--</div>
+              <div class="savings-sub" id="savings-top-sub">等待参考金价与金店参考价返回。</div>
+            </div>
           </div>
           <div class="compare-grid" id="compare-grid">
             <div class="compare-card"><div class="compare-name">周大福</div><div class="compare-price">等待价格</div><div class="compare-save">--</div></div>
@@ -310,9 +318,9 @@
         <div class="section-title" style="font-size:20px;">说明与测试提示</div>
         <div class="note-list" style="margin-top:12px;">
           <div class="note-item">1. 本页涉及金价的显示与测算，均适用于非品牌金；如为贺利氏等品牌金，请单独询价。</div>
-          <div class="note-item">2. 港币结果仅按固定汇率 7.85 参考换算，不代表实际成交汇率。</div>
-          <div class="note-item">3. 实时美元金价直接取永丰参考价（USD/oz），即当前接口返回的 <code>yongfeng_usd_oz</code>。</div>
-          <div class="note-item">4. 金店价格对比优先使用周大福，其次周生生，再其次六福，按相同总克重折算为非品牌金的大致对比，不等同于品牌金实时报价。</div>
+          <div class="note-item">2. 页面中所有价格均为参考金价或参考换算结果，实际交易报价以现场交易为准。</div>
+          <div class="note-item">3. 实时美元参考金价直接取永丰参考价（USD/oz）。</div>
+          <div class="note-item">4. 金店参考价对比优先使用周大福，其次周生生，再其次六福，按相同总克重折算为非品牌金的大致参考对比。</div>
           <div class="note-item">5. 这是单独隐藏页，不放首页、不加导航入口，后续若确认再接正式表单承接。</div>
         </div>
       </div>
@@ -461,7 +469,7 @@
       const topSub = document.getElementById('savings-top-sub');
       if (!summary) {
         top.textContent = '--';
-        topSub.textContent = '等待金价与金店价格接口返回。';
+        topSub.textContent = '等待参考金价与金店参考价返回。';
         return;
       }
       const compares = CONFIG.jewellerPriority.map((name) => calcJewellerCompare(summary.totalGrams, summary.totalHkd, name));
@@ -476,11 +484,11 @@
       const priority = getPriorityCompare(summary.totalGrams, summary.totalHkd);
       if (!priority) {
         top.textContent = '--';
-        topSub.textContent = '优先金店价格暂未返回，稍后会自动补上。';
+        topSub.textContent = '优先金店参考价暂未返回，稍后会自动补上。';
         return;
       }
       top.textContent = priority.savingHkd >= 0 ? `HK$${money(priority.savingHkd)}` : `-HK$${money(Math.abs(priority.savingHkd))}`;
-      topSub.textContent = `按优先顺序使用 ${priority.shopName} 的卖出价 HK$${money(priority.sellHkdTael, 0)} / 両 折算相同总克重。这个对比仅适用于非品牌金，品牌金请另行询价。`;
+      topSub.textContent = `按优先顺序使用 ${priority.shopName} 的参考卖出价 HK$${money(priority.sellHkdTael, 0)} / 両 折算相同总克重。页面价格均为参考金价，实际交易报价以现场交易为准。`;
     }
 
     function renderSummary() {
@@ -496,6 +504,8 @@
       document.getElementById('fee-hkd').textContent = `约 HK$${money(summary.feeHkd)}`;
       document.getElementById('total-usd').textContent = `US$${money(summary.totalUsd)}`;
       document.getElementById('total-hkd').textContent = `约 HK$${money(summary.totalHkd)}`;
+      document.getElementById('headline-total').textContent = `HK$${money(summary.totalHkd)}`;
+      document.getElementById('headline-total-sub').textContent = `约合 US$${money(summary.totalUsd)}，按参考金价估算，实际交易报价以现场交易为准。`;
       document.getElementById('fee-banner').classList.toggle('show', summary.feeCapped);
       renderCompare(summary);
     }
