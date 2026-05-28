@@ -1,4 +1,14 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116649467728859592": {
+    "content_zh_cn": "格雷格·贾勒特：长期被隐匿的文件揭示，对特朗普的第一次弹劾完全是一场骗局：https://www.foxnews.com/opinion/gregg-jarrett-long-hidden-documents-reveal-first-trump-impeachment-total-fraud",
+    "content_zh_hk": "格雷格·賈勒特：長期被隱藏的文件揭示，對特朗普的首次彈劾完全是一場騙局：https://www.foxnews.com/opinion/gregg-jarrett-long-hidden-documents-reveal-first-trump-impeachment-total-fraud",
+    "content_ko": "그레그 재럿: 오랫동안 숨겨져 있던 문서들이 트럼프에 대한 첫 탄핵이 완전한 사기였음을 드러낸다: https://www.foxnews.com/opinion/gregg-jarrett-long-hidden-documents-reveal-first-trump-impeachment-total-fraud"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116649465703521507": {
+    "content_zh_cn": "格雷格·贾勒特：公开拜登录音，让美国人亲耳听到真相： https://www.foxnews.com/opinion/gregg-jarrett-release-biden-tapes-let-americans-hear-truth",
+    "content_zh_hk": "格雷格·賈勒特：公開拜登錄音，讓美國人親耳聽到真相： https://www.foxnews.com/opinion/gregg-jarrett-release-biden-tapes-let-americans-hear-truth",
+    "content_ko": "그레그 재럿: 바이든 녹음을 공개하고, 미국인들이 직접 진실을 듣게 하라: https://www.foxnews.com/opinion/gregg-jarrett-release-biden-tapes-let-americans-hear-truth"
+  },
   "https://truthsocial.com/@realDonaldTrump/116648998520896910": {
     "content_zh_cn": "亚美尼亚总理尼科尔·帕希尼扬——一位伟大的朋友和领导人——正让他的国家变得强大、富裕，而且非常安全！\n尼科尔完全认同我对亚美尼亚以及整个南高加索地区实现和平与繁荣的愿景。\n我们的国务卿马可·鲁比奥刚刚访问了亚美尼亚，在那里推动了多项对两国都十分重要的协议。\n很快，美国和亚美尼亚将共同为“特朗普国际和平与繁荣路线”破土动工，这将改变南高加索，并帮助我们优秀的美国能源企业打通从中亚一直通往美国的通道。\n基于这些原因，我对尼科尔于2026年6月7日竞选连任给予完全、彻底的背书。\n在尼科尔的帮助下，我们将把美国、亚美尼亚、南高加索和中亚带到前所未有的新高度。\n让（亚美尼亚）再次伟大——MAGA！\n唐纳德·J·特朗普总统",
     "content_zh_hk": "亞美尼亞總理尼科爾·帕希尼揚——一位偉大的朋友和領袖——正令他的國家變得強大、富裕，而且非常安全！\n尼科爾完全認同我對亞美尼亞以及整個南高加索地區實現和平與繁榮的願景。\n我們的國務卿馬可·魯比奧剛剛訪問了亞美尼亞，並在當地推動了多項對兩國都十分重要的協議。\n很快，美國和亞美尼亞將共同為「特朗普國際和平與繁榮路線」破土動工，這將改變南高加索，並幫助我們優秀的美國能源企業打通從中亞一直通往美國的通道。\n基於這些原因，我對尼科爾於2026年6月7日競選連任給予完全、徹底的背書。\n在尼科爾的幫助下，我們將把美國、亞美尼亞、南高加索和中亞帶到前所未有的新高度。\n讓（亞美尼亞）再次偉大——MAGA！\n特朗普總統 唐納德·J·特朗普",
