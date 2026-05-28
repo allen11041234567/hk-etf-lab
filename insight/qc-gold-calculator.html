@@ -146,13 +146,6 @@
     .savings-title { color:var(--gold-strong); font-size:13px; letter-spacing:.08em; text-transform:uppercase; }
     .savings-value { margin-top:8px; font-size:34px; font-weight:800; letter-spacing:-.03em; }
     .savings-sub { margin-top:8px; color:var(--muted); font-size:13px; line-height:1.8; }
-    .compare-grid { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:12px; margin-top:14px; }
-    .compare-card {
-      padding:14px; border-radius:16px; border:1px solid rgba(255,255,255,0.07); background:rgba(255,255,255,0.035);
-    }
-    .compare-name { font-size:15px; font-weight:800; }
-    .compare-price { margin-top:8px; color:var(--muted); font-size:12px; line-height:1.7; }
-    .compare-save { margin-top:10px; font-size:24px; font-weight:800; letter-spacing:-.02em; }
     .result-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:12px; margin-top:16px; }
     .result-card {
       padding:14px; border-radius:16px; border:1px solid rgba(255,255,255,0.07); background:rgba(255,255,255,0.035);
@@ -181,30 +174,28 @@
       .hero, .panel { border-radius:18px; padding:16px; }
       h1 { margin:14px 0 10px; font-size:26px; }
       .hero-sub { font-size:13px; line-height:1.68; }
-      .hero-note, .scope-banner, .subline, .section-desc, .compare-price, .result-sub, .helper, .note-item { font-size:11px; line-height:1.65; }
+      .hero-note, .scope-banner, .subline, .section-desc, .result-sub, .helper, .note-item { font-size:11px; line-height:1.65; }
       .section-title { font-size:18px; }
-      .hero-metrics, .compare-grid, .result-grid, .item-controls { grid-template-columns:1fr; }
+      .hero-metrics, .result-grid, .item-controls { grid-template-columns:1fr; }
       .control, select.control { min-height:50px; border-radius:14px; padding:0 13px; font-size:16px; }
       input.control { font-size:20px; }
       .value-xl { font-size:28px; }
-      .result-value, .savings-value, .compare-save { font-size:22px; }
+      .result-value, .savings-value { font-size:22px; }
       .btn-mini { width:100%; }
       .item-top { align-items:flex-start; flex-direction:column; }
       .item-top .btn-mini { margin-top:6px; }
-      .compare-card { min-width:0; }
     }
     @media (max-width: 480px) {
       .wrap { width:calc(100vw - 10px); }
       .hero, .panel { padding:14px; border-radius:16px; }
       .hero-metrics { gap:10px; margin-top:12px; }
-      .compare-grid, .result-grid, .items-list { gap:10px; }
-      .item-row, .compare-card, .result-card, .savings-hero { padding:12px; border-radius:14px; }
+      .result-grid, .items-list { gap:10px; }
+      .item-row, .result-card, .savings-hero { padding:12px; border-radius:14px; }
       h1 { font-size:23px; }
       .value-xl { font-size:24px; }
-      .result-value, .savings-value, .compare-save { font-size:20px; }
-      .compare-name, .item-title { font-size:14px; }
+      .result-value, .savings-value { font-size:20px; }
+      .item-title { font-size:14px; }
       .pill { width:100%; justify-content:center; }
-      .compare-price br { display:none; }
     }
   </style>
 </head>
@@ -292,11 +283,6 @@
               <div class="savings-value" id="savings-top">--</div>
               <div class="savings-sub" id="savings-top-sub">等待参考金价与金店参考价返回。</div>
             </div>
-          </div>
-          <div class="compare-grid" id="compare-grid">
-            <div class="compare-card"><div class="compare-name">周大福</div><div class="compare-price">等待价格</div><div class="compare-save">--</div></div>
-            <div class="compare-card"><div class="compare-name">周生生</div><div class="compare-price">等待价格</div><div class="compare-save">--</div></div>
-            <div class="compare-card"><div class="compare-name">六福</div><div class="compare-price">等待价格</div><div class="compare-save">--</div></div>
           </div>
           <div class="result-grid">
             <div class="result-card">
@@ -477,7 +463,6 @@
     }
 
     function renderCompare(summary) {
-      const compareGrid = document.getElementById('compare-grid');
       const top = document.getElementById('savings-top');
       const topSub = document.getElementById('savings-top-sub');
       if (!summary) {
@@ -485,15 +470,6 @@
         topSub.textContent = '等待参考金价与金店参考价返回。';
         return;
       }
-      const compares = CONFIG.jewellerPriority.map((name) => calcJewellerCompare(summary.totalGrams, summary.totalHkd, name));
-      compareGrid.innerHTML = compares.map((compare, idx) => {
-        const name = CONFIG.jewellerPriority[idx];
-        if (!compare) {
-          return `<div class="compare-card"><div class="compare-name">${name}</div><div class="compare-price">等待价格</div><div class="compare-save">--</div></div>`;
-        }
-        const savingText = compare.savingHkd >= 0 ? `省 HK$${money(compare.savingHkd)}` : `贵 HK$${money(Math.abs(compare.savingHkd))}`;
-        return `<div class="compare-card"><div class="compare-name">${compare.shopName}</div><div class="compare-price">卖出价 HK$${money(compare.sellHkdTael, 0)} / 両<br/>相同总克重估算：HK$${money(compare.shopTotalHkd)}</div><div class="compare-save">${savingText}</div></div>`;
-      }).join('');
       const priority = getPriorityCompare(summary.totalGrams, summary.totalHkd);
       if (!priority) {
         top.textContent = '--';
@@ -501,7 +477,7 @@
         return;
       }
       top.textContent = priority.savingHkd >= 0 ? `HK$${money(priority.savingHkd)}` : `-HK$${money(Math.abs(priority.savingHkd))}`;
-      topSub.textContent = `按优先顺序使用 ${priority.shopName} 的参考卖出价 HK$${money(priority.sellHkdTael, 0)} / 両 折算相同总克重。页面价格均为参考金价，实际交易报价以现场交易为准。`;
+      topSub.textContent = `优先按 ${priority.shopName} 参考卖出价 HK$${money(priority.sellHkdTael, 0)} / 両 折算相同总克重。页面价格均为参考金价，实际交易报价以现场交易为准。`;
     }
 
     function renderSummary() {
