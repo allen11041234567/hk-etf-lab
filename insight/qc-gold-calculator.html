@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex,nofollow,noarchive" />
+  <title>QC 购买计算器</title>
+  <style>
+    :root {
+      --bg:#0d1015;
+      --bg-soft:#141923;
+      --card:rgba(255,255,255,0.05);
+      --card-strong:rgba(255,255,255,0.08);
+      --line:rgba(229,197,128,0.18);
+      --line-strong:rgba(229,197,128,0.34);
+      --text:#f7f2e8;
+      --muted:#b8ad99;
+      --gold:#e7c98b;
+      --gold-strong:#f2d7a6;
+      --accent:#d8b56d;
+      --shadow:0 24px 70px rgba(0,0,0,0.35);
+      --ok:#f0d38f;
+      --warn:#ffd0a3;
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0;
+      min-height:100vh;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top right, rgba(231,201,139,0.12), transparent 28%),
+        radial-gradient(circle at top left, rgba(231,201,139,0.06), transparent 22%),
+        linear-gradient(180deg, #12161d 0%, #0d1015 46%, #090b0f 100%);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    }
+    .wrap { width:min(1120px, calc(100vw - 28px)); margin:0 auto; padding:24px 0 56px; }
+    .hero, .panel {
+      background:linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03));
+      border:1px solid var(--line);
+      border-radius:28px;
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(12px);
+    }
+    .hero {
+      padding:30px;
+      position:relative;
+      overflow:hidden;
+      display:grid;
+      grid-template-columns:1.25fr .9fr;
+      gap:18px;
+      margin-bottom:18px;
+    }
+    .hero::after {
+      content:'';
+      position:absolute;
+      inset:auto -45px -60px auto;
+      width:260px;
+      height:260px;
+      background:radial-gradient(circle, rgba(231,201,139,0.20), transparent 66%);
+      pointer-events:none;
+    }
+    .eyebrow {
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      color:var(--gold);
+      border:1px solid var(--line-strong);
+      background:rgba(231,201,139,0.08);
+      font-size:12px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+    h1 {
+      margin:18px 0 12px;
+      font-size:clamp(34px, 5vw, 54px);
+      line-height:1.03;
+      letter-spacing:-0.04em;
+    }
+    .hero-sub {
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.82;
+      max-width:740px;
+    }
+    .hero-note {
+      margin-top:18px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.8;
+    }
+    .hero-side {
+      display:grid;
+      gap:14px;
+    }
+    .mini-card {
+      padding:20px;
+      border-radius:22px;
+      background:rgba(255,255,255,0.03);
+      border:1px solid rgba(255,255,255,0.08);
+    }
+    .label {
+      color:var(--muted);
+      font-size:12px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    .value-xl {
+      margin-top:10px;
+      font-size:clamp(30px,4vw,42px);
+      font-weight:800;
+      letter-spacing:-.03em;
+    }
+    .subline { margin-top:8px; color:var(--muted); font-size:13px; line-height:1.75; }
+    .section { margin-top:18px; }
+    .section-head { display:flex; justify-content:space-between; gap:12px; align-items:end; margin-bottom:12px; }
+    .section-title { font-size:24px; font-weight:800; letter-spacing:-.03em; }
+    .section-desc { color:var(--muted); font-size:14px; }
+    .pill {
+      display:inline-flex; align-items:center; gap:8px; padding:7px 11px; border-radius:999px;
+      font-size:12px; color:var(--muted); background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08);
+    }
+    .dot { width:8px; height:8px; border-radius:50%; background:var(--gold); box-shadow:0 0 0 5px rgba(231,201,139,0.12); }
+    .calculator { display:grid; grid-template-columns:1fr .95fr; gap:16px; }
+    .panel { padding:22px; }
+    .field { margin-top:16px; }
+    .field-label { display:block; margin-bottom:8px; color:var(--muted); font-size:13px; }
+    .control, select.control {
+      width:100%; min-height:56px; border-radius:18px; border:1px solid var(--line-strong);
+      background:rgba(255,255,255,0.04); color:var(--text); padding:0 16px; font-size:18px; font-weight:700;
+      outline:none;
+    }
+    input.control { font-size:26px; letter-spacing:-.02em; }
+    .helper { margin-top:8px; color:var(--muted); font-size:12px; line-height:1.75; }
+    .result-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:12px; margin-top:16px; }
+    .result-card {
+      padding:16px; border-radius:18px; border:1px solid rgba(255,255,255,0.07); background:rgba(255,255,255,0.04);
+    }
+    .result-label { color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.08em; }
+    .result-value { margin-top:8px; font-size:28px; font-weight:800; letter-spacing:-.03em; }
+    .result-sub { margin-top:8px; color:var(--muted); font-size:12px; line-height:1.7; }
+    .fee-banner {
+      display:none; margin-top:14px; padding:14px 16px; border-radius:16px;
+      background:rgba(231,201,139,0.08); border:1px solid var(--line-strong); color:var(--gold-strong);
+      font-size:13px; line-height:1.75;
+    }
+    .fee-banner.show { display:block; }
+    .note-list { display:grid; gap:10px; }
+    .note-item { color:var(--muted); font-size:13px; line-height:1.78; }
+    .formula {
+      margin-top:14px; padding:16px 18px; border-radius:18px;
+      background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.07);
+      color:var(--muted); font-size:13px; line-height:1.8;
+    }
+    .status-bad { color:var(--warn); }
+    @media (max-width: 960px) {
+      .hero, .calculator { grid-template-columns:1fr; }
+      .wrap { width:min(100vw - 18px, 1120px); padding:16px 0 36px; }
+      .hero, .panel { border-radius:22px; }
+      .hero, .panel { padding:18px; }
+    }
+    @media (max-width: 720px) {
+      .wrap { width:calc(100vw - 12px); padding:10px 0 28px; }
+      .hero, .panel { border-radius:18px; }
+      h1 { font-size:28px; }
+      .hero-sub { font-size:14px; line-height:1.72; }
+      .section-title { font-size:20px; }
+      .result-grid { grid-template-columns:1fr; }
+      input.control { font-size:22px; }
+      .result-value { font-size:24px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">QC Gold Calculator</div>
+        <h1>QC 购买计算器</h1>
+        <div class="hero-sub">
+          以美元为主计价，实时参考永丰参考价（USD/oz），统一按每块 100 美元收取全额加工费，且总工费封顶 1000 美元。当前为隐藏测试页，不设公开入口。
+        </div>
+        <div class="hero-note">
+          支持 1oz、50g、100g、200g 四个规格。页面同时展示 USD 与 HKD 两套结果，其中港币仅按固定汇率 7.85 作参考换算。
+        </div>
+      </div>
+      <div class="hero-side">
+        <div class="mini-card">
+          <div class="label">永丰参考价（USD/oz）</div>
+          <div class="value-xl" id="hero-price">--</div>
+          <div class="subline" id="hero-updated">等待实时金价接口</div>
+        </div>
+        <div class="mini-card">
+          <div class="label">工费规则</div>
+          <div class="value-xl">US$100 / 块</div>
+          <div class="subline">总工费封顶 US$1,000。买 10 块、20 块，封顶后总工费都按 1000 美元计算。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <div class="section-title">QC 快速报价</div>
+          <div class="section-desc">先选规格，再输入块数。系统按实时美元金价自动计算金料价值、工费和总价。</div>
+        </div>
+        <div class="pill"><span class="dot"></span><span id="live-status">等待实时金价接口</span></div>
+      </div>
+
+      <div class="calculator">
+        <div class="panel">
+          <div class="label">输入参数</div>
+
+          <div class="field">
+            <label class="field-label" for="spec">规格</label>
+            <select id="spec" class="control">
+              <option value="oz1">1 oz 金块</option>
+              <option value="g50">50 g 金块</option>
+              <option value="g100">100 g 金块</option>
+              <option value="g200">200 g 金块</option>
+            </select>
+            <div class="helper">所有规格统一按每块 100 USD 收费，工费总额封顶 1000 USD。</div>
+          </div>
+
+          <div class="field">
+            <label class="field-label" for="qty">块数</label>
+            <input id="qty" class="control" type="number" min="1" step="1" value="1" />
+            <div class="helper">建议先用 1、5、10、20 这些关键块数测试封顶逻辑。</div>
+          </div>
+
+          <div class="formula">
+            计算逻辑：<br/>
+            单块金料价值 = 永丰参考价（USD/oz） × 当前规格折算盎司数<br/>
+            总工费 = min(块数 × 100, 1000)<br/>
+            订单总额 = 金料总额 + 总工费
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="label">报价结果</div>
+          <div class="result-grid">
+            <div class="result-card">
+              <div class="result-label">单块重量</div>
+              <div class="result-value" id="unit-weight">--</div>
+              <div class="result-sub" id="unit-weight-sub">--</div>
+            </div>
+            <div class="result-card">
+              <div class="result-label">单块金料价值</div>
+              <div class="result-value" id="unit-metal-usd">--</div>
+              <div class="result-sub" id="unit-metal-hkd">--</div>
+            </div>
+            <div class="result-card">
+              <div class="result-label">金料总额</div>
+              <div class="result-value" id="metal-total-usd">--</div>
+              <div class="result-sub" id="metal-total-hkd">--</div>
+            </div>
+            <div class="result-card">
+              <div class="result-label">总工费</div>
+              <div class="result-value" id="fee-usd">--</div>
+              <div class="result-sub" id="fee-hkd">--</div>
+            </div>
+            <div class="result-card" style="grid-column:1 / -1;">
+              <div class="result-label">订单总额</div>
+              <div class="result-value" id="total-usd">--</div>
+              <div class="result-sub" id="total-hkd">--</div>
+            </div>
+          </div>
+          <div class="fee-banner" id="fee-banner">工费已封顶：当前总工费按 US$1,000 计算。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="panel">
+        <div class="section-title" style="font-size:20px;">说明与测试提示</div>
+        <div class="note-list" style="margin-top:12px;">
+          <div class="note-item">1. 页面当前只依赖实时金价接口 <code>/api/gold/live</code>，不接香港金店展示逻辑。</div>
+          <div class="note-item">2. 港币结果仅按固定汇率 7.85 参考换算，不代表实际成交汇率。</div>
+          <div class="note-item">3. 这里的实时美元金价直接取永丰参考价（USD/oz），即当前接口返回的 <code>yongfeng_usd_oz</code>。</div>
+          <div class="note-item">4. 这是单独隐藏页，不放首页、不加导航入口，后续若确认再接正式表单承接。</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const CONFIG = {
+      liveApi: '/api/gold/live',
+      fxUsdHkd: 7.85,
+      gramsPerOunce: 31.1035,
+      feePerBarUsd: 100,
+      feeCapUsd: 1000,
+      refreshMs: 30000,
+      specs: {
+        oz1: { key: 'oz1', label: '1 oz 金块', grams: 31.1035 },
+        g50: { key: 'g50', label: '50 g 金块', grams: 50 },
+        g100: { key: 'g100', label: '100 g 金块', grams: 100 },
+        g200: { key: 'g200', label: '200 g 金块', grams: 200 },
+      }
+    };
+
+    let livePayload = null;
+
+    function money(n, digits = 2, prefix = '') {
+      const value = Number(n);
+      if (!Number.isFinite(value)) return '--';
+      return `${prefix}${value.toLocaleString('en-HK', { minimumFractionDigits: digits, maximumFractionDigits: digits })}`;
+    }
+
+    function getCurrentSpec() {
+      const key = document.getElementById('spec').value;
+      return CONFIG.specs[key] || CONFIG.specs.oz1;
+    }
+
+    function getQuantity() {
+      const raw = Number(document.getElementById('qty').value || 0);
+      if (!Number.isFinite(raw) || raw < 1) return 1;
+      return Math.floor(raw);
+    }
+
+    function calcQuote({ yongfengUsdOz, specGrams, quantity }) {
+      const unitOz = specGrams / CONFIG.gramsPerOunce;
+      const unitMetalUsd = yongfengUsdOz * unitOz;
+      const metalTotalUsd = unitMetalUsd * quantity;
+      const feeUsd = Math.min(quantity * CONFIG.feePerBarUsd, CONFIG.feeCapUsd);
+      const totalUsd = metalTotalUsd + feeUsd;
+      return {
+        unitOz,
+        unitGrams: specGrams,
+        quantity,
+        unitMetalUsd,
+        unitMetalHkd: unitMetalUsd * CONFIG.fxUsdHkd,
+        metalTotalUsd,
+        metalTotalHkd: metalTotalUsd * CONFIG.fxUsdHkd,
+        feeUsd,
+        feeHkd: feeUsd * CONFIG.fxUsdHkd,
+        totalUsd,
+        totalHkd: totalUsd * CONFIG.fxUsdHkd,
+        feeCapped: quantity * CONFIG.feePerBarUsd >= CONFIG.feeCapUsd,
+      };
+    }
+
+    function renderQuote() {
+      if (!livePayload?.ok || !Number.isFinite(livePayload.yongfeng_usd_oz)) {
+        return;
+      }
+      const spec = getCurrentSpec();
+      const qty = getQuantity();
+      document.getElementById('qty').value = String(qty);
+      const result = calcQuote({
+        yongfengUsdOz: Number(livePayload.yongfeng_usd_oz),
+        specGrams: spec.grams,
+        quantity: qty,
+      });
+
+      document.getElementById('unit-weight').textContent = `${money(result.unitOz, 4)} oz`;
+      document.getElementById('unit-weight-sub').textContent = `约 ${money(result.unitGrams, 2)} g / 块`;
+      document.getElementById('unit-metal-usd').textContent = `US$${money(result.unitMetalUsd)}`;
+      document.getElementById('unit-metal-hkd').textContent = `约 HK$${money(result.unitMetalHkd)}`;
+      document.getElementById('metal-total-usd').textContent = `US$${money(result.metalTotalUsd)}`;
+      document.getElementById('metal-total-hkd').textContent = `约 HK$${money(result.metalTotalHkd)}`;
+      document.getElementById('fee-usd').textContent = `US$${money(result.feeUsd)}`;
+      document.getElementById('fee-hkd').textContent = `约 HK$${money(result.feeHkd)}`;
+      document.getElementById('total-usd').textContent = `US$${money(result.totalUsd)}`;
+      document.getElementById('total-hkd').textContent = `约 HK$${money(result.totalHkd)}`;
+      document.getElementById('fee-banner').classList.toggle('show', result.feeCapped);
+    }
+
+    function renderLive(payload) {
+      const status = document.getElementById('live-status');
+      if (!payload?.ok || !Number.isFinite(payload.yongfeng_usd_oz)) {
+        status.textContent = '实时金价接口暂不可用';
+        status.parentElement.classList.add('status-bad');
+        document.getElementById('hero-price').textContent = '--';
+        document.getElementById('hero-updated').textContent = payload?.error || '请稍后重试';
+        return;
+      }
+      status.textContent = '实时金价接口已连接（30 秒刷新检查）';
+      status.parentElement.classList.remove('status-bad');
+      livePayload = payload;
+      document.getElementById('hero-price').textContent = `US$${money(payload.yongfeng_usd_oz)}`;
+      document.getElementById('hero-updated').textContent = `最近更新：${payload.updated_at || '--'}，汇率按 7.85 参考换算`;
+      renderQuote();
+    }
+
+    async function loadLive() {
+      try {
+        const resp = await fetch(CONFIG.liveApi, { headers: { accept: 'application/json' } });
+        const payload = await resp.json();
+        renderLive(payload);
+      } catch (error) {
+        renderLive({ ok: false, error: error.message || String(error) });
+      }
+    }
+
+    document.getElementById('spec').addEventListener('change', renderQuote);
+    document.getElementById('qty').addEventListener('input', renderQuote);
+
+    loadLive();
+    setInterval(loadLive, CONFIG.refreshMs);
+  </script>
+</body>
+</html>
