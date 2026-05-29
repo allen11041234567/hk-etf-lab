@@ -1,4 +1,14 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116659181152746981": {
+    "content_zh_cn": "特朗普的一位忠诚支持者，如何应对外交领域最艰巨的职位之一：https://www.wsj.com/world/europe/how-a-trump-loyalist-manages-one-of-the-toughest-jobs-in-diplomacy-d56cc978",
+    "content_zh_hk": "特朗普一位忠誠支持者，如何應對外交領域最艱巨的職位之一：https://www.wsj.com/world/europe/how-a-trump-loyalist-manages-one-of-the-toughest-jobs-in-diplomacy-d56cc978",
+    "content_ko": "트럼프의 충성 지지자가 외교 분야에서 가장 어려운 자리 중 하나를 어떻게 맡아 수행하는가: https://www.wsj.com/world/europe/how-a-trump-loyalist-manages-one-of-the-toughest-jobs-in-diplomacy-d56cc978"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116659174350335809": {
+    "content_zh_cn": "美国驻欧盟大使：欧盟必须履行与特朗普达成的贸易协议：https://www.politico.eu/article/us-ambassador-andrew-puzder-eu-honor-trade-deal-donald-trump/",
+    "content_zh_hk": "美國駐歐盟大使：歐盟必須履行與特朗普達成的貿易協議：https://www.politico.eu/article/us-ambassador-andrew-puzder-eu-honor-trade-deal-donald-trump/",
+    "content_ko": "주EU 미국 대사: EU는 트럼프와의 무역 합의를 반드시 이행해야 한다: https://www.politico.eu/article/us-ambassador-andrew-puzder-eu-honor-trade-deal-donald-trump/"
+  },
   "https://truthsocial.com/@realDonaldTrump/116659120590376779": {
     "content_zh_cn": "备受尊敬的“美国优先”国会议员兰迪·芬斯特拉（Randy Feenstra）正在竞选爱荷华州州长。爱荷华州是我热爱的地方，我在2016年、2020年和2024年都在那里大获全胜，创下爱荷华州历史最高得票。兰迪是彻头彻尾的MAGA！\n\n作为土生土长的爱荷华州第四代居民、成功的商人、前苏县财长、州参议员，如今又是卓越的美国国会议员，兰迪为“鹰眼之州”交出了强劲成绩单。作为你们的下一任州长，兰迪将不懈奋斗，推动经济增长，削减税负和监管，推广“美国制造”，释放美国能源主导力，为我们了不起的农民和牧场主发声，赋能乙醇产业，确保边境安全，遏制移民犯罪，维护法律与秩序，强化我们卓越的军队、退伍军人和执法力量，推进选举诚信，并捍卫我们始终遭受围攻的《第二修正案》。\n\n兰迪·芬斯特拉获得我完全且坚定的背书，竞选爱荷华州下一任州长——兰迪绝不会让你们失望！总统 唐纳德·J·特朗普",
     "content_zh_hk": "備受尊敬的「美國優先」國會議員蘭迪·芬斯特拉（Randy Feenstra）正競逐愛荷華州州長。愛荷華州是我熱愛的地方，我在2016年、2020年及2024年都在那裡大勝，創下愛荷華州歷來最高得票。蘭迪是徹頭徹尾的MAGA！\n\n作為土生土長的愛荷華州第四代居民、成功商人、前蘇縣財長、州參議員，如今又是卓越的美國國會議員，蘭迪為「鷹眼之州」交出了強勁成績。作為你們的下一任州長，蘭迪將不懈奮戰，推動經濟增長，削減稅項及監管，推廣「美國製造」，釋放美國能源主導地位，為我們出色的農民和牧場主發聲，賦能乙醇產業，確保邊境安全，遏止移民犯罪，維護法律與秩序，強化我們卓越的軍隊、退伍軍人及執法力量，推進選舉誠信，並捍衛我們長期遭受圍攻的《第二修正案》。\n\n蘭迪·芬斯特拉獲得我完全及堅定的背書，競逐愛荷華州下一任州長——蘭迪絕不會讓你們失望！總統 唐納德·J·特朗普",
