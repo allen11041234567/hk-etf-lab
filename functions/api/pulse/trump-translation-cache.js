@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116659197463770070": {
+    "content_zh_cn": "对蒂娜·彼得斯太不公平了——9年，对比零！特朗普总统",
+    "content_zh_hk": "對蒂娜·彼得斯太不公平了——9年，對比零！特朗普總統",
+    "content_ko": "티나 피터스에게 너무나 불공평하다 — 9년인데, 다른 쪽은 ZERO! 트럼프 대통령"
+  },
   "https://truthsocial.com/@realDonaldTrump/116659181152746981": {
     "content_zh_cn": "特朗普的一位忠诚支持者，如何应对外交领域最艰巨的职位之一：https://www.wsj.com/world/europe/how-a-trump-loyalist-manages-one-of-the-toughest-jobs-in-diplomacy-d56cc978",
     "content_zh_hk": "特朗普一位忠誠支持者，如何應對外交領域最艱巨的職位之一：https://www.wsj.com/world/europe/how-a-trump-loyalist-manages-one-of-the-toughest-jobs-in-diplomacy-d56cc978",
