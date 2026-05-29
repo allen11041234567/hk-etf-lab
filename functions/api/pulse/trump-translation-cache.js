@@ -4,6 +4,16 @@ export const TRUMP_TRANSLATION_CACHE = {
     "content_zh_hk": "約翰·所羅門剖析了一則有關詹姆斯·科米的重磅爆料：https://justthenews.com/podcasts/john-solomon-reports/john-solomon-unpacks-bombshell-revelation-about-james-comey",
     "content_ko": "존 솔로몬이 제임스 코미에 관한 충격적인 폭로를 파헤칩니다: https://justthenews.com/podcasts/john-solomon-reports/john-solomon-unpacks-bombshell-revelation-about-james-comey"
   },
+  "https://truthsocial.com/@realDonaldTrump/116655760562356563": {
+    "content_zh_cn": "法官批准特朗普的选民公民身份核查和收紧邮寄投票措施，驳回民主党方面的反对：https://justthenews.com/politics-policy/elections/judge-clears-trumps-voter-citizenship-checks-and-mail-voting-crackdown",
+    "content_zh_hk": "法官批准特朗普的選民公民身份核查及收緊郵寄投票措施，駁回民主黨方面的反對：https://justthenews.com/politics-policy/elections/judge-clears-trumps-voter-citizenship-checks-and-mail-voting-crackdown",
+    "content_ko": "판사가 트럼프의 유권자 시민권 확인과 우편투표 단속 조치를 허용하며, 민주당의 반대를 일축: https://justthenews.com/politics-policy/elections/judge-clears-trumps-voter-citizenship-checks-and-mail-voting-crackdown"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116655756027637495": {
+    "content_zh_cn": "FBI和司法部对海湖庄园搜查行动的担忧，进一步强化了佛罗里达州一项针对“反特朗普”‘重大阴谋’的调查：https://justthenews.com/government/courts-law/fbi-and-doj-concerns-mar-lago-raid-bolster-florida-based-anti-trump-grand",
+    "content_zh_hk": "FBI和司法部對海湖莊園搜查行動的憂慮，進一步加強了佛羅里達州一項針對「反特朗普」‘重大陰謀’的調查：https://justthenews.com/government/courts-law/fbi-and-doj-concerns-mar-lago-raid-bolster-florida-based-anti-trump-grand",
+    "content_ko": "FBI와 법무부의 마러라고 압수수색에 대한 우려가 플로리다에 기반한 반(反)트럼프 ‘대형 음모’ 조사에 힘을 실어주고 있다: https://justthenews.com/government/courts-law/fbi-and-doj-concerns-mar-lago-raid-bolster-florida-based-anti-trump-grand"
+  },
   "https://truthsocial.com/@realDonaldTrump/116655731323552591": {
     "content_zh_cn": "克劳德·勒米厄，这位真正的冰球传奇、也是冰球史上最凶悍的竞争者之一，已经离世。克劳德是我们家的朋友，也是“TRUMP”的坚定支持者。\n\n他曾随3支不同球队——蒙特利尔、新泽西和科罗拉多——4次夺得斯坦利杯；其职业生涯季后赛80粒进球，位列历史最伟大球员之列。\n\n布伦丹，我向你、黛博拉以及整个勒米厄家族致以慰问——你和你的父亲都是冰场上的勇士。凡是热爱胜利与强悍作风的人，都会怀念克劳德。 🇺🇸 #MAGA\n\n总统 唐纳德·J·特朗普",
     "content_zh_hk": "克勞德·勒米厄，這位真正的冰球傳奇、也是冰球史上最兇悍的競爭者之一，已經離世。克勞德是我們家的朋友，也是「TRUMP」的堅定支持者。\n\n他曾隨3支不同球隊——蒙特利爾、新澤西和科羅拉多——4次奪得史丹利盃；其職業生涯季後賽80個入球，位列歷來最偉大球員之列。\n\n布倫丹，我向你、黛博拉以及整個勒米厄家族致以慰問——你和你的父親都是冰場上的勇士。凡是熱愛勝利與強悍作風的人，都會懷念克勞德。 🇺🇸 #MAGA\n\n總統 唐納德·J·特朗普",
