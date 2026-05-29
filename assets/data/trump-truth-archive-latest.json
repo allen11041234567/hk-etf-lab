@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-05-29T22:33:53.190Z",
+  "fetchedAt": "2026-05-29T22:49:11.051Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
@@ -152,8 +152,8 @@
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-05-29T18:09:23.004Z",
       "created_at_text": "May 29, 2026, 6:09 PM",
-      "content": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116659199101518195\nPreview",
-      "content_html": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116659199101518195\nPreview",
+      "content": "",
+      "content_html": "",
       "media": [
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NDY3LzI5ZWI3ZDcyZDk0YTMzYTguanBn",
@@ -163,9 +163,9 @@
       "favourites_count": 4580,
       "reblogs_count": 999,
       "replies_count": 164,
-      "content_zh_cn": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116659199101518195\nPreview",
-      "content_zh_hk": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116659199101518195\nPreview",
-      "content_ko": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116659199101518195\nPreview",
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
       "source_hint": "stock.fengle.me"
     },
     {
