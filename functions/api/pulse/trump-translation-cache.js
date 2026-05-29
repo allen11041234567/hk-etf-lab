@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116659423633673489": {
+    "content_zh_cn": "https://trumprx.gov",
+    "content_zh_hk": "https://trumprx.gov",
+    "content_ko": "https://trumprx.gov"
+  },
   "https://truthsocial.com/@realDonaldTrump/116659197463770070": {
     "content_zh_cn": "对蒂娜·彼得斯太不公平了——9年，对比零！特朗普总统",
     "content_zh_hk": "對蒂娜·彼得斯太不公平了——9年，對比零！特朗普總統",
