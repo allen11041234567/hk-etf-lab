@@ -1,4 +1,14 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116655761993842171": {
+    "content_zh_cn": "约翰·所罗门解读了一则有关詹姆斯·科米的重磅爆料：https://justthenews.com/podcasts/john-solomon-reports/john-solomon-unpacks-bombshell-revelation-about-james-comey",
+    "content_zh_hk": "約翰·所羅門剖析了一則有關詹姆斯·科米的重磅爆料：https://justthenews.com/podcasts/john-solomon-reports/john-solomon-unpacks-bombshell-revelation-about-james-comey",
+    "content_ko": "존 솔로몬이 제임스 코미에 관한 충격적인 폭로를 파헤칩니다: https://justthenews.com/podcasts/john-solomon-reports/john-solomon-unpacks-bombshell-revelation-about-james-comey"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116655731323552591": {
+    "content_zh_cn": "克劳德·勒米厄，这位真正的冰球传奇、也是冰球史上最凶悍的竞争者之一，已经离世。克劳德是我们家的朋友，也是“TRUMP”的坚定支持者。\n\n他曾随3支不同球队——蒙特利尔、新泽西和科罗拉多——4次夺得斯坦利杯；其职业生涯季后赛80粒进球，位列历史最伟大球员之列。\n\n布伦丹，我向你、黛博拉以及整个勒米厄家族致以慰问——你和你的父亲都是冰场上的勇士。凡是热爱胜利与强悍作风的人，都会怀念克劳德。 🇺🇸 #MAGA\n\n总统 唐纳德·J·特朗普",
+    "content_zh_hk": "克勞德·勒米厄，這位真正的冰球傳奇、也是冰球史上最兇悍的競爭者之一，已經離世。克勞德是我們家的朋友，也是「TRUMP」的堅定支持者。\n\n他曾隨3支不同球隊——蒙特利爾、新澤西和科羅拉多——4次奪得史丹利盃；其職業生涯季後賽80個入球，位列歷來最偉大球員之列。\n\n布倫丹，我向你、黛博拉以及整個勒米厄家族致以慰問——你和你的父親都是冰場上的勇士。凡是熱愛勝利與強悍作風的人，都會懷念克勞德。 🇺🇸 #MAGA\n\n總統 唐納德·J·特朗普",
+    "content_ko": "진정한 하키의 전설이자, 하키 역사상 가장 치열한 경쟁자들 가운데 한 명이었던 클로드 르미외가 세상을 떠났습니다. 클로드는 우리 가족의 친구였고, “TRUMP”의 강력한 지지자였습니다.\n\n그는 몬트리올, 뉴저지, 콜로라도 등 서로 다른 3개 팀에서 스탠리컵 4회를 차지했습니다 — 그의 통산 플레이오프 80골은 역대 최고 수준에 속합니다.\n\n브렌던, 제 마음은 당신과 데버라, 그리고 르미외 가족 모두와 함께합니다 — 당신과 당신의 아버지는 빙판 위의 전사들이었습니다. 승리와 강인함을 사랑하는 모든 이들이 클로드를 그리워할 것입니다. 🇺🇸 #MAGA\n\n대통령 도널드 J. 트럼프"
+  },
   "https://truthsocial.com/@realDonaldTrump/116653311782130303": {
     "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116653310430151495",
     "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116653310430151495",
