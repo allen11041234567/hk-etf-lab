@@ -1,10 +1,32 @@
 {
   "ok": true,
-  "fetchedAt": "2026-05-30T17:48:24.087Z",
+  "fetchedAt": "2026-05-30T18:08:11.337Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
   "posts": [
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116664810828313809",
+      "url": "https://truthsocial.com/@realDonaldTrump/116664810828313809",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-05-30T17:55:39.446Z",
+      "created_at_text": "May 30, 2026, 5:55 PM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NTAyL2EyMzJmMjBmZGU4M2QxMGMuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 1160,
+      "reblogs_count": 232,
+      "replies_count": 136,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "stock.fengle.me"
+    },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116664658424115630",
       "url": "https://truthsocial.com/@realDonaldTrump/116664658424115630",
@@ -19,9 +41,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 2591,
-      "reblogs_count": 586,
-      "replies_count": 319,
+      "favourites_count": 4746,
+      "reblogs_count": 1035,
+      "replies_count": 539,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -37,13 +59,13 @@
       "content_html": "",
       "media": [
         {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi82NjQvNjU3Lzc0NC82NjQvOTcyL29yaWdpbmFsLzZhODQ4NDYxMTgxYjQzMjIuanBn",
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NTAwLzZhODQ4NDYxMTgxYjQzMjIuanBn",
           "type": "image"
         }
       ],
-      "favourites_count": 2232,
-      "reblogs_count": 494,
-      "replies_count": 135,
+      "favourites_count": 4142,
+      "reblogs_count": 867,
+      "replies_count": 235,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -63,9 +85,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 2107,
-      "reblogs_count": 464,
-      "replies_count": 80,
+      "favourites_count": 3875,
+      "reblogs_count": 822,
+      "replies_count": 141,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -85,9 +107,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 3833,
-      "reblogs_count": 1052,
-      "replies_count": 567,
+      "favourites_count": 5789,
+      "reblogs_count": 1546,
+      "replies_count": 758,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -107,9 +129,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 3053,
-      "reblogs_count": 659,
-      "replies_count": 166,
+      "favourites_count": 4314,
+      "reblogs_count": 918,
+      "replies_count": 204,
       "content_zh_cn": "汤姆·布雷迪是一位伟大的球员，也是个很棒的人！特朗普总统",
       "content_zh_hk": "湯姆·布雷迪是一位偉大的球員，也是個很棒的人！特朗普總統",
       "content_ko": "톰 브래디는 위대한 선수이자 훌륭한 사람입니다! 트럼프 대통령",
@@ -129,9 +151,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 4568,
-      "reblogs_count": 1180,
-      "replies_count": 343,
+      "favourites_count": 6014,
+      "reblogs_count": 1540,
+      "replies_count": 417,
       "content_zh_cn": "唐纳德·J·特朗普总统 vs. 凯西·霍楚尔——纽约这位失败的州长；如果选民足够明智，就会把票投给布鲁斯·布莱克曼——他将让纽约再次伟大！\nDJT总统",
       "content_zh_hk": "唐納德·J·特朗普總統 vs. 凱西·霍楚爾——紐約這位失敗的州長；如果選民夠明智，就會把票投給布魯斯·布萊克曼——他將讓紐約再次偉大！\nDJT總統",
       "content_ko": "도널드 J. 트럼프 대통령 vs. 뉴욕의 실패한 주지사 캐시 호컬. 유권자들이 현명하다면 브루스 블레이크먼에게 표를 던질 것이다 — 그는 뉴욕을 다시 위대하게 만들 것이다!\nDJT 대통령",
@@ -203,7 +225,7 @@
       "content_zh_cn": "RT @realDonaldTrumpCan you imagine? A Barack Hussein Obama Judge named Christopher Cooper has stopped a magnificent structural and aesthetic rebuilding of The Trump Kennedy Center where Millions of Dollars of material, marble, furniture, steel, air conditioning, heating, and so much else was ordered, or soon to be ordered, with the end result being a structure that would no longer be in a potential state of collapse, rusted, rotted, and rat and bug infested, to one that would be the Finest anywhere in the World. It was necessary to close the Center in order to get this work done. It is not possible to have a major and very dangerous Construction job, including the replacement of structural beams, with audiences innocently going in to watch a Play. The marble is in terrible shape, the pipes are gone, the air conditioning and heating systems are 65 years old, and no longer functioning. It was all being torn out to be replaced by brand new Carrier Equipment, at the highest standard. Now that won't happen anymore because a Judge, whose wife is an anti Trump Hater, and he is too, decided, unprecedentedly, to not allow a desperately needed Building Renovation to go forward. On top of that, he said, \"Rip his name off the Building, he's got 20 days to do so,\" even though a large Board of some of the most distinguished people in the Country voted unanimously to put the name up. I didn't do it, the Board did because they thought it would be good for this dying Institution, which was doing Record Low Business and, especially after COVID, only getting worse — True for other such Institutions throughout the Country, but The Trump Kennedy Center was going to be a special one. It would have fully recovered, when none others will. It would have been a New Standard of Excellence, one of my many Gifts to Washington, D.C. The new Building would have been incomparable, beautiful marble, magnificent chandeliers, the finest carpets, rugs, and furniture, designed at the highest level but, perhaps most importantly, replaced steel on many beams, columns, and girders, making the Building structurally sound again. People shouldn't be allowed to go into that Building until this is fixed, and yet the Trump Hating Judge wants to keep it open because his wife probably told him to do so! Cooper's wife, Amy Jeffress, who doesn't use the \"Cooper\" name because they, as a couple, don't want people to know that she has a Conflict of Interest with an important Judge, is a Radical Left Democrat, who worked as a Federal Prosecutor and Counselor to Obama Attorney General, Eric Holder, worked behind the scenes for the January 6th Unselect Committee of Political Hacks and Thugs, Dirty Cop FBI attorney Lisa Page in the Hillary Clinton Email Scandal, RUSSIA RUSSIA RUSSIA Hoax, and her Millions of Dollars Settlement, even though she was \"guilty as hell,\" and is currently representing Sleepy Joe Biden on the release of his audio tapes, and more. She also works for the same Legal Firm that represented E. Jean Carroll who received a decision against me, now under appeal, that was shocking to the entire World. Amy is totally wired into the Left System, from her husband down, and it is impossible for me to be treated fairly. He has a total Conflict of Interest, and should be brought up on charges for not revealing these facts. That is why The Kennedy Center will soon be closed, probably never to open again. That is why, at a different level, and with different players, our Country lost the TARIFF Case, and is forced to pay back 149 Billion Dollars in money received from people who hate everything we stand for. They are laughing all the way to the Bank at how stupid we are (One half sentence clause from the Supreme Court would have saved us this incalculable amount of money!), and that is probably why our Country will lose the Birthright Citizenship Case (No other Country in the World has this — It is totally unaffordable!), because our Court System is RIGGED, no different than our Political System is RIGGED, and the people of our Country know it, and that is why I got overwhelmingly elected President, in Record Numbers, and will FIGHT, FIGHT, FIGHT! President DONALD J. TRUMP",
       "content_zh_hk": "RT @realDonaldTrumpCan you imagine? A Barack Hussein Obama Judge named Christopher Cooper has stopped a magnificent structural and aesthetic rebuilding of The Trump Kennedy Center where Millions of Dollars of material, marble, furniture, steel, air conditioning, heating, and so much else was ordered, or soon to be ordered, with the end result being a structure that would no longer be in a potential state of collapse, rusted, rotted, and rat and bug infested, to one that would be the Finest anywhere in the World. It was necessary to close the Center in order to get this work done. It is not possible to have a major and very dangerous Construction job, including the replacement of structural beams, with audiences innocently going in to watch a Play. The marble is in terrible shape, the pipes are gone, the air conditioning and heating systems are 65 years old, and no longer functioning. It was all being torn out to be replaced by brand new Carrier Equipment, at the highest standard. Now that won't happen anymore because a Judge, whose wife is an anti Trump Hater, and he is too, decided, unprecedentedly, to not allow a desperately needed Building Renovation to go forward. On top of that, he said, \"Rip his name off the Building, he's got 20 days to do so,\" even though a large Board of some of the most distinguished people in the Country voted unanimously to put the name up. I didn't do it, the Board did because they thought it would be good for this dying Institution, which was doing Record Low Business and, especially after COVID, only getting worse — True for other such Institutions throughout the Country, but The Trump Kennedy Center was going to be a special one. It would have fully recovered, when none others will. It would have been a New Standard of Excellence, one of my many Gifts to Washington, D.C. The new Building would have been incomparable, beautiful marble, magnificent chandeliers, the finest carpets, rugs, and furniture, designed at the highest level but, perhaps most importantly, replaced steel on many beams, columns, and girders, making the Building structurally sound again. People shouldn't be allowed to go into that Building until this is fixed, and yet the Trump Hating Judge wants to keep it open because his wife probably told him to do so! Cooper's wife, Amy Jeffress, who doesn't use the \"Cooper\" name because they, as a couple, don't want people to know that she has a Conflict of Interest with an important Judge, is a Radical Left Democrat, who worked as a Federal Prosecutor and Counselor to Obama Attorney General, Eric Holder, worked behind the scenes for the January 6th Unselect Committee of Political Hacks and Thugs, Dirty Cop FBI attorney Lisa Page in the Hillary Clinton Email Scandal, RUSSIA RUSSIA RUSSIA Hoax, and her Millions of Dollars Settlement, even though she was \"guilty as hell,\" and is currently representing Sleepy Joe Biden on the release of his audio tapes, and more. She also works for the same Legal Firm that represented E. Jean Carroll who received a decision against me, now under appeal, that was shocking to the entire World. Amy is totally wired into the Left System, from her husband down, and it is impossible for me to be treated fairly. He has a total Conflict of Interest, and should be brought up on charges for not revealing these facts. That is why The Kennedy Center will soon be closed, probably never to open again. That is why, at a different level, and with different players, our Country lost the TARIFF Case, and is forced to pay back 149 Billion Dollars in money received from people who hate everything we stand for. They are laughing all the way to the Bank at how stupid we are (One half sentence clause from the Supreme Court would have saved us this incalculable amount of money!), and that is probably why our Country will lose the Birthright Citizenship Case (No other Country in the World has this — It is totally unaffordable!), because our Court System is RIGGED, no different than our Political System is RIGGED, and the people of our Country know it, and that is why I got overwhelmingly elected President, in Record Numbers, and will FIGHT, FIGHT, FIGHT! President DONALD J. TRUMP",
       "content_ko": "RT @realDonaldTrumpCan you imagine? A Barack Hussein Obama Judge named Christopher Cooper has stopped a magnificent structural and aesthetic rebuilding of The Trump Kennedy Center where Millions of Dollars of material, marble, furniture, steel, air conditioning, heating, and so much else was ordered, or soon to be ordered, with the end result being a structure that would no longer be in a potential state of collapse, rusted, rotted, and rat and bug infested, to one that would be the Finest anywhere in the World. It was necessary to close the Center in order to get this work done. It is not possible to have a major and very dangerous Construction job, including the replacement of structural beams, with audiences innocently going in to watch a Play. The marble is in terrible shape, the pipes are gone, the air conditioning and heating systems are 65 years old, and no longer functioning. It was all being torn out to be replaced by brand new Carrier Equipment, at the highest standard. Now that won't happen anymore because a Judge, whose wife is an anti Trump Hater, and he is too, decided, unprecedentedly, to not allow a desperately needed Building Renovation to go forward. On top of that, he said, \"Rip his name off the Building, he's got 20 days to do so,\" even though a large Board of some of the most distinguished people in the Country voted unanimously to put the name up. I didn't do it, the Board did because they thought it would be good for this dying Institution, which was doing Record Low Business and, especially after COVID, only getting worse — True for other such Institutions throughout the Country, but The Trump Kennedy Center was going to be a special one. It would have fully recovered, when none others will. It would have been a New Standard of Excellence, one of my many Gifts to Washington, D.C. The new Building would have been incomparable, beautiful marble, magnificent chandeliers, the finest carpets, rugs, and furniture, designed at the highest level but, perhaps most importantly, replaced steel on many beams, columns, and girders, making the Building structurally sound again. People shouldn't be allowed to go into that Building until this is fixed, and yet the Trump Hating Judge wants to keep it open because his wife probably told him to do so! Cooper's wife, Amy Jeffress, who doesn't use the \"Cooper\" name because they, as a couple, don't want people to know that she has a Conflict of Interest with an important Judge, is a Radical Left Democrat, who worked as a Federal Prosecutor and Counselor to Obama Attorney General, Eric Holder, worked behind the scenes for the January 6th Unselect Committee of Political Hacks and Thugs, Dirty Cop FBI attorney Lisa Page in the Hillary Clinton Email Scandal, RUSSIA RUSSIA RUSSIA Hoax, and her Millions of Dollars Settlement, even though she was \"guilty as hell,\" and is currently representing Sleepy Joe Biden on the release of his audio tapes, and more. She also works for the same Legal Firm that represented E. Jean Carroll who received a decision against me, now under appeal, that was shocking to the entire World. Amy is totally wired into the Left System, from her husband down, and it is impossible for me to be treated fairly. He has a total Conflict of Interest, and should be brought up on charges for not revealing these facts. That is why The Kennedy Center will soon be closed, probably never to open again. That is why, at a different level, and with different players, our Country lost the TARIFF Case, and is forced to pay back 149 Billion Dollars in money received from people who hate everything we stand for. They are laughing all the way to the Bank at how stupid we are (One half sentence clause from the Supreme Court would have saved us this incalculable amount of money!), and that is probably why our Country will lose the Birthright Citizenship Case (No other Country in the World has this — It is totally unaffordable!), because our Court System is RIGGED, no different than our Political System is RIGGED, and the people of our Country know it, and that is why I got overwhelmingly elected President, in Record Numbers, and will FIGHT, FIGHT, FIGHT! President DONALD J. TRUMP",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116664418957601249",
@@ -219,9 +241,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 8080,
-      "reblogs_count": 1766,
-      "replies_count": 393,
+      "favourites_count": 9330,
+      "reblogs_count": 2015,
+      "replies_count": 452,
       "content_zh_cn": "谢谢你，Jaxson！和你在一起非常愉快。我知道，那些嫉妒你、嫉妒我、也嫉妒我们身边所有人的激进左翼疯子，正在对你大肆抨击；但我也知道，你的球衣销量已经冲到了第一，而且你正赚进数百万美元，所以，YOU ARE A WINNER — THEY ARE ALL LOSERS。\n白宫见！\n总统 DJT",
       "content_zh_hk": "多謝你，Jaxson！同你一齊真係非常開心。我知道，嗰班嫉妒你、嫉妒我、亦嫉妒我哋身邊所有人嘅激進左翼瘋子，正喺度對你大肆攻擊；但我亦知道，你嘅球衣銷量已經衝上第一，而且你正賺進數百萬美元，所以，YOU ARE A WINNER — THEY ARE ALL LOSERS。\n白宮見！\n總統 DJT",
       "content_ko": "고마워, Jaxson! 당신과 함께해 정말 좋았어요. 당신과 나, 그리고 우리 주변의 모든 사람을 질투하는 급진 좌파 광신자들로부터 당신이 거센 비난을 받고 있다는 걸 알고 있습니다. 하지만 당신의 저지가 1위에 올랐고, 수백만 달러를 벌고 있다는 것도 알고 있습니다. 그러니, YOU ARE A WINNER — THEY ARE ALL LOSERS.\n백악관에서 봅시다!\n대통령 DJT",
@@ -241,9 +263,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 4139,
-      "reblogs_count": 1043,
-      "replies_count": 206,
+      "favourites_count": 4788,
+      "reblogs_count": 1171,
+      "replies_count": 225,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -263,9 +285,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 3967,
-      "reblogs_count": 928,
-      "replies_count": 184,
+      "favourites_count": 4650,
+      "reblogs_count": 1066,
+      "replies_count": 218,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -285,9 +307,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 3848,
-      "reblogs_count": 915,
-      "replies_count": 203,
+      "favourites_count": 4475,
+      "reblogs_count": 1037,
+      "replies_count": 222,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -307,9 +329,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 6905,
-      "reblogs_count": 1558,
-      "replies_count": 346,
+      "favourites_count": 8021,
+      "reblogs_count": 1797,
+      "replies_count": 393,
       "content_zh_cn": "位于林肯纪念堂与华盛顿纪念碑之间的倒影池，在巴拉克·侯赛因·奥巴马和瞌睡乔·拜登花了数亿美元试图修复后，反而被毁了（结果只会更糟！），如今工程进展顺利，我们完全有望赶上7月4日这个节点。它将会非常壮观，而且质量过硬、不会渗漏，未来100年都能保持良好状态，而成本只是他们的一小部分！\n总统 唐纳德·J·特朗普",
       "content_zh_hk": "位於林肯紀念堂與華盛頓紀念碑之間的倒影池，在巴拉克·侯賽因·奧巴馬和瞌睡喬·拜登花了數億美元試圖修復後，反而被毀了（結果只會更差！），如今工程進展順利，我們完全有望趕上7月4日這個日子。它將會非常壯觀，而且質量過硬、不會滲漏，未來100年都能保持良好狀態，而成本只是他們的一小部分！\n總統 唐納德·J·特朗普",
       "content_ko": "링컨 기념관과 워싱턴 기념탑 사이에 조성된 리플렉팅 풀은, 버락 후세인 오바마와 졸린 조 바이든이 이를 고치겠다며 수억 달러를 쏟아붓고도 오히려 망가뜨린 곳입니다(결과는 더 나빠졌을 뿐입니다!). 하지만 지금은 공사가 순조롭게 진행되고 있으며, 우리는 7월 4일 일정도 무난히 맞출 수 있을 것입니다. 이곳은 장관이 될 것이고, 품질도 뛰어나 누수 없이 100년을 갈 것이며, 비용은 그들의 일부에 불과합니다!\n도널드 J. 트럼프 대통령",
@@ -329,9 +351,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 3396,
-      "reblogs_count": 831,
-      "replies_count": 132,
+      "favourites_count": 3939,
+      "reblogs_count": 938,
+      "replies_count": 147,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -351,9 +373,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 3405,
-      "reblogs_count": 762,
-      "replies_count": 95,
+      "favourites_count": 3945,
+      "reblogs_count": 858,
+      "replies_count": 116,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -373,9 +395,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 3535,
-      "reblogs_count": 877,
-      "replies_count": 231,
+      "favourites_count": 4102,
+      "reblogs_count": 1001,
+      "replies_count": 267,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -395,31 +417,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 3714,
-      "reblogs_count": 875,
-      "replies_count": 133,
-      "content_zh_cn": "",
-      "content_zh_hk": "",
-      "content_ko": "",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116664396713705542",
-      "url": "https://truthsocial.com/@realDonaldTrump/116664396713705542",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-05-30T16:10:20.557Z",
-      "created_at_text": "May 30, 2026, 4:10 PM",
-      "content": "",
-      "content_html": "",
-      "media": [
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NDg2LzBkZWE3OWEwZGM3ZjNiZmMuanBn",
-          "type": "image"
-        }
-      ],
-      "favourites_count": 3770,
-      "reblogs_count": 864,
-      "replies_count": 90,
+      "favourites_count": 4332,
+      "reblogs_count": 999,
+      "replies_count": 147,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
