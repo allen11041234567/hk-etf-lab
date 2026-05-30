@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-05-30T21:02:56.969Z",
+  "fetchedAt": "2026-05-30T21:20:45.659Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
@@ -11,8 +11,8 @@
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-05-30T20:54:49.702Z",
       "created_at_text": "May 30, 2026, 8:54 PM",
-      "content": "Watch Lara Trump tonight on FoxNews at 9 P.M. EST. She interviews me for the entire Show! President DJT",
-      "content_html": "Watch Lara Trump tonight on FoxNews at 9 P.M. EST. She interviews me for the entire Show! President DJT",
+      "content": "",
+      "content_html": "",
       "media": [
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NTA3L2Q0YjJlODdhNDFlN2UyYzguanBn",
@@ -22,9 +22,9 @@
       "favourites_count": 571,
       "reblogs_count": 149,
       "replies_count": 71,
-      "content_zh_cn": "Watch Lara Trump tonight on FoxNews at 9 P.M. EST. She interviews me for the entire Show! President DJT",
-      "content_zh_hk": "Watch Lara Trump tonight on FoxNews at 9 P.M. EST. She interviews me for the entire Show! President DJT",
-      "content_ko": "Watch Lara Trump tonight on FoxNews at 9 P.M. EST. She interviews me for the entire Show! President DJT",
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
       "source_hint": "stock.fengle.me"
     },
     {
@@ -36,6 +36,10 @@
       "content": "Someone should explain to the Pope that the Mayor of Chicago is useless, and that Iran cannot have a Nuclear Weapon! President DONALD J. TRUMP",
       "content_html": "Someone should explain to the Pope that the Mayor of Chicago is useless, and that Iran cannot have a Nuclear Weapon! President DONALD J. TRUMP",
       "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NTA1LzA2MmM2NmU5NDBiNWUwMzguanBn",
+          "type": "image"
+        },
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NTA2LzgwYWIzNDE3MWZjZjY3Y2EucG5n",
           "type": "image"
@@ -55,20 +59,20 @@
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-05-30T18:54:24.574Z",
       "created_at_text": "May 30, 2026, 6:54 PM",
-      "content": "",
-      "content_html": "",
+      "content": "Watch Lara Trump tonight on FoxNews at 9 P.M. EST. She interviews me for the entire Show! President DJT",
+      "content_html": "Watch Lara Trump tonight on FoxNews at 9 P.M. EST. She interviews me for the entire Show! President DJT",
       "media": [
         {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi82NjUvMDQxLzY1MS8yODYvMzY5L29yaWdpbmFsL2Y1NzIxYmRkZGMzMjg5NDMuanBn",
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NTAzL2Y1NzIxYmRkZGMzMjg5NDMuanBn",
           "type": "image"
         }
       ],
       "favourites_count": 7118,
       "reblogs_count": 1664,
       "replies_count": 746,
-      "content_zh_cn": "",
-      "content_zh_hk": "",
-      "content_ko": "",
+      "content_zh_cn": "Watch Lara Trump tonight on FoxNews at 9 P.M. EST. She interviews me for the entire Show! President DJT",
+      "content_zh_hk": "Watch Lara Trump tonight on FoxNews at 9 P.M. EST. She interviews me for the entire Show! President DJT",
+      "content_ko": "Watch Lara Trump tonight on FoxNews at 9 P.M. EST. She interviews me for the entire Show! President DJT",
       "source_hint": "stock.fengle.me"
     },
     {
@@ -165,8 +169,8 @@
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-05-30T17:03:20.502Z",
       "created_at_text": "May 30, 2026, 5:03 PM",
-      "content": "Tom Brady is a great player, and great guy!President DJT\nPreview",
-      "content_html": "Tom Brady is a great player, and great guy!President DJT\nPreview",
+      "content": "",
+      "content_html": "",
       "media": [
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NDk4LzMyMjg0NDEwMjU0NGIyNGYuanBn",
@@ -176,9 +180,9 @@
       "favourites_count": 13091,
       "reblogs_count": 3289,
       "replies_count": 1291,
-      "content_zh_cn": "Tom Brady is a great player, and great guy!President DJT\nPreview",
-      "content_zh_hk": "Tom Brady is a great player, and great guy!President DJT\nPreview",
-      "content_ko": "Tom Brady is a great player, and great guy!President DJT\nPreview",
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
       "source_hint": "stock.fengle.me"
     },
     {
@@ -413,7 +417,7 @@
       "content_html": "",
       "media": [
         {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi82NjQvNDAxLzI0MC82NTIvOTU2L29yaWdpbmFsLzVmNDNlNmQ0ODNkMDRiM2EuanBn",
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NDk0LzVmNDNlNmQ0ODNkMDRiM2EuanBn",
           "type": "image"
         }
       ],
