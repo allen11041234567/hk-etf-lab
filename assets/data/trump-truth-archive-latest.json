@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-05-30T19:35:12.572Z",
+  "fetchedAt": "2026-05-30T19:47:57.633Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
@@ -19,9 +19,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 1112,
-      "reblogs_count": 294,
-      "replies_count": 165,
+      "favourites_count": 3767,
+      "reblogs_count": 937,
+      "replies_count": 457,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -41,9 +41,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 5022,
-      "reblogs_count": 972,
-      "replies_count": 645,
+      "favourites_count": 6630,
+      "reblogs_count": 1263,
+      "replies_count": 724,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
