@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116664576257157897": {
+    "content_zh_cn": "汤姆·布雷迪是一位伟大的球员，也是个很棒的人！特朗普总统",
+    "content_zh_hk": "湯姆·布雷迪是一位偉大的球員，也是個很棒的人！特朗普總統",
+    "content_ko": "톰 브래디는 위대한 선수이자 훌륭한 사람입니다! 트럼프 대통령"
+  },
   "https://truthsocial.com/@realDonaldTrump/116664536700150219": {
     "content_zh_cn": "唐纳德·J·特朗普总统 vs. 凯西·霍楚尔——纽约这位失败的州长；如果选民足够明智，就会把票投给布鲁斯·布莱克曼——他将让纽约再次伟大！\nDJT总统",
     "content_zh_hk": "唐納德·J·特朗普總統 vs. 凱西·霍楚爾——紐約這位失敗的州長；如果選民夠明智，就會把票投給布魯斯·布萊克曼——他將讓紐約再次偉大！\nDJT總統",
