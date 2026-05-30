@@ -1,30 +1,74 @@
 {
   "ok": true,
-  "fetchedAt": "2026-05-30T20:49:51.769Z",
+  "fetchedAt": "2026-05-30T21:02:56.969Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
   "posts": [
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116665515357216557",
+      "url": "https://truthsocial.com/@realDonaldTrump/116665515357216557",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-05-30T20:54:49.702Z",
+      "created_at_text": "May 30, 2026, 8:54 PM",
+      "content": "Watch Lara Trump tonight on FoxNews at 9 P.M. EST. She interviews me for the entire Show! President DJT",
+      "content_html": "Watch Lara Trump tonight on FoxNews at 9 P.M. EST. She interviews me for the entire Show! President DJT",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NTA3L2Q0YjJlODdhNDFlN2UyYzguanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 571,
+      "reblogs_count": 149,
+      "replies_count": 71,
+      "content_zh_cn": "Watch Lara Trump tonight on FoxNews at 9 P.M. EST. She interviews me for the entire Show! President DJT",
+      "content_zh_hk": "Watch Lara Trump tonight on FoxNews at 9 P.M. EST. She interviews me for the entire Show! President DJT",
+      "content_ko": "Watch Lara Trump tonight on FoxNews at 9 P.M. EST. She interviews me for the entire Show! President DJT",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116665431926784379",
+      "url": "https://truthsocial.com/@realDonaldTrump/116665431926784379",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-05-30T20:33:36.658Z",
+      "created_at_text": "May 30, 2026, 8:33 PM",
+      "content": "Someone should explain to the Pope that the Mayor of Chicago is useless, and that Iran cannot have a Nuclear Weapon! President DONALD J. TRUMP",
+      "content_html": "Someone should explain to the Pope that the Mayor of Chicago is useless, and that Iran cannot have a Nuclear Weapon! President DONALD J. TRUMP",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NTA2LzgwYWIzNDE3MWZjZjY3Y2EucG5n",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 2884,
+      "reblogs_count": 832,
+      "replies_count": 508,
+      "content_zh_cn": "应该有人向教皇解释一下：芝加哥市长毫无作为，而伊朗绝不能拥有核武器！\n美国总统 唐纳德·J·特朗普",
+      "content_zh_hk": "應該有人向教宗解釋一下：芝加哥市長毫無作為，而伊朗絕不能擁有核武器！\n美國總統 唐納德·J·特朗普",
+      "content_ko": "누군가는 교황에게 시카고 시장은 무능하며, 이란은 결코 핵무기를 가져서는 안 된다고 설명해줘야 합니다!\n도널드 J. 트럼프 대통령",
+      "source_hint": "stock.fengle.me"
+    },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116665041851243125",
       "url": "https://truthsocial.com/@realDonaldTrump/116665041851243125",
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-05-30T18:54:24.574Z",
       "created_at_text": "May 30, 2026, 6:54 PM",
-      "content": "Watch Lara Trump tonight on FoxNews at 9 P.M. EST. She interviews me for the entire Show! President DJT",
-      "content_html": "Watch Lara Trump tonight on FoxNews at 9 P.M. EST. She interviews me for the entire Show! President DJT",
+      "content": "",
+      "content_html": "",
       "media": [
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi82NjUvMDQxLzY1MS8yODYvMzY5L29yaWdpbmFsL2Y1NzIxYmRkZGMzMjg5NDMuanBn",
           "type": "image"
         }
       ],
-      "favourites_count": 6177,
-      "reblogs_count": 1461,
-      "replies_count": 679,
-      "content_zh_cn": "Watch Lara Trump tonight on FoxNews at 9 P.M. EST. She interviews me for the entire Show! President DJT",
-      "content_zh_hk": "Watch Lara Trump tonight on FoxNews at 9 P.M. EST. She interviews me for the entire Show! President DJT",
-      "content_ko": "Watch Lara Trump tonight on FoxNews at 9 P.M. EST. She interviews me for the entire Show! President DJT",
+      "favourites_count": 7118,
+      "reblogs_count": 1664,
+      "replies_count": 746,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
       "source_hint": "stock.fengle.me"
     },
     {
@@ -41,9 +85,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 8388,
-      "reblogs_count": 1570,
-      "replies_count": 815,
+      "favourites_count": 9106,
+      "reblogs_count": 1696,
+      "replies_count": 857,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -63,9 +107,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 11312,
-      "reblogs_count": 2364,
-      "replies_count": 954,
+      "favourites_count": 12115,
+      "reblogs_count": 2515,
+      "replies_count": 987,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -85,9 +129,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 10119,
-      "reblogs_count": 1983,
-      "replies_count": 416,
+      "favourites_count": 10836,
+      "reblogs_count": 2108,
+      "replies_count": 435,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -107,9 +151,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 9639,
-      "reblogs_count": 1919,
-      "replies_count": 281,
+      "favourites_count": 10314,
+      "reblogs_count": 2037,
+      "replies_count": 293,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -121,20 +165,20 @@
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-05-30T17:03:20.502Z",
       "created_at_text": "May 30, 2026, 5:03 PM",
-      "content": "",
-      "content_html": "",
+      "content": "Tom Brady is a great player, and great guy!President DJT\nPreview",
+      "content_html": "Tom Brady is a great player, and great guy!President DJT\nPreview",
       "media": [
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NDk4LzMyMjg0NDEwMjU0NGIyNGYuanBn",
           "type": "image"
         }
       ],
-      "favourites_count": 12322,
-      "reblogs_count": 3105,
-      "replies_count": 1242,
-      "content_zh_cn": "",
-      "content_zh_hk": "",
-      "content_ko": "",
+      "favourites_count": 13091,
+      "reblogs_count": 3289,
+      "replies_count": 1291,
+      "content_zh_cn": "Tom Brady is a great player, and great guy!President DJT\nPreview",
+      "content_zh_hk": "Tom Brady is a great player, and great guy!President DJT\nPreview",
+      "content_ko": "Tom Brady is a great player, and great guy!President DJT\nPreview",
       "source_hint": "stock.fengle.me"
     },
     {
@@ -151,9 +195,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 8737,
-      "reblogs_count": 1691,
-      "replies_count": 273,
+      "favourites_count": 9275,
+      "reblogs_count": 1780,
+      "replies_count": 278,
       "content_zh_cn": "汤姆·布雷迪是一位伟大的球员，也是个很棒的人！特朗普总统",
       "content_zh_hk": "湯姆·布雷迪是一位偉大的球員，也是個很棒的人！特朗普總統",
       "content_ko": "톰 브래디는 위대한 선수이자 훌륭한 사람입니다! 트럼프 대통령",
@@ -173,9 +217,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 11149,
-      "reblogs_count": 2680,
-      "replies_count": 586,
+      "favourites_count": 11749,
+      "reblogs_count": 2793,
+      "replies_count": 614,
       "content_zh_cn": "唐纳德·J·特朗普总统 vs. 凯西·霍楚尔——纽约这位失败的州长；如果选民足够明智，就会把票投给布鲁斯·布莱克曼——他将让纽约再次伟大！\nDJT总统",
       "content_zh_hk": "唐納德·J·特朗普總統 vs. 凱西·霍楚爾——紐約這位失敗的州長；如果選民夠明智，就會把票投給布魯斯·布萊克曼——他將讓紐約再次偉大！\nDJT總統",
       "content_ko": "도널드 J. 트럼프 대통령 vs. 뉴욕의 실패한 주지사 캐시 호컬. 유권자들이 현명하다면 브루스 블레이크먼에게 표를 던질 것이다 — 그는 뉴욕을 다시 위대하게 만들 것이다!\nDJT 대통령",
@@ -196,7 +240,7 @@
       "content_zh_cn": "转发 @realDonaldTrump\n谢谢你，Jaxson！很高兴和你在一起。我知道，那些激进左翼疯子因为嫉妒你、嫉妒我、也嫉妒我们身边的每一个人，所以一直在对你发难；但我也知道，你的球衣销量也冲到了第一，而且你正在赚取数百万美元，所以，YOU ARE A WINNER —— THEY ARE ALL LOSERS。\n我们白宫见！\n总统 DJT",
       "content_zh_hk": "轉發 @realDonaldTrump\n謝謝你，Jaxson！很高興和你在一起。我知道，那些激進左翼瘋子因為嫉妒你、嫉妒我，也嫉妒我們身邊的每一個人，所以一直在對你發難；但我也知道，你的球衣銷量也衝到了第一，而且你正在賺取數百萬美元，所以，YOU ARE A WINNER —— THEY ARE ALL LOSERS。\n我們白宮見！\n總統 DJT",
       "content_ko": "리트윗 @realDonaldTrump\n고마워요, Jaxson! 함께해서 정말 좋았습니다. 당신과 나, 그리고 우리 주변의 모든 사람을 질투하는 급진 좌파 광신자들이 당신을 향해 비난을 쏟아내고 있다는 걸 나는 압니다. 하지만 당신의 유니폼도 판매 1위에 올랐고, 수백만 달러를 벌고 있다는 것도 압니다. 그러니, YOU ARE A WINNER — THEY ARE ALL LOSERS.\n백악관에서 봅시다!\n대통령 DJT",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116664421288947619",
@@ -213,7 +257,7 @@
       "content_zh_cn": "转发 @realDonaldTrump\n林肯纪念堂与华盛顿纪念碑之间的倒影池，在巴拉克·侯赛因·奥巴马和“瞌睡乔”拜登花了数亿美元试图修复之后被毁了（结果只会越来越糟！），目前工程进展顺利，我们应该能轻松赶上 7 月 4 日这一时间节点。它将会是壮观的，而且品质优良、不会渗漏，未来 100 年都没问题，而成本只需原来的一小部分！\n总统 唐纳德·J·特朗普",
       "content_zh_hk": "轉發 @realDonaldTrump\n位於林肯紀念堂與華盛頓紀念碑之間的倒影池，在巴拉克·侯賽因·奧巴馬和「瞌睡喬」拜登花了數億美元試圖修復之後被毀了（結果只會愈來愈糟！），目前工程進展順利，我們應該能輕鬆趕上 7 月 4 日這個時間節點。它將會非常壯觀，而且品質優良、不會滲漏，未來 100 年都沒問題，而成本只需原來的一小部分！\n總統 唐納德·J·特朗普",
       "content_ko": "리트윗 @realDonaldTrump\n링컨 기념관과 워싱턴 기념탑 사이에 있는 리플렉팅 풀은, 버락 후세인 오바마와 ‘슬리피 조’ 바이든이 이를 고치겠다며 수억 달러를 쏟아붓고도 파괴해 놓은 곳입니다(결과는 더 악화됐을 뿐입니다!). 현재 공사는 순조롭게 진행 중이며, 우리는 7월 4일 일정도 무난히 맞출 수 있을 것입니다. 그것은 장관이 될 것이고, 품질도 뛰어나며, 누수 없이, 100년 동안 갈 것입니다. 그것도 비용은 극히 일부만 들여서 말입니다!\n대통령 도널드 J. 트럼프",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116664420324023523",
@@ -263,9 +307,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 13901,
-      "reblogs_count": 2924,
-      "replies_count": 556,
+      "favourites_count": 14439,
+      "reblogs_count": 3016,
+      "replies_count": 573,
       "content_zh_cn": "谢谢你，Jaxson！和你在一起非常愉快。我知道，那些嫉妒你、嫉妒我、也嫉妒我们身边所有人的激进左翼疯子，正在对你大肆抨击；但我也知道，你的球衣销量已经冲到了第一，而且你正赚进数百万美元，所以，YOU ARE A WINNER — THEY ARE ALL LOSERS。\n白宫见！\n总统 DJT",
       "content_zh_hk": "多謝你，Jaxson！同你一齊真係非常開心。我知道，嗰班嫉妒你、嫉妒我、亦嫉妒我哋身邊所有人嘅激進左翼瘋子，正喺度對你大肆攻擊；但我亦知道，你嘅球衣銷量已經衝上第一，而且你正賺進數百萬美元，所以，YOU ARE A WINNER — THEY ARE ALL LOSERS。\n白宮見！\n總統 DJT",
       "content_ko": "고마워, Jaxson! 당신과 함께해 정말 좋았어요. 당신과 나, 그리고 우리 주변의 모든 사람을 질투하는 급진 좌파 광신자들로부터 당신이 거센 비난을 받고 있다는 걸 알고 있습니다. 하지만 당신의 저지가 1위에 올랐고, 수백만 달러를 벌고 있다는 것도 알고 있습니다. 그러니, YOU ARE A WINNER — THEY ARE ALL LOSERS.\n백악관에서 봅시다!\n대통령 DJT",
@@ -285,9 +329,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 7251,
-      "reblogs_count": 1679,
-      "replies_count": 282,
+      "favourites_count": 7542,
+      "reblogs_count": 1746,
+      "replies_count": 287,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -307,9 +351,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 7061,
-      "reblogs_count": 1591,
-      "replies_count": 283,
+      "favourites_count": 7353,
+      "reblogs_count": 1660,
+      "replies_count": 289,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -329,9 +373,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 6788,
-      "reblogs_count": 1514,
-      "replies_count": 275,
+      "favourites_count": 7046,
+      "reblogs_count": 1565,
+      "replies_count": 284,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -351,9 +395,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 12139,
-      "reblogs_count": 2685,
-      "replies_count": 544,
+      "favourites_count": 12620,
+      "reblogs_count": 2777,
+      "replies_count": 561,
       "content_zh_cn": "位于林肯纪念堂与华盛顿纪念碑之间的倒影池，在巴拉克·侯赛因·奥巴马和瞌睡乔·拜登花了数亿美元试图修复后，反而被毁了（结果只会更糟！），如今工程进展顺利，我们完全有望赶上7月4日这个节点。它将会非常壮观，而且质量过硬、不会渗漏，未来100年都能保持良好状态，而成本只是他们的一小部分！\n总统 唐纳德·J·特朗普",
       "content_zh_hk": "位於林肯紀念堂與華盛頓紀念碑之間的倒影池，在巴拉克·侯賽因·奧巴馬和瞌睡喬·拜登花了數億美元試圖修復後，反而被毀了（結果只會更差！），如今工程進展順利，我們完全有望趕上7月4日這個日子。它將會非常壯觀，而且質量過硬、不會滲漏，未來100年都能保持良好狀態，而成本只是他們的一小部分！\n總統 唐納德·J·特朗普",
       "content_ko": "링컨 기념관과 워싱턴 기념탑 사이에 조성된 리플렉팅 풀은, 버락 후세인 오바마와 졸린 조 바이든이 이를 고치겠다며 수억 달러를 쏟아붓고도 오히려 망가뜨린 곳입니다(결과는 더 나빠졌을 뿐입니다!). 하지만 지금은 공사가 순조롭게 진행되고 있으며, 우리는 7월 4일 일정도 무난히 맞출 수 있을 것입니다. 이곳은 장관이 될 것이고, 품질도 뛰어나 누수 없이 100년을 갈 것이며, 비용은 그들의 일부에 불과합니다!\n도널드 J. 트럼프 대통령",
@@ -376,50 +420,6 @@
       "favourites_count": 5941,
       "reblogs_count": 1357,
       "replies_count": 200,
-      "content_zh_cn": "",
-      "content_zh_hk": "",
-      "content_ko": "",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116664400893849990",
-      "url": "https://truthsocial.com/@realDonaldTrump/116664400893849990",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-05-30T16:11:24.340Z",
-      "created_at_text": "May 30, 2026, 4:11 PM",
-      "content": "",
-      "content_html": "",
-      "media": [
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NDgzLzRlZGIxMWY3MTdmOTlkMjcuanBn",
-          "type": "image"
-        }
-      ],
-      "favourites_count": 5981,
-      "reblogs_count": 1288,
-      "replies_count": 144,
-      "content_zh_cn": "",
-      "content_zh_hk": "",
-      "content_ko": "",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116664400255959135",
-      "url": "https://truthsocial.com/@realDonaldTrump/116664400255959135",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-05-30T16:11:14.609Z",
-      "created_at_text": "May 30, 2026, 4:11 PM",
-      "content": "",
-      "content_html": "",
-      "media": [
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NDg0LzkxMmM0Y2ZkZDY5YjMzYTUuanBn",
-          "type": "image"
-        }
-      ],
-      "favourites_count": 5118,
-      "reblogs_count": 1229,
-      "replies_count": 319,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
