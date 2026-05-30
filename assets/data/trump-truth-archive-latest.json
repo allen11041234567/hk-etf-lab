@@ -1,10 +1,76 @@
 {
   "ok": true,
-  "fetchedAt": "2026-05-30T17:32:54.852Z",
+  "fetchedAt": "2026-05-30T17:48:24.087Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
   "posts": [
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116664658424115630",
+      "url": "https://truthsocial.com/@realDonaldTrump/116664658424115630",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-05-30T17:16:53.943Z",
+      "created_at_text": "May 30, 2026, 5:16 PM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NDk5LzRjNGIwMDI0N2NiOWM0NzAuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 2591,
+      "reblogs_count": 586,
+      "replies_count": 319,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116664657914643151",
+      "url": "https://truthsocial.com/@realDonaldTrump/116664657914643151",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-05-30T17:16:46.169Z",
+      "created_at_text": "May 30, 2026, 5:16 PM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi82NjQvNjU3Lzc0NC82NjQvOTcyL29yaWdpbmFsLzZhODQ4NDYxMTgxYjQzMjIuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 2232,
+      "reblogs_count": 494,
+      "replies_count": 135,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116664657331187924",
+      "url": "https://truthsocial.com/@realDonaldTrump/116664657331187924",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-05-30T17:16:37.261Z",
+      "created_at_text": "May 30, 2026, 5:16 PM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NTAxL2RkNDdmMjI3NmFmMGE3MTAuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 2107,
+      "reblogs_count": 464,
+      "replies_count": 80,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "stock.fengle.me"
+    },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116664605114382787",
       "url": "https://truthsocial.com/@realDonaldTrump/116664605114382787",
@@ -19,9 +85,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 1325,
-      "reblogs_count": 377,
-      "replies_count": 247,
+      "favourites_count": 3833,
+      "reblogs_count": 1052,
+      "replies_count": 567,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -41,9 +107,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 1455,
-      "reblogs_count": 331,
-      "replies_count": 124,
+      "favourites_count": 3053,
+      "reblogs_count": 659,
+      "replies_count": 166,
       "content_zh_cn": "汤姆·布雷迪是一位伟大的球员，也是个很棒的人！特朗普总统",
       "content_zh_hk": "湯姆·布雷迪是一位偉大的球員，也是個很棒的人！特朗普總統",
       "content_ko": "톰 브래디는 위대한 선수이자 훌륭한 사람입니다! 트럼프 대통령",
@@ -63,9 +129,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 2860,
-      "reblogs_count": 761,
-      "replies_count": 258,
+      "favourites_count": 4568,
+      "reblogs_count": 1180,
+      "replies_count": 343,
       "content_zh_cn": "唐纳德·J·特朗普总统 vs. 凯西·霍楚尔——纽约这位失败的州长；如果选民足够明智，就会把票投给布鲁斯·布莱克曼——他将让纽约再次伟大！\nDJT总统",
       "content_zh_hk": "唐納德·J·特朗普總統 vs. 凱西·霍楚爾——紐約這位失敗的州長；如果選民夠明智，就會把票投給布魯斯·布萊克曼——他將讓紐約再次偉大！\nDJT總統",
       "content_ko": "도널드 J. 트럼프 대통령 vs. 뉴욕의 실패한 주지사 캐시 호컬. 유권자들이 현명하다면 브루스 블레이크먼에게 표를 던질 것이다 — 그는 뉴욕을 다시 위대하게 만들 것이다!\nDJT 대통령",
@@ -153,13 +219,13 @@
           "type": "image"
         }
       ],
-      "favourites_count": 6548,
-      "reblogs_count": 1410,
-      "replies_count": 342,
+      "favourites_count": 8080,
+      "reblogs_count": 1766,
+      "replies_count": 393,
       "content_zh_cn": "谢谢你，Jaxson！和你在一起非常愉快。我知道，那些嫉妒你、嫉妒我、也嫉妒我们身边所有人的激进左翼疯子，正在对你大肆抨击；但我也知道，你的球衣销量已经冲到了第一，而且你正赚进数百万美元，所以，YOU ARE A WINNER — THEY ARE ALL LOSERS。\n白宫见！\n总统 DJT",
       "content_zh_hk": "多謝你，Jaxson！同你一齊真係非常開心。我知道，嗰班嫉妒你、嫉妒我、亦嫉妒我哋身邊所有人嘅激進左翼瘋子，正喺度對你大肆攻擊；但我亦知道，你嘅球衣銷量已經衝上第一，而且你正賺進數百萬美元，所以，YOU ARE A WINNER — THEY ARE ALL LOSERS。\n白宮見！\n總統 DJT",
       "content_ko": "고마워, Jaxson! 당신과 함께해 정말 좋았어요. 당신과 나, 그리고 우리 주변의 모든 사람을 질투하는 급진 좌파 광신자들로부터 당신이 거센 비난을 받고 있다는 걸 알고 있습니다. 하지만 당신의 저지가 1위에 올랐고, 수백만 달러를 벌고 있다는 것도 알고 있습니다. 그러니, YOU ARE A WINNER — THEY ARE ALL LOSERS.\n백악관에서 봅시다!\n대통령 DJT",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116664409242115443",
@@ -175,13 +241,13 @@
           "type": "image"
         }
       ],
-      "favourites_count": 3402,
-      "reblogs_count": 871,
-      "replies_count": 175,
+      "favourites_count": 4139,
+      "reblogs_count": 1043,
+      "replies_count": 206,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116664407473547709",
@@ -197,13 +263,13 @@
           "type": "image"
         }
       ],
-      "favourites_count": 3231,
-      "reblogs_count": 765,
-      "replies_count": 153,
+      "favourites_count": 3967,
+      "reblogs_count": 928,
+      "replies_count": 184,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116664404693162189",
@@ -219,9 +285,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 3142,
-      "reblogs_count": 750,
-      "replies_count": 175,
+      "favourites_count": 3848,
+      "reblogs_count": 915,
+      "replies_count": 203,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -241,9 +307,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 5561,
-      "reblogs_count": 1260,
-      "replies_count": 291,
+      "favourites_count": 6905,
+      "reblogs_count": 1558,
+      "replies_count": 346,
       "content_zh_cn": "位于林肯纪念堂与华盛顿纪念碑之间的倒影池，在巴拉克·侯赛因·奥巴马和瞌睡乔·拜登花了数亿美元试图修复后，反而被毁了（结果只会更糟！），如今工程进展顺利，我们完全有望赶上7月4日这个节点。它将会非常壮观，而且质量过硬、不会渗漏，未来100年都能保持良好状态，而成本只是他们的一小部分！\n总统 唐纳德·J·特朗普",
       "content_zh_hk": "位於林肯紀念堂與華盛頓紀念碑之間的倒影池，在巴拉克·侯賽因·奧巴馬和瞌睡喬·拜登花了數億美元試圖修復後，反而被毀了（結果只會更差！），如今工程進展順利，我們完全有望趕上7月4日這個日子。它將會非常壯觀，而且質量過硬、不會滲漏，未來100年都能保持良好狀態，而成本只是他們的一小部分！\n總統 唐納德·J·特朗普",
       "content_ko": "링컨 기념관과 워싱턴 기념탑 사이에 조성된 리플렉팅 풀은, 버락 후세인 오바마와 졸린 조 바이든이 이를 고치겠다며 수억 달러를 쏟아붓고도 오히려 망가뜨린 곳입니다(결과는 더 나빠졌을 뿐입니다!). 하지만 지금은 공사가 순조롭게 진행되고 있으며, 우리는 7월 4일 일정도 무난히 맞출 수 있을 것입니다. 이곳은 장관이 될 것이고, 품질도 뛰어나 누수 없이 100년을 갈 것이며, 비용은 그들의 일부에 불과합니다!\n도널드 J. 트럼프 대통령",
@@ -263,9 +329,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 2776,
-      "reblogs_count": 697,
-      "replies_count": 115,
+      "favourites_count": 3396,
+      "reblogs_count": 831,
+      "replies_count": 132,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -285,9 +351,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 2769,
-      "reblogs_count": 636,
-      "replies_count": 83,
+      "favourites_count": 3405,
+      "reblogs_count": 762,
+      "replies_count": 95,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -307,9 +373,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 2866,
-      "reblogs_count": 723,
-      "replies_count": 188,
+      "favourites_count": 3535,
+      "reblogs_count": 877,
+      "replies_count": 231,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -329,9 +395,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 3033,
-      "reblogs_count": 719,
-      "replies_count": 116,
+      "favourites_count": 3714,
+      "reblogs_count": 875,
+      "replies_count": 133,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -351,75 +417,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 3056,
-      "reblogs_count": 717,
-      "replies_count": 76,
-      "content_zh_cn": "",
-      "content_zh_hk": "",
-      "content_ko": "",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116664394293246489",
-      "url": "https://truthsocial.com/@realDonaldTrump/116664394293246489",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-05-30T16:09:43.626Z",
-      "created_at_text": "May 30, 2026, 4:09 PM",
-      "content": "",
-      "content_html": "",
-      "media": [
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NDg3LzE2MTliMzNiMjMzNDc2YWMuanBn",
-          "type": "image"
-        }
-      ],
-      "favourites_count": 3324,
-      "reblogs_count": 720,
-      "replies_count": 102,
-      "content_zh_cn": "",
-      "content_zh_hk": "",
-      "content_ko": "",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116664393553709550",
-      "url": "https://truthsocial.com/@realDonaldTrump/116664393553709550",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-05-30T16:09:32.336Z",
-      "created_at_text": "May 30, 2026, 4:09 PM",
-      "content": "",
-      "content_html": "",
-      "media": [
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NDg4LzlhZjMwZTk4MDVmZWExODIuanBn",
-          "type": "image"
-        }
-      ],
-      "favourites_count": 3334,
-      "reblogs_count": 873,
-      "replies_count": 89,
-      "content_zh_cn": "",
-      "content_zh_hk": "",
-      "content_ko": "",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116664392227372669",
-      "url": "https://truthsocial.com/@realDonaldTrump/116664392227372669",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-05-30T16:09:12.104Z",
-      "created_at_text": "May 30, 2026, 4:09 PM",
-      "content": "",
-      "content_html": "",
-      "media": [
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NDg5LzE2YzI0M2I1YzdmMWRlYmMuanBn",
-          "type": "image"
-        }
-      ],
-      "favourites_count": 2745,
-      "reblogs_count": 866,
-      "replies_count": 188,
+      "favourites_count": 3770,
+      "reblogs_count": 864,
+      "replies_count": 90,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
