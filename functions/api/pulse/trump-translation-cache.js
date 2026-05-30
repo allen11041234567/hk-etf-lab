@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116665133051752156": {
+    "content_zh_cn": "今晚美国东部时间晚9点，敬请收看福克斯新闻（Fox News）的拉拉·特朗普节目。她将用整整一档节目采访我！总统DJT",
+    "content_zh_hk": "今晚美國東部時間晚上9點，請收看霍士新聞（Fox News）的拉拉·特朗普節目。她會用整個節目訪問我！總統DJT",
+    "content_ko": "오늘 밤 미국 동부시간 오후 9시, 폭스뉴스(Fox News)에서 라라 트럼프를 시청해 주세요. 그녀가 프로그램 전체를 통해 저를 인터뷰합니다! 대통령 DJT"
+  },
   "https://truthsocial.com/@realDonaldTrump/116664576257157897": {
     "content_zh_cn": "汤姆·布雷迪是一位伟大的球员，也是个很棒的人！特朗普总统",
     "content_zh_hk": "湯姆·布雷迪是一位偉大的球員，也是個很棒的人！特朗普總統",
