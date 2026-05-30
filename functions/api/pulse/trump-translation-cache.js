@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116664536700150219": {
+    "content_zh_cn": "唐纳德·J·特朗普总统 vs. 凯西·霍楚尔——纽约这位失败的州长；如果选民足够明智，就会把票投给布鲁斯·布莱克曼——他将让纽约再次伟大！\nDJT总统",
+    "content_zh_hk": "唐納德·J·特朗普總統 vs. 凱西·霍楚爾——紐約這位失敗的州長；如果選民夠明智，就會把票投給布魯斯·布萊克曼——他將讓紐約再次偉大！\nDJT總統",
+    "content_ko": "도널드 J. 트럼프 대통령 vs. 뉴욕의 실패한 주지사 캐시 호컬. 유권자들이 현명하다면 브루스 블레이크먼에게 표를 던질 것이다 — 그는 뉴욕을 다시 위대하게 만들 것이다!\nDJT 대통령"
+  },
   "https://truthsocial.com/@realDonaldTrump/116664418957601249": {
     "content_zh_cn": "谢谢你，Jaxson！和你在一起非常愉快。我知道，那些嫉妒你、嫉妒我、也嫉妒我们身边所有人的激进左翼疯子，正在对你大肆抨击；但我也知道，你的球衣销量已经冲到了第一，而且你正赚进数百万美元，所以，YOU ARE A WINNER — THEY ARE ALL LOSERS。\n白宫见！\n总统 DJT",
     "content_zh_hk": "多謝你，Jaxson！同你一齊真係非常開心。我知道，嗰班嫉妒你、嫉妒我、亦嫉妒我哋身邊所有人嘅激進左翼瘋子，正喺度對你大肆攻擊；但我亦知道，你嘅球衣銷量已經衝上第一，而且你正賺進數百萬美元，所以，YOU ARE A WINNER — THEY ARE ALL LOSERS。\n白宮見！\n總統 DJT",
