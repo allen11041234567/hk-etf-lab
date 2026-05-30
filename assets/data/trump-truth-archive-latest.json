@@ -1,10 +1,76 @@
 {
   "ok": true,
-  "fetchedAt": "2026-05-30T17:04:39.354Z",
+  "fetchedAt": "2026-05-30T17:32:54.852Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
   "posts": [
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116664605114382787",
+      "url": "https://truthsocial.com/@realDonaldTrump/116664605114382787",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-05-30T17:03:20.502Z",
+      "created_at_text": "May 30, 2026, 5:03 PM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NDk4LzMyMjg0NDEwMjU0NGIyNGYuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 1325,
+      "reblogs_count": 377,
+      "replies_count": 247,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116664576257157897",
+      "url": "https://truthsocial.com/@realDonaldTrump/116664576257157897",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-05-30T16:56:00.169Z",
+      "created_at_text": "May 30, 2026, 4:56 PM",
+      "content": "Tom Brady is a great player, and great guy!President DJT",
+      "content_html": "Tom Brady is a great player, and great guy!President DJT",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NDk3L2M3M2M3OGI0ZDc4Y2I2NDAuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 1455,
+      "reblogs_count": 331,
+      "replies_count": 124,
+      "content_zh_cn": "汤姆·布雷迪是一位伟大的球员，也是个很棒的人！特朗普总统",
+      "content_zh_hk": "湯姆·布雷迪是一位偉大的球員，也是個很棒的人！特朗普總統",
+      "content_ko": "톰 브래디는 위대한 선수이자 훌륭한 사람입니다! 트럼프 대통령",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116664536700150219",
+      "url": "https://truthsocial.com/@realDonaldTrump/116664536700150219",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-05-30T16:45:56.582Z",
+      "created_at_text": "May 30, 2026, 4:45 PM",
+      "content": "PRESIDENT DONALD J. TRUMP vs. Kathy Hochul, New York's failed Governor who, if people are smart, will vote for Bruce Blakeman — He will, MAKE NEW YORK GREAT AGAIN! President DJT",
+      "content_html": "PRESIDENT DONALD J. TRUMP vs. Kathy Hochul, New York's failed Governor who, if people are smart, will vote for Bruce Blakeman — He will, MAKE NEW YORK GREAT AGAIN! President DJT",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NDk2LzVlMzkxOGZhYTE0ZWQ0NzUuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 2860,
+      "reblogs_count": 761,
+      "replies_count": 258,
+      "content_zh_cn": "唐纳德·J·特朗普总统 vs. 凯西·霍楚尔——纽约这位失败的州长；如果选民足够明智，就会把票投给布鲁斯·布莱克曼——他将让纽约再次伟大！\nDJT总统",
+      "content_zh_hk": "唐納德·J·特朗普總統 vs. 凱西·霍楚爾——紐約這位失敗的州長；如果選民夠明智，就會把票投給布魯斯·布萊克曼——他將讓紐約再次偉大！\nDJT總統",
+      "content_ko": "도널드 J. 트럼프 대통령 vs. 뉴욕의 실패한 주지사 캐시 호컬. 유권자들이 현명하다면 브루스 블레이크먼에게 표를 던질 것이다 — 그는 뉴욕을 다시 위대하게 만들 것이다!\nDJT 대통령",
+      "source_hint": "stock.fengle.me"
+    },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116664421746768505",
       "url": "https://truthsocial.com/@realDonaldTrump/116664421746768505",
@@ -87,9 +153,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 4180,
-      "reblogs_count": 920,
-      "replies_count": 245,
+      "favourites_count": 6548,
+      "reblogs_count": 1410,
+      "replies_count": 342,
       "content_zh_cn": "谢谢你，Jaxson！和你在一起非常愉快。我知道，那些嫉妒你、嫉妒我、也嫉妒我们身边所有人的激进左翼疯子，正在对你大肆抨击；但我也知道，你的球衣销量已经冲到了第一，而且你正赚进数百万美元，所以，YOU ARE A WINNER — THEY ARE ALL LOSERS。\n白宫见！\n总统 DJT",
       "content_zh_hk": "多謝你，Jaxson！同你一齊真係非常開心。我知道，嗰班嫉妒你、嫉妒我、亦嫉妒我哋身邊所有人嘅激進左翼瘋子，正喺度對你大肆攻擊；但我亦知道，你嘅球衣銷量已經衝上第一，而且你正賺進數百萬美元，所以，YOU ARE A WINNER — THEY ARE ALL LOSERS。\n白宮見！\n總統 DJT",
       "content_ko": "고마워, Jaxson! 당신과 함께해 정말 좋았어요. 당신과 나, 그리고 우리 주변의 모든 사람을 질투하는 급진 좌파 광신자들로부터 당신이 거센 비난을 받고 있다는 걸 알고 있습니다. 하지만 당신의 저지가 1위에 올랐고, 수백만 달러를 벌고 있다는 것도 알고 있습니다. 그러니, YOU ARE A WINNER — THEY ARE ALL LOSERS.\n백악관에서 봅시다!\n대통령 DJT",
@@ -109,9 +175,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 2275,
-      "reblogs_count": 596,
-      "replies_count": 132,
+      "favourites_count": 3402,
+      "reblogs_count": 871,
+      "replies_count": 175,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -131,9 +197,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 2167,
-      "reblogs_count": 531,
-      "replies_count": 114,
+      "favourites_count": 3231,
+      "reblogs_count": 765,
+      "replies_count": 153,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -153,13 +219,13 @@
           "type": "image"
         }
       ],
-      "favourites_count": 2062,
-      "reblogs_count": 507,
-      "replies_count": 148,
+      "favourites_count": 3142,
+      "reblogs_count": 750,
+      "replies_count": 175,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116664404638689204",
@@ -175,13 +241,13 @@
           "type": "image"
         }
       ],
-      "favourites_count": 3608,
-      "reblogs_count": 835,
-      "replies_count": 195,
+      "favourites_count": 5561,
+      "reblogs_count": 1260,
+      "replies_count": 291,
       "content_zh_cn": "位于林肯纪念堂与华盛顿纪念碑之间的倒影池，在巴拉克·侯赛因·奥巴马和瞌睡乔·拜登花了数亿美元试图修复后，反而被毁了（结果只会更糟！），如今工程进展顺利，我们完全有望赶上7月4日这个节点。它将会非常壮观，而且质量过硬、不会渗漏，未来100年都能保持良好状态，而成本只是他们的一小部分！\n总统 唐纳德·J·特朗普",
       "content_zh_hk": "位於林肯紀念堂與華盛頓紀念碑之間的倒影池，在巴拉克·侯賽因·奧巴馬和瞌睡喬·拜登花了數億美元試圖修復後，反而被毀了（結果只會更差！），如今工程進展順利，我們完全有望趕上7月4日這個日子。它將會非常壯觀，而且質量過硬、不會滲漏，未來100年都能保持良好狀態，而成本只是他們的一小部分！\n總統 唐納德·J·特朗普",
       "content_ko": "링컨 기념관과 워싱턴 기념탑 사이에 조성된 리플렉팅 풀은, 버락 후세인 오바마와 졸린 조 바이든이 이를 고치겠다며 수억 달러를 쏟아붓고도 오히려 망가뜨린 곳입니다(결과는 더 나빠졌을 뿐입니다!). 하지만 지금은 공사가 순조롭게 진행되고 있으며, 우리는 7월 4일 일정도 무난히 맞출 수 있을 것입니다. 이곳은 장관이 될 것이고, 품질도 뛰어나 누수 없이 100년을 갈 것이며, 비용은 그들의 일부에 불과합니다!\n도널드 J. 트럼프 대통령",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116664401396544221",
@@ -197,13 +263,13 @@
           "type": "image"
         }
       ],
-      "favourites_count": 1900,
-      "reblogs_count": 497,
-      "replies_count": 91,
+      "favourites_count": 2776,
+      "reblogs_count": 697,
+      "replies_count": 115,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116664400893849990",
@@ -219,9 +285,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 1839,
-      "reblogs_count": 440,
-      "replies_count": 70,
+      "favourites_count": 2769,
+      "reblogs_count": 636,
+      "replies_count": 83,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -241,9 +307,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 1890,
-      "reblogs_count": 490,
-      "replies_count": 142,
+      "favourites_count": 2866,
+      "reblogs_count": 723,
+      "replies_count": 188,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -263,9 +329,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 2036,
-      "reblogs_count": 488,
-      "replies_count": 86,
+      "favourites_count": 3033,
+      "reblogs_count": 719,
+      "replies_count": 116,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -285,9 +351,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 2051,
-      "reblogs_count": 500,
-      "replies_count": 61,
+      "favourites_count": 3056,
+      "reblogs_count": 717,
+      "replies_count": 76,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -307,9 +373,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 2217,
-      "reblogs_count": 495,
-      "replies_count": 87,
+      "favourites_count": 3324,
+      "reblogs_count": 720,
+      "replies_count": 102,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -329,9 +395,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 2234,
-      "reblogs_count": 598,
-      "replies_count": 67,
+      "favourites_count": 3334,
+      "reblogs_count": 873,
+      "replies_count": 89,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -351,72 +417,12 @@
           "type": "image"
         }
       ],
-      "favourites_count": 1846,
-      "reblogs_count": 604,
-      "replies_count": 137,
+      "favourites_count": 2745,
+      "reblogs_count": 866,
+      "replies_count": 188,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116664367963376218",
-      "url": "https://truthsocial.com/@realDonaldTrump/116664367963376218",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-05-30T16:03:01.863Z",
-      "created_at_text": "May 30, 2026, 4:03 PM",
-      "content": "I understand Artists are getting \"the yips\" having to do with their performance on Wednesday, so I am thinking about bringing the Number One Attraction anywhere in the World, the man who gets much larger audiences than Elvis in his prime, and he does so without a guitar, the man who loves our Country more than anyone else, and the man who some say is the Greatest President in History (THE GOAT!), DONALD J. TRUMP, to take the place of these highly paid, Third Rate \"Artists,\" and give a major speech, rallying the Country forward like I have done ever since being President! Two years ago, the United States was DEAD. Now we have the \"HOTTEST\" Country anywhere in the World. I don't want so-called \"Artists\" that get paid far too much money, who aren't happy. I only want to be surrounded by Happy People, Smart People, Successful People, and People that know how to WIN. So, by copy of this TRUTH, I am ordering my Representatives to look at the feasibility of doing an AMERICA IS BACK Rally on Wednesday, Washington, D.C., same time, same location. Only Great Patriots invited — It will be a Wild and Beautiful Celebration of America! President DONALD J. TRUMP",
-      "content_html": "I understand Artists are getting \"the yips\" having to do with their performance on Wednesday, so I am thinking about bringing the Number One Attraction anywhere in the World, the man who gets much larger audiences than Elvis in his prime, and he does so without a guitar, the man who loves our Country more than anyone else, and the man who some say is the Greatest President in History (THE GOAT!), DONALD J. TRUMP, to take the place of these highly paid, Third Rate \"Artists,\" and give a major speech, rallying the Country forward like I have done ever since being President! Two years ago, the United States was DEAD. Now we have the \"HOTTEST\" Country anywhere in the World. I don't want so-called \"Artists\" that get paid far too much money, who aren't happy. I only want to be surrounded by Happy People, Smart People, Successful People, and People that know how to WIN. So, by copy of this TRUTH, I am ordering my Representatives to look at the feasibility of doing an AMERICA IS BACK Rally on Wednesday, Washington, D.C., same time, same location. Only Great Patriots invited — It will be a Wild and Beautiful Celebration of America! President DONALD J. TRUMP",
-      "media": [],
-      "favourites_count": 11008,
-      "reblogs_count": 2653,
-      "replies_count": 1397,
-      "content_zh_cn": "我知道，一些艺人一想到要在周三演出就开始“手抖失常”了，所以我正在考虑请来这世上无论走到哪里都是头号号召力的人物——他吸引的观众，比猫王巅峰时期还要多，而且还不用吉他；这个人比任何人都更热爱我们的国家；还有人说，他是历史上最伟大的总统（THE GOAT!）——唐纳德·J·特朗普，来顶替这些拿着高薪的三流“艺人”，发表一场重大演讲，像我自担任总统以来一直所做的那样，鼓舞国家继续向前！\n\n两年前，美国已经“死气沉沉”。而现在，我们拥有的是全世界最“火热”的国家。我不想要那些所谓的“艺人”——拿了太多钱，却还不满意。我只希望身边围绕着快乐的人、聪明的人、成功的人，以及懂得如何赢的人。\n\n因此，借这则TRUTH，我命令我的代表们评估在周三于华盛顿哥伦比亚特区、同一时间、同一地点，举行一场“AMERICA IS BACK”集会的可行性。只邀请伟大的爱国者——这将是一场狂野而美丽的美国庆典！\n\n总统 唐纳德·J·特朗普",
-      "content_zh_hk": "我知道，一些藝人一想到要在周三演出就開始「怯場失準」了，所以我正考慮請來這個世界上無論走到哪裡都是頭號號召力的人物——他吸引的觀眾，比貓王巔峰時期還要多，而且還不用結他；這個人比任何人都更熱愛我們的國家；還有人說，他是歷史上最偉大的總統（THE GOAT!）——唐納德·J·特朗普，來取代這些高薪的三流「藝人」，發表一場重大演說，像我自出任總統以來一直所做的那樣，帶動國家繼續向前！\n\n兩年前，美國已經「死氣沉沉」。而現在，我們擁有的是全世界最「熾熱」的國家。我不想要那些所謂的「藝人」——拿了太多錢，卻仍然不滿足。我只想身邊圍繞着快樂的人、聰明的人、成功的人，以及知道如何取勝的人。\n\n因此，藉着這則TRUTH，我命令我的代表們研究在周三於華盛頓哥倫比亞特區、同一時間、同一地點，舉行一場「AMERICA IS BACK」集會的可行性。只邀請偉大的愛國者——這將會是一場狂野而美麗的美國慶典！\n\n總統 唐納德·J·特朗普",
-      "content_ko": "수요일 공연을 해야 한다는 부담 때문에 일부 아티스트들이 “yips”를 겪고 있다는 점을 알고 있습니다. 그래서 저는 전 세계 어디서든 최고의 흥행력을 자랑하는 인물, 전성기의 엘비스보다도 훨씬 더 많은 관중을 끌어모으고 기타도 없이 그렇게 해내는 사람, 누구보다 우리 나라를 사랑하는 사람, 그리고 어떤 이들은 역사상 가장 위대한 대통령(THE GOAT!)이라고 말하는 도널드 J. 트럼프를 데려와, 고액의 보수를 받는 이 3류 “아티스트”들을 대신하게 하고, 제가 대통령이 된 이후 줄곧 해왔듯 나라를 앞으로 결집시키는 중대한 연설을 하게 하는 방안을 생각하고 있습니다!\n\n2년 전 미국은 이미 “죽어 있었다”고 해도 과언이 아니었습니다. 이제 우리는 전 세계 어디서도 가장 “뜨거운” 나라가 됐습니다. 저는 돈을 너무 많이 받으면서도 만족하지 못하는 소위 “아티스트”들은 원하지 않습니다. 저는 오직 행복한 사람들, 똑똑한 사람들, 성공한 사람들, 그리고 어떻게 이기는지 아는 사람들만 제 주변에 있기를 바랍니다.\n\n그러므로 이 TRUTH를 통해, 저는 제 대리인들에게 수요일 워싱턴 D.C.에서 같은 시간, 같은 장소에 “AMERICA IS BACK” 집회를 여는 것이 가능한지 검토하라고 지시합니다. 위대한 애국자들만 초대됩니다 — 이는 미국을 위한 거칠고도 아름다운 축제가 될 것입니다!\n\n대통령 도널드 J. 트럼프",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116664181157116570",
-      "url": "https://truthsocial.com/@realDonaldTrump/116664181157116570",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-05-30T15:15:31.422Z",
-      "created_at_text": "May 30, 2026, 3:15 PM",
-      "content": "Can you imagine? A Barack Hussein Obama Judge named Christopher Cooper has stopped a magnificent structural and aesthetic rebuilding of The Trump Kennedy Center where Millions of Dollars of material, marble, furniture, steel, air conditioning, heating, and so much else was ordered, or soon to be ordered, with the end result being a structure that would no longer be in a potential state of collapse, rusted, rotted, and rat and bug infested, to one that would be the Finest anywhere in the World. It was necessary to close the Center in order to get this work done. It is not possible to have a major and very dangerous Construction job, including the replacement of structural beams, with audiences innocently going in to watch a Play. The marble is in terrible shape, the pipes are gone, the air conditioning and heating systems are 65 years old, and no longer functioning. It was all being torn out to be replaced by brand new Carrier Equipment, at the highest standard. Now that won't happen anymore because a Judge, whose wife is an anti Trump Hater, and he is too, decided, unprecedentedly, to not allow a desperately needed Building Renovation to go forward. On top of that, he said, \"Rip his name off the Building, he's got 20 days to do so,\" even though a large Board of some of the most distinguished people in the Country voted unanimously to put the name up. I didn't do it, the Board did because they thought it would be good for this dying Institution, which was doing Record Low Business and, especially after COVID, only getting worse — True for other such Institutions throughout the Country, but The Trump Kennedy Center was going to be a special one. It would have fully recovered, when none others will. It would have been a New Standard of Excellence, one of my many Gifts to Washington, D.C. The new Building would have been incomparable, beautiful marble, magnificent chandeliers, the finest carpets, rugs, and furniture, designed at the highest level but, perhaps most importantly, replaced steel on many beams, columns, and girders, making the Building structurally sound again. People shouldn't be allowed to go into that Building until this is fixed, and yet the Trump Hating Judge wants to keep it open because his wife probably told him to do so! Cooper's wife, Amy Jeffress, who doesn't use the \"Cooper\" name because they, as a couple, don't want people to know that she has a Conflict of Interest with an important Judge, is a Radical Left Democrat, who worked as a Federal Prosecutor and Counselor to Obama Attorney General, Eric Holder, worked behind the scenes for the January 6th Unselect Committee of Political Hacks and Thugs, Dirty Cop FBI attorney Lisa Page in the Hillary Clinton Email Scandal, RUSSIA RUSSIA RUSSIA Hoax, and her Millions of Dollars Settlement, even though she was \"guilty as hell,\" and is currently representing Sleepy Joe Biden on the release of his audio tapes, and more. She also works for the same Legal Firm that represented E. Jean Carroll who received a decision against me, now under appeal, that was shocking to the entire World. Amy is totally wired into the Left System, from her husband down, and it is impossible for me to be treated fairly. He has a total Conflict of Interest, and should be brought up on charges for not revealing these facts. That is why The Kennedy Center will soon be closed, probably never to open again. That is why, at a different level, and with different players, our Country lost the TARIFF Case, and is forced to pay back 149 Billion Dollars in money received from people who hate everything we stand for. They are laughing all the way to the Bank at how stupid we are (One half sentence clause from the Supreme Court would have saved us this incalculable amount of money!), and that is probably why our Country will lose the Birthright Citizenship Case (No other Country in the World has this — It is totally unaffordable!), because our Court System is RIGGED, no different than our Political System is RIGGED, and the people of our Country know it, and that is why I got overwhelmingly elected President, in Record Numbers, and will FIGHT, FIGHT, FIGHT! President DONALD J. TRUMP",
-      "content_html": "Can you imagine? A Barack Hussein Obama Judge named Christopher Cooper has stopped a magnificent structural and aesthetic rebuilding of The Trump Kennedy Center where Millions of Dollars of material, marble, furniture, steel, air conditioning, heating, and so much else was ordered, or soon to be ordered, with the end result being a structure that would no longer be in a potential state of collapse, rusted, rotted, and rat and bug infested, to one that would be the Finest anywhere in the World. It was necessary to close the Center in order to get this work done. It is not possible to have a major and very dangerous Construction job, including the replacement of structural beams, with audiences innocently going in to watch a Play. The marble is in terrible shape, the pipes are gone, the air conditioning and heating systems are 65 years old, and no longer functioning. It was all being torn out to be replaced by brand new Carrier Equipment, at the highest standard. Now that won't happen anymore because a Judge, whose wife is an anti Trump Hater, and he is too, decided, unprecedentedly, to not allow a desperately needed Building Renovation to go forward. On top of that, he said, \"Rip his name off the Building, he's got 20 days to do so,\" even though a large Board of some of the most distinguished people in the Country voted unanimously to put the name up. I didn't do it, the Board did because they thought it would be good for this dying Institution, which was doing Record Low Business and, especially after COVID, only getting worse — True for other such Institutions throughout the Country, but The Trump Kennedy Center was going to be a special one. It would have fully recovered, when none others will. It would have been a New Standard of Excellence, one of my many Gifts to Washington, D.C. The new Building would have been incomparable, beautiful marble, magnificent chandeliers, the finest carpets, rugs, and furniture, designed at the highest level but, perhaps most importantly, replaced steel on many beams, columns, and girders, making the Building structurally sound again. People shouldn't be allowed to go into that Building until this is fixed, and yet the Trump Hating Judge wants to keep it open because his wife probably told him to do so! Cooper's wife, Amy Jeffress, who doesn't use the \"Cooper\" name because they, as a couple, don't want people to know that she has a Conflict of Interest with an important Judge, is a Radical Left Democrat, who worked as a Federal Prosecutor and Counselor to Obama Attorney General, Eric Holder, worked behind the scenes for the January 6th Unselect Committee of Political Hacks and Thugs, Dirty Cop FBI attorney Lisa Page in the Hillary Clinton Email Scandal, RUSSIA RUSSIA RUSSIA Hoax, and her Millions of Dollars Settlement, even though she was \"guilty as hell,\" and is currently representing Sleepy Joe Biden on the release of his audio tapes, and more. She also works for the same Legal Firm that represented E. Jean Carroll who received a decision against me, now under appeal, that was shocking to the entire World. Amy is totally wired into the Left System, from her husband down, and it is impossible for me to be treated fairly. He has a total Conflict of Interest, and should be brought up on charges for not revealing these facts. That is why The Kennedy Center will soon be closed, probably never to open again. That is why, at a different level, and with different players, our Country lost the TARIFF Case, and is forced to pay back 149 Billion Dollars in money received from people who hate everything we stand for. They are laughing all the way to the Bank at how stupid we are (One half sentence clause from the Supreme Court would have saved us this incalculable amount of money!), and that is probably why our Country will lose the Birthright Citizenship Case (No other Country in the World has this — It is totally unaffordable!), because our Court System is RIGGED, no different than our Political System is RIGGED, and the people of our Country know it, and that is why I got overwhelmingly elected President, in Record Numbers, and will FIGHT, FIGHT, FIGHT! President DONALD J. TRUMP",
-      "media": [],
-      "favourites_count": 6631,
-      "reblogs_count": 2312,
-      "replies_count": 1499,
-      "content_zh_cn": "你能想象吗？一位巴拉克·侯赛因·奥巴马任命、名叫克里斯托弗·库珀的法官，叫停了对“特朗普肯尼迪中心”进行的一项卓越的结构与美学重建工程。该工程已订购、或即将订购价值数百万美元的材料、大理石、家具、钢材、空调、供暖设备，以及许许多多其他物资；其最终成果，本应让这座可能濒临坍塌、锈蚀、腐朽、鼠虫滋生的建筑，变成世界上最顶级的建筑之一。为了完成这项工程，关闭中心是必要之举。不可能一边进行重大且极其危险的施工——包括更换结构梁——一边让观众毫不知情地进去看演出。大理石状况极差，管道已经报废，空调和供暖系统已有65年历史，早已无法运转。原本这一切都在拆除之中，准备以最高标准、全新开利设备予以更换。如今，这一切都不会发生了，因为一位法官——他的妻子是反特朗普的仇恨者，而他自己也是——竟史无前例地决定，不允许这项迫切需要的建筑翻新继续推进。更过分的是，他还说：“把他的名字从楼上拆掉，他有20天时间去做。”可事实上，由美国一些最杰出人士组成的大型董事会曾一致投票决定挂上这个名字。不是我这么做的，是董事会这么做的，因为他们认为这对这个濒危机构有利。这个机构的业务曾跌至创纪录低点，尤其在新冠疫情之后，每况愈下——全国其他类似机构也是如此，但“特朗普肯尼迪中心”本会成为一个特别的存在。它本可以全面复苏，而其他机构都做不到。它本会成为卓越的新标杆，是我送给华盛顿特区的诸多礼物之一。新建筑本会无与伦比——美丽的大理石、华丽的吊灯、最顶级的地毯、地毯织物和家具，设计达到最高水准；但也许最重要的是，会更换许多梁、立柱和主梁上的钢材，让这栋建筑重新具备结构安全。这个问题修复之前，人们根本不应该被允许进入那栋楼，然而这位仇恨特朗普的法官却想让它继续开放，因为很可能是他妻子让他这么做的！\n\n库珀的妻子艾米·杰弗里斯不用“库珀”这个姓，因为他们夫妇不想让人们知道，她与一位重要法官存在利益冲突。她是激进左翼民主党人，曾担任联邦检察官，并担任奥巴马司法部长埃里克·霍尔德的顾问；曾在幕后为“1月6日非选调查委员会”那群政治黑客和暴徒效力；曾与“肮脏警察”FBI律师丽莎·佩奇、希拉里·克林顿邮件丑闻、“RUSSIA RUSSIA RUSSIA”骗局，以及她获得数百万美元和解金一事有关，尽管她“罪责深重”；目前还在代理“瞌睡乔”拜登处理其录音带公开事宜，等等。她还在同一家律师事务所工作，而该所曾代理E. Jean Carroll，并在一项如今仍在上诉、令全世界震惊的案件中取得对我不利的裁决。艾米从她丈夫开始，完全嵌入左翼体系，在这种情况下，我根本不可能得到公正对待。他存在完全的利益冲突，而且因未披露这些事实而应被追责。\n\n这就是为什么肯尼迪中心很快将被关闭，而且很可能永远不会再开放。这也是为什么，在另一个层面、由另一批人操作之下，我们的国家输掉了关税案，并被迫退还1490亿美元——这些钱是从憎恨我们一切立场的人那里收来的。他们一路笑着把钱存进银行，嘲笑我们有多么愚蠢（最高法院只要半句话的从句就能帮我们免于这笔无法估量的损失！）；这也很可能就是为什么我们的国家会输掉“出生公民权”案（世界上没有其他国家这样做——这完全负担不起！），因为我们的司法体系是被操纵的，就像我们的政治体系同样被操纵一样，而我国人民知道这一点，这也正是为什么我以压倒性优势、以创纪录票数当选总统，而且我将战斗，战斗，战斗！\n\n总统 唐纳德·J·特朗普",
-      "content_zh_hk": "你能想像嗎？一位由巴拉克·侯賽因·奧巴馬任命、名叫Christopher Cooper的法官，叫停了對「特朗普甘迺迪中心」進行的一項卓越的結構及美學重建工程。該工程已訂購、或即將訂購價值數百萬美元的材料、大理石、家具、鋼材、冷氣、供暖設備，以及許許多多其他物資；其最終成果，本應令這座可能處於潛在倒塌、鏽蝕、腐朽、鼠蟲滋生狀態的建築，變成全世界最頂級的建築之一。為了完成這項工程，關閉中心是必要之舉。不可能一邊進行重大且極其危險的施工——包括更換結構樑——一邊讓觀眾毫不知情地進去看演出。大理石狀況極差，喉管已經報廢，冷氣和供暖系統已有65年歷史，早已無法運作。原本這一切都在拆除之中，準備以最高標準、全新Carrier設備予以更換。如今，這一切都不會發生了，因為一位法官——他的妻子是反特朗普的仇恨者，而他自己也是——竟前所未有地決定，不允許這項迫切需要的建築翻新繼續推進。更過分的是，他還說：「把他的名字從大樓上拆掉，他有20天時間去做。」可事實上，由美國一些最傑出人士組成的大型董事會曾一致投票決定掛上這個名字。不是我這麼做的，是董事會這麼做的，因為他們認為這對這個瀕危機構有利。這個機構的業務曾跌至紀錄低位，尤其在新冠疫情之後，每況愈下——全國其他類似機構也是如此，但「特朗普甘迺迪中心」本會成為一個特別的存在。它本可以全面復甦，而其他機構都做不到。它本會成為卓越的新標準，是我送給華盛頓特區的眾多禮物之一。新建築本會無與倫比——美麗的大理石、華麗的枝形吊燈、最頂級的地毯、地氈和家具，設計達到最高水準；但也許最重要的是，會更換許多樑、立柱和主樑上的鋼材，令這棟建築重新具備結構安全。這個問題修復之前，人們根本不應被允許進入那棟大樓，然而這位仇恨特朗普的法官卻想讓它繼續開放，因為很可能是他妻子叫他這麼做的！\n\nCooper的妻子Amy Jeffress不用「Cooper」這個姓，因為他們夫婦不想讓人知道，她與一位重要法官存在利益衝突。她是激進左翼民主黨人，曾擔任聯邦檢察官，並擔任奧巴馬司法部長Eric Holder的顧問；曾在幕後為「1月6日非選調查委員會」那群政治黑客和暴徒效力；曾與「污糟警察」FBI律師Lisa Page、希拉里·克林頓電郵醜聞、「RUSSIA RUSSIA RUSSIA」騙局，以及她獲得數百萬美元和解金一事有關，儘管她「罪責深重」；目前還在代表「瞌睡Joe」拜登處理其錄音帶公開事宜，等等。她還在同一家律師事務所工作，而該所曾代表E. Jean Carroll，並在一項如今仍在上訴、震驚全世界的案件中取得對我不利的裁決。Amy從她丈夫開始，完全嵌入左翼體系，在這種情況下，我根本不可能得到公平對待。他存在完全的利益衝突，而且因未披露這些事實而應被追責。\n\n這就是為甚麼甘迺迪中心很快將被關閉，而且很可能永遠不會再開放。這也是為甚麼，在另一個層面、由另一批人操作之下，我們的國家輸掉了關稅案，並被迫退還1,490億美元——這些錢是從憎恨我們一切立場的人那裏收來的。他們一路笑着把錢存進銀行，嘲笑我們有多麼愚蠢（最高法院只要半句從句就能幫我們免於這筆無法估量的損失！）；這也很可能就是為甚麼我們的國家會輸掉「出生公民權」案（世界上沒有其他國家這樣做——這完全負擔不起！），因為我們的司法體系是被操縱的，就像我們的政治體系同樣被操縱一樣，而我國人民知道這一點，這也正是為甚麼我以壓倒性優勢、以破紀錄票數當選總統，而且我將戰鬥，戰鬥，戰鬥！\n\n總統 Donald J. Trump",
-      "content_ko": "상상할 수 있습니까? 버락 후세인 오바마가 임명한 크리스토퍼 쿠퍼라는 판사가, 수백만 달러 규모의 자재·대리석·가구·철강·냉방·난방 설비와 그 밖의 수많은 물품이 이미 발주됐거나 곧 발주될 예정이었던, ‘트럼프 케네디 센터’의 웅장한 구조·미관 재건 사업을 중단시켰습니다. 그 최종 결과는 붕괴 위험, 녹슬고 썩고 쥐와 벌레가 들끓는 상태의 건물을, 세계 어디에 내놔도 최고 수준의 건물로 바꾸는 것이었을 것입니다. 이 공사를 하려면 센터를 폐쇄하는 것이 필요했습니다. 구조용 보 교체를 포함한 대규모의 매우 위험한 공사를 하면서, 관객들이 아무것도 모른 채 공연을 보러 들어가게 하는 것은 불가능합니다. 대리석 상태는 형편없고, 배관은 사실상 망가졌으며, 냉난방 시스템은 65년이나 되어 더 이상 작동하지 않습니다. 원래는 이 모든 것을 뜯어내고, 최고 수준의 새 Carrier 장비로 교체하고 있었습니다. 그런데 이제 그 일은 더 이상 일어나지 않을 것입니다. 반(反)트럼프 증오자인 아내를 둔, 그리고 본인 역시 그런 판사가, 전례 없이 절실히 필요한 건물 보수 공사의 진행을 허용하지 않기로 결정했기 때문입니다. 게다가 그는 “건물에서 그의 이름을 떼어내라, 20일 안에 그렇게 하라”고 말했습니다. 하지만 미국에서 가장 저명한 인사들 일부로 구성된 대형 이사회가 만장일치로 그 이름을 올리기로 표결했습니다. 제가 한 것이 아니라, 그 기관에 도움이 될 것이라고 판단한 이사회가 한 일입니다. 이 죽어가던 기관은 사업이 사상 최저 수준으로 떨어졌고, 특히 코로나 이후에는 더욱 악화되고 있었습니다 — 전국의 다른 유사 기관들도 마찬가지였지만, ‘트럼프 케네디 센터’는 특별한 곳이 될 예정이었습니다. 다른 곳은 누구도 해내지 못할 완전한 회복을 이뤄냈을 것입니다. 그것은 탁월함의 새로운 기준이 되었을 것이며, 워싱턴 D.C.에 주는 제 수많은 선물 중 하나가 되었을 것입니다. 새 건물은 비교 불가의 수준이었을 것입니다. 아름다운 대리석, 웅장한 샹들리에, 최고급 카펫·러그·가구, 최고 수준의 설계는 물론이고, 어쩌면 가장 중요한 것은 많은 보·기둥·거더의 강재를 교체해 건물을 다시 구조적으로 안전하게 만드는 것이었습니다. 이 문제가 고쳐지기 전까지는 사람들을 그 건물에 들어가게 해서는 안 됩니다. 그런데도 트럼프를 증오하는 이 판사는 건물을 계속 열어두려 합니다. 아마 그의 아내가 그렇게 하라고 시켰기 때문일 것입니다!\n\n쿠퍼의 아내 에이미 제프리스는 ‘쿠퍼’라는 성을 쓰지 않습니다. 두 사람이 부부라는 사실, 그리고 그녀가 중요한 판사와 이해충돌 관계에 있다는 점을 사람들이 알지 못하게 하려 하기 때문입니다. 그녀는 급진 좌파 민주당원으로, 연방 검사와 오바마 법무장관 에릭 홀더의 고문으로 일했습니다. 또 정치적 해커와 폭도들로 이뤄진 1월 6일 비선출 조사위원회를 뒤에서 도왔고, ‘더러운 경찰’ FBI 변호사 리사 페이지, 힐러리 클린턴 이메일 스캔들, RUSSIA RUSSIA RUSSIA 사기극, 그리고 그녀가 “지독할 만큼 유죄”였음에도 수백만 달러의 합의금을 받은 일과도 관련돼 있습니다. 현재는 ‘Sleepy Joe’ 바이든의 오디오 테이프 공개 문제에서도 그를 대리하고 있으며, 그 밖에도 많습니다. 그녀는 또 E. Jean Carroll을 대리해 현재 항소 중이지만 전 세계를 충격에 빠뜨린 대(對)저 판결을 받아낸 같은 로펌에서 일하고 있습니다. 에이미는 남편까지 포함해 좌파 시스템에 완전히 연결돼 있으며, 이런 상황에서 제가 공정한 대우를 받는 것은 불가능합니다. 그는 명백한 이해충돌 상태에 있으며, 이런 사실을 공개하지 않은 데 대해 책임을 물어야 합니다.\n\n이것이 바로 케네디 센터가 곧 폐쇄되고, 아마 다시는 열리지 못할 이유입니다. 그리고 이것이 또 다른 차원에서, 다른 플레이어들이 움직인 결과, 우리나라가 관세 소송에서 패소하고 우리가 지지하는 모든 것을 증오하는 사람들에게서 거둬들인 1,490억 달러를 돌려줘야 하는 이유이기도 합니다. 그들은 우리가 얼마나 어리석은지 비웃으며 은행까지 웃으면서 가고 있습니다 (대법원이 반 문장짜리 조항만 써줬어도 이 계산조차 불가능한 규모의 손실을 막을 수 있었습니다!). 그리고 이것이 아마 우리나라가 출생시민권 소송에서도 패할 이유일 것입니다 (이런 제도를 가진 나라는 전 세계 어디에도 없습니다 — 도저히 감당할 수 없습니다!). 왜냐하면 우리 사법 시스템은 조작돼 있고, 우리 정치 시스템이 조작돼 있는 것과 다르지 않기 때문입니다. 우리 국민은 그것을 알고 있고, 바로 그래서 제가 압도적으로, 기록적인 득표로 대통령에 당선됐으며, 앞으로도 싸우고, 싸우고, 싸울 것입니다!\n\n대통령 도널드 J. 트럼프",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116661707551593139",
-      "url": "https://truthsocial.com/@realDonaldTrump/116661707551593139",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-05-30T04:46:27.293Z",
-      "created_at_text": "May 30, 2026, 4:46 AM",
-      "content": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116661706730496718",
-      "content_html": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116661706730496718",
-      "media": [
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi82NjEvNzA2LzA4OC8xMDgvODI4L29yaWdpbmFsLzA3NGQxN2Q0Y2RjNjJiNTkubXA0",
-          "type": "video"
-        },
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NDgxLzczZDkzZTM0OWM4YzVjMWYucG5n",
-          "type": "image"
-        }
-      ],
-      "favourites_count": 15687,
-      "reblogs_count": 6364,
-      "replies_count": 1846,
-      "content_zh_cn": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116661706730496718",
-      "content_zh_hk": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116661706730496718",
-      "content_ko": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116661706730496718",
       "source_hint": "cnn"
     }
   ]
