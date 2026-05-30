@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-05-30T19:47:57.633Z",
+  "fetchedAt": "2026-05-30T20:06:41.964Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
@@ -11,8 +11,8 @@
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-05-30T18:54:24.574Z",
       "created_at_text": "May 30, 2026, 6:54 PM",
-      "content": "",
-      "content_html": "",
+      "content": "Watch Lara Trump tonight on FoxNews at 9 P.M. EST. She interviews me for the entire Show! President DJT",
+      "content_html": "Watch Lara Trump tonight on FoxNews at 9 P.M. EST. She interviews me for the entire Show! President DJT",
       "media": [
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi82NjUvMDQxLzY1MS8yODYvMzY5L29yaWdpbmFsL2Y1NzIxYmRkZGMzMjg5NDMuanBn",
@@ -22,9 +22,9 @@
       "favourites_count": 3767,
       "reblogs_count": 937,
       "replies_count": 457,
-      "content_zh_cn": "",
-      "content_zh_hk": "",
-      "content_ko": "",
+      "content_zh_cn": "Watch Lara Trump tonight on FoxNews at 9 P.M. EST. She interviews me for the entire Show! President DJT",
+      "content_zh_hk": "Watch Lara Trump tonight on FoxNews at 9 P.M. EST. She interviews me for the entire Show! President DJT",
+      "content_ko": "Watch Lara Trump tonight on FoxNews at 9 P.M. EST. She interviews me for the entire Show! President DJT",
       "source_hint": "stock.fengle.me"
     },
     {
