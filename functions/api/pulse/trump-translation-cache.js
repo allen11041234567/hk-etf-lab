@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116665810813312667": {
+    "content_zh_cn": "与查尔斯国王在白宫！\n总统 唐纳德·J·特朗普",
+    "content_zh_hk": "與查理斯國王在白宮！\n總統 當勞·J·特朗普",
+    "content_ko": "백악관에서 찰스 국왕과 함께!\n도널드 J. 트럼프 대통령"
+  },
   "https://truthsocial.com/@realDonaldTrump/116665527815377503": {
     "content_zh_cn": "白宫宴会厅屋顶上的无人机起降平台！总统 唐纳德·J·特朗普",
     "content_zh_hk": "白宮宴會廳屋頂上的無人機起降平台！總統 唐納德·J·特朗普",
