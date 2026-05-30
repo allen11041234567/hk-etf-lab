@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-05-30T19:03:44.762Z",
+  "fetchedAt": "2026-05-30T19:19:36.372Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
@@ -121,8 +121,8 @@
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-05-30T17:03:20.502Z",
       "created_at_text": "May 30, 2026, 5:03 PM",
-      "content": "Tom Brady is a great player, and great guy!President DJT\nPreview",
-      "content_html": "Tom Brady is a great player, and great guy!President DJT\nPreview",
+      "content": "",
+      "content_html": "",
       "media": [
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NDk4LzMyMjg0NDEwMjU0NGIyNGYuanBn",
@@ -132,9 +132,9 @@
       "favourites_count": 8901,
       "reblogs_count": 2288,
       "replies_count": 1011,
-      "content_zh_cn": "Tom Brady is a great player, and great guy!President DJT\nPreview",
-      "content_zh_hk": "Tom Brady is a great player, and great guy!President DJT\nPreview",
-      "content_ko": "Tom Brady is a great player, and great guy!President DJT\nPreview",
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
       "source_hint": "stock.fengle.me"
     },
     {
