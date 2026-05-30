@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116665527815377503": {
+    "content_zh_cn": "白宫宴会厅屋顶上的无人机起降平台！总统 唐纳德·J·特朗普",
+    "content_zh_hk": "白宮宴會廳屋頂上的無人機起降平台！總統 唐納德·J·特朗普",
+    "content_ko": "백악관 볼룸 지붕 위의 드론포트! 도널드 J. 트럼프 대통령"
+  },
   "https://truthsocial.com/@realDonaldTrump/116665431926784379": {
     "content_zh_cn": "应该有人向教皇解释一下：芝加哥市长毫无作为，而伊朗绝不能拥有核武器！\n美国总统 唐纳德·J·特朗普",
     "content_zh_hk": "應該有人向教宗解釋一下：芝加哥市長毫無作為，而伊朗絕不能擁有核武器！\n美國總統 唐納德·J·特朗普",
