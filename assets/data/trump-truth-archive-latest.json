@@ -1,10 +1,36 @@
 {
   "ok": true,
-  "fetchedAt": "2026-05-31T03:48:47.266Z",
+  "fetchedAt": "2026-05-31T04:05:09.448Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
   "posts": [
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116667035328008255",
+      "url": "https://truthsocial.com/@realDonaldTrump/116667035328008255",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-05-31T03:21:22.619Z",
+      "created_at_text": "May 31, 2026, 3:21 AM",
+      "content": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116667034702707989",
+      "content_html": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116667034702707989",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi82NjcvMDMzLzg5MS8zMjcvMTE2L29yaWdpbmFsLzFjZWU4MjQyNTdhMjUwNGYubXA0",
+          "type": "video"
+        },
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NTM4Lzc1ZTEzM2YxZTk4N2EyYjAucG5n",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 1768,
+      "reblogs_count": 685,
+      "replies_count": 226,
+      "content_zh_cn": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116667034702707989",
+      "content_zh_hk": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116667034702707989",
+      "content_ko": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116667034702707989",
+      "source_hint": "stock.fengle.me"
+    },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116666242491370108",
       "url": "https://truthsocial.com/@realDonaldTrump/116666242491370108",
@@ -14,9 +40,9 @@
       "content": "Watch my interview with my fantastic daughter-in-law, Lara Trump, tonight at 9:00 - FoxNews. President DJT",
       "content_html": "Watch my interview with my fantastic daughter-in-law, Lara Trump, tonight at 9:00 - FoxNews. President DJT",
       "media": [],
-      "favourites_count": 8585,
-      "reblogs_count": 1820,
-      "replies_count": 937,
+      "favourites_count": 10662,
+      "reblogs_count": 2206,
+      "replies_count": 1072,
       "content_zh_cn": "今晚9:00，收看我与我出色的儿媳拉拉·特朗普（Lara Trump）的专访——福克斯新闻。总统DJT",
       "content_zh_hk": "今晚9:00，收看我與我出色的媳婦拉拉·特朗普（Lara Trump）的專訪——霍士新聞。總統DJT",
       "content_ko": "오늘 밤 9시, 저의 훌륭한 며느리 라라 트럼프(Lara Trump)와의 인터뷰를 시청해 주십시오 - Fox News. 대통령 DJT",
@@ -31,9 +57,9 @@
       "content": "Watch Mark Levin tonight at 8:00. A BIG SHOW!",
       "content_html": "Watch Mark Levin tonight at 8:00. A BIG SHOW!",
       "media": [],
-      "favourites_count": 6211,
-      "reblogs_count": 1254,
-      "replies_count": 513,
+      "favourites_count": 7665,
+      "reblogs_count": 1500,
+      "replies_count": 588,
       "content_zh_cn": "今晚8:00收看马克·莱文的节目。重磅节目！",
       "content_zh_hk": "今晚8:00收看馬克·萊文的節目。重磅節目！",
       "content_ko": "오늘 밤 8시, 마크 레빈의 방송을 시청하세요. 대단한 쇼입니다!",
@@ -48,9 +74,9 @@
       "content": "We should have a giant MAKE AMERICA GREAT AGAIN RALLY, for 250, instead of having overpriced singers, who nobody wants to hear, whose music is boring, and yet who do nothing but complain. Cancel it, just like I canceled my involvement with the failing and unsafe to be in Kennedy Center, because a Highly Conflicted, Crooked Federal Judge, said that I should not be allowed to spend my time and money in order to MAKE THE CENTER GREAT AGAIN, actually, far greater than it ever was before! It would have also been nice to see a Republican/Democrat union bring it back to life. The Kennedy Center is broken, unsafe, and $busted, and has been for many years! Judge Cooper also stated that the highly prestigious Board of the Center was not authorized to add on the name \"TRUMP\" despite the fact that hundreds of millions of dollars of my time and money will be necessary for its successful reincarnation. So now, the Kennedy Center will collapse, both structurally and financially. Judge Cooper and his wife, Amy Jeffress (obfuscation anyone?), should be ashamed of themselves. Judge Cooper, like numerous other Crooked Judges on my cases, should be IMPEACHED. MAKE AMERICA GREAT AGAIN! President DONALD J. TRUMP",
       "content_html": "We should have a giant MAKE AMERICA GREAT AGAIN RALLY, for 250, instead of having overpriced singers, who nobody wants to hear, whose music is boring, and yet who do nothing but complain. Cancel it, just like I canceled my involvement with the failing and unsafe to be in Kennedy Center, because a Highly Conflicted, Crooked Federal Judge, said that I should not be allowed to spend my time and money in order to MAKE THE CENTER GREAT AGAIN, actually, far greater than it ever was before! It would have also been nice to see a Republican/Democrat union bring it back to life. The Kennedy Center is broken, unsafe, and $busted, and has been for many years! Judge Cooper also stated that the highly prestigious Board of the Center was not authorized to add on the name \"TRUMP\" despite the fact that hundreds of millions of dollars of my time and money will be necessary for its successful reincarnation. So now, the Kennedy Center will collapse, both structurally and financially. Judge Cooper and his wife, Amy Jeffress (obfuscation anyone?), should be ashamed of themselves. Judge Cooper, like numerous other Crooked Judges on my cases, should be IMPEACHED. MAKE AMERICA GREAT AGAIN! President DONALD J. TRUMP",
       "media": [],
-      "favourites_count": 14165,
-      "reblogs_count": 3826,
-      "replies_count": 2284,
+      "favourites_count": 16631,
+      "reblogs_count": 4418,
+      "replies_count": 2530,
       "content_zh_cn": "我们应该为那250人办一场盛大的“让美国再次伟大”（MAKE AMERICA GREAT AGAIN）集会，而不是请那些要价离谱的歌手——没人想听他们唱，他们的音乐乏味至极，却只会抱怨。把它取消吧，就像我取消自己与肯尼迪中心的关联一样。那地方正在衰败，而且进去都不安全；而一位严重利益冲突、腐败的联邦法官竟然说，我不应被允许花费自己的时间和金钱去“让中心再次伟大”（MAKE THE CENTER GREAT AGAIN）——事实上，要让它比历史上任何时候都更加辉煌！如果能看到共和党人与民主党人携手让它重获生机，那也会很好。肯尼迪中心已经坏掉了、不安全，而且$破产，多年来一直如此！\n\n库珀法官还表示，这个享有极高声望的中心董事会无权加上“TRUMP”这个名字，尽管其成功重生将需要我投入数亿美元的时间和资金。所以现在，肯尼迪中心将在结构和财务上双双崩塌。库珀法官和他的妻子艾米·杰弗里斯（这算不算刻意掩饰？），都应该为自己感到羞耻。库珀法官，和我案件中的许多其他腐败法官一样，应该被弹劾。\n\n让美国再次伟大！\n总统 唐纳德·J·特朗普",
       "content_zh_hk": "我們應該為那250人辦一場盛大的「讓美國再次偉大」（MAKE AMERICA GREAT AGAIN）集會，而不是請那些收費離譜的歌手——沒有人想聽他們唱，他們的音樂沉悶乏味，卻只會抱怨。把它取消吧，就像我取消自己與甘迺迪中心的關聯一樣。那地方正在衰敗，而且進去都不安全；而一位高度利益衝突、腐敗的聯邦法官竟然說，我不應被允許花費自己的時間和金錢去「讓中心再次偉大」（MAKE THE CENTER GREAT AGAIN）——事實上，要讓它比過去任何時候都更加輝煌！如果能看到共和黨與民主黨攜手讓它重獲生機，那也會很好。甘迺迪中心已經壞掉了、不安全，而且$破產，多年來一直如此！\n\n庫珀法官還表示，這個享有極高聲望的中心董事會無權加上「TRUMP」這個名字，儘管其成功重生將需要我投入數億美元的時間和資金。所以現在，甘迺迪中心將在結構和財務上雙雙崩塌。庫珀法官和他的妻子Amy Jeffress（這算不算刻意掩飾？），都應該為自己感到羞恥。庫珀法官，和我案件中的許多其他腐敗法官一樣，應該被彈劾。\n\n讓美國再次偉大！\n總統 唐納德·J·特朗普",
       "content_ko": "우리는 250명을 위한 거대한 ‘미국을 다시 위대하게’(MAKE AMERICA GREAT AGAIN) 집회를 열어야 합니다. 아무도 듣고 싶어 하지 않는, 음악도 지루한데 불평만 늘어놓는 터무니없이 비싼 가수들을 부르는 대신 말입니다. 그것은 취소해야 합니다. 제가 쇠락했고 들어가기도 unsafe한 케네디센터와의 관여를 취소한 것처럼 말입니다. 고도의 이해충돌 상태에 있는 부패한 연방판사가, 제가 제 시간과 돈을 들여 ‘센터를 다시 위대하게’(MAKE THE CENTER GREAT AGAIN) 만드는 일을 해서는 안 된다고 했기 때문입니다. 사실 그것은 그 어느 때보다 훨씬 더 위대해질 수 있었습니다! 공화당과 민주당의 연합이 그것을 다시 살려내는 모습도 좋았을 것입니다. 케네디센터는 망가졌고, 안전하지 않으며, $파산 상태이고, 여러 해 동안 그래왔습니다!\n\n쿠퍼 판사는 또, 수억 달러에 이르는 제 시간과 자금이 그 성공적인 재탄생에 필요하다는 사실에도 불구하고, 이 매우 명망 있는 센터의 이사회가 ‘TRUMP’라는 이름을 추가할 권한이 없다고 말했습니다. 그래서 이제 케네디센터는 구조적으로도, 재정적으로도 붕괴할 것입니다. 쿠퍼 판사와 그의 아내 에이미 제프리스(Amy Jeffress, obfuscation anyone?)는 스스로 부끄러워해야 합니다. 쿠퍼 판사는, 제 사건들에 등장한 수많은 다른 부패한 판사들과 마찬가지로, 탄핵되어야 합니다.\n\n미국을 다시 위대하게!\n도널드 J. 트럼프 대통령",
@@ -172,13 +198,13 @@
           "type": "image"
         }
       ],
-      "favourites_count": 11594,
-      "reblogs_count": 2529,
-      "replies_count": 1024,
+      "favourites_count": 13461,
+      "reblogs_count": 2902,
+      "replies_count": 1131,
       "content_zh_cn": "你看，他们有一座宴会厅——它叫“中国大礼堂”！非常宏伟、非常漂亮。为什么我拥有一个更好的，人们却要因此跟我作对？民主党人都疯了！\n美国总统 唐纳德·J·特朗普",
       "content_zh_hk": "你看，他們有一座宴會廳——它叫「中國大禮堂」！非常宏偉、非常漂亮。為什麼我擁有一個更好的，人們卻要因此跟我作對？民主黨人都瘋了！\n美國總統 當勞·J·特朗普",
       "content_ko": "보라, 그들에겐 볼룸이 있다 — 이름하여 ‘중국의 그레이트홀’이다! 아주 크고 아름답다. 그런데 내가 그보다 더 좋은 것을 갖는다고 해서 왜 사람들이 나와 싸우는가? 민주당은 미쳤다!\n미국 대통령 도널드 J. 트럼프",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116665861715483617",
@@ -194,9 +220,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 5482,
-      "reblogs_count": 1165,
-      "replies_count": 289,
+      "favourites_count": 6003,
+      "reblogs_count": 1252,
+      "replies_count": 297,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -216,9 +242,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 5390,
-      "reblogs_count": 1087,
-      "replies_count": 261,
+      "favourites_count": 5893,
+      "reblogs_count": 1170,
+      "replies_count": 266,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -238,9 +264,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 5042,
-      "reblogs_count": 1012,
-      "replies_count": 204,
+      "favourites_count": 5526,
+      "reblogs_count": 1093,
+      "replies_count": 212,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -260,9 +286,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 5600,
-      "reblogs_count": 1094,
-      "replies_count": 227,
+      "favourites_count": 6109,
+      "reblogs_count": 1175,
+      "replies_count": 236,
       "content_zh_cn": "与查尔斯国王在白宫！\n总统 唐纳德·J·特朗普",
       "content_zh_hk": "與查理斯國王在白宮！\n總統 當勞·J·特朗普",
       "content_ko": "백악관에서 찰스 국왕과 함께!\n도널드 J. 트럼프 대통령",
@@ -282,9 +308,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 6662,
-      "reblogs_count": 1604,
-      "replies_count": 227,
+      "favourites_count": 7315,
+      "reblogs_count": 1735,
+      "replies_count": 232,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -373,28 +399,6 @@
       "favourites_count": 8036,
       "reblogs_count": 1801,
       "replies_count": 422,
-      "content_zh_cn": "",
-      "content_zh_hk": "",
-      "content_ko": "",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116665735685754803",
-      "url": "https://truthsocial.com/@realDonaldTrump/116665735685754803",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-05-30T21:50:51.649Z",
-      "created_at_text": "May 30, 2026, 9:50 PM",
-      "content": "",
-      "content_html": "",
-      "media": [
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NTI2L2I0ZWNhMzg0M2VkYjE0MzEuanBn",
-          "type": "image"
-        }
-      ],
-      "favourites_count": 7763,
-      "reblogs_count": 1853,
-      "replies_count": 395,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
