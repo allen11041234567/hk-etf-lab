@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116669584003805199": {
+    "content_zh_cn": "我很高兴宣布，现任美国驻土耳其大使汤姆·巴拉克（Tom Barrack）卓有成效、表现出色，将被任命为美国总统叙利亚问题特使，同时也将担任美国总统伊拉克问题特使。随着我们推进与叙利亚和伊拉克两国政府的战略合作，美国与两国的关系也在持续深化！\n\n汤姆将继续担任驻土耳其大使，并将在美国国务院的全力支持下开展工作。我们高度赞赏汤姆·巴拉克所做的工作，也感谢他持续愿意为我们的国家服务。\n\n感谢各位对此事的关注！\n\n总统 唐纳德·J·特朗普",
+    "content_zh_hk": "我很高興宣布，現任美國駐土耳其大使湯姆·巴拉克（Tom Barrack）表現卓越、成績斐然，將獲任命為美國總統敘利亞問題特使，同時亦將出任美國總統伊拉克問題特使。隨着我們推進與敘利亞及伊拉克兩國政府的戰略合作，美國與兩國的關係亦持續深化！\n\n湯姆將繼續擔任駐土耳其大使，並在美國國務院的全力支持下開展工作。我們高度讚賞湯姆·巴拉克所作出的工作，也感謝他持續願意為我們的國家服務。\n\n感謝各位對此事的關注！\n\n總統 當勞·J·特朗普",
+    "content_ko": "저는 탁월한 성과를 보여준 현 미국의 튀르키예 주재 대사 톰 배럭(Tom Barrack)이 시리아 담당 대통령 특사로, 그리고 마찬가지로 이라크 담당 대통령 특사로 임명될 것임을 기쁘게 발표합니다. 우리가 시리아 및 이라크 정부와의 전략적 협력을 진전시키는 가운데, 미국과 양국 간 관계도 계속 확대되고 있습니다!\n\n톰은 계속해서 튀르키예 주재 대사직을 유지하며, 미국 국무부의 전폭적인 지원 아래 업무를 수행할 것입니다. 우리는 톰 배럭이 해온 일을 높이 평가하며, 계속해서 우리 국가를 위해 봉사하려는 그의 뜻에도 깊이 감사드립니다.\n\n이 사안에 관심을 가져주셔서 감사합니다!\n\n대통령 도널드 J. 트럼프"
+  },
   "https://truthsocial.com/@realDonaldTrump/116667457759700602": {
     "content_zh_cn": "Dhillon要求因涉嫌出席Fani Willis活动的法官回避审理佐治亚州选举诚信案：https://justthenews.com/government/courts-law/dhillon-moves-recuse-atlanta-judge-over-alleged-attendance-democratic-event",
     "content_zh_hk": "Dhillon要求因涉嫌出席Fani Willis活動的法官迴避審理佐治亞州選舉誠信案：https://justthenews.com/government/courts-law/dhillon-moves-recuse-atlanta-judge-over-alleged-attendance-democratic-event",
