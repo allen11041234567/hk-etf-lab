@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116670504302792097": {
+    "content_zh_cn": "独家——塞尔维亚总统亚历山大·武契奇：唐纳德·特朗普在塞尔维亚“远比”任何其他美国领导人“更受欢迎”，因为他“务实”“理性”：https://www.breitbart.com/politics/2026/05/31/exclusive-serbian-president-aleksandar-vucic-donald-trump-much-more-popular-in-serbia-than-any-other-u-s-leader-because-he-is-pragmatic-ration/",
+    "content_zh_hk": "獨家——塞爾維亞總統亞歷山大·武契奇：唐納德·特朗普在塞爾維亞「遠比」任何其他美國領袖「更受歡迎」，因為他「務實」「理性」：https://www.breitbart.com/politics/2026/05/31/exclusive-serbian-president-aleksandar-vucic-donald-trump-much-more-popular-in-serbia-than-any-other-u-s-leader-because-he-is-pragmatic-ration/",
+    "content_ko": "단독 — 세르비아 대통령 알렉산다르 부치치: 도널드 트럼프는 ‘실용적’이고 ‘이성적’이기 때문에 세르비아에서 다른 어떤 미국 지도자보다도 ‘훨씬 더 인기 있다’: https://www.breitbart.com/politics/2026/05/31/exclusive-serbian-president-aleksandar-vucic-donald-trump-much-more-popular-in-serbia-than-any-other-u-s-leader-because-he-is-pragmatic-ration/"
+  },
   "https://truthsocial.com/@realDonaldTrump/116670469893129623": {
     "content_zh_cn": "祝贺国会议员Gus Bilirakis，真是个很棒的人。他始终坚定支持MAGA。\n他的第一个孙辈出生了！",
     "content_zh_hk": "恭賀國會議員Gus Bilirakis，真係一位了不起的人物。他一直堅定支持MAGA。\n他的第一個孫輩出生了！",
