@@ -1,4 +1,14 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116667457759700602": {
+    "content_zh_cn": "Dhillon要求因涉嫌出席Fani Willis活动的法官回避审理佐治亚州选举诚信案：https://justthenews.com/government/courts-law/dhillon-moves-recuse-atlanta-judge-over-alleged-attendance-democratic-event",
+    "content_zh_hk": "Dhillon要求因涉嫌出席Fani Willis活動的法官迴避審理佐治亞州選舉誠信案：https://justthenews.com/government/courts-law/dhillon-moves-recuse-atlanta-judge-over-alleged-attendance-democratic-event",
+    "content_ko": "Dhillon은 Fani Willis 행사에 참석한 것으로 알려진 판사가 조지아주 선거 청렴성 사건에서 스스로 회피해야 한다고 요구: https://justthenews.com/government/courts-law/dhillon-moves-recuse-atlanta-judge-over-alleged-attendance-democratic-event"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116667455698157827": {
+    "content_zh_cn": "棉花优先于化学品：特朗普领导下的美国农业部，正如何让美国纺织业再次伟大：https://justthenews.com/government/white-house/cotton-over-chemicals-how-trumps-usda-making-americas-fabric-great-again",
+    "content_zh_hk": "棉花優先於化學品：特朗普領導下的美國農業部，正如何讓美國紡織業再次偉大：https://justthenews.com/government/white-house/cotton-over-chemicals-how-trumps-usda-making-americas-fabric-great-again",
+    "content_ko": "화학물질보다 면화: 트럼프 행정부의 농무부는 미국 섬유 산업을 다시 위대하게 만들고 있습니다: https://justthenews.com/government/white-house/cotton-over-chemicals-how-trumps-usda-making-americas-fabric-great-again"
+  },
   "https://truthsocial.com/@realDonaldTrump/116667326723211656": {
     "content_zh_cn": "我在沃尔特·里德军事医疗中心接受的体检结果刚刚公布，结果非常好。与其他美国总统不同——他们之中没有任何人参加过经认可的高难度认知测试——我拿到了30分满分（30分中的30分），这被认为是“极高智力”。那些“愚蠢民主党人”真的感到意外吗？\n\n事实上，这已经是我第四次参加这类测试，而且全部都是满分——总共120道题，我120题全对！能拿到满分的人非常罕见，尤其是连续四次做到这一点。所有竞选总统和副总统的人都应该被强制参加高难度认知测试。国会，还有那些“愚蠢民主党人”，都应该提出这样的要求！\n\n总统 唐纳德·J·特朗普",
     "content_zh_hk": "我在沃爾特·里德軍事醫療中心接受的體檢結果剛剛公布，結果非常好。與其他美國總統不同——他們之中沒有任何人參加過經認可的高難度認知測試——我拿到了30分滿分（30分中的30分），這被認為是「極高智力」。那些「愚蠢民主黨人」真的感到意外嗎？\n\n事實上，這已經是我第四次參加這類測試，而且全部都是滿分——總共120道題，我120題全對！能拿到滿分的人非常罕見，尤其是連續四次做到這一點。所有競選總統和副總統的人都應該被強制參加高難度認知測試。國會，還有那些「愚蠢民主黨人」，都應該提出這樣的要求！\n\n總統 唐納德·J·特朗普",
