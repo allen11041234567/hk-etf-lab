@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-01T20:19:07.882Z",
+  "fetchedAt": "2026-06-01T20:34:20.173Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
@@ -11,8 +11,8 @@
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-06-01T19:10:04.974Z",
       "created_at_text": "Jun 1, 2026, 7:10 PM",
-      "content": "Talks are continuing, at a rapid pace, with the Islamic Republic of Iran. Thank you for your attention to this matter! President DONALD J. TRUMP",
-      "content_html": "Talks are continuing, at a rapid pace, with the Islamic Republic of Iran. Thank you for your attention to this matter! President DONALD J. TRUMP",
+      "content": "",
+      "content_html": "",
       "media": [
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NTU1L2MwNDhlYzI3NzUzZTJkZTUuanBn",
@@ -22,9 +22,9 @@
       "favourites_count": 5498,
       "reblogs_count": 1218,
       "replies_count": 787,
-      "content_zh_cn": "Talks are continuing, at a rapid pace, with the Islamic Republic of Iran. Thank you for your attention to this matter! President DONALD J. TRUMP",
-      "content_zh_hk": "Talks are continuing, at a rapid pace, with the Islamic Republic of Iran. Thank you for your attention to this matter! President DONALD J. TRUMP",
-      "content_ko": "Talks are continuing, at a rapid pace, with the Islamic Republic of Iran. Thank you for your attention to this matter! President DONALD J. TRUMP",
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
       "source_hint": "stock.fengle.me"
     },
     {
