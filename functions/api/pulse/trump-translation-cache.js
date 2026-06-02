@@ -1,4 +1,19 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116678437693091447": {
+    "content_zh_cn": "古巴裔美国国会议员呼吁，对援助古巴的民主党人以叛国罪展开调查：https://justthenews.com/government/security/cuban-american-congresswoman-calls-democrats-aiding-cuba-be-investigated",
+    "content_zh_hk": "古巴裔美國國會議員呼籲，對援助古巴的民主黨人以叛國罪展開調查：https://justthenews.com/government/security/cuban-american-congresswoman-calls-democrats-aiding-cuba-be-investigated",
+    "content_ko": "쿠바계 미국인 연방하원의원이 쿠바를 지원한 민주당 인사들에 대해 반역죄 수사를 촉구: https://justthenews.com/government/security/cuban-american-congresswoman-calls-democrats-aiding-cuba-be-investigated"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116678436482500677": {
+    "content_zh_cn": "FBI和司法部（DOJ）对海湖庄园（Mar-a-Lago）搜查行动的担忧，进一步强化了佛州针对“反特朗普”‘大阴谋’的调查： https://justthenews.com/government/courts-law/fbi-and-doj-concerns-mar-lago-raid-bolster-florida-based-anti-trump-grand",
+    "content_zh_hk": "FBI及司法部（DOJ）對海湖莊園（Mar-a-Lago）搜查行動的憂慮，進一步加強了佛州針對「反特朗普」‘大陰謀’的調查： https://justthenews.com/government/courts-law/fbi-and-doj-concerns-mar-lago-raid-bolster-florida-based-anti-trump-grand",
+    "content_ko": "마러라고(Mar-a-Lago) 압수수색에 대한 FBI와 법무부(DOJ)의 우려가 플로리다주에서 진행 중인 반(反)트럼프 ‘거대 음모’ 조사에 힘을 실어주고 있다: https://justthenews.com/government/courts-law/fbi-and-doj-concerns-mar-lago-raid-bolster-florida-based-anti-trump-grand"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116678435123044195": {
+    "content_zh_cn": "迪隆要求回避一名法官，该法官据称曾出席与法妮·威利斯有关的一场活动，退出佐治亚州选举诚信案件：https://justthenews.com/government/courts-law/dhillon-moves-recuse-atlanta-judge-over-alleged-attendance-democratic-event",
+    "content_zh_hk": "迪隆要求一名法官回避審理佐治亞州選舉誠信案，原因是該法官據稱曾出席一場與法妮·威利斯有關的活動：https://justthenews.com/government/courts-law/dhillon-moves-recuse-atlanta-judge-over-alleged-attendance-democratic-event",
+    "content_ko": "딜런, 패니 윌리스 관련 행사에 참석한 것으로 알려진 판사에게 조지아주 선거 청렴성 사건에서 스스로 물러날 것을 요구: https://justthenews.com/government/courts-law/dhillon-moves-recuse-atlanta-judge-over-alleged-attendance-democratic-event"
+  },
   "https://truthsocial.com/@realDonaldTrump/116678327802401627": {
     "content_zh_cn": "棉花优先于化学品：特朗普领导下的美国农业部，正如何让“美国制造”纺织业再次伟大：https://justthenews.com/government/white-house/cotton-over-chemicals-how-trumps-usda-making-americas-fabric-great-again",
     "content_zh_hk": "棉花優先於化學品：特朗普領導下的美國農業部，正如何讓「美國製造」紡織業再次偉大：https://justthenews.com/government/white-house/cotton-over-chemicals-how-trumps-usda-making-americas-fabric-great-again",
