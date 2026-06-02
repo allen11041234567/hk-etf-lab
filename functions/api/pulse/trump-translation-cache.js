@@ -1,4 +1,19 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116677872982802868": {
+    "content_zh_cn": "https://www.thefp.com/p/iran-war-end-trump-peace-deal-israel",
+    "content_zh_hk": "https://www.thefp.com/p/iran-war-end-trump-peace-deal-israel",
+    "content_ko": "https://www.thefp.com/p/iran-war-end-trump-peace-deal-israel"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116677871435291930": {
+    "content_zh_cn": "没有阵亡将士纪念日，就不会有7月4日：特朗普在阿灵顿发表强有力讲话：https://redstate.com/bobhoge/2026/05/25/there-would-be-no-4th-of-july-without-memorial-day-trumps-powerful-arlington-message-n2202681",
+    "content_zh_hk": "沒有陣亡將士紀念日，就不會有7月4日：特朗普在阿靈頓發表強而有力的講話：https://redstate.com/bobhoge/2026/05/25/there-would-be-no-4th-of-july-without-memorial-day-trumps-powerful-arlington-message-n2202681",
+    "content_ko": "메모리얼 데이가 없었다면 7월 4일도 없었을 것: 트럼프의 강력한 알링턴 메시지: https://redstate.com/bobhoge/2026/05/25/there-would-be-no-4th-of-july-without-memorial-day-trumps-powerful-arlington-message-n2202681"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116677869773531192": {
+    "content_zh_cn": "皮特·赫格塞思在西点军校发表的反DEI演讲，堪称挽救美国人生命的范本：https://www.foxnews.com/opinion/pete-hegseths-anti-dei-speech-west-point-template-save-american-lives",
+    "content_zh_hk": "皮特·赫格塞思在西點軍校發表的反DEI演講，堪稱挽救美國人性命的範本：https://www.foxnews.com/opinion/pete-hegseths-anti-dei-speech-west-point-template-save-american-lives",
+    "content_ko": "피트 헤그세스의 웨스트포인트 반(反) DEI 연설은 미국인의 생명을 구할 본보기다: https://www.foxnews.com/opinion/pete-hegseths-anti-dei-speech-west-point-template-save-american-lives"
+  },
   "https://truthsocial.com/@realDonaldTrump/116677048828976704": {
     "content_zh_cn": "我今天与比比·内塔尼亚胡通了话，要求他不要对黎巴嫩贝鲁特发动大规模袭击。他让部队掉头了。谢谢你，比比！\n\n我还与真主党领导层的代表进行了通话，他们同意停止向以色列及其士兵开火。同样，以色列也同意停止向他们开火。\n\n让我们看看这能持续多久——希望会是永远！\n\n总统 唐纳德·J·特朗普",
     "content_zh_hk": "我今天與比比·內塔尼亞胡通了話，要求他不要對黎巴嫩貝魯特發動大規模襲擊。他讓部隊掉頭了。謝謝你，比比！\n\n我還與真主黨領導層的代表進行了通話，他們同意停止向以色列及其士兵開火。同樣，以色列也同意停止向他們開火。\n\n讓我們看看這能持續多久——希望會是永遠！\n\n總統 唐納德·J·特朗普",
