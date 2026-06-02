@@ -1,4 +1,24 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116678327802401627": {
+    "content_zh_cn": "棉花优先于化学品：特朗普领导下的美国农业部，正如何让“美国制造”纺织业再次伟大：https://justthenews.com/government/white-house/cotton-over-chemicals-how-trumps-usda-making-americas-fabric-great-again",
+    "content_zh_hk": "棉花優先於化學品：特朗普領導下的美國農業部，正如何讓「美國製造」紡織業再次偉大：https://justthenews.com/government/white-house/cotton-over-chemicals-how-trumps-usda-making-americas-fabric-great-again",
+    "content_ko": "화학보다 면화: 트럼프 행정부의 미 농무부는 어떻게 미국 섬유 산업을 다시 위대하게 만들고 있는가: https://justthenews.com/government/white-house/cotton-over-chemicals-how-trumps-usda-making-americas-fabric-great-again"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116678322907103561": {
+    "content_zh_cn": "特朗普认知评估拿下30分满分，体检显示其身体年龄比实际年龄年轻14岁：https://justthenews.com/government/white-house/trump-scores-30-out-30-cognitive-assessment-looks-14-years-younger-he",
+    "content_zh_hk": "特朗普認知評估取得30分滿分，體檢顯示其身體年齡較實際年齡年輕14歲：https://justthenews.com/government/white-house/trump-scores-30-out-30-cognitive-assessment-looks-14-years-younger-he",
+    "content_ko": "트럼프, 인지 평가 30점 만점 받아… 신체검사에선 실제 나이보다 14세 젊은 것으로 나타나: https://justthenews.com/government/white-house/trump-scores-30-out-30-cognitive-assessment-looks-14-years-younger-he"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116678321217174312": {
+    "content_zh_cn": "前情报官员举报称，亨特·拜登笔记本电脑联名信是一次“欺骗行动”，司法部被要求展开调查：https://justthenews.com/accountability/political-ethics/ex-obama-intel-official-referred-hunter-biden-letter-over-concerns",
+    "content_zh_hk": "前情報官員舉報稱，亨特·拜登筆記簿電腦聯名信是一次「欺騙行動」，司法部被要求展開調查：https://justthenews.com/accountability/political-ethics/ex-obama-intel-official-referred-hunter-biden-letter-over-concerns",
+    "content_ko": "전직 정보당국 고위 관계자가 헌터 바이든 노트북 관련 서한은 ‘기만 작전’이었다고 보고했으며, 법무부는 이에 대한 수사를 요청받았다: https://justthenews.com/accountability/political-ethics/ex-obama-intel-official-referred-hunter-biden-letter-over-concerns"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116678319670541251": {
+    "content_zh_cn": "美国环保署（EPA）负责人已提出刑事移送，指控民主党人在高额绿色能源补助中“以权谋私”：https://justthenews.com/accountability/waste-fraud-and-abuse/epa-boss-made-criminal-referrals-alleging-democrat-self",
+    "content_zh_hk": "美國環保署（EPA）負責人已作出刑事轉介，指控民主黨人在高額綠色能源補助中「以權謀私」：https://justthenews.com/accountability/waste-fraud-and-abuse/epa-boss-made-criminal-referrals-alleging-democrat-self",
+    "content_ko": "미국 환경보호청(EPA) 수장이 고액의 친환경 에너지 보조금과 관련한 민주당의 ‘사익 추구’ 의혹을 제기하며 형사 사건으로 이첩했습니다: https://justthenews.com/accountability/waste-fraud-and-abuse/epa-boss-made-criminal-referrals-alleging-democrat-self"
+  },
   "https://truthsocial.com/@realDonaldTrump/116678223440201502": {
     "content_zh_cn": "众议员阿什莉·欣森（Ashley Hinson）正在竞选爱荷华州联邦参议员。爱荷华州是我热爱的州，我曾在2016年、2020年和2024年三次在那里大获全胜。\n\n我非常了解阿什莉，她是个赢家！她是一位充满爱心的妻子，也是两名儿子的骄傲母亲。阿什莉非常出色，始终为爱荷华州兑现承诺，并将在美国参议院继续如此。她正努力创造就业、减税、推广由我们了不起的爱荷华州工人“美国制造”的产品和服务，支持我们伟大的农民和美国农业，推动创新，确保我们的边境安全，阻止移民犯罪、杀人犯和其他罪犯非法进入我们的国家，强化我们的军队/退伍军人体系，并捍卫始终处于围攻之下的《第二修正案》。\n\n阿什莉·欣森将成为一位杰出的参议员，她获得我完全、彻底的背书。投票日是6月2日，星期二。走出来，为阿什莉投票——她永远不会让你失望！\n\n在这里查找你的投票地点：https://swampthevoteusa.com/iowa-make-a-plan-to-vote/",
     "content_zh_hk": "眾議員阿什莉·欣森（Ashley Hinson）正在競選愛荷華州聯邦參議員。愛荷華州是我熱愛的州，我曾在2016年、2020年和2024年三次在那裏大勝。\n\n我非常了解阿什莉，她是個贏家！她是一位充滿愛心的妻子，也是兩名兒子的驕傲母親。阿什莉非常出色，始終為愛荷華州兌現承諾，並將在美國參議院繼續如此。她正努力創造就業、減稅、推廣由我們了不起的愛荷華州工人「美國製造」的產品和服務，支持我們偉大的農民和美國農業，推動創新，確保我們的邊境安全，阻止移民犯罪、殺人犯和其他罪犯非法進入我們的國家，強化我們的軍隊／退伍軍人體系，並捍衞始終處於圍攻之下的《第二修正案》。\n\n阿什莉·欣森將成為一位傑出的參議員，她獲得我完全、徹底的背書。投票日是6月2日，星期二。走出來，為阿什莉投票——她永遠不會讓你失望！\n\n在這裏查找你的投票地點：https://swampthevoteusa.com/iowa-make-a-plan-to-vote/",
