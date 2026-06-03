@@ -45,7 +45,12 @@
     .field { margin-top:14px; }
     .field-label { display:block; margin-bottom:7px; color:var(--muted); font-size:12px; }
     .control, select.control { width:100%; min-height:56px; border-radius:18px; border:1px solid var(--line-strong); background:rgba(255,255,255,0.04); color:var(--text); padding:0 16px; font-size:18px; font-weight:700; outline:none; }
-    select.control, select.control option { color:#111827; }
+    select.control {
+      color:#111827;
+      background:#f8fafc;
+      -webkit-text-fill-color:#111827;
+    }
+    select.control option { color:#111827; background:#ffffff; }
     input.control { font-size:24px; letter-spacing:-.02em; }
     .helper { margin-top:7px; color:var(--muted); font-size:11px; line-height:1.7; }
     .formula { margin-top:14px; padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.025); border:1px solid rgba(255,255,255,0.06); color:var(--muted); font-size:12px; line-height:1.72; }
