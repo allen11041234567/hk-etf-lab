@@ -44,6 +44,15 @@
     .panel { padding:20px; }
     .field { margin-top:14px; }
     .field-label { display:block; margin-bottom:7px; color:var(--muted); font-size:12px; }
+    .mode-switch { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; margin-top:14px; }
+    .mode-btn {
+      min-height:44px; border-radius:14px; border:1px solid rgba(255,255,255,0.08); background:rgba(255,255,255,0.03);
+      color:var(--text); font-size:13px; font-weight:700; cursor:pointer;
+    }
+    .mode-btn.active { color:#1a1712; background:linear-gradient(135deg,var(--gold-strong),var(--accent)); border-color:transparent; }
+    .smart-box { display:none; margin-top:16px; }
+    .smart-box.show { display:block; }
+    .manual-box.hide { display:none; }
     .control, select.control { width:100%; min-height:56px; border-radius:18px; border:1px solid var(--line-strong); background:rgba(255,255,255,0.04); color:var(--text); padding:0 16px; font-size:18px; font-weight:700; outline:none; }
     select.control {
       color:var(--text);
@@ -71,6 +80,10 @@
     .savings-title { color:var(--gold-strong); font-size:13px; letter-spacing:.08em; text-transform:uppercase; }
     .savings-value { margin-top:8px; font-size:32px; font-weight:700; letter-spacing:-.02em; font-family:var(--font-display); }
     .savings-sub { margin-top:8px; color:var(--muted); font-size:13px; line-height:1.8; }
+    .recommend-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:12px; margin-top:14px; }
+    .recommend-card { padding:14px; border-radius:16px; border:1px solid rgba(255,255,255,0.07); background:rgba(255,255,255,0.035); }
+    .recommend-list { margin-top:10px; color:var(--text); font-size:14px; line-height:1.8; }
+    .recommend-reason { margin-top:10px; color:var(--muted); font-size:12px; line-height:1.7; }
     .result-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:12px; margin-top:16px; }
     .result-card { padding:14px; border-radius:16px; border:1px solid rgba(255,255,255,0.07); background:rgba(255,255,255,0.035); }
     .result-label { color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.08em; }
@@ -86,7 +99,7 @@
       .wrap { width:calc(100vw - 12px); padding:8px 0 22px; } .hero { gap:12px; margin-bottom:12px; } .hero, .panel { border-radius:18px; padding:16px; }
       h1 { margin:14px 0 10px; font-size:24px; } .hero-sub { font-size:13px; line-height:1.68; } .hero-note, .scope-banner, .subline, .section-desc, .result-sub, .helper, .note-item { font-size:11px; line-height:1.65; }
       .section-head { flex-direction:column; align-items:flex-start; gap:8px; }
-      .section-title { font-size:18px; } .hero-metrics, .result-grid, .item-controls { grid-template-columns:1fr; } .control, select.control { min-height:50px; border-radius:14px; padding:0 13px; font-size:16px; }
+      .section-title { font-size:18px; } .hero-metrics, .recommend-grid, .result-grid, .item-controls, .mode-switch { grid-template-columns:1fr; } .control, select.control { min-height:50px; border-radius:14px; padding:0 13px; font-size:16px; }
       input.control { font-size:20px; } .value-xl { font-size:24px; } .result-value, .savings-value { font-size:22px; } .btn-mini, .btn { width:100%; } .item-top { align-items:flex-start; flex-direction:column; } .item-top .btn-mini { margin-top:6px; } .actions { flex-direction:column; }
     }
     @media (max-width: 480px) { .wrap { width:calc(100vw - 10px); padding:6px 0 18px; } .hero, .panel { padding:14px; border-radius:16px; } .hero-metrics { gap:10px; margin-top:12px; } .result-grid, .items-list { gap:10px; } .item-row, .result-card, .savings-hero { padding:12px; border-radius:14px; } h1 { font-size:21px; } .hero-sub { font-size:12px; line-height:1.65; } .value-xl { font-size:22px; } .result-value, .savings-value { font-size:19px; } .item-title { font-size:14px; } .pill { width:100%; justify-content:center; } .field { margin-top:12px; } }
@@ -112,12 +125,37 @@
       <div class="section-head"><div><div class="section-title">Silverpath 快速报价</div><div class="section-desc">组合规格、汇总估算，并对比优先金店参考价。</div></div><div class="pill"><span class="dot"></span><span id="live-status">等待实时金价接口</span></div></div>
       <div class="calculator">
         <div class="panel">
-          <div class="label">添加规格与数量</div>
-          <div class="field"><label class="field-label" for="spec">规格</label><select id="spec" class="control"><option value="oz1">1 oz 金块</option><option value="g50">50 g 金块</option><option value="g100">100 g 金块</option><option value="g200">200 g 金块</option></select></div>
-          <div class="field"><label class="field-label" for="qty">块数</label><input id="qty" class="control" type="number" min="1" step="1" value="1" /><div class="helper">总工费按总块数统一计算，封顶 1000 USD。</div></div>
-          <div class="field"><button class="btn-mini" id="add-item" type="button">加入本次报价</button></div>
-          <div class="items-list" id="items-list"></div>
-          <div class="empty-note" id="empty-note">默认已加入 1 行报价项，可继续叠加其他规格。</div>
+          <div class="label">计算方式</div>
+          <div class="mode-switch">
+            <button class="mode-btn active" id="mode-manual" type="button">手动配置</button>
+            <button class="mode-btn" id="mode-smart" type="button">智能推荐</button>
+          </div>
+
+          <div class="smart-box" id="smart-box">
+            <div class="field"><label class="field-label" for="budget">预算金额（HKD）</label><input id="budget" class="control" type="number" min="0" step="1000" value="500000" /><div class="helper">输入预算后，系统会在 1oz / 50g / 100g / 200g 中穷举可行组合，优先给出总克重更高、块数更少的方案。</div></div>
+            <div class="recommend-grid">
+              <div class="recommend-card">
+                <div class="result-label">推荐组合</div>
+                <div class="recommend-list" id="smart-mix">--</div>
+                <div class="recommend-reason" id="smart-reason">等待参考金价后计算。</div>
+              </div>
+              <div class="recommend-card">
+                <div class="result-label">推荐结果</div>
+                <div class="recommend-list" id="smart-summary">--</div>
+                <div class="recommend-reason">推荐基于参考金价估算，实际交易报价以现场交易为准。</div>
+              </div>
+            </div>
+            <div class="actions"><button class="btn primary" id="apply-smart" type="button">一键带入手动配置</button></div>
+          </div>
+
+          <div class="manual-box" id="manual-box">
+            <div class="label" style="margin-top:16px;">添加规格与数量</div>
+            <div class="field"><label class="field-label" for="spec">规格</label><select id="spec" class="control"><option value="oz1">1 oz 金块</option><option value="g50">50 g 金块</option><option value="g100">100 g 金块</option><option value="g200">200 g 金块</option></select></div>
+            <div class="field"><label class="field-label" for="qty">块数</label><input id="qty" class="control" type="number" min="1" step="1" value="1" /><div class="helper">总工费按总块数统一计算，封顶 1000 USD。</div></div>
+            <div class="field"><button class="btn-mini" id="add-item" type="button">加入本次报价</button></div>
+            <div class="items-list" id="items-list"></div>
+            <div class="empty-note" id="empty-note">默认已加入 1 行报价项，可继续叠加其他规格。</div>
+          </div>
           <div class="formula">按参考金价估算，总工费按总块数统一封顶；金店对比按相同总克重折算参考。</div>
         </div>
 
@@ -189,8 +227,76 @@
       top.textContent = priority.savingHkd >= 0 ? `HK$${money(priority.savingHkd)}` : `-HK$${money(Math.abs(priority.savingHkd))}`;
       topSub.textContent = `优先按 ${priority.shopName} 参考卖出价 HK$${money(priority.sellHkdTael, 0)} / 両 折算相同总克重。页面价格均为参考金价，实际交易报价以现场交易为准。`;
     }
+    function calcComboPrice(yongfengUsdOz, specGrams, quantity) {
+      const unitOz = specGrams / CONFIG.gramsPerOunce;
+      const unitMetalUsd = yongfengUsdOz * unitOz;
+      return unitMetalUsd * quantity;
+    }
+    function findBestRecommendation(budgetHkd) {
+      if (!livePayload?.ok || !Number.isFinite(livePayload.yongfeng_usd_oz) || !Number.isFinite(budgetHkd) || budgetHkd <= 0) return null;
+      const yongfengUsdOz = Number(livePayload.yongfeng_usd_oz);
+      const specs = Object.values(CONFIG.specs);
+      let best = null;
+      const maxBars = 20;
+      const maxPerSpec = {};
+      for (const spec of specs) {
+        const oneBarHkd = (calcComboPrice(yongfengUsdOz, spec.grams, 1) + CONFIG.feePerBarUsd) * CONFIG.fxUsdHkd;
+        maxPerSpec[spec.key] = Math.max(0, Math.min(maxBars, Math.floor(budgetHkd / oneBarHkd) + 1));
+      }
+      for (let a = 0; a <= maxPerSpec.oz1; a++) {
+        for (let b = 0; b <= maxPerSpec.g50; b++) {
+          for (let c = 0; c <= maxPerSpec.g100; c++) {
+            for (let d = 0; d <= maxPerSpec.g200; d++) {
+              const totalQty = a + b + c + d;
+              if (totalQty <= 0 || totalQty > maxBars) continue;
+              const totalGrams = a * CONFIG.specs.oz1.grams + b * 50 + c * 100 + d * 200;
+              const metalUsd = calcComboPrice(yongfengUsdOz, CONFIG.specs.oz1.grams, a)
+                + calcComboPrice(yongfengUsdOz, 50, b)
+                + calcComboPrice(yongfengUsdOz, 100, c)
+                + calcComboPrice(yongfengUsdOz, 200, d);
+              const feeUsd = Math.min(totalQty * CONFIG.feePerBarUsd, CONFIG.feeCapUsd);
+              const totalHkd = (metalUsd + feeUsd) * CONFIG.fxUsdHkd;
+              if (totalHkd > budgetHkd) continue;
+              const leftover = budgetHkd - totalHkd;
+              const candidate = { a, b, c, d, totalQty, totalGrams, metalUsd, feeUsd, totalHkd, leftover };
+              if (!best
+                || candidate.totalGrams > best.totalGrams
+                || (candidate.totalGrams === best.totalGrams && candidate.totalQty < best.totalQty)
+                || (candidate.totalGrams === best.totalGrams && candidate.totalQty === best.totalQty && candidate.leftover < best.leftover)) {
+                best = candidate;
+              }
+            }
+          }
+        }
+      }
+      return best;
+    }
+    function renderSmartRecommendation() {
+      const budget = Number(document.getElementById('budget')?.value || 0);
+      const best = findBestRecommendation(budget);
+      const mixEl = document.getElementById('smart-mix');
+      const summaryEl = document.getElementById('smart-summary');
+      const reasonEl = document.getElementById('smart-reason');
+      if (!best) {
+        mixEl.textContent = '--';
+        summaryEl.textContent = '--';
+        reasonEl.textContent = '等待输入预算并取得参考金价后计算。';
+        document.getElementById('apply-smart').disabled = true;
+        return;
+      }
+      const parts = [];
+      if (best.a) parts.push(`1oz × ${best.a}`);
+      if (best.b) parts.push(`50g × ${best.b}`);
+      if (best.c) parts.push(`100g × ${best.c}`);
+      if (best.d) parts.push(`200g × ${best.d}`);
+      mixEl.textContent = parts.join('，');
+      summaryEl.innerHTML = `总块数 ${best.totalQty}<br>总重量 ${money(best.totalGrams, 2)} g<br>预计总额 HK$${money(best.totalHkd)}<br>剩余预算 HK$${money(best.leftover)}`;
+      reasonEl.textContent = '当前预算下，该组合优先实现更高总克重；若总克重相同，则优先块数更少、剩余预算更少。';
+      document.getElementById('apply-smart').disabled = false;
+      document.getElementById('apply-smart').dataset.reco = JSON.stringify(best);
+    }
     function renderSummary() {
-      const summary = calcQuoteSummary(); renderItems(summary); if (!summary) return;
+      const summary = calcQuoteSummary(); renderItems(summary); renderSmartRecommendation(); if (!summary) return;
       document.getElementById('total-weight-oz').textContent = `${money(summary.totalOz, 4)} oz`; document.getElementById('total-weight-g').textContent = `约 ${money(summary.totalGrams, 2)} g`; document.getElementById('total-qty').textContent = `${summary.totalQty}`; document.getElementById('metal-total-usd').textContent = `US$${money(summary.metalTotalUsd)}`; document.getElementById('metal-total-hkd').textContent = `约 HK$${money(summary.metalTotalHkd)}`; document.getElementById('fee-usd').textContent = `US$${money(summary.feeUsd)}`; document.getElementById('fee-hkd').textContent = `约 HK$${money(summary.feeHkd)}`; document.getElementById('total-usd').textContent = `US$${money(summary.totalUsd)}`; document.getElementById('total-hkd').textContent = `约 HK$${money(summary.totalHkd)}`; document.getElementById('headline-total').textContent = `HK$${money(summary.totalHkd)}`; document.getElementById('headline-total-sub').textContent = `约合 US$${money(summary.totalUsd)}，按参考金价估算，实际交易报价以现场交易为准。`; document.getElementById('fee-banner').classList.toggle('show', summary.feeCapped); renderCompare(summary); persistReservationDraft(summary);
     }
     function renderLive(payload) { const status = document.getElementById('live-status'); if (!payload?.ok || !Number.isFinite(payload.yongfeng_usd_oz)) { status.textContent='实时金价接口暂不可用'; status.parentElement.classList.add('status-bad'); document.getElementById('hero-price').textContent='--'; document.getElementById('hero-updated').textContent = payload?.error || '请稍后重试'; return; } status.textContent='实时金价接口已连接（30 秒刷新检查）'; status.parentElement.classList.remove('status-bad'); livePayload = payload; document.getElementById('hero-price').textContent = `US$${money(payload.yongfeng_usd_oz)}`; document.getElementById('hero-updated').textContent = `最近更新：${payload.updated_at || '--'}，汇率按 7.85 参考换算`; renderSummary(); }
@@ -198,6 +304,41 @@
     async function loadLive() { try { const resp = await fetch(CONFIG.liveApi, { headers: { accept:'application/json' } }); const payload = await resp.json(); renderLive(payload); } catch (error) { renderLive({ ok:false, error:error.message || String(error) }); } }
     async function loadJewellers() { try { const resp = await fetch(CONFIG.jewellersApi, { headers: { accept:'application/json' } }); const payload = await resp.json(); renderJewellers(payload); } catch (error) { renderJewellers({ ok:false, error:error.message || String(error) }); } }
     function addItem() { quoteItems.push({ id:`item-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`, specKey:document.getElementById('spec').value, quantity:getDraftQty() }); renderSummary(); }
+    function setMode(mode) {
+      const manual = document.getElementById('manual-box');
+      const smart = document.getElementById('smart-box');
+      const bManual = document.getElementById('mode-manual');
+      const bSmart = document.getElementById('mode-smart');
+      if (mode === 'smart') {
+        smart.classList.add('show');
+        manual.classList.add('hide');
+        bSmart.classList.add('active');
+        bManual.classList.remove('active');
+      } else {
+        smart.classList.remove('show');
+        manual.classList.remove('hide');
+        bManual.classList.add('active');
+        bSmart.classList.remove('active');
+      }
+    }
+    document.getElementById('mode-manual').addEventListener('click', () => setMode('manual'));
+    document.getElementById('mode-smart').addEventListener('click', () => setMode('smart'));
+    document.getElementById('budget').addEventListener('input', renderSmartRecommendation);
+    document.getElementById('apply-smart').addEventListener('click', () => {
+      const raw = document.getElementById('apply-smart').dataset.reco;
+      if (!raw) return;
+      const best = JSON.parse(raw);
+      const items = [];
+      if (best.a) items.push({ id:`item-${Date.now()}-a`, specKey:'oz1', quantity:best.a });
+      if (best.b) items.push({ id:`item-${Date.now()}-b`, specKey:'g50', quantity:best.b });
+      if (best.c) items.push({ id:`item-${Date.now()}-c`, specKey:'g100', quantity:best.c });
+      if (best.d) items.push({ id:`item-${Date.now()}-d`, specKey:'g200', quantity:best.d });
+      if (items.length) {
+        quoteItems = items;
+        setMode('manual');
+        renderSummary();
+      }
+    });
     document.getElementById('add-item').addEventListener('click', addItem);
     document.getElementById('items-list').addEventListener('input', (event) => { const specId = event.target.dataset.specId; const qtyId = event.target.dataset.qtyId; if (specId) { const item = quoteItems.find((it) => it.id === specId); if (item) item.specKey = event.target.value; renderSummary(); } if (qtyId) { const item = quoteItems.find((it) => it.id === qtyId); if (item) { const raw = Number(event.target.value || 1); item.quantity = Number.isFinite(raw) && raw >= 1 ? Math.floor(raw) : 1; } renderSummary(); } });
     document.getElementById('items-list').addEventListener('click', (event) => { const removeId = event.target.dataset.removeId; if (!removeId) return; if (quoteItems.length <= 1) return; quoteItems = quoteItems.filter((it) => it.id !== removeId); renderSummary(); });
