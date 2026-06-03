@@ -1,4 +1,14 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116683918342984217": {
+    "content_zh_cn": "EPA负责人就利润丰厚的绿色能源拨款中民主党人“以权谋私”的问题提出刑事移送：https://justthenews.com/accountability/waste-fraud-and-abuse/epa-boss-made-criminal-referrals-alleging-democrat-self",
+    "content_zh_hk": "EPA負責人就利潤豐厚的綠色能源撥款中民主黨人「以權謀私」的問題提出刑事移送：https://justthenews.com/accountability/waste-fraud-and-abuse/epa-boss-made-criminal-referrals-alleging-democrat-self",
+    "content_ko": "EPA 수장이 수익성이 큰 친환경 에너지 보조금과 관련해 민주당의 ‘사익 추구’를 주장하며 형사 사건 이첩을 진행: https://justthenews.com/accountability/waste-fraud-and-abuse/epa-boss-made-criminal-referrals-alleging-democrat-self"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116683914784085683": {
+    "content_zh_cn": "最高法院批准阿拉巴马州在今年秋季使用有利于共和党的国会选区划分图：https://justthenews.com/politics-policy/elections/supreme-court-clears-alabama-use-gop-friendly-congressional-map-fall",
+    "content_zh_hk": "最高法院批准阿拉巴馬州於今年秋季使用有利共和黨的國會選區劃分地圖：https://justthenews.com/politics-policy/elections/supreme-court-clears-alabama-use-gop-friendly-congressional-map-fall",
+    "content_ko": "연방대법원, 앨라배마주가 올가을 공화당에 유리한 연방하원 선거구 지도를 사용할 수 있도록 허용: https://justthenews.com/politics-policy/elections/supreme-court-clears-alabama-use-gop-friendly-congressional-map-fall"
+  },
   "https://truthsocial.com/@realDonaldTrump/116683400326307426": {
     "content_zh_cn": "我非常荣幸背书“美国优先”爱国者阿德里安娜·古斯曼·弗拉利克（Adriana Guzmán Fralick）竞选美丽的内华达州下一任总检察长。阿德里安娜获得了内华达众多最杰出的MAGA斗士的强力支持，其中包括我的朋友、州长乔·隆巴多，以及其他许多人！我一直热爱内华达，并在2024年大选中大胜该州。我的“不给小费征税”强硬政策已被证明极受欢迎。民主党人想要的恰恰相反，而且会为此竭力争取，但他们永远无法击败我，或我们！\n\n作为内华达州道德委员会法律顾问、公用事业委员会副总法律顾问，以及内华达州博彩管制委员会和内华达州博彩委员会执行秘书，阿德里安娜已经证明，她具备为她所在这个伟大州和国家的杰出人民交出强劲成果所需的勇气与智慧。作为你们的下一任总检察长，阿德里安娜将继续不懈奋战，确保法律与秩序，声援我们的执法人员和急救人员，支持我们的军队/退伍军人，维护选举安全，确保边境安全，制止移民犯罪，捍卫我们的宪法，并保护我们始终受到围攻的《第二修正案》。\n\n阿德里安娜·古斯曼·弗拉利克获得我完全且彻底的背书，竞选内华达州下一任总检察长——她绝不会让你们失望！",
     "content_zh_hk": "我非常榮幸背書「美國優先」愛國者阿德里安娜·古斯曼·弗拉利克（Adriana Guzmán Fralick）競選美麗的內華達州下一任總檢察長。阿德里安娜獲得了內華達眾多最傑出的MAGA鬥士的強力支持，其中包括我的朋友、州長喬·隆巴多，以及其他許多人！我一直熱愛內華達，並在2024年大選中大勝該州。我的「小費免稅」強硬政策已被證明極受歡迎。民主黨人想要的恰恰相反，而且會為此竭力爭取，但他們永遠無法擊敗我，或我們！\n\n作為內華達州道德委員會法律顧問、公用事業委員會副總法律顧問，以及內華達州博彩管制委員會和內華達州博彩委員會執行秘書，阿德里安娜已經證明，她具備為她所在這個偉大州和國家的傑出人民交出強勁成果所需的勇氣與智慧。作為你們的下一任總檢察長，阿德里安娜將繼續不懈奮戰，確保法律與秩序，聲援我們的執法人員和急救人員，支持我們的軍隊／退伍軍人，維護選舉安全，確保邊境安全，制止移民犯罪，捍衛我們的憲法，並保護我們始終受到圍攻的《第二修正案》。\n\n阿德里安娜·古斯曼·弗拉利克獲得我完全且徹底的背書，競選內華達州下一任總檢察長——她絕不會讓你們失望！",
