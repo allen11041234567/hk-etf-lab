@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex,nofollow,noarchive" />
-  <title>QC 购买计算器</title>
+  <title>Silverpath 购买计算器</title>
   <style>
     :root {
       --bg:#0d1015; --bg-soft:#141923; --card:rgba(255,255,255,0.05); --card-strong:rgba(255,255,255,0.08);
@@ -45,6 +45,7 @@
     .field { margin-top:14px; }
     .field-label { display:block; margin-bottom:7px; color:var(--muted); font-size:12px; }
     .control, select.control { width:100%; min-height:56px; border-radius:18px; border:1px solid var(--line-strong); background:rgba(255,255,255,0.04); color:var(--text); padding:0 16px; font-size:18px; font-weight:700; outline:none; }
+    select.control, select.control option { color:#111827; }
     input.control { font-size:24px; letter-spacing:-.02em; }
     .helper { margin-top:7px; color:var(--muted); font-size:11px; line-height:1.7; }
     .formula { margin-top:14px; padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.025); border:1px solid rgba(255,255,255,0.06); color:var(--muted); font-size:12px; line-height:1.72; }
@@ -90,8 +91,8 @@
   <div class="wrap">
     <section class="hero">
       <div>
-        <div class="eyebrow">QC Gold Calculator</div>
-        <h1>QC 购买计算器</h1>
+        <div class="eyebrow">Silverpath Gold Calculator</div>
+        <h1>Silverpath 购买计算器</h1>
         <div class="hero-sub">以美元为主计价，参考永丰参考金价（USD/oz），统一按每块 100 美元收取全额加工费，总工费封顶 1000 美元。</div>
         <div class="hero-note">支持 1oz、50g、100g、200g 组合报价，港币仅作参考换算。</div>
         <div class="scope-banner">涉及金价的显示与测算，均适用于 <b>非品牌金</b>。如为贺利氏等品牌金，请单独询价，勿直接套用本页结果。</div>
@@ -103,7 +104,7 @@
     </section>
 
     <section class="section">
-      <div class="section-head"><div><div class="section-title">QC 快速报价</div><div class="section-desc">组合规格、汇总估算，并对比优先金店参考价。</div></div><div class="pill"><span class="dot"></span><span id="live-status">等待实时金价接口</span></div></div>
+      <div class="section-head"><div><div class="section-title">Silverpath 快速报价</div><div class="section-desc">组合规格、汇总估算，并对比优先金店参考价。</div></div><div class="pill"><span class="dot"></span><span id="live-status">等待实时金价接口</span></div></div>
       <div class="calculator">
         <div class="panel">
           <div class="label">添加规格与数量</div>
@@ -118,15 +119,15 @@
         <div class="panel">
           <div class="label">汇总报价结果</div>
           <div class="hero-metrics">
-            <div class="savings-hero"><div class="savings-title">QC 订单总额</div><div class="savings-value" id="headline-total">--</div><div class="savings-sub" id="headline-total-sub">按参考金价估算，实际交易报价以现场交易为准。</div></div>
-            <div class="savings-hero"><div class="savings-title">相较周大福等金店，QC 预计可节约</div><div class="savings-value" id="savings-top">--</div><div class="savings-sub" id="savings-top-sub">等待参考金价与金店参考价返回。</div></div>
+            <div class="savings-hero"><div class="savings-title">Silverpath 订单总额</div><div class="savings-value" id="headline-total">--</div><div class="savings-sub" id="headline-total-sub">按参考金价估算，实际交易报价以现场交易为准。</div></div>
+            <div class="savings-hero"><div class="savings-title">相较周大福等金店，Silverpath 预计可节约</div><div class="savings-value" id="savings-top">--</div><div class="savings-sub" id="savings-top-sub">等待参考金价与金店参考价返回。</div></div>
           </div>
           <div class="result-grid">
             <div class="result-card"><div class="result-label">总重量</div><div class="result-value" id="total-weight-oz">--</div><div class="result-sub" id="total-weight-g">--</div></div>
             <div class="result-card"><div class="result-label">总块数</div><div class="result-value" id="total-qty">--</div><div class="result-sub">全部规格合计</div></div>
             <div class="result-card"><div class="result-label">金料总额</div><div class="result-value" id="metal-total-usd">--</div><div class="result-sub" id="metal-total-hkd">--</div></div>
             <div class="result-card"><div class="result-label">总工费</div><div class="result-value" id="fee-usd">--</div><div class="result-sub" id="fee-hkd">--</div></div>
-            <div class="result-card" style="grid-column:1 / -1;"><div class="result-label">QC 订单总额</div><div class="result-value" id="total-usd">--</div><div class="result-sub" id="total-hkd">--</div></div>
+            <div class="result-card" style="grid-column:1 / -1;"><div class="result-label">Silverpath 订单总额</div><div class="result-value" id="total-usd">--</div><div class="result-sub" id="total-hkd">--</div></div>
           </div>
           <div class="fee-banner" id="fee-banner">工费已封顶：当前总工费按 US$1,000 计算。</div>
           <div class="actions">
