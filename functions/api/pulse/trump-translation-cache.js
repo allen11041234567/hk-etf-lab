@@ -1,8 +1,23 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116693351819812143": {
+    "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116693349899092060",
+    "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116693349899092060",
+    "content_ko": "리트윗: https://truthsocial.com/users/realDonaldTrump/statuses/116693349899092060"
+  },
   "https://truthsocial.com/@realDonaldTrump/116693346120029554": {
     "content_zh_cn": "我认为，我们的选举是全世界、任何国家中最不诚实的选举！\n总统 唐纳德·J·特朗普",
     "content_zh_hk": "我認為，我們的選舉是全世界、任何國家中最不誠實的選舉！\n總統 唐納德·J·特朗普",
     "content_ko": "나는 우리가 세계 어느 나라와 비교해도 가장 부정직한 선거를 치르고 있다고 믿는다!\n대통령 도널드 J. 트럼프"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116693209154035780": {
+    "content_zh_cn": "转发 @realDonaldTrump\n《拯救美国法案》！\n1. 所有选民都必须出示带照片的身份证件（身份证明！）。\n2. 所有选民都必须出示公民身份证明。\n3. 不允许邮寄选票（除非因疾病、残障、服役或出行！）。\n4. 不允许男性参加女子体育项目。\n5. 不允许对我们的孩子实施变性 mutilization 手术。",
+    "content_zh_hk": "轉發 @realDonaldTrump\n《拯救美國法案》！\n1. 所有選民都必須出示附照片的身份證明文件（身份證明！）。\n2. 所有選民都必須出示公民身份證明。\n3. 不允許郵寄選票（除非因疾病、殘障、服役或外遊！）。\n4. 不允許男性參與女子體育項目。\n5. 不允許對我們的孩子進行變性 mutilization 手術。",
+    "content_ko": "리트윗 @realDonaldTrump\n《미국 구하기 법안》!\n1. 모든 유권자는 사진이 부착된 신분증을 제시해야 합니다(신원 확인!).\n2. 모든 유권자는 시민권 증빙을 제시해야 합니다.\n3. 우편투표 금지(질병, 장애, 군 복무 또는 여행의 경우는 예외!).\n4. 남성의 여성 스포츠 참가 금지.\n5. 우리 아이들에게 성전환 mutilization 수술 금지."
+  },
+  "https://truthsocial.com/@realDonaldTrump/116693209011034471": {
+    "content_zh_cn": "RT @realDonaldTrump 看看加利福尼亚正在发生的事情，民主党这帮“蠢货”就在我们眼皮底下窃取选票。我希望共和党人都在看着，这样他们才能最终通过《拯救美国法案》！\n\n总统 唐纳德·J·特朗普",
+    "content_zh_hk": "RT @realDonaldTrump 睇下加州正在發生嘅事，民主黨呢班「蠢蛋」就喺我哋眼皮底下偷走選票。我希望共和黨人都留意住，咁佢哋先至可以最終通過《拯救美國法案》！\n\n總統 唐納德·J·特朗普",
+    "content_ko": "RT @realDonaldTrump 캘리포니아에서 무슨 일이 벌어지고 있는지 보라. 민주당의 이 바보들은 바로 우리 눈앞에서 표를 훔치고 있다. 공화당이 이를 지켜보고 있기를 바란다. 그래야 마침내 THE SAVE AMERICA ACT를 통과시킬 수 있을 것이다!\n\n대통령 도널드 J. 트럼프"
   },
   "https://truthsocial.com/@realDonaldTrump/116693194082109107": {
     "content_zh_cn": "这座喷泉于100多年前——1912年——落成启用；在2007年停止运转后，奥巴马和拜登任其进一步破败失修，因此要让喷泉恢复功能，需要进行大量修复工作。\n\n下面第一张照片，是哥伦布喷泉在拜登任内遭到蓄意破坏后的样子。\n\n其他照片展示的是它如今在“特朗普”治下的样子。来自意大利的卡拉拉大理石洁净如新，看起来仿佛刚刚开采出来。米开朗基罗的《大卫》雕像——可谓世界上最著名的大理石雕像——就是用卡拉拉大理石制成的。",
