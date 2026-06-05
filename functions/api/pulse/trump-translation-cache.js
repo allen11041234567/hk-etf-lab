@@ -1,4 +1,14 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116698961983538347": {
+    "content_zh_cn": "转发： https://truthsocial.com/users/realDonaldTrump/statuses/116698960799135985",
+    "content_zh_hk": "轉發： https://truthsocial.com/users/realDonaldTrump/statuses/116698960799135985",
+    "content_ko": "재게시: https://truthsocial.com/users/realDonaldTrump/statuses/116698960799135985"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116698960799135985": {
+    "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116698954650603382",
+    "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116698954650603382",
+    "content_ko": "리트윗: https://truthsocial.com/users/realDonaldTrump/statuses/116698954650603382"
+  },
   "https://truthsocial.com/@realDonaldTrump/116698625289241287": {
     "content_zh_cn": "非常令人印象深刻。为你感到骄傲！总统DJT",
     "content_zh_hk": "非常令人印象深刻。為你感到驕傲！總統DJT",
