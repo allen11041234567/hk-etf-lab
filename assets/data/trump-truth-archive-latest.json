@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-05T19:04:21.565Z",
+  "fetchedAt": "2026-06-05T19:18:26.955Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
@@ -26,9 +26,9 @@
       "favourites_count": 1317,
       "reblogs_count": 345,
       "replies_count": 158,
-      "content_zh_cn": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116698960799135985",
-      "content_zh_hk": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116698960799135985",
-      "content_ko": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116698960799135985",
+      "content_zh_cn": "转发： https://truthsocial.com/users/realDonaldTrump/statuses/116698960799135985",
+      "content_zh_hk": "轉發： https://truthsocial.com/users/realDonaldTrump/statuses/116698960799135985",
+      "content_ko": "재게시: https://truthsocial.com/users/realDonaldTrump/statuses/116698960799135985",
       "source_hint": "stock.fengle.me"
     },
     {
@@ -48,9 +48,9 @@
       "favourites_count": 1158,
       "reblogs_count": 265,
       "replies_count": 83,
-      "content_zh_cn": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116698954650603382",
-      "content_zh_hk": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116698954650603382",
-      "content_ko": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116698954650603382",
+      "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116698954650603382",
+      "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116698954650603382",
+      "content_ko": "리트윗: https://truthsocial.com/users/realDonaldTrump/statuses/116698954650603382",
       "source_hint": "stock.fengle.me"
     },
     {
