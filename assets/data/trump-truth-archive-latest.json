@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-05T22:04:07.437Z",
+  "fetchedAt": "2026-06-05T22:17:39.773Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
@@ -170,6 +170,10 @@
       "content": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116698624343659358Very impressive. Proud of you! President DJT",
       "content_html": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116698624343659358Very impressive. Proud of you! President DJT",
       "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi82OTgvNjIzLzA0Ny83OTMvODI2L29yaWdpbmFsLzNiYTNlNjM0ZjJlYWM1MGYubXA0",
+          "type": "video"
+        },
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjE3LzlkOTkxMTk5OTE5MTQ3M2QucG5n",
           "type": "image"
