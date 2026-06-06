@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116705031438300324": {
+    "content_zh_cn": "这终有一天会拯救华盛顿。\nLeon法官必须立刻让开，越快越好。他正在将我们的国家置于危险之中！",
+    "content_zh_hk": "這終有一天會拯救華盛頓。\nLeon法官必須立即讓開，而且要快。他正在將我們的國家置於危險之中！",
+    "content_ko": "이것은 언젠가 워싱턴을 구하게 될 것입니다.\n레온 판사는 당장 비켜야 합니다, 그리고 신속히. 그는 우리 나라를 위험에 빠뜨리고 있습니다!"
+  },
   "https://truthsocial.com/@realDonaldTrump/116704422765567886": {
     "content_zh_cn": "巴拉克·侯赛因·奥巴马图书馆，10年后，待其完全成熟之时！",
     "content_zh_hk": "巴拉克·侯賽因·奧巴馬圖書館，10年後，待其完全成熟之時！",
