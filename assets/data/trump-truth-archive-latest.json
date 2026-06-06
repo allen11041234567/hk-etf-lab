@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-06T20:49:09.171Z",
+  "fetchedAt": "2026-06-06T21:03:31.100Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
@@ -33,20 +33,20 @@
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-06-06T20:23:58.718Z",
       "created_at_text": "Jun 6, 2026, 8:23 PM",
-      "content": "All work is complete! Great American Patriots, primarily from the Great State of Oklahoma, plus Doug Burgum, Secretary of the Interior, inspecting the very complex, but powerful, Dark Blue surface of the Reflecting Pool, prior to submerging it in CLEAN, BEAUTIFUL WATER. It was originally opened in 1922, but never functioned properly — now it does! Thank you President Trump, thank you Department of the Interior — AND THE BEST IS YET TO COME with The Trump Promenade at The Lincoln Memorial, and The Triumphal Arch, which will be, along with the White House Ballroom, when completed, the Greatest Structure in Washington. President DONALD J. TRUMP\nPreview",
-      "content_html": "All work is complete! Great American Patriots, primarily from the Great State of Oklahoma, plus Doug Burgum, Secretary of the Interior, inspecting the very complex, but powerful, Dark Blue surface of the Reflecting Pool, prior to submerging it in CLEAN, BEAUTIFUL WATER. It was originally opened in 1922, but never functioned properly — now it does! Thank you President Trump, thank you Department of the Interior — AND THE BEST IS YET TO COME with The Trump Promenade at The Lincoln Memorial, and The Triumphal Arch, which will be, along with the White House Ballroom, when completed, the Greatest Structure in Washington. President DONALD J. TRUMP\nPreview",
+      "content": "",
+      "content_html": "",
       "media": [
         {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi83MDUvMDI5Lzk5OS84NjIvMjA0L29yaWdpbmFsLzcwYmEwNTRhYmVmZTRmNDcuanBn",
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjM3LzcwYmEwNTRhYmVmZTRmNDcuanBn",
           "type": "image"
         }
       ],
       "favourites_count": 1559,
       "reblogs_count": 357,
       "replies_count": 85,
-      "content_zh_cn": "All work is complete! Great American Patriots, primarily from the Great State of Oklahoma, plus Doug Burgum, Secretary of the Interior, inspecting the very complex, but powerful, Dark Blue surface of the Reflecting Pool, prior to submerging it in CLEAN, BEAUTIFUL WATER. It was originally opened in 1922, but never functioned properly — now it does! Thank you President Trump, thank you Department of the Interior — AND THE BEST IS YET TO COME with The Trump Promenade at The Lincoln Memorial, and The Triumphal Arch, which will be, along with the White House Ballroom, when completed, the Greatest Structure in Washington. President DONALD J. TRUMP\nPreview",
-      "content_zh_hk": "All work is complete! Great American Patriots, primarily from the Great State of Oklahoma, plus Doug Burgum, Secretary of the Interior, inspecting the very complex, but powerful, Dark Blue surface of the Reflecting Pool, prior to submerging it in CLEAN, BEAUTIFUL WATER. It was originally opened in 1922, but never functioned properly — now it does! Thank you President Trump, thank you Department of the Interior — AND THE BEST IS YET TO COME with The Trump Promenade at The Lincoln Memorial, and The Triumphal Arch, which will be, along with the White House Ballroom, when completed, the Greatest Structure in Washington. President DONALD J. TRUMP\nPreview",
-      "content_ko": "All work is complete! Great American Patriots, primarily from the Great State of Oklahoma, plus Doug Burgum, Secretary of the Interior, inspecting the very complex, but powerful, Dark Blue surface of the Reflecting Pool, prior to submerging it in CLEAN, BEAUTIFUL WATER. It was originally opened in 1922, but never functioned properly — now it does! Thank you President Trump, thank you Department of the Interior — AND THE BEST IS YET TO COME with The Trump Promenade at The Lincoln Memorial, and The Triumphal Arch, which will be, along with the White House Ballroom, when completed, the Greatest Structure in Washington. President DONALD J. TRUMP\nPreview",
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
       "source_hint": "stock.fengle.me"
     },
     {
@@ -55,8 +55,8 @@
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-06-06T20:23:47.157Z",
       "created_at_text": "Jun 6, 2026, 8:23 PM",
-      "content": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116703094991947376\nPreview",
-      "content_html": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116703094991947376\nPreview",
+      "content": "",
+      "content_html": "",
       "media": [
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi83MDUvMDI5LzIzNC85MTcvNjE3L29yaWdpbmFsLzE1NWQyZjdiNGYxYmZkMDEuanBn",
@@ -66,9 +66,9 @@
       "favourites_count": 1374,
       "reblogs_count": 342,
       "replies_count": 167,
-      "content_zh_cn": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116703094991947376\nPreview",
-      "content_zh_hk": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116703094991947376\nPreview",
-      "content_ko": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116703094991947376\nPreview",
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
       "source_hint": "stock.fengle.me"
     },
     {
@@ -99,8 +99,8 @@
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-06-06T20:23:21.458Z",
       "created_at_text": "Jun 6, 2026, 8:23 PM",
-      "content": "I am pleased to announce the nomination of Judge James Crowell to the District of Columbia Court of Appeals! James is one of the best Judges on the D.C. Superior Court, and previously served as a Senior DOJ Official, and Chief of the Criminal Division in the Maryland U.S. Attorney's Office. He is also a longtime Army Reservist. James will continue to protect the Public Safety of Washington, D.C.'s Residents in his new role on the DCCA. Congratulations James! President DONALD J. TRUMP",
-      "content_html": "I am pleased to announce the nomination of Judge James Crowell to the District of Columbia Court of Appeals! James is one of the best Judges on the D.C. Superior Court, and previously served as a Senior DOJ Official, and Chief of the Criminal Division in the Maryland U.S. Attorney's Office. He is also a longtime Army Reservist. James will continue to protect the Public Safety of Washington, D.C.'s Residents in his new role on the DCCA. Congratulations James! President DONALD J. TRUMP",
+      "content": "",
+      "content_html": "",
       "media": [
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjQwLzE5ZWE4ZjIyMjg4ZTk4YTYuanBn",
@@ -110,9 +110,9 @@
       "favourites_count": 1859,
       "reblogs_count": 478,
       "replies_count": 195,
-      "content_zh_cn": "I am pleased to announce the nomination of Judge James Crowell to the District of Columbia Court of Appeals! James is one of the best Judges on the D.C. Superior Court, and previously served as a Senior DOJ Official, and Chief of the Criminal Division in the Maryland U.S. Attorney's Office. He is also a longtime Army Reservist. James will continue to protect the Public Safety of Washington, D.C.'s Residents in his new role on the DCCA. Congratulations James! President DONALD J. TRUMP",
-      "content_zh_hk": "I am pleased to announce the nomination of Judge James Crowell to the District of Columbia Court of Appeals! James is one of the best Judges on the D.C. Superior Court, and previously served as a Senior DOJ Official, and Chief of the Criminal Division in the Maryland U.S. Attorney's Office. He is also a longtime Army Reservist. James will continue to protect the Public Safety of Washington, D.C.'s Residents in his new role on the DCCA. Congratulations James! President DONALD J. TRUMP",
-      "content_ko": "I am pleased to announce the nomination of Judge James Crowell to the District of Columbia Court of Appeals! James is one of the best Judges on the D.C. Superior Court, and previously served as a Senior DOJ Official, and Chief of the Criminal Division in the Maryland U.S. Attorney's Office. He is also a longtime Army Reservist. James will continue to protect the Public Safety of Washington, D.C.'s Residents in his new role on the DCCA. Congratulations James! President DONALD J. TRUMP",
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
       "source_hint": "stock.fengle.me"
     },
     {
