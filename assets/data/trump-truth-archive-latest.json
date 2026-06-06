@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-06T00:48:56.924Z",
+  "fetchedAt": "2026-06-06T01:03:51.560Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
@@ -71,7 +71,7 @@
       "content_html": "Eric Metaxas, a great guy, has written an incredible new book, \"Revolution: The Birth of the Greatest Nation in the History of the World.\" As we celebrate our Nation's 250th Birthday, Eric honors the Faith, Wisdom, and Courage of the Great Patriots who sacrificed so much to secure our Independence. These stories of our shared past inspire us to build a future bigger, greater, and stronger than ever before. THE BEST IS YET TO COME! Get your copy today:https://www.amazon.com/Revolution-Birth-Greatest-Nation-History/dp/1631440888",
       "media": [
         {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi83MDAvMTA5LzQ5NC8yMTgvMjcyL29yaWdpbmFsLzdhMjNhNjg2NGVlY2ViYTYuanBn",
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjI5LzdhMjNhNjg2NGVlY2ViYTYuanBn",
           "type": "image"
         }
       ],
@@ -162,8 +162,8 @@
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-06-05T18:36:55.090Z",
       "created_at_text": "Jun 5, 2026, 6:36 PM",
-      "content": "Preview\nPreview\nPreview",
-      "content_html": "Preview\nPreview\nPreview",
+      "content": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116698954650603382\nPreview",
+      "content_html": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116698954650603382\nPreview",
       "media": [
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjI0LzJkYzM4YzczZmViZjVkNGUuanBn",
@@ -214,8 +214,8 @@
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-06-05T18:33:51.723Z",
       "created_at_text": "Jun 5, 2026, 6:33 PM",
-      "content": "",
-      "content_html": "",
+      "content": "Preview\nPreview\nPreview",
+      "content_html": "Preview\nPreview\nPreview",
       "media": [
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjIwL2Y5NTE5M2YxOWI3YWY5NmUuanBn",
