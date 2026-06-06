@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116703096524227539": {
+    "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116703094991947376",
+    "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116703094991947376",
+    "content_ko": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116703094991947376"
+  },
   "https://truthsocial.com/@realDonaldTrump/116700520262725077": {
     "content_zh_cn": "我很高兴宣布，提名法官詹姆斯·克劳威尔出任哥伦比亚特区上诉法院法官！詹姆斯是华盛顿特区高等法院最优秀的法官之一，此前曾担任司法部高级官员，以及马里兰州联邦检察官办公室刑事部门主管。他同时还是一名长期服役的陆军预备役军人。詹姆斯将在哥伦比亚特区上诉法院的新岗位上，继续守护华盛顿特区居民的公共安全。恭喜你，詹姆斯！\n唐纳德·J·特朗普总统",
     "content_zh_hk": "我很高興宣布，提名法官詹姆斯·克勞威爾出任哥倫比亞特區上訴法院法官！詹姆斯是華盛頓特區高等法院最優秀的法官之一，此前曾擔任司法部高級官員，以及馬里蘭州聯邦檢察官辦公室刑事部門主管。他同時亦是一名長期服役的陸軍預備役軍人。詹姆斯將在哥倫比亞特區上訴法院的新崗位上，繼續守護華盛頓特區居民的公共安全。恭喜你，詹姆斯！\n唐納德·J·特朗普總統",
