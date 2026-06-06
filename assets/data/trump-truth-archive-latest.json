@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-06T00:04:33.861Z",
+  "fetchedAt": "2026-06-06T00:18:23.856Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
@@ -175,8 +175,8 @@
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-06-05T18:33:59.033Z",
       "created_at_text": "Jun 5, 2026, 6:33 PM",
-      "content": "",
-      "content_html": "",
+      "content": "Preview\nPreview\nPreview",
+      "content_html": "Preview\nPreview\nPreview",
       "media": [
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjE5LzRkMzBjNGFlZGVkZmE2OTQuanBn",
@@ -197,8 +197,8 @@
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-06-05T18:33:51.723Z",
       "created_at_text": "Jun 5, 2026, 6:33 PM",
-      "content": "Preview\nPreview",
-      "content_html": "Preview\nPreview",
+      "content": "",
+      "content_html": "",
       "media": [
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjIwL2Y5NTE5M2YxOWI3YWY5NmUuanBn",
@@ -219,8 +219,8 @@
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-06-05T18:33:38.829Z",
       "created_at_text": "Jun 5, 2026, 6:33 PM",
-      "content": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116698624343659358Very impressive. Proud of you! President DJT\nPreview",
-      "content_html": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116698624343659358Very impressive. Proud of you! President DJT\nPreview",
+      "content": "",
+      "content_html": "",
       "media": [
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjIxL2M3MjA0OTNlMzdhZmQ2NjcuanBn",
