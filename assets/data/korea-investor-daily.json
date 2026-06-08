@@ -1,0 +1,118 @@
+{
+  "ok": true,
+  "fetchedAt": "2026-06-08T14:03:53.467608+00:00",
+  "snapshots": [
+    {
+      "code": "000660",
+      "name": "SK海力士",
+      "tradeDate": "2026.06.08",
+      "foreignHoldingRate": "51.16%",
+      "foreignHoldingRateDelta": -0.02,
+      "foreignNetToday": -154732.0,
+      "institutionNetToday": -86029.0,
+      "foreign5dTrend": "近5日净流出",
+      "institution5dTrend": "近5日净流入",
+      "week52Position": "处于52周区间 75% 位置",
+      "volumeTrend": "较近5日均量明显放大（2.1x）",
+      "recentTrendRows": [
+        {
+          "date": "2026.06.08",
+          "pct": "-7.68%",
+          "foreignNet": "-154,732",
+          "institutionNet": "-86,029",
+          "retailNet": "+240,761"
+        },
+        {
+          "date": "2026.06.05",
+          "pct": "-9.92%",
+          "foreignNet": "-606,860",
+          "institutionNet": "-411,774",
+          "retailNet": "+1,018,634"
+        },
+        {
+          "date": "2026.06.04",
+          "pct": "-2.63%",
+          "foreignNet": "-316,443",
+          "institutionNet": "+114,049",
+          "retailNet": "+202,394"
+        },
+        {
+          "date": "2026.06.02",
+          "pct": "-0.13%",
+          "foreignNet": "-416,517",
+          "institutionNet": "+90,158",
+          "retailNet": "+326,359"
+        },
+        {
+          "date": "2026.06.01",
+          "pct": "+1.29%",
+          "foreignNet": "-729,059",
+          "institutionNet": "+859,988",
+          "retailNet": "-130,929"
+        }
+      ]
+    },
+    {
+      "code": "005930",
+      "name": "三星电子",
+      "tradeDate": "2026.06.08",
+      "foreignHoldingRate": "47.73%",
+      "foreignHoldingRateDelta": -0.02,
+      "foreignNetToday": -1174306.0,
+      "institutionNetToday": -3937194.0,
+      "foreign5dTrend": "近5日净流出",
+      "institution5dTrend": "近5日净流入",
+      "week52Position": "处于52周区间 75% 位置",
+      "volumeTrend": "较近5日均量明显放大（1.9x）",
+      "recentTrendRows": [
+        {
+          "date": "2026.06.08",
+          "pct": "-10.18%",
+          "foreignNet": "-1,174,306",
+          "institutionNet": "-3,937,194",
+          "retailNet": "+5,111,500"
+        },
+        {
+          "date": "2026.06.05",
+          "pct": "-6.40%",
+          "foreignNet": "-4,240,844",
+          "institutionNet": "-1,446,498",
+          "retailNet": "+5,687,342"
+        },
+        {
+          "date": "2026.06.04",
+          "pct": "-2.50%",
+          "foreignNet": "-12,414,744",
+          "institutionNet": "+3,253,812",
+          "retailNet": "+9,160,932"
+        },
+        {
+          "date": "2026.06.02",
+          "pct": "+3.30%",
+          "foreignNet": "-11,016,912",
+          "institutionNet": "+3,088,203",
+          "retailNet": "+7,928,709"
+        },
+        {
+          "date": "2026.06.01",
+          "pct": "+10.09%",
+          "foreignNet": "-180,865",
+          "institutionNet": "+3,832,695",
+          "retailNet": "-3,651,830"
+        }
+      ]
+    }
+  ],
+  "marketSummary": {
+    "kospi": {
+      "price": "7,484.41",
+      "changePct": "-8.29"
+    },
+    "kosdaq": {
+      "price": "911.39",
+      "changePct": "-9.08"
+    },
+    "usdkrw": null,
+    "semiconductorTone": "半导体龙头资金面整体偏弱"
+  }
+}

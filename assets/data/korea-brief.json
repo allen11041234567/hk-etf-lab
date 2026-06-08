@@ -1,0 +1,48 @@
+{
+  "ok": true,
+  "snapshotAt": 1780927429674,
+  "quotes": [
+    {
+      "code": "000660",
+      "name": "SK海力士",
+      "market": "CLOSE",
+      "current": 1911000.0,
+      "previousClose": 2070000.0,
+      "dayChange": -159000.0,
+      "dayChangePercent": -7.68,
+      "open": 1856000.0,
+      "high": 2072000.0,
+      "low": 1855000.0,
+      "value": 12824753000000.0,
+      "week52High": "2,470,000",
+      "week52Low": "224,500",
+      "per": "18.46배",
+      "eps": "103,521원",
+      "pbr": "8.04배",
+      "bps": "237,789원",
+      "localTradedAt": "2026-06-08T16:10:19+09:00",
+      "source": "static-snapshot"
+    },
+    {
+      "code": "005930",
+      "name": "三星电子",
+      "market": "CLOSE",
+      "current": 295500.0,
+      "previousClose": 329000.0,
+      "dayChange": -33500.0,
+      "dayChangePercent": -10.18,
+      "open": 293000.0,
+      "high": 315500.0,
+      "low": 292500.0,
+      "value": 11666383000000.0,
+      "week52High": "377,000",
+      "week52Low": "56,900",
+      "per": "23.88배",
+      "eps": "12,372원",
+      "pbr": "4.11배",
+      "bps": "71,907원",
+      "localTradedAt": "2026-06-08T16:10:24+09:00",
+      "source": "static-snapshot"
+    }
+  ]
+}
