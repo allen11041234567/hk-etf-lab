@@ -1,4 +1,14 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116713809450237814": {
+    "content_zh_cn": "以色列和伊朗必须立即停止“交火”。\n\n总统 唐纳德·J·特朗普",
+    "content_zh_hk": "以色列和伊朗必須立即停止「交火」。\n\n總統 唐納德·J·特朗普",
+    "content_ko": "이스라엘과 이란은 즉시 “교전”을 중단해야 합니다.\n\n도널드 J. 트럼프 대통령"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116713771269812342": {
+    "content_zh_cn": "这绝不可能发生。选举被操纵了！",
+    "content_zh_hk": "這絕不可能發生。選舉被操縱了！",
+    "content_ko": "이런 일은 절대 일어날 수 없었습니다. 조작된 선거!"
+  },
   "https://truthsocial.com/@realDonaldTrump/116712260792747726": {
     "content_zh_cn": "有人在关注加州正在进行的这场“腐败”选举吗？两位优秀的共和党候选人正在遭受不公对待，美国也是如此；如果那些“蠢驴党”得逞、完成他们的图谋，接下来将会出现巨大的麻烦与动荡。请密切关注这场“选举”！！！\n特朗普总统",
     "content_zh_hk": "有人在關注加州正在進行的這場「腐敗」選舉嗎？兩位優秀的共和黨候選人正遭受不公對待，美國亦然；如果那些「蠢驢黨」得逞、完成他們的圖謀，接下來將會出現巨大的麻煩與動盪。請密切關注這場「選舉」！！！\n特朗普總統",
