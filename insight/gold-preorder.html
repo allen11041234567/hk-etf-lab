@@ -273,6 +273,8 @@
     const CONFIG = {
       liveApi: '/api/gold/live',
       jewellersApi: '/api/gold/hk-jewellers',
+      staticLiveJson: '/assets/data/gold-live.json',
+      staticJewellersJson: '/assets/data/gold-hk-jewellers.json',
       gramsPerOunce: 31.1035,
       taelGrams: 37.429,
       sampleGrams: 31.1035,
@@ -297,14 +299,26 @@
       return null;
     }
 
+    async function fetchJsonWithFallback(primary, fallback) {
+      try {
+        const resp = await fetch(primary, { headers: { accept: 'application/json' }, cache: 'no-store' });
+        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+        const payload = await resp.json();
+        if (!payload?.ok) throw new Error(payload?.error || 'primary not ok');
+        return payload;
+      } catch (_) {
+        const resp = await fetch(fallback, { headers: { accept: 'application/json' }, cache: 'no-store' });
+        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+        return await resp.json();
+      }
+    }
+
     async function loadAll() {
       try {
-        const [liveResp, jewellersResp] = await Promise.all([
-          fetch(CONFIG.liveApi, { headers: { accept: 'application/json' } }),
-          fetch(CONFIG.jewellersApi, { headers: { accept: 'application/json' } }),
+        const [live, jewellers] = await Promise.all([
+          fetchJsonWithFallback(CONFIG.staticLiveJson, CONFIG.liveApi),
+          fetchJsonWithFallback(CONFIG.staticJewellersJson, CONFIG.jewellersApi),
         ]);
-        const live = await liveResp.json();
-        const jewellers = await jewellersResp.json();
 
         if (live?.ok) {
           document.getElementById('hero-yongfeng-usd').textContent = `US$${money(live.yongfeng_usd_oz)}`;
