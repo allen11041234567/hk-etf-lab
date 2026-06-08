@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116714035637911912": {
+    "content_zh_cn": "以色列和伊朗双方都希望立即实现停火！围绕“和平”的最终谈判正在推进，前提是不被无知或愚蠢所阻碍。封锁将继续维持，并全面有效地执行，直至达成“最终协议”。事态应会迅速推进。感谢各位对此事的关注！\n美国总统 唐纳德·J·特朗普",
+    "content_zh_hk": "以色列和伊朗雙方都希望立即實現停火！圍繞「和平」的最終談判正在推進，前提是不被無知或愚蠢所阻礙。封鎖將繼續維持，並全面有效地執行，直至達成「最終協議」。事態應會迅速推進。感謝各位對此事的關注！\n美國總統 唐納德·J·特朗普",
+    "content_ko": "이스라엘과 이란 양측 모두 즉각적인 휴전을 원하고 있습니다! “평화”를 위한 최종 협상은 진행 중이며, 무지나 어리석음이 그 길을 막지만 않는다면 성사될 것입니다. 봉쇄는 “최종 합의”에 도달할 때까지 계속 유지되며, 전면적으로 효력을 발휘할 것입니다. 상황은 신속하게 전개될 것입니다. 이 사안에 관심을 가져주셔서 감사합니다!\n미국 대통령 도널드 J. 트럼프"
+  },
   "https://truthsocial.com/@realDonaldTrump/116713960884981914": {
     "content_zh_cn": "国会报告猛烈抨击明尼苏达州的沃尔兹、埃里森，指其对大规模福利欺诈“视而不见”：https://justthenews.com/accountability/waste-fraud-and-abuse/mon4ablind-eye-house-report-slams-minnesotas-walz-ellison",
     "content_zh_hk": "國會報告猛烈抨擊明尼蘇達州的沃爾茲、埃里森，指其對大規模福利詐騙「視而不見」：https://justthenews.com/accountability/waste-fraud-and-abuse/mon4ablind-eye-house-report-slams-minnesotas-walz-ellison",
