@@ -324,6 +324,7 @@
   <script>
     const FEED = '/api/pulse/brief?codes=000660,005930';
     const INVESTOR_FEED = '/api/pulse/korea-investor-daily?codes=000660,005930';
+    const CHART = '/api/pulse/chart-image';
     const REFRESH_MS = 15000;
     const INVESTOR_REFRESH_MS = 3600000;
     const CARD_ORDER = ['000660', '005930'];
@@ -333,45 +334,88 @@
     let latestRefreshTs = null;
     const tpl = document.getElementById('card-template');
     const errorBox = document.getElementById('error-box');
-    const JINA = 'https://r.jina.ai/http://';
-    const CODE_NAMES = { '000660': 'SK海力士', '005930': '三星电子' };
     function fmtNumber(value){ return new Intl.NumberFormat('en-US').format(Math.round(value || 0)); }
     function fmtKrwMillion(value){ const n = Number(value || 0); if(!Number.isFinite(n)) return '--'; return `${fmtNumber(n)}百万韩元`; }
     function fmtSigned(value){ const n=Math.round(value || 0); return `${n > 0 ? '+' : ''}${fmtNumber(n)}`; }
     function fmtShares(value){ const n=Math.round(value || 0); return `${n > 0 ? '+' : ''}${fmtNumber(n)}股`; }
     function fmtPct(value){ const n=Number(value || 0); return `${n > 0 ? '+' : ''}${n.toFixed(2)}%`; }
     function fmtPctMaybe(value){ const n=Number(value); if(!Number.isFinite(n)) return '--'; return `${n>0?'+':''}${n.toFixed(2)}%`; }
-    function zhText(text){ if(text == null) return '--'; return String(text).replace(/하락/g,'下跌').replace(/상승/g,'上涨').replace(/보합/g,'持平').replace(/외국인|외인/g,'外资').replace(/기관/g,'机构').replace(/개인/g,'散户').replace(/순매수/g,'净买入').replace(/순매도/g,'净卖出').replace(/매수/g,'买入').replace(/매도/g,'卖出').replace(/원/g,'韩元').replace(/주/g,'股').replace(/배/g,'倍').replace(/없음/g,'暂无').trim(); }
-    function mapUsdDirection(text){ if(!text) return '--'; if(text === '하락') return '下跌'; if(text === '상승') return '上涨'; if(text === '보합') return '持平'; return zhText(text); }
-    function parseNumber(value){ if(value == null) return 0; const n=Number(String(value).replace(/,/g,'')); return Number.isFinite(n) ? n : 0; }
-    function parsePercent(text=''){ const n=Number(String(text).replace(/[%,]/g,'')); return Number.isFinite(n) ? n : null; }
-    function firstNumber(text='', opts={}){ const re = opts.percent ? /[+\-]?[0-9,]+(?:\.[0-9]+)?%/ : /[+\-]?[0-9,]+(?:\.[0-9]+)?/; return String(text).match(re)?.[0]?.trim() || null; }
-    function stripTags(html=''){ return String(html).replace(/<br\s*\/?>/gi,' ').replace(/<[^>]+>/g,' ').replace(/&nbsp;/gi,' ').replace(/\s+/g,' ').trim(); }
-    function marketPhaseText(market, localTradedAt){ const v=String(market||'').toUpperCase(); const nowSeoul=new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Seoul'})); const tradedSeoul=localTradedAt?new Date(new Date(localTradedAt).toLocaleString('en-US',{timeZone:'Asia/Seoul'})):null; const sameSeoulDay=tradedSeoul&&tradedSeoul.getFullYear()===nowSeoul.getFullYear()&&tradedSeoul.getMonth()===nowSeoul.getMonth()&&tradedSeoul.getDate()===nowSeoul.getDate(); const day=nowSeoul.getDay(); const minutes=nowSeoul.getHours()*60+nowSeoul.getMinutes(); const isWeekday=day>=1&&day<=5; const isPreOpen=isWeekday&&minutes<9*60; const isTrading=isWeekday&&minutes>=9*60&&minutes<15*60+30; const isAfterClose=isWeekday&&minutes>=15*60+30; if(!v){ if(isPreOpen) return '交易状态：开盘前'; if(isTrading) return '交易状态：交易中'; return '交易状态：休市'; } if(v.includes('HALT')||v.includes('STOP')) return '交易状态：停牌'; if(v.includes('HOLIDAY')||v.includes('CLOSED')||v.includes('休')) return '交易状态：休市'; if(v.includes('PREOPEN')) return '交易状态：开盘前'; if(v.includes('OPEN')) { if(isPreOpen) return '交易状态：开盘前'; if(isTrading&&sameSeoulDay) return '交易状态：交易中'; if(isAfterClose) return '交易状态：已收盘'; return sameSeoulDay ? '交易状态：交易中' : '交易状态：休市'; } if(v.includes('CLOSE')) { if(isPreOpen) return '交易状态：开盘前'; if(isTrading&&sameSeoulDay) return '交易状态：交易中'; return sameSeoulDay ? '交易状态：已收盘' : '交易状态：休市'; } return `交易状态：${zhText(market)}`; }
+    function zhText(text){
+      if(text == null) return '--';
+      return String(text)
+        .replace(/하락/g,'下跌')
+        .replace(/상승/g,'上涨')
+        .replace(/보합/g,'持平')
+        .replace(/외국인|외인/g,'外资')
+        .replace(/기관/g,'机构')
+        .replace(/개인/g,'散户')
+        .replace(/순매수/g,'净买入')
+        .replace(/순매도/g,'净卖出')
+        .replace(/매수/g,'买入')
+        .replace(/매도/g,'卖出')
+        .replace(/원/g,'韩元')
+        .replace(/주/g,'股')
+        .replace(/배/g,'倍')
+        .replace(/없음/g,'暂无')
+        .replace(/-/g,'-')
+        .trim();
+    }
+    function mapUsdDirection(text){
+      if(!text) return '--';
+      if(text === '하락') return '下跌';
+      if(text === '상승') return '上涨';
+      if(text === '보합') return '持平';
+      return zhText(text);
+    }
+    function marketPhaseText(market, localTradedAt){
+      const v = String(market || '').toUpperCase();
+      const nowSeoul = new Date(new Date().toLocaleString('en-US', { timeZone:'Asia/Seoul' }));
+      const tradedSeoul = localTradedAt ? new Date(new Date(localTradedAt).toLocaleString('en-US', { timeZone:'Asia/Seoul' })) : null;
+      const sameSeoulDay = tradedSeoul
+        && tradedSeoul.getFullYear() === nowSeoul.getFullYear()
+        && tradedSeoul.getMonth() === nowSeoul.getMonth()
+        && tradedSeoul.getDate() === nowSeoul.getDate();
+      const day = nowSeoul.getDay();
+      const minutes = nowSeoul.getHours() * 60 + nowSeoul.getMinutes();
+      const isWeekday = day >= 1 && day <= 5;
+      const isPreOpen = isWeekday && minutes < 9 * 60;
+      const isTrading = isWeekday && minutes >= 9 * 60 && minutes < 15 * 60 + 30;
+      const isAfterClose = isWeekday && minutes >= 15 * 60 + 30;
+      if(!v){
+        if(isPreOpen) return '交易状态：开盘前';
+        if(isTrading) return '交易状态：交易中';
+        return '交易状态：休市';
+      }
+      if(v.includes('HALT') || v.includes('STOP')) return '交易状态：停牌';
+      if(v.includes('HOLIDAY') || v.includes('CLOSED') || v.includes('休')) return '交易状态：休市';
+      if(v.includes('PREOPEN')) return '交易状态：开盘前';
+      if(v.includes('OPEN')) {
+        if(isPreOpen) return '交易状态：开盘前';
+        if(isTrading && sameSeoulDay) return '交易状态：交易中';
+        if(isAfterClose) return '交易状态：已收盘';
+        return sameSeoulDay ? '交易状态：交易中' : '交易状态：休市';
+      }
+      if(v.includes('CLOSE')) {
+        if(isPreOpen) return '交易状态：开盘前';
+        if(isTrading && sameSeoulDay) return '交易状态：交易中';
+        return sameSeoulDay ? '交易状态：已收盘' : '交易状态：休市';
+      }
+      return `交易状态：${zhText(market)}`;
+    }
     function getDirectionClass(value){ if(value > 0) return 'up'; if(value < 0) return 'down'; return 'flat'; }
     function pad2(v){ return String(v).padStart(2,'0'); }
     function formatBeijingTime(date){ const d = new Date(date.toLocaleString('en-US', { timeZone:'Asia/Shanghai' })); return `北京时间 ${pad2(d.getHours())}:${pad2(d.getMinutes())}:${pad2(d.getSeconds())}`; }
     function updateLiveTime(ts){ latestRefreshTs = ts || new Date(); const text = `最近更新：${formatBeijingTime(latestRefreshTs)}`; const board = document.getElementById('live-board-time'); if(board) board.textContent = text; document.querySelectorAll('.last-update').forEach((el)=>{ el.textContent = text; }); }
-    function directChartUrl(code,type,range){ const safeType=(type==='candle'||(type==='area'&&range==='month'))?'candle':'area'; return `https://ssl.pstatic.net/imgfinance/chart/item/${safeType}/${range}/${code}.png?sidcode=${Date.now()}`; }
-    function updateChart(card, force=false){ const code=card.dataset.code,type=card.dataset.chartType||'area',range=card.dataset.chartRange||'day'; const img=card.querySelector('.chart-image'); const next=directChartUrl(code,type,range); if(force || img.dataset.src!==next){ img.src=next; img.dataset.src=next; } img.alt=`${code} chart`; }
+    function chartUrl(code,type,range){ return `${CHART}?code=${encodeURIComponent(code)}&type=${encodeURIComponent(type)}&range=${encodeURIComponent(range)}`; }
+    function updateChart(card, force=false){ const code=card.dataset.code,type=card.dataset.chartType||'area',range=card.dataset.chartRange||'day'; const img=card.querySelector('.chart-image'); const next=chartUrl(code,type,range); if(force || img.dataset.src!==next){ img.src=next; img.dataset.src=next; } img.alt=`${code} chart`; }
     function bindChartControls(card){ card.querySelectorAll('.chip').forEach((chip)=>{ chip.addEventListener('click',()=>{ const kind=chip.dataset.kind,value=chip.dataset.value; if(kind==='type'){ card.dataset.chartType=value; card.querySelectorAll('[data-kind="type"]').forEach((el)=>el.classList.toggle('active', el===chip)); } if(kind==='range'){ card.dataset.chartRange=value; card.querySelectorAll('[data-kind="range"]').forEach((el)=>el.classList.toggle('active', el===chip)); } updateChart(card, true); }); }); }
     function ensureCard(code){ let card=document.querySelector(`[data-code="${code}"]`); if(card) return card; card=tpl.content.firstElementChild.cloneNode(true); card.dataset.code=code; card.dataset.chartType='area'; card.dataset.chartRange='day'; bindChartControls(card); const orderIndex=CARD_ORDER.indexOf(code); const children=[...cardsEl.children]; const before=children.find((el)=>CARD_ORDER.indexOf(el.dataset.code) > orderIndex); if(before) cardsEl.insertBefore(card,before); else cardsEl.appendChild(card); return card; }
     function applyCardVisibility(targetCode){ document.querySelectorAll('.switch-btn').forEach((btn)=>btn.classList.toggle('active', btn.dataset.targetCode===targetCode)); document.querySelectorAll('#cards .card').forEach((card)=>{ card.style.display = card.dataset.code===targetCode ? '' : 'none'; }); }
-    function parseJinaBody(text){ const marker='Markdown Content:'; const idx=text.indexOf(marker); return (idx>=0 ? text.slice(idx+marker.length) : text).trim(); }
-    async function fetchJinaJson(url){ const resp=await fetch(`${JINA}${url}`,{cache:'no-store'}); if(!resp.ok) throw new Error(`Jina HTTP ${resp.status}`); const text=await resp.text(); return JSON.parse(parseJinaBody(text)); }
-    async function fetchJinaText(url){ const resp=await fetch(`${JINA}${url}`,{cache:'no-store'}); if(!resp.ok) throw new Error(`Jina HTTP ${resp.status}`); return parseJinaBody(await resp.text()); }
-    async function fetchMaybeJson(url){ const resp=await fetch(url,{cache:'no-store'}); const contentType=resp.headers.get('content-type')||''; if(resp.ok && contentType.includes('application/json')){ const data=await resp.json(); if(data && data.ok !== false) return data; } throw new Error('local api unavailable'); }
     function renderMarketSummary(summary){ if(!summary) return; document.getElementById('summary-kospi').textContent = summary.kospi ? summary.kospi.price : '--'; document.getElementById('summary-kospi-d').textContent = summary.kospi ? fmtPctMaybe(summary.kospi.changePct) : '--'; document.getElementById('summary-kosdaq').textContent = summary.kosdaq ? summary.kosdaq.price : '--'; document.getElementById('summary-kosdaq-d').textContent = summary.kosdaq ? fmtPctMaybe(summary.kosdaq.changePct) : '--'; document.getElementById('summary-usdkrw').textContent = summary.usdkrw ? summary.usdkrw.value : '--'; document.getElementById('summary-usdkrw-d').textContent = summary.usdkrw ? `${mapUsdDirection(summary.usdkrw.direction)} ${summary.usdkrw.change}` : '--'; document.getElementById('summary-semi').textContent = summary.semiconductorTone || '--'; }
     function renderInvestor(snapshot){ investorMap.set(snapshot.code, snapshot); const card=ensureCard(snapshot.code); card.querySelector('.foreign-net').textContent = fmtShares(snapshot.foreignNetToday); card.querySelector('.institution-net').textContent = fmtShares(snapshot.institutionNetToday); card.querySelector('.foreign-rate').textContent = zhText(snapshot.foreignHoldingRate || '--'); card.querySelector('.foreign-rate-delta').textContent = snapshot.foreignHoldingRateDelta == null ? '' : ` （较昨日${snapshot.foreignHoldingRateDelta>0?'+':''}${snapshot.foreignHoldingRateDelta.toFixed(2)}pct）`; card.querySelector('.week52-position').textContent = zhText(snapshot.week52Position || '--'); card.querySelector('.volume-trend').textContent = zhText(snapshot.volumeTrend || '--'); card.querySelector('.foreign-trend').textContent = zhText(snapshot.foreign5dTrend || '--'); card.querySelector('.institution-trend').textContent = zhText(snapshot.institution5dTrend || '--'); card.querySelector('.trend-table').innerHTML = (snapshot.recentTrendRows||[]).map((row)=>`<div>${row.date}｜${zhText(row.pct || '--')}｜外资 ${zhText(row.foreignNet)}｜机构 ${zhText(row.institutionNet)}｜散户 ${zhText(row.retailNet)}</div>`).join('') || '--'; }
     function renderQuote(quote){ const card=ensureCard(quote.code); previousMap.set(quote.code,quote); card.querySelector('.code').textContent=`${quote.code} · 韩股`; card.querySelector('.name').textContent=zhText(quote.name); const community=card.querySelector('.community-link'); community.innerHTML='<img src="/assets/qr/group-chat-20260520-v2.jpg" alt="群聊二维码" /><span>扫码加入群聊</span>'; card.querySelector('.price').textContent=quote.unavailable?'加载失败':fmtNumber(quote.current); const dayEl=card.querySelector('.day-change'); dayEl.className=`day-change ${getDirectionClass(quote.dayChange)}`; dayEl.textContent=quote.unavailable?'数据暂不可用':`当日涨跌 ${fmtSigned(quote.dayChange)} · ${fmtPct(quote.dayChangePercent)}`; const phaseText = quote.unavailable?'交易状态：--':marketPhaseText(quote.market, quote.localTradedAt); card.querySelector('.market-phase').textContent=phaseText; card.querySelector('.open').textContent=fmtNumber(quote.open); card.querySelector('.previous-close').textContent=fmtNumber(quote.previousClose); card.querySelector('.high').textContent=fmtNumber(quote.high); card.querySelector('.low').textContent=fmtNumber(quote.low); card.querySelector('.value').textContent=fmtKrwMillion(quote.value); card.querySelector('.week52-range').textContent=`${zhText(quote.week52High || '--')} / ${zhText(quote.week52Low || '--')}`; card.querySelector('.per-eps').textContent=`${zhText(quote.per || '--')} / ${zhText(quote.eps || '--')}`; card.querySelector('.pbr-bps').textContent=`${zhText(quote.pbr || '--')} / ${zhText(quote.bps || '--')}`; const quickEl = quote.code === '000660' ? document.getElementById('quick-hynix') : (quote.code === '005930' ? document.getElementById('quick-samsung') : null); if (quickEl) { quickEl.className = `quick-value ${getDirectionClass(quote.dayChange)}`; if(phaseText === '交易状态：开盘前' && Number(quote.dayChangePercent || 0) === 0){ quickEl.className = 'quick-value flat'; } quickEl.textContent = quote.unavailable ? '--' : fmtPct(quote.dayChangePercent); } card.querySelector('.refresh-text').textContent = '每15秒自动更新'; updateChart(card, !card.dataset.initialized); card.dataset.initialized='1'; const investor = investorMap.get(quote.code); if(investor) renderInvestor(investor); }
-    function mapDirectionCode(rf){ if(rf==='2'||rf==='RISE'||rf==='RISING') return 'up'; if(rf==='5'||rf==='FALL'||rf==='FALLING') return 'down'; return 'flat'; }
-    async function buildRelayQuotes(){ const codes=['000660','005930']; const results=await Promise.all(codes.map(async (code)=>{ const [polling,basic,integration]=await Promise.all([ fetchJinaJson(`polling.finance.naver.com/api/realtime?query=SERVICE_ITEM%3A${code}`), fetchJinaJson(`m.stock.naver.com/api/stock/${code}/basic`), fetchJinaJson(`m.stock.naver.com/api/stock/${code}/integration`) ]); const item=(polling?.result?.areas||[]).flatMap(a=>a.datas||[]).find(x=>x.cd===code) || {}; const infoMap=Object.fromEntries((integration?.totalInfos||[]).map(row=>[row.code,row.value])); const direction=mapDirectionCode(item.rf || basic?.compareToPreviousPrice?.name || basic?.compareToPreviousPrice?.text || ''); const applyDir=(v)=>{ const n=Math.abs(parseNumber(v)); return direction==='down' ? -n : direction==='up' ? n : parseNumber(v); }; return { code, name: CODE_NAMES[code] || basic?.stockName || code, market: item.ms || basic?.marketStatus || null, current: parseNumber(item.nv ?? basic?.closePrice ?? infoMap.closePrice), previousClose: parseNumber(item.pcv ?? basic?.previousClosePrice ?? infoMap.lastClosePrice), dayChange: applyDir(item.cv ?? basic?.compareToPreviousClosePrice), dayChangePercent: applyDir(item.cr ?? basic?.fluctuationsRatio), open: parseNumber(item.ov ?? basic?.openPrice ?? infoMap.openPrice), high: parseNumber(item.hv ?? basic?.highPrice ?? infoMap.highPrice), low: parseNumber(item.lv ?? basic?.lowPrice ?? infoMap.lowPrice), volume: parseNumber(item.aq ?? basic?.accumulatedTradingVolume ?? infoMap.accumulatedTradingVolume), value: parseNumber(item.aa ?? basic?.accumulatedTradingValue ?? infoMap.accumulatedTradingValue), week52High: infoMap.highPriceOf52Weeks || null, week52Low: infoMap.lowPriceOf52Weeks || null, per: infoMap.per || null, eps: infoMap.eps || null, pbr: infoMap.pbr || null, bps: infoMap.bps || null, localTradedAt: basic?.localTradedAt || item?.nxtOverMarketPriceInfo?.localTradedAt || null, source:'jina-relay' }; })); return { ok:true, quotes:results }; }
-    function extractRowsFromHtml(html){ const rows=[]; const matches=[...String(html).matchAll(/<tr[^>]*onMouseOver="mouseOver\(this\)"[\s\S]*?<\/tr>/g)]; for(const m of matches.slice(0,5)){ const cells=[...m[0].matchAll(/<td[^>]*>([\s\S]*?)<\/td>/g)].map(x=>stripTags(x[1])); if(cells.length<9) continue; const date=cells[0], pct=firstNumber(cells[3],{percent:true}), institutionNet=firstNumber(cells[5]), foreignNet=firstNumber(cells[6]), foreignRateText=firstNumber(cells[8],{percent:true})||'--'; if(!date) continue; rows.push({ date, pct, institutionNet: parseNumber(institutionNet), foreignNet: parseNumber(foreignNet), foreignRateValue: parsePercent(foreignRateText), foreignRateText }); } return rows; }
-    function week52PositionText(current, low52, high52){ const c=parseNumber(current), lo=parseNumber(low52), hi=parseNumber(high52); if(!c||!lo||!hi||hi<=lo) return '52周位置暂无结论'; return `处于52周区间 ${(((c-lo)/(hi-lo))*100).toFixed(0)}% 位置`; }
-    function volumeTrendText(todayVolume, prevAvgVolume){ if(!todayVolume || !prevAvgVolume) return '量能暂无结论'; const ratio=todayVolume/prevAvgVolume; if(ratio>=1.5) return `较近5日均量明显放大（${ratio.toFixed(1)}x）`; if(ratio>=1.1) return `较近5日均量小幅放大（${ratio.toFixed(1)}x）`; if(ratio<=0.7) return `较近5日均量明显缩量（${ratio.toFixed(1)}x）`; if(ratio<=0.9) return `较近5日均量小幅缩量（${ratio.toFixed(1)}x）`; return `较近5日均量基本持平（${ratio.toFixed(1)}x）`; }
-    async function buildRelayInvestor(){ const codes=['000660','005930']; const snapshots=await Promise.all(codes.map(async (code)=>{ const [integration, prices, frgnHtml]=await Promise.all([ fetchJinaJson(`m.stock.naver.com/api/stock/${code}/integration`), fetchJinaJson(`m.stock.naver.com/api/stock/${code}/price`).catch(()=>[]), fetchJinaText(`finance.naver.com/item/frgn.naver?code=${code}`).catch(()=>''), ]); const rows=extractRowsFromHtml(frgnHtml); const today=rows[0]||{date:null, foreignNet:0, institutionNet:0, foreignRateValue:null, foreignRateText:null}; const yesterday=rows[1]||{foreignRateValue:null}; const infoMap=Object.fromEntries((integration?.totalInfos||[]).map(row=>[row.code,row.value])); const vols=(prices||[]).slice(1,6).map(x=>parseNumber(x.accumulatedTradingVolume)).filter(Boolean); const prevAvg=vols.length?vols.reduce((a,b)=>a+b,0)/vols.length:0; const foreign5d=rows.map(r=>r.foreignNet), institution5d=rows.map(r=>r.institutionNet); return { code, name: CODE_NAMES[code]||code, tradeDate: today.date, foreignHoldingRate: infoMap.foreignRate || today.foreignRateText || null, foreignHoldingRateDelta: today.foreignRateValue != null && yesterday.foreignRateValue != null ? Number((today.foreignRateValue-yesterday.foreignRateValue).toFixed(2)) : null, foreignNetToday: today.foreignNet, institutionNetToday: today.institutionNet, foreign5dTrend: foreign5d.reduce((a,b)=>a+b,0)>0?'近5日净流入':foreign5d.reduce((a,b)=>a+b,0)<0?'近5日净流出':'近5日基本持平', institution5dTrend: institution5d.reduce((a,b)=>a+b,0)>0?'近5日净流入':institution5d.reduce((a,b)=>a+b,0)<0?'近5日净流出':'近5日基本持平', week52Position: week52PositionText((prices||[])[0]?.closePrice || infoMap.lastClosePrice, infoMap.lowPriceOf52Weeks, infoMap.highPriceOf52Weeks), volumeTrend: volumeTrendText(parseNumber((prices||[])[0]?.accumulatedTradingVolume), prevAvg), recentTrendRows: rows.map(r=>({ date:r.date, pct:r.pct, foreignNet:`${r.foreignNet>0?'+':''}${r.foreignNet.toLocaleString()}`, institutionNet:`${r.institutionNet>0?'+':''}${r.institutionNet.toLocaleString()}`, retailNet:`${-(r.foreignNet+r.institutionNet)>0?'+':''}${(-(r.foreignNet+r.institutionNet)).toLocaleString()}` })) }; })); const [kospi,kosdaq]=await Promise.all([fetchJinaJson('m.stock.naver.com/api/index/KOSPI/basic').catch(()=>null), fetchJinaJson('m.stock.naver.com/api/index/KOSDAQ/basic').catch(()=>null)]); const summary={ kospi: kospi ? { price:kospi.closePrice, changePct:kospi.fluctuationsRatio } : null, kosdaq: kosdaq ? { price:kosdaq.closePrice, changePct:kosdaq.fluctuationsRatio } : null, usdkrw:null, semiconductorTone: snapshots.every(s=>s.foreignNetToday>0)?'半导体龙头资金面整体偏强':snapshots.every(s=>s.foreignNetToday<0)?'半导体龙头资金面整体偏弱':'半导体龙头资金面分化' }; return { ok:true, marketSummary:summary, snapshots }; }
-    async function refreshInvestor(){ try{ let data; try{ data=await fetchMaybeJson(INVESTOR_FEED); }catch(_){ data=await buildRelayInvestor(); } renderMarketSummary(data.marketSummary); for(const snapshot of data.snapshots||[]) renderInvestor(snapshot); }catch(error){ console.error('investor refresh failed', error); } }
-    async function refresh(){ if(document.hidden) return; try{ let data; try{ data=await fetchMaybeJson(FEED); }catch(_){ data=await buildRelayQuotes(); } errorBox.style.display='none'; for(const quote of data.quotes) renderQuote(quote); updateLiveTime(new Date()); }catch(error){ errorBox.textContent='当前数据更新稍慢，请稍后刷新重试'; errorBox.style.display='block'; } }
+    async function refreshInvestor(){ try{ const resp=await fetch(INVESTOR_FEED,{cache:'no-store'}); if(!resp.ok) throw new Error(`HTTP ${resp.status}`); const data=await resp.json(); if(!data.ok) throw new Error(data.error||'unknown error'); renderMarketSummary(data.marketSummary); for(const snapshot of data.snapshots||[]) renderInvestor(snapshot); }catch(error){ console.error('investor refresh failed', error); } }
+    async function refresh(){ if(document.hidden) return; try{ const resp=await fetch(FEED,{cache:'no-store'}); if(!resp.ok) throw new Error(`HTTP ${resp.status}`); const data=await resp.json(); if(!data.ok) throw new Error(data.error||'unknown error'); errorBox.style.display='none'; for(const quote of data.quotes) renderQuote(quote); updateLiveTime(new Date()); }catch(error){ errorBox.textContent='当前数据更新稍慢，请稍后刷新重试'; errorBox.style.display='block'; } }
     document.querySelectorAll('.switch-btn').forEach((btn)=>btn.addEventListener('click',()=>applyCardVisibility(btn.dataset.targetCode)));
     document.addEventListener('visibilitychange',()=>{ if(!document.hidden) { refresh(); refreshInvestor(); } });
     refresh(); refreshInvestor(); setInterval(refresh, REFRESH_MS); setInterval(refreshInvestor, INVESTOR_REFRESH_MS); setTimeout(()=>applyCardVisibility('000660'), 0);
