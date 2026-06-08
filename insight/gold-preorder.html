@@ -163,7 +163,7 @@
         <div class="mini-card">
           <div class="label">永丰参考金价（USD/oz）</div>
           <div class="value-xl" id="hero-yongfeng-usd">--</div>
-          <div class="subline" id="hero-updated">等待参考金价接口</div>
+          <div class="subline" id="hero-updated">等待参考金价同步</div>
         </div>
         <div class="mini-card">
           <div class="label">Silverpath 工费规则</div>
@@ -322,11 +322,11 @@
 
         if (live?.ok) {
           document.getElementById('hero-yongfeng-usd').textContent = `US$${money(live.yongfeng_usd_oz)}`;
-          document.getElementById('hero-updated').textContent = `最近更新：${live.updated_at || '--'}`;
+          document.getElementById('hero-updated').textContent = '参考金价已同步';
           document.getElementById('spot-usd').textContent = `US$${money(live.spot_usd_oz)}`;
           document.getElementById('yongfeng-hkd').textContent = `HK$${money(live.yongfeng_hkd_oz)}`;
         } else {
-          document.getElementById('hero-updated').textContent = live?.error || '参考金价接口暂不可用';
+          document.getElementById('hero-updated').textContent = '参考金价暂不可用';
           document.getElementById('hero-updated').classList.add('status-bad');
         }
 
@@ -339,7 +339,7 @@
           document.getElementById('saving-sample-sub').textContent = `以 1oz 单块示意，优先按 ${priorityShop.name} 参考卖出价估算`;
         }
       } catch (error) {
-        document.getElementById('hero-updated').textContent = error.message || String(error);
+        document.getElementById('hero-updated').textContent = '参考金价暂不可用';
         document.getElementById('hero-updated').classList.add('status-bad');
       }
     }
