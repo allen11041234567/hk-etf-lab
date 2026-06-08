@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-08T05:07:16.364Z",
+  "fetchedAt": "2026-06-08T05:21:19.377Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
@@ -34,9 +34,9 @@
       "favourites_count": 0,
       "reblogs_count": 0,
       "replies_count": 0,
-      "content_zh_cn": "RT @realDonaldTrump",
-      "content_zh_hk": "RT @realDonaldTrump",
-      "content_ko": "RT @realDonaldTrump",
+      "content_zh_cn": "转发 @realDonaldTrump",
+      "content_zh_hk": "轉發 @realDonaldTrump",
+      "content_ko": "리트윗 @realDonaldTrump",
       "source_hint": "stock.fengle.me"
     },
     {
