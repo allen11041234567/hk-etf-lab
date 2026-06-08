@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116713960884981914": {
+    "content_zh_cn": "国会报告猛烈抨击明尼苏达州的沃尔兹、埃里森，指其对大规模福利欺诈“视而不见”：https://justthenews.com/accountability/waste-fraud-and-abuse/mon4ablind-eye-house-report-slams-minnesotas-walz-ellison",
+    "content_zh_hk": "國會報告猛烈抨擊明尼蘇達州的沃爾茲、埃里森，指其對大規模福利詐騙「視而不見」：https://justthenews.com/accountability/waste-fraud-and-abuse/mon4ablind-eye-house-report-slams-minnesotas-walz-ellison",
+    "content_ko": "의회 보고서, 미네소타주의 월즈와 엘리슨이 대규모 복지 사기에 ‘눈감았다’고 맹비난: https://justthenews.com/accountability/waste-fraud-and-abuse/mon4ablind-eye-house-report-slams-minnesotas-walz-ellison"
+  },
   "https://truthsocial.com/@realDonaldTrump/116713809450237814": {
     "content_zh_cn": "以色列和伊朗必须立即停止“交火”。\n\n总统 唐纳德·J·特朗普",
     "content_zh_hk": "以色列和伊朗必須立即停止「交火」。\n\n總統 唐納德·J·特朗普",
