@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-08T14:03:53.467608+00:00",
+  "fetchedAt": "2026-06-08T14:34:05.273544+00:00",
   "snapshots": [
     {
       "code": "000660",
@@ -112,7 +112,11 @@
       "price": "911.39",
       "changePct": "-9.08"
     },
-    "usdkrw": null,
+    "usdkrw": {
+      "value": "1,527.30",
+      "change": "32.20",
+      "direction": "�϶�"
+    },
     "semiconductorTone": "半导体龙头资金面整体偏弱"
   }
 }
