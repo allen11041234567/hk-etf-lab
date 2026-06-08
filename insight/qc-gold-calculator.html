@@ -116,7 +116,7 @@
         <div class="scope-banner">涉及金价的显示与测算，均适用于 <b>非品牌金</b>。如为贺利氏等品牌金，请单独询价，勿直接套用本页结果。</div>
       </div>
       <div class="hero-side">
-        <div class="mini-card"><div class="label">永丰参考价（USD/oz）</div><div class="value-xl" id="hero-price">--</div><div class="subline" id="hero-updated">等待实时金价接口</div></div>
+        <div class="mini-card"><div class="label">永丰参考价（USD/oz）</div><div class="value-xl" id="hero-price">--</div><div class="subline" id="hero-updated">等待参考金价同步</div></div>
         <div class="mini-card"><div class="label">工费规则</div><div class="value-xl">US$100 / 块</div><div class="subline">总工费封顶 US$1,000。买 10 块、20 块，封顶后总工费都按 1000 美元计算。</div></div>
       </div>
     </section>
@@ -299,7 +299,7 @@
       const summary = calcQuoteSummary(); renderItems(summary); renderSmartRecommendation(); if (!summary) return;
       document.getElementById('total-weight-oz').textContent = `${money(summary.totalOz, 4)} oz`; document.getElementById('total-weight-g').textContent = `约 ${money(summary.totalGrams, 2)} g`; document.getElementById('total-qty').textContent = `${summary.totalQty}`; document.getElementById('metal-total-usd').textContent = `US$${money(summary.metalTotalUsd)}`; document.getElementById('metal-total-hkd').textContent = `约 HK$${money(summary.metalTotalHkd)}`; document.getElementById('fee-usd').textContent = `US$${money(summary.feeUsd)}`; document.getElementById('fee-hkd').textContent = `约 HK$${money(summary.feeHkd)}`; document.getElementById('total-usd').textContent = `US$${money(summary.totalUsd)}`; document.getElementById('total-hkd').textContent = `约 HK$${money(summary.totalHkd)}`; document.getElementById('headline-total').textContent = `HK$${money(summary.totalHkd)}`; document.getElementById('headline-total-sub').textContent = `约合 US$${money(summary.totalUsd)}，按参考金价估算，实际交易报价以现场交易为准。`; document.getElementById('fee-banner').classList.toggle('show', summary.feeCapped); renderCompare(summary); persistReservationDraft(summary);
     }
-    function renderLive(payload) { const status = document.getElementById('live-status'); if (!payload?.ok || !Number.isFinite(payload.yongfeng_usd_oz)) { status.textContent='实时金价接口暂不可用'; status.parentElement.classList.add('status-bad'); document.getElementById('hero-price').textContent='--'; document.getElementById('hero-updated').textContent = payload?.error || '请稍后重试'; return; } status.textContent='实时金价接口已连接（30 秒刷新检查）'; status.parentElement.classList.remove('status-bad'); livePayload = payload; document.getElementById('hero-price').textContent = `US$${money(payload.yongfeng_usd_oz)}`; document.getElementById('hero-updated').textContent = `最近更新：${payload.updated_at || '--'}，汇率按 7.85 参考换算`; renderSummary(); }
+    function renderLive(payload) { const status = document.getElementById('live-status'); if (!payload?.ok || !Number.isFinite(payload.yongfeng_usd_oz)) { status.textContent='参考金价暂不可用'; status.parentElement.classList.add('status-bad'); document.getElementById('hero-price').textContent='--'; document.getElementById('hero-updated').textContent = '请稍后重试'; return; } status.textContent='参考金价已同步'; status.parentElement.classList.remove('status-bad'); livePayload = payload; document.getElementById('hero-price').textContent = `US$${money(payload.yongfeng_usd_oz)}`; document.getElementById('hero-updated').textContent = '汇率按 7.85 参考换算'; renderSummary(); }
     function renderJewellers(payload) { jewellersPayload = payload?.ok ? payload : null; renderSummary(); }
     async function fetchJsonWithFallback(primary, fallback) {
       try {
