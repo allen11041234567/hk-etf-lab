@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116716568733590358": {
+    "content_zh_cn": "我将于美国东部时间下午5:30举行一场现场电话拉票活动（TeleRally），为参议员林赛·格雷厄姆和南卡罗来纳州州长候选人帕梅拉·埃维特助选——他们都获得了我完全且毫无保留的支持。他们绝不会让你们失望！请投票支持林赛和帕姆。他们热爱伟大的南卡罗来纳州人民，我也一样！！！总统 DJT",
+    "content_zh_hk": "我將於美國東部時間下午5:30舉行一場現場電話拉票活動（TeleRally），為參議員林賽·格雷厄姆和南卡羅來納州州長候選人帕梅拉·埃維特助選——他們都獲得了我完全且毫無保留的支持。他們絕不會讓你們失望！請投票支持林賽和帕姆。他們熱愛偉大的南卡羅來納州人民，我也一樣！！！總統 DJT",
+    "content_ko": "저는 미 동부시간 오후 5시 30분에 린지 그레이엄 상원의원과 사우스캐롤라이나 주지사 후보 팸엘라 에벳을 위한 라이브 텔레랠리(TeleRally)를 진행할 것입니다 — 두 사람 모두 저의 전적인, 그리고 완전한 지지를 받고 있습니다. 이들은 결코 여러분을 실망시키지 않을 것입니다! 린지와 팸에게 투표해 주십시오. 이들은 위대한 사우스캐롤라이나의 주민들을 사랑하며, 저도 마찬가지입니다!!! 대통령 DJT"
+  },
   "https://truthsocial.com/@realDonaldTrump/116716431302721375": {
     "content_zh_cn": "特朗普总统痛批“名义上的共和党人”（RINO）参议员蒂利斯，在对记者的激烈表态中称其为“失败者”（视频）：https://www.thegatewaypundit.com/2026/06/president-trump-blasts-rino-senator-tillis-as-loser/",
     "content_zh_hk": "特朗普總統痛斥「名義上的共和黨人」（RINO）參議員蒂利斯，在向記者發表的猛烈言論中稱其為「失敗者」（影片）：https://www.thegatewaypundit.com/2026/06/president-trump-blasts-rino-senator-tillis-as-loser/",
