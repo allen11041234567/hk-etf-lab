@@ -1,0 +1,37 @@
+{
+  "ok": true,
+  "source": "hkgoldking-html",
+  "source_url": "https://www.hkgoldking.com/?lang=zh",
+  "fetched_via": "direct-html",
+  "date": "2026-06-08",
+  "updated_at": "2026-06-08 17:00:18",
+  "unit": "HKD/tael",
+  "shops": [
+    {
+      "key": "chow_tai_fook",
+      "name": "周大福",
+      "buy_hkd_tael": 39974.0,
+      "sell_hkd_tael": 48733.0,
+      "source": "hkgoldking-html",
+      "source_url": "https://www.hkgoldking.com/?lang=zh"
+    },
+    {
+      "key": "chow_sang_sang",
+      "name": "周生生",
+      "buy_hkd_tael": 39490.0,
+      "sell_hkd_tael": 48750.0,
+      "source": "hkgoldking-html",
+      "source_url": "https://www.hkgoldking.com/?lang=zh"
+    },
+    {
+      "key": "lukfook",
+      "name": "六福",
+      "buy_hkd_tael": 39989.0,
+      "sell_hkd_tael": 48748.0,
+      "source": "hkgoldking-html",
+      "source_url": "https://www.hkgoldking.com/?lang=zh"
+    }
+  ],
+  "snapshot_at": "2026-06-08T12:58:57.271330+00:00",
+  "snapshot_ttl_seconds": 1800
+}

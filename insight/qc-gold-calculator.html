@@ -186,7 +186,7 @@
 
   <script>
     const CONFIG = {
-      liveApi: '/api/gold/live', jewellersApi: '/api/gold/hk-jewellers', fxUsdHkd: 7.85, gramsPerOunce: 31.1035, taelGrams: 37.429,
+      liveApi: '/api/gold/live', jewellersApi: '/api/gold/hk-jewellers', staticLiveJson: '/assets/data/gold-live.json', staticJewellersJson: '/assets/data/gold-hk-jewellers.json', fxUsdHkd: 7.85, gramsPerOunce: 31.1035, taelGrams: 37.429,
       feePerBarUsd: 100, feeCapUsd: 1000, refreshMs: 30000, storageKey: 'qcGoldReservationDraft', confirmUrl: './qc-gold-reservation-check.html',
       specs: { oz1:{ key:'oz1', label:'1 oz 金块', grams:31.1035 }, g50:{ key:'g50', label:'50 g 金块', grams:50 }, g100:{ key:'g100', label:'100 g 金块', grams:100 }, g200:{ key:'g200', label:'200 g 金块', grams:200 } },
       jewellerPriority: ['周大福','周生生','六福'],
@@ -301,8 +301,21 @@
     }
     function renderLive(payload) { const status = document.getElementById('live-status'); if (!payload?.ok || !Number.isFinite(payload.yongfeng_usd_oz)) { status.textContent='实时金价接口暂不可用'; status.parentElement.classList.add('status-bad'); document.getElementById('hero-price').textContent='--'; document.getElementById('hero-updated').textContent = payload?.error || '请稍后重试'; return; } status.textContent='实时金价接口已连接（30 秒刷新检查）'; status.parentElement.classList.remove('status-bad'); livePayload = payload; document.getElementById('hero-price').textContent = `US$${money(payload.yongfeng_usd_oz)}`; document.getElementById('hero-updated').textContent = `最近更新：${payload.updated_at || '--'}，汇率按 7.85 参考换算`; renderSummary(); }
     function renderJewellers(payload) { jewellersPayload = payload?.ok ? payload : null; renderSummary(); }
-    async function loadLive() { try { const resp = await fetch(CONFIG.liveApi, { headers: { accept:'application/json' } }); const payload = await resp.json(); renderLive(payload); } catch (error) { renderLive({ ok:false, error:error.message || String(error) }); } }
-    async function loadJewellers() { try { const resp = await fetch(CONFIG.jewellersApi, { headers: { accept:'application/json' } }); const payload = await resp.json(); renderJewellers(payload); } catch (error) { renderJewellers({ ok:false, error:error.message || String(error) }); } }
+    async function fetchJsonWithFallback(primary, fallback) {
+      try {
+        const resp = await fetch(primary, { headers: { accept:'application/json' }, cache:'no-store' });
+        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+        const payload = await resp.json();
+        if (!payload?.ok) throw new Error(payload?.error || 'primary not ok');
+        return payload;
+      } catch (_) {
+        const resp = await fetch(fallback, { headers: { accept:'application/json' }, cache:'no-store' });
+        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+        return await resp.json();
+      }
+    }
+    async function loadLive() { try { const payload = await fetchJsonWithFallback(CONFIG.staticLiveJson, CONFIG.liveApi); renderLive(payload); } catch (error) { renderLive({ ok:false, error:error.message || String(error) }); } }
+    async function loadJewellers() { try { const payload = await fetchJsonWithFallback(CONFIG.staticJewellersJson, CONFIG.jewellersApi); renderJewellers(payload); } catch (error) { renderJewellers({ ok:false, error:error.message || String(error) }); } }
     function addItem() { quoteItems.push({ id:`item-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`, specKey:document.getElementById('spec').value, quantity:getDraftQty() }); renderSummary(); }
     function setMode(mode) {
       const manual = document.getElementById('manual-box');
