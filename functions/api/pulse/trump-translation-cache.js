@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116722436233594406": {
+    "content_zh_cn": "与图尔西·加巴德密切合作的威廉·普尔特，将于6月19日（星期五）出任代理国家情报总监。\n他将继续担任联邦住房金融局局长，并兼任房利美/房地美董事长。\n感谢对此事的关注！\n唐纳德·J·特朗普 总统",
+    "content_zh_hk": "與圖爾西·加巴德密切合作的威廉·普爾特，將於6月19日（星期五）出任代理國家情報總監。\n他將繼續擔任聯邦住房金融局局長，並兼任房利美／房地美董事長。\n感謝對此事的關注！\n唐納德·J·特朗普 總統",
+    "content_ko": "툴시 개버드와 긴밀히 협력하고 있는 윌리엄 펄트가 6월 19일 금요일부로 국가정보국장 대행을 맡게 됩니다.\n그는 연방주택금융청(FHFA) 청장직과 패니메이/프레디맥 이사회 의장직도 계속 유지합니다.\n이 사안에 관심을 가져주셔서 감사합니다!\n도널드 J. 트럼프 대통령"
+  },
   "https://truthsocial.com/@realDonaldTrump/116722383986616231": {
     "content_zh_cn": "创纪录的3271亿美元出口帮助美国贸易逆差收窄：https://dallasexpress.com/national/record-327-1-billion-exports-help-shrink-u-s-trade-deficit-in-april/",
     "content_zh_hk": "創紀錄的3271億美元出口幫助美國貿易逆差收窄：https://dallasexpress.com/national/record-327-1-billion-exports-help-shrink-u-s-trade-deficit-in-april/",
