@@ -322,6 +322,8 @@
     </article>
   </template>
   <script>
+    const SNAPSHOT_FEED = '/api/pulse/korea-tech-briefing-snapshot';
+    const STATIC_SNAPSHOT_FEED = '/assets/data/korea-tech-briefing-snapshot.json';
     const FEED = '/api/pulse/brief?codes=000660,005930';
     const INVESTOR_FEED = '/api/pulse/korea-investor-daily?codes=000660,005930';
     const STATIC_FEED = '/assets/data/korea-brief.json';
@@ -419,8 +421,7 @@
     function renderInvestor(snapshot){ investorMap.set(snapshot.code, snapshot); const card=ensureCard(snapshot.code); card.querySelector('.foreign-net').textContent = fmtShares(snapshot.foreignNetToday); card.querySelector('.institution-net').textContent = fmtShares(snapshot.institutionNetToday); card.querySelector('.foreign-rate').textContent = zhText(snapshot.foreignHoldingRate || '--'); card.querySelector('.foreign-rate-delta').textContent = snapshot.foreignHoldingRateDelta == null ? '' : ` （较昨日${snapshot.foreignHoldingRateDelta>0?'+':''}${snapshot.foreignHoldingRateDelta.toFixed(2)}pct）`; card.querySelector('.week52-position').textContent = zhText(snapshot.week52Position || '--'); card.querySelector('.volume-trend').textContent = zhText(snapshot.volumeTrend || '--'); card.querySelector('.foreign-trend').textContent = zhText(snapshot.foreign5dTrend || '--'); card.querySelector('.institution-trend').textContent = zhText(snapshot.institution5dTrend || '--'); card.querySelector('.trend-table').innerHTML = (snapshot.recentTrendRows||[]).map((row)=>`<div>${row.date}｜${zhText(row.pct || '--')}｜外资 ${zhText(row.foreignNet)}｜机构 ${zhText(row.institutionNet)}｜散户 ${zhText(row.retailNet)}</div>`).join('') || '--'; }
     function renderQuote(quote){ const card=ensureCard(quote.code); previousMap.set(quote.code,quote); card.querySelector('.code').textContent=`${quote.code} · 韩股`; card.querySelector('.name').textContent=zhText(quote.name); const community=card.querySelector('.community-link'); community.innerHTML='<img src="/assets/qr/group-chat-20260520-v2.jpg" alt="群聊二维码" /><span>扫码加入群聊</span>'; card.querySelector('.price').textContent=quote.unavailable?'加载失败':fmtNumber(quote.current); const dayEl=card.querySelector('.day-change'); dayEl.className=`day-change ${getDirectionClass(quote.dayChange)}`; dayEl.textContent=quote.unavailable?'数据暂不可用':`当日涨跌 ${fmtSigned(quote.dayChange)} · ${fmtPct(quote.dayChangePercent)}`; const phaseText = quote.unavailable?'交易状态：--':marketPhaseText(quote.market, quote.localTradedAt); card.querySelector('.market-phase').textContent=phaseText; card.querySelector('.open').textContent=fmtNumber(quote.open); card.querySelector('.previous-close').textContent=fmtNumber(quote.previousClose); card.querySelector('.high').textContent=fmtNumber(quote.high); card.querySelector('.low').textContent=fmtNumber(quote.low); card.querySelector('.value').textContent=fmtKrwMillion(quote.value); card.querySelector('.week52-range').textContent=`${zhText(quote.week52High || '--')} / ${zhText(quote.week52Low || '--')}`; card.querySelector('.per-eps').textContent=`${zhText(quote.per || '--')} / ${zhText(quote.eps || '--')}`; card.querySelector('.pbr-bps').textContent=`${zhText(quote.pbr || '--')} / ${zhText(quote.bps || '--')}`; const quickEl = quote.code === '000660' ? document.getElementById('quick-hynix') : (quote.code === '005930' ? document.getElementById('quick-samsung') : null); if (quickEl) { quickEl.className = `quick-value ${getDirectionClass(quote.dayChange)}`; if(phaseText === '交易状态：开盘前' && Number(quote.dayChangePercent || 0) === 0){ quickEl.className = 'quick-value flat'; } quickEl.textContent = quote.unavailable ? '--' : fmtPct(quote.dayChangePercent); } card.querySelector('.refresh-text').textContent = '每15秒自动更新'; updateChart(card, !card.dataset.initialized); card.dataset.initialized='1'; const investor = investorMap.get(quote.code); if(investor) renderInvestor(investor); }
     async function fetchJsonWithFallback(primary, fallback){ try{ const resp=await fetch(primary,{cache:'no-store'}); if(!resp.ok) throw new Error(`HTTP ${resp.status}`); const data=await resp.json(); if(!data.ok) throw new Error(data.error||'unknown error'); return data; }catch(_){ const resp=await fetch(fallback,{cache:'no-store'}); if(!resp.ok) throw new Error(`HTTP ${resp.status}`); return await resp.json(); } }
-    async function refreshInvestor(){ try{ const data=await fetchJsonWithFallback(INVESTOR_FEED, STATIC_INVESTOR_FEED); renderMarketSummary(data.marketSummary); for(const snapshot of data.snapshots||[]) renderInvestor(snapshot); }catch(error){ console.error('investor refresh failed', error); } }
-    async function refresh(){ if(document.hidden) return; try{ const data=await fetchJsonWithFallback(FEED, STATIC_FEED); errorBox.style.display='none'; for(const quote of data.quotes) renderQuote(quote); updateLiveTime(new Date()); }catch(error){ errorBox.textContent='当前数据更新稍慢，请稍后刷新重试'; errorBox.style.display='block'; } }
+    async function refreshAll(){ if(document.hidden) return; try{ const data=await fetchJsonWithFallback(SNAPSHOT_FEED, STATIC_SNAPSHOT_FEED); errorBox.style.display='none'; for(const quote of data.quotes||[]) renderQuote(quote); if(data.marketSummary) renderMarketSummary(data.marketSummary); for(const snapshot of data.snapshots||[]) renderInvestor(snapshot); updateLiveTime(new Date()); }catch(error){ errorBox.textContent='当前数据更新稍慢，请稍后刷新重试'; errorBox.style.display='block'; } }
     function stopPolling(){
       if(refreshTimer){ clearInterval(refreshTimer); refreshTimer = null; }
       if(investorTimer){ clearInterval(investorTimer); investorTimer = null; }
@@ -428,10 +429,9 @@
     function startPolling(){
       stopPolling();
       if(document.hidden) return;
-      refresh();
-      refreshInvestor();
-      refreshTimer = setInterval(()=>{ if(!document.hidden) refresh(); }, REFRESH_MS);
-      investorTimer = setInterval(()=>{ if(!document.hidden) refreshInvestor(); }, INVESTOR_REFRESH_MS);
+      refreshAll();
+      refreshTimer = setInterval(()=>{ if(!document.hidden) refreshAll(); }, REFRESH_MS);
+      investorTimer = setInterval(()=>{ if(!document.hidden) refreshAll(); }, INVESTOR_REFRESH_MS);
     }
     document.querySelectorAll('.switch-btn').forEach((btn)=>btn.addEventListener('click',()=>applyCardVisibility(btn.dataset.targetCode)));
     document.addEventListener('visibilitychange',()=>{ if(document.hidden) stopPolling(); else startPolling(); });
