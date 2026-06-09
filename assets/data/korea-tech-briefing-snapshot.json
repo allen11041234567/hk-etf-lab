@@ -1,6 +1,67 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-09T00:50:40.850926+00:00",
+  "fetchedAt": "2026-06-09T00:50:42.201344+00:00",
+  "quotes": [
+    {
+      "code": "000660",
+      "name": "SK海力士",
+      "market": "OPEN",
+      "current": 2042000.0,
+      "previousClose": 1911000.0,
+      "dayChange": 131000.0,
+      "dayChangePercent": 6.86,
+      "open": 2050000.0,
+      "high": 2066000.0,
+      "low": 2007000.0,
+      "value": 2384243523500.0,
+      "week52High": "2,470,000",
+      "week52Low": "227,500",
+      "per": "19.72배",
+      "eps": "103,521원",
+      "pbr": "8.58배",
+      "bps": "237,789원",
+      "localTradedAt": "2026-06-09T09:50:01+09:00",
+      "source": "static-snapshot"
+    },
+    {
+      "code": "005930",
+      "name": "三星电子",
+      "market": "OPEN",
+      "current": 306500.0,
+      "previousClose": 295500.0,
+      "dayChange": 11000.0,
+      "dayChangePercent": 3.72,
+      "open": 310000.0,
+      "high": 312000.0,
+      "low": 303000.0,
+      "value": 1778467178750.0,
+      "week52High": "377,000",
+      "week52Low": "56,900",
+      "per": "24.77배",
+      "eps": "12,372원",
+      "pbr": "4.26배",
+      "bps": "71,907원",
+      "localTradedAt": "2026-06-09T09:50:22+09:00",
+      "source": "static-snapshot"
+    }
+  ],
+  "marketSummary": {
+    "kospi": {
+      "price": "7,747.52",
+      "changePct": "3.52"
+    },
+    "kosdaq": {
+      "price": "964.03",
+      "changePct": "5.78"
+    },
+    "usdkrw": {
+      "value": "1,522.70",
+      "change": "5.10",
+      "direction": "上涨",
+      "rawDirection": "�϶�"
+    },
+    "semiconductorTone": "半导体龙头资金面整体偏弱"
+  },
   "snapshots": [
     {
       "code": "000660",
@@ -103,21 +164,8 @@
       ]
     }
   ],
-  "marketSummary": {
-    "kospi": {
-      "price": "7,747.52",
-      "changePct": "3.52"
-    },
-    "kosdaq": {
-      "price": "964.03",
-      "changePct": "5.78"
-    },
-    "usdkrw": {
-      "value": "1,522.70",
-      "change": "5.10",
-      "direction": "上涨",
-      "rawDirection": "�϶�"
-    },
-    "semiconductorTone": "半导体龙头资金面整体偏弱"
+  "sources": {
+    "brief": "static-snapshot",
+    "investor": "static-snapshot"
   }
 }
