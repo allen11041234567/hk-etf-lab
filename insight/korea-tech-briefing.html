@@ -327,13 +327,15 @@
     const STATIC_FEED = '/assets/data/korea-brief.json';
     const STATIC_INVESTOR_FEED = '/assets/data/korea-investor-daily.json';
     const CHART = '/api/pulse/chart-image';
-    const REFRESH_MS = 15000;
-    const INVESTOR_REFRESH_MS = 3600000;
+    const REFRESH_MS = 60000;
+    const INVESTOR_REFRESH_MS = 900000;
     const CARD_ORDER = ['000660', '005930'];
     const previousMap = new Map();
     const investorMap = new Map();
     const cardsEl = document.getElementById('cards');
     let latestRefreshTs = null;
+    let refreshTimer = null;
+    let investorTimer = null;
     const tpl = document.getElementById('card-template');
     const errorBox = document.getElementById('error-box');
     function fmtNumber(value){ return new Intl.NumberFormat('en-US').format(Math.round(value || 0)); }
@@ -419,9 +421,22 @@
     async function fetchJsonWithFallback(primary, fallback){ try{ const resp=await fetch(primary,{cache:'no-store'}); if(!resp.ok) throw new Error(`HTTP ${resp.status}`); const data=await resp.json(); if(!data.ok) throw new Error(data.error||'unknown error'); return data; }catch(_){ const resp=await fetch(fallback,{cache:'no-store'}); if(!resp.ok) throw new Error(`HTTP ${resp.status}`); return await resp.json(); } }
     async function refreshInvestor(){ try{ const data=await fetchJsonWithFallback(INVESTOR_FEED, STATIC_INVESTOR_FEED); renderMarketSummary(data.marketSummary); for(const snapshot of data.snapshots||[]) renderInvestor(snapshot); }catch(error){ console.error('investor refresh failed', error); } }
     async function refresh(){ if(document.hidden) return; try{ const data=await fetchJsonWithFallback(FEED, STATIC_FEED); errorBox.style.display='none'; for(const quote of data.quotes) renderQuote(quote); updateLiveTime(new Date()); }catch(error){ errorBox.textContent='当前数据更新稍慢，请稍后刷新重试'; errorBox.style.display='block'; } }
+    function stopPolling(){
+      if(refreshTimer){ clearInterval(refreshTimer); refreshTimer = null; }
+      if(investorTimer){ clearInterval(investorTimer); investorTimer = null; }
+    }
+    function startPolling(){
+      stopPolling();
+      if(document.hidden) return;
+      refresh();
+      refreshInvestor();
+      refreshTimer = setInterval(()=>{ if(!document.hidden) refresh(); }, REFRESH_MS);
+      investorTimer = setInterval(()=>{ if(!document.hidden) refreshInvestor(); }, INVESTOR_REFRESH_MS);
+    }
     document.querySelectorAll('.switch-btn').forEach((btn)=>btn.addEventListener('click',()=>applyCardVisibility(btn.dataset.targetCode)));
-    document.addEventListener('visibilitychange',()=>{ if(!document.hidden) { refresh(); refreshInvestor(); } });
-    refresh(); refreshInvestor(); setInterval(refresh, REFRESH_MS); setInterval(refreshInvestor, INVESTOR_REFRESH_MS); setTimeout(()=>applyCardVisibility('000660'), 0);
+    document.addEventListener('visibilitychange',()=>{ if(document.hidden) stopPolling(); else startPolling(); });
+    startPolling();
+    setTimeout(()=>applyCardVisibility('000660'), 0);
   </script>
 </body>
 </html>
