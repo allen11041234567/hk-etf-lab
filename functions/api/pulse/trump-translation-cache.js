@@ -1,4 +1,14 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116722383986616231": {
+    "content_zh_cn": "创纪录的3271亿美元出口帮助美国贸易逆差收窄：https://dallasexpress.com/national/record-327-1-billion-exports-help-shrink-u-s-trade-deficit-in-april/",
+    "content_zh_hk": "創紀錄的3271億美元出口幫助美國貿易逆差收窄：https://dallasexpress.com/national/record-327-1-billion-exports-help-shrink-u-s-trade-deficit-in-april/",
+    "content_ko": "사상 최대인 3,271억 달러 수출이 미국 무역적자 축소에 기여: https://dallasexpress.com/national/record-327-1-billion-exports-help-shrink-u-s-trade-deficit-in-april/"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116722381318407443": {
+    "content_zh_cn": "美国贸易逆差创近34年来最大增幅：https://www.reuters.com/business/us-trade-deficit-widens-by-most-nearly-34-years-november-2026-01-29/",
+    "content_zh_hk": "美國貿易逆差創近34年來最大增幅：https://www.reuters.com/business/us-trade-deficit-widens-by-most-nearly-34-years-november-2026-01-29/",
+    "content_ko": "미국 무역적자, 약 34년 만에 최대 폭으로 확대: https://www.reuters.com/business/us-trade-deficit-widens-by-most-nearly-34-years-november-2026-01-29/"
+  },
   "https://truthsocial.com/@realDonaldTrump/116721129088347687": {
     "content_zh_cn": "我刚刚获悉，我们伟大的军队通报称，昨晚伊朗方面在霍尔木兹海峡上空巡逻期间，击落了我方一架高度先进的阿帕奇直升机。机上共有两名飞行员，目前两人均安全且未受伤。\n\n尽管如此，美国必须对此次袭击作出回应。感谢各方关注此事！\n\n总统 唐纳德·J·特朗普",
     "content_zh_hk": "我剛剛獲悉，我們偉大的軍隊通報稱，昨晚伊朗方面在霍爾木茲海峽上空巡邏期間，擊落了我方一架高度先進的阿帕奇直升機。機上共有兩名飛行員，目前兩人均安全且未受傷。\n\n儘管如此，美國必須對此次襲擊作出回應。感謝各方關注此事！\n\n總統 唐納德·J·特朗普",
