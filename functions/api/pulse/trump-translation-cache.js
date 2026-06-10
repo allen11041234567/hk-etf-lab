@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116725365354632342": {
+    "content_zh_cn": "斯蒂芬·A·史密斯是个傲慢的蠢货，智商低下。换句话说，他就是“蠢得像块石头”，完全没有资格动念去竞选高级政治公职——甚至连低级政治职位也不够格！哪怕是面对最无能的政客，他在辩论中也会被彻底击垮。相比之下，乔·拜登如今那场“广为流传”的表现看起来都会相当出色；至于这个聒噪的江湖骗子能拿出来的东西，根本乏善可陈！用不了几个星期，他就会被人一路嘲笑着赶出政坛！！！",
+    "content_zh_hk": "史蒂芬·A·史密斯係個傲慢嘅蠢材，智商低下。換句話講，佢就係「蠢到好似舊石咁」，根本冇資格諗住去競逐高級政治公職——甚至連低層政治職位都唔夠格！就算對上最無能嘅政客，佢喺辯論入面都會畀人徹底擊潰。相比之下，喬·拜登如今嗰場「廣為流傳」嘅表現，睇落都會相當唔錯；至於呢個大聲夾惡、招搖撞騙嘅江湖術士攞得出手嘅嘢，其實少之又少！唔使幾個星期，佢就會畀人一路恥笑，最終被逐出政壇！！！",
+    "content_ko": "스티븐 A. 스미스는 오만한 바보이자 IQ가 낮은 사람이다. 다시 말해 그는 “돌처럼 멍청한” 인물이며, 고위 공직은 물론이고 그보다 낮은 정치직에 출마할 생각조차 할 자격이 전혀 없다! 가장 무능한 정치인과의 토론에서도 그는 처참하게 박살 날 것이다. 그와 비교하면 조 바이든의 이제는 “전설적”이라고까지 불리는 그 퍼포먼스마저 훨씬 좋아 보일 정도이며, 이 떠벌이 사기꾼이 내놓을 수 있는 것은 별로 없다! 몇 주만 지나면 그는 정치권에서 웃음거리로 전락해 쫓겨나게 될 것이다!!!"
+  },
   "https://truthsocial.com/@realDonaldTrump/116723667949197572": {
     "content_zh_cn": "关键参议员力推对议会议事顾问设任期限制，为选举法案扫清潜在通道：https://justthenews.com/government/congress/key-senator-presses-term-limit-parliamentarian-clear-possible-path-election-law",
     "content_zh_hk": "關鍵參議員力推對議會議事顧問設任期限制，為選舉法案掃清潛在通道：https://justthenews.com/government/congress/key-senator-presses-term-limit-parliamentarian-clear-possible-path-election-law",
