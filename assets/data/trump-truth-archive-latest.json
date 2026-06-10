@@ -1,10 +1,32 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-10T10:19:43.908Z",
+  "fetchedAt": "2026-06-10T10:33:10.648Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
   "posts": [
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116725304674001742",
+      "url": "https://truthsocial.com/@realDonaldTrump/116725304674001742",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-10T10:20:02.342Z",
+      "created_at_text": "Jun 10, 2026, 10:20 AM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjY4L2FhODM5MmNjYTRiNzc1YmMucG5n",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 553,
+      "reblogs_count": 124,
+      "replies_count": 57,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "stock.fengle.me"
+    },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116723667949197572",
       "url": "https://truthsocial.com/@realDonaldTrump/116723667949197572",
@@ -206,8 +228,8 @@
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-06-10T00:28:05.533Z",
       "created_at_text": "Jun 10, 2026, 12:28 AM",
-      "content": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116722993359636132\nPreview",
-      "content_html": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116722993359636132\nPreview",
+      "content": "",
+      "content_html": "",
       "media": [
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjQ2LzFmNDQ5NjAyOWM0NzdjNGMuanBn",
@@ -217,10 +239,10 @@
       "favourites_count": 7144,
       "reblogs_count": 1460,
       "replies_count": 136,
-      "content_zh_cn": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116722993359636132\nPreview",
-      "content_zh_hk": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116722993359636132\nPreview",
-      "content_ko": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116722993359636132\nPreview",
-      "source_hint": "stock.fengle.me"
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116722976514811476",
@@ -403,23 +425,6 @@
       "content_zh_cn": "美国贸易逆差创近34年来最大增幅：https://www.reuters.com/business/us-trade-deficit-widens-by-most-nearly-34-years-november-2026-01-29/",
       "content_zh_hk": "美國貿易逆差創近34年來最大增幅：https://www.reuters.com/business/us-trade-deficit-widens-by-most-nearly-34-years-november-2026-01-29/",
       "content_ko": "미국 무역적자, 약 34년 만에 최대 폭으로 확대: https://www.reuters.com/business/us-trade-deficit-widens-by-most-nearly-34-years-november-2026-01-29/",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116721129088347687",
-      "url": "https://truthsocial.com/@realDonaldTrump/116721129088347687",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-09T16:38:07.892Z",
-      "created_at_text": "Jun 9, 2026, 4:38 PM",
-      "content": "I have just been informed by our Great Military that last night the Iranians shot down one of our highly sophisticated Apache Helicopters while patrolling over the Strait of Hormuz. There were two pilots involved, both are safe and uninjured. Nevertheless, the United States must, of necessity, respond to this attack. Thank you for your attention to this matter! President DONALD J. TRUMP",
-      "content_html": "I have just been informed by our Great Military that last night the Iranians shot down one of our highly sophisticated Apache Helicopters while patrolling over the Strait of Hormuz. There were two pilots involved, both are safe and uninjured. Nevertheless, the United States must, of necessity, respond to this attack. Thank you for your attention to this matter! President DONALD J. TRUMP",
-      "media": [],
-      "favourites_count": 44584,
-      "reblogs_count": 10418,
-      "replies_count": 12275,
-      "content_zh_cn": "我刚刚获悉，我们伟大的军队通报称，昨晚伊朗方面在霍尔木兹海峡上空巡逻期间，击落了我方一架高度先进的阿帕奇直升机。机上共有两名飞行员，目前两人均安全且未受伤。\n\n尽管如此，美国必须对此次袭击作出回应。感谢各方关注此事！\n\n总统 唐纳德·J·特朗普",
-      "content_zh_hk": "我剛剛獲悉，我們偉大的軍隊通報稱，昨晚伊朗方面在霍爾木茲海峽上空巡邏期間，擊落了我方一架高度先進的阿帕奇直升機。機上共有兩名飛行員，目前兩人均安全且未受傷。\n\n儘管如此，美國必須對此次襲擊作出回應。感謝各方關注此事！\n\n總統 唐納德·J·特朗普",
-      "content_ko": "방금 우리 위대한 군으로부터 보고를 받았습니다. 어젯밤 이란이 호르무즈 해협 상공을 순찰하던 우리 측의 최첨단 아파치 헬리콥터 1대를 격추했습니다. 조종사는 2명이었으며, 두 사람 모두 안전하고 부상도 없습니다.\n\n그럼에도 불구하고, 미국은 이 공격에 반드시 대응해야 합니다. 이 사안에 대한 관심에 감사드립니다!\n\n대통령 도널드 J. 트럼프",
       "source_hint": "cnn"
     }
   ]
