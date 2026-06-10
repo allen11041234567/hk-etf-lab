@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-10T11:49:25.176Z",
+  "fetchedAt": "2026-06-10T12:05:10.958Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
@@ -79,8 +79,8 @@
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-06-10T10:20:02.342Z",
       "created_at_text": "Jun 10, 2026, 10:20 AM",
-      "content": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116723479960785181",
-      "content_html": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116723479960785181",
+      "content": "",
+      "content_html": "",
       "media": [
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjY4L2FhODM5MmNjYTRiNzc1YmMucG5n",
@@ -90,9 +90,9 @@
       "favourites_count": 5005,
       "reblogs_count": 1016,
       "replies_count": 286,
-      "content_zh_cn": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116723479960785181",
-      "content_zh_hk": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116723479960785181",
-      "content_ko": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116723479960785181",
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
       "source_hint": "stock.fengle.me"
     },
     {
@@ -123,8 +123,8 @@
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-06-10T10:19:21.257Z",
       "created_at_text": "Jun 10, 2026, 10:19 AM",
-      "content": "Congratulations to Senator Lindsey Graham of the Great State of South Carolina on his BIG WIN tonight. With almost 60% of the vote against a large field of very capable candidates, there will be no runoff. Now Lindsey will be able to devote his time to passing the desperately needed, and long overdue, SAVE AMERICA ACT! President DJT",
-      "content_html": "Congratulations to Senator Lindsey Graham of the Great State of South Carolina on his BIG WIN tonight. With almost 60% of the vote against a large field of very capable candidates, there will be no runoff. Now Lindsey will be able to devote his time to passing the desperately needed, and long overdue, SAVE AMERICA ACT! President DJT",
+      "content": "",
+      "content_html": "",
       "media": [
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjYyLzU3MjQ0NmJkZTQ0YzY3MjcuanBn",
@@ -134,9 +134,9 @@
       "favourites_count": 2749,
       "reblogs_count": 461,
       "replies_count": 30,
-      "content_zh_cn": "Congratulations to Senator Lindsey Graham of the Great State of South Carolina on his BIG WIN tonight. With almost 60% of the vote against a large field of very capable candidates, there will be no runoff. Now Lindsey will be able to devote his time to passing the desperately needed, and long overdue, SAVE AMERICA ACT! President DJT",
-      "content_zh_hk": "Congratulations to Senator Lindsey Graham of the Great State of South Carolina on his BIG WIN tonight. With almost 60% of the vote against a large field of very capable candidates, there will be no runoff. Now Lindsey will be able to devote his time to passing the desperately needed, and long overdue, SAVE AMERICA ACT! President DJT",
-      "content_ko": "Congratulations to Senator Lindsey Graham of the Great State of South Carolina on his BIG WIN tonight. With almost 60% of the vote against a large field of very capable candidates, there will be no runoff. Now Lindsey will be able to devote his time to passing the desperately needed, and long overdue, SAVE AMERICA ACT! President DJT",
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
       "source_hint": "stock.fengle.me"
     },
     {
