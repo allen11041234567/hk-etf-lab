@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116726011433927314": {
+    "content_zh_cn": "出现反转：特朗普任期结束后，海湖庄园直升机停机坪将予以保留：https://www.palmbeachpost.com/story/news/trump/2026/06/09/in-a-reversal-mar-a-lago-helipad-to-remain-past-end-of-trumps-term-palm-beach-florida/90455786007/",
+    "content_zh_hk": "出現反轉：特朗普任期結束後，海湖莊園直升機停機坪將予以保留：https://www.palmbeachpost.com/story/news/trump/2026/06/09/in-a-reversal-mar-a-lago-helipad-to-remain-past-end-of-trumps-term-palm-beach-florida/90455786007/",
+    "content_ko": "반전으로, 트럼프 임기 종료 후에도 마러라고의 헬리패드는 유지될 예정: https://www.palmbeachpost.com/story/news/trump/2026/06/09/in-a-reversal-mar-a-lago-helipad-to-remain-past-end-of-trumps-term-palm-beach-florida/90455786007/"
+  },
   "https://truthsocial.com/@realDonaldTrump/116725591109474316": {
     "content_zh_cn": "假新闻媒体拒绝报道美国海军封锁有多么有效，这是海战史上最成功的封锁。除非我们愿意，否则什么都别想通过。它就是一堵钢铁之墙！伊朗的生意归零，既发不出军饷，也付不起各类账单，并且正迅速沦为一个失败国家！大量石油正在外运。感谢真主！\n\n总统 唐纳德·J·特朗普",
     "content_zh_hk": "假新聞媒體拒絕報道美國海軍封鎖有多麼有效，這是海戰史上最成功的封鎖。除非我們願意，否則什麼都別想通過。它就是一道鋼鐵之牆！伊朗的生意歸零，既發不出軍餉，也付不起各類賬單，並且正迅速淪為一個失敗國家！大量石油正在外運。感謝真主！\n\n總統 唐納德·J·特朗普",
