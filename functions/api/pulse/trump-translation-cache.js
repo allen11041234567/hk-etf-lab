@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116723301122482300": {
+    "content_zh_cn": "祝贺伟大的南卡罗来纳州联邦参议员林赛·格雷厄姆今晚大获全胜。在多位实力强劲的候选人同场角逐下，他赢得了近60%的选票，因此无需进入第二轮投票。\n\n现在，林赛将能够把时间投入到推动迫切需要、且早该通过的《拯救美国法案》！特朗普总统",
+    "content_zh_hk": "祝賀來自偉大南卡羅來納州的聯邦參議員林賽·格雷厄姆今晚大勝而歸。在多位實力強勁的候選人同場競逐下，他取得近60%的選票，因此毋須進入第二輪投票。\n\n現在，林賽將能夠把時間投入推動迫切需要、且早應通過的《拯救美國法案》！特朗普總統",
+    "content_ko": "위대한 사우스캐롤라이나주의 린지 그레이엄 상원의원의 오늘 밤 대승을 축하합니다. 매우 유능한 후보들이 대거 출마한 가운데 거의 60%의 득표율을 얻었으므로, 결선투표는 없을 것입니다.\n\n이제 린지는 절실히 필요했고 오래전 통과됐어야 할 SAVE AMERICA ACT를 통과시키는 데 시간을 쏟을 수 있게 될 것입니다! DJT 대통령"
+  },
   "https://truthsocial.com/@realDonaldTrump/116723001472960111": {
     "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116722993359636132",
     "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116722993359636132",
