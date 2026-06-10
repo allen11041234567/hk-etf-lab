@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116723001472960111": {
+    "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116722993359636132",
+    "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116722993359636132",
+    "content_ko": "리트윗: https://truthsocial.com/users/realDonaldTrump/statuses/116722993359636132"
+  },
   "https://truthsocial.com/@realDonaldTrump/116722436233594406": {
     "content_zh_cn": "与图尔西·加巴德密切合作的威廉·普尔特，将于6月19日（星期五）出任代理国家情报总监。\n他将继续担任联邦住房金融局局长，并兼任房利美/房地美董事长。\n感谢对此事的关注！\n唐纳德·J·特朗普 总统",
     "content_zh_hk": "與圖爾西·加巴德密切合作的威廉·普爾特，將於6月19日（星期五）出任代理國家情報總監。\n他將繼續擔任聯邦住房金融局局長，並兼任房利美／房地美董事長。\n感謝對此事的關注！\n唐納德·J·特朗普 總統",
