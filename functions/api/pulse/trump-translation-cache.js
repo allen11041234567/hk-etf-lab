@@ -1,4 +1,14 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116723667949197572": {
+    "content_zh_cn": "关键参议员力推对议会议事顾问设任期限制，为选举法案扫清潜在通道：https://justthenews.com/government/congress/key-senator-presses-term-limit-parliamentarian-clear-possible-path-election-law",
+    "content_zh_hk": "關鍵參議員力推對議會議事顧問設任期限制，為選舉法案掃清潛在通道：https://justthenews.com/government/congress/key-senator-presses-term-limit-parliamentarian-clear-possible-path-election-law",
+    "content_ko": "핵심 상원의원, 의회 의사자문관 임기 제한 추진… 선거법 처리 가능 경로 열리나: https://justthenews.com/government/congress/key-senator-presses-term-limit-parliamentarian-clear-possible-path-election-law"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116723666009941892": {
+    "content_zh_cn": "JD·万斯将明尼苏达州欺诈及沃尔兹不作为的相关证据提交司法部，要求展开刑事调查：https://justthenews.com/accountability/waste-fraud-and-abuse/jd-vance-refers-evidence-minnesota-fraud-walz-inaction-doj",
+    "content_zh_hk": "JD·萬斯將明尼蘇達州欺詐及沃爾茲不作為的相關證據提交司法部，要求展開刑事調查：https://justthenews.com/accountability/waste-fraud-and-abuse/jd-vance-refers-evidence-minnesota-fraud-walz-inaction-doj",
+    "content_ko": "JD 밴스, 미네소타 사기 및 월즈의 미조치 관련 증거를 법무부에 회부… 형사 조사 요청: https://justthenews.com/accountability/waste-fraud-and-abuse/jd-vance-refers-evidence-minnesota-fraud-walz-inaction-doj"
+  },
   "https://truthsocial.com/@realDonaldTrump/116723301122482300": {
     "content_zh_cn": "祝贺伟大的南卡罗来纳州联邦参议员林赛·格雷厄姆今晚大获全胜。在多位实力强劲的候选人同场角逐下，他赢得了近60%的选票，因此无需进入第二轮投票。\n\n现在，林赛将能够把时间投入到推动迫切需要、且早该通过的《拯救美国法案》！特朗普总统",
     "content_zh_hk": "祝賀來自偉大南卡羅來納州的聯邦參議員林賽·格雷厄姆今晚大勝而歸。在多位實力強勁的候選人同場競逐下，他取得近60%的選票，因此毋須進入第二輪投票。\n\n現在，林賽將能夠把時間投入推動迫切需要、且早應通過的《拯救美國法案》！特朗普總統",
