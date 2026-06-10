@@ -1,10 +1,96 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-10T03:48:20.065Z",
+  "fetchedAt": "2026-06-10T04:03:32.071Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
   "posts": [
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116723667949197572",
+      "url": "https://truthsocial.com/@realDonaldTrump/116723667949197572",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-10T03:23:47.833Z",
+      "created_at_text": "Jun 10, 2026, 3:23 AM",
+      "content": "Key senator presses to term limit parliamentarian, clear possible path for election law: https://justthenews.com/government/congress/key-senator-presses-term-limit-parliamentarian-clear-possible-path-election-law",
+      "content_html": "Key senator presses to term limit parliamentarian, clear possible path for election law: https://justthenews.com/government/congress/key-senator-presses-term-limit-parliamentarian-clear-possible-path-election-law",
+      "media": [],
+      "favourites_count": 1864,
+      "reblogs_count": 575,
+      "replies_count": 183,
+      "content_zh_cn": "关键参议员力推对议会议事顾问设任期限制，为选举法案扫清潜在通道：https://justthenews.com/government/congress/key-senator-presses-term-limit-parliamentarian-clear-possible-path-election-law",
+      "content_zh_hk": "關鍵參議員力推對議會議事顧問設任期限制，為選舉法案掃清潛在通道：https://justthenews.com/government/congress/key-senator-presses-term-limit-parliamentarian-clear-possible-path-election-law",
+      "content_ko": "핵심 상원의원, 의회 의사자문관 임기 제한 추진… 선거법 처리 가능 경로 열리나: https://justthenews.com/government/congress/key-senator-presses-term-limit-parliamentarian-clear-possible-path-election-law",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116723666009941892",
+      "url": "https://truthsocial.com/@realDonaldTrump/116723666009941892",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-10T03:23:18.243Z",
+      "created_at_text": "Jun 10, 2026, 3:23 AM",
+      "content": "JD Vance refers evidence of Minnesota fraud, Walz inaction to DOJ for criminal inquiry: https://justthenews.com/accountability/waste-fraud-and-abuse/jd-vance-refers-evidence-minnesota-fraud-walz-inaction-doj",
+      "content_html": "JD Vance refers evidence of Minnesota fraud, Walz inaction to DOJ for criminal inquiry: https://justthenews.com/accountability/waste-fraud-and-abuse/jd-vance-refers-evidence-minnesota-fraud-walz-inaction-doj",
+      "media": [],
+      "favourites_count": 1928,
+      "reblogs_count": 562,
+      "replies_count": 144,
+      "content_zh_cn": "JD·万斯将明尼苏达州欺诈及沃尔兹不作为的相关证据提交司法部，要求展开刑事调查：https://justthenews.com/accountability/waste-fraud-and-abuse/jd-vance-refers-evidence-minnesota-fraud-walz-inaction-doj",
+      "content_zh_hk": "JD·萬斯將明尼蘇達州欺詐及沃爾茲不作為的相關證據提交司法部，要求展開刑事調查：https://justthenews.com/accountability/waste-fraud-and-abuse/jd-vance-refers-evidence-minnesota-fraud-walz-inaction-doj",
+      "content_ko": "JD 밴스, 미네소타 사기 및 월즈의 미조치 관련 증거를 법무부에 회부… 형사 조사 요청: https://justthenews.com/accountability/waste-fraud-and-abuse/jd-vance-refers-evidence-minnesota-fraud-walz-inaction-doj",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116723481501831841",
+      "url": "https://truthsocial.com/@realDonaldTrump/116723481501831841",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-10T02:36:22.874Z",
+      "created_at_text": "Jun 10, 2026, 2:36 AM",
+      "content": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116723480830148350",
+      "content_html": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116723480830148350",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi83MjMvNDgwLzU1NC83MDIvMzExL29yaWdpbmFsLzYwYWQwZmVkYTZlZjRjZjAubXA0",
+          "type": "video"
+        },
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjU4L2MxNmQyNjQ3Zjk2MDhkN2YucG5n",
+          "type": "image"
+        },
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjYwL2QxMzNhZDM1ZmZjYzhmM2YucG5n",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 4153,
+      "reblogs_count": 1242,
+      "replies_count": 590,
+      "content_zh_cn": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116723480830148350",
+      "content_zh_hk": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116723480830148350",
+      "content_ko": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116723480830148350",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116723479960785181",
+      "url": "https://truthsocial.com/@realDonaldTrump/116723479960785181",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-10T02:35:59.363Z",
+      "created_at_text": "Jun 10, 2026, 2:35 AM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjYwL2QxMzNhZDM1ZmZjYzhmM2YucG5n",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 3062,
+      "reblogs_count": 763,
+      "replies_count": 200,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "stock.fengle.me"
+    },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116723301122482300",
       "url": "https://truthsocial.com/@realDonaldTrump/116723301122482300",
@@ -14,9 +100,9 @@
       "content": "Congratulations to Senator Lindsey Graham of the Great State of South Carolina on his BIG WIN tonight. With almost 60% of the vote against a large field of very capable candidates, there will be no runoff. Now Lindsey will be able to devote his time to passing the desperately needed, and long overdue, SAVE AMERICA ACT! President DJT",
       "content_html": "Congratulations to Senator Lindsey Graham of the Great State of South Carolina on his BIG WIN tonight. With almost 60% of the vote against a large field of very capable candidates, there will be no runoff. Now Lindsey will be able to devote his time to passing the desperately needed, and long overdue, SAVE AMERICA ACT! President DJT",
       "media": [],
-      "favourites_count": 3669,
-      "reblogs_count": 896,
-      "replies_count": 736,
+      "favourites_count": 6226,
+      "reblogs_count": 1489,
+      "replies_count": 1068,
       "content_zh_cn": "祝贺伟大的南卡罗来纳州联邦参议员林赛·格雷厄姆今晚大获全胜。在多位实力强劲的候选人同场角逐下，他赢得了近60%的选票，因此无需进入第二轮投票。\n\n现在，林赛将能够把时间投入到推动迫切需要、且早该通过的《拯救美国法案》！特朗普总统",
       "content_zh_hk": "祝賀來自偉大南卡羅來納州的聯邦參議員林賽·格雷厄姆今晚大勝而歸。在多位實力強勁的候選人同場競逐下，他取得近60%的選票，因此毋須進入第二輪投票。\n\n現在，林賽將能夠把時間投入推動迫切需要、且早應通過的《拯救美國法案》！特朗普總統",
       "content_ko": "위대한 사우스캐롤라이나주의 린지 그레이엄 상원의원의 오늘 밤 대승을 축하합니다. 매우 유능한 후보들이 대거 출마한 가운데 거의 60%의 득표율을 얻었으므로, 결선투표는 없을 것입니다.\n\n이제 린지는 절실히 필요했고 오래전 통과됐어야 할 SAVE AMERICA ACT를 통과시키는 데 시간을 쏟을 수 있게 될 것입니다! DJT 대통령",
@@ -36,9 +122,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 4021,
-      "reblogs_count": 831,
-      "replies_count": 190,
+      "favourites_count": 5720,
+      "reblogs_count": 1165,
+      "replies_count": 213,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -58,9 +144,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 3956,
-      "reblogs_count": 821,
-      "replies_count": 103,
+      "favourites_count": 5668,
+      "reblogs_count": 1157,
+      "replies_count": 123,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -80,9 +166,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 3688,
-      "reblogs_count": 757,
-      "replies_count": 73,
+      "favourites_count": 5286,
+      "reblogs_count": 1074,
+      "replies_count": 90,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -106,9 +192,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 5270,
-      "reblogs_count": 1128,
-      "replies_count": 448,
+      "favourites_count": 6577,
+      "reblogs_count": 1383,
+      "replies_count": 485,
       "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116722993359636132",
       "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116722993359636132",
       "content_ko": "리트윗: https://truthsocial.com/users/realDonaldTrump/statuses/116722993359636132",
@@ -128,9 +214,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 5334,
-      "reblogs_count": 1096,
-      "replies_count": 120,
+      "favourites_count": 6465,
+      "reblogs_count": 1319,
+      "replies_count": 127,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -146,17 +232,17 @@
       "content_html": "",
       "media": [
         {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi83MjIvOTc2LzI3MS84NTYvOTQ4L29yaWdpbmFsLzBhZTk1OTQ3ZjIxMzNlNjkuanBn",
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjQ3LzBhZTk1OTQ3ZjIxMzNlNjkuanBn",
           "type": "image"
         }
       ],
-      "favourites_count": 4468,
-      "reblogs_count": 974,
-      "replies_count": 623,
+      "favourites_count": 5497,
+      "reblogs_count": 1181,
+      "replies_count": 674,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116722975862665108",
@@ -172,13 +258,13 @@
           "type": "image"
         }
       ],
-      "favourites_count": 4985,
-      "reblogs_count": 1024,
-      "replies_count": 66,
+      "favourites_count": 6100,
+      "reblogs_count": 1241,
+      "replies_count": 74,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116722975379289351",
@@ -194,13 +280,13 @@
           "type": "image"
         }
       ],
-      "favourites_count": 4948,
-      "reblogs_count": 995,
-      "replies_count": 70,
+      "favourites_count": 6042,
+      "reblogs_count": 1211,
+      "replies_count": 78,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116722974331493970",
@@ -216,13 +302,13 @@
           "type": "image"
         }
       ],
-      "favourites_count": 4883,
-      "reblogs_count": 973,
-      "replies_count": 60,
+      "favourites_count": 5966,
+      "reblogs_count": 1190,
+      "replies_count": 69,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116722973453210561",
@@ -238,9 +324,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 4903,
-      "reblogs_count": 985,
-      "replies_count": 74,
+      "favourites_count": 5978,
+      "reblogs_count": 1194,
+      "replies_count": 82,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -260,9 +346,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 4845,
-      "reblogs_count": 985,
-      "replies_count": 67,
+      "favourites_count": 5901,
+      "reblogs_count": 1191,
+      "replies_count": 76,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -277,9 +363,9 @@
       "content": "William Pulte, who is working closely with Tulsi Gabbard, will be taking over as Acting Director of National Intelligence on Friday, June 19th. He will remain as Director of the Federal Housing Finance Agency, and Chairman of Fannie Mae/Freddie Mac. Thank you for your attention to this matter! President DONALD J. TRUMP",
       "content_html": "William Pulte, who is working closely with Tulsi Gabbard, will be taking over as Acting Director of National Intelligence on Friday, June 19th. He will remain as Director of the Federal Housing Finance Agency, and Chairman of Fannie Mae/Freddie Mac. Thank you for your attention to this matter! President DONALD J. TRUMP",
       "media": [],
-      "favourites_count": 13729,
-      "reblogs_count": 3343,
-      "replies_count": 1120,
+      "favourites_count": 14706,
+      "reblogs_count": 3576,
+      "replies_count": 1138,
       "content_zh_cn": "与图尔西·加巴德密切合作的威廉·普尔特，将于6月19日（星期五）出任代理国家情报总监。\n他将继续担任联邦住房金融局局长，并兼任房利美/房地美董事长。\n感谢对此事的关注！\n唐纳德·J·特朗普 总统",
       "content_zh_hk": "與圖爾西·加巴德密切合作的威廉·普爾特，將於6月19日（星期五）出任代理國家情報總監。\n他將繼續擔任聯邦住房金融局局長，並兼任房利美／房地美董事長。\n感謝對此事的關注！\n唐納德·J·特朗普 總統",
       "content_ko": "툴시 개버드와 긴밀히 협력하고 있는 윌리엄 펄트가 6월 19일 금요일부로 국가정보국장 대행을 맡게 됩니다.\n그는 연방주택금융청(FHFA) 청장직과 패니메이/프레디맥 이사회 의장직도 계속 유지합니다.\n이 사안에 관심을 가져주셔서 감사합니다!\n도널드 J. 트럼프 대통령",
@@ -294,9 +380,9 @@
       "content": "Record $327.1 Billion Exports Help Shrink U.S. Trade Deficit: https://dallasexpress.com/national/record-327-1-billion-exports-help-shrink-u-s-trade-deficit-in-april/",
       "content_html": "Record $327.1 Billion Exports Help Shrink U.S. Trade Deficit: https://dallasexpress.com/national/record-327-1-billion-exports-help-shrink-u-s-trade-deficit-in-april/",
       "media": [],
-      "favourites_count": 9886,
-      "reblogs_count": 2512,
-      "replies_count": 437,
+      "favourites_count": 10617,
+      "reblogs_count": 2699,
+      "replies_count": 455,
       "content_zh_cn": "创纪录的3271亿美元出口帮助美国贸易逆差收窄：https://dallasexpress.com/national/record-327-1-billion-exports-help-shrink-u-s-trade-deficit-in-april/",
       "content_zh_hk": "創紀錄的3271億美元出口幫助美國貿易逆差收窄：https://dallasexpress.com/national/record-327-1-billion-exports-help-shrink-u-s-trade-deficit-in-april/",
       "content_ko": "사상 최대인 3,271억 달러 수출이 미국 무역적자 축소에 기여: https://dallasexpress.com/national/record-327-1-billion-exports-help-shrink-u-s-trade-deficit-in-april/",
@@ -334,88 +420,6 @@
       "content_zh_cn": "我刚刚获悉，我们伟大的军队通报称，昨晚伊朗方面在霍尔木兹海峡上空巡逻期间，击落了我方一架高度先进的阿帕奇直升机。机上共有两名飞行员，目前两人均安全且未受伤。\n\n尽管如此，美国必须对此次袭击作出回应。感谢各方关注此事！\n\n总统 唐纳德·J·特朗普",
       "content_zh_hk": "我剛剛獲悉，我們偉大的軍隊通報稱，昨晚伊朗方面在霍爾木茲海峽上空巡邏期間，擊落了我方一架高度先進的阿帕奇直升機。機上共有兩名飛行員，目前兩人均安全且未受傷。\n\n儘管如此，美國必須對此次襲擊作出回應。感謝各方關注此事！\n\n總統 唐納德·J·特朗普",
       "content_ko": "방금 우리 위대한 군으로부터 보고를 받았습니다. 어젯밤 이란이 호르무즈 해협 상공을 순찰하던 우리 측의 최첨단 아파치 헬리콥터 1대를 격추했습니다. 조종사는 2명이었으며, 두 사람 모두 안전하고 부상도 없습니다.\n\n그럼에도 불구하고, 미국은 이 공격에 반드시 대응해야 합니다. 이 사안에 대한 관심에 감사드립니다!\n\n대통령 도널드 J. 트럼프",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116718664107165673",
-      "url": "https://truthsocial.com/@realDonaldTrump/116718664107165673",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-09T06:11:15.270Z",
-      "created_at_text": "Jun 9, 2026, 6:11 AM",
-      "content": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116718662947146337",
-      "content_html": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116718662947146337",
-      "media": [
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi83MTgvNjYwLzczMC8wNjEvNzM4L29yaWdpbmFsLzA1ODEyNzk3MTQ0Y2JmN2IubXA0",
-          "type": "video"
-        },
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjQ0Lzg5ZDVlMjYyMGM2MTMzZWEuanBn",
-          "type": "image"
-        }
-      ],
-      "favourites_count": 22510,
-      "reblogs_count": 5279,
-      "replies_count": 2762,
-      "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116718662947146337",
-      "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116718662947146337",
-      "content_ko": "리트윗: https://truthsocial.com/users/realDonaldTrump/statuses/116718662947146337",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116717401257605983",
-      "url": "https://truthsocial.com/@realDonaldTrump/116717401257605983",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-09T00:50:05.777Z",
-      "created_at_text": "Jun 9, 2026, 12:50 AM",
-      "content": "",
-      "content_html": "",
-      "media": [
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjQzLzQzMGZjYjM1ZTQ1OWViMWEuanBn",
-          "type": "image"
-        }
-      ],
-      "favourites_count": 25661,
-      "reblogs_count": 5817,
-      "replies_count": 2123,
-      "content_zh_cn": "",
-      "content_zh_hk": "",
-      "content_ko": "",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116716969487041954",
-      "url": "https://truthsocial.com/@realDonaldTrump/116716969487041954",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-08T23:00:17.456Z",
-      "created_at_text": "Jun 8, 2026, 11:00 PM",
-      "content": "Early Voting is underway in the Great State of Georgia, where Highly Respected, and very popular Lieutenant Governor, Burt Jones, is running to be your next Governor. He is a fantastic person, and truly loves the people of Georgia, as do I! As the first member of the Georgia State Assembly to Endorse \"DONALD J. TRUMP\" for President, Burt was strongly committed to my Campaign in 2016, 2020, and 2024, and worked tirelessly to help us WIN. He has been with us from the very beginning. I know his family well, and have seen Burt tested at the most difficult levels and times — He is a WARRIOR, a successful Businessman, former SEC Championship winning Georgia Bulldogs football player (Known for his toughness!), and now, as Lieutenant Governor, Burt has proven he has the Courage and Wisdom to deliver strong results for the incredible people of his wonderful State, and our Nation. As your next Governor, Burt Jones will fight hard to Grow the Economy, Cut Taxes and Regulations, Promote MADE IN THE U.S.A., Champion American Energy DOMINANCE, Keep our Border SECURE, Strengthen our Military/Veterans, Ensure LAW AND ORDER, Advance Election Integrity, and Defend our always under siege Second Amendment. Burt Jones has my Complete and Total Endorsement to be the next Governor of the Wonderful State of Georgia. Early Voting ends Friday, June 12th. Election Day is Tuesday, June 16th. GET OUT AND VOTE FOR BURT — HE WILL NEVER LET YOU DOWN! Find your Voting Location here: https://swampthevoteusa.com/georgia/",
-      "content_html": "Early Voting is underway in the Great State of Georgia, where Highly Respected, and very popular Lieutenant Governor, Burt Jones, is running to be your next Governor. He is a fantastic person, and truly loves the people of Georgia, as do I! As the first member of the Georgia State Assembly to Endorse \"DONALD J. TRUMP\" for President, Burt was strongly committed to my Campaign in 2016, 2020, and 2024, and worked tirelessly to help us WIN. He has been with us from the very beginning. I know his family well, and have seen Burt tested at the most difficult levels and times — He is a WARRIOR, a successful Businessman, former SEC Championship winning Georgia Bulldogs football player (Known for his toughness!), and now, as Lieutenant Governor, Burt has proven he has the Courage and Wisdom to deliver strong results for the incredible people of his wonderful State, and our Nation. As your next Governor, Burt Jones will fight hard to Grow the Economy, Cut Taxes and Regulations, Promote MADE IN THE U.S.A., Champion American Energy DOMINANCE, Keep our Border SECURE, Strengthen our Military/Veterans, Ensure LAW AND ORDER, Advance Election Integrity, and Defend our always under siege Second Amendment. Burt Jones has my Complete and Total Endorsement to be the next Governor of the Wonderful State of Georgia. Early Voting ends Friday, June 12th. Election Day is Tuesday, June 16th. GET OUT AND VOTE FOR BURT — HE WILL NEVER LET YOU DOWN! Find your Voting Location here: https://swampthevoteusa.com/georgia/",
-      "media": [],
-      "favourites_count": 17262,
-      "reblogs_count": 4285,
-      "replies_count": 1033,
-      "content_zh_cn": "乔治亚这个伟大州的提前投票现已展开。备受尊敬、深受欢迎的副州长伯特·琼斯（Burt Jones）正在竞选你们的下一任州长。他是一位了不起的人，真心热爱乔治亚州的人民——我也是如此！\n\n作为乔治亚州议会中第一位表态支持“DONALD J. TRUMP”竞选总统的成员，伯特在2016年、2020年和2024年都坚定支持我的竞选，并不知疲倦地帮助我们赢得胜利。他从一开始就与我们并肩作战。我很了解他的家人，也见证了伯特在最艰难、最严峻的时刻经受考验——他是一位战士，是成功的商人，曾是赢得SEC冠军的乔治亚斗牛犬队橄榄球员（以强硬著称！）。如今，作为副州长，伯特已经证明，他具备为这个卓越州以及我们国家的杰出人民带来强劲成果所需的勇气与智慧。作为你们的下一任州长，伯特·琼斯将全力推动经济增长、削减税负和监管、推广“美国制造”、捍卫美国能源主导地位、确保边境安全、强化我们的军队/退伍军人体系、维护法律与秩序、推进选举诚信，并捍卫我们始终受到围攻的《第二修正案》。\n\n伯特·琼斯获得我完全、彻底的背书，竞选乔治亚这个美好州的下一任州长。提前投票将于6月12日（星期五）结束。选举日为6月16日（星期二）。赶快出门，为伯特投票——他绝不会让你失望！\n\n在这里查找你的投票地点：https://swampthevoteusa.com/georgia/",
-      "content_zh_hk": "喬治亞這個偉大州的提前投票現已展開。備受尊敬、深受歡迎的副州長伯特·瓊斯（Burt Jones）正競逐成為你們的下一任州長。他是一位了不起的人，真心熱愛喬治亞州的人民——我也是如此！\n\n作為喬治亞州議會中第一位表態支持「DONALD J. TRUMP」競選總統的成員，伯特在2016年、2020年及2024年都堅定支持我的競選，並不知疲倦地協助我們贏得勝利。他從一開始就與我們並肩作戰。我很了解他的家人，也見證過伯特在最艱難、最嚴峻的時刻接受考驗——他是一位戰士，是成功的商人，曾是贏得SEC冠軍的喬治亞鬥牛犬隊美式足球員（以強悍著稱！）。如今，作為副州長，伯特已經證明，他具備為這個卓越州以及我們國家的傑出人民帶來強勁成果所需的勇氣與智慧。作為你們的下一任州長，伯特·瓊斯將全力推動經濟增長、削減稅負和監管、推廣「美國製造」、捍衛美國能源主導地位、確保邊境安全、強化我們的軍隊／退伍軍人體系、維護法律與秩序、推進選舉誠信，並捍衛我們始終受到圍攻的《第二修正案》。\n\n伯特·瓊斯獲得我完全、徹底的背書，競逐喬治亞這個美好州的下一任州長。提前投票將於6月12日（星期五）結束。選舉日為6月16日（星期二）。立即出門，為伯特投票——他絕不會讓你失望！\n\n在這裡查找你的投票地點：https://swampthevoteusa.com/georgia/",
-      "content_ko": "위대한 조지아주에서 사전투표가 진행 중입니다. 많은 존경을 받고 큰 인기를 누리는 부지사 버트 존스(Burt Jones)가 여러분의 차기 주지사에 도전하고 있습니다. 그는 훌륭한 인물이며, 저와 마찬가지로 조지아 주민들을 진심으로 사랑합니다!\n\n조지아주 의회에서 처음으로 “DONALD J. TRUMP”의 대통령 선거 출마를 지지한 인물로서, 버트는 2016년, 2020년, 2024년 제 선거운동에 강하게 헌신했고, 우리가 승리하도록 지칠 줄 모르고 뛰었습니다. 그는 맨 처음부터 우리와 함께해 왔습니다. 저는 그의 가족을 잘 알고 있으며, 버트가 가장 어렵고 힘든 순간들 속에서 시험대에 오르는 모습을 지켜봤습니다 — 그는 전사이며, 성공한 사업가이자, SEC 챔피언십 우승 경력의 조지아 불독스 풋볼 선수 출신입니다(강인함으로 유명합니다!). 그리고 이제 부지사로서 버트는 자신의 훌륭한 주와 우리 국가의 놀라운 국민들을 위해 강력한 성과를 내놓을 용기와 지혜를 갖췄음을 입증했습니다. 차기 주지사로서 버트 존스는 경제 성장, 감세와 규제 완화, MADE IN THE U.S.A. 촉진, 미국의 에너지 지배력 수호, 국경 안보 유지, 우리 군/재향군인 지원 강화, LAW AND ORDER 확립, 선거의 공정성 제고, 그리고 항상 공격받고 있는 수정헌법 제2조 수호를 위해 강하게 싸울 것입니다.\n\n버트 존스는 위대한 조지아주의 차기 주지사 후보로서 저의 완전하고 전적인 지지를 받습니다. 사전투표는 6월 12일 금요일 종료됩니다. 선거일은 6월 16일 화요일입니다. 꼭 투표장에 나가 버트에게 투표하십시오 — 그는 결코 여러분을 실망시키지 않을 것입니다!\n\n여기에서 투표 장소를 확인하십시오: https://swampthevoteusa.com/georgia/",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116716967227738254",
-      "url": "https://truthsocial.com/@realDonaldTrump/116716967227738254",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-08T22:59:42.981Z",
-      "created_at_text": "Jun 8, 2026, 10:59 PM",
-      "content": "Congratulations to the Ohio State Senate for passing Senate Joint Resolution 10, which would require VOTER I.D. in Ohio Elections! Democrats fought hard against this, presumably so they can CHEAT. I am now asking all of my Republican friends in the State House to, also, PASS THIS NOW, and put a Constitutional Amendment on the Ballot so that the Great People of Ohio can vote to enshrine VOTER I.D. in the State Constitution. I will be watching, and am strongly supportive of this Resolution. Thank you for your attention to this matter! President DONALD J. TRUMP",
-      "content_html": "Congratulations to the Ohio State Senate for passing Senate Joint Resolution 10, which would require VOTER I.D. in Ohio Elections! Democrats fought hard against this, presumably so they can CHEAT. I am now asking all of my Republican friends in the State House to, also, PASS THIS NOW, and put a Constitutional Amendment on the Ballot so that the Great People of Ohio can vote to enshrine VOTER I.D. in the State Constitution. I will be watching, and am strongly supportive of this Resolution. Thank you for your attention to this matter! President DONALD J. TRUMP",
-      "media": [],
-      "favourites_count": 20597,
-      "reblogs_count": 4961,
-      "replies_count": 792,
-      "content_zh_cn": "祝贺俄亥俄州参议院通过第10号参议院联合决议案，该决议将要求俄亥俄州选举实行选民身份证明（VOTER I.D.）！民主党人曾极力反对这项措施，想必是为了方便他们作弊（CHEAT）。我现在要求我在州众议院的所有共和党朋友也立即通过这项决议，并将宪法修正案列入选票，让伟大的俄亥俄州人民能够投票，将选民身份证明（VOTER I.D.）写入州宪法。我会密切关注，并且坚定支持这项决议。感谢你们对此事的关注！\n特朗普总统 唐纳德·J·特朗普",
-      "content_zh_hk": "祝賀俄亥俄州參議院通過第10號參議院聯合決議案，該決議將要求俄亥俄州選舉實施選民身份證明（VOTER I.D.）！民主黨人曾極力反對這項措施，想必是為了方便他們作弊（CHEAT）。我現在要求我在州眾議院的所有共和黨朋友也立即通過這項決議，並將憲法修正案列入選票，讓偉大的俄亥俄州人民能夠投票，將選民身份證明（VOTER I.D.）寫入州憲法。我會密切關注，並且堅定支持這項決議。感謝你們對此事的關注！\n特朗普總統 唐納德·J·特朗普",
-      "content_ko": "오하이오주 상원이 오하이오 선거에서 유권자 신분증 확인(VOTER I.D.)을 의무화하는 상원 공동결의안 10호를 통과시킨 것을 축하합니다! 민주당은 이에 강하게 맞섰는데, 아마도 그들이 부정행위(CHEAT)를 할 수 있게 하려는 것으로 보입니다. 저는 이제 주 하원의 모든 공화당 친구들에게도 이것을 지금 당장 통과시키고, 위대한 오하이오 주민들이 투표를 통해 유권자 신분증 확인(VOTER I.D.)을 주 헌법에 명문화할 수 있도록 헌법개정안을 투표용지에 올릴 것을 요청합니다. 저는 지켜볼 것이며, 이 결의안을 강력히 지지합니다. 이 사안에 관심을 가져주셔서 감사합니다!\n대통령 도널드 J. 트럼프",
       "source_hint": "cnn"
     }
   ]
