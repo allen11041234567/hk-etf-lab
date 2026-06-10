@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116726055495215764": {
+    "content_zh_cn": "哇！CITI在第一季度按交易金额计的并购顾问市场排名中位列第一。祝贺Jane F以及她所有优秀的团队成员。他们一直非常努力地工作！CITI强势回归！！！\n唐纳德·J·特朗普总统",
+    "content_zh_hk": "哇！CITI於第一季度按交易金額計的併購顧問市場排名中位列第一。祝賀Jane F以及她所有優秀的團隊成員。他們一直非常努力地工作！CITI強勢回歸！！！\n特朗普總統 唐納德·J·特朗普",
+    "content_ko": "와우! CITI가 1분기 거래금액 기준 M&A 자문 시장 순위에서 1위를 차지했습니다. Jane F와 그녀의 훌륭한 모든 팀원들에게 축하를 전합니다. 그들은 정말 열심히 일해왔습니다! CITI의 대단한 반등입니다!!!\n도널드 J. 트럼프 대통령"
+  },
   "https://truthsocial.com/@realDonaldTrump/116726011433927314": {
     "content_zh_cn": "出现反转：特朗普任期结束后，海湖庄园直升机停机坪将予以保留：https://www.palmbeachpost.com/story/news/trump/2026/06/09/in-a-reversal-mar-a-lago-helipad-to-remain-past-end-of-trumps-term-palm-beach-florida/90455786007/",
     "content_zh_hk": "出現反轉：特朗普任期結束後，海湖莊園直升機停機坪將予以保留：https://www.palmbeachpost.com/story/news/trump/2026/06/09/in-a-reversal-mar-a-lago-helipad-to-remain-past-end-of-trumps-term-palm-beach-florida/90455786007/",
