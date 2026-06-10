@@ -1,31 +1,253 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-10T11:33:19.206Z",
+  "fetchedAt": "2026-06-10T11:49:25.176Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
   "posts": [
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116725591109474316",
+      "url": "https://truthsocial.com/@realDonaldTrump/116725591109474316",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-10T11:32:52.931Z",
+      "created_at_text": "Jun 10, 2026, 11:32 AM",
+      "content": "The Fake News Media refuses to report how EFFECTIVE the U.S. Naval BLOCKADE is, the most successful Blockade in the history of Naval Warfare. NOTHING GETS THROUGH unless we want it to. IT IS A STEEL WALL! Iran is doing ZERO business, not paying their military, or any of their bills, and quickly becoming a FAILED NATION! Lots of oil is getting out. Praise be to Allah! President DONALD J. TRUMP",
+      "content_html": "The Fake News Media refuses to report how EFFECTIVE the U.S. Naval BLOCKADE is, the most successful Blockade in the history of Naval Warfare. NOTHING GETS THROUGH unless we want it to. IT IS A STEEL WALL! Iran is doing ZERO business, not paying their military, or any of their bills, and quickly becoming a FAILED NATION! Lots of oil is getting out. Praise be to Allah! President DONALD J. TRUMP",
+      "media": [],
+      "favourites_count": 1906,
+      "reblogs_count": 451,
+      "replies_count": 361,
+      "content_zh_cn": "假新闻媒体拒绝报道美国海军封锁有多么有效，这是海战史上最成功的封锁。除非我们愿意，否则什么都别想通过。它就是一堵钢铁之墙！伊朗的生意归零，既发不出军饷，也付不起各类账单，并且正迅速沦为一个失败国家！大量石油正在外运。感谢真主！\n\n总统 唐纳德·J·特朗普",
+      "content_zh_hk": "假新聞媒體拒絕報道美國海軍封鎖有多麼有效，這是海戰史上最成功的封鎖。除非我們願意，否則什麼都別想通過。它就是一道鋼鐵之牆！伊朗的生意歸零，既發不出軍餉，也付不起各類賬單，並且正迅速淪為一個失敗國家！大量石油正在外運。感謝真主！\n\n總統 唐納德·J·特朗普",
+      "content_ko": "가짜 뉴스 언론은 미국 해군의 봉쇄가 얼마나 효과적인지 보도하기를 거부하고 있다. 이는 해전 역사상 가장 성공적인 봉쇄다. 우리가 원하지 않는 한 그 어떤 것도 통과하지 못한다. 그야말로 강철의 장벽이다! 이란은 사업이 사실상 제로가 되었고, 군 급여도 지급하지 못하며 각종 대금도 치르지 못하고 있고, 빠르게 실패한 국가로 전락하고 있다! 많은 석유가 반출되고 있다. 알라께 찬미를! \n\n대통령 도널드 J. 트럼프",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116725476229257491",
+      "url": "https://truthsocial.com/@realDonaldTrump/116725476229257491",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-10T11:03:39.998Z",
+      "created_at_text": "Jun 10, 2026, 11:03 AM",
+      "content": "Iran's Military is a complete and total mess. Much of it, like their Navy and Air Force, doesn't even exist anymore - They have been completely defeated. Iran is all talk and no action. The Bully of the Middle East is DEAD!!! They've taken too long to negotiate a deal that would have been great for them, now they will have to pay the price!!! President DONALD J. TRUMP",
+      "content_html": "Iran's Military is a complete and total mess. Much of it, like their Navy and Air Force, doesn't even exist anymore - They have been completely defeated. Iran is all talk and no action. The Bully of the Middle East is DEAD!!! They've taken too long to negotiate a deal that would have been great for them, now they will have to pay the price!!! President DONALD J. TRUMP",
+      "media": [],
+      "favourites_count": 5975,
+      "reblogs_count": 1411,
+      "replies_count": 1370,
+      "content_zh_cn": "伊朗军队已是一团彻底的烂摊子。其很大一部分——比如海军和空军——如今甚至已不复存在——他们已被彻底击败。伊朗只会嘴上强硬，毫无行动。这个中东的恶霸已经完蛋了！！！他们在原本对自己极为有利的协议谈判上拖得太久了，现在，他们将不得不付出代价！！！\n\n总统 唐纳德·J·特朗普",
+      "content_zh_hk": "伊朗軍隊已是一團徹底的爛攤子。其很大一部分——例如海軍和空軍——如今甚至已不復存在——他們已被徹底擊敗。伊朗只會口頭強硬，毫無行動。這個中東的惡霸已經完蛋了！！！他們在原本對自己極為有利的協議談判上拖得太久了，現在，他們將不得不付出代價！！！\n\n總統 當勞·J·特朗普",
+      "content_ko": "이란 군대는 완전히 철저한 혼란 상태다. 해군과 공군 같은 상당 부분은 이제 아예 존재하지도 않는다 - 그들은 완전히 패배했다. 이란은 말만 요란할 뿐 행동은 없다. 중동의 불량배는 죽었다!!! 그들에게 아주 유리할 수도 있었던 합의 협상을 너무 오래 끌었고, 이제 그 대가를 치르게 될 것이다!!!\n\n대통령 도널드 J. 트럼프",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116725444469272742",
+      "url": "https://truthsocial.com/@realDonaldTrump/116725444469272742",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-10T10:55:35.381Z",
+      "created_at_text": "Jun 10, 2026, 10:55 AM",
+      "content": "Joe Scarborough's ever shrinking, low rated show, one of the most inaccurate detailers of truthful facts on television, is being crushed in the ratings. His serious case on Trump Derangement Syndrome, often referred to as TDS, has made him a laughing stock among those who know what is going on in the \"Wonderful World of Television.\" His show is being cut because his ratings are TERRIBLE, and Mike and Willie, who wants to be his father but doesn't have the talent, are falling further and further into the TDS Swamp! They all suffer from Low Ratings Disease!!! President  DJT",
+      "content_html": "Joe Scarborough's ever shrinking, low rated show, one of the most inaccurate detailers of truthful facts on television, is being crushed in the ratings. His serious case on Trump Derangement Syndrome, often referred to as TDS, has made him a laughing stock among those who know what is going on in the \"Wonderful World of Television.\" His show is being cut because his ratings are TERRIBLE, and Mike and Willie, who wants to be his father but doesn't have the talent, are falling further and further into the TDS Swamp! They all suffer from Low Ratings Disease!!! President  DJT",
+      "media": [],
+      "favourites_count": 3829,
+      "reblogs_count": 811,
+      "replies_count": 332,
+      "content_zh_cn": "乔·斯卡伯勒那档收视率不断萎缩、表现低迷的节目，堪称电视上对真实事实描述最不准确的节目之一，如今正被收视数据全面碾压。\n\n他患上了严重的“特朗普错乱综合征”（通常简称TDS），这让他在那些真正了解“电视这个奇妙世界”运作的人眼中，彻底沦为笑柄。由于他的收视率糟糕透顶，他的节目正在被削减；而迈克和威利——威利总想当他爸爸，却没有那个本事——也正越陷越深，跌入TDS的沼泽！\n\n他们全都患上了“低收视率疾病”！！！\n\n总统 DJT",
+      "content_zh_hk": "祖·斯卡伯勒嗰個收視不斷萎縮、表現低迷嘅節目，可謂係電視上對真實事實描述最唔準確嘅節目之一，而家正喺收視上被全面輾壓。\n\n佢患上咗嚴重嘅「特朗普錯亂綜合症」（通常簡稱TDS），令佢喺嗰啲真正明白「電視呢個奇妙世界」點樣運作嘅人眼中，徹底淪為笑柄。由於佢嘅收視差到不得了，佢嘅節目正被削減；而Mike同Willie——Willie成日想做佢老豆，但又冇嗰份本事——亦都愈陷愈深，跌入TDS嘅沼澤！\n\n佢哋全部都患上咗「低收視率疾病」！！！\n\n總統 DJT",
+      "content_ko": "조 스카버러의 계속 쪼그라들고 있는 저조한 시청률의 프로그램은, TV에서 사실을 가장 부정확하게 전달하는 프로그램 가운데 하나로, 지금 시청률에서 완전히 짓눌리고 있다.\n\n그의 심각한 ‘트럼프 광란 증후군’(흔히 TDS라고 불린다)은, ‘멋진 텔레비전의 세계’에서 무슨 일이 돌아가는지 아는 사람들 사이에서 그를 웃음거리로 만들었다. 그의 시청률은 형편없이 나쁘기 때문에 프로그램은 축소되고 있으며, 마이크와 윌리—자기 아버지 역할을 하고 싶어 하지만 그럴 재능은 없는 윌리—도 TDS의 늪으로 점점 더 깊이 빠져들고 있다!\n\n그들 모두 ‘낮은 시청률 질병’에 걸려 있다!!!\n\n대통령 DJT",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116725365354632342",
+      "url": "https://truthsocial.com/@realDonaldTrump/116725365354632342",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-10T10:35:28.189Z",
+      "created_at_text": "Jun 10, 2026, 10:35 AM",
+      "content": "Stephen A. Smith is an arrogant fool, a low IQ individual. In other words, he's \"dumb as a rock,\" and totally unqualified to ever think of running for high political office, or even low political office, for that matter! He'd get annihilated in a debate by the most incompetent of politicians. Joe Biden's now \"fabled\" performance would look great by comparison to anything that this loudmouth huckster has to offer, which isn't much! Within a few weeks, they'd laugh him out of politics!!!",
+      "content_html": "Stephen A. Smith is an arrogant fool, a low IQ individual. In other words, he's \"dumb as a rock,\" and totally unqualified to ever think of running for high political office, or even low political office, for that matter! He'd get annihilated in a debate by the most incompetent of politicians. Joe Biden's now \"fabled\" performance would look great by comparison to anything that this loudmouth huckster has to offer, which isn't much! Within a few weeks, they'd laugh him out of politics!!!",
+      "media": [],
+      "favourites_count": 7718,
+      "reblogs_count": 1499,
+      "replies_count": 867,
+      "content_zh_cn": "斯蒂芬·A·史密斯是个傲慢的蠢货，智商低下。换句话说，他就是“蠢得像块石头”，完全没有资格动念去竞选高级政治公职——甚至连低级政治职位也不够格！哪怕是面对最无能的政客，他在辩论中也会被彻底击垮。相比之下，乔·拜登如今那场“广为流传”的表现看起来都会相当出色；至于这个聒噪的江湖骗子能拿出来的东西，根本乏善可陈！用不了几个星期，他就会被人一路嘲笑着赶出政坛！！！",
+      "content_zh_hk": "史蒂芬·A·史密斯係個傲慢嘅蠢材，智商低下。換句話講，佢就係「蠢到好似舊石咁」，根本冇資格諗住去競逐高級政治公職——甚至連低層政治職位都唔夠格！就算對上最無能嘅政客，佢喺辯論入面都會畀人徹底擊潰。相比之下，喬·拜登如今嗰場「廣為流傳」嘅表現，睇落都會相當唔錯；至於呢個大聲夾惡、招搖撞騙嘅江湖術士攞得出手嘅嘢，其實少之又少！唔使幾個星期，佢就會畀人一路恥笑，最終被逐出政壇！！！",
+      "content_ko": "스티븐 A. 스미스는 오만한 바보이자 IQ가 낮은 사람이다. 다시 말해 그는 “돌처럼 멍청한” 인물이며, 고위 공직은 물론이고 그보다 낮은 정치직에 출마할 생각조차 할 자격이 전혀 없다! 가장 무능한 정치인과의 토론에서도 그는 처참하게 박살 날 것이다. 그와 비교하면 조 바이든의 이제는 “전설적”이라고까지 불리는 그 퍼포먼스마저 훨씬 좋아 보일 정도이며, 이 떠벌이 사기꾼이 내놓을 수 있는 것은 별로 없다! 몇 주만 지나면 그는 정치권에서 웃음거리로 전락해 쫓겨나게 될 것이다!!!",
+      "source_hint": "stock.fengle.me"
+    },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116725304674001742",
       "url": "https://truthsocial.com/@realDonaldTrump/116725304674001742",
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-06-10T10:20:02.342Z",
       "created_at_text": "Jun 10, 2026, 10:20 AM",
-      "content": "",
-      "content_html": "",
+      "content": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116723479960785181",
+      "content_html": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116723479960785181",
       "media": [
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjY4L2FhODM5MmNjYTRiNzc1YmMucG5n",
           "type": "image"
         }
       ],
-      "favourites_count": 553,
-      "reblogs_count": 124,
-      "replies_count": 57,
+      "favourites_count": 5005,
+      "reblogs_count": 1016,
+      "replies_count": 286,
+      "content_zh_cn": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116723479960785181",
+      "content_zh_hk": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116723479960785181",
+      "content_ko": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116723479960785181",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116725303830654471",
+      "url": "https://truthsocial.com/@realDonaldTrump/116725303830654471",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-10T10:19:49.473Z",
+      "created_at_text": "Jun 10, 2026, 10:19 AM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjYxLzllMTY4NzhjOTMxYjRiZWYuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 3866,
+      "reblogs_count": 887,
+      "replies_count": 166,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
       "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116725301981290667",
+      "url": "https://truthsocial.com/@realDonaldTrump/116725301981290667",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-10T10:19:21.257Z",
+      "created_at_text": "Jun 10, 2026, 10:19 AM",
+      "content": "Congratulations to Senator Lindsey Graham of the Great State of South Carolina on his BIG WIN tonight. With almost 60% of the vote against a large field of very capable candidates, there will be no runoff. Now Lindsey will be able to devote his time to passing the desperately needed, and long overdue, SAVE AMERICA ACT! President DJT",
+      "content_html": "Congratulations to Senator Lindsey Graham of the Great State of South Carolina on his BIG WIN tonight. With almost 60% of the vote against a large field of very capable candidates, there will be no runoff. Now Lindsey will be able to devote his time to passing the desperately needed, and long overdue, SAVE AMERICA ACT! President DJT",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjYyLzU3MjQ0NmJkZTQ0YzY3MjcuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 2749,
+      "reblogs_count": 461,
+      "replies_count": 30,
+      "content_zh_cn": "Congratulations to Senator Lindsey Graham of the Great State of South Carolina on his BIG WIN tonight. With almost 60% of the vote against a large field of very capable candidates, there will be no runoff. Now Lindsey will be able to devote his time to passing the desperately needed, and long overdue, SAVE AMERICA ACT! President DJT",
+      "content_zh_hk": "Congratulations to Senator Lindsey Graham of the Great State of South Carolina on his BIG WIN tonight. With almost 60% of the vote against a large field of very capable candidates, there will be no runoff. Now Lindsey will be able to devote his time to passing the desperately needed, and long overdue, SAVE AMERICA ACT! President DJT",
+      "content_ko": "Congratulations to Senator Lindsey Graham of the Great State of South Carolina on his BIG WIN tonight. With almost 60% of the vote against a large field of very capable candidates, there will be no runoff. Now Lindsey will be able to devote his time to passing the desperately needed, and long overdue, SAVE AMERICA ACT! President DJT",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116725301360270879",
+      "url": "https://truthsocial.com/@realDonaldTrump/116725301360270879",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-10T10:19:11.780Z",
+      "created_at_text": "Jun 10, 2026, 10:19 AM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjYzLzZmOTU3MGIzMjZiOTc1ZGIuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 2663,
+      "reblogs_count": 441,
+      "replies_count": 26,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116725300592900324",
+      "url": "https://truthsocial.com/@realDonaldTrump/116725300592900324",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-10T10:19:00.069Z",
+      "created_at_text": "Jun 10, 2026, 10:19 AM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjY0LzAyMmY1MDNkYTVhZWQ1MGEuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 2608,
+      "reblogs_count": 430,
+      "replies_count": 24,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116725299803864378",
+      "url": "https://truthsocial.com/@realDonaldTrump/116725299803864378",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-10T10:18:48.031Z",
+      "created_at_text": "Jun 10, 2026, 10:18 AM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjY1L2ZhNjNhYWIxYTY2MWIzZGQuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 2556,
+      "reblogs_count": 427,
+      "replies_count": 23,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116725299165504636",
+      "url": "https://truthsocial.com/@realDonaldTrump/116725299165504636",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-10T10:18:38.288Z",
+      "created_at_text": "Jun 10, 2026, 10:18 AM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjY2Lzc2MmZkNDRiNjk0N2RiYWQuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 2488,
+      "reblogs_count": 414,
+      "replies_count": 23,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "cnn"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116725298433622438",
+      "url": "https://truthsocial.com/@realDonaldTrump/116725298433622438",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-10T10:18:27.121Z",
+      "created_at_text": "Jun 10, 2026, 10:18 AM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjY3L2RlMjkzMmJjM2JmYWQ4OTYuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 2506,
+      "reblogs_count": 422,
+      "replies_count": 27,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116723667949197572",
@@ -36,13 +258,13 @@
       "content": "Key senator presses to term limit parliamentarian, clear possible path for election law: https://justthenews.com/government/congress/key-senator-presses-term-limit-parliamentarian-clear-possible-path-election-law",
       "content_html": "Key senator presses to term limit parliamentarian, clear possible path for election law: https://justthenews.com/government/congress/key-senator-presses-term-limit-parliamentarian-clear-possible-path-election-law",
       "media": [],
-      "favourites_count": 4063,
-      "reblogs_count": 1202,
-      "replies_count": 398,
+      "favourites_count": 8901,
+      "reblogs_count": 2402,
+      "replies_count": 735,
       "content_zh_cn": "关键参议员力推对议会议事顾问设任期限制，为选举法案扫清潜在通道：https://justthenews.com/government/congress/key-senator-presses-term-limit-parliamentarian-clear-possible-path-election-law",
       "content_zh_hk": "關鍵參議員力推對議會議事顧問設任期限制，為選舉法案掃清潛在通道：https://justthenews.com/government/congress/key-senator-presses-term-limit-parliamentarian-clear-possible-path-election-law",
       "content_ko": "핵심 상원의원, 의회 의사자문관 임기 제한 추진… 선거법 처리 가능 경로 열리나: https://justthenews.com/government/congress/key-senator-presses-term-limit-parliamentarian-clear-possible-path-election-law",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116723666009941892",
@@ -53,13 +275,13 @@
       "content": "JD Vance refers evidence of Minnesota fraud, Walz inaction to DOJ for criminal inquiry: https://justthenews.com/accountability/waste-fraud-and-abuse/jd-vance-refers-evidence-minnesota-fraud-walz-inaction-doj",
       "content_html": "JD Vance refers evidence of Minnesota fraud, Walz inaction to DOJ for criminal inquiry: https://justthenews.com/accountability/waste-fraud-and-abuse/jd-vance-refers-evidence-minnesota-fraud-walz-inaction-doj",
       "media": [],
-      "favourites_count": 4290,
-      "reblogs_count": 1161,
-      "replies_count": 322,
+      "favourites_count": 9569,
+      "reblogs_count": 2368,
+      "replies_count": 581,
       "content_zh_cn": "JD·万斯将明尼苏达州欺诈及沃尔兹不作为的相关证据提交司法部，要求展开刑事调查：https://justthenews.com/accountability/waste-fraud-and-abuse/jd-vance-refers-evidence-minnesota-fraud-walz-inaction-doj",
       "content_zh_hk": "JD·萬斯將明尼蘇達州欺詐及沃爾茲不作為的相關證據提交司法部，要求展開刑事調查：https://justthenews.com/accountability/waste-fraud-and-abuse/jd-vance-refers-evidence-minnesota-fraud-walz-inaction-doj",
       "content_ko": "JD 밴스, 미네소타 사기 및 월즈의 미조치 관련 증거를 법무부에 회부… 형사 조사 요청: https://justthenews.com/accountability/waste-fraud-and-abuse/jd-vance-refers-evidence-minnesota-fraud-walz-inaction-doj",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116723481501831841",
@@ -83,13 +305,13 @@
           "type": "image"
         }
       ],
-      "favourites_count": 5766,
-      "reblogs_count": 1704,
-      "replies_count": 752,
+      "favourites_count": 9784,
+      "reblogs_count": 2718,
+      "replies_count": 1009,
       "content_zh_cn": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116723480830148350",
       "content_zh_hk": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116723480830148350",
       "content_ko": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116723480830148350",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116723479960785181",
@@ -97,21 +319,21 @@
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-06-10T02:35:59.363Z",
       "created_at_text": "Jun 10, 2026, 2:35 AM",
-      "content": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116723479960785181",
-      "content_html": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116723479960785181",
+      "content": "",
+      "content_html": "",
       "media": [
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjYwL2QxMzNhZDM1ZmZjYzhmM2YucG5n",
           "type": "image"
         }
       ],
-      "favourites_count": 4329,
-      "reblogs_count": 1027,
-      "replies_count": 262,
-      "content_zh_cn": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116723479960785181",
-      "content_zh_hk": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116723479960785181",
-      "content_ko": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116723479960785181",
-      "source_hint": "stock.fengle.me"
+      "favourites_count": 7358,
+      "reblogs_count": 1589,
+      "replies_count": 343,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116723301122482300",
@@ -122,13 +344,13 @@
       "content": "Congratulations to Senator Lindsey Graham of the Great State of South Carolina on his BIG WIN tonight. With almost 60% of the vote against a large field of very capable candidates, there will be no runoff. Now Lindsey will be able to devote his time to passing the desperately needed, and long overdue, SAVE AMERICA ACT! President DJT",
       "content_html": "Congratulations to Senator Lindsey Graham of the Great State of South Carolina on his BIG WIN tonight. With almost 60% of the vote against a large field of very capable candidates, there will be no runoff. Now Lindsey will be able to devote his time to passing the desperately needed, and long overdue, SAVE AMERICA ACT! President DJT",
       "media": [],
-      "favourites_count": 7504,
-      "reblogs_count": 1761,
-      "replies_count": 1202,
+      "favourites_count": 10718,
+      "reblogs_count": 2382,
+      "replies_count": 1471,
       "content_zh_cn": "祝贺伟大的南卡罗来纳州联邦参议员林赛·格雷厄姆今晚大获全胜。在多位实力强劲的候选人同场角逐下，他赢得了近60%的选票，因此无需进入第二轮投票。\n\n现在，林赛将能够把时间投入到推动迫切需要、且早该通过的《拯救美国法案》！特朗普总统",
       "content_zh_hk": "祝賀來自偉大南卡羅來納州的聯邦參議員林賽·格雷厄姆今晚大勝而歸。在多位實力強勁的候選人同場競逐下，他取得近60%的選票，因此毋須進入第二輪投票。\n\n現在，林賽將能夠把時間投入推動迫切需要、且早應通過的《拯救美國法案》！特朗普總統",
       "content_ko": "위대한 사우스캐롤라이나주의 린지 그레이엄 상원의원의 오늘 밤 대승을 축하합니다. 매우 유능한 후보들이 대거 출마한 가운데 거의 60%의 득표율을 얻었으므로, 결선투표는 없을 것입니다.\n\n이제 린지는 절실히 필요했고 오래전 통과됐어야 할 SAVE AMERICA ACT를 통과시키는 데 시간을 쏟을 수 있게 될 것입니다! DJT 대통령",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116723184546484525",
@@ -136,21 +358,21 @@
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-06-10T01:20:51.694Z",
       "created_at_text": "Jun 10, 2026, 1:20 AM",
-      "content": "Congratulations to Senator Lindsey Graham of the Great State of South Carolina on his BIG WIN tonight. With almost 60% of the vote against a large field of very capable candidates, there will be no runoff. Now Lindsey will be able to devote his time to passing the desperately needed, and long overdue, SAVE AMERICA ACT! President DJT",
-      "content_html": "Congratulations to Senator Lindsey Graham of the Great State of South Carolina on his BIG WIN tonight. With almost 60% of the vote against a large field of very capable candidates, there will be no runoff. Now Lindsey will be able to devote his time to passing the desperately needed, and long overdue, SAVE AMERICA ACT! President DJT",
+      "content": "",
+      "content_html": "",
       "media": [
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjU1LzRiZGJlODBlZmEyMzMwNWIuanBn",
           "type": "image"
         }
       ],
-      "favourites_count": 6613,
-      "reblogs_count": 1357,
-      "replies_count": 226,
-      "content_zh_cn": "Congratulations to Senator Lindsey Graham of the Great State of South Carolina on his BIG WIN tonight. With almost 60% of the vote against a large field of very capable candidates, there will be no runoff. Now Lindsey will be able to devote his time to passing the desperately needed, and long overdue, SAVE AMERICA ACT! President DJT",
-      "content_zh_hk": "Congratulations to Senator Lindsey Graham of the Great State of South Carolina on his BIG WIN tonight. With almost 60% of the vote against a large field of very capable candidates, there will be no runoff. Now Lindsey will be able to devote his time to passing the desperately needed, and long overdue, SAVE AMERICA ACT! President DJT",
-      "content_ko": "Congratulations to Senator Lindsey Graham of the Great State of South Carolina on his BIG WIN tonight. With almost 60% of the vote against a large field of very capable candidates, there will be no runoff. Now Lindsey will be able to devote his time to passing the desperately needed, and long overdue, SAVE AMERICA ACT! President DJT",
-      "source_hint": "stock.fengle.me"
+      "favourites_count": 8822,
+      "reblogs_count": 1730,
+      "replies_count": 245,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116723184179508306",
@@ -166,13 +388,13 @@
           "type": "image"
         }
       ],
-      "favourites_count": 6554,
-      "reblogs_count": 1341,
-      "replies_count": 142,
+      "favourites_count": 8747,
+      "reblogs_count": 1714,
+      "replies_count": 161,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116723183594943266",
@@ -194,237 +416,6 @@
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
-      "source_hint": "stock.fengle.me"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116723001472960111",
-      "url": "https://truthsocial.com/@realDonaldTrump/116723001472960111",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-10T00:34:18.219Z",
-      "created_at_text": "Jun 10, 2026, 12:34 AM",
-      "content": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116722993359636132",
-      "content_html": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116722993359636132",
-      "media": [
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi83MjIvOTkyLzY4Mi8xMzkvOTg3L29yaWdpbmFsL2ZjMTNiNWIwMzg0NTFlZGMubXA0",
-          "type": "video"
-        },
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjUzLzg2ZGYwMzdiMDE4YmZjMGMuanBn",
-          "type": "image"
-        }
-      ],
-      "favourites_count": 7337,
-      "reblogs_count": 1527,
-      "replies_count": 506,
-      "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116722993359636132",
-      "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116722993359636132",
-      "content_ko": "리트윗: https://truthsocial.com/users/realDonaldTrump/statuses/116722993359636132",
-      "source_hint": "stock.fengle.me"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116722977048924364",
-      "url": "https://truthsocial.com/@realDonaldTrump/116722977048924364",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-10T00:28:05.533Z",
-      "created_at_text": "Jun 10, 2026, 12:28 AM",
-      "content": "",
-      "content_html": "",
-      "media": [
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjQ2LzFmNDQ5NjAyOWM0NzdjNGMuanBn",
-          "type": "image"
-        }
-      ],
-      "favourites_count": 7144,
-      "reblogs_count": 1460,
-      "replies_count": 136,
-      "content_zh_cn": "",
-      "content_zh_hk": "",
-      "content_ko": "",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116722976514811476",
-      "url": "https://truthsocial.com/@realDonaldTrump/116722976514811476",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-10T00:27:57.384Z",
-      "created_at_text": "Jun 10, 2026, 12:27 AM",
-      "content": "",
-      "content_html": "",
-      "media": [
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjQ3LzBhZTk1OTQ3ZjIxMzNlNjkuanBn",
-          "type": "image"
-        }
-      ],
-      "favourites_count": 6122,
-      "reblogs_count": 1308,
-      "replies_count": 708,
-      "content_zh_cn": "",
-      "content_zh_hk": "",
-      "content_ko": "",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116722975862665108",
-      "url": "https://truthsocial.com/@realDonaldTrump/116722975862665108",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-10T00:27:47.431Z",
-      "created_at_text": "Jun 10, 2026, 12:27 AM",
-      "content": "",
-      "content_html": "",
-      "media": [
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjQ4LzNmMDFlZWU2YzlhZjM1NWUuanBn",
-          "type": "image"
-        }
-      ],
-      "favourites_count": 6767,
-      "reblogs_count": 1379,
-      "replies_count": 82,
-      "content_zh_cn": "",
-      "content_zh_hk": "",
-      "content_ko": "",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116722975379289351",
-      "url": "https://truthsocial.com/@realDonaldTrump/116722975379289351",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-10T00:27:40.055Z",
-      "created_at_text": "Jun 10, 2026, 12:27 AM",
-      "content": "",
-      "content_html": "",
-      "media": [
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjQ5L2Q4YjVmNzU4MDk0ODg5OTEuanBn",
-          "type": "image"
-        }
-      ],
-      "favourites_count": 6694,
-      "reblogs_count": 1344,
-      "replies_count": 87,
-      "content_zh_cn": "",
-      "content_zh_hk": "",
-      "content_ko": "",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116722974331493970",
-      "url": "https://truthsocial.com/@realDonaldTrump/116722974331493970",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-10T00:27:24.068Z",
-      "created_at_text": "Jun 10, 2026, 12:27 AM",
-      "content": "",
-      "content_html": "",
-      "media": [
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjUwLzAwODg5NDBkY2ViNWI0ZTcuanBn",
-          "type": "image"
-        }
-      ],
-      "favourites_count": 6598,
-      "reblogs_count": 1323,
-      "replies_count": 79,
-      "content_zh_cn": "",
-      "content_zh_hk": "",
-      "content_ko": "",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116722973453210561",
-      "url": "https://truthsocial.com/@realDonaldTrump/116722973453210561",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-10T00:27:10.666Z",
-      "created_at_text": "Jun 10, 2026, 12:27 AM",
-      "content": "",
-      "content_html": "",
-      "media": [
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjUxLzc5NDY3MTk0NzZiYTYwMjYuanBn",
-          "type": "image"
-        }
-      ],
-      "favourites_count": 6612,
-      "reblogs_count": 1326,
-      "replies_count": 93,
-      "content_zh_cn": "",
-      "content_zh_hk": "",
-      "content_ko": "",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116722972392166409",
-      "url": "https://truthsocial.com/@realDonaldTrump/116722972392166409",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-10T00:26:54.477Z",
-      "created_at_text": "Jun 10, 2026, 12:26 AM",
-      "content": "",
-      "content_html": "",
-      "media": [
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjUyLzg0NmE1ZTNlNWZmMjI5ZjcuanBn",
-          "type": "image"
-        }
-      ],
-      "favourites_count": 6528,
-      "reblogs_count": 1325,
-      "replies_count": 83,
-      "content_zh_cn": "",
-      "content_zh_hk": "",
-      "content_ko": "",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116722436233594406",
-      "url": "https://truthsocial.com/@realDonaldTrump/116722436233594406",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-09T22:10:33.349Z",
-      "created_at_text": "Jun 9, 2026, 10:10 PM",
-      "content": "William Pulte, who is working closely with Tulsi Gabbard, will be taking over as Acting Director of National Intelligence on Friday, June 19th. He will remain as Director of the Federal Housing Finance Agency, and Chairman of Fannie Mae/Freddie Mac. Thank you for your attention to this matter! President DONALD J. TRUMP",
-      "content_html": "William Pulte, who is working closely with Tulsi Gabbard, will be taking over as Acting Director of National Intelligence on Friday, June 19th. He will remain as Director of the Federal Housing Finance Agency, and Chairman of Fannie Mae/Freddie Mac. Thank you for your attention to this matter! President DONALD J. TRUMP",
-      "media": [],
-      "favourites_count": 15333,
-      "reblogs_count": 3741,
-      "replies_count": 1153,
-      "content_zh_cn": "与图尔西·加巴德密切合作的威廉·普尔特，将于6月19日（星期五）出任代理国家情报总监。\n他将继续担任联邦住房金融局局长，并兼任房利美/房地美董事长。\n感谢对此事的关注！\n唐纳德·J·特朗普 总统",
-      "content_zh_hk": "與圖爾西·加巴德密切合作的威廉·普爾特，將於6月19日（星期五）出任代理國家情報總監。\n他將繼續擔任聯邦住房金融局局長，並兼任房利美／房地美董事長。\n感謝對此事的關注！\n唐納德·J·特朗普 總統",
-      "content_ko": "툴시 개버드와 긴밀히 협력하고 있는 윌리엄 펄트가 6월 19일 금요일부로 국가정보국장 대행을 맡게 됩니다.\n그는 연방주택금융청(FHFA) 청장직과 패니메이/프레디맥 이사회 의장직도 계속 유지합니다.\n이 사안에 관심을 가져주셔서 감사합니다!\n도널드 J. 트럼프 대통령",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116722383986616231",
-      "url": "https://truthsocial.com/@realDonaldTrump/116722383986616231",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-09T21:57:16.123Z",
-      "created_at_text": "Jun 9, 2026, 9:57 PM",
-      "content": "Record $327.1 Billion Exports Help Shrink U.S. Trade Deficit: https://dallasexpress.com/national/record-327-1-billion-exports-help-shrink-u-s-trade-deficit-in-april/",
-      "content_html": "Record $327.1 Billion Exports Help Shrink U.S. Trade Deficit: https://dallasexpress.com/national/record-327-1-billion-exports-help-shrink-u-s-trade-deficit-in-april/",
-      "media": [],
-      "favourites_count": 11095,
-      "reblogs_count": 2834,
-      "replies_count": 468,
-      "content_zh_cn": "创纪录的3271亿美元出口帮助美国贸易逆差收窄：https://dallasexpress.com/national/record-327-1-billion-exports-help-shrink-u-s-trade-deficit-in-april/",
-      "content_zh_hk": "創紀錄的3271億美元出口幫助美國貿易逆差收窄：https://dallasexpress.com/national/record-327-1-billion-exports-help-shrink-u-s-trade-deficit-in-april/",
-      "content_ko": "사상 최대인 3,271억 달러 수출이 미국 무역적자 축소에 기여: https://dallasexpress.com/national/record-327-1-billion-exports-help-shrink-u-s-trade-deficit-in-april/",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116722381318407443",
-      "url": "https://truthsocial.com/@realDonaldTrump/116722381318407443",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-09T21:56:35.406Z",
-      "created_at_text": "Jun 9, 2026, 9:56 PM",
-      "content": "US trade deficit widens by the most in nearly 34 years: https://www.reuters.com/business/us-trade-deficit-widens-by-most-nearly-34-years-november-2026-01-29/",
-      "content_html": "US trade deficit widens by the most in nearly 34 years: https://www.reuters.com/business/us-trade-deficit-widens-by-most-nearly-34-years-november-2026-01-29/",
-      "media": [],
-      "favourites_count": 8655,
-      "reblogs_count": 1965,
-      "replies_count": 390,
-      "content_zh_cn": "美国贸易逆差创近34年来最大增幅：https://www.reuters.com/business/us-trade-deficit-widens-by-most-nearly-34-years-november-2026-01-29/",
-      "content_zh_hk": "美國貿易逆差創近34年來最大增幅：https://www.reuters.com/business/us-trade-deficit-widens-by-most-nearly-34-years-november-2026-01-29/",
-      "content_ko": "미국 무역적자, 약 34년 만에 최대 폭으로 확대: https://www.reuters.com/business/us-trade-deficit-widens-by-most-nearly-34-years-november-2026-01-29/",
       "source_hint": "cnn"
     }
   ]
