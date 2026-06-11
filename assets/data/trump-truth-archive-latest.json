@@ -1,10 +1,27 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-11T14:49:22.777Z",
+  "fetchedAt": "2026-06-11T15:09:31.248Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
   "posts": [
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116732049110199246",
+      "url": "https://truthsocial.com/@realDonaldTrump/116732049110199246",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-11T14:55:14.206Z",
+      "created_at_text": "Jun 11, 2026, 2:55 PM",
+      "content": "The United States States of America cannot live with the shackles of Birthright Citizenship. It is not economically, or otherwise, sustainable, and no other Country in the World, of consequence, does it! President DJT",
+      "content_html": "The United States States of America cannot live with the shackles of Birthright Citizenship. It is not economically, or otherwise, sustainable, and no other Country in the World, of consequence, does it! President DJT",
+      "media": [],
+      "favourites_count": 248,
+      "reblogs_count": 62,
+      "replies_count": 9,
+      "content_zh_cn": "The United States States of America cannot live with the shackles of Birthright Citizenship. It is not economically, or otherwise, sustainable, and no other Country in the World, of consequence, does it! President DJT",
+      "content_zh_hk": "The United States States of America cannot live with the shackles of Birthright Citizenship. It is not economically, or otherwise, sustainable, and no other Country in the World, of consequence, does it! President DJT",
+      "content_ko": "The United States States of America cannot live with the shackles of Birthright Citizenship. It is not economically, or otherwise, sustainable, and no other Country in the World, of consequence, does it! President DJT",
+      "source_hint": "stock.fengle.me"
+    },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116731447139970106",
       "url": "https://truthsocial.com/@realDonaldTrump/116731447139970106",
@@ -173,7 +190,7 @@
       "content_zh_cn": "假新闻媒体拒绝报道美国海军封锁有多么有效，这是海战史上最成功的封锁。除非我们愿意，否则什么都别想通过。它就是一堵钢铁之墙！伊朗的生意归零，既发不出军饷，也付不起各类账单，并且正迅速沦为一个失败国家！大量石油正在外运。感谢真主！\n\n总统 唐纳德·J·特朗普",
       "content_zh_hk": "假新聞媒體拒絕報道美國海軍封鎖有多麼有效，這是海戰史上最成功的封鎖。除非我們願意，否則什麼都別想通過。它就是一道鋼鐵之牆！伊朗的生意歸零，既發不出軍餉，也付不起各類賬單，並且正迅速淪為一個失敗國家！大量石油正在外運。感謝真主！\n\n總統 唐納德·J·特朗普",
       "content_ko": "가짜 뉴스 언론은 미국 해군의 봉쇄가 얼마나 효과적인지 보도하기를 거부하고 있다. 이는 해전 역사상 가장 성공적인 봉쇄다. 우리가 원하지 않는 한 그 어떤 것도 통과하지 못한다. 그야말로 강철의 장벽이다! 이란은 사업이 사실상 제로가 되었고, 군 급여도 지급하지 못하며 각종 대금도 치르지 못하고 있고, 빠르게 실패한 국가로 전락하고 있다! 많은 석유가 반출되고 있다. 알라께 찬미를! \n\n대통령 도널드 J. 트럼프",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116725476229257491",
@@ -353,28 +370,6 @@
       "favourites_count": 9997,
       "reblogs_count": 1824,
       "replies_count": 78,
-      "content_zh_cn": "",
-      "content_zh_hk": "",
-      "content_ko": "",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116725299165504636",
-      "url": "https://truthsocial.com/@realDonaldTrump/116725299165504636",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-10T10:18:38.288Z",
-      "created_at_text": "Jun 10, 2026, 10:18 AM",
-      "content": "",
-      "content_html": "",
-      "media": [
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjY2Lzc2MmZkNDRiNjk0N2RiYWQuanBn",
-          "type": "image"
-        }
-      ],
-      "favourites_count": 9774,
-      "reblogs_count": 1789,
-      "replies_count": 73,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
