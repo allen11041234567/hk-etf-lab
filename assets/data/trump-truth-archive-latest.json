@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-11T15:09:31.248Z",
+  "fetchedAt": "2026-06-11T15:19:13.150Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
@@ -17,9 +17,9 @@
       "favourites_count": 248,
       "reblogs_count": 62,
       "replies_count": 9,
-      "content_zh_cn": "The United States States of America cannot live with the shackles of Birthright Citizenship. It is not economically, or otherwise, sustainable, and no other Country in the World, of consequence, does it! President DJT",
-      "content_zh_hk": "The United States States of America cannot live with the shackles of Birthright Citizenship. It is not economically, or otherwise, sustainable, and no other Country in the World, of consequence, does it! President DJT",
-      "content_ko": "The United States States of America cannot live with the shackles of Birthright Citizenship. It is not economically, or otherwise, sustainable, and no other Country in the World, of consequence, does it! President DJT",
+      "content_zh_cn": "美利坚合众国无法承受“出生公民权”的枷锁。这在经济上或其他方面都不可持续，而世界上任何有分量的国家也都没有这样做！特朗普总统",
+      "content_zh_hk": "美利堅合眾國無法承受「出生公民權」的枷鎖。這在經濟上或其他方面都不可持續，而世界上任何有分量的國家也都沒有這樣做！特朗普總統",
+      "content_ko": "미합중국은 ‘출생시민권’이라는 족쇄를 감당할 수 없습니다. 이는 경제적으로나 그 밖의 측면에서나 지속 가능하지 않으며, 세계 어느 주요 국가도 이렇게 하지 않습니다! 트럼프 대통령",
       "source_hint": "stock.fengle.me"
     },
     {
