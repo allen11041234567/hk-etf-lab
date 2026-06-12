@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116737492068972653": {
+    "content_zh_cn": "https://truthsocial.com/users/craigcowboy/statuses/116737420081036841zt",
+    "content_zh_hk": "https://truthsocial.com/users/craigcowboy/statuses/116737420081036841zt",
+    "content_ko": "https://truthsocial.com/users/craigcowboy/statuses/116737420081036841zt"
+  },
   "https://truthsocial.com/@realDonaldTrump/116737418354503074": {
     "content_zh_cn": "伊朗向假新闻媒体泄露的那些条款，与双方以书面形式达成一致的条款毫无关系。 他们所说的一切——包括他们那份软弱、可悲、声称已达成协议的声明——与事实毫不相干。 和这种人打交道，极其不光彩。 对他们来说，根本不存在所谓的善意谈判。 太令人震惊了！\n\n此外，他们昨晚针对驶离霍尔木兹海峡的印度船只发动的无人机袭击，已被彻底击退，这是完全无法接受的。 他们最好赶紧整顿好自己，而且要快！\n\n总统 唐纳德·J·特朗普",
     "content_zh_hk": "伊朗向假新聞洩露的那些條款，與雙方以書面形式達成一致的條款毫無關係。 他們所說的一切——包括他們那份軟弱、可悲、聲稱已達成協議的聲明——與事實毫不相干。 與這種人打交道，極其不光彩。 對他們來說，根本不存在所謂的善意談判。 太令人震驚了！\n\n此外，他們昨晚針對駛離霍爾木茲海峽的印度船隻發動的無人機襲擊，已被徹底擊退，這是完全無法接受的。 他們最好趕緊整頓好自己，而且要快！\n\n總統 唐納德·J·特朗普",
