@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-12T20:48:12.407Z",
+  "fetchedAt": "2026-06-12T21:02:47.513Z",
   "count": 19,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
@@ -16,6 +16,10 @@
       "media": [
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjgyLzkyYjE2NTJjMjM4NTA2NzguanBn",
+          "type": "image"
+        },
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjgzLzkxOTAxYzFiMzg0NmUzZmMuanBn",
           "type": "image"
         },
         {
