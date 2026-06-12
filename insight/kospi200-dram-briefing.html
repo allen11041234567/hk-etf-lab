@@ -52,6 +52,7 @@
     .qr-title{margin-top:10px;font-size:18px;font-weight:800}
     .qr-desc{margin-top:6px;font-size:13px;color:#475569;line-height:1.75}
     .section-title{font-size:24px;font-weight:900;margin:0 0 14px}
+    .mobile-note{display:none}
     .section-sub{margin:-4px 0 14px;font-size:13px;color:var(--muted);line-height:1.7}
     .compare-hero{padding:22px;border-radius:22px;background:linear-gradient(135deg,#eef6ff 0%,#fff7ed 100%);border:1px solid #dbeafe;margin-bottom:14px}
     .compare-hero .top{font-size:12px;color:var(--blue);font-weight:800;letter-spacing:.05em;text-transform:uppercase}
@@ -72,7 +73,7 @@
     th{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
     .footer-note{font-size:13px;color:#475569;line-height:1.85}
     @media (max-width:900px){.hero-grid,.compare,.kpi-grid,.hero-actions{grid-template-columns:1fr}h1{font-size:30px}.big-callout .value,.compare-hero .main{font-size:26px}.compare-value,.live-val{font-size:30px}}
-    @media (max-width:640px){.wrap{padding:12px 10px 24px}.hero,.panel{padding:16px;border-radius:18px}h1{font-size:24px}.kpi-v{font-size:26px}.compare-value,.live-val{font-size:24px}.table-wrap table{min-width:640px}th,td{padding:10px 8px;font-size:13px}}
+    @media (max-width:640px){.wrap{padding:12px 10px 24px}.hero,.panel{padding:16px;border-radius:18px}h1{font-size:24px}.kpi-v{font-size:26px}.compare-value,.live-val{font-size:24px}.table-wrap table{min-width:640px}th,td{padding:10px 8px;font-size:13px}.live-row{padding:12px 0}.live-name{font-size:14px;max-width:58%}.live-val{font-size:22px}.action-btn{font-size:13px;padding:13px 12px}.qr-card img{width:min(220px,100%)}.mobile-note{display:block;margin-top:8px;font-size:12px;color:var(--muted);line-height:1.7}}
   </style>
 </head>
 <body>
@@ -109,11 +110,11 @@
           <div class="live-strip">
             <div class="live-row">
               <div class="live-name">SK海力士 即时涨跌幅</div>
-              <div class="live-val">+2.33%</div>
+              <div class="live-val" id="live-sk-hynix">--</div>
             </div>
             <div class="live-row">
               <div class="live-name">三星电子 即时涨跌幅</div>
-              <div class="live-val">+7.86%</div>
+              <div class="live-val" id="live-samsung">--</div>
             </div>
           </div>
         </div>
@@ -121,6 +122,7 @@
           <img src="/assets/qr/kospi200-korea-chat-20260612.jpg" alt="韩股讨论群二维码" />
           <div class="qr-title">入群讨论韩股行情</div>
           <div class="qr-desc">扫码加入，继续跟踪三星、海力士、KOSPI 200、韩国科技链和 DRAM 周期。</div>
+          <div class="mobile-note">手机端已进一步压缩按钮、涨跌幅区和二维码区，阅读会更顺一点。</div>
         </div>
       </div>
     </section>
@@ -187,5 +189,40 @@
       </div>
     </section>
   </div>
+  <script>
+    (function(){
+      const ids = {
+        '000660': document.getElementById('live-sk-hynix'),
+        '005930': document.getElementById('live-samsung')
+      };
+      function formatPct(v){
+        const n = Number(v);
+        if (!Number.isFinite(n)) return '--';
+        return `${n > 0 ? '+' : ''}${n.toFixed(2)}%`;
+      }
+      function paint(el, v){
+        if (!el) return;
+        const n = Number(v);
+        el.textContent = formatPct(v);
+        if (!Number.isFinite(n)) {
+          el.style.color = '#64748b';
+          return;
+        }
+        el.style.color = n >= 0 ? '#b91c1c' : '#2563eb';
+      }
+      fetch('/api/pulse/brief?codes=000660,005930', { cache: 'no-store' })
+        .then(r => r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`)))
+        .then(data => {
+          const list = Array.isArray(data) ? data : (Array.isArray(data?.items) ? data.items : []);
+          list.forEach(item => {
+            const el = ids[item.code];
+            if (el) paint(el, item.changePercent ?? item.changePct ?? item.rate);
+          });
+        })
+        .catch(() => {
+          Object.values(ids).forEach(el => { if (el) el.textContent = '--'; });
+        });
+    })();
+  </script>
 </body>
 </html>
