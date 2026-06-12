@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex,nofollow,noarchive" />
-  <title>KOSPI 200，三星+海力士权重显著高于 DRAM 主题产品</title>
+  <title>比DRAM更纯血的存储ETF来了</title>
   <style>
     :root{
       --bg:#f3f7fc;
@@ -14,59 +14,69 @@
       --line:#dbe3ef;
       --blue:#2563eb;
       --blue-soft:#eff6ff;
+      --blue-deep:#1d4ed8;
       --amber:#c2410c;
       --amber-soft:#fff7ed;
-      --shadow:0 16px 40px rgba(15,23,42,.08);
+      --green:#047857;
+      --green-soft:#ecfdf5;
+      --shadow:0 18px 42px rgba(15,23,42,.08);
     }
     *{box-sizing:border-box}
     body{margin:0;background:linear-gradient(180deg,#f7f9fd 0%,#eef4fb 100%);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif}
-    .wrap{max-width:1040px;margin:0 auto;padding:18px 14px 34px}
-    .hero,.panel{background:var(--panel);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow)}
-    .hero{padding:26px 24px;margin-bottom:16px}
-    .panel{padding:20px 22px;margin-bottom:16px}
+    .wrap{max-width:1080px;margin:0 auto;padding:18px 14px 34px}
+    .hero,.panel{background:var(--panel);border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow)}
+    .hero{padding:28px 26px;margin-bottom:16px}
+    .panel{padding:22px 24px;margin-bottom:16px}
     .eyebrow{display:inline-block;padding:8px 12px;border-radius:999px;background:var(--blue-soft);color:var(--blue);font-size:12px;font-weight:800;letter-spacing:.04em}
-    h1{margin:14px 0 10px;font-size:40px;line-height:1.08;letter-spacing:-.03em}
-    .sub{font-size:16px;line-height:1.8;color:#475569;max-width:920px}
-    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:16px;margin-top:18px}
+    h1{margin:14px 0 6px;font-size:42px;line-height:1.05;letter-spacing:-.04em}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;margin-top:18px}
     .kpi-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-    .kpi{padding:16px;border-radius:18px;border:1px solid var(--line);background:linear-gradient(180deg,#fff 0%,#f8fbff 100%)}
+    .kpi{padding:18px;border-radius:20px;border:1px solid var(--line);background:linear-gradient(180deg,#fff 0%,#f8fbff 100%)}
     .kpi.focus{background:linear-gradient(180deg,#eff6ff 0%,#ffffff 100%);border-color:#bfdbfe}
     .kpi-k{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
-    .kpi-v{margin-top:6px;font-size:32px;font-weight:900;line-height:1.05}
+    .kpi-v{margin-top:8px;font-size:34px;font-weight:900;line-height:1.02}
     .kpi-d{margin-top:6px;font-size:12px;color:#475569;line-height:1.7}
-    .big-callout{margin-top:14px;padding:18px;border-radius:20px;border:1px solid #bfdbfe;background:linear-gradient(180deg,#eff6ff 0%,#f8fbff 100%)}
+    .big-callout{margin-top:14px;padding:20px;border-radius:22px;border:1px solid #bfdbfe;background:linear-gradient(135deg,#eff6ff 0%,#ffffff 100%)}
     .big-callout .label{font-size:12px;color:var(--blue);font-weight:800;text-transform:uppercase;letter-spacing:.05em}
-    .big-callout .value{margin-top:6px;font-size:34px;font-weight:900;line-height:1.15}
-    .big-callout .desc{margin-top:8px;font-size:14px;color:#475569;line-height:1.8}
-    .qr-card{padding:18px;border-radius:20px;border:1px solid var(--line);background:linear-gradient(180deg,#fff 0%,#f8fbff 100%);display:flex;flex-direction:column;align-items:center;text-align:center;justify-content:center}
-    .qr-card img{display:block;width:min(250px,100%);border-radius:18px;background:#fff;padding:8px;border:1px solid #e5e7eb}
+    .big-callout .value{margin-top:8px;font-size:36px;font-weight:900;line-height:1.12}
+    .hero-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+    .action-btn{display:flex;align-items:center;justify-content:center;padding:14px 16px;border-radius:16px;text-decoration:none;font-weight:800;font-size:14px;border:1px solid transparent;transition:.15s ease}
+    .action-btn.primary{background:linear-gradient(135deg,var(--blue) 0%,var(--blue-deep) 100%);color:#fff;box-shadow:0 10px 24px rgba(37,99,235,.24)}
+    .action-btn.secondary{background:#fff;color:var(--blue);border-color:#bfdbfe}
+    .action-btn:hover{transform:translateY(-1px)}
+    .qr-card{padding:18px;border-radius:22px;border:1px solid var(--line);background:linear-gradient(180deg,#fff 0%,#f8fbff 100%);display:flex;flex-direction:column;align-items:center;text-align:center;justify-content:center}
+    .qr-card img{display:block;width:min(245px,100%);border-radius:18px;background:#fff;padding:8px;border:1px solid #e5e7eb}
     .qr-title{margin-top:10px;font-size:18px;font-weight:800}
     .qr-desc{margin-top:6px;font-size:13px;color:#475569;line-height:1.75}
     .section-title{font-size:24px;font-weight:900;margin:0 0 14px}
-    .compare{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
-    .compare-card{padding:18px;border-radius:18px;border:1px solid var(--line);background:#fff}
-    .compare-card.kospi{background:var(--blue-soft);border-color:#bfdbfe}
-    .compare-card.dram{background:var(--amber-soft);border-color:#fed7aa}
-    .compare-card.diff{background:#f8fafc}
-    .compare-label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
-    .compare-value{margin-top:8px;font-size:30px;font-weight:900}
-    .compare-desc{margin-top:8px;font-size:13px;color:#475569;line-height:1.75}
-    table{width:100%;border-collapse:collapse}
+    .section-sub{margin:-4px 0 14px;font-size:13px;color:var(--muted);line-height:1.7}
+    .compare-hero{padding:22px;border-radius:22px;background:linear-gradient(135deg,#eef6ff 0%,#fff7ed 100%);border:1px solid #dbeafe;margin-bottom:14px}
+    .compare-hero .top{font-size:12px;color:var(--blue);font-weight:800;letter-spacing:.05em;text-transform:uppercase}
+    .compare-hero .main{margin-top:8px;font-size:34px;font-weight:900;line-height:1.12}
+    .compare-hero .sub{margin-top:8px;font-size:14px;color:#475569;line-height:1.8}
+    .compare{display:grid;grid-template-columns:1.2fr 1.2fr .8fr;gap:14px}
+    .compare-card{position:relative;padding:22px;border-radius:22px;border:1px solid var(--line);background:#fff;overflow:hidden}
+    .compare-card.kospi{background:linear-gradient(135deg,#dbeafe 0%,#eff6ff 100%);border-color:#93c5fd}
+    .compare-card.dram{background:linear-gradient(135deg,#ffedd5 0%,#fff7ed 100%);border-color:#fdba74}
+    .compare-card.diff{background:linear-gradient(135deg,#ecfdf5 0%,#f8fafc 100%);border-color:#a7f3d0}
+    .compare-badge{display:inline-block;padding:6px 10px;border-radius:999px;font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;background:rgba(255,255,255,.72)}
+    .compare-value{margin-top:12px;font-size:44px;font-weight:900;line-height:1}
+    .compare-desc{margin-top:10px;font-size:14px;color:#475569;line-height:1.8}
+    .compare-card.diff .compare-value{color:var(--green)}
+    .table-wrap{overflow-x:auto;border-radius:18px}
+    table{width:100%;border-collapse:collapse;min-width:720px}
     th,td{padding:12px 10px;border-bottom:1px solid #e5e7eb;text-align:left;vertical-align:top;font-size:14px}
     th{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
-    .table-wrap{overflow-x:auto;border-radius:18px}
-    .table-wrap table{min-width:720px}
     .footer-note{font-size:13px;color:#475569;line-height:1.85}
-    @media (max-width:900px){.hero-grid,.compare,.kpi-grid{grid-template-columns:1fr}h1{font-size:30px}}
-    @media (max-width:640px){.wrap{padding:12px 10px 24px}.hero,.panel{padding:16px;border-radius:18px}h1{font-size:24px}.sub{font-size:14px;line-height:1.7}.kpi-v,.compare-value,.big-callout .value{font-size:24px}th,td{padding:10px 8px;font-size:13px}}
+    @media (max-width:900px){.hero-grid,.compare,.kpi-grid,.hero-actions{grid-template-columns:1fr}h1{font-size:30px}.big-callout .value,.compare-hero .main{font-size:26px}.compare-value{font-size:30px}}
+    @media (max-width:640px){.wrap{padding:12px 10px 24px}.hero,.panel{padding:16px;border-radius:18px}h1{font-size:24px}.kpi-v{font-size:26px}.compare-value{font-size:28px}.table-wrap table{min-width:640px}th,td{padding:10px 8px;font-size:13px}}
   </style>
 </head>
 <body>
   <div class="wrap">
     <section class="hero">
       <div class="eyebrow">KOSPI 200 / 2026-05-29</div>
-      <h1>KOSPI 200 里三星 + 海力士的权重，比 DRAM 主题产品还高</h1>
-      <div class="sub">如果客户想抓韩国存储与电子龙头这条主线，KOSPI 200 并不是“宽基稀释”，而是一个对三星电子与 SK 海力士高度集中的韩国蓝筹指数。</div>
+      <h1>比DRAM更纯血的存储ETF来了</h1>
 
       <div class="hero-grid">
         <div>
@@ -88,9 +98,12 @@
             </div>
           </div>
           <div class="big-callout">
-            <div class="label">核心结论</div>
-            <div class="value">KOSPI 200 的优势，是对三星 + 海力士更重、更集中</div>
-            <div class="desc">对比你给的 DRAM 主题产品，KOSPI 200 里三星 + 海力士合计权重达到 61.63%，显著高于对方的 37.62%。如果核心看的是这两家龙头，KOSPI 200 的表达更直接。</div>
+            <div class="label">核心卖点</div>
+            <div class="value">三星 + 海力士，直接占到 KOSPI 200 的 61.63%</div>
+          </div>
+          <div class="hero-actions">
+            <a class="action-btn primary" href="https://hketf-lab.pages.dev/insight/korea-tech-briefing">进入三星 / 海力士实时股价观察入口</a>
+            <a class="action-btn secondary" href="https://hketf-lab.pages.dev/insight/korea-tech-briefing">查看韩国科技与市场观察</a>
           </div>
         </div>
         <div class="qr-card">
@@ -103,6 +116,7 @@
 
     <section class="panel">
       <div class="section-title">持仓信息优先，先看前十大</div>
+      <div class="section-sub">前两大成分股就已经定义了这只指数的核心性格。</div>
       <div class="table-wrap">
         <table>
           <thead>
@@ -132,21 +146,26 @@
 
     <section class="panel">
       <div class="section-title">KOSPI 200 vs DRAM 主题产品</div>
+      <div class="compare-hero">
+        <div class="top">显著对比</div>
+        <div class="main">61.63% vs 37.62%</div>
+        <div class="sub">KOSPI 200 里三星 + 海力士的合计权重，比 DRAM 主题产品高出 <b>24.01 个百分点</b>。</div>
+      </div>
       <div class="compare">
         <div class="compare-card kospi">
-          <div class="compare-label">KOSPI 200</div>
+          <div class="compare-badge">KOSPI 200</div>
           <div class="compare-value">61.63%</div>
           <div class="compare-desc">三星电子 32.88% + SK 海力士 28.75%</div>
         </div>
         <div class="compare-card dram">
-          <div class="compare-label">DRAM 主题产品</div>
+          <div class="compare-badge">DRAM 主题产品</div>
           <div class="compare-value">37.62%</div>
           <div class="compare-desc">SK 海力士 21.58% + 三星电子 16.04%</div>
         </div>
         <div class="compare-card diff">
-          <div class="compare-label">差值</div>
-          <div class="compare-value">24.01pct</div>
-          <div class="compare-desc">KOSPI 200 对两大韩国龙头的集中度更高</div>
+          <div class="compare-badge">优势差值</div>
+          <div class="compare-value">+24.01</div>
+          <div class="compare-desc">KOSPI 200 对两大韩国存储龙头的集中度更高</div>
         </div>
       </div>
     </section>
@@ -154,7 +173,7 @@
     <section class="panel">
       <div class="section-title">为什么 KOSPI 200 更有说服力</div>
       <div class="footer-note">
-        KOSPI 200 虽然是韩国蓝筹指数，但头部权重极高，前两大成分股就超过六成。与此同时，指数中的 <b>Electrical Equipment &amp; Electronics</b> 行业权重达到 <b>69.55%</b>。这意味着，如果客户关注的是三星电子、SK 海力士以及背后的 DRAM、HBM、存储与电子龙头景气，KOSPI 200 并不会削弱这条主线，反而会把它放大得更清楚。
+        KOSPI 200 虽然是韩国蓝筹指数，但头部权重极高，前两大成分股就超过六成。与此同时，指数中的 <b>Electrical Equipment &amp; Electronics</b> 行业权重达到 <b>69.55%</b>。这意味着，如果客户关注的是三星电子、SK 海力士以及背后的 DRAM、HBM、存储与电子龙头景气，KOSPI 200 会把这条主线放大得更清楚。
       </div>
     </section>
   </div>
