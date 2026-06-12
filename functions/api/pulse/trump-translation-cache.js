@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116737999128241599": {
+    "content_zh_cn": "位于林肯纪念堂与凯旋门选址之间的大型“战争艺术”雕塑群，重新贴金工程正快速推进。预计到7月3日，这些雕塑将全部完成重新贴金。以下照片拍摄于昨日。镀金工作室已从全美各地调派贴金工匠，开展这项工程！",
+    "content_zh_hk": "位於林肯紀念堂與凱旋門選址之間的大型「戰爭藝術」雕塑群，重新貼金工程正快速推進。預計到7月3日，這些雕塑將全部完成重新貼金。以下照片拍攝於昨日。鍍金工作室已從全美各地調派貼金工匠，展開這項工程！",
+    "content_ko": "링컨 기념관과 개선문 부지 사이에 위치한 대형 ‘전쟁의 예술’ 조각군의 재도금 작업이 빠르게 진행되고 있습니다. 이 조각들은 7월 3일까지 전면 재도금을 마칠 예정입니다. 아래 사진들은 어제 촬영한 것입니다. 길더스 스튜디오는 이 작업을 위해 전국 각지에서 도금 장인들을 긴급 투입했습니다!"
+  },
   "https://truthsocial.com/@realDonaldTrump/116737492068972653": {
     "content_zh_cn": "https://truthsocial.com/users/craigcowboy/statuses/116737420081036841zt",
     "content_zh_hk": "https://truthsocial.com/users/craigcowboy/statuses/116737420081036841zt",
