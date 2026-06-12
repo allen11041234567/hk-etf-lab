@@ -55,12 +55,14 @@
     .compare-hero .main .rest{font-size:24px;line-height:1.1;color:#475569}
     .compare-hero .sub{margin-top:6px;font-size:13px;color:#475569;line-height:1.7}
     .compare{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px}
-    .compare-card{padding:14px 12px;border-radius:16px;border:1px solid var(--line);background:#fff;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}
-    .compare-card.kospi{background:linear-gradient(135deg,#dbeafe 0%,#eff6ff 100%);border-color:#93c5fd}
+    .compare-card{padding:14px 12px;border-radius:16px;border:1px solid var(--line);background:#fff;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden}
+    .compare-card.kospi{background:linear-gradient(135deg,#dbeafe 0%,#eff6ff 100%);border-color:#60a5fa;box-shadow:0 14px 30px rgba(37,99,235,.16)}
+    .compare-card.kospi::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at top right, rgba(255,255,255,.82), transparent 38%);pointer-events:none}
     .compare-card.dram{background:linear-gradient(135deg,#ffedd5 0%,#fff7ed 100%);border-color:#fdba74}
     .compare-card.ewy{background:linear-gradient(135deg,#ede9fe 0%,#f5f3ff 100%);border-color:#c4b5fd}
     .compare-card.diff{background:linear-gradient(135deg,#ecfdf5 0%,#f8fafc 100%);border-color:#a7f3d0}
     .compare-badge{display:inline-block;padding:5px 8px;border-radius:999px;font-size:10px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;background:rgba(255,255,255,.74);text-align:center}
+    .focus-badge{display:inline-flex;align-items:center;gap:5px;margin-bottom:8px;padding:6px 10px;border-radius:999px;background:linear-gradient(135deg,#2563eb 0%,#1d4ed8 100%);color:#fff;font-size:10px;font-weight:900;letter-spacing:.03em;box-shadow:0 8px 18px rgba(37,99,235,.22)}
     .compare-value{margin-top:10px;font-size:34px;font-weight:900;line-height:1}
     .compare-desc{margin-top:8px;font-size:12px;color:#475569;line-height:1.65;text-align:center}
     .compare-card.diff .compare-value{color:var(--green)}
@@ -91,6 +93,7 @@
       .compare-hero .main .rest{font-size:18px}
       .compare-hero .sub{font-size:12px}
       .compare-card{padding:14px 12px;border-radius:16px}
+      .focus-badge{font-size:9px;padding:5px 8px;margin-bottom:6px}
       .compare-value{font-size:28px}
       .compare-desc{font-size:11px}
       th,td{padding:10px 8px;font-size:13px}
@@ -183,6 +186,7 @@
       </div>
       <div class="compare">
         <div class="compare-card kospi">
+          <div class="focus-badge">⭐ 龙头占比最集中</div>
           <div class="compare-badge">KOSPI 200</div>
           <div class="compare-value">61.63%</div>
           <div class="compare-desc">三星电子 32.88% + SK海力士 28.75%</div>
