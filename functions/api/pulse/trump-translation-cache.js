@@ -1,4 +1,19 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116734623535558014": {
+    "content_zh_cn": "为什么斯科特·佩利无关紧要：https://lyceumnow.com/why-scott-pelley-doesnt-matter/",
+    "content_zh_hk": "為什麼斯科特·佩利無關緊要：https://lyceumnow.com/why-scott-pelley-doesnt-matter/",
+    "content_ko": "왜 스콧 펠리는 중요하지 않은가: https://lyceumnow.com/why-scott-pelley-doesnt-matter/"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116734622396281132": {
+    "content_zh_cn": "加州联邦检察官怀疑，对选民欺诈的调查将导致提出指控：https://justthenews.com/government/courts-law/us-attorney-california-suspects-voter-fraud-investigation-will-result-charges",
+    "content_zh_hk": "加州聯邦檢察官懷疑，對選民欺詐的調查將導致提出指控：https://justthenews.com/government/courts-law/us-attorney-california-suspects-voter-fraud-investigation-will-result-charges",
+    "content_ko": "캘리포니아 연방검사는 유권자 사기 조사 결과 기소로 이어질 것으로 보고 있다: https://justthenews.com/government/courts-law/us-attorney-california-suspects-voter-fraud-investigation-will-result-charges"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116734620855620327": {
+    "content_zh_cn": "国会通过移民执法拨款法案，在民主党一番闹剧之后，为特朗普送上一场重大胜利：https://justthenews.com/politics-policy/congress-passes-ice-border-patrol-funding-bill",
+    "content_zh_hk": "國會通過移民執法撥款法案，在民主黨一番鬧劇之後，為特朗普帶來一場重大勝利：https://justthenews.com/politics-policy/congress-passes-ice-border-patrol-funding-bill",
+    "content_ko": "의회가 이민 단속 예산 법안을 통과시키며, 민주당의 소동 끝에 트럼프에게 큰 승리를 안겼다: https://justthenews.com/politics-policy/congress-passes-ice-border-patrol-funding-bill"
+  },
   "https://truthsocial.com/@realDonaldTrump/116734237249042208": {
     "content_zh_cn": "萨拉·巴克斯特是一位非常出色的人士，也完全胜任许多重要政治职位；但从某种自私的角度来说，我更希望她继续留在棕榈滩县委员会（那里正在发生许多重要的事情！），而不是去竞选国会议员。谢谢你，萨拉！\n\n总统 唐纳德·J·特朗普",
     "content_zh_hk": "莎拉·巴克斯特是一位非常出色的人士，亦完全勝任許多重要政治職位；但從某種自私的角度來說，我更希望她繼續留在棕櫚灘縣委員會（那裏正發生許多重要的事情！），而不是去競選國會議員。謝謝你，莎拉！\n\n總統 當勞·J·特朗普",
