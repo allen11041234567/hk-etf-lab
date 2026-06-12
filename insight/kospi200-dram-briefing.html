@@ -195,6 +195,8 @@
         '000660': document.getElementById('live-sk-hynix'),
         '005930': document.getElementById('live-samsung')
       };
+      const SNAPSHOT_FEED = '/api/pulse/korea-tech-briefing-snapshot';
+      const STATIC_SNAPSHOT_FEED = '/assets/data/korea-tech-briefing-snapshot.json';
       function formatPct(v){
         const n = Number(v);
         if (!Number.isFinite(n)) return '--';
@@ -210,13 +212,25 @@
         }
         el.style.color = n >= 0 ? '#b91c1c' : '#2563eb';
       }
-      fetch('/api/pulse/brief?codes=000660,005930', { cache: 'no-store' })
-        .then(r => r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`)))
+      async function fetchJsonWithFallback(primary, fallback){
+        try {
+          const resp = await fetch(primary, { cache: 'no-store' });
+          if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+          const data = await resp.json();
+          if (data && data.ok === false) throw new Error(data.error || 'unknown error');
+          return data;
+        } catch (_) {
+          const resp = await fetch(fallback, { cache: 'no-store' });
+          if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+          return await resp.json();
+        }
+      }
+      fetchJsonWithFallback(SNAPSHOT_FEED, STATIC_SNAPSHOT_FEED)
         .then(data => {
-          const list = Array.isArray(data) ? data : (Array.isArray(data?.items) ? data.items : []);
+          const list = Array.isArray(data?.quotes) ? data.quotes : [];
           list.forEach(item => {
             const el = ids[item.code];
-            if (el) paint(el, item.changePercent ?? item.changePct ?? item.rate);
+            if (el) paint(el, item.dayChangePercent ?? item.changePercent ?? item.changePct ?? item.rate);
           });
         })
         .catch(() => {
