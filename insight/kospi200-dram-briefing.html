@@ -52,10 +52,11 @@
     .compare-hero .top{font-size:11px;color:var(--blue);font-weight:800;letter-spacing:.05em;text-transform:uppercase}
     .compare-hero .main{margin-top:6px;font-size:30px;font-weight:900;line-height:1.08}
     .compare-hero .sub{margin-top:6px;font-size:13px;color:#475569;line-height:1.7}
-    .compare{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+    .compare{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px}
     .compare-card{padding:14px 12px;border-radius:16px;border:1px solid var(--line);background:#fff;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}
     .compare-card.kospi{background:linear-gradient(135deg,#dbeafe 0%,#eff6ff 100%);border-color:#93c5fd}
     .compare-card.dram{background:linear-gradient(135deg,#ffedd5 0%,#fff7ed 100%);border-color:#fdba74}
+    .compare-card.ewy{background:linear-gradient(135deg,#ede9fe 0%,#f5f3ff 100%);border-color:#c4b5fd}
     .compare-card.diff{background:linear-gradient(135deg,#ecfdf5 0%,#f8fafc 100%);border-color:#a7f3d0}
     .compare-badge{display:inline-block;padding:5px 8px;border-radius:999px;font-size:10px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;background:rgba(255,255,255,.74);text-align:center}
     .compare-value{margin-top:10px;font-size:34px;font-weight:900;line-height:1}
@@ -170,11 +171,11 @@
     </section>
 
     <section class="panel">
-      <div class="section-title">KOSPI 200 vs DRAM 主题产品</div>
+      <div class="section-title">KOSPI 200 vs DRAM 主题产品 vs EWY</div>
       <div class="compare-hero">
         <div class="top">显著对比</div>
-        <div class="main">61.63% vs 37.62%</div>
-        <div class="sub">KOSPI 200 里三星 + 海力士的合计权重，比 DRAM 主题产品高出 <b>24.01 个百分点</b>。</div>
+        <div class="main">61.63% vs 37.62% vs 45.55%</div>
+        <div class="sub">KOSPI 200 里三星 + 海力士的合计权重，不仅高于 DRAM 主题产品，也高于 EWY。相较 DRAM 主题产品高出 <b>24.01 个百分点</b>，相较 EWY 高出 <b>16.08 个百分点</b>。</div>
       </div>
       <div class="compare">
         <div class="compare-card kospi">
@@ -187,10 +188,15 @@
           <div class="compare-value">37.62%</div>
           <div class="compare-desc">SK海力士 21.58% + 三星电子 16.04%</div>
         </div>
+        <div class="compare-card ewy">
+          <div class="compare-badge">EWY</div>
+          <div class="compare-value">45.55%</div>
+          <div class="compare-desc">三星电子 23.61% + SK海力士 21.94%</div>
+        </div>
         <div class="compare-card diff">
           <div class="compare-badge">优势差值</div>
-          <div class="compare-value">+24.01</div>
-          <div class="compare-desc">KOSPI 200 对两大韩国存储龙头的集中度更高</div>
+          <div class="compare-value">+16.08</div>
+          <div class="compare-desc">相较 EWY，KOSPI 200 对两大韩国存储龙头的集中度仍更高</div>
         </div>
       </div>
     </section>
