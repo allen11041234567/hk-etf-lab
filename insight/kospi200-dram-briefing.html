@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow,noarchive" />
+  <title>KOSPI 200 持仓观察，三星+海力士权重远高于 DRAM 单一主题想象</title>
+  <style>
+    :root{
+      --bg:#f4f7fb;
+      --panel:#ffffff;
+      --text:#0f172a;
+      --muted:#64748b;
+      --line:#dbe3ef;
+      --blue:#2563eb;
+      --blue-soft:#eff6ff;
+      --amber:#b45309;
+      --amber-soft:#fff7ed;
+      --green:#047857;
+      --shadow:0 18px 42px rgba(15,23,42,.08);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;
+      background:linear-gradient(180deg,#f7f9fd 0%,#eef3fb 100%);
+      color:var(--text);
+    }
+    .wrap{max-width:1120px;margin:0 auto;padding:22px 14px 40px}
+    .hero,.panel{background:var(--panel);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow)}
+    .hero{padding:28px 26px;margin-bottom:16px}
+    .panel{padding:20px 22px;margin-bottom:16px}
+    .eyebrow{display:inline-block;padding:8px 12px;border-radius:999px;background:var(--blue-soft);color:var(--blue);font-size:12px;font-weight:800;letter-spacing:.04em}
+    h1{margin:14px 0 10px;font-size:40px;line-height:1.12;letter-spacing:-.03em}
+    .sub{font-size:16px;line-height:1.8;color:#475569;max-width:900px}
+    .meta{margin-top:14px;font-size:13px;color:var(--muted);line-height:1.8}
+    .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:16px}
+    .hero-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:18px}
+    .kpi{padding:16px;border-radius:18px;border:1px solid var(--line);background:linear-gradient(180deg,#fff 0%,#f8fbff 100%)}
+    .kpi-k{font-size:12px;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+    .kpi-v{margin-top:6px;font-size:30px;font-weight:900;line-height:1.1}
+    .kpi-d{margin-top:6px;font-size:12px;line-height:1.7;color:#475569}
+    .kpi.focus{background:linear-gradient(180deg,#eff6ff 0%,#ffffff 100%);border-color:#bfdbfe}
+    .focus-strip{margin-top:18px;padding:18px;border-radius:20px;background:linear-gradient(180deg,#eff6ff 0%,#f8fbff 100%);border:1px solid #bfdbfe}
+    .focus-k{font-size:12px;color:var(--blue);font-weight:800;letter-spacing:.05em;text-transform:uppercase}
+    .focus-v{margin-top:6px;font-size:34px;font-weight:900;line-height:1.15}
+    .focus-d{margin-top:8px;font-size:14px;color:#475569;line-height:1.8}
+    .section-title{font-size:24px;font-weight:900;margin:0 0 14px}
+    .section-sub{font-size:13px;color:var(--muted);line-height:1.8;margin:-6px 0 14px}
+    .compare{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .compare-card{padding:16px;border-radius:18px;border:1px solid var(--line);background:#fff}
+    .compare-card.dram{background:var(--amber-soft);border-color:#fed7aa}
+    .compare-card.index{background:var(--blue-soft);border-color:#bfdbfe}
+    .compare-label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+    .compare-value{margin-top:8px;font-size:28px;font-weight:900}
+    .compare-desc{margin-top:8px;font-size:13px;color:#475569;line-height:1.75}
+    table{width:100%;border-collapse:collapse}
+    th,td{padding:11px 10px;border-bottom:1px solid #e5e7eb;text-align:left;vertical-align:top;font-size:14px}
+    th{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+    .table-wrap{overflow-x:auto;border-radius:18px}
+    .table-wrap table{min-width:720px}
+    .bullet{margin:0;padding-left:20px;color:#475569;line-height:1.85}
+    .tag-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .tag{display:inline-block;padding:7px 10px;border-radius:999px;background:#f8fafc;border:1px solid #e2e8f0;font-size:12px;color:#334155;font-weight:700}
+    .small-note{font-size:12px;color:var(--muted);line-height:1.75;margin-top:12px}
+    .related-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .related-card{padding:16px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(180deg,#fff 0%,#f8fbff 100%)}
+    .related-code{font-size:12px;color:var(--blue);font-weight:800;letter-spacing:.04em}
+    .related-name{margin-top:6px;font-size:18px;font-weight:800}
+    .related-desc{margin-top:6px;font-size:13px;color:#475569;line-height:1.75}
+    .footer-note{font-size:12px;color:var(--muted);line-height:1.8}
+    @media (max-width:900px){
+      .grid{grid-template-columns:1fr}
+      .hero-kpis{grid-template-columns:1fr}
+      .compare,.related-grid{grid-template-columns:1fr}
+      h1{font-size:30px}
+    }
+    @media (max-width:640px){
+      .wrap{padding:12px 10px 24px}
+      .hero,.panel{padding:16px;border-radius:18px}
+      h1{font-size:24px}
+      .sub{font-size:14px;line-height:1.7}
+      .focus-v,.kpi-v,.compare-value{font-size:24px}
+      th,td{padding:10px 8px;font-size:13px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="eyebrow">KOSPI 200 / 2026-05-29 口径</div>
+      <h1>KOSPI 200 持仓观察，三星 + 海力士合计权重显著高于单纯 DRAM 想象</h1>
+      <div class="sub">
+        这个页面不是单纯介绍指数，而是把 <b>KOSPI 200</b> 里最关键、最有交易意义的结构直接拎出来看。结论非常明确，<b>三星电子 + SK 海力士合计权重 61.63%</b>，说明它本质上已经是一种“韩国半导体与电子龙头高度集中的蓝筹表达”，而不是普通意义上的宽基平均分散。
+      </div>
+      <div class="meta">资料来源：你提供的 KRX KOSPI 200 factsheet（Base date 1990-01-03；factsheet date 2026-05-29）。本页优先突出持仓结构、龙头集中度与 DRAM/存储链映射价值。</div>
+
+      <div class="hero-kpis">
+        <div class="kpi focus">
+          <div class="kpi-k">三星电子权重</div>
+          <div class="kpi-v">32.88%</div>
+          <div class="kpi-d">KOSPI 200 第一大权重股，直接定义指数的电子与半导体属性。</div>
+        </div>
+        <div class="kpi focus">
+          <div class="kpi-k">SK 海力士权重</div>
+          <div class="kpi-v">28.75%</div>
+          <div class="kpi-d">第二大权重股，本质上让指数对 HBM / DRAM / AI 存储链高度敏感。</div>
+        </div>
+        <div class="kpi focus">
+          <div class="kpi-k">两者合计</div>
+          <div class="kpi-v">61.63%</div>
+          <div class="kpi-d">单看前两大成分股，已经占到整个指数超过六成，集中度非常高。</div>
+        </div>
+      </div>
+
+      <div class="focus-strip">
+        <div class="focus-k">核心判断</div>
+        <div class="focus-v">如果你想找韩国 DRAM / 存储链映射，KOSPI 200 本身已经很重，不只是“宽基”</div>
+        <div class="focus-d">很多人会把 KOSPI 200 先当成普通韩国大盘指数，但从这份 factsheet 看，它对三星电子和 SK 海力士的依赖度非常高。也就是说，这个指数天然就带着很强的 <b>DRAM / 存储 / 电子龙头</b> 属性，而且两者合计权重已经明显大于“只把它理解成单一 DRAM 主题”的直觉想象。</div>
+      </div>
+    </section>
+
+    <div class="grid">
+      <section class="panel">
+        <div class="section-title">DRAM / 存储链对比怎么理解</div>
+        <div class="section-sub">你要求页面一定要突出：KOSPI 200 里三星 + 海力士的持仓占比，显著大于一般人对“DRAM 暴露”的想象，这里我直接把话说透。</div>
+        <div class="compare">
+          <div class="compare-card index">
+            <div class="compare-label">KOSPI 200 里的三星 + 海力士</div>
+            <div class="compare-value">61.63%</div>
+            <div class="compare-desc">这不是边角仓位，而是指数最核心的定价中枢。只要这两家公司波动，KOSPI 200 的性格就会明显偏向韩国电子与半导体。</div>
+          </div>
+          <div class="compare-card dram">
+            <div class="compare-label">对 DRAM 暴露的直觉理解</div>
+            <div class="compare-value">往往被低估</div>
+            <div class="compare-desc">很多人把 KOSPI 200 先当“大盘宽基”，但事实是它对三星 + 海力士的权重集中，已经让这个指数具备强烈的存储链表达。换句话说，<b>KOSPI 200 里三星 + 海力士合计占比，本身就远高于很多人对 DRAM 暴露的第一反应</b>。</div>
+          </div>
+        </div>
+        <ul class="bullet" style="margin-top:14px">
+          <li>三星电子 32.88% + SK 海力士 28.75%，两者已经合计 61.63%。</li>
+          <li>前十大权重合计 74%，说明这不是松散宽基，而是高度集中在少数龙头。</li>
+          <li>行业里 Electrical Equipment &amp; Electronics 权重 69.55%，进一步强化电子与半导体主导性。</li>
+          <li>所以这个指数对 <b>DRAM / HBM / 存储景气、韩国电子龙头走势</b> 的敏感度，会显著高于普通人对“蓝筹指数”的常规预期。</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <div class="section-title">指数核心画像</div>
+        <ul class="bullet">
+          <li>发布日期：1994-06-15</li>
+          <li>成分股数量：200</li>
+          <li>Top 10 权重合计：74%</li>
+          <li>最大单一成分股市值：1,464,083,552 mil KRW</li>
+          <li>中位数成分股市值：2,733,841 mil KRW</li>
+        </ul>
+        <div class="tag-row">
+          <span class="tag">蓝筹指数</span>
+          <span class="tag">高流动性</span>
+          <span class="tag">期货/期权底层</span>
+          <span class="tag">ETF 广泛跟踪</span>
+          <span class="tag">电子半导体高度集中</span>
+        </div>
+        <div class="small-note">从产品属性看，KOSPI 200 既是韩国最核心的蓝筹指数之一，也是大量 ETF、期货、期权和资产配置产品的基准。但正因为三星 + 海力士权重过高，它并不是那种“行业平均暴露”的宽基，更接近“蓝筹外衣下的电子半导体主导指数”。</div>
+      </section>
+    </div>
+
+    <section class="panel">
+      <div class="section-title">前十大权重股</div>
+      <div class="section-sub">Top 10 Companies by Weight / factsheet 2026-05-29</div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>序号</th>
+              <th>公司</th>
+              <th>代码</th>
+              <th>权重</th>
+              <th>行业</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>SamsungElec</td><td>005930</td><td>32.88%</td><td>Electrical Equipment &amp; Electronics</td></tr>
+            <tr><td>2</td><td>SK hynix</td><td>000660</td><td>28.75%</td><td>Electrical Equipment &amp; Electronics</td></tr>
+            <tr><td>3</td><td>SamsungElecMech</td><td>009150</td><td>2.64%</td><td>Electrical Equipment &amp; Electronics</td></tr>
+            <tr><td>4</td><td>SKSQUARE</td><td>402340</td><td>2.52%</td><td>Financials</td></tr>
+            <tr><td>5</td><td>HyundaiMtr</td><td>005380</td><td>2.19%</td><td>Transportation Equipment &amp; Components</td></tr>
+            <tr><td>6</td><td>KBFinancialGroup</td><td>105560</td><td>1.07%</td><td>Financials</td></tr>
+            <tr><td>7</td><td>Mobis</td><td>012330</td><td>1.06%</td><td>Transportation Equipment &amp; Components</td></tr>
+            <tr><td>8</td><td>Doosan Enerbility</td><td>034020</td><td>1.02%</td><td>Machinery &amp; Equipment</td></tr>
+            <tr><td>9</td><td>SAMSUNG SDI CO.,LTD.</td><td>006400</td><td>0.93%</td><td>Electrical Equipment &amp; Electronics</td></tr>
+            <tr><td>10</td><td>SAMSUNG C&amp;T</td><td>028260</td><td>0.93%</td><td>Distribution</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="small-note">单看前两大就已经 61.63%，而前三大里又有 3 家属于电子链条，这就是为什么我会建议把 KOSPI 200 当作“韩国电子 + DRAM 影响极强”的指数来理解，而不是只把它看作笼统的大盘宽基。</div>
+    </section>
+
+    <div class="grid">
+      <section class="panel">
+        <div class="section-title">行业权重</div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>行业</th>
+                <th>权重</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>(S) Electrical Equipment &amp; Electronics</td><td>69.55%</td></tr>
+              <tr><td>(S) Financials</td><td>10.80%</td></tr>
+              <tr><td>(S) Transportation Equipment &amp; Components</td><td>7.02%</td></tr>
+              <tr><td>(S) Chemicals</td><td>1.87%</td></tr>
+              <tr><td>(S) IT Services</td><td>1.86%</td></tr>
+              <tr><td>(S) Machinery &amp; Equipment</td><td>1.59%</td></tr>
+              <tr><td>(S) Distribution</td><td>1.33%</td></tr>
+              <tr><td>(S) Metals</td><td>1.29%</td></tr>
+              <tr><td>(S) Pharmaceuticals</td><td>1.27%</td></tr>
+              <tr><td>其他</td><td>3.42%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="section-title">怎么用这个页面看 KOSPI 200</div>
+        <ul class="bullet">
+          <li>如果你的目的是看韩国大盘风险偏好，这个指数当然有效。</li>
+          <li>但如果你的目的是找 <b>韩国 DRAM / 存储景气代理</b>，它同样非常有用，因为三星 + 海力士在里面过于重。</li>
+          <li>如果你担心“宽基不够纯”，这页正好说明：KOSPI 200 并不稀释 DRAM 链影响，反而把它放大到了指数级别。</li>
+          <li>真正要注意的不是有没有 DRAM 暴露，而是它同时还叠加了韩国电子龙头、部分金融、汽车与工业权重，所以它是 <b>以 DRAM / 电子为主导的蓝筹指数</b>，不是纯题材篮子。</li>
+        </ul>
+      </section>
+    </div>
+
+    <section class="panel">
+      <div class="section-title">相关 ETF / ETN 产品（factsheet 列示）</div>
+      <div class="related-grid">
+        <div class="related-card">
+          <div class="related-code">069500</div>
+          <div class="related-name">KODEX 200 ETF</div>
+          <div class="related-desc">韩国市场最核心的 KOSPI 200 跟踪产品之一，适合直接观察宽基口径下对三星 + 海力士的集中暴露。</div>
+        </div>
+        <div class="related-card">
+          <div class="related-code">102110</div>
+          <div class="related-name">TIGER200 ETF</div>
+          <div class="related-desc">另一只代表性 KOSPI 200 跟踪产品，适合和 KODEX 200 对照看成交与跟踪使用习惯。</div>
+        </div>
+        <div class="related-card">
+          <div class="related-code">105190</div>
+          <div class="related-name">ACE 200 ETF</div>
+          <div class="related-desc">同样以 KOSPI 200 为基准，适合补充观察韩国大盘核心蓝筹表达。</div>
+        </div>
+        <div class="related-card">
+          <div class="related-code">293180</div>
+          <div class="related-name">HANARO 200 ETF</div>
+          <div class="related-desc">在跟踪同一宽基的前提下，更重要的是理解底层权重集中，而不是只看产品代码差异。</div>
+        </div>
+      </div>
+      <div class="small-note">factsheet 里还列了 KODEX 200 Active ETF、IBK KS200 ETF、KIWOOM 200 ETF、RISE 200 ETF 等多只跟踪或相关产品。这里先列最常见的几只，重点还是让页面本身服务于“看懂三星 + 海力士权重结构”这个目标。</div>
+    </section>
+
+    <section class="panel">
+      <div class="footer-note">
+        数据来源：你提供的 <b>FACTSHEET_K2G01P_202605</b> PDF，factsheet 标注日期为 <b>2026-05-29</b>。<br>
+        本页不是交易建议，而是结构观察页。重点不是把 KOSPI 200 当普通宽基看，而是把它当成一个<b>对三星电子 + SK 海力士高度集中、对 DRAM / 存储链景气高度敏感</b>的韩国蓝筹指数来理解。
+      </div>
+    </section>
+  </div>
+</body>
+</html>
