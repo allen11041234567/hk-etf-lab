@@ -37,13 +37,16 @@
     .kpi-v{margin-top:8px;font-size:34px;font-weight:900;line-height:1.02}
     .kpi-d{margin-top:6px;font-size:12px;color:#475569;line-height:1.7}
     .big-callout{margin-top:14px;padding:20px;border-radius:22px;border:1px solid #bfdbfe;background:linear-gradient(135deg,#eff6ff 0%,#ffffff 100%)}
-    .big-callout .label{font-size:12px;color:var(--blue);font-weight:800;text-transform:uppercase;letter-spacing:.05em}
-    .big-callout .value{margin-top:8px;font-size:36px;font-weight:900;line-height:1.12}
-    .hero-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+    .big-callout .value{font-size:36px;font-weight:900;line-height:1.12}
+    .hero-actions{display:grid;grid-template-columns:1fr;gap:10px;margin-top:14px}
     .action-btn{display:flex;align-items:center;justify-content:center;padding:14px 16px;border-radius:16px;text-decoration:none;font-weight:800;font-size:14px;border:1px solid transparent;transition:.15s ease}
     .action-btn.primary{background:linear-gradient(135deg,var(--blue) 0%,var(--blue-deep) 100%);color:#fff;box-shadow:0 10px 24px rgba(37,99,235,.24)}
-    .action-btn.secondary{background:#fff;color:var(--blue);border-color:#bfdbfe}
     .action-btn:hover{transform:translateY(-1px)}
+    .live-strip{margin-top:12px;padding:14px 16px;border-radius:18px;border:1px solid #e5e7eb;background:linear-gradient(180deg,#fff 0%,#f8fafc 100%)}
+    .live-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;font-size:15px}
+    .live-row + .live-row{border-top:1px solid #e5e7eb}
+    .live-name{color:#334155;font-weight:700}
+    .live-val{font-size:28px;font-weight:900;color:#b91c1c;line-height:1}
     .qr-card{padding:18px;border-radius:22px;border:1px solid var(--line);background:linear-gradient(180deg,#fff 0%,#f8fbff 100%);display:flex;flex-direction:column;align-items:center;text-align:center;justify-content:center}
     .qr-card img{display:block;width:min(245px,100%);border-radius:18px;background:#fff;padding:8px;border:1px solid #e5e7eb}
     .qr-title{margin-top:10px;font-size:18px;font-weight:800}
@@ -68,8 +71,8 @@
     th,td{padding:12px 10px;border-bottom:1px solid #e5e7eb;text-align:left;vertical-align:top;font-size:14px}
     th{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
     .footer-note{font-size:13px;color:#475569;line-height:1.85}
-    @media (max-width:900px){.hero-grid,.compare,.kpi-grid,.hero-actions{grid-template-columns:1fr}h1{font-size:30px}.big-callout .value,.compare-hero .main{font-size:26px}.compare-value{font-size:30px}}
-    @media (max-width:640px){.wrap{padding:12px 10px 24px}.hero,.panel{padding:16px;border-radius:18px}h1{font-size:24px}.kpi-v{font-size:26px}.compare-value{font-size:28px}.table-wrap table{min-width:640px}th,td{padding:10px 8px;font-size:13px}}
+    @media (max-width:900px){.hero-grid,.compare,.kpi-grid,.hero-actions{grid-template-columns:1fr}h1{font-size:30px}.big-callout .value,.compare-hero .main{font-size:26px}.compare-value,.live-val{font-size:30px}}
+    @media (max-width:640px){.wrap{padding:12px 10px 24px}.hero,.panel{padding:16px;border-radius:18px}h1{font-size:24px}.kpi-v{font-size:26px}.compare-value,.live-val{font-size:24px}.table-wrap table{min-width:640px}th,td{padding:10px 8px;font-size:13px}}
   </style>
 </head>
 <body>
@@ -98,12 +101,20 @@
             </div>
           </div>
           <div class="big-callout">
-            <div class="label">核心卖点</div>
             <div class="value">三星 + 海力士，直接占到 KOSPI 200 的 61.63%</div>
           </div>
           <div class="hero-actions">
             <a class="action-btn primary" href="https://hketf-lab.pages.dev/insight/korea-tech-briefing">进入三星 / 海力士实时股价观察入口</a>
-            <a class="action-btn secondary" href="https://hketf-lab.pages.dev/insight/korea-tech-briefing">查看韩国科技与市场观察</a>
+          </div>
+          <div class="live-strip">
+            <div class="live-row">
+              <div class="live-name">SK海力士 即时涨跌幅</div>
+              <div class="live-val">+2.33%</div>
+            </div>
+            <div class="live-row">
+              <div class="live-name">三星电子 即时涨跌幅</div>
+              <div class="live-val">+7.86%</div>
+            </div>
           </div>
         </div>
         <div class="qr-card">
@@ -116,7 +127,6 @@
 
     <section class="panel">
       <div class="section-title">持仓信息优先，先看前十大</div>
-      <div class="section-sub">前两大成分股就已经定义了这只指数的核心性格。</div>
       <div class="table-wrap">
         <table>
           <thead>
