@@ -30,17 +30,13 @@
     .eyebrow{display:inline-block;padding:8px 12px;border-radius:999px;background:var(--blue-soft);color:var(--blue);font-size:12px;font-weight:800;letter-spacing:.04em}
     h1{margin:14px 0 6px;font-size:42px;line-height:1.05;letter-spacing:-.04em}
     .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;margin-top:18px}
-    .kpi-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-    .kpi{padding:18px;border-radius:20px;border:1px solid var(--line);background:linear-gradient(180deg,#fff 0%,#f8fbff 100%)}
-    .kpi.focus{background:linear-gradient(180deg,#eff6ff 0%,#ffffff 100%);border-color:#bfdbfe}
+    .kpi-bar{padding:18px 20px;border-radius:22px;border:1px solid #bfdbfe;background:linear-gradient(135deg,#eff6ff 0%,#ffffff 100%);display:grid;grid-template-columns:1.15fr 1fr 1fr 1fr;gap:14px;align-items:center}
+    .kpi-col{min-width:0}
     .kpi-k{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
-    .kpi-v{margin-top:8px;font-size:34px;font-weight:900;line-height:1.02}
-    .kpi-d{margin-top:6px;font-size:12px;color:#475569;line-height:1.7}
-    .big-callout{margin-top:14px;padding:20px;border-radius:22px;border:1px solid #bfdbfe;background:linear-gradient(135deg,#eff6ff 0%,#ffffff 100%)}
-    .big-callout .value{font-size:36px;font-weight:900;line-height:1.12}
+    .kpi-v{margin-top:6px;font-size:34px;font-weight:900;line-height:1.02;white-space:nowrap}
+    .kpi-d{margin-top:4px;font-size:12px;color:#475569;line-height:1.7}
     .hero-actions{display:grid;grid-template-columns:1fr;gap:10px;margin-top:14px}
-    .action-btn{display:flex;align-items:center;justify-content:center;padding:14px 16px;border-radius:16px;text-decoration:none;font-weight:800;font-size:14px;border:1px solid transparent;transition:.15s ease}
-    .action-btn.primary{background:linear-gradient(135deg,var(--blue) 0%,var(--blue-deep) 100%);color:#fff;box-shadow:0 10px 24px rgba(37,99,235,.24)}
+    .action-btn{display:flex;align-items:center;justify-content:center;padding:14px 16px;border-radius:16px;text-decoration:none;font-weight:800;font-size:14px;border:1px solid transparent;transition:.15s ease;background:linear-gradient(135deg,var(--blue) 0%,var(--blue-deep) 100%);color:#fff;box-shadow:0 10px 24px rgba(37,99,235,.24)}
     .action-btn:hover{transform:translateY(-1px)}
     .live-strip{margin-top:12px;padding:14px 16px;border-radius:18px;border:1px solid #e5e7eb;background:linear-gradient(180deg,#fff 0%,#f8fafc 100%)}
     .live-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;font-size:15px}
@@ -51,15 +47,14 @@
     .qr-card img{display:block;width:min(245px,100%);border-radius:18px;background:#fff;padding:8px;border:1px solid #e5e7eb}
     .qr-title{margin-top:10px;font-size:18px;font-weight:800}
     .qr-desc{margin-top:6px;font-size:13px;color:#475569;line-height:1.75}
-    .section-title{font-size:24px;font-weight:900;margin:0 0 14px}
     .mobile-note{display:none}
-    .section-sub{margin:-4px 0 14px;font-size:13px;color:var(--muted);line-height:1.7}
+    .section-title{font-size:24px;font-weight:900;margin:0 0 14px}
     .compare-hero{padding:22px;border-radius:22px;background:linear-gradient(135deg,#eef6ff 0%,#fff7ed 100%);border:1px solid #dbeafe;margin-bottom:14px}
     .compare-hero .top{font-size:12px;color:var(--blue);font-weight:800;letter-spacing:.05em;text-transform:uppercase}
     .compare-hero .main{margin-top:8px;font-size:34px;font-weight:900;line-height:1.12}
     .compare-hero .sub{margin-top:8px;font-size:14px;color:#475569;line-height:1.8}
     .compare{display:grid;grid-template-columns:1.2fr 1.2fr .8fr;gap:14px}
-    .compare-card{position:relative;padding:22px;border-radius:22px;border:1px solid var(--line);background:#fff;overflow:hidden}
+    .compare-card{padding:22px;border-radius:22px;border:1px solid var(--line);background:#fff}
     .compare-card.kospi{background:linear-gradient(135deg,#dbeafe 0%,#eff6ff 100%);border-color:#93c5fd}
     .compare-card.dram{background:linear-gradient(135deg,#ffedd5 0%,#fff7ed 100%);border-color:#fdba74}
     .compare-card.diff{background:linear-gradient(135deg,#ecfdf5 0%,#f8fafc 100%);border-color:#a7f3d0}
@@ -72,8 +67,8 @@
     th,td{padding:12px 10px;border-bottom:1px solid #e5e7eb;text-align:left;vertical-align:top;font-size:14px}
     th{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
     .footer-note{font-size:13px;color:#475569;line-height:1.85}
-    @media (max-width:900px){.hero-grid,.compare,.kpi-grid,.hero-actions{grid-template-columns:1fr}h1{font-size:30px}.big-callout .value,.compare-hero .main{font-size:26px}.compare-value,.live-val{font-size:30px}}
-    @media (max-width:640px){.wrap{padding:12px 10px 24px}.hero,.panel{padding:16px;border-radius:18px}h1{font-size:24px}.kpi-v{font-size:26px}.compare-value,.live-val{font-size:24px}.table-wrap table{min-width:640px}th,td{padding:10px 8px;font-size:13px}.live-row{padding:12px 0}.live-name{font-size:14px;max-width:58%}.live-val{font-size:22px}.action-btn{font-size:13px;padding:13px 12px}.qr-card img{width:min(220px,100%)}.mobile-note{display:block;margin-top:8px;font-size:12px;color:var(--muted);line-height:1.7}}
+    @media (max-width:900px){.hero-grid,.compare,.hero-actions{grid-template-columns:1fr}h1{font-size:30px}.compare-hero .main{font-size:26px}.compare-value{font-size:30px}.kpi-bar{grid-template-columns:1fr;gap:10px}}
+    @media (max-width:640px){.wrap{padding:12px 10px 24px}.hero,.panel{padding:16px;border-radius:18px}h1{font-size:24px}.kpi-bar{padding:14px}.kpi-bar{grid-template-columns:1.1fr .95fr .95fr .95fr;gap:8px;align-items:start}.kpi-k{font-size:11px}.kpi-v{font-size:20px}.kpi-d{font-size:11px;line-height:1.45}.compare-value{font-size:28px}.table-wrap table{min-width:640px}th,td{padding:10px 8px;font-size:13px}.live-row{padding:12px 0}.live-name{font-size:14px;max-width:58%}.live-val{font-size:22px}.action-btn{font-size:13px;padding:13px 12px}.qr-card img{width:min(220px,100%)}.mobile-note{display:block;margin-top:8px;font-size:12px;color:var(--muted);line-height:1.7}}
   </style>
 </head>
 <body>
@@ -84,28 +79,26 @@
 
       <div class="hero-grid">
         <div>
-          <div class="kpi-grid">
-            <div class="kpi focus">
+          <div class="kpi-bar">
+            <div class="kpi-col">
+              <div class="kpi-k">核心权重</div>
+              <div class="kpi-d">三星电子 / SK海力士 / 两者合计</div>
+            </div>
+            <div class="kpi-col">
               <div class="kpi-k">三星电子</div>
               <div class="kpi-v">32.88%</div>
-              <div class="kpi-d">第一大权重股</div>
             </div>
-            <div class="kpi focus">
-              <div class="kpi-k">SK 海力士</div>
+            <div class="kpi-col">
+              <div class="kpi-k">SK海力士</div>
               <div class="kpi-v">28.75%</div>
-              <div class="kpi-d">第二大权重股</div>
             </div>
-            <div class="kpi focus">
+            <div class="kpi-col">
               <div class="kpi-k">两者合计</div>
               <div class="kpi-v">61.63%</div>
-              <div class="kpi-d">前两大合计超过六成</div>
             </div>
           </div>
-          <div class="big-callout">
-            <div class="value">三星 + 海力士，直接占到 KOSPI 200 的 61.63%</div>
-          </div>
           <div class="hero-actions">
-            <a class="action-btn primary" href="https://hketf-lab.pages.dev/insight/korea-tech-briefing">进入三星 / 海力士实时股价观察入口</a>
+            <a class="action-btn" href="https://hketf-lab.pages.dev/insight/korea-tech-briefing">进入三星 / 海力士实时股价观察入口</a>
           </div>
           <div class="live-strip">
             <div class="live-row">
@@ -122,7 +115,7 @@
           <img src="/assets/qr/kospi200-korea-chat-20260612.jpg" alt="韩股讨论群二维码" />
           <div class="qr-title">入群讨论韩股行情</div>
           <div class="qr-desc">扫码加入，继续跟踪三星、海力士、KOSPI 200、韩国科技链和 DRAM 周期。</div>
-          <div class="mobile-note">手机端已进一步压缩按钮、涨跌幅区和二维码区，阅读会更顺一点。</div>
+          <div class="mobile-note">手机端已把顶部 3 个权重块合成一条，页面长度会更短。</div>
         </div>
       </div>
     </section>
@@ -141,16 +134,16 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td>1</td><td>SamsungElec</td><td>005930</td><td>32.88%</td><td>Electrical Equipment &amp; Electronics</td></tr>
-            <tr><td>2</td><td>SK hynix</td><td>000660</td><td>28.75%</td><td>Electrical Equipment &amp; Electronics</td></tr>
-            <tr><td>3</td><td>SamsungElecMech</td><td>009150</td><td>2.64%</td><td>Electrical Equipment &amp; Electronics</td></tr>
-            <tr><td>4</td><td>SKSQUARE</td><td>402340</td><td>2.52%</td><td>Financials</td></tr>
-            <tr><td>5</td><td>HyundaiMtr</td><td>005380</td><td>2.19%</td><td>Transportation Equipment &amp; Components</td></tr>
-            <tr><td>6</td><td>KBFinancialGroup</td><td>105560</td><td>1.07%</td><td>Financials</td></tr>
-            <tr><td>7</td><td>Mobis</td><td>012330</td><td>1.06%</td><td>Transportation Equipment &amp; Components</td></tr>
-            <tr><td>8</td><td>Doosan Enerbility</td><td>034020</td><td>1.02%</td><td>Machinery &amp; Equipment</td></tr>
-            <tr><td>9</td><td>SAMSUNG SDI CO.,LTD.</td><td>006400</td><td>0.93%</td><td>Electrical Equipment &amp; Electronics</td></tr>
-            <tr><td>10</td><td>SAMSUNG C&amp;T</td><td>028260</td><td>0.93%</td><td>Distribution</td></tr>
+            <tr><td>1</td><td>三星电子</td><td>005930</td><td>32.88%</td><td>电子电气设备</td></tr>
+            <tr><td>2</td><td>SK海力士</td><td>000660</td><td>28.75%</td><td>电子电气设备</td></tr>
+            <tr><td>3</td><td>三星电机</td><td>009150</td><td>2.64%</td><td>电子电气设备</td></tr>
+            <tr><td>4</td><td>SK Square</td><td>402340</td><td>2.52%</td><td>金融</td></tr>
+            <tr><td>5</td><td>现代汽车</td><td>005380</td><td>2.19%</td><td>交通运输设备及零部件</td></tr>
+            <tr><td>6</td><td>KB金融集团</td><td>105560</td><td>1.07%</td><td>金融</td></tr>
+            <tr><td>7</td><td>现代摩比斯</td><td>012330</td><td>1.06%</td><td>交通运输设备及零部件</td></tr>
+            <tr><td>8</td><td>斗山能源</td><td>034020</td><td>1.02%</td><td>机械设备</td></tr>
+            <tr><td>9</td><td>三星SDI</td><td>006400</td><td>0.93%</td><td>电子电气设备</td></tr>
+            <tr><td>10</td><td>三星物产</td><td>028260</td><td>0.93%</td><td>分销</td></tr>
           </tbody>
         </table>
       </div>
@@ -167,12 +160,12 @@
         <div class="compare-card kospi">
           <div class="compare-badge">KOSPI 200</div>
           <div class="compare-value">61.63%</div>
-          <div class="compare-desc">三星电子 32.88% + SK 海力士 28.75%</div>
+          <div class="compare-desc">三星电子 32.88% + SK海力士 28.75%</div>
         </div>
         <div class="compare-card dram">
           <div class="compare-badge">DRAM 主题产品</div>
           <div class="compare-value">37.62%</div>
-          <div class="compare-desc">SK 海力士 21.58% + 三星电子 16.04%</div>
+          <div class="compare-desc">SK海力士 21.58% + 三星电子 16.04%</div>
         </div>
         <div class="compare-card diff">
           <div class="compare-badge">优势差值</div>
@@ -185,7 +178,7 @@
     <section class="panel">
       <div class="section-title">为什么 KOSPI 200 更有说服力</div>
       <div class="footer-note">
-        KOSPI 200 虽然是韩国蓝筹指数，但头部权重极高，前两大成分股就超过六成。与此同时，指数中的 <b>Electrical Equipment &amp; Electronics</b> 行业权重达到 <b>69.55%</b>。这意味着，如果客户关注的是三星电子、SK 海力士以及背后的 DRAM、HBM、存储与电子龙头景气，KOSPI 200 会把这条主线放大得更清楚。
+        KOSPI 200 虽然是韩国蓝筹指数，但头部权重极高，前两大成分股就超过六成。与此同时，指数中的 <b>电子电气设备</b> 行业权重达到 <b>69.55%</b>。这意味着，如果客户关注的是三星电子、SK海力士以及背后的 DRAM、HBM、存储与电子龙头景气，KOSPI 200 会把这条主线放大得更清楚。
       </div>
     </section>
   </div>
