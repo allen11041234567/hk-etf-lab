@@ -1,10 +1,32 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-14T18:49:57.997Z",
+  "fetchedAt": "2026-06-14T19:04:19.616Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
   "posts": [
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116749924240483636",
+      "url": "https://truthsocial.com/@realDonaldTrump/116749924240483636",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-14T18:41:07.044Z",
+      "created_at_text": "Jun 14, 2026, 6:41 PM",
+      "content": "What do they have to be afraid of. Republicans are moving too fast on nominations!!!",
+      "content_html": "What do they have to be afraid of. Republicans are moving too fast on nominations!!!",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2Njk4LzhiNzc0OGNhMmUwNjQzMzguanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 1658,
+      "reblogs_count": 554,
+      "replies_count": 301,
+      "content_zh_cn": "他们有什么可害怕的。共和党人在提名程序上推进得太快了！！！",
+      "content_zh_hk": "他們有什麼可害怕的。共和黨人在提名程序上推進得太快了！！！",
+      "content_ko": "그들이 무엇을 두려워할 게 있나. 공화당이 지명 절차를 너무 빨리 밀어붙이고 있다!!!",
+      "source_hint": "stock.fengle.me"
+    },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116749870028302766",
       "url": "https://truthsocial.com/@realDonaldTrump/116749870028302766",
@@ -96,8 +118,8 @@
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-06-14T13:40:29.729Z",
       "created_at_text": "Jun 14, 2026, 1:40 PM",
-      "content": "This morning's attack on Beirut should not have happened, particularly on a special day when we are so close to a Peace Deal with Iran. Israel has the right to defend itself against threats, but the attack it was responding to was very small and meaningless, nobody was hurt, injured, or killed, and should not disrupt this important process. We are very close to a Deal that will bring peace to the region, including to Lebanon, and all sides should stand down. There should be no more attacks by Israel anywhere in Lebanon, but there should also be no more attacks by any other party, including Hezbollah, against Israel. This could be the beginning of a long and beautiful peace — Let's not blow it! Thank you for your attention to this matter. President DONALD J. TRUMP",
-      "content_html": "This morning's attack on Beirut should not have happened, particularly on a special day when we are so close to a Peace Deal with Iran. Israel has the right to defend itself against threats, but the attack it was responding to was very small and meaningless, nobody was hurt, injured, or killed, and should not disrupt this important process. We are very close to a Deal that will bring peace to the region, including to Lebanon, and all sides should stand down. There should be no more attacks by Israel anywhere in Lebanon, but there should also be no more attacks by any other party, including Hezbollah, against Israel. This could be the beginning of a long and beautiful peace — Let's not blow it! Thank you for your attention to this matter. President DONALD J. TRUMP",
+      "content": "",
+      "content_html": "",
       "media": [
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2Njk2LzViNzg1MWViZDdhNzBmZjQuanBn",
@@ -107,9 +129,9 @@
       "favourites_count": 7918,
       "reblogs_count": 1865,
       "replies_count": 596,
-      "content_zh_cn": "This morning's attack on Beirut should not have happened, particularly on a special day when we are so close to a Peace Deal with Iran. Israel has the right to defend itself against threats, but the attack it was responding to was very small and meaningless, nobody was hurt, injured, or killed, and should not disrupt this important process. We are very close to a Deal that will bring peace to the region, including to Lebanon, and all sides should stand down. There should be no more attacks by Israel anywhere in Lebanon, but there should also be no more attacks by any other party, including Hezbollah, against Israel. This could be the beginning of a long and beautiful peace — Let's not blow it! Thank you for your attention to this matter. President DONALD J. TRUMP",
-      "content_zh_hk": "This morning's attack on Beirut should not have happened, particularly on a special day when we are so close to a Peace Deal with Iran. Israel has the right to defend itself against threats, but the attack it was responding to was very small and meaningless, nobody was hurt, injured, or killed, and should not disrupt this important process. We are very close to a Deal that will bring peace to the region, including to Lebanon, and all sides should stand down. There should be no more attacks by Israel anywhere in Lebanon, but there should also be no more attacks by any other party, including Hezbollah, against Israel. This could be the beginning of a long and beautiful peace — Let's not blow it! Thank you for your attention to this matter. President DONALD J. TRUMP",
-      "content_ko": "This morning's attack on Beirut should not have happened, particularly on a special day when we are so close to a Peace Deal with Iran. Israel has the right to defend itself against threats, but the attack it was responding to was very small and meaningless, nobody was hurt, injured, or killed, and should not disrupt this important process. We are very close to a Deal that will bring peace to the region, including to Lebanon, and all sides should stand down. There should be no more attacks by Israel anywhere in Lebanon, but there should also be no more attacks by any other party, including Hezbollah, against Israel. This could be the beginning of a long and beautiful peace — Let's not blow it! Thank you for your attention to this matter. President DONALD J. TRUMP",
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
       "source_hint": "stock.fengle.me"
     },
     {
@@ -174,8 +196,8 @@
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-06-13T22:41:44.147Z",
       "created_at_text": "Jun 13, 2026, 10:41 PM",
-      "content": "Years ago after saving the Wollman Skating Rink in Central Park – Long before I fixed The Reflecting Pool, and everything else in Washington, D.C. including, most importantly, CRIME! President DONALD J. TRUMP\nPreview",
-      "content_html": "Years ago after saving the Wollman Skating Rink in Central Park – Long before I fixed The Reflecting Pool, and everything else in Washington, D.C. including, most importantly, CRIME! President DONALD J. TRUMP\nPreview",
+      "content": "",
+      "content_html": "",
       "media": [
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2Njk0L2YyZTE3YTFhNWM2NjVjZWYuanBn",
@@ -185,10 +207,10 @@
       "favourites_count": 20523,
       "reblogs_count": 3981,
       "replies_count": 954,
-      "content_zh_cn": "Years ago after saving the Wollman Skating Rink in Central Park – Long before I fixed The Reflecting Pool, and everything else in Washington, D.C. including, most importantly, CRIME! President DONALD J. TRUMP\nPreview",
-      "content_zh_hk": "Years ago after saving the Wollman Skating Rink in Central Park – Long before I fixed The Reflecting Pool, and everything else in Washington, D.C. including, most importantly, CRIME! President DONALD J. TRUMP\nPreview",
-      "content_ko": "Years ago after saving the Wollman Skating Rink in Central Park – Long before I fixed The Reflecting Pool, and everything else in Washington, D.C. including, most importantly, CRIME! President DONALD J. TRUMP\nPreview",
-      "source_hint": "stock.fengle.me"
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116745207421210648",
@@ -368,36 +390,6 @@
       "favourites_count": 15838,
       "reblogs_count": 3819,
       "replies_count": 1495,
-      "content_zh_cn": "",
-      "content_zh_hk": "",
-      "content_ko": "",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116738709792190047",
-      "url": "https://truthsocial.com/@realDonaldTrump/116738709792190047",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-12T19:09:08.272Z",
-      "created_at_text": "Jun 12, 2026, 7:09 PM",
-      "content": "",
-      "content_html": "",
-      "media": [
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjgyLzkyYjE2NTJjMjM4NTA2NzguanBn",
-          "type": "image"
-        },
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NjgzLzkxOTAxYzFiMzg0NmUzZmMuanBn",
-          "type": "image"
-        },
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2Njg0LzE5YTBjNTQ4NjUzMTNmNDAuanBn",
-          "type": "image"
-        }
-      ],
-      "favourites_count": 18972,
-      "reblogs_count": 5359,
-      "replies_count": 1333,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
