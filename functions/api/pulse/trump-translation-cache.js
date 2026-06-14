@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116749924240483636": {
+    "content_zh_cn": "他们有什么可害怕的。共和党人在提名程序上推进得太快了！！！",
+    "content_zh_hk": "他們有什麼可害怕的。共和黨人在提名程序上推進得太快了！！！",
+    "content_ko": "그들이 무엇을 두려워할 게 있나. 공화당이 지명 절차를 너무 빨리 밀어붙이고 있다!!!"
+  },
   "https://truthsocial.com/@realDonaldTrump/116749870028302766": {
     "content_zh_cn": "为什么这些“蠢驴党”会如此害怕让比尔·普尔特去DNI任职??? 他也只是代理而已！他们到底在怕什么，在隐瞒什么？这里面一定有什么大问题，不是吗??? ——特朗普总统",
     "content_zh_hk": "點解呢班「蠢驢黨」會咁驚由比爾·普爾特去DNI任職??? 佢都只係署理啫！佢哋究竟驚咩，又喺度隱瞞啲咩？呢件事背後一定有大問題，係咪??? ——特朗普總統",
