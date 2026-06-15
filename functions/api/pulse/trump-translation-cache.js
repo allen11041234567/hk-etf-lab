@@ -1,4 +1,19 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116754288530173924": {
+    "content_zh_cn": "可悲的是，如果你从第三世界国家大量引入人口，你很快就会变成一个第三世界国家——而且对此你无能为力。让美国再次伟大！总统 唐纳德·J·特朗普",
+    "content_zh_hk": "可悲的是，如果你從第三世界國家大量引入人口，你很快就會變成一個第三世界國家——而且對此你無能為力。讓美國再次偉大！總統 唐納德·J·特朗普",
+    "content_ko": "안타깝게도, 제3세계 국가들로부터 사람들을 대거 받아들이면, 당신의 나라도 곧 제3세계 국가가 됩니다 — 그리고 이에 대해 당신이 할 수 있는 일은 아무것도 없습니다. 미국을 다시 위대하게! 도널드 J. 트럼프 대통령"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116754287044319129": {
+    "content_zh_cn": "‘感谢您，特朗普总统’：特朗普完成整修后，华盛顿特区倒影池惊艳亮相：https://www.breitbart.com/politics/2026/06/08/thank-you-president-trump-reflecting-pool-d-c-wows-after-trump-renovations/",
+    "content_zh_hk": "‘感謝您，特朗普總統’：特朗普完成翻新後，華盛頓特區倒影池驚艷亮相：https://www.breitbart.com/politics/2026/06/08/thank-you-president-trump-reflecting-pool-d-c-wows-after-trump-renovations/",
+    "content_ko": "‘감사합니다, 트럼프 대통령’ : 트럼프의 보수 공사 이후 워싱턴 D.C. 리플렉팅 풀, 눈길 끌어: https://www.breitbart.com/politics/2026/06/08/thank-you-president-trump-reflecting-pool-d-c-wows-after-trump-renovations/"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116754286017145061": {
+    "content_zh_cn": "特朗普在椭圆形办公室展示一张图表，将倒影池与摩天大楼作对比，引发关注：https://www.washingtonexaminer.com/news/white-house/4594088/trump-makes-splash-oval-office-chart-reflecting-pool-skyscrapers/",
+    "content_zh_hk": "特朗普在橢圓形辦公室展示一張圖表，將倒影池與摩天大樓作對比，引發關注：https://www.washingtonexaminer.com/news/white-house/4594088/trump-makes-splash-oval-office-chart-reflecting-pool-skyscrapers/",
+    "content_ko": "트럼프가 집무실에서 반사 연못과 초고층 빌딩을 비교한 차트를 공개해 주목을 받았다: https://www.washingtonexaminer.com/news/white-house/4594088/trump-makes-splash-oval-office-chart-reflecting-pool-skyscrapers/"
+  },
   "https://truthsocial.com/@realDonaldTrump/116754283174782714": {
     "content_zh_cn": "民主党人在纽约州法律最新一轮“觉醒式”改写中，把“母亲”替换成了“孕育父母”：https://nypost.com/2026/06/03/us-news/dems-replace-mother-with-gestating-parent-in-latest-woke-rewrite-of-nys-law/",
     "content_zh_hk": "民主黨人在紐約州法律最新一輪「覺醒式」改寫中，將「母親」改為「懷孕父母」：https://nypost.com/2026/06/03/us-news/dems-replace-mother-with-gestating-parent-in-latest-woke-rewrite-of-nys-law/",
