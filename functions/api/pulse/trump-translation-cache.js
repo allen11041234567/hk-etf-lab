@@ -14,6 +14,11 @@ export const TRUMP_TRANSLATION_CACHE = {
     "content_zh_hk": "特朗普在橢圓形辦公室展示一張圖表，將倒影池與摩天大樓作對比，引發關注：https://www.washingtonexaminer.com/news/white-house/4594088/trump-makes-splash-oval-office-chart-reflecting-pool-skyscrapers/",
     "content_ko": "트럼프가 집무실에서 반사 연못과 초고층 빌딩을 비교한 차트를 공개해 주목을 받았다: https://www.washingtonexaminer.com/news/white-house/4594088/trump-makes-splash-oval-office-chart-reflecting-pool-skyscrapers/"
   },
+  "https://truthsocial.com/@realDonaldTrump/116754285003421395": {
+    "content_zh_cn": "美国统计的霍尔木兹海峡船舶通行量，远高于商业追踪数据显示的水平：https://gcaptain.com/u-s-counts-far-more-hormuz-ship-transits-than-commercial-tracking-data-shows/",
+    "content_zh_hk": "美國統計的荷姆茲海峽船舶通行量，遠高於商業追蹤數據顯示的水平：https://gcaptain.com/u-s-counts-far-more-hormuz-ship-transits-than-commercial-tracking-data-shows/",
+    "content_ko": "미국이 집계한 호르무즈 해협 선박 통항량이 상업용 추적 데이터에 나타난 수준보다 훨씬 많다: https://gcaptain.com/u-s-counts-far-more-hormuz-ship-transits-than-commercial-tracking-data-shows/"
+  },
   "https://truthsocial.com/@realDonaldTrump/116754283174782714": {
     "content_zh_cn": "民主党人在纽约州法律最新一轮“觉醒式”改写中，把“母亲”替换成了“孕育父母”：https://nypost.com/2026/06/03/us-news/dems-replace-mother-with-gestating-parent-in-latest-woke-rewrite-of-nys-law/",
     "content_zh_hk": "民主黨人在紐約州法律最新一輪「覺醒式」改寫中，將「母親」改為「懷孕父母」：https://nypost.com/2026/06/03/us-news/dems-replace-mother-with-gestating-parent-in-latest-woke-rewrite-of-nys-law/",
