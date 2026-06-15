@@ -87,8 +87,7 @@
     <section class="live-board">
       <div class="live-board-top">
         <div>
-          <div class="live-board-title">这是会自动更新的页面</div>
-          <div class="live-board-sub">页面只轮询我们自己的聚合快照接口，再由快照接口统一读取台积电与铠侠数据，避免前端直接双打源站。</div>
+          <div class="live-board-title">盘中数据会自动更新</div>
         </div>
         <div class="live-board-time" id="live-board-time">最近更新：--</div>
       </div>
@@ -198,7 +197,7 @@
       setText('tsmc-price', t.currentText);
       paintChange('tsmc-change', t.dayChangeText, t.dayChangePercentText);
       paintQuick('quick-tsmc', t.dayChangePercentText, t.dayChangeText);
-      setText('tsmc-meta', `最近更新：${t.timeText || '--'} · ${t.market || '--'}`);
+      setText('tsmc-meta', `最近更新：${t.timeText || '--'}`);
       setText('tsmc-open', t.openText); setText('tsmc-prev', t.previousCloseText); setText('tsmc-high', t.highText); setText('tsmc-low', t.lowText);
       setText('tsmc-avg', t.averageText); setText('tsmc-value', t.tradingValueText); setText('tsmc-volume', t.volumeText); setText('tsmc-io', [t.insideText, t.outsideText].filter(Boolean).join(' / ') || '--');
     }
@@ -206,7 +205,7 @@
       setText('kioxia-price', k.currentText);
       paintChange('kioxia-change', k.dayChangeText, k.dayChangePercentText);
       paintQuick('quick-kioxia', k.dayChangePercentText, k.dayChangeText);
-      setText('kioxia-meta', `最近更新：${k.priceTime || '--'} · ${k.market || '--'}`);
+      setText('kioxia-meta', `最近更新：${k.priceTime || '--'}`);
       setText('kioxia-open', k.openText); setText('kioxia-prev', k.previousCloseText); setText('kioxia-high', k.highText); setText('kioxia-low', k.lowText);
       setText('kioxia-value', k.tradingValueText); setText('kioxia-mcap', k.marketCapText); setText('kioxia-pbr-roe', `${k.pbrText || '--'} / ${k.roeText || '--'}`); setText('kioxia-equity', k.equityRatioText);
       setText('kioxia-pts', k.pts && k.pts.priceText ? `夜间 PTS：${k.pts.priceText} / ${k.pts.changeRateText || '--'} / ${k.pts.priceTime || '--'}` : '夜间 PTS：--');
