@@ -25,10 +25,22 @@ function matchText(html, regex) {
 
 function extractField(html, label) {
   const escaped = label.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  const pattern = new RegExp(`${escaped}</span><span[^>]*>([\\s\\S]{0,220}?)</span>`, 'i');
+  const pattern = new RegExp(`${escaped}</span><span[^>]*>([\\s\\S]{0,260}?)</span>`, 'i');
   const m = html.match(pattern);
   if (!m) return null;
   return m[1].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+}
+
+function extractCurrentPrice(html) {
+  const m = html.match(/資料載入中\.\.\.[\s\S]{0,1200}?<span class="Fw\(600\) Fz\(32px\)[^"]*">([^<]+)<\/span>/i)
+    || html.match(/<span class="Fw\(600\) Fz\(32px\)[^"]*">([^<]+)<\/span>/i)
+    || html.match(/<span class="Fz\(32px\)[^"]*">([^<]+)<\/span>/i);
+  return m ? m[1].trim() : null;
+}
+
+function extractOutsideText(html) {
+  const m = html.match(/<span class="Mend\(5px\) C\(\$c-trend-up\)">([\s\S]{0,120}?)<\/span><span>外盤/i);
+  return m ? m[1].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim() : null;
 }
 
 async function fetchPage() {
@@ -46,7 +58,7 @@ async function fetchPage() {
 function buildPayload(html) {
   const name = matchText(html, /<title>([^<(]+)\(2330\.TW\)/i) || '台積電';
   const timeText = matchText(html, /即時行情資料時間：([^<]+)/i);
-  const current = matchText(html, /即時行情資料時間：[^<]+<[^>]*>([^<]+)</i) || matchText(html, /資料載入中[^\d]*([\d,]+)<\/span>/i);
+  const current = extractCurrentPrice(html);
   const open = extractField(html, '開盤');
   const high = extractField(html, '最高');
   const low = extractField(html, '最低');
@@ -92,7 +104,7 @@ function buildPayload(html) {
       volumeText: totalVolume,
       volume: parseNumber(totalVolume),
       insideText: insideRaw ? insideRaw.replace(/<[^>]+>/g, '').trim() : null,
-      outsideText: outsideRaw ? outsideRaw.replace(/<[^>]+>/g, '').trim() : null,
+      outsideText: extractOutsideText(html) || (outsideRaw ? outsideRaw.replace(/<[^>]+>/g, '').trim() : null),
     },
   };
 }
