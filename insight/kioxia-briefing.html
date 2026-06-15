@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow,noarchive" />
+  <title>铠侠实时观察</title>
+  <style>
+    :root{--bg:#f5f8fd;--card:#fff;--text:#0f172a;--muted:#64748b;--line:#dbe3ef;--up:#d92d20;--down:#1570ef;--blue:#2563eb;--shadow:0 18px 40px rgba(15,23,42,.08)}
+    *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;background:linear-gradient(180deg,#fbfdff 0%,#edf4ff 100%);color:var(--text)}
+    .wrap{max-width:980px;margin:0 auto;padding:18px 14px 30px}.hero,.panel{background:var(--card);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow)}
+    .hero{padding:22px 20px 18px;margin-bottom:14px}.panel{padding:18px 18px;margin-bottom:14px}.eyebrow{display:inline-block;padding:6px 10px;border-radius:999px;background:#eef5ff;color:var(--blue);font-size:11px;font-weight:800}.title{margin:12px 0 0;font-size:34px;font-weight:900;line-height:1.08;letter-spacing:-.04em}.sub{margin-top:8px;font-size:14px;line-height:1.7;color:#475569}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:12px;margin-top:14px}.price-box{padding:14px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(180deg,#fff 0%,#f8fbff 100%)}.price{font-size:48px;font-weight:900;line-height:1}.change{margin-top:8px;font-size:18px;font-weight:800}.up{color:var(--up)}.down{color:var(--down)}.flat{color:#475569}.meta{margin-top:8px;font-size:12px;color:var(--muted)}
+    .mini-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:12px}.stat{padding:12px;border:1px solid var(--line);border-radius:16px;background:#fff}.k{font-size:12px;color:var(--muted)}.v{margin-top:6px;font-size:20px;font-weight:800;line-height:1.35}.qrcode{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,#fff 0%,#f8fbff 100%)}.qrcode img{width:44px;height:44px;border-radius:8px;border:1px solid #e5e7eb;padding:3px;background:#fff}.qr-title{font-size:12px;font-weight:800}.qr-desc{margin-top:2px;font-size:11px;color:#475569;line-height:1.45}
+    .section-title{margin:0 0 12px;font-size:20px;font-weight:900}.line-list{display:grid;gap:8px}.line{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid #e5e7eb}.line:last-child{border-bottom:none}.line .label{font-size:13px;color:#475569;font-weight:700}.line .value{font-size:14px;font-weight:800;text-align:right}.notice{font-size:12px;color:#64748b;line-height:1.7}
+    @media (max-width:640px){.wrap{padding:10px 10px 24px}.hero,.panel{padding:14px;border-radius:18px}.title{font-size:24px}.hero-grid{grid-template-columns:1fr}.price{font-size:38px}.change{font-size:16px}.mini-grid{grid-template-columns:1fr 1fr}.v{font-size:16px}.line .label,.line .value{font-size:13px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="eyebrow">隐藏试运行页</div>
+      <h1 class="title">铠侠实时观察</h1>
+      <div class="sub">先把实时链路跑起来，这版优先确认价格、涨跌幅、成交与核心财务指标能稳定抓到，后面再慢慢修样式和补字段。</div>
+      <div class="hero-grid">
+        <div>
+          <div class="price-box">
+            <div class="price" id="price">--</div>
+            <div class="change flat" id="change">--</div>
+            <div class="meta" id="meta">最近更新：--</div>
+          </div>
+          <div class="mini-grid">
+            <div class="stat"><div class="k">开盘</div><div class="v" id="open">--</div></div>
+            <div class="stat"><div class="k">前收</div><div class="v" id="previousClose">--</div></div>
+            <div class="stat"><div class="k">最高</div><div class="v" id="high">--</div></div>
+            <div class="stat"><div class="k">最低</div><div class="v" id="low">--</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="qrcode">
+            <img src="/assets/qr/kospi200-korea-chat-20260612.jpg" alt="群二维码" />
+            <div>
+              <div class="qr-title">先跑通，再慢慢改</div>
+              <div class="qr-desc">这版先验证铠侠实时监测链路是否稳定，确认可用后再决定是否做正式专题页。</div>
+            </div>
+          </div>
+          <div class="mini-grid" style="margin-top:12px;">
+            <div class="stat"><div class="k">成交量</div><div class="v" id="volume">--</div></div>
+            <div class="stat"><div class="k">成交额</div><div class="v" id="tradingValue">--</div></div>
+            <div class="stat"><div class="k">市值</div><div class="v" id="marketCap">--</div></div>
+            <div class="stat"><div class="k">行业</div><div class="v" id="industry">--</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="section-title">核心指标</div>
+      <div class="line-list">
+        <div class="line"><div class="label">PBR</div><div class="value" id="pbr">--</div></div>
+        <div class="line"><div class="label">ROE</div><div class="value" id="roe">--</div></div>
+        <div class="line"><div class="label">自己资本比率</div><div class="value" id="equityRatio">--</div></div>
+        <div class="line"><div class="label">夜间 PTS</div><div class="value" id="pts">--</div></div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="section-title">说明</div>
+      <div class="notice">这版是隐藏试运行页，目标是先确认 Yahoo Finance Japan 的页面内嵌数据能否稳定转成我们自己的实时接口。只要这版连续稳定，后面就可以像韩股科技页那样继续做完整专题与更细的监测页面。</div>
+    </section>
+  </div>
+  <script>
+    (function(){
+      function fmtNum(v){ return v == null ? '--' : String(v).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+      function setText(id, text){ const el=document.getElementById(id); if(el) el.textContent=text ?? '--'; }
+      function paintChange(changeText, pctText){
+        const el=document.getElementById('change');
+        if(!el) return;
+        const t=[changeText, pctText].filter(Boolean).join(' / ') || '--';
+        el.textContent=t;
+        const n=Number(String(changeText||'').replace(/,/g,''));
+        el.className='change ' + (!Number.isFinite(n) ? 'flat' : (n>=0 ? 'up' : 'down'));
+      }
+      fetch('/api/pulse/kioxia-brief', { cache:'no-store' })
+        .then(r => r.ok ? r.json() : Promise.reject(new Error('http '+r.status)))
+        .then(data => {
+          const q=data.quote || {};
+          setText('price', q.currentText ? `${q.currentText}` : '--');
+          paintChange(q.dayChangeText, q.dayChangePercentText);
+          setText('meta', `最近更新：${q.priceTime || '--'} · ${q.market || '--'}`);
+          setText('open', q.openText);
+          setText('previousClose', q.previousCloseText);
+          setText('high', q.highText);
+          setText('low', q.lowText);
+          setText('volume', q.volumeText);
+          setText('tradingValue', q.tradingValueText);
+          setText('marketCap', q.marketCapText);
+          setText('industry', q.industry || '--');
+          setText('pbr', q.pbrText);
+          setText('roe', q.roeText);
+          setText('equityRatio', q.equityRatioText);
+          setText('pts', q.pts && q.pts.priceText ? `${q.pts.priceText} / ${q.pts.changeRateText || '--'} / ${q.pts.priceTime || '--'}` : '--');
+        })
+        .catch(() => {
+          setText('meta', '当前抓取失败，请稍后刷新重试');
+        });
+    })();
+  </script>
+</body>
+</html>

@@ -23,9 +23,11 @@ function textMatch(html, regex) {
   return m ? m[1] : null;
 }
 
-function extractMetric(html, label) {
+function extractMetric(html, label, subLabel = null) {
   const escaped = label.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  const pattern = new RegExp(`${escaped}[\\s\\S]{0,700}?_DataListItem__value_[^>]*>([^<]+)</span>(?:[\\s\\S]{0,120}?_DataListItem__suffix_[^>]*>([^<]+)</span>)?(?:[\\s\\S]{0,120}?_DataListItem__date_[^>]*>\\((?:<!-- -->)?([^<]+))?`, 'i');
+  const escapedSub = subLabel ? subLabel.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') : null;
+  const prefix = escapedSub ? `${escaped}[\\s\\S]{0,120}?${escapedSub}` : escaped;
+  const pattern = new RegExp(`${prefix}[\\s\\S]{0,900}?_DataListItem__value_[^>]*>([^<]+)</span>(?:[\\s\\S]{0,120}?_DataListItem__suffix_[^>]*>([^<]+)</span>)?(?:[\\s\\S]{0,120}?_DataListItem__date_[^>]*>\\((?:<!-- -->)?([^<]+))?`, 'i');
   const m = html.match(pattern);
   if (!m) return { value: null, suffix: null, time: null };
   return { value: m[1] || null, suffix: m[2] || null, time: m[3] || null };
@@ -78,17 +80,18 @@ async function fetchPage() {
 }
 
 function buildPayload(html) {
-  const board = extractPriceBoard(html);
-  const previousClose = extractMetric(html, '前日終値');
-  const open = extractMetric(html, '始値');
-  const high = extractMetric(html, '高値');
-  const low = extractMetric(html, '安値');
-  const volume = extractMetric(html, '出来高');
-  const tradingValue = extractMetric(html, '売買代金');
-  const marketCap = extractMetric(html, '時価総額');
-  const pbr = extractMetric(html, 'PBR');
-  const roe = extractMetric(html, 'ROE');
-  const equityRatio = extractMetric(html, '自己資本比率');
+  const visibleHtml = html.split('ptsPriceData\\":{')[0] || html;
+  const board = extractPriceBoard(visibleHtml);
+  const previousClose = extractMetric(visibleHtml, '前日終値');
+  const open = extractMetric(visibleHtml, '始値');
+  const high = extractMetric(visibleHtml, '高値');
+  const low = extractMetric(visibleHtml, '安値');
+  const volume = extractMetric(visibleHtml, '出来高');
+  const tradingValue = extractMetric(visibleHtml, '売買代金');
+  const marketCap = extractMetric(visibleHtml, '時価総額');
+  const pbr = extractMetric(visibleHtml, 'PBR', '実績');
+  const roe = extractMetric(visibleHtml, 'ROE', '実績');
+  const equityRatio = extractMetric(visibleHtml, '自己資本比率', '実績');
   const pts = extractPts(html);
 
   return {
