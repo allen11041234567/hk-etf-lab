@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116753971776687226": {
+    "content_zh_cn": "特朗普与伊朗达成一度被视为难以企及的和平协议，缓解选举前油价压力：https://justthenews.com/government/security/montrump-etches-iran-peace-deal-after-months-false-starts",
+    "content_zh_hk": "特朗普與伊朗達成一度被視為難以企及的和平協議，紓緩大選前油價壓力：https://justthenews.com/government/security/montrump-etches-iran-peace-deal-after-months-false-starts",
+    "content_ko": "트럼프, 한때 성사되기 어려워 보였던 이란과의 평화 합의 이끌어내… 선거 앞두고 유가 압력 완화: https://justthenews.com/government/security/montrump-etches-iran-peace-deal-after-months-false-starts"
+  },
   "https://truthsocial.com/@realDonaldTrump/116753690331106553": {
     "content_zh_cn": "在“骗子乔”拜登及其卖国的国土安全部部长亚历杭德罗·马约卡斯所推行的灾难性“开放边境政策”之下，来自监狱、看守所、精神病院和疯人院的犯罪分子如潮水般涌入我们的国家，人数高达数千万，其中包括逾13,000名冷血杀人犯。\n\n不用说，他们显然并不总是最安全的驾驶者！汽车保险保费因此飙升至历史高位，迫使守法的美国公民为拜登治下“搭便车”的非法移民埋单。\n\n在实现超过一年的“非法移民零流入”之后，加上我们在扭转拜登“入侵”局面方面取得的巨大成功，汽车保险保费已大幅回落。\n\n让美国再次安全！\n\n总统 唐纳德·J·特朗普",
     "content_zh_hk": "在「騙子喬」拜登及其賣國的國土安全部部長亞歷杭德羅·馬約卡斯推行的災難性「開放邊境政策」之下，來自監獄、看守所、精神病院和瘋人院的罪犯如潮水般湧入我們的國家，人數高達數千萬，其中包括逾13,000名冷血殺人犯。\n\n不用說，他們顯然並不總是最安全的駕駛者！汽車保險保費因此飆升至歷史高位，迫使守法的美國公民為拜登治下「搭便車」的非法移民埋單。\n\n在實現超過一年的「非法移民零流入」之後，加上我們在扭轉拜登「入侵」局面方面取得的巨大成功，汽車保險保費已大幅回落。\n\n讓美國再次安全！\n\n總統 唐納德·J·特朗普",
