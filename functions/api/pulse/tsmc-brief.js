@@ -31,8 +31,14 @@ function extractField(html, label) {
   return m[1].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
 }
 
+function extractLabeledValue(html, label) {
+  const escaped = label.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const m = html.match(new RegExp(`${escaped}</span><span[^>]*>[\\s\\S]{0,160}?>([0-9,]+(?:\\.[0-9]+)?%?)<`, 'i'));
+  return m ? m[1].trim() : null;
+}
+
 function extractCurrentPrice(html) {
-  return extractField(html, '成交')
+  return extractLabeledValue(html, '成交')
     || (html.match(/資料載入中\.\.\.[\s\S]{0,1200}?<span class="Fw\(600\) Fz\(32px\)[^"]*">([^<]+)<\/span>/i)?.[1] || null)
     || (html.match(/<span class="Fw\(600\) Fz\(32px\)[^"]*">([^<]+)<\/span>/i)?.[1] || null)
     || (html.match(/<span class="Fz\(32px\)[^"]*">([^<]+)<\/span>/i)?.[1] || null);
@@ -44,6 +50,11 @@ function extractUpdateTime(html) {
 
 function extractOutsideText(html) {
   const m = html.match(/<span class="Mend\(5px\) C\(\$c-trend-up\)">([\s\S]{0,120}?)<\/span><span>外盤/i);
+  return m ? m[1].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim() : null;
+}
+
+function extractInsideText(html) {
+  const m = html.match(/內盤<\/span><span[^>]*>([\s\S]{0,160}?)<\/span>/i);
   return m ? m[1].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim() : null;
 }
 
@@ -63,16 +74,17 @@ function buildPayload(html) {
   const name = matchText(html, /<title>([^<(]+)\(2330\.TW\)/i) || '台積電';
   const timeText = extractUpdateTime(html) || matchText(html, /即時行情資料時間：([^<]+)/i);
   const current = extractCurrentPrice(html);
-  const open = extractField(html, '開盤');
-  const high = extractField(html, '最高');
-  const low = extractField(html, '最低');
-  const previousClose = extractField(html, '昨收');
-  const change = extractField(html, '漲跌');
-  const changePercent = extractField(html, '漲跌幅');
-  const tradingValue = extractField(html, '成交金額\(億\)');
-  const totalVolume = extractField(html, '總量');
-  const insideRaw = matchText(html, /內盤<\/span><span[^>]*>([\s\S]{0,140}?)<\/span><\/div>/i);
-  const outsideRaw = matchText(html, /<span[^>]*>([\d,]+(?:<span[^>]*>\([^<]+\)<\/span>)?)<\/span><span>外盤/i);
+  const open = extractLabeledValue(html, '開盤') || extractField(html, '開盤');
+  const high = extractLabeledValue(html, '最高') || extractField(html, '最高');
+  const low = extractLabeledValue(html, '最低') || extractField(html, '最低');
+  const average = extractLabeledValue(html, '均價') || extractField(html, '均價');
+  const previousClose = extractLabeledValue(html, '昨收') || extractField(html, '昨收');
+  const change = extractLabeledValue(html, '漲跌');
+  const changePercent = extractLabeledValue(html, '漲跌幅');
+  const tradingValue = extractLabeledValue(html, '成交金額\(億\)') || extractField(html, '成交金額\(億\)');
+  const totalVolume = extractLabeledValue(html, '總量') || extractField(html, '總量');
+  const insideRaw = extractInsideText(html);
+  const outsideRaw = extractOutsideText(html);
 
   let dayChange = parseNumber(change);
   let dayChangePercentText = changePercent ? (String(changePercent).includes('%') ? String(changePercent) : `${changePercent}%`) : null;
@@ -102,14 +114,16 @@ function buildPayload(html) {
       highText: high,
       low: parseNumber(low),
       lowText: low,
+      average: parseNumber(average),
+      averageText: average,
       previousClose: parseNumber(previousClose),
       previousCloseText: previousClose,
       tradingValueText: tradingValue ? `${tradingValue}亿` : null,
       tradingValue: parseNumber(tradingValue),
       volumeText: totalVolume,
       volume: parseNumber(totalVolume),
-      insideText: insideRaw ? insideRaw.replace(/<[^>]+>/g, '').trim() : null,
-      outsideText: extractOutsideText(html) || (outsideRaw ? outsideRaw.replace(/<[^>]+>/g, '').trim() : null),
+      insideText: insideRaw,
+      outsideText: outsideRaw,
     },
   };
 }
