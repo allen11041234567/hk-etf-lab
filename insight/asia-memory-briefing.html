@@ -19,8 +19,12 @@
     .live-board-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.live-board-title{font-size:14px;font-weight:800;color:#166534}.live-board-sub{margin-top:6px;font-size:13px;line-height:1.7;color:#475569}.live-board-time{font-size:13px;font-weight:800;color:#166534}
     .quick-strip{margin:0 0 14px;padding:14px 16px;border:1px solid rgba(255,255,255,.7);border-radius:22px;background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(247,250,255,.96));box-shadow:var(--shadow)}
     .quick-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.quick-item{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:16px;background:#fff}.quick-label{font-size:13px;color:#475569;font-weight:700}.quick-value{font-size:20px;font-weight:800;letter-spacing:-.02em}.up{color:var(--up)} .down{color:var(--down)} .flat{color:var(--flat)}
+    .quick-cta{display:flex;justify-content:center;padding-top:10px}.quick-cta .community-link{width:100%;max-width:360px}
+    .stock-switch{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 14px}.switch-btn{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:999px;border:1px solid var(--line);background:#fff;color:#475569;font-size:13px;font-weight:700;cursor:pointer}.switch-btn.active{background:#14213d;color:#fff;border-color:#14213d}
     .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
     .card { background:var(--card); border:1px solid rgba(255,255,255,0.7); box-shadow:var(--shadow); border-radius:24px; padding:22px; backdrop-filter:blur(14px); }
+    .community-link{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 16px;border-radius:999px;border:1px solid #fb923c;background:linear-gradient(180deg,#ff8a3d 0%,#f36f21 100%);color:#fff;text-decoration:none;font-size:13px;font-weight:800;white-space:nowrap;box-shadow:0 14px 28px rgba(243,111,33,.30),0 0 0 4px rgba(255,138,61,.12)}
+    .community-link img{width:42px;height:42px;border-radius:8px;border:2px solid rgba(255,255,255,.95);background:#fff;flex-shrink:0}.community-link::before{content:'🔥';font-size:13px;line-height:1}.community-link::after{content:'↗';font-size:12px;line-height:1}
     .top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:10px}.name{font-size:28px;font-weight:800;letter-spacing:-0.02em}.code{font-size:13px;color:var(--muted);letter-spacing:0.06em}.market{display:inline-flex;align-items:center;gap:6px;padding:7px 10px;border-radius:999px;background:#f8fafc;border:1px solid var(--line);font-size:12px;color:#475569;font-weight:700}
     .price { font-size:clamp(38px,5vw,60px); font-weight:800; letter-spacing:-0.04em; margin:10px 0 6px; }
     .change { display:flex; flex-wrap:wrap; gap:12px; align-items:center; font-size:17px; font-weight:700; margin-bottom:8px; }
@@ -55,7 +59,8 @@
       .meta { gap:6px; }
       .pill { padding:7px 10px; font-size:12px; }
       .live-board{margin-bottom:10px;padding:12px;border-radius:16px}.live-board-title{font-size:13px}.live-board-sub,.live-board-time{font-size:12px}
-      .quick-strip{margin-bottom:10px;padding:12px;border-radius:18px}.quick-grid{grid-template-columns:1fr;gap:8px}.quick-item{padding:9px 10px;border-radius:14px}.quick-label{font-size:12px}.quick-value{font-size:18px}
+      .quick-strip{margin-bottom:10px;padding:12px;border-radius:18px}.quick-grid{grid-template-columns:1fr;gap:8px}.quick-item{padding:9px 10px;border-radius:14px}.quick-label{font-size:12px}.quick-value{font-size:18px}.quick-cta{padding-top:8px}
+      .stock-switch{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}.switch-btn{width:100%;min-height:40px}
       .grid { gap:10px; }
       .card { padding:12px; border-radius:18px; }
       .top{flex-direction:column;align-items:flex-start;gap:8px}.code { font-size:12px; }.name { font-size:22px; }
@@ -65,7 +70,7 @@
       .mini-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin-top:10px; }
       .stat-label { font-size:11px; margin-bottom:4px; }
       .stat-value { font-size:15px; line-height:1.35; word-break:break-word; }
-      .flow-wrap{margin-top:10px;padding:10px;border-radius:14px}.flow-grid{grid-template-columns:1fr;gap:8px}.flow-box{padding:10px}.flow-box .value{font-size:15px}.flow-trend{font-size:12px;line-height:1.58}
+      .flow-wrap{margin-top:10px;padding:10px;border-radius:14px}.flow-grid{grid-template-columns:1fr;gap:8px}.flow-box{padding:10px}.flow-box .value{font-size:15px}.flow-trend{font-size:12px;line-height:1.58}.community-link{padding:10px 12px;font-size:12px;width:100%;justify-content:center;box-shadow:0 12px 24px rgba(243,111,33,.24),0 0 0 3px rgba(255,138,61,.10)}
       .error { margin-top:12px; padding:12px; border-radius:14px; font-size:13px; }
     }
   </style>
@@ -98,10 +103,18 @@
         <div class="quick-item"><div class="quick-label">台积电 即时涨跌幅</div><div class="quick-value flat" id="quick-tsmc">--</div></div>
         <div class="quick-item"><div class="quick-label">铠侠 即时涨跌幅</div><div class="quick-value flat" id="quick-kioxia">--</div></div>
       </div>
+      <div class="quick-cta">
+        <a class="community-link" href="javascript:void(0)" role="img" aria-label="群聊二维码入口"><img src="/assets/qr/group-chat-20260612.jpg" alt="群聊二维码" />扫码加入群聊</a>
+      </div>
     </section>
 
-    <div class="grid">
-      <section class="card" id="card-tsmc">
+    <div class="stock-switch">
+      <button class="switch-btn active" data-target-code="2330.TW">台积电</button>
+      <button class="switch-btn" data-target-code="285A">铠侠</button>
+    </div>
+
+    <div class="grid" id="cards-grid">
+      <section class="card" id="card-tsmc" data-code="2330.TW">
         <div class="top">
           <div>
             <div class="code">2330.TW</div>
@@ -132,7 +145,7 @@
         </div>
       </section>
 
-      <section class="card" id="card-kioxia">
+      <section class="card" id="card-kioxia" data-code="285A">
         <div class="top">
           <div>
             <div class="code">285A</div>
@@ -175,6 +188,10 @@
     let refreshTimer = null;
 
     function setText(id, text){ const el = document.getElementById(id); if(el) el.textContent = text ?? '--'; }
+    function applyCardVisibility(targetCode){
+      document.querySelectorAll('.switch-btn').forEach((btn)=>btn.classList.toggle('active', btn.dataset.targetCode===targetCode));
+      document.querySelectorAll('#cards-grid .card').forEach((card)=>{ card.style.display = card.dataset.code===targetCode ? '' : 'none'; });
+    }
     function getDirectionClass(value){ if(value > 0) return 'up'; if(value < 0) return 'down'; return 'flat'; }
     function pad2(v){ return String(v).padStart(2,'0'); }
     function formatBeijingTime(date){ const d = new Date(date.toLocaleString('en-US', { timeZone:'Asia/Shanghai' })); return `北京时间 ${pad2(d.getHours())}:${pad2(d.getMinutes())}:${pad2(d.getSeconds())}`; }
@@ -225,8 +242,10 @@
     }
     function stopPolling(){ if(refreshTimer){ clearInterval(refreshTimer); refreshTimer = null; } }
     function startPolling(){ stopPolling(); if(document.hidden) return; refreshAll(); refreshTimer = setInterval(()=>{ if(!document.hidden) refreshAll(); }, REFRESH_MS); }
+    document.querySelectorAll('.switch-btn').forEach((btn)=>btn.addEventListener('click',()=>applyCardVisibility(btn.dataset.targetCode)));
     document.addEventListener('visibilitychange',()=>{ if(document.hidden) stopPolling(); else startPolling(); });
     startPolling();
+    setTimeout(()=>applyCardVisibility('2330.TW'), 0);
   </script>
 </body>
 </html>
