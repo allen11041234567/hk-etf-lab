@@ -1,18 +1,73 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex,nofollow,noarchive" />
   <title>台积电 × 铠侠 实时观察</title>
   <style>
-    :root{--bg:#f5f7fb;--card:rgba(255,255,255,.96);--text:#14213d;--muted:#667085;--up:#d92d20;--down:#1570ef;--flat:#475467;--line:rgba(15,23,42,.08);--shadow:0 18px 45px rgba(15,23,42,.08)}
-    *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,"PingFang SC","Microsoft YaHei",sans-serif;background:radial-gradient(circle at top,#ffffff 0%,#eef4ff 36%,var(--bg) 100%);color:var(--text)}
-    .wrap{width:min(1180px,calc(100vw - 24px));margin:0 auto;padding:22px 0 34px}.hero{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end;justify-content:space-between;margin-bottom:18px}.title{font-size:clamp(28px,4vw,40px);font-weight:800;letter-spacing:-.02em;margin:0}.subtitle{margin-top:8px;color:var(--muted);font-size:15px;line-height:1.6}.meta{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}.pill{border:1px solid var(--line);background:rgba(255,255,255,.82);color:var(--muted);border-radius:999px;padding:8px 12px;font-size:13px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.card{background:var(--card);border:1px solid rgba(255,255,255,.7);box-shadow:var(--shadow);border-radius:24px;padding:22px;backdrop-filter:blur(14px)}
-    .top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:10px}.name{font-size:28px;font-weight:800;letter-spacing:-0.02em}.code{font-size:13px;color:var(--muted);letter-spacing:.06em}.market{display:inline-flex;align-items:center;gap:6px;padding:7px 10px;border-radius:999px;background:#f8fafc;border:1px solid var(--line);font-size:12px;color:#475569;font-weight:700}.price{font-size:clamp(38px,5vw,60px);font-weight:800;letter-spacing:-0.04em;margin:10px 0 6px}.change{display:flex;flex-wrap:wrap;gap:12px;align-items:center;font-size:17px;font-weight:700;margin-bottom:8px}.up{color:var(--up)} .down{color:var(--down)} .flat{color:var(--flat)}
-    .meta-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 14px}.refresh{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:#f0fdf4;border:1px solid rgba(22,163,74,.16);color:#166534;font-size:12px;font-weight:800}.dot{width:7px;height:7px;border-radius:999px;background:#16a34a}.mini-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:16px}.stat{padding:14px 14px 12px;border:1px solid var(--line);border-radius:16px;background:rgba(248,250,252,.82)}.label{font-size:12px;color:var(--muted);margin-bottom:6px}.value{font-size:20px;font-weight:700;letter-spacing:-0.02em}.flow-wrap{margin-top:16px;padding:14px;border:1px solid var(--line);border-radius:16px;background:rgba(255,251,235,.58)}.flow-title{font-size:12px;color:var(--muted);margin-bottom:10px}.flow-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.flow-box{padding:10px 12px;border-radius:12px;background:#fff;border:1px solid rgba(15,23,42,.06)}.flow-box .label{font-size:11px;margin-bottom:4px}.flow-box .value{font-size:16px}.note{margin-top:10px;font-size:12px;line-height:1.7;color:#475569}.error{margin-top:16px;padding:14px 16px;border-radius:16px;color:#b42318;background:#fef3f2;border:1px solid #fecdca;display:none}
-    @media (max-width:880px){.grid{grid-template-columns:1fr}.meta{justify-content:flex-start}.title{font-size:30px}.subtitle{font-size:14px;line-height:1.7}.card{padding:18px;border-radius:20px}.price{font-size:42px}.change{font-size:15px;gap:10px}.mini-grid{gap:10px;margin-top:14px}.stat{padding:12px;border-radius:14px}.value{font-size:18px}.flow-wrap{margin-top:14px;padding:12px;border-radius:14px}.flow-grid{gap:8px}}
-    @media (max-width:560px){.wrap{width:calc(100vw - 14px);padding:10px 0 20px}.hero{gap:8px;margin-bottom:10px}.title{font-size:22px;line-height:1.18}.subtitle{margin-top:6px;font-size:13px;line-height:1.58}.meta{gap:6px}.pill{padding:7px 10px;font-size:12px}.card{padding:12px;border-radius:18px}.top{flex-direction:column;align-items:flex-start;gap:8px}.name{font-size:22px}.price{font-size:34px;margin:8px 0 4px}.change{font-size:13px;gap:6px;margin-bottom:4px}.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:10px}.label{font-size:11px;margin-bottom:4px}.value{font-size:15px;line-height:1.35;word-break:break-word}.flow-wrap{margin-top:10px;padding:10px;border-radius:14px}.flow-grid{grid-template-columns:1fr;gap:8px}.flow-box{padding:10px}.flow-box .value{font-size:15px}.note{font-size:12px;line-height:1.58}.error{margin-top:12px;padding:12px;border-radius:14px;font-size:13px}}
+    :root { --bg:#f5f7fb; --card:rgba(255,255,255,0.94); --text:#14213d; --muted:#667085; --up:#d92d20; --down:#1570ef; --flat:#475467; --line:rgba(15,23,42,0.08); --shadow:0 18px 45px rgba(15,23,42,0.08); }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; background:radial-gradient(circle at top,#ffffff 0%,#eef4ff 36%,var(--bg) 100%); color:var(--text); min-height:100vh; }
+    .wrap { width:min(1180px,calc(100vw - 24px)); margin:0 auto; padding:24px 0 40px; }
+    .hero { display:flex; flex-wrap:wrap; gap:14px; align-items:flex-end; justify-content:space-between; margin-bottom:14px; }
+    .title { font-size:clamp(28px,4vw,42px); font-weight:800; letter-spacing:-0.02em; margin:0; }
+    .subtitle { margin-top:8px; color:var(--muted); font-size:15px; line-height:1.6; max-width:900px; }
+    .meta { display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+    .pill { border:1px solid var(--line); background:rgba(255,255,255,0.78); color:var(--muted); border-radius:999px; padding:8px 12px; font-size:13px; backdrop-filter:blur(10px); }
+    .live-board{margin:0 0 14px;padding:14px 16px;border:1px solid rgba(22,163,74,.14);border-radius:20px;background:linear-gradient(180deg,rgba(240,253,244,.96),rgba(255,255,255,.96));box-shadow:var(--shadow)}
+    .live-board-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.live-board-title{font-size:14px;font-weight:800;color:#166534}.live-board-sub{margin-top:6px;font-size:13px;line-height:1.7;color:#475569}.live-board-time{font-size:13px;font-weight:800;color:#166534}
+    .quick-strip{margin:0 0 14px;padding:14px 16px;border:1px solid rgba(255,255,255,.7);border-radius:22px;background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(247,250,255,.96));box-shadow:var(--shadow)}
+    .quick-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.quick-item{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:16px;background:#fff}.quick-label{font-size:13px;color:#475569;font-weight:700}.quick-value{font-size:20px;font-weight:800;letter-spacing:-.02em}.up{color:var(--up)} .down{color:var(--down)} .flat{color:var(--flat)}
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+    .card { background:var(--card); border:1px solid rgba(255,255,255,0.7); box-shadow:var(--shadow); border-radius:24px; padding:22px; backdrop-filter:blur(14px); }
+    .top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:10px}.name{font-size:28px;font-weight:800;letter-spacing:-0.02em}.code{font-size:13px;color:var(--muted);letter-spacing:0.06em}.market{display:inline-flex;align-items:center;gap:6px;padding:7px 10px;border-radius:999px;background:#f8fafc;border:1px solid var(--line);font-size:12px;color:#475569;font-weight:700}
+    .price { font-size:clamp(38px,5vw,60px); font-weight:800; letter-spacing:-0.04em; margin:10px 0 6px; }
+    .change { display:flex; flex-wrap:wrap; gap:12px; align-items:center; font-size:17px; font-weight:700; margin-bottom:8px; }
+    .meta-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 14px}.refresh{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:#f0fdf4;border:1px solid rgba(22,163,74,.16);color:#166534;font-size:12px;font-weight:800}.refresh.secondary{background:#f8fafc;border-color:rgba(15,23,42,.08);color:#475569}.dot{width:7px;height:7px;border-radius:999px;background:#16a34a}
+    .mini-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:16px; }
+    .stat { padding:14px 14px 12px; border:1px solid var(--line); border-radius:16px; background:rgba(248,250,252,0.8); }
+    .stat-label { font-size:12px; color:var(--muted); margin-bottom:6px; }
+    .stat-value { font-size:20px; font-weight:700; letter-spacing:-0.02em; }
+    .flow-wrap{margin-top:16px;padding:14px 14px 12px;border:1px solid var(--line);border-radius:16px;background:rgba(255,251,235,0.72)}
+    .flow-title{font-size:12px;color:var(--muted);margin-bottom:10px}.flow-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.flow-box{padding:10px 12px;border-radius:12px;background:#fff;border:1px solid rgba(15,23,42,0.06)}.flow-box .label{font-size:11px;color:var(--muted);margin-bottom:4px}.flow-box .value{font-size:16px;font-weight:700}.flow-trend{margin-top:10px;font-size:12px;line-height:1.7;color:#475569}
+    .error { margin-top:16px; padding:14px 16px; border-radius:16px; color:#b42318; background:#fef3f2; border:1px solid #fecdca; display:none; }
+    @media (max-width: 880px) {
+      .wrap { width:min(100vw - 24px,1180px); padding:20px 0 28px; }
+      .grid { grid-template-columns:1fr; }
+      .meta { justify-content:flex-start; }
+      .title { font-size:30px; line-height:1.16; }
+      .subtitle { font-size:14px; line-height:1.7; }
+      .card { padding:18px; border-radius:20px; }
+      .price { font-size:42px; }
+      .change { font-size:15px; gap:10px; margin-bottom:6px; }
+      .mini-grid { gap:10px; margin-top:14px; }
+      .stat { padding:12px; border-radius:14px; }
+      .stat-value { font-size:18px; }
+      .flow-wrap{margin-top:14px;padding:12px;border-radius:14px}.flow-grid{gap:8px}
+    }
+    @media (max-width: 560px) {
+      body { background:linear-gradient(180deg,#f8fbff 0%,#f2f6fd 100%); }
+      .wrap { width:calc(100vw - 14px); padding:10px 0 20px; }
+      .hero { gap:8px; margin-bottom:10px; }
+      .title { font-size:22px; line-height:1.18; }
+      .subtitle { margin-top:6px; font-size:13px; line-height:1.58; }
+      .meta { gap:6px; }
+      .pill { padding:7px 10px; font-size:12px; }
+      .live-board{margin-bottom:10px;padding:12px;border-radius:16px}.live-board-title{font-size:13px}.live-board-sub,.live-board-time{font-size:12px}
+      .quick-strip{margin-bottom:10px;padding:12px;border-radius:18px}.quick-grid{grid-template-columns:1fr;gap:8px}.quick-item{padding:9px 10px;border-radius:14px}.quick-label{font-size:12px}.quick-value{font-size:18px}
+      .grid { gap:10px; }
+      .card { padding:12px; border-radius:18px; }
+      .top{flex-direction:column;align-items:flex-start;gap:8px}.code { font-size:12px; }.name { font-size:22px; }
+      .price { font-size:34px; margin:8px 0 4px; }
+      .change { font-size:13px; gap:6px; margin-bottom:4px; }
+      .meta-row{gap:6px;margin:0 0 10px}.refresh{font-size:11px;padding:5px 8px}
+      .mini-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin-top:10px; }
+      .stat-label { font-size:11px; margin-bottom:4px; }
+      .stat-value { font-size:15px; line-height:1.35; word-break:break-word; }
+      .flow-wrap{margin-top:10px;padding:10px;border-radius:14px}.flow-grid{grid-template-columns:1fr;gap:8px}.flow-box{padding:10px}.flow-box .value{font-size:15px}.flow-trend{font-size:12px;line-height:1.58}
+      .error { margin-top:12px; padding:12px; border-radius:14px; font-size:13px; }
+    }
   </style>
 </head>
 <body>
@@ -20,11 +75,29 @@
     <section class="hero">
       <div>
         <h1 class="title">台积电 × 铠侠 实时观察</h1>
-        <div class="subtitle">先做一版能跑的双卡实时页，参考韩股科技页的双卡排布。字段不强行统一，按台积电和铠侠各自能稳定抓到的实时数据来放。</div>
+        <div class="subtitle">参考韩股科技页的刷新与排布逻辑，先把台积电与铠侠这两条亚洲存储链核心观察对象放进同一页。字段不强行统一，各自展示最稳定、最有用的实时信息。</div>
       </div>
       <div class="meta">
         <div class="pill">隐藏试运行页</div>
-        <div class="pill">2330.TW + 285A</div>
+        <div class="pill">聚合快照轮询</div>
+        <div class="pill">页面不可见时暂停刷新</div>
+      </div>
+    </section>
+
+    <section class="live-board">
+      <div class="live-board-top">
+        <div>
+          <div class="live-board-title">这是会自动更新的页面</div>
+          <div class="live-board-sub">页面只轮询我们自己的聚合快照接口，再由快照接口统一读取台积电与铠侠数据，避免前端直接双打源站。</div>
+        </div>
+        <div class="live-board-time" id="live-board-time">最近更新：--</div>
+      </div>
+    </section>
+
+    <section class="quick-strip">
+      <div class="quick-grid">
+        <div class="quick-item"><div class="quick-label">台积电 即时涨跌幅</div><div class="quick-value flat" id="quick-tsmc">--</div></div>
+        <div class="quick-item"><div class="quick-label">铠侠 即时涨跌幅</div><div class="quick-value flat" id="quick-kioxia">--</div></div>
       </div>
     </section>
 
@@ -39,20 +112,23 @@
         </div>
         <div class="price" id="tsmc-price">--</div>
         <div class="change flat" id="tsmc-change">--</div>
-        <div class="meta-row"><div class="refresh"><span class="dot"></span><span id="tsmc-meta">最近更新：--</span></div></div>
+        <div class="meta-row">
+          <span class="refresh"><span class="dot"></span><span class="refresh-text">每30秒自动更新</span></span>
+          <span class="refresh secondary" id="tsmc-meta">最近更新：--</span>
+        </div>
         <div class="mini-grid">
-          <div class="stat"><div class="label">开盘</div><div class="value" id="tsmc-open">--</div></div>
-          <div class="stat"><div class="label">昨收</div><div class="value" id="tsmc-prev">--</div></div>
-          <div class="stat"><div class="label">最高</div><div class="value" id="tsmc-high">--</div></div>
-          <div class="stat"><div class="label">最低</div><div class="value" id="tsmc-low">--</div></div>
+          <div class="stat"><div class="stat-label">开盘</div><div class="stat-value" id="tsmc-open">--</div></div>
+          <div class="stat"><div class="stat-label">昨收</div><div class="stat-value" id="tsmc-prev">--</div></div>
+          <div class="stat"><div class="stat-label">日内高</div><div class="stat-value" id="tsmc-high">--</div></div>
+          <div class="stat"><div class="stat-label">日内低</div><div class="stat-value" id="tsmc-low">--</div></div>
         </div>
         <div class="flow-wrap">
           <div class="flow-title">台积电当前可稳定抓到的扩展字段</div>
           <div class="flow-grid">
+            <div class="flow-box"><div class="label">均价</div><div class="value" id="tsmc-avg">--</div></div>
             <div class="flow-box"><div class="label">成交金额</div><div class="value" id="tsmc-value">--</div></div>
             <div class="flow-box"><div class="label">总量</div><div class="value" id="tsmc-volume">--</div></div>
-            <div class="flow-box"><div class="label">内盘</div><div class="value" id="tsmc-inside">--</div></div>
-            <div class="flow-box"><div class="label">外盘</div><div class="value" id="tsmc-outside">--</div></div>
+            <div class="flow-box"><div class="label">内盘 / 外盘</div><div class="value" id="tsmc-io">--</div></div>
           </div>
         </div>
       </section>
@@ -67,12 +143,15 @@
         </div>
         <div class="price" id="kioxia-price">--</div>
         <div class="change flat" id="kioxia-change">--</div>
-        <div class="meta-row"><div class="refresh"><span class="dot"></span><span id="kioxia-meta">最近更新：--</span></div></div>
+        <div class="meta-row">
+          <span class="refresh"><span class="dot"></span><span class="refresh-text">每30秒自动更新</span></span>
+          <span class="refresh secondary" id="kioxia-meta">最近更新：--</span>
+        </div>
         <div class="mini-grid">
-          <div class="stat"><div class="label">开盘</div><div class="value" id="kioxia-open">--</div></div>
-          <div class="stat"><div class="label">前收</div><div class="value" id="kioxia-prev">--</div></div>
-          <div class="stat"><div class="label">最高</div><div class="value" id="kioxia-high">--</div></div>
-          <div class="stat"><div class="label">最低</div><div class="value" id="kioxia-low">--</div></div>
+          <div class="stat"><div class="stat-label">开盘</div><div class="stat-value" id="kioxia-open">--</div></div>
+          <div class="stat"><div class="stat-label">前收</div><div class="stat-value" id="kioxia-prev">--</div></div>
+          <div class="stat"><div class="stat-label">日内高</div><div class="stat-value" id="kioxia-high">--</div></div>
+          <div class="stat"><div class="stat-label">日内低</div><div class="stat-value" id="kioxia-low">--</div></div>
         </div>
         <div class="flow-wrap">
           <div class="flow-title">铠侠当前可稳定抓到的扩展字段</div>
@@ -82,7 +161,7 @@
             <div class="flow-box"><div class="label">PBR / ROE</div><div class="value" id="kioxia-pbr-roe">--</div></div>
             <div class="flow-box"><div class="label">自己资本比率</div><div class="value" id="kioxia-equity">--</div></div>
           </div>
-          <div class="note" id="kioxia-pts">夜间 PTS：--</div>
+          <div class="flow-trend" id="kioxia-pts">夜间 PTS：--</div>
         </div>
       </section>
     </div>
@@ -90,40 +169,65 @@
     <div class="error" id="error-box">当前数据更新稍慢，请稍后刷新重试</div>
   </div>
   <script>
-    (function(){
-      const errorBox = document.getElementById('error-box');
-      function setText(id, text){ const el = document.getElementById(id); if(el) el.textContent = text ?? '--'; }
-      function paintChange(id, changeText, pctText){
-        const el = document.getElementById(id); if(!el) return;
-        const text = [changeText, pctText].filter(Boolean).join(' / ') || '--';
-        el.textContent = text;
-        const n = Number(String(changeText || '').replace(/,/g,''));
-        el.className = 'change ' + (!Number.isFinite(n) ? 'flat' : (n >= 0 ? 'up' : 'down'));
-      }
-      async function fetchJson(url){ const r = await fetch(url, { cache:'no-store' }); if(!r.ok) throw new Error('http '+r.status); return await r.json(); }
-      Promise.all([
-        fetchJson('/api/pulse/tsmc-brief'),
-        fetchJson('/api/pulse/kioxia-brief')
-      ]).then(([tsmc, kioxia]) => {
-        const t = tsmc.quote || {};
-        setText('tsmc-price', t.currentText);
-        paintChange('tsmc-change', t.dayChangeText, t.dayChangePercentText);
-        setText('tsmc-meta', `最近更新：${t.timeText || '--'} · ${t.market || '--'}`);
-        setText('tsmc-open', t.openText); setText('tsmc-prev', t.previousCloseText); setText('tsmc-high', t.highText); setText('tsmc-low', t.lowText);
-        setText('tsmc-value', t.tradingValueText); setText('tsmc-volume', t.volumeText); setText('tsmc-inside', t.insideText); setText('tsmc-outside', t.outsideText);
+    const SNAPSHOT_FEED = '/api/pulse/asia-memory-snapshot';
+    const REFRESH_MS = 30000;
+    const errorBox = document.getElementById('error-box');
+    let latestRefreshTs = null;
+    let refreshTimer = null;
 
-        const k = kioxia.quote || {};
-        setText('kioxia-price', k.currentText);
-        paintChange('kioxia-change', k.dayChangeText, k.dayChangePercentText);
-        setText('kioxia-meta', `最近更新：${k.priceTime || '--'} · ${k.market || '--'}`);
-        setText('kioxia-open', k.openText); setText('kioxia-prev', k.previousCloseText); setText('kioxia-high', k.highText); setText('kioxia-low', k.lowText);
-        setText('kioxia-value', k.tradingValueText); setText('kioxia-mcap', k.marketCapText); setText('kioxia-pbr-roe', `${k.pbrText || '--'} / ${k.roeText || '--'}`); setText('kioxia-equity', k.equityRatioText);
-        setText('kioxia-pts', k.pts && k.pts.priceText ? `夜间 PTS：${k.pts.priceText} / ${k.pts.changeRateText || '--'} / ${k.pts.priceTime || '--'}` : '夜间 PTS：--');
-        errorBox.style.display='none';
-      }).catch(err => {
-        errorBox.style.display='block';
-      });
-    })();
+    function setText(id, text){ const el = document.getElementById(id); if(el) el.textContent = text ?? '--'; }
+    function getDirectionClass(value){ if(value > 0) return 'up'; if(value < 0) return 'down'; return 'flat'; }
+    function pad2(v){ return String(v).padStart(2,'0'); }
+    function formatBeijingTime(date){ const d = new Date(date.toLocaleString('en-US', { timeZone:'Asia/Shanghai' })); return `北京时间 ${pad2(d.getHours())}:${pad2(d.getMinutes())}:${pad2(d.getSeconds())}`; }
+    function updateLiveTime(ts){ latestRefreshTs = ts || new Date(); const text = `最近更新：${formatBeijingTime(latestRefreshTs)}`; const board = document.getElementById('live-board-time'); if(board) board.textContent = text; }
+    function paintChange(id, changeText, pctText){
+      const el = document.getElementById(id); if(!el) return;
+      const text = [changeText, pctText].filter(Boolean).join(' / ') || '--';
+      el.textContent = text;
+      const n = Number(String(changeText || '').replace(/,/g,''));
+      el.className = 'change ' + (!Number.isFinite(n) ? 'flat' : (n >= 0 ? 'up' : 'down'));
+    }
+    function paintQuick(id, pctText, changeText){
+      const el = document.getElementById(id); if(!el) return;
+      const n = Number(String(changeText || '').replace(/,/g,''));
+      el.className = 'quick-value ' + (!Number.isFinite(n) ? 'flat' : (n >= 0 ? 'up' : 'down'));
+      el.textContent = pctText || '--';
+    }
+    async function fetchJson(url){ const r = await fetch(url, { cache:'no-store' }); if(!r.ok) throw new Error(`http ${r.status}`); return await r.json(); }
+    function renderTsmc(t){
+      setText('tsmc-price', t.currentText);
+      paintChange('tsmc-change', t.dayChangeText, t.dayChangePercentText);
+      paintQuick('quick-tsmc', t.dayChangePercentText, t.dayChangeText);
+      setText('tsmc-meta', `最近更新：${t.timeText || '--'} · ${t.market || '--'}`);
+      setText('tsmc-open', t.openText); setText('tsmc-prev', t.previousCloseText); setText('tsmc-high', t.highText); setText('tsmc-low', t.lowText);
+      setText('tsmc-avg', t.averageText); setText('tsmc-value', t.tradingValueText); setText('tsmc-volume', t.volumeText); setText('tsmc-io', [t.insideText, t.outsideText].filter(Boolean).join(' / ') || '--');
+    }
+    function renderKioxia(k){
+      setText('kioxia-price', k.currentText);
+      paintChange('kioxia-change', k.dayChangeText, k.dayChangePercentText);
+      paintQuick('quick-kioxia', k.dayChangePercentText, k.dayChangeText);
+      setText('kioxia-meta', `最近更新：${k.priceTime || '--'} · ${k.market || '--'}`);
+      setText('kioxia-open', k.openText); setText('kioxia-prev', k.previousCloseText); setText('kioxia-high', k.highText); setText('kioxia-low', k.lowText);
+      setText('kioxia-value', k.tradingValueText); setText('kioxia-mcap', k.marketCapText); setText('kioxia-pbr-roe', `${k.pbrText || '--'} / ${k.roeText || '--'}`); setText('kioxia-equity', k.equityRatioText);
+      setText('kioxia-pts', k.pts && k.pts.priceText ? `夜间 PTS：${k.pts.priceText} / ${k.pts.changeRateText || '--'} / ${k.pts.priceTime || '--'}` : '夜间 PTS：--');
+    }
+    async function refreshAll(){
+      if(document.hidden) return;
+      try {
+        const data = await fetchJson(SNAPSHOT_FEED);
+        if(!data.ok) throw new Error(data.error || 'snapshot failed');
+        if(data.tsmc) renderTsmc(data.tsmc);
+        if(data.kioxia) renderKioxia(data.kioxia);
+        updateLiveTime(new Date());
+        errorBox.style.display = 'none';
+      } catch (_) {
+        errorBox.style.display = 'block';
+      }
+    }
+    function stopPolling(){ if(refreshTimer){ clearInterval(refreshTimer); refreshTimer = null; } }
+    function startPolling(){ stopPolling(); if(document.hidden) return; refreshAll(); refreshTimer = setInterval(()=>{ if(!document.hidden) refreshAll(); }, REFRESH_MS); }
+    document.addEventListener('visibilitychange',()=>{ if(document.hidden) stopPolling(); else startPolling(); });
+    startPolling();
   </script>
 </body>
 </html>
