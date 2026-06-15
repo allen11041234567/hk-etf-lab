@@ -188,9 +188,13 @@
     let refreshTimer = null;
 
     function setText(id, text){ const el = document.getElementById(id); if(el) el.textContent = text ?? '--'; }
+    function isMobileView(){ return window.innerWidth <= 560; }
     function applyCardVisibility(targetCode){
       document.querySelectorAll('.switch-btn').forEach((btn)=>btn.classList.toggle('active', btn.dataset.targetCode===targetCode));
-      document.querySelectorAll('#cards-grid .card').forEach((card)=>{ card.style.display = card.dataset.code===targetCode ? '' : 'none'; });
+      document.querySelectorAll('#cards-grid .card').forEach((card)=>{
+        if(!isMobileView()) { card.style.display = ''; return; }
+        card.style.display = card.dataset.code===targetCode ? '' : 'none';
+      });
     }
     function getDirectionClass(value){ if(value > 0) return 'up'; if(value < 0) return 'down'; return 'flat'; }
     function pad2(v){ return String(v).padStart(2,'0'); }
@@ -243,6 +247,7 @@
     function stopPolling(){ if(refreshTimer){ clearInterval(refreshTimer); refreshTimer = null; } }
     function startPolling(){ stopPolling(); if(document.hidden) return; refreshAll(); refreshTimer = setInterval(()=>{ if(!document.hidden) refreshAll(); }, REFRESH_MS); }
     document.querySelectorAll('.switch-btn').forEach((btn)=>btn.addEventListener('click',()=>applyCardVisibility(btn.dataset.targetCode)));
+    window.addEventListener('resize', ()=>applyCardVisibility(document.querySelector('.switch-btn.active')?.dataset.targetCode || '2330.TW'));
     document.addEventListener('visibilitychange',()=>{ if(document.hidden) stopPolling(); else startPolling(); });
     startPolling();
     setTimeout(()=>applyCardVisibility('2330.TW'), 0);
