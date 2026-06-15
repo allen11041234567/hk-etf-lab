@@ -1,0 +1,136 @@
+const LIVE_TTL_SECONDS = 20;
+const STALE_TTL_SECONDS = 300;
+const TARGET_URL = 'https://tw.stock.yahoo.com/quote/2330.TW';
+
+function jsonHeaders(cacheControl, cacheState) {
+  return {
+    'content-type': 'application/json; charset=utf-8',
+    'cache-control': cacheControl,
+    'access-control-allow-origin': '*',
+    'x-edge-cache': cacheState,
+    'x-robots-tag': 'noindex, nofollow, noarchive',
+  };
+}
+
+function parseNumber(value) {
+  if (value == null) return null;
+  const n = Number(String(value).replace(/,/g, '').replace(/[^\d.+-]/g, ''));
+  return Number.isFinite(n) ? n : null;
+}
+
+function matchText(html, regex) {
+  const m = html.match(regex);
+  return m ? m[1] : null;
+}
+
+function extractField(html, label) {
+  const escaped = label.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const pattern = new RegExp(`${escaped}</span><span[^>]*>([\\s\\S]{0,220}?)</span>`, 'i');
+  const m = html.match(pattern);
+  if (!m) return null;
+  return m[1].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+}
+
+async function fetchPage() {
+  const resp = await fetch(TARGET_URL, {
+    headers: {
+      'User-Agent': 'Mozilla/5.0 (compatible; HK-ETF-Lab/1.0; +https://hketf-lab.pages.dev/)',
+      Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+      Referer: 'https://tw.stock.yahoo.com/',
+    },
+  });
+  if (!resp.ok) throw new Error(`upstream ${resp.status}`);
+  return await resp.text();
+}
+
+function buildPayload(html) {
+  const name = matchText(html, /<title>([^<(]+)\(2330\.TW\)/i) || '台積電';
+  const timeText = matchText(html, /即時行情資料時間：([^<]+)/i);
+  const current = matchText(html, /即時行情資料時間：[^<]+<[^>]*>([^<]+)</i) || matchText(html, /資料載入中[^\d]*([\d,]+)<\/span>/i);
+  const open = extractField(html, '開盤');
+  const high = extractField(html, '最高');
+  const low = extractField(html, '最低');
+  const previousClose = extractField(html, '昨收');
+  const changePercent = extractField(html, '漲跌幅');
+  const tradingValue = extractField(html, '成交金額\(億\)');
+  const totalVolume = extractField(html, '總量');
+  const insideRaw = matchText(html, /內盤<\/span><span[^>]*>([\s\S]{0,140}?)<\/span><\/div>/i);
+  const outsideRaw = matchText(html, /<span[^>]*>([\d,]+(?:<span[^>]*>\([^<]+\)<\/span>)?)<\/span><span>外盤/i);
+
+  let dayChange = null;
+  let dayChangePercentText = changePercent;
+  if (current && previousClose) {
+    const diff = parseNumber(current) - parseNumber(previousClose);
+    if (Number.isFinite(diff)) dayChange = diff;
+  }
+
+  return {
+    ok: true,
+    fetchedAt: new Date().toISOString(),
+    quote: {
+      code: '2330.TW',
+      name,
+      nameZh: '台积电',
+      market: 'TWSE',
+      current: parseNumber(current),
+      currentText: current,
+      timeText,
+      dayChange,
+      dayChangeText: dayChange == null ? null : `${dayChange > 0 ? '+' : ''}${dayChange.toFixed(2)}`,
+      dayChangePercent: parseNumber(changePercent),
+      dayChangePercentText: dayChangePercentText,
+      open: parseNumber(open),
+      openText: open,
+      high: parseNumber(high),
+      highText: high,
+      low: parseNumber(low),
+      lowText: low,
+      previousClose: parseNumber(previousClose),
+      previousCloseText: previousClose,
+      tradingValueText: tradingValue ? `${tradingValue}亿` : null,
+      tradingValue: parseNumber(tradingValue),
+      volumeText: totalVolume,
+      volume: parseNumber(totalVolume),
+      insideText: insideRaw ? insideRaw.replace(/<[^>]+>/g, '').trim() : null,
+      outsideText: outsideRaw ? outsideRaw.replace(/<[^>]+>/g, '').trim() : null,
+    },
+  };
+}
+
+export async function onRequestGet(context) {
+  const { request } = context;
+  const url = new URL(request.url);
+  const cache = caches.default;
+  const liveCacheKey = new Request(`${url.origin}/__edge/pulse/tsmc-brief/live`);
+  const staleCacheKey = new Request(`${url.origin}/__edge/pulse/tsmc-brief/stale`);
+
+  try {
+    const cached = await cache.match(liveCacheKey);
+    if (cached) {
+      const headers = new Headers(cached.headers);
+      headers.set('x-edge-cache', 'HIT');
+      return new Response(cached.body, { status: cached.status, headers });
+    }
+
+    const html = await fetchPage();
+    const body = JSON.stringify(buildPayload(html));
+    const liveResponse = new Response(body, { headers: jsonHeaders(`public, max-age=0, s-maxage=${LIVE_TTL_SECONDS}`, 'MISS') });
+    const staleResponse = new Response(body, { headers: jsonHeaders(`public, max-age=0, s-maxage=${STALE_TTL_SECONDS}`, 'WARM') });
+    context.waitUntil(Promise.all([
+      cache.put(liveCacheKey, liveResponse.clone()),
+      cache.put(staleCacheKey, staleResponse.clone()),
+    ]));
+    return liveResponse;
+  } catch (error) {
+    const stale = await cache.match(staleCacheKey);
+    if (stale) {
+      const headers = new Headers(stale.headers);
+      headers.set('x-edge-cache', 'STALE');
+      return new Response(stale.body, { status: 200, headers });
+    }
+    return new Response(JSON.stringify({ ok: false, error: error instanceof Error ? error.message : String(error) }), {
+      status: 500,
+      headers: jsonHeaders('no-store', 'ERROR'),
+    });
+  }
+}
