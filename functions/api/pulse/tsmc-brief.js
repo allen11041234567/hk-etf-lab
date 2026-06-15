@@ -32,10 +32,14 @@ function extractField(html, label) {
 }
 
 function extractCurrentPrice(html) {
-  const m = html.match(/資料載入中\.\.\.[\s\S]{0,1200}?<span class="Fw\(600\) Fz\(32px\)[^"]*">([^<]+)<\/span>/i)
-    || html.match(/<span class="Fw\(600\) Fz\(32px\)[^"]*">([^<]+)<\/span>/i)
-    || html.match(/<span class="Fz\(32px\)[^"]*">([^<]+)<\/span>/i);
-  return m ? m[1].trim() : null;
+  return extractField(html, '成交')
+    || (html.match(/資料載入中\.\.\.[\s\S]{0,1200}?<span class="Fw\(600\) Fz\(32px\)[^"]*">([^<]+)<\/span>/i)?.[1] || null)
+    || (html.match(/<span class="Fw\(600\) Fz\(32px\)[^"]*">([^<]+)<\/span>/i)?.[1] || null)
+    || (html.match(/<span class="Fz\(32px\)[^"]*">([^<]+)<\/span>/i)?.[1] || null);
+}
+
+function extractUpdateTime(html) {
+  return html.match(/([0-9]{4}\/[0-9]{2}\/[0-9]{2}\s+[0-9]{2}:[0-9]{2}\s+更新)/i)?.[1] || null;
 }
 
 function extractOutsideText(html) {
@@ -57,21 +61,22 @@ async function fetchPage() {
 
 function buildPayload(html) {
   const name = matchText(html, /<title>([^<(]+)\(2330\.TW\)/i) || '台積電';
-  const timeText = matchText(html, /即時行情資料時間：([^<]+)/i);
+  const timeText = extractUpdateTime(html) || matchText(html, /即時行情資料時間：([^<]+)/i);
   const current = extractCurrentPrice(html);
   const open = extractField(html, '開盤');
   const high = extractField(html, '最高');
   const low = extractField(html, '最低');
   const previousClose = extractField(html, '昨收');
+  const change = extractField(html, '漲跌');
   const changePercent = extractField(html, '漲跌幅');
   const tradingValue = extractField(html, '成交金額\(億\)');
   const totalVolume = extractField(html, '總量');
   const insideRaw = matchText(html, /內盤<\/span><span[^>]*>([\s\S]{0,140}?)<\/span><\/div>/i);
   const outsideRaw = matchText(html, /<span[^>]*>([\d,]+(?:<span[^>]*>\([^<]+\)<\/span>)?)<\/span><span>外盤/i);
 
-  let dayChange = null;
-  let dayChangePercentText = changePercent;
-  if (current && previousClose) {
+  let dayChange = parseNumber(change);
+  let dayChangePercentText = changePercent ? (String(changePercent).includes('%') ? String(changePercent) : `${changePercent}%`) : null;
+  if (dayChange == null && current && previousClose) {
     const diff = parseNumber(current) - parseNumber(previousClose);
     if (Number.isFinite(diff)) dayChange = diff;
   }
@@ -90,7 +95,7 @@ function buildPayload(html) {
       dayChange,
       dayChangeText: dayChange == null ? null : `${dayChange > 0 ? '+' : ''}${dayChange.toFixed(2)}`,
       dayChangePercent: parseNumber(changePercent),
-      dayChangePercentText: dayChangePercentText,
+      dayChangePercentText,
       open: parseNumber(open),
       openText: open,
       high: parseNumber(high),
