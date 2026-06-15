@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-15T13:18:20.019Z",
+  "fetchedAt": "2026-06-15T13:32:07.853Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
@@ -68,9 +68,9 @@
       "favourites_count": 638,
       "reblogs_count": 161,
       "replies_count": 31,
-      "content_zh_cn": "U.S. Counts Far More Hormuz Ship Transits Than Commercial Tracking Data Shows: https://gcaptain.com/u-s-counts-far-more-hormuz-ship-transits-than-commercial-tracking-data-shows/",
-      "content_zh_hk": "U.S. Counts Far More Hormuz Ship Transits Than Commercial Tracking Data Shows: https://gcaptain.com/u-s-counts-far-more-hormuz-ship-transits-than-commercial-tracking-data-shows/",
-      "content_ko": "U.S. Counts Far More Hormuz Ship Transits Than Commercial Tracking Data Shows: https://gcaptain.com/u-s-counts-far-more-hormuz-ship-transits-than-commercial-tracking-data-shows/",
+      "content_zh_cn": "美国统计的霍尔木兹海峡船舶通行量，远高于商业追踪数据显示的水平：https://gcaptain.com/u-s-counts-far-more-hormuz-ship-transits-than-commercial-tracking-data-shows/",
+      "content_zh_hk": "美國統計的荷姆茲海峽船舶通行量，遠高於商業追蹤數據顯示的水平：https://gcaptain.com/u-s-counts-far-more-hormuz-ship-transits-than-commercial-tracking-data-shows/",
+      "content_ko": "미국이 집계한 호르무즈 해협 선박 통항량이 상업용 추적 데이터에 나타난 수준보다 훨씬 많다: https://gcaptain.com/u-s-counts-far-more-hormuz-ship-transits-than-commercial-tracking-data-shows/",
       "source_hint": "stock.fengle.me"
     },
     {
