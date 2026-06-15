@@ -171,7 +171,6 @@
             <div class="flow-box"><div class="label">PBR / ROE</div><div class="value" id="kioxia-pbr-roe">--</div></div>
             <div class="flow-box"><div class="label">自己资本比率</div><div class="value" id="kioxia-equity">--</div></div>
           </div>
-          <div class="flow-trend" id="kioxia-pts">夜间 PTS：--</div>
         </div>
       </section>
     </div>
@@ -225,7 +224,6 @@
       paintQuick('quick-kioxia', k.dayChangePercentText, k.dayChangeText);
       setText('kioxia-open', k.openText); setText('kioxia-prev', k.previousCloseText); setText('kioxia-high', k.highText); setText('kioxia-low', k.lowText);
       setText('kioxia-value', k.tradingValueText); setText('kioxia-mcap', k.marketCapText); setText('kioxia-pbr-roe', `${k.pbrText || '--'} / ${k.roeText || '--'}`); setText('kioxia-equity', k.equityRatioText);
-      setText('kioxia-pts', k.pts && k.pts.priceText ? `夜间 PTS：${k.pts.priceText} / ${k.pts.changeRateText || '--'} / ${k.pts.priceTime || '--'}` : '夜间 PTS：--');
     }
     async function refreshAll(){
       if(document.hidden) return;
