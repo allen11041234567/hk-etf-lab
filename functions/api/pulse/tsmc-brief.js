@@ -31,8 +31,14 @@ function extractField(html, label) {
   return m[1].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
 }
 
+function extractLabeledValue(html, label) {
+  const escaped = label.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const m = html.match(new RegExp(`${escaped}</span><span[^>]*>[\\s\\S]{0,160}?>([0-9,]+(?:\\.[0-9]+)?%?)<`, 'i'));
+  return m ? m[1].trim() : null;
+}
+
 function extractCurrentPrice(html) {
-  return extractField(html, '成交')
+  return extractLabeledValue(html, '成交')
     || (html.match(/資料載入中\.\.\.[\s\S]{0,1200}?<span class="Fw\(600\) Fz\(32px\)[^"]*">([^<]+)<\/span>/i)?.[1] || null)
     || (html.match(/<span class="Fw\(600\) Fz\(32px\)[^"]*">([^<]+)<\/span>/i)?.[1] || null)
     || (html.match(/<span class="Fz\(32px\)[^"]*">([^<]+)<\/span>/i)?.[1] || null);
@@ -44,6 +50,11 @@ function extractUpdateTime(html) {
 
 function extractOutsideText(html) {
   const m = html.match(/<span class="Mend\(5px\) C\(\$c-trend-up\)">([\s\S]{0,120}?)<\/span><span>外盤/i);
+  return m ? m[1].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim() : null;
+}
+
+function extractInsideText(html) {
+  const m = html.match(/內盤<\/span><span[^>]*>([\s\S]{0,160}?)<\/span>/i);
   return m ? m[1].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim() : null;
 }
 
