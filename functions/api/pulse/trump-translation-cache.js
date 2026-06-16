@@ -1,4 +1,14 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116760664101169055": {
+    "content_zh_cn": "备忘录显示：尽管联邦调查局和地方警长提出反对，拜登司法部仍将参加校董会会议的家长作为打击目标：https://justthenews.com/government/federal-agencies/afl",
+    "content_zh_hk": "備忘錄顯示：儘管聯邦調查局及地方警長提出反對，拜登司法部仍將出席校董會會議的家長列為打擊目標：https://justthenews.com/government/federal-agencies/afl",
+    "content_ko": "메모에 따르면, FBI와 지역 보안관들의 반대에도 불구하고 바이든 법무부는 교육위원회 회의에 참석한 학부모들을 표적으로 삼았다: https://justthenews.com/government/federal-agencies/afl"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116760662558632411": {
+    "content_zh_cn": "官员称，FBI挫败了一起据称企图袭击UFC 250赛事的恐怖阴谋，袭击手段包括无人机和狙击手：https://justthenews.com/government/security/fbi-stopped-alleged-terror-plot-attack-ufc-250-event-drones-and-snipers",
+    "content_zh_hk": "官員稱，FBI挫敗了一宗據稱企圖襲擊UFC 250賽事的恐怖陰謀，襲擊手段包括無人機和狙擊手：https://justthenews.com/government/security/fbi-stopped-alleged-terror-plot-attack-ufc-250-event-drones-and-snipers",
+    "content_ko": "당국자들에 따르면, FBI가 드론과 저격수를 동원해 UFC 250 대회를 공격하려 한 것으로 알려진 테러 음모를 저지했다: https://justthenews.com/government/security/fbi-stopped-alleged-terror-plot-attack-ufc-250-event-drones-and-snipers"
+  },
   "https://truthsocial.com/@realDonaldTrump/116760642672400305": {
     "content_zh_cn": "特朗普前经济顾问称，与伊朗达成协议将为美国带来巨大的经济繁荣：https://justthenews.com/nation/free-speech/trumps-former-economist-says-iran-deal-means-big-economic-boom-us",
     "content_zh_hk": "特朗普前經濟顧問稱，與伊朗達成協議將為美國帶來巨大的經濟繁榮：https://justthenews.com/nation/free-speech/trumps-former-economist-says-iran-deal-means-big-economic-boom-us",
