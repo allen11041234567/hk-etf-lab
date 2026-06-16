@@ -1,4 +1,14 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116760642672400305": {
+    "content_zh_cn": "特朗普前经济顾问称，与伊朗达成协议将为美国带来巨大的经济繁荣：https://justthenews.com/nation/free-speech/trumps-former-economist-says-iran-deal-means-big-economic-boom-us",
+    "content_zh_hk": "特朗普前經濟顧問稱，與伊朗達成協議將為美國帶來巨大的經濟繁榮：https://justthenews.com/nation/free-speech/trumps-former-economist-says-iran-deal-means-big-economic-boom-us",
+    "content_ko": "트럼프 전 경제 고문 “이란과의 합의는 미국에 큰 경제 호황을 가져올 것”: https://justthenews.com/nation/free-speech/trumps-former-economist-says-iran-deal-means-big-economic-boom-us"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116760641102604510": {
+    "content_zh_cn": "加州联邦检察官怀疑，针对选民欺诈的调查将导致提出指控：https://justthenews.com/government/courts-law/us-attorney-california-suspects-voter-fraud-investigation-will-result-charges",
+    "content_zh_hk": "加州聯邦檢察官懷疑，針對選民欺詐的調查將導致提出指控：https://justthenews.com/government/courts-law/us-attorney-california-suspects-voter-fraud-investigation-will-result-charges",
+    "content_ko": "캘리포니아 연방 검사는 유권자 사기 조사 결과 기소로 이어질 것으로 보고 있다: https://justthenews.com/government/courts-law/us-attorney-california-suspects-voter-fraud-investigation-will-result-charges"
+  },
   "https://truthsocial.com/@realDonaldTrump/116756674797972374": {
     "content_zh_cn": "伊朗已同意永远不拥有核武器！另外，关于美国将向伊朗支付3亿美元的说法，是假新闻，完全是那些“蠢驴党”放出来的！！！\n——总统 DJT",
     "content_zh_hk": "伊朗已同意永遠不擁有核武器！另外，關於美國將向伊朗支付3億美元的說法，是假新聞，完全是那些「蠢驢黨」放出來的！！！\n——總統 DJT",
