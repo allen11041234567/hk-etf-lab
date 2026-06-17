@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116763612893094366": {
+    "content_zh_cn": "我昨晚在选举中取得了许多重大胜利。感谢大家！！！\n——总统DJT",
+    "content_zh_hk": "我昨晚在選舉中取得了許多重大勝利。感謝大家！！！\n——總統DJT",
+    "content_ko": "어젯밤 선거에서 큰 승리를 많이 거뒀습니다. 모두에게 감사드립니다!!!\n— 대통령 DJT"
+  },
   "https://truthsocial.com/@realDonaldTrump/116760664101169055": {
     "content_zh_cn": "备忘录显示：尽管联邦调查局和地方警长提出反对，拜登司法部仍将参加校董会会议的家长作为打击目标：https://justthenews.com/government/federal-agencies/afl",
     "content_zh_hk": "備忘錄顯示：儘管聯邦調查局及地方警長提出反對，拜登司法部仍將出席校董會會議的家長列為打擊目標：https://justthenews.com/government/federal-agencies/afl",
