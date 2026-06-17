@@ -148,7 +148,14 @@ function buildQuoteFromSources(code, snapshotAt, pollingResult, mobileResult) {
     value: parseNumber(over.accumulatedTradingValue),
     localTradedAt: over.localTradedAt || null,
   } : null;
-  const useAfterHours = !!(afterHours && afterHours.status === 'OPEN' && afterHours.price);
+  const sessionType = String(afterHours?.tradingSessionType || '').toUpperCase();
+  const useAfterHours = !!(
+    afterHours
+    && afterHours.status === 'OPEN'
+    && afterHours.price
+    && sessionType
+    && sessionType !== 'REGULAR_MARKET'
+  );
 
   return {
     code,
