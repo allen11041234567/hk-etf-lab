@@ -1,10 +1,252 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-17T04:03:10.047Z",
+  "fetchedAt": "2026-06-17T04:19:49.003Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
   "posts": [
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116763485060058769",
+      "url": "https://truthsocial.com/@realDonaldTrump/116763485060058769",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-17T04:09:48.729Z",
+      "created_at_text": "Jun 17, 2026, 4:09 AM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NzA0L2M5Mzk4NTEyMTM4MTg5NTcuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 526,
+      "reblogs_count": 135,
+      "replies_count": 42,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116763484468215021",
+      "url": "https://truthsocial.com/@realDonaldTrump/116763484468215021",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-17T04:09:39.698Z",
+      "created_at_text": "Jun 17, 2026, 4:09 AM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi83NjMvNDg0LzE5Ni8zODkvODI0L29yaWdpbmFsL2M0N2M0Y2Y4OTQ3MGMxZTguanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 535,
+      "reblogs_count": 124,
+      "replies_count": 19,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116763483835179194",
+      "url": "https://truthsocial.com/@realDonaldTrump/116763483835179194",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-17T04:09:30.040Z",
+      "created_at_text": "Jun 17, 2026, 4:09 AM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NzA2LzI4OWZiYTk5MzMyZDE2ZGYuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 508,
+      "reblogs_count": 132,
+      "replies_count": 23,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116763483006366937",
+      "url": "https://truthsocial.com/@realDonaldTrump/116763483006366937",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-17T04:09:17.397Z",
+      "created_at_text": "Jun 17, 2026, 4:09 AM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NzA3L2JkYmE5YzMzYmJmZThiOGIuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 519,
+      "reblogs_count": 135,
+      "replies_count": 21,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116763482300489516",
+      "url": "https://truthsocial.com/@realDonaldTrump/116763482300489516",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-17T04:09:06.627Z",
+      "created_at_text": "Jun 17, 2026, 4:09 AM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NzA4LzAxY2U5ZDkyYzYzNmQzNDkuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 520,
+      "reblogs_count": 133,
+      "replies_count": 11,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116763481768244058",
+      "url": "https://truthsocial.com/@realDonaldTrump/116763481768244058",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-17T04:08:58.505Z",
+      "created_at_text": "Jun 17, 2026, 4:08 AM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi83NjMvNDgxLzM5NC8yNzkvMjU5L29yaWdpbmFsLzZiNDc3Yzc5NGUzYjc3MjAuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 502,
+      "reblogs_count": 130,
+      "replies_count": 10,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116763480909156179",
+      "url": "https://truthsocial.com/@realDonaldTrump/116763480909156179",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-17T04:08:45.397Z",
+      "created_at_text": "Jun 17, 2026, 4:08 AM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NzEwLzMzZWQzZWVhOTU0NmJmZjIuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 501,
+      "reblogs_count": 131,
+      "replies_count": 13,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116763480203183309",
+      "url": "https://truthsocial.com/@realDonaldTrump/116763480203183309",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-17T04:08:34.624Z",
+      "created_at_text": "Jun 17, 2026, 4:08 AM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi83NjMvNDc5LzgyNC81MzAvMzgwL29yaWdpbmFsLzIwOWY0ZWM4Mzg2ZDNiYTMuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 515,
+      "reblogs_count": 134,
+      "replies_count": 13,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116763479144593174",
+      "url": "https://truthsocial.com/@realDonaldTrump/116763479144593174",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-17T04:08:18.471Z",
+      "created_at_text": "Jun 17, 2026, 4:08 AM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NzEyLzk0ZDNjNzE2M2MyODkzMjcuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 556,
+      "reblogs_count": 146,
+      "replies_count": 17,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116763478365639550",
+      "url": "https://truthsocial.com/@realDonaldTrump/116763478365639550",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-17T04:08:06.580Z",
+      "created_at_text": "Jun 17, 2026, 4:08 AM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NzEzLzRiZWM5NTY3NDYzMTkxMDYuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 525,
+      "reblogs_count": 138,
+      "replies_count": 14,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116763477734116382",
+      "url": "https://truthsocial.com/@realDonaldTrump/116763477734116382",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-17T04:07:56.945Z",
+      "created_at_text": "Jun 17, 2026, 4:07 AM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NzE0L2JhOGQyMDkwZDM4Njc2YTIuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 531,
+      "reblogs_count": 139,
+      "replies_count": 16,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "cnn"
+    },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116760664101169055",
       "url": "https://truthsocial.com/@realDonaldTrump/116760664101169055",
@@ -14,13 +256,13 @@
       "content": "Biden DOJ targeted parents at school board meetings despite FBI, sheriffs' objections, memos show: https://justthenews.com/government/federal-agencies/afl",
       "content_html": "Biden DOJ targeted parents at school board meetings despite FBI, sheriffs' objections, memos show: https://justthenews.com/government/federal-agencies/afl",
       "media": [],
-      "favourites_count": 13091,
-      "reblogs_count": 4788,
-      "replies_count": 2204,
+      "favourites_count": 13820,
+      "reblogs_count": 5030,
+      "replies_count": 2318,
       "content_zh_cn": "备忘录显示：尽管联邦调查局和地方警长提出反对，拜登司法部仍将参加校董会会议的家长作为打击目标：https://justthenews.com/government/federal-agencies/afl",
       "content_zh_hk": "備忘錄顯示：儘管聯邦調查局及地方警長提出反對，拜登司法部仍將出席校董會會議的家長列為打擊目標：https://justthenews.com/government/federal-agencies/afl",
       "content_ko": "메모에 따르면, FBI와 지역 보안관들의 반대에도 불구하고 바이든 법무부는 교육위원회 회의에 참석한 학부모들을 표적으로 삼았다: https://justthenews.com/government/federal-agencies/afl",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116760662558632411",
@@ -31,13 +273,13 @@
       "content": "FBI stopped alleged terror plot to attack UFC 250 event with drones and snipers, officials said: https://justthenews.com/government/security/fbi-stopped-alleged-terror-plot-attack-ufc-250-event-drones-and-snipers",
       "content_html": "FBI stopped alleged terror plot to attack UFC 250 event with drones and snipers, officials said: https://justthenews.com/government/security/fbi-stopped-alleged-terror-plot-attack-ufc-250-event-drones-and-snipers",
       "media": [],
-      "favourites_count": 15380,
-      "reblogs_count": 4410,
-      "replies_count": 1482,
+      "favourites_count": 16283,
+      "reblogs_count": 4639,
+      "replies_count": 1549,
       "content_zh_cn": "官员称，FBI挫败了一起据称企图袭击UFC 250赛事的恐怖阴谋，袭击手段包括无人机和狙击手：https://justthenews.com/government/security/fbi-stopped-alleged-terror-plot-attack-ufc-250-event-drones-and-snipers",
       "content_zh_hk": "官員稱，FBI挫敗了一宗據稱企圖襲擊UFC 250賽事的恐怖陰謀，襲擊手段包括無人機和狙擊手：https://justthenews.com/government/security/fbi-stopped-alleged-terror-plot-attack-ufc-250-event-drones-and-snipers",
       "content_ko": "당국자들에 따르면, FBI가 드론과 저격수를 동원해 UFC 250 대회를 공격하려 한 것으로 알려진 테러 음모를 저지했다: https://justthenews.com/government/security/fbi-stopped-alleged-terror-plot-attack-ufc-250-event-drones-and-snipers",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116760642672400305",
@@ -48,13 +290,13 @@
       "content": "Former Trump economist says Iran deal means big economic boom for US: https://justthenews.com/nation/free-speech/trumps-former-economist-says-iran-deal-means-big-economic-boom-us",
       "content_html": "Former Trump economist says Iran deal means big economic boom for US: https://justthenews.com/nation/free-speech/trumps-former-economist-says-iran-deal-means-big-economic-boom-us",
       "media": [],
-      "favourites_count": 12703,
-      "reblogs_count": 3313,
-      "replies_count": 1320,
+      "favourites_count": 13421,
+      "reblogs_count": 3500,
+      "replies_count": 1384,
       "content_zh_cn": "特朗普前经济顾问称，与伊朗达成协议将为美国带来巨大的经济繁荣：https://justthenews.com/nation/free-speech/trumps-former-economist-says-iran-deal-means-big-economic-boom-us",
       "content_zh_hk": "特朗普前經濟顧問稱，與伊朗達成協議將為美國帶來巨大的經濟繁榮：https://justthenews.com/nation/free-speech/trumps-former-economist-says-iran-deal-means-big-economic-boom-us",
       "content_ko": "트럼프 전 경제 고문 “이란과의 합의는 미국에 큰 경제 호황을 가져올 것”: https://justthenews.com/nation/free-speech/trumps-former-economist-says-iran-deal-means-big-economic-boom-us",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116760641102604510",
@@ -65,13 +307,13 @@
       "content": "US attorney in California suspects voter fraud investigation will result in charges: https://justthenews.com/government/courts-law/us-attorney-california-suspects-voter-fraud-investigation-will-result-charges",
       "content_html": "US attorney in California suspects voter fraud investigation will result in charges: https://justthenews.com/government/courts-law/us-attorney-california-suspects-voter-fraud-investigation-will-result-charges",
       "media": [],
-      "favourites_count": 13233,
-      "reblogs_count": 3748,
-      "replies_count": 850,
+      "favourites_count": 14002,
+      "reblogs_count": 3964,
+      "replies_count": 883,
       "content_zh_cn": "加州联邦检察官怀疑，针对选民欺诈的调查将导致提出指控：https://justthenews.com/government/courts-law/us-attorney-california-suspects-voter-fraud-investigation-will-result-charges",
       "content_zh_hk": "加州聯邦檢察官懷疑，針對選民欺詐的調查將導致提出指控：https://justthenews.com/government/courts-law/us-attorney-california-suspects-voter-fraud-investigation-will-result-charges",
       "content_ko": "캘리포니아 연방 검사는 유권자 사기 조사 결과 기소로 이어질 것으로 보고 있다: https://justthenews.com/government/courts-law/us-attorney-california-suspects-voter-fraud-investigation-will-result-charges",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116756674797972374",
@@ -82,13 +324,13 @@
       "content": "Iran has agreed to never have a Nuclear Weapon! Also, the story that the U.S. is paying Iran 300 million Dollars is Fake News, put out by the Dumocrats!!! President DJT",
       "content_html": "Iran has agreed to never have a Nuclear Weapon! Also, the story that the U.S. is paying Iran 300 million Dollars is Fake News, put out by the Dumocrats!!! President DJT",
       "media": [],
-      "favourites_count": 35032,
-      "reblogs_count": 9266,
-      "replies_count": 6592,
+      "favourites_count": 35456,
+      "reblogs_count": 9379,
+      "replies_count": 6653,
       "content_zh_cn": "伊朗已同意永远不拥有核武器！另外，关于美国将向伊朗支付3亿美元的说法，是假新闻，完全是那些“蠢驴党”放出来的！！！\n——总统 DJT",
       "content_zh_hk": "伊朗已同意永遠不擁有核武器！另外，關於美國將向伊朗支付3億美元的說法，是假新聞，完全是那些「蠢驢黨」放出來的！！！\n——總統 DJT",
       "content_ko": "이란은 핵무기를 결코 보유하지 않기로 동의했다! 또한 미국이 이란에 3억 달러를 지급한다는 이야기는 가짜 뉴스이며, 전부 그 멍청한 민주당원들이 퍼뜨린 것이다!!!\n— 대통령 DJT",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116754288530173924",
@@ -99,13 +341,13 @@
       "content": "Sadly, if you import people from Third World Countries, you quickly become a Third World Country — And there's not a thing you can do about it. MAKE AMERICA GREAT AGAIN! President DONALD J. TRUMP",
       "content_html": "Sadly, if you import people from Third World Countries, you quickly become a Third World Country — And there's not a thing you can do about it. MAKE AMERICA GREAT AGAIN! President DONALD J. TRUMP",
       "media": [],
-      "favourites_count": 41425,
-      "reblogs_count": 9704,
-      "replies_count": 5601,
+      "favourites_count": 41712,
+      "reblogs_count": 9783,
+      "replies_count": 5629,
       "content_zh_cn": "可悲的是，如果你从第三世界国家大量引入人口，你很快就会变成一个第三世界国家——而且对此你无能为力。让美国再次伟大！总统 唐纳德·J·特朗普",
       "content_zh_hk": "可悲的是，如果你從第三世界國家大量引入人口，你很快就會變成一個第三世界國家——而且對此你無能為力。讓美國再次偉大！總統 唐納德·J·特朗普",
       "content_ko": "안타깝게도, 제3세계 국가들로부터 사람들을 대거 받아들이면, 당신의 나라도 곧 제3세계 국가가 됩니다 — 그리고 이에 대해 당신이 할 수 있는 일은 아무것도 없습니다. 미국을 다시 위대하게! 도널드 J. 트럼프 대통령",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116754287044319129",
@@ -116,13 +358,13 @@
       "content": "'Thank You, President Trump': Reflecting Pool in D.C. Wows After Trump Renovations: https://www.breitbart.com/politics/2026/06/08/thank-you-president-trump-reflecting-pool-d-c-wows-after-trump-renovations/",
       "content_html": "'Thank You, President Trump': Reflecting Pool in D.C. Wows After Trump Renovations: https://www.breitbart.com/politics/2026/06/08/thank-you-president-trump-reflecting-pool-d-c-wows-after-trump-renovations/",
       "media": [],
-      "favourites_count": 27854,
-      "reblogs_count": 5458,
-      "replies_count": 2046,
+      "favourites_count": 28088,
+      "reblogs_count": 5505,
+      "replies_count": 2079,
       "content_zh_cn": "‘感谢您，特朗普总统’：特朗普完成整修后，华盛顿特区倒影池惊艳亮相：https://www.breitbart.com/politics/2026/06/08/thank-you-president-trump-reflecting-pool-d-c-wows-after-trump-renovations/",
       "content_zh_hk": "‘感謝您，特朗普總統’：特朗普完成翻新後，華盛頓特區倒影池驚艷亮相：https://www.breitbart.com/politics/2026/06/08/thank-you-president-trump-reflecting-pool-d-c-wows-after-trump-renovations/",
       "content_ko": "‘감사합니다, 트럼프 대통령’ : 트럼프의 보수 공사 이후 워싱턴 D.C. 리플렉팅 풀, 눈길 끌어: https://www.breitbart.com/politics/2026/06/08/thank-you-president-trump-reflecting-pool-d-c-wows-after-trump-renovations/",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116754286017145061",
@@ -133,13 +375,13 @@
       "content": "Trump makes a splash with Oval Office chart comparing reflecting pool to skyscrapers: https://www.washingtonexaminer.com/news/white-house/4594088/trump-makes-splash-oval-office-chart-reflecting-pool-skyscrapers/",
       "content_html": "Trump makes a splash with Oval Office chart comparing reflecting pool to skyscrapers: https://www.washingtonexaminer.com/news/white-house/4594088/trump-makes-splash-oval-office-chart-reflecting-pool-skyscrapers/",
       "media": [],
-      "favourites_count": 18172,
-      "reblogs_count": 3452,
-      "replies_count": 786,
+      "favourites_count": 18307,
+      "reblogs_count": 3479,
+      "replies_count": 796,
       "content_zh_cn": "特朗普在椭圆形办公室展示一张图表，将倒影池与摩天大楼作对比，引发关注：https://www.washingtonexaminer.com/news/white-house/4594088/trump-makes-splash-oval-office-chart-reflecting-pool-skyscrapers/",
       "content_zh_hk": "特朗普在橢圓形辦公室展示一張圖表，將倒影池與摩天大樓作對比，引發關注：https://www.washingtonexaminer.com/news/white-house/4594088/trump-makes-splash-oval-office-chart-reflecting-pool-skyscrapers/",
       "content_ko": "트럼프가 집무실에서 반사 연못과 초고층 빌딩을 비교한 차트를 공개해 주목을 받았다: https://www.washingtonexaminer.com/news/white-house/4594088/trump-makes-splash-oval-office-chart-reflecting-pool-skyscrapers/",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116754285003421395",
@@ -150,199 +392,12 @@
       "content": "U.S. Counts Far More Hormuz Ship Transits Than Commercial Tracking Data Shows: https://gcaptain.com/u-s-counts-far-more-hormuz-ship-transits-than-commercial-tracking-data-shows/",
       "content_html": "U.S. Counts Far More Hormuz Ship Transits Than Commercial Tracking Data Shows: https://gcaptain.com/u-s-counts-far-more-hormuz-ship-transits-than-commercial-tracking-data-shows/",
       "media": [],
-      "favourites_count": 17305,
-      "reblogs_count": 3950,
-      "replies_count": 827,
+      "favourites_count": 17428,
+      "reblogs_count": 3980,
+      "replies_count": 833,
       "content_zh_cn": "美国统计的霍尔木兹海峡船舶通行量，远高于商业追踪数据显示的水平：https://gcaptain.com/u-s-counts-far-more-hormuz-ship-transits-than-commercial-tracking-data-shows/",
       "content_zh_hk": "美國統計的荷姆茲海峽船舶通行量，遠高於商業追蹤數據顯示的水平：https://gcaptain.com/u-s-counts-far-more-hormuz-ship-transits-than-commercial-tracking-data-shows/",
       "content_ko": "미국이 집계한 호르무즈 해협 선박 통항량이 상업용 추적 데이터에 나타난 수준보다 훨씬 많다: https://gcaptain.com/u-s-counts-far-more-hormuz-ship-transits-than-commercial-tracking-data-shows/",
-      "source_hint": "stock.fengle.me"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116754283174782714",
-      "url": "https://truthsocial.com/@realDonaldTrump/116754283174782714",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-15T13:09:39.102Z",
-      "created_at_text": "Jun 15, 2026, 1:09 PM",
-      "content": "Dems replace 'mother' with 'gestating parent' in latest woke rewrite of NY law: https://nypost.com/2026/06/03/us-news/dems-replace-mother-with-gestating-parent-in-latest-woke-rewrite-of-nys-law/",
-      "content_html": "Dems replace 'mother' with 'gestating parent' in latest woke rewrite of NY law: https://nypost.com/2026/06/03/us-news/dems-replace-mother-with-gestating-parent-in-latest-woke-rewrite-of-nys-law/",
-      "media": [],
-      "favourites_count": 11623,
-      "reblogs_count": 4356,
-      "replies_count": 2867,
-      "content_zh_cn": "民主党人在纽约州法律最新一轮“觉醒式”改写中，把“母亲”替换成了“孕育父母”：https://nypost.com/2026/06/03/us-news/dems-replace-mother-with-gestating-parent-in-latest-woke-rewrite-of-nys-law/",
-      "content_zh_hk": "民主黨人在紐約州法律最新一輪「覺醒式」改寫中，將「母親」改為「懷孕父母」：https://nypost.com/2026/06/03/us-news/dems-replace-mother-with-gestating-parent-in-latest-woke-rewrite-of-nys-law/",
-      "content_ko": "민주당은 뉴욕주 법의 최신 ‘워크’식 개정에서 ‘mother’를 ‘gestating parent’로 바꿨다: https://nypost.com/2026/06/03/us-news/dems-replace-mother-with-gestating-parent-in-latest-woke-rewrite-of-nys-law/",
-      "source_hint": "stock.fengle.me"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116754269577470122",
-      "url": "https://truthsocial.com/@realDonaldTrump/116754269577470122",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-15T13:06:11.624Z",
-      "created_at_text": "Jun 15, 2026, 1:06 PM",
-      "content": "Ships are starting to move, many loaded up with Oil, out of the Strait of Hormuz. They are going along the Southern \"Highway,\" which is totally safe, secure, and pristine. There are other areas of travel, also!!!  President DJT",
-      "content_html": "Ships are starting to move, many loaded up with Oil, out of the Strait of Hormuz. They are going along the Southern \"Highway,\" which is totally safe, secure, and pristine. There are other areas of travel, also!!!  President DJT",
-      "media": [],
-      "favourites_count": 22955,
-      "reblogs_count": 4968,
-      "replies_count": 1171,
-      "content_zh_cn": "船只正开始驶离霍尔木兹海峡，其中许多满载石油。它们正沿着南部这条“航道”前行，完全安全、稳妥，且畅通无阻。还有其他通行区域，也有！！！\n\n总统DJT",
-      "content_zh_hk": "船隻正開始駛離霍爾木茲海峽，其中許多滿載石油。它們正沿着南部這條「航道」前行，完全安全、穩妥，且暢通無阻。還有其他通行區域，也有！！！\n\n總統DJT",
-      "content_ko": "선박들이 호르무즈 해협을 빠져나오기 시작하고 있습니다. 그중 많은 선박이 원유를 가득 싣고 있습니다. 이들은 완전히 안전하고, 안심할 수 있으며, 아무 문제 없는 남쪽의 “항로”를 따라 이동하고 있습니다. 다른 이동 경로들도 있습니다, 역시!!!\n\n대통령 DJT",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116754024963336496",
-      "url": "https://truthsocial.com/@realDonaldTrump/116754024963336496",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-15T12:03:59.109Z",
-      "created_at_text": "Jun 15, 2026, 12:03 PM",
-      "content": "RT @realDonaldTrumpTrump scores once-elusive peace deal with Iran, easing oil prices ahead of elections: https://justthenews.com/government/security/montrump-etches-iran-peace-deal-after-months-false-starts",
-      "content_html": "RT @realDonaldTrumpTrump scores once-elusive peace deal with Iran, easing oil prices ahead of elections: https://justthenews.com/government/security/montrump-etches-iran-peace-deal-after-months-false-starts",
-      "media": [],
-      "favourites_count": 0,
-      "reblogs_count": 0,
-      "replies_count": 0,
-      "content_zh_cn": "转发 @realDonaldTrump\n特朗普与伊朗达成一项此前一度被认为难以实现的和平协议，在大选前缓解了油价压力：https://justthenews.com/government/security/montrump-etches-iran-peace-deal-after-months-false-starts",
-      "content_zh_hk": "轉發 @realDonaldTrump\n特朗普與伊朗達成一項此前一度被認為難以實現的和平協議，在大選前紓緩了油價壓力：https://justthenews.com/government/security/montrump-etches-iran-peace-deal-after-months-false-starts",
-      "content_ko": "RT @realDonaldTrump\n트럼프가 한때 성사되기 어려워 보였던 이란과의 평화 합의를 이끌어내며, 선거를 앞두고 유가를 안정시켰다: https://justthenews.com/government/security/montrump-etches-iran-peace-deal-after-months-false-starts",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116754024740902171",
-      "url": "https://truthsocial.com/@realDonaldTrump/116754024740902171",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-15T12:03:55.716Z",
-      "created_at_text": "Jun 15, 2026, 12:03 PM",
-      "content": "RT @realDonaldTrumpUnder the disastrous Open Border Policy of Crooked Joe Biden and his traitorous DHS Secretary Alejandro Mayorkas, TENS OF MILLIONS of criminals, including over 13,000 STONE-COLD MURDERERS, poured into our Country from Prisons and Jails, from Mental Institutions and Insane Asylums. Needless to say, they were NOT always the safest drivers! Car Insurance Premiums rose to RECORD HIGHS, forcing Law-abiding American Citizens to subsidize the \"free riding\" Biden Illegals. After over a year of ZERO ILLEGAL IMMIGRATION, and our highly successful efforts to REVERSE the Biden Invasion, Car Insurance Premiums have come tumbling down. MAKE AMERICA SAFE AGAIN! President DONALD J. TRUMP",
-      "content_html": "RT @realDonaldTrumpUnder the disastrous Open Border Policy of Crooked Joe Biden and his traitorous DHS Secretary Alejandro Mayorkas, TENS OF MILLIONS of criminals, including over 13,000 STONE-COLD MURDERERS, poured into our Country from Prisons and Jails, from Mental Institutions and Insane Asylums. Needless to say, they were NOT always the safest drivers! Car Insurance Premiums rose to RECORD HIGHS, forcing Law-abiding American Citizens to subsidize the \"free riding\" Biden Illegals. After over a year of ZERO ILLEGAL IMMIGRATION, and our highly successful efforts to REVERSE the Biden Invasion, Car Insurance Premiums have come tumbling down. MAKE AMERICA SAFE AGAIN! President DONALD J. TRUMP",
-      "media": [],
-      "favourites_count": 0,
-      "reblogs_count": 0,
-      "replies_count": 0,
-      "content_zh_cn": "转发 @realDonaldTrump\n在骗子乔·拜登灾难性的“开放边境”政策，以及其卖国的国土安全部长亚历杭德罗·马约卡斯治下，数以千万计的罪犯涌入我国，其中包括超过13,000名冷血杀人犯；他们来自监狱、看守所、精神病院和疯人院。\n\n不用说，他们并不总是最安全的司机！汽车保险保费飙升至创纪录高位，迫使守法的美国公民为拜登治下“搭便车”的非法移民埋单。\n\n在经历了超过一年的非法移民零流入，以及我们为扭转拜登式入侵所作出的巨大成功努力之后，汽车保险保费已大幅回落。让美国再次安全！\n\n总统 唐纳德·J·特朗普",
-      "content_zh_hk": "轉發 @realDonaldTrump\n在騙子喬·拜登災難性的「開放邊境」政策，以及其賣國的國土安全部長亞歷杭德羅·馬約卡斯治下，數以千萬計的罪犯湧入我國，其中包括超過13,000名冷血殺人犯；他們來自監獄、看守所、精神病院和瘋人院。\n\n不用說，他們並不總是最安全的司機！汽車保險保費飆升至創紀錄高位，迫使守法的美國公民為拜登治下「搭便車」的非法移民埋單。\n\n在經歷了超過一年的非法移民零流入，以及我們為扭轉拜登式入侵所作出的巨大成功努力之後，汽車保險保費已大幅回落。讓美國再次安全！\n\n總統 唐納德·J·特朗普",
-      "content_ko": "리트윗 @realDonaldTrump\n사기꾼 조 바이든의 재앙적인 ‘오픈 보더’ 정책과 반역적인 국토안보부 장관 알레한드로 마요르카스 아래, 13,000명이 넘는 냉혹한 살인범을 포함한 수천만 명의 범죄자들이 교도소와 구치소, 정신병원과 정신요양시설에서 우리나라로 쏟아져 들어왔습니다.\n\n말할 필요도 없이, 그들이 항상 가장 안전한 운전자였던 것은 아닙니다! 자동차 보험료는 사상 최고치로 치솟았고, 그 결과 법을 준수하는 미국 시민들이 바이든의 불법 이민자들의 ‘무임승차’ 비용을 떠안게 됐습니다.\n\n1년이 넘도록 불법 이민이 ZERO였고, 우리가 바이든의 침공을 되돌리기 위해 매우 성공적으로 노력한 끝에 자동차 보험료는 급락했습니다. 미국을 다시 안전하게 만들자!\n\n대통령 도널드 J. 트럼프",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116754024513118460",
-      "url": "https://truthsocial.com/@realDonaldTrump/116754024513118460",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-15T12:03:52.239Z",
-      "created_at_text": "Jun 15, 2026, 12:03 PM",
-      "content": "RT @realDonaldTrumpOn July 4th, at The Lincoln Memorial and Washington Monument, in beautiful and safe Washington D.C., we are going to host the most spectacular TRUMP RALLY of them all, a \"TRIBUTE TO AMERICA.\" Starting at 7 P.M. EST, this HUGE Celebration will honor our Country's People, Spirit, Strength, Resolve, and Triumphs. With the backdrop of the Lincoln Memorial and surrounding the beautifully new Reflecting Pool, more than 300 Members of our strong and talented Military Bands, Orchestras, and Ceremonial Units, will perform Patriotic Melodies and American Classics, and my Playlist (We will have none of those people that put you to sleep and constantly complain!), as we celebrate our Country, and Rally into the next 250 years. This ensemble will be the largest formation of Joint Military Music and Ceremonial performances in History. There will be incredible Flyovers and Airshows featuring our Top Military Pilots and Equipment, and I will deliver keynote remarks that you will not want to miss. To conclude the program, and commemorate this Historic Occasion, I will be launching, what will be, the LARGEST FIREWORKS SHOW IN HISTORY, right here in our Nation's Capital. Do not miss it. See you on JULY 4th in Washington, D.C. President DONALD J. TRUMP",
-      "content_html": "RT @realDonaldTrumpOn July 4th, at The Lincoln Memorial and Washington Monument, in beautiful and safe Washington D.C., we are going to host the most spectacular TRUMP RALLY of them all, a \"TRIBUTE TO AMERICA.\" Starting at 7 P.M. EST, this HUGE Celebration will honor our Country's People, Spirit, Strength, Resolve, and Triumphs. With the backdrop of the Lincoln Memorial and surrounding the beautifully new Reflecting Pool, more than 300 Members of our strong and talented Military Bands, Orchestras, and Ceremonial Units, will perform Patriotic Melodies and American Classics, and my Playlist (We will have none of those people that put you to sleep and constantly complain!), as we celebrate our Country, and Rally into the next 250 years. This ensemble will be the largest formation of Joint Military Music and Ceremonial performances in History. There will be incredible Flyovers and Airshows featuring our Top Military Pilots and Equipment, and I will deliver keynote remarks that you will not want to miss. To conclude the program, and commemorate this Historic Occasion, I will be launching, what will be, the LARGEST FIREWORKS SHOW IN HISTORY, right here in our Nation's Capital. Do not miss it. See you on JULY 4th in Washington, D.C. President DONALD J. TRUMP",
-      "media": [],
-      "favourites_count": 1,
-      "reblogs_count": 0,
-      "replies_count": 0,
-      "content_zh_cn": "转发 @realDonaldTrump\n7月4日，我们将在美丽而安全的华盛顿特区林肯纪念堂和华盛顿纪念碑举行迄今为止最为壮观的TRUMP集会——“向美国致敬”。\n\n活动将于美国东部时间晚上7点开始，这场盛大的庆典将礼赞我们国家的人民、精神、力量、决心与辉煌成就。以林肯纪念堂为背景，环绕焕然一新的倒影池，来自我们强大且才华横溢的军乐队、管弦乐团和礼仪部队的300多名成员将献上爱国旋律和美国经典曲目，以及我的播放歌单（我们可不会请那些让人昏昏欲睡、还总是抱怨个不停的人！），共同庆祝我们的国家，并为下一个250年凝聚力量。\n\n这将成为历史上规模最大的联合军事音乐与礼仪表演阵容。届时还将有精彩绝伦的飞行表演和航空秀，由我们最顶尖的军事飞行员和装备担纲亮相；我也将发表你绝对不想错过的主旨讲话。\n\n作为活动压轴，并纪念这一历史性时刻，我将在美国首都这里点燃堪称史上规模最大的烟花秀。\n\n千万不要错过。7月4日，华盛顿特区见。\n\n总统 唐纳德·J·特朗普",
-      "content_zh_hk": "轉發 @realDonaldTrump\n7月4日，我們將在美麗而安全的華盛頓特區林肯紀念堂及華盛頓紀念碑舉行歷來最為壯觀的TRUMP集會——「向美國致敬」。\n\n活動將於美國東部時間晚上7時開始，這場盛大的慶典將向我們國家的人民、精神、力量、決心與輝煌成就致敬。以林肯紀念堂為背景，環繞煥然一新的倒影池，來自我們強大且才華洋溢的軍樂隊、管弦樂團及禮儀部隊的300多名成員，將演奏愛國旋律與美國經典曲目，以及我的播放歌單（我們可不會找那些令人昏昏欲睡、又總是在抱怨的人！），一同慶祝我們的國家，並為未來250年凝聚聲勢。\n\n這將成為歷史上規模最大的聯合軍事音樂與禮儀表演陣容。屆時亦將有精彩非凡的飛越表演及航空匯演，由我們最頂尖的軍事飛行員與裝備擔綱亮相；而我亦將發表你絕對不想錯過的主旨演說。\n\n作為活動壓軸，並紀念這一歷史性時刻，我將在美國首都這裡燃放堪稱史上規模最大的煙花匯演。\n\n千萬不要錯過。7月4日，華盛頓特區見。\n\n總統 唐納德・J・特朗普",
-      "content_ko": "리트윗 @realDonaldTrump\n7월 4일, 우리는 아름답고 안전한 워싱턴 D.C.의 링컨기념관과 워싱턴기념탑에서 지금까지 가장 장대한 TRUMP 집회, \"미국에 바치는 헌사\"를 개최할 것입니다.\n\n행사는 미 동부시간 오후 7시에 시작되며, 이번 대규모 축하 행사는 우리 나라의 국민, 정신, 힘, 결의, 그리고 승리를 기릴 것입니다. 링컨기념관을 배경으로, 새롭게 단장한 리플렉팅 풀 일대에서 우리의 강하고 재능 있는 군악대, 오케스트라, 의장 부대 소속 300명 이상이 애국적인 선율과 미국의 클래식 명곡, 그리고 제가 고른 플레이리스트를 선보일 것입니다 (졸리게 만들고 끊임없이 불평하는 그런 사람들은 없을 것입니다!). 우리는 우리 나라를 기념하며, 앞으로의 250년을 향해 함께 결집할 것입니다.\n\n이 공연단은 역사상 가장 큰 규모의 합동 군악 및 의장 공연 편성이 될 것입니다. 또한 우리 최고의 군 조종사들과 장비가 참여하는 놀라운 공중비행과 에어쇼가 펼쳐질 것이며, 저는 절대 놓치고 싶지 않을 기조연설을 할 것입니다.\n\n행사의 마지막을 장식하고 이 역사적인 순간을 기념하기 위해, 저는 바로 이 미국의 수도에서 역사상 최대 규모의 불꽃놀이를 선보일 것입니다.\n\n놓치지 마십시오. 7월 4일 워싱턴 D.C.에서 뵙겠습니다.\n\n대통령 도널드 J. 트럼프",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116754024347896013",
-      "url": "https://truthsocial.com/@realDonaldTrump/116754024347896013",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-15T12:03:49.719Z",
-      "created_at_text": "Jun 15, 2026, 12:03 PM",
-      "content": "RT @realDonaldTrumpWednesday, June 24th, will be the \"kick off\" of our summer long Celebration of 250 Years of American Independence! Come and enjoy a night filled with beautiful music from our talented U.S. Army and Marine Corps Military Bands (ONLY THE HITS THAT YOU KNOW AND LOVE!), the highly gifted Christopher Macchio, and our friend, Lee Greenwood, performing the Greatest Hit of All Time, GOD BLESS THE U.S.A. You will also bear witness to impressive Military flyovers featuring precision Fighter Jets and Stealth Bombers, which will be flown by our U.S. Military Pilots, who have proven to be the most Elite Pilots anywhere in the World. This Patriotic Tribute will take place on the Main Stage at the Freedom 250 Great American State Fair located on our Majestic National Mall, in what is now one of the safest Cities in the World, Washington D.C., which we are beautifying to levels never seen before. See you at 7 P.M. EST on Wednesday, June 24th. We are going to have fun, and celebrate America! President DONALD J. TRUMP",
-      "content_html": "RT @realDonaldTrumpWednesday, June 24th, will be the \"kick off\" of our summer long Celebration of 250 Years of American Independence! Come and enjoy a night filled with beautiful music from our talented U.S. Army and Marine Corps Military Bands (ONLY THE HITS THAT YOU KNOW AND LOVE!), the highly gifted Christopher Macchio, and our friend, Lee Greenwood, performing the Greatest Hit of All Time, GOD BLESS THE U.S.A. You will also bear witness to impressive Military flyovers featuring precision Fighter Jets and Stealth Bombers, which will be flown by our U.S. Military Pilots, who have proven to be the most Elite Pilots anywhere in the World. This Patriotic Tribute will take place on the Main Stage at the Freedom 250 Great American State Fair located on our Majestic National Mall, in what is now one of the safest Cities in the World, Washington D.C., which we are beautifying to levels never seen before. See you at 7 P.M. EST on Wednesday, June 24th. We are going to have fun, and celebrate America! President DONALD J. TRUMP",
-      "media": [],
-      "favourites_count": 0,
-      "reblogs_count": 0,
-      "replies_count": 0,
-      "content_zh_cn": "转发自 @realDonaldTrump\n6月24日，星期三，将为我们贯穿整个夏季的“美国独立250周年庆典”拉开序幕！欢迎前来共度一个精彩之夜，欣赏由才华横溢的美国陆军和海军陆战队军乐队带来的优美音乐（全都是你耳熟能详、喜爱的经典曲目！），还有极具天赋的Christopher Macchio，以及我们的朋友Lee Greenwood现场演唱有史以来最伟大的金曲——《GOD BLESS THE U.S.A.》。\n\n你还将见证震撼人心的军事飞行表演，包括编队精准的战斗机和隐形轰炸机，由我们的美国军方飞行员驾驶——他们已经证明自己是世界上最精英的飞行员。此次爱国主义致敬活动将在位于庄严国家广场的Freedom 250伟大美国州博览会主舞台举行；这里所在的华盛顿特区，如今已是世界上最安全的城市之一，而我们正将其美化到前所未有的水平。\n\n6月24日，星期三，美国东部时间晚7点见。我们将尽情欢乐，共同庆祝美国！\n\n总统 DONALD J. TRUMP",
-      "content_zh_hk": "轉發自 @realDonaldTrump\n6月24日，星期三，將為我們貫穿整個夏季的「美國獨立250週年慶典」揭開序幕！歡迎前來共度一個精彩之夜，欣賞由才華洋溢的美國陸軍及海軍陸戰隊軍樂隊帶來的優美音樂（全都是你耳熟能詳、喜愛的經典名曲！），還有極具天賦的Christopher Macchio，以及我們的朋友Lee Greenwood現場演唱史上最偉大的金曲——《GOD BLESS THE U.S.A.》。\n\n你亦將見證震撼人心的軍事飛行表演，包括編隊精準的戰鬥機與隱形轟炸機，由我們的美國軍方飛行員駕駛——他們已證明自己是全球最精英的飛行員。這場愛國致敬活動將於位處莊嚴國家廣場的Freedom 250偉大美國州博覽會主舞台舉行；其所在地華盛頓特區，如今已是全球最安全的城市之一，而我們正將其美化至前所未見的水平。\n\n6月24日，星期三，美國東部時間晚上7時見。我們將盡情歡聚，一同慶祝美國！\n\n總統 DONALD J. TRUMP",
-      "content_ko": "RT @realDonaldTrump\n6월 24일 수요일은 여름 내내 이어질 우리의 ‘미국 독립 250주년 기념행사’의 “kick off”가 되는 날입니다! 재능 넘치는 미 육군 및 해병대 군악대의 아름다운 음악(여러분이 잘 알고 사랑하는 히트곡만 모았습니다!), 뛰어난 실력의 Christopher Macchio, 그리고 우리의 친구 Lee Greenwood가 역대 최고의 히트곡인 《GOD BLESS THE U.S.A.》를 선보이는 특별한 밤을 함께 즐겨주시기 바랍니다.\n\n또한 우리 미군 조종사들이 조종하는 정밀 대형 전투기와 스텔스 폭격기가 펼치는 인상적인 군 비행 퍼레이드도 보시게 될 것입니다. 그들은 세계 어디에 내놓아도 가장 정예한 조종사들임을 입증해 왔습니다. 이번 애국적 헌정 행사는 장엄한 내셔널 몰에 위치한 Freedom 250 Great American State Fair의 메인 스테이지에서 열리며, 현재 세계에서 가장 안전한 도시 중 하나가 된 워싱턴 D.C.에서 진행됩니다. 우리는 이 도시를 지금까지 본 적 없는 수준으로 아름답게 가꾸고 있습니다.\n\n6월 24일 수요일 오후 7시(미 동부시간)에 뵙겠습니다. 함께 즐기고, 미국을 기념합시다!\n\n대통령 DONALD J. TRUMP",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116754024094818608",
-      "url": "https://truthsocial.com/@realDonaldTrump/116754024094818608",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-15T12:03:45.857Z",
-      "created_at_text": "Jun 15, 2026, 12:03 PM",
-      "content": "RT @realDonaldTrumpThe UFC at the White House last night was incredible. The weather was scheduled to be horrendous, and it turned out to be PERFECT! So much for weather predicting. The Fighters were outstanding — Bo Nickal, Justin Gaethje, Ciryl Gane, Sean O'Malley, Josh Hokit, Mauricio Ruffy, and Diego Lopes were all unbelievable! Most people have never seen anything like that kind of human speed and power before. The White House has never looked more beautiful. The setting was unsurpassed! Congratulations to Dana White, and his unbelievable UFC. One of the most exciting days in the History of our fabled White House! President DONALD J. TRUMP",
-      "content_html": "RT @realDonaldTrumpThe UFC at the White House last night was incredible. The weather was scheduled to be horrendous, and it turned out to be PERFECT! So much for weather predicting. The Fighters were outstanding — Bo Nickal, Justin Gaethje, Ciryl Gane, Sean O'Malley, Josh Hokit, Mauricio Ruffy, and Diego Lopes were all unbelievable! Most people have never seen anything like that kind of human speed and power before. The White House has never looked more beautiful. The setting was unsurpassed! Congratulations to Dana White, and his unbelievable UFC. One of the most exciting days in the History of our fabled White House! President DONALD J. TRUMP",
-      "media": [],
-      "favourites_count": 0,
-      "reblogs_count": 0,
-      "replies_count": 0,
-      "content_zh_cn": "转发 @realDonaldTrump\n昨晚在白宫举行的 UFC 赛事精彩绝伦。原本天气预报说会非常糟糕，结果却是完美无缺！天气预测也不过如此。\n\n各位选手的表现都非常出色——Bo Nickal、Justin Gaethje、Ciryl Gane、Sean O'Malley、Josh Hokit、Mauricio Ruffy 和 Diego Lopes，全都令人难以置信！大多数人此前从未见过那样的人类速度与力量。\n\n白宫从未如此美丽，现场氛围无与伦比！祝贺 Dana White，以及他那不可思议的 UFC。这是我们富有传奇色彩的白宫历史上最激动人心的日子之一！\n\n总统 DONALD J. TRUMP",
-      "content_zh_hk": "轉發 @realDonaldTrump\n昨晚在白宮舉行的 UFC 賽事精彩絕倫。原本天氣預報說會非常惡劣，結果卻是完美無缺！天氣預測也不過如此。\n\n各位選手的表現都非常出色——Bo Nickal、Justin Gaethje、Ciryl Gane、Sean O'Malley、Josh Hokit、Mauricio Ruffy 和 Diego Lopes，全都令人難以置信！大多數人此前從未見過那樣的人類速度與力量。\n\n白宮從未如此美麗，現場氛圍無與倫比！祝賀 Dana White，以及他那不可思議的 UFC。這是我們富有傳奇色彩的白宮歷史上最激動人心的日子之一！\n\n總統 DONALD J. TRUMP",
-      "content_ko": "리트윗 @realDonaldTrump\n어젯밤 백악관에서 열린 UFC 행사는 놀라울 정도로 대단했습니다. 날씨는 끔찍할 것으로 예보됐지만, 결과는 완벽했습니다! 일기예보도 별수 없군요.\n\n선수들의 경기력은 정말 뛰어났습니다 — Bo Nickal, Justin Gaethje, Ciryl Gane, Sean O'Malley, Josh Hokit, Mauricio Ruffy, Diego Lopes 모두 믿기 어려울 만큼 인상적이었습니다! 대부분의 사람들은 그런 인간의 속도와 힘을 이전에는 본 적이 없었을 것입니다.\n\n백악관은 그 어느 때보다 아름다워 보였습니다. 현장 분위기는 비할 데 없이 훌륭했습니다! Dana White와 그의 놀라운 UFC에 축하를 보냅니다. 우리의 전설적인 백악관 역사에서 가장 흥미진진한 날들 가운데 하나였습니다!\n\n대통령 DONALD J. TRUMP",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116754023813635526",
-      "url": "https://truthsocial.com/@realDonaldTrump/116754023813635526",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-15T12:03:41.567Z",
-      "created_at_text": "Jun 15, 2026, 12:03 PM",
-      "content": "RT @realDonaldTrumpEric Metaxas, a great guy, has written an incredible new book, \"Revolution: The Birth of the Greatest Nation in the History of the World.\" As we celebrate our Nation's 250th Birthday, Eric honors the Faith, Wisdom, and Courage of the Great Patriots who sacrificed so much to secure our Independence. These stories of our shared past inspire us to build a future bigger, greater, and stronger than ever before. THE BEST IS YET TO COME! Get your copy today:https://www.amazon.com/Revolution-Birth-Greatest-Nation-History/dp/1631440888",
-      "content_html": "RT @realDonaldTrumpEric Metaxas, a great guy, has written an incredible new book, \"Revolution: The Birth of the Greatest Nation in the History of the World.\" As we celebrate our Nation's 250th Birthday, Eric honors the Faith, Wisdom, and Courage of the Great Patriots who sacrificed so much to secure our Independence. These stories of our shared past inspire us to build a future bigger, greater, and stronger than ever before. THE BEST IS YET TO COME! Get your copy today:https://www.amazon.com/Revolution-Birth-Greatest-Nation-History/dp/1631440888",
-      "media": [],
-      "favourites_count": 0,
-      "reblogs_count": 0,
-      "replies_count": 0,
-      "content_zh_cn": "RT @realDonaldTrumpEric Metaxas，这位很棒的人，写出了一本令人惊叹的新书——《Revolution: The Birth of the Greatest Nation in the History of the World》。在我们庆祝国家250周年之际，Eric向那些为争取我们的独立而作出巨大牺牲的伟大爱国者致敬，礼赞他们的信仰、智慧与勇气。我们共同历史中的这些故事，激励我们建设一个比以往任何时候都更宏大、更伟大、更强盛的未来。最好的还在后头！立即购书：https://www.amazon.com/Revolution-Birth-Greatest-Nation-History/dp/1631440888",
-      "content_zh_hk": "RT @realDonaldTrumpEric Metaxas，這位很了不起的人，寫了一本精彩絕倫的新書——《Revolution: The Birth of the Greatest Nation in the History of the World》。在我們慶祝國家250週年之際，Eric 向那些為爭取我們的獨立而作出巨大犧牲的偉大愛國者致敬，頌揚他們的信仰、智慧與勇氣。我們共同歷史中的這些故事，激勵我們建設一個比以往任何時候都更宏大、更偉大、更強盛的未來。最好的還在後頭！立即購書：https://www.amazon.com/Revolution-Birth-Greatest-Nation-History/dp/1631440888",
-      "content_ko": "RT @realDonaldTrumpEric Metaxas는 정말 훌륭한 인물이며, \"Revolution: The Birth of the Greatest Nation in the History of the World\"라는 놀라운 신간을 펴냈습니다. 우리가 국가 건국 250주년을 기념하는 이 시점에, Eric은 우리의 독립을 위해 큰 희생을 치른 위대한 애국자들의 신앙, 지혜, 용기를 기립니다. 우리가 함께한 과거의 이 이야기들은 그 어느 때보다 더 크고, 더 위대하며, 더 강한 미래를 세우도록 우리를 고무합니다. 최고의 순간은 아직 오지 않았습니다! 지금 바로 구매하세요: https://www.amazon.com/Revolution-Birth-Greatest-Nation-History/dp/1631440888",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116754023501669536",
-      "url": "https://truthsocial.com/@realDonaldTrump/116754023501669536",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-15T12:03:36.807Z",
-      "created_at_text": "Jun 15, 2026, 12:03 PM",
-      "content": "RT @realDonaldTrumpThe Dumocrats want FISA because that's what they used to go after me for three years during my First Term! I'm against FISA if it doesn't come with The Save America Act (Full version!) firmly attached to it. MAKE AMERICA GREAT AGAIN!  THE SAVE AMERICA ACT!1. ALL VOTERS MUST SHOW PHOTO I.D. (IDENTIFICATION!).2. ALL VOTERS MUST SHOW PROOF OF CITIZENSHIP.3. NO MAIL-IN BALLOTS (EXCEPT FOR ILLNESS, DISABILITY, MILITARY, OR TRAVEL!).4. NO MEN IN WOMEN'S SPORTS.5. NO TRANSGENDER MUTILIZATION SURGERY FOR OUR CHILDREN.Thank you for your attention to this matter! President DONALD J. TRUMP",
-      "content_html": "RT @realDonaldTrumpThe Dumocrats want FISA because that's what they used to go after me for three years during my First Term! I'm against FISA if it doesn't come with The Save America Act (Full version!) firmly attached to it. MAKE AMERICA GREAT AGAIN!  THE SAVE AMERICA ACT!1. ALL VOTERS MUST SHOW PHOTO I.D. (IDENTIFICATION!).2. ALL VOTERS MUST SHOW PROOF OF CITIZENSHIP.3. NO MAIL-IN BALLOTS (EXCEPT FOR ILLNESS, DISABILITY, MILITARY, OR TRAVEL!).4. NO MEN IN WOMEN'S SPORTS.5. NO TRANSGENDER MUTILIZATION SURGERY FOR OUR CHILDREN.Thank you for your attention to this matter! President DONALD J. TRUMP",
-      "media": [],
-      "favourites_count": 0,
-      "reblogs_count": 0,
-      "replies_count": 0,
-      "content_zh_cn": "转发 @realDonaldTrump\n民主党人想要FISA，因为这正是他们在我第一个任期内三年里用来对付我的工具！如果FISA不能牢牢附带《拯救美国法案》（完整版！），我就反对FISA。让美国再次伟大！\n\n《拯救美国法案》！\n1. 所有选民都必须出示带照片的身份证件（身份证明！）。\n2. 所有选民都必须出示公民身份的证明。\n3. 不允许邮寄选票（疾病、残障、军人或出行情况除外！）。\n4. 不允许男性参加女子体育项目。\n5. 不允许对我们的孩子进行跨性别变性手术。\n\n感谢大家对此事的关注！\n总统 唐纳德·J·特朗普",
-      "content_zh_hk": "轉發 @realDonaldTrump\n民主黨人想要FISA，因為這正是他們在我第一個任期內三年來用作對付我的工具！如果FISA不能牢牢附帶《拯救美國法案》（完整版！），我就反對FISA。讓美國再次偉大！\n\n《拯救美國法案》！\n1. 所有選民都必須出示附照片的身份證件（身份證明！）。\n2. 所有選民都必須出示公民身份證明。\n3. 不允許郵寄選票（疾病、殘障、軍人或出行情況除外！）。\n4. 不允許男性參加女子體育項目。\n5. 不允許對我們的孩子進行跨性別變性手術。\n\n感謝大家對此事的關注！\n總統 唐納德·J·特朗普",
-      "content_ko": "리트윗 @realDonaldTrump\n민주당은 FISA를 원합니다. 그들이 바로 제 첫 임기 동안 3년 내내 저를 겨냥하는 데 사용했던 것이기 때문입니다! FISA에 「세이브 아메리카 법안」(완전판!)이 단단히 붙어 있지 않다면, 저는 FISA에 반대합니다. 미국을 다시 위대하게!\n\n「세이브 아메리카 법안」!\n1. 모든 유권자는 사진이 부착된 신분증(신원 확인!)을 제시해야 합니다.\n2. 모든 유권자는 시민권 증빙을 제시해야 합니다.\n3. 우편투표 금지(질병, 장애, 군 복무 또는 여행의 경우는 예외!).\n4. 남성의 여성 스포츠 참가 금지.\n5. 우리 아이들에 대한 트랜스젠더 관련 성전환 수술 금지.\n\n이 사안에 대한 여러분의 관심에 감사드립니다!\n대통령 도널드 J. 트럼프",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116754020702467123",
-      "url": "https://truthsocial.com/@realDonaldTrump/116754020702467123",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-15T12:02:54.092Z",
-      "created_at_text": "Jun 15, 2026, 12:02 PM",
-      "content": "Congressman Barry Moore, an America First Patriot who has been with me from the very beginning (He was the first Elected Official in the Country to Endorse me!), is running for the United States Senate in Alabama, a place I love and WON BIG in 2016, 2020, and 2024, getting the Highest Vote in that Great State's History.A very successful Businessman, Civic Leader, and Highly Respected State Legislator prior to becoming a distinguished Congressman, Barry has dedicated his life to serving his Community. As your next Senator, Barry will continue to fight tirelessly to Grow our Economy, Cut Taxes and Regulations, Promote MADE IN THE U.S.A., Champion American Energy DOMINANCE, Keep our Border SECURE, Stop Migrant Crime, Ensure LAW AND ORDER, Strengthen our Brave Military/Veterans, Safeguard our Elections, and Defend our always under siege Second Amendment.Barry Moore is a good friend, fighter, and WINNER, and has my Complete and Total Endorsement to be the next United States Senator from Alabama. Election Day for the Republican Runoff is Tuesday, June 16th. GET OUT AND VOTE FOR BARRY — HE WILL NEVER LET YOU DOWN!Find your Voting Location here: https://swampthevoteusa.com/alabama/",
-      "content_html": "Congressman Barry Moore, an America First Patriot who has been with me from the very beginning (He was the first Elected Official in the Country to Endorse me!), is running for the United States Senate in Alabama, a place I love and WON BIG in 2016, 2020, and 2024, getting the Highest Vote in that Great State's History.A very successful Businessman, Civic Leader, and Highly Respected State Legislator prior to becoming a distinguished Congressman, Barry has dedicated his life to serving his Community. As your next Senator, Barry will continue to fight tirelessly to Grow our Economy, Cut Taxes and Regulations, Promote MADE IN THE U.S.A., Champion American Energy DOMINANCE, Keep our Border SECURE, Stop Migrant Crime, Ensure LAW AND ORDER, Strengthen our Brave Military/Veterans, Safeguard our Elections, and Defend our always under siege Second Amendment.Barry Moore is a good friend, fighter, and WINNER, and has my Complete and Total Endorsement to be the next United States Senator from Alabama. Election Day for the Republican Runoff is Tuesday, June 16th. GET OUT AND VOTE FOR BARRY — HE WILL NEVER LET YOU DOWN!Find your Voting Location here: https://swampthevoteusa.com/alabama/",
-      "media": [],
-      "favourites_count": 7354,
-      "reblogs_count": 1667,
-      "replies_count": 121,
-      "content_zh_cn": "国会议员巴里·摩尔（Barry Moore）是一位“美国优先”的爱国者，从一开始就与我并肩同行（他是全国第一位公开背书支持我的民选官员！）。如今，他正在竞选阿拉巴马州联邦参议员。阿拉巴马州是我热爱的地方，我在2016年、2020年和2024年都在那里取得了压倒性胜利，创下了该州历史最高得票纪录。\n\n在成为杰出的国会议员之前，巴里曾是一位非常成功的商人、 civic领袖，以及备受尊敬的州议会议员。他一生都致力于服务自己的社区。作为你们的下一任参议员，巴里将继续不懈奋斗，推动经济增长，削减税负和监管，推广“美国制造”，捍卫美国能源主导地位，确保边境安全，遏制移民犯罪，维护法律与秩序，增强我们勇敢的军队和退伍军人力量，守护选举安全，并捍卫始终遭受围攻的《第二修正案》。\n\n巴里·摩尔是我的好朋友，是斗士，更是赢家；我完全、彻底支持他成为阿拉巴马州下一任联邦参议员。共和党决选投票日是6月16日，星期二。走出来，为巴里投票——他永远不会让你失望！\n\n在此查找你的投票地点：https://swampthevoteusa.com/alabama/",
-      "content_zh_hk": "國會議員巴里·摩爾（Barry Moore）是一位「美國優先」的愛國者，從最開始就一直與我同行（他是全國第一位公開表態支持我的民選官員！）。如今，他正參選阿拉巴馬州聯邦參議員。阿拉巴馬州是我熱愛的地方，我在2016年、2020年及2024年都在那裡大勝，取得該州歷來最高得票。\n\n在成為傑出的國會議員之前，巴里曾是一位非常成功的商人、公民領袖，以及備受尊敬的州議會議員。他畢生致力於服務自己的社區。作為你們的下一任參議員，巴里將繼續不懈奮戰，推動經濟增長，削減稅負與監管，推廣「美國製造」，捍衛美國能源主導地位，確保邊境安全，遏止移民犯罪，維護法律與秩序，壯大我們英勇的軍隊與退伍軍人力量，守護選舉安全，並捍衛一直飽受衝擊的《第二修正案》。\n\n巴里·摩爾是我的好友、鬥士，也是贏家；我完全、徹底支持他成為阿拉巴馬州下一任聯邦參議員。共和黨決選投票日為6月16日，星期二。站出來，為巴里投票——他絕不會讓你失望！\n\n在此查找你的投票地點：https://swampthevoteusa.com/alabama/",
-      "content_ko": "배리 무어(Barry Moore) 연방 하원의원은 처음부터 저와 함께해 온 ‘미국 우선’ 애국자입니다(그는 미국에서 가장 먼저 저를 공개 지지한 선출직 인사였습니다!). 그는 현재 앨라배마주 연방 상원의원 선거에 출마하고 있습니다. 앨라배마는 제가 사랑하는 곳이며, 저는 2016년, 2020년, 2024년에 그곳에서 큰 승리를 거뒀고, 그 위대한 주 역사상 최고 득표를 기록했습니다.\n\n배리는 뛰어난 연방 하원의원이 되기 전부터 매우 성공한 사업가이자 지역사회 지도자였으며, 큰 존경을 받는 주 의원이었습니다. 그는 평생 자신의 지역사회를 위해 헌신해 왔습니다. 여러분의 차기 상원의원이 되면, 배리는 경제 성장, 감세와 규제 완화, ‘메이드 인 U.S.A.’ 촉진, 미국의 에너지 지배력 강화, 국경 안보 유지, 이민자 범죄 저지, 법과 질서 확립, 우리의 용감한 군과 재향군인 지원 강화, 선거 보호, 그리고 끊임없이 위협받는 수정헌법 제2조 수호를 위해 지칠 줄 모르고 계속 싸울 것입니다.\n\n배리 무어는 제 좋은 친구이자 투사이며, 승리자입니다. 저는 그가 앨라배마주의 차기 연방 상원의원이 되도록 전폭적이고 완전한 지지를 보냅니다. 공화당 결선투표일은 6월 16일 화요일입니다. 꼭 나와서 배리에게 투표해 주십시오 — 그는 결코 여러분을 실망시키지 않을 것입니다!\n\n투표소 찾기: https://swampthevoteusa.com/alabama/",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116754019906128212",
-      "url": "https://truthsocial.com/@realDonaldTrump/116754019906128212",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-15T12:02:41.942Z",
-      "created_at_text": "Jun 15, 2026, 12:02 PM",
-      "content": "It is my Great Honor to endorse \"MAGA\" Mike Collins, a Highly Respected Congressman who has been with me from the very beginning, and is running for the United States Senate in Georgia, a very special place to me, and where we just had a BIG Presidential Election Win with the Most Votes Received by any single Candidate in Georgia's History, for any Election. Mike is strongly supported by the most Highly Respected MAGA Patriots in Georgia and beyond, and many Republicans in the U.S. House and Senate — He is a WARRIOR and WINNER!A very successful Businessman prior to becoming a distinguished U.S. Congressman, Mike has brilliantly served his Community, during a career loaded with accolades and wins, always fighting tirelessly for our America First Agenda. As your next Senator, Mike will continue to work hard to Grow the Economy, Cut Taxes and Regulations, Promote MADE IN THE U.S.A., Champion American Energy DOMINANCE, Strengthen our incredible Military/Veterans, Advance Election Integrity, Keep our Border SECURE, Stop Migrant Crime, Murderers, and other Criminals from illegally entering our Country, Ensure LAW AND ORDER, and Protect our always under siege Second Amendment.Mike, who like me is all about AMERICA FIRST, is running against a Radical Left Dumocrat named Jon Ossoff, a weak and pathetic Senator who tried to raise Taxes by over 4 Trillion Dollars, and voted against all of our Tax Cuts, including NO TAX ON TIPS, NO TAX ON SOCIAL SECURITY, and NO TAX ON OVERTIME. Ossoff voted for Men in Women's Sports, Transgender for Everyone, Open Borders, and Record High Taxes that, under Crooked Joe Biden, destroyed the American Economy, including 401(k)s and Market Numbers, which are now at the highest point, EVER! He is an Open Border Advocate wanting Criminals of every variety, including 11,888 Murderers, to pour into our Country totally unchecked and unvetted. We are the opposite! I created the Strongest Border in History, and Congressman Mike Collins backed me up all the way. Jon Ossoff wants to abolish our Borders, stop deporting Criminal Illegal Aliens, and supports dangerous \"Soft on Crime\" Policies like cashless bail, that let repeat Violent Criminals roam free on our streets. He voted AGAINST Voter I.D., and also, fought strongly against Proof of Citizenship, but is in favor of allowing Illegal Aliens to vote in our Sacred Elections. He is a Radical Left Lunatic, a Dumocrat, and doesn't represent the values of the Great People of Georgia. I beat him years ago in a Congressional Race where he was winning by a lot until I offered my Endorsement, my Candidate won, easily, and that's going to happen again because Jon Ossoff doesn't have what it takes. He is a laughingstock in Washington, he is weak and pathetic! All he's got is money provided by Radical Left people looking to destroy our Country. He is Reckless, Radical, and Dangerous. But first things first! Mike has to beat a Republican Opponent before he gets to Ossoff. I don't know Derek Dooley, and neither does anyone else, but he seems like a nice person. Unfortunately, he has lived outside of Georgia for most of his life, didn't vote in 2020 or 2016, and said that I lost Georgia in 2020 when, in actuality, the facts have now proven that I won by a lot!Mike Collins is a true Friend, Fighter, and WARRIOR, who has been with us from the very beginning, and has my Complete and Total Endorsement to be your next United States Senator. Unlike \"lightweight\" Jon Ossoff, a totally ineffective RADICAL LEFT LOSER who has failed the Great People of Georgia so badly, Mike Collins is a winner who will never let you down. THANK YOU FOR YOUR GREAT SUPPORT GEORGIA. We now have the Strongest Border, the Best Stock Market, and the Most Success that our Country has ever seen and, by the way, we also have the Islamic Republic of Iran which has just agreed to never have a Nuclear Weapon, and the Hormuz Strait will be opening shortly. Gas prices will plummet, and Affordability will be far better than the numbers from the Record Inflation Driven Biden Administration years. Election Day for the Republican Runoff is Tuesday, June 16th. MAKE AMERICA GREAT AGAIN — Vote for Mike Collins for Senate! Find your Voting Location here: https://swampthevoteusa.com/georgia/",
-      "content_html": "It is my Great Honor to endorse \"MAGA\" Mike Collins, a Highly Respected Congressman who has been with me from the very beginning, and is running for the United States Senate in Georgia, a very special place to me, and where we just had a BIG Presidential Election Win with the Most Votes Received by any single Candidate in Georgia's History, for any Election. Mike is strongly supported by the most Highly Respected MAGA Patriots in Georgia and beyond, and many Republicans in the U.S. House and Senate — He is a WARRIOR and WINNER!A very successful Businessman prior to becoming a distinguished U.S. Congressman, Mike has brilliantly served his Community, during a career loaded with accolades and wins, always fighting tirelessly for our America First Agenda. As your next Senator, Mike will continue to work hard to Grow the Economy, Cut Taxes and Regulations, Promote MADE IN THE U.S.A., Champion American Energy DOMINANCE, Strengthen our incredible Military/Veterans, Advance Election Integrity, Keep our Border SECURE, Stop Migrant Crime, Murderers, and other Criminals from illegally entering our Country, Ensure LAW AND ORDER, and Protect our always under siege Second Amendment.Mike, who like me is all about AMERICA FIRST, is running against a Radical Left Dumocrat named Jon Ossoff, a weak and pathetic Senator who tried to raise Taxes by over 4 Trillion Dollars, and voted against all of our Tax Cuts, including NO TAX ON TIPS, NO TAX ON SOCIAL SECURITY, and NO TAX ON OVERTIME. Ossoff voted for Men in Women's Sports, Transgender for Everyone, Open Borders, and Record High Taxes that, under Crooked Joe Biden, destroyed the American Economy, including 401(k)s and Market Numbers, which are now at the highest point, EVER! He is an Open Border Advocate wanting Criminals of every variety, including 11,888 Murderers, to pour into our Country totally unchecked and unvetted. We are the opposite! I created the Strongest Border in History, and Congressman Mike Collins backed me up all the way. Jon Ossoff wants to abolish our Borders, stop deporting Criminal Illegal Aliens, and supports dangerous \"Soft on Crime\" Policies like cashless bail, that let repeat Violent Criminals roam free on our streets. He voted AGAINST Voter I.D., and also, fought strongly against Proof of Citizenship, but is in favor of allowing Illegal Aliens to vote in our Sacred Elections. He is a Radical Left Lunatic, a Dumocrat, and doesn't represent the values of the Great People of Georgia. I beat him years ago in a Congressional Race where he was winning by a lot until I offered my Endorsement, my Candidate won, easily, and that's going to happen again because Jon Ossoff doesn't have what it takes. He is a laughingstock in Washington, he is weak and pathetic! All he's got is money provided by Radical Left people looking to destroy our Country. He is Reckless, Radical, and Dangerous. But first things first! Mike has to beat a Republican Opponent before he gets to Ossoff. I don't know Derek Dooley, and neither does anyone else, but he seems like a nice person. Unfortunately, he has lived outside of Georgia for most of his life, didn't vote in 2020 or 2016, and said that I lost Georgia in 2020 when, in actuality, the facts have now proven that I won by a lot!Mike Collins is a true Friend, Fighter, and WARRIOR, who has been with us from the very beginning, and has my Complete and Total Endorsement to be your next United States Senator. Unlike \"lightweight\" Jon Ossoff, a totally ineffective RADICAL LEFT LOSER who has failed the Great People of Georgia so badly, Mike Collins is a winner who will never let you down. THANK YOU FOR YOUR GREAT SUPPORT GEORGIA. We now have the Strongest Border, the Best Stock Market, and the Most Success that our Country has ever seen and, by the way, we also have the Islamic Republic of Iran which has just agreed to never have a Nuclear Weapon, and the Hormuz Strait will be opening shortly. Gas prices will plummet, and Affordability will be far better than the numbers from the Record Inflation Driven Biden Administration years. Election Day for the Republican Runoff is Tuesday, June 16th. MAKE AMERICA GREAT AGAIN — Vote for Mike Collins for Senate! Find your Voting Location here: https://swampthevoteusa.com/georgia/",
-      "media": [],
-      "favourites_count": 6825,
-      "reblogs_count": 1541,
-      "replies_count": 83,
-      "content_zh_cn": "我非常荣幸背书“MAGA”迈克·柯林斯（Mike Collins）。他是一位备受尊敬的国会议员，从一开始就与我并肩同行；如今，他正竞选佐治亚州联邦参议员。佐治亚州对我而言意义非凡，而我们刚刚在那里赢得了一场重大总统选举胜利——我获得了佐治亚州历史上任何一场选举中单一候选人的最高得票数。迈克得到了佐治亚州乃至更广泛范围内最受尊敬的MAGA爱国者，以及联邦众议院和参议院许多共和党人的强力支持——他是一位战士，也是一位赢家！\n\n在成为杰出的美国国会议员之前，迈克就是一位非常成功的商人。在载誉无数、战绩卓著的职业生涯中，他出色地服务了自己的社区，并始终不知疲倦地为我们的“美国优先”议程而战。作为你们的下一任参议员，迈克将继续努力推动经济增长、削减税收和监管、推广“美国制造”、倡导美国能源DOMINANCE、强化我们卓越的军队/退伍军人体系、推进选举公正、确保边境SECURE、阻止移民犯罪分子、杀人犯和其他罪犯非法进入我国、确保LAW AND ORDER，并保护我们始终遭受围攻的《第二修正案》。\n\n迈克和我一样，始终坚持AMERICA FIRST。此次他对阵的是一名名叫乔恩·奥索夫（Jon Ossoff）的激进左翼“Dumocrat”——一个软弱、可悲的参议员。他曾试图把税收提高逾4万亿美元，并投票反对我们所有减税措施，包括“小费免税”“社保免税”以及“加班收入免税”。奥索夫支持“男性参加女子体育项目”、“全民跨性别”、开放边境，以及创纪录高税负；而在“骗子乔”拜登治下，这些政策摧毁了美国经济，包括401(k)退休账户和市场数据——而这些如今都已创下历史新高！他是开放边境的鼓吹者，想让各类罪犯——包括11,888名杀人犯——在毫无检查、毫无审查的情况下涌入我们的国家。我们恰恰相反！我打造了历史上最强边境，而国会议员迈克·柯林斯一路都在坚定支持我。乔恩·奥索夫想废除我们的边境，停止遣返非法犯罪移民，并支持诸如无现金保释之类对犯罪“过于宽松”的危险政策，让屡次实施暴力犯罪者在我们的街头自由游荡。他投票反对选民身份证（Voter I.D.），也强烈反对公民身份证明，却支持让非法移民在我们神圣的选举中投票。他是一个激进左翼疯子，一个“Dumocrat”，根本不代表伟大的佐治亚州人民的价值观。多年前，我曾在一场国会选举中击败过他；当时他原本大幅领先，直到我给出背书，我支持的候选人轻松获胜。这次也会如此，因为乔恩·奥索夫根本不具备胜选所需的素质。他在华盛顿就是个笑柄，软弱又可悲！他唯一拥有的，就是那些想毁掉我们国家的激进左翼人士提供的资金。他鲁莽、激进，而且危险。但眼下最重要的是！迈克必须先击败一位共和党内对手，才能对阵奥索夫。我不认识德里克·杜利（Derek Dooley），别人也一样，不过他看起来像个不错的人。遗憾的是，他人生中大部分时间都住在佐治亚州以外，2020年和2016年都没有投票，还声称我在2020年输掉了佐治亚州，而事实上，现在事实已经证明，我当时是大胜！\n\n迈克·柯林斯是一位真正的朋友、斗士和WARRIOR，从一开始就与我们站在一起，并获得我完全且彻底的背书，成为你们的下一任美国联邦参议员。与“轻量级”的乔恩·奥索夫不同——这个彻底无能的激进左翼LOSER，严重辜负了伟大的佐治亚州人民——迈克·柯林斯是一位赢家，绝不会让你们失望。感谢佐治亚州对我们的巨大支持。我们如今拥有最强边境、最好的股市，以及我们国家有史以来最大的成功；顺便说一句，伊朗伊斯兰共和国刚刚同意永不拥有核武器，霍尔木兹海峡也将很快重新开放。汽油价格将大幅下跌，可负担性将远优于拜登政府高通胀年代的数据。共和党第二轮初选投票日是6月16日，星期二。MAKE AMERICA GREAT AGAIN——为迈克·柯林斯投票，支持他竞选参议员！\n\n在这里查找你的投票地点：https://swampthevoteusa.com/georgia/",
-      "content_zh_hk": "我非常榮幸背書「MAGA」Mike Collins。他是一位備受尊敬的國會議員，從一開始就與我並肩同行；如今，他正競選佐治亞州聯邦參議員。佐治亞州對我而言意義非凡，而我們剛剛在那裡贏得一場重大總統選舉勝利——我取得了佐治亞州歷史上任何一場選舉中單一候選人的最高得票數。Mike 得到了佐治亞州乃至更廣泛範圍內最受尊敬的 MAGA 愛國者，以及聯邦眾議院和參議院許多共和黨人的強力支持——他是一位戰士，也是一位贏家！\n\n在成為傑出的美國國會議員之前，Mike 已是一位非常成功的商人。在載譽無數、戰績卓著的職業生涯中，他出色地服務了自己的社區，並始終不知疲倦地為我們的「美國優先」議程而戰。作為你們的下一任參議員，Mike 將繼續努力推動經濟增長、削減稅收和監管、推廣「美國製造」、倡導美國能源 DOMINANCE、強化我們卓越的軍隊／退伍軍人體系、推進選舉公正、確保邊境 SECURE、阻止移民罪犯、殺人犯及其他罪犯非法進入我國、確保 LAW AND ORDER，並保護我們一直備受圍攻的《第二修正案》。\n\nMike 和我一樣，始終堅持 AMERICA FIRST。這次他對陣的是一名名叫 Jon Ossoff 的激進左翼「Dumocrat」——一個軟弱、可悲的參議員。他曾試圖把稅收提高逾4萬億美元，並投票反對我們所有減稅措施，包括「小費免稅」「社保免稅」以及「加班收入免稅」。Ossoff 支持「男性參加女子體育項目」、「全民跨性別」、開放邊境，以及創紀錄高稅負；而在「騙子 Joe」Biden 治下，這些政策摧毀了美國經濟，包括 401(k) 退休帳戶和市場數據——而這些如今都已升至歷史高位！他是開放邊境的鼓吹者，想讓各類罪犯——包括 11,888 名殺人犯——在毫無檢查、毫無審查的情況下湧入我們的國家。我們恰恰相反！我打造了歷史上最強邊境，而國會議員 Mike Collins 一路都在堅定支持我。Jon Ossoff 想廢除我們的邊境，停止遣返非法犯罪移民，並支持諸如無現金保釋之類對犯罪「過於寬鬆」的危險政策，讓屢次實施暴力犯罪者在我們的街頭自由遊蕩。他投票反對選民身份證（Voter I.D.），也強烈反對公民身份證明，卻支持讓非法移民在我們神聖的選舉中投票。他是一個激進左翼瘋子，一個「Dumocrat」，根本不代表偉大的佐治亞州人民的價值觀。多年前，我曾在一場國會選舉中擊敗過他；當時他原本大幅領先，直到我給出背書，我支持的候選人輕鬆勝出。這次也會如此，因為 Jon Ossoff 根本不具備勝選所需的素質。他在華盛頓就是個笑柄，軟弱又可悲！他唯一擁有的，就是那些想摧毀我們國家的激進左翼人士提供的資金。他魯莽、激進，而且危險。但眼下最重要的是！Mike 必須先擊敗一位共和黨內對手，才能對陣 Ossoff。我不認識 Derek Dooley，其他人也一樣，不過他看起來像個不錯的人。遺憾的是，他人生中大部分時間都住在佐治亞州以外，2020 年和 2016 年都沒有投票，還聲稱我在 2020 年輸掉了佐治亞州，而事實上，現在事實已經證明，我當時是大勝！\n\nMike Collins 是一位真正的朋友、鬥士和 WARRIOR，從一開始就與我們站在一起，並獲得我完全且徹底的背書，成為你們的下一任美國聯邦參議員。與「輕量級」的 Jon Ossoff 不同——這個徹底無能的激進左翼 LOSER，嚴重辜負了偉大的佐治亞州人民——Mike Collins 是一位贏家，絕不會讓你們失望。感謝佐治亞州對我們的巨大支持。我們如今擁有最強邊境、最好的股市，以及我們國家有史以來最大的成功；順帶一提，伊朗伊斯蘭共和國剛剛同意永不擁有核武器，霍爾木茲海峽也將很快重新開放。汽油價格將大幅下跌，負擔能力將遠優於 Biden 政府高通脹年代的數據。共和黨第二輪初選投票日是6月16日，星期二。MAKE AMERICA GREAT AGAIN——投票支持 Mike Collins 競選參議員！\n\n在這裡查找你的投票地點：https://swampthevoteusa.com/georgia/",
-      "content_ko": "저는 저와 처음부터 함께해 온, 매우 존경받는 하원의원인 “MAGA” 마이크 콜린스(Mike Collins)를 지지하게 되어 큰 영광입니다. 그는 지금 조지아주 연방상원의원 선거에 출마하고 있습니다. 조지아는 저에게 매우 특별한 곳이며, 우리는 그곳에서 방금 대단한 대통령선거 승리를 거뒀습니다. 저는 조지아 역사상 어떤 선거에서든 단일 후보로서는 가장 많은 표를 받았습니다. 마이크는 조지아는 물론 그 너머의 가장 존경받는 MAGA 애국자들과, 연방 하원 및 상원의 많은 공화당 인사들로부터 강력한 지지를 받고 있습니다 — 그는 WARRIOR이자 WINNER입니다!\n\n미국의 저명한 하원의원이 되기 전에, 마이크는 매우 성공한 사업가였습니다. 수많은 찬사와 승리로 가득한 경력 동안 그는 자신의 지역사회를 훌륭하게 섬겼고, 언제나 지칠 줄 모르고 우리의 AMERICA FIRST 아젠다를 위해 싸워 왔습니다. 차기 상원의원이 되면, 마이크는 경제 성장, 감세와 규제 완화, MADE IN THE U.S.A. 촉진, 미국 에너지 DOMINANCE 수호, 우리의 놀라운 군과 재향군인 강화, 선거의 공정성 제고, 국경 SECURE 유지, 이민자 범죄자·살인범 및 기타 범죄자들의 불법 입국 차단, LAW AND ORDER 보장, 그리고 늘 공격받고 있는 우리의 수정헌법 제2조 보호를 위해 계속 열심히 일할 것입니다.\n\n마이크는 저처럼 철저히 AMERICA FIRST를 지향합니다. 그는 이번에 Jon Ossoff라는 급진 좌파 Dumocrat와 맞붙고 있습니다. 그는 4조 달러가 넘는 증세를 시도했고, 팁 소득 면세, 사회보장 면세, 초과근무수당 면세를 포함한 우리의 모든 감세안에 반대표를 던진, 나약하고 한심한 상원의원입니다. Ossoff는 여성 스포츠에 남성이 출전하는 것, 모두를 위한 트랜스젠더 정책, 열린 국경, 그리고 사상 최고 수준의 세금을 지지했으며, 이는 Crooked Joe Biden 아래에서 401(k)와 시장 지표를 포함한 미국 경제를 파괴했습니다 — 그런데 그것들은 지금 역사상 최고 수준에 올라 있습니다! 그는 11,888명의 살인범을 포함한 온갖 범죄자들이 아무런 통제나 심사 없이 우리나라로 밀려들어오기를 바라는 열린 국경 옹호자입니다. 우리는 정반대입니다! 저는 역사상 가장 강력한 국경을 만들었고, 하원의원 마이크 콜린스는 끝까지 저를 지지했습니다. Jon Ossoff는 국경을 없애고, 불법 범죄 외국인의 추방을 중단하며, 상습 폭력범들이 거리로 풀려나게 하는 현금 없는 보석과 같은 위험한 “Soft on Crime” 정책을 지지합니다. 그는 유권자 신분증(Voter I.D.)에 반대표를 던졌고, 시민권 증명에도 강하게 반대했으며, 불법 체류자들이 우리의 신성한 선거에서 투표하는 것에는 찬성합니다. 그는 급진 좌파 광인이고 Dumocrat이며, 위대한 조지아 주민들의 가치를 대표하지 않습니다. 저는 수년 전 그와의 연방하원 선거에서 그를 이긴 적이 있습니다. 당시 그는 크게 앞서고 있었지만, 제가 지지를 선언하자 제가 지지한 후보가 손쉽게 승리했습니다. 이번에도 그렇게 될 것입니다. Jon Ossoff에게는 필요한 자질이 없기 때문입니다. 그는 워싱턴의 웃음거리이며, 나약하고 한심합니다! 그가 가진 것이라고는 우리나라를 파괴하려는 급진 좌파 인사들이 대준 돈뿐입니다. 그는 무모하고, 급진적이며, 위험합니다. 하지만 우선 중요한 것이 있습니다! 마이크는 Ossoff를 상대하기 전에 먼저 공화당 경쟁자를 이겨야 합니다. 저는 Derek Dooley를 모르고, 다른 누구도 마찬가지지만, 그는 좋아 보이는 사람 같습니다. 안타깝게도 그는 인생의 대부분을 조지아 밖에서 살았고, 2020년과 2016년에 투표하지 않았으며, 제가 2020년에 조지아에서 졌다고 말했습니다. 그러나 실제로는 이제 사실이 제가 크게 이겼음을 증명했습니다!\n\n마이크 콜린스는 진정한 친구이자 투사이며 WARRIOR로, 처음부터 우리와 함께해 왔고, 차기 미국 연방상원의원이 되기 위한 저의 완전하고 전적인 지지를 받습니다. 위대한 조지아 주민들을 너무도 심하게 실망시킨, 완전히 무능한 급진 좌파 LOSER인 “경량급” Jon Ossoff와 달리, 마이크 콜린스는 여러분을 결코 실망시키지 않을 WINNER입니다. 조지아의 위대한 지지에 감사드립니다. 우리는 지금 역사상 가장 강한 국경, 최고의 주식시장, 그리고 우리나라가 이제껏 본 가장 큰 성공을 누리고 있습니다. 그리고 덧붙이자면, 이란 이슬람공화국은 방금 핵무기를 결코 보유하지 않기로 동의했으며, 호르무즈 해협도 곧 다시 열릴 것입니다. 휘발유 가격은 급락할 것이고, 체감 물가는 기록적 인플레이션을 초래한 바이든 행정부 시절보다 훨씬 나아질 것입니다. 공화당 결선투표일은 6월 16일 화요일입니다. MAKE AMERICA GREAT AGAIN — 상원 선거에서 마이크 콜린스에게 투표하십시오!\n\n여기에서 투표 장소를 확인하세요: https://swampthevoteusa.com/georgia/",
       "source_hint": "cnn"
     }
   ]
