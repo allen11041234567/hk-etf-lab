@@ -16,8 +16,10 @@ function normalizeCodes(raw) {
 }
 
 function mapDirection(rf) {
-  if (rf === '2' || rf === 'RISE') return 'up';
-  if (rf === '5' || rf === 'FALL') return 'down';
+  const v = String(rf || '').trim().toUpperCase();
+  if (v === '2' || v === 'RISE' || v === 'RISING' || v === 'UP' || v === '상승'.toUpperCase()) return 'up';
+  if (v === '5' || v === 'FALL' || v === 'FALLING' || v === 'DOWN' || v === '하락'.toUpperCase()) return 'down';
+  if (v === '3' || v === 'FLAT' || v === '보합'.toUpperCase()) return 'flat';
   return 'flat';
 }
 
