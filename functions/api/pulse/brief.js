@@ -151,12 +151,15 @@ function buildQuoteFromSources(code, snapshotAt, pollingResult, mobileResult) {
     localTradedAt: over.localTradedAt || null,
   } : null;
   const sessionType = String(afterHours?.tradingSessionType || '').toUpperCase();
+  const marketStatus = String(market || '').toUpperCase();
+  const isPreopen = marketStatus === 'PREOPEN';
   const useAfterHours = !!(
     afterHours
     && afterHours.status === 'OPEN'
     && afterHours.price
     && sessionType
     && sessionType !== 'REGULAR_MARKET'
+    && sessionType !== 'PREOPEN'
   );
 
   return {
@@ -194,6 +197,17 @@ function buildQuoteFromSources(code, snapshotAt, pollingResult, mobileResult) {
       volume: afterHours.volume,
       value: afterHours.value,
       localTradedAt: afterHours.localTradedAt,
+    } : isPreopen ? {
+      session: 'preopen',
+      current,
+      dayChange,
+      dayChangePercent,
+      open,
+      high,
+      low,
+      volume,
+      value,
+      localTradedAt: localTs ? new Date(localTs).toISOString() : null,
     } : {
       session: 'regular',
       current,
