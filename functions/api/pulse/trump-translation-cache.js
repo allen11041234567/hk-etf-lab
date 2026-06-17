@@ -1,4 +1,14 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116764118671718350": {
+    "content_zh_cn": "杰西·沃特斯：特朗普知道，当你掌控全场时，音量就由你来定：https://www.foxnews.com/video/6398602574112",
+    "content_zh_hk": "謝西·沃特斯：特朗普知道，當你掌控全場時，音量就由你來定：https://www.foxnews.com/video/6398602574112",
+    "content_ko": "제시 워터스: 트럼프는 방을 장악할 때, 볼륨은 당신이 정한다는 것을 안다: https://www.foxnews.com/video/6398602574112"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116764115535577197": {
+    "content_zh_cn": "为备受尊敬的国会议员迈克·柯林斯感到非常高兴。他将在佐治亚州的参议员选举中获胜，击败那个可悲、失败的“蠢主党”参议员奥斯（混蛋！）索夫——他在华盛顿就是个笑话。甚至都没人知道他是谁！！！\n我将为迈克在佐治亚州举行盛大的“特朗普”集会！\n总统DJT",
+    "content_zh_hk": "為備受尊敬的國會議員Mike Collins感到非常高興。他將在佐治亞州的參議院選舉中勝出，擊敗那個可悲、失敗的「蠢主黨」參議員Os（混蛋！）off——他在華盛頓就是個笑話。甚至都沒人知道他是誰！！！\n我將為Mike在佐治亞州舉行大型TRUMP集會！\nPresident DJT",
+    "content_ko": "매우 존경받는 마이크 콜린스 하원의원을 생각하니 정말 기쁩니다. 그는 조지아주 상원의원 선거에서 한심하고 실패한 ‘덤버크랫’ 상원의원 오스(멍청이!)오프를 꺾고 승리할 것입니다. 그는 워싱턴 정가에서 웃음거리입니다. 도대체 그가 누군지 아는 사람조차 없습니다!!!\n저는 조지아에서 마이크를 위한 대규모 TRUMP 유세를 열 것입니다!\n대통령 DJT"
+  },
   "https://truthsocial.com/@realDonaldTrump/116763999742755145": {
     "content_zh_cn": "Rick Jackson 操盘了一场出色的 TRUMP 竞选活动。非常聪明！周六晚他和我在一起做陈述。太棒了！！！他击败了一位很优秀的人——Burt Jones，后者前途无量！！！总统 DJT",
     "content_zh_hk": "Rick Jackson 操盤了一場出色的 TRUMP 競選活動。非常聰明！上週六晚他和我一起作陳述。太棒了！！！他擊敗了一位很優秀的人——Burt Jones，後者前途無量！！！總統 DJT",
