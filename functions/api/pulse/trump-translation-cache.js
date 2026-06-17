@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116763999742755145": {
+    "content_zh_cn": "Rick Jackson 操盘了一场出色的 TRUMP 竞选活动。非常聪明！周六晚他和我在一起做陈述。太棒了！！！他击败了一位很优秀的人——Burt Jones，后者前途无量！！！总统 DJT",
+    "content_zh_hk": "Rick Jackson 操盤了一場出色的 TRUMP 競選活動。非常聰明！上週六晚他和我一起作陳述。太棒了！！！他擊敗了一位很優秀的人——Burt Jones，後者前途無量！！！總統 DJT",
+    "content_ko": "Rick Jackson은 훌륭한 TRUMP 선거운동을 이끌었습니다. 매우 영리합니다! 토요일 밤 저와 함께 유세 연설을 했습니다. 놀라웠습니다!!! 그는 훌륭한 인물인 Burt Jones를 이겼고, Burt Jones의 미래는 매우 밝습니다!!! 대통령 DJT"
+  },
   "https://truthsocial.com/@realDonaldTrump/116763691297203565": {
     "content_zh_cn": "祝贺里克·杰克逊，他以“TRUMP”为竞选主轴，取得了非常成功的竞选，并赢得胜利。他将成为你们的下一任佐治亚州州长。迫不及待！总统 DJT",
     "content_zh_hk": "恭賀里克·傑克遜，他以「TRUMP」為競選主軸，成功完成競選並勝出。他將成為你們的下一任喬治亞州州長。等不及了！總統 DJT",
