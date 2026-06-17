@@ -97,6 +97,7 @@ function buildQuoteFromSources(code, snapshotAt, pollingResult, mobileResult) {
   const integration = mobileResult?.integration;
   const totalInfos = integration?.totalInfos || [];
   const infoMap = Object.fromEntries(totalInfos.map((row) => [row.code, row.value]));
+  const over = pollingItem?.nxtOverMarketPriceInfo || basic?.overMarketPriceInfo || null;
 
   const market = pollingItem?.ms || basic?.marketStatus || null;
   const direction = mapDirection(pollingItem?.rf || basic?.compareToPreviousPrice?.name || basic?.compareToPreviousPrice?.text || '');
@@ -133,6 +134,22 @@ function buildQuoteFromSources(code, snapshotAt, pollingResult, mobileResult) {
     };
   }
 
+  const afterHoursDirection = mapDirection(over?.compareToPreviousPrice?.code || over?.compareToPreviousPrice?.name || over?.compareToPreviousPrice?.text || '');
+  const afterHours = over ? {
+    status: over.overMarketStatus || null,
+    tradingSessionType: over.tradingSessionType || null,
+    price: parseNumber(over.overPrice),
+    change: applyDirection(over.compareToPreviousClosePrice, afterHoursDirection),
+    changePct: applyDirection(over.fluctuationsRatio, afterHoursDirection),
+    open: parseNumber(over.openPrice),
+    high: parseNumber(over.highPrice),
+    low: parseNumber(over.lowPrice),
+    volume: parseNumber(over.accumulatedTradingVolume),
+    value: parseNumber(over.accumulatedTradingValue),
+    localTradedAt: over.localTradedAt || null,
+  } : null;
+  const useAfterHours = !!(afterHours && afterHours.status === 'OPEN' && afterHours.price);
+
   return {
     code,
     name: CODE_NAMES[code] || basic?.stockName || integration?.stockName || pollingItem?.nm || code,
@@ -155,6 +172,31 @@ function buildQuoteFromSources(code, snapshotAt, pollingResult, mobileResult) {
     pbr: sanitizeMetricText(infoMap.pbr) || null,
     bps: sanitizeMetricText(infoMap.bps) || null,
     dividendYield: infoMap.dividendYieldRatio || infoMap.dividendYield || null,
+    afterHours,
+    useAfterHours,
+    display: useAfterHours ? {
+      session: 'afterHours',
+      current: afterHours.price,
+      dayChange: afterHours.change,
+      dayChangePercent: afterHours.changePct,
+      open: afterHours.open,
+      high: afterHours.high,
+      low: afterHours.low,
+      volume: afterHours.volume,
+      value: afterHours.value,
+      localTradedAt: afterHours.localTradedAt,
+    } : {
+      session: 'regular',
+      current,
+      dayChange,
+      dayChangePercent,
+      open,
+      high,
+      low,
+      volume,
+      value,
+      localTradedAt: localTs ? new Date(localTs).toISOString() : null,
+    },
     fetchedAt: new Date(snapshotAt).toISOString(),
     localTradedAt: localTs ? new Date(localTs).toISOString() : null,
     source: pollingItem ? 'polling+mobile' : 'mobile',
