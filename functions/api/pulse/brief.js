@@ -143,6 +143,7 @@ function buildQuoteFromSources(code, snapshotAt, pollingResult, mobileResult) {
     price: parseNumber(over.overPrice),
     change: applyDirection(over.compareToPreviousClosePrice, afterHoursDirection),
     changePct: applyDirection(over.fluctuationsRatio, afterHoursDirection),
+    relativeToClosePct: applyDirection(over.fluctuationsRatio, afterHoursDirection) - dayChangePercent,
     open: parseNumber(over.openPrice),
     high: parseNumber(over.highPrice),
     low: parseNumber(over.lowPrice),
