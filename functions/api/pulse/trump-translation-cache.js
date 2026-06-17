@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116763691297203565": {
+    "content_zh_cn": "祝贺里克·杰克逊，他以“TRUMP”为竞选主轴，取得了非常成功的竞选，并赢得胜利。他将成为你们的下一任佐治亚州州长。迫不及待！总统 DJT",
+    "content_zh_hk": "恭賀里克·傑克遜，他以「TRUMP」為競選主軸，成功完成競選並勝出。他將成為你們的下一任喬治亞州州長。等不及了！總統 DJT",
+    "content_ko": "릭 잭슨에게 축하를 보냅니다. 그는 “TRUMP”를 내세워 매우 성공적인 선거운동을 펼쳤고, 승리했습니다. 그는 여러분의 다음 조지아주 주지사가 될 것입니다. 정말 기다릴 수 없습니다! 대통령 DJT"
+  },
   "https://truthsocial.com/@realDonaldTrump/116763612893094366": {
     "content_zh_cn": "我昨晚在选举中取得了许多重大胜利。感谢大家！！！\n——总统DJT",
     "content_zh_hk": "我昨晚在選舉中取得了許多重大勝利。感謝大家！！！\n——總統DJT",
