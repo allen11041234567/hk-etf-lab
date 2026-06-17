@@ -92,32 +92,6 @@ function sanitizeMetricText(value) {
     .trim();
 }
 
-function getSeoulClockParts(ts) {
-  const parts = new Intl.DateTimeFormat('en-GB', {
-    timeZone: 'Asia/Seoul',
-    weekday: 'short',
-    hour: '2-digit',
-    minute: '2-digit',
-    hour12: false,
-  }).formatToParts(new Date(ts));
-  const map = Object.fromEntries(parts.map((p) => [p.type, p.value]));
-  return {
-    weekday: map.weekday,
-    hour: Number(map.hour || 0),
-    minute: Number(map.minute || 0),
-  };
-}
-
-function getSeoulSessionByTime(ts) {
-  const { weekday, hour, minute } = getSeoulClockParts(ts);
-  const isWeekday = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'].includes(weekday);
-  const minutes = hour * 60 + minute;
-  if (!isWeekday) return 'closed';
-  if (minutes < 9 * 60) return 'preopen';
-  if (minutes < 15 * 60 + 30) return 'regular';
-  return 'afterhours';
-}
-
 function buildQuoteFromSources(code, snapshotAt, pollingResult, mobileResult) {
   const pollingItem = pollingResult?.item;
   const pollingPayload = pollingResult?.payload;
@@ -179,11 +153,9 @@ function buildQuoteFromSources(code, snapshotAt, pollingResult, mobileResult) {
   } : null;
   const sessionType = String(afterHours?.tradingSessionType || '').toUpperCase();
   const marketStatus = String(market || '').toUpperCase();
-  const timeSession = getSeoulSessionByTime(snapshotAt);
-  const isPreopen = marketStatus === 'PREOPEN' || timeSession === 'preopen';
+  const isPreopen = marketStatus === 'PREOPEN';
   const useAfterHours = !!(
-    timeSession === 'afterhours'
-    && afterHours
+    afterHours
     && afterHours.status === 'OPEN'
     && afterHours.price
     && sessionType
@@ -238,7 +210,7 @@ function buildQuoteFromSources(code, snapshotAt, pollingResult, mobileResult) {
       value,
       localTradedAt: localTs ? new Date(localTs).toISOString() : null,
     } : {
-      session: timeSession === 'regular' ? 'regular' : 'closed',
+      session: 'regular',
       current,
       dayChange,
       dayChangePercent,
