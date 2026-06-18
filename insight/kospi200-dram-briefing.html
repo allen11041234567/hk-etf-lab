@@ -47,11 +47,11 @@
     .qr-title{margin:0;font-size:12px;font-weight:800;line-height:1.25}
     .qr-desc{margin-top:2px;font-size:11px;color:#475569;line-height:1.4}
     .section-title{font-size:21px;font-weight:900;margin:0 0 12px}
-    .section-head{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:12px;margin:0 0 12px}
+    .section-head{display:block;margin:0 0 12px}
     .section-head .section-title{margin:0}
-    .trade-qr{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:8px;border:1px solid #dbe3ef;border-radius:14px;background:#fff;flex-shrink:0;width:88px;min-height:88px;box-shadow:0 6px 16px rgba(15,23,42,.05)}
-    .trade-qr img{display:block;width:56px;height:56px;border-radius:8px;background:#fff;padding:3px;box-shadow:inset 0 0 0 1px #e2e8f0}
-    .trade-qr span{font-size:11px;line-height:1.35;color:#64748b;white-space:normal;text-align:center}
+    .floating-trade-qr{position:fixed;right:14px;top:50%;transform:translateY(-50%);z-index:30;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:8px;border:1px solid #dbe3ef;border-radius:14px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);width:88px;min-height:88px;box-shadow:0 10px 24px rgba(15,23,42,.14)}
+    .floating-trade-qr img{display:block;width:56px;height:56px;border-radius:8px;background:#fff;padding:3px;box-shadow:inset 0 0 0 1px #e2e8f0}
+    .floating-trade-qr span{font-size:11px;line-height:1.35;color:#64748b;white-space:normal;text-align:center}
     .section-desc{margin:-2px 0 12px;font-size:12px;color:var(--muted);line-height:1.6}
     .compare-hero{padding:14px;border-radius:16px;background:linear-gradient(135deg,#eef6ff 0%,#fff7ed 100%);border:1px solid #dbeafe;margin-bottom:10px;text-align:center}
     .compare-hero .top{font-size:11px;color:var(--blue);font-weight:800;letter-spacing:.05em;text-transform:uppercase}
@@ -90,7 +90,7 @@
       .qr-card img{width:38px;height:38px}
       .qr-title{font-size:11px}
       .qr-desc{font-size:10px}
-      .section-title{font-size:18px}.section-head{grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:8px}.trade-qr{width:72px;min-height:72px;padding:6px;border-radius:12px}.trade-qr img{width:44px;height:44px;padding:2px}.trade-qr span{font-size:9px;line-height:1.25}
+      .section-title{font-size:18px}.section-head{display:block}.floating-trade-qr{right:8px;top:auto;bottom:82px;transform:none;width:72px;min-height:72px;padding:6px;border-radius:12px}.floating-trade-qr img{width:44px;height:44px;padding:2px}.floating-trade-qr span{font-size:9px;line-height:1.25}
       .compare{grid-template-columns:1fr;gap:8px}
       .compare-hero{padding:14px}
       .compare-hero .main{font-size:24px;gap:6px}
@@ -107,6 +107,7 @@
   </style>
 </head>
 <body>
+  <a class="floating-trade-qr" href="javascript:void(0)" role="img" aria-label="富途交易二维码"><img src="/assets/qr/futunn-trade-qr-20260618.jpg" alt="富途交易二维码" /><span>扫码可前往富途交易</span></a>
   <div class="wrap">
     <section class="hero">
       <div class="eyebrow">KOSPI 200</div>
@@ -154,7 +155,7 @@
     </section>
 
     <section class="panel">
-      <div class="section-head"><div class="section-title">持仓信息优先，先看前十大</div><div class="trade-qr"><img src="/assets/qr/futunn-trade-qr-20260618.jpg" alt="富途交易二维码" /><span>扫码可前往富途交易</span></div></div>
+      <div class="section-head"><div class="section-title">持仓信息优先，先看前十大</div></div>
       <div class="table-wrap">
         <table>
           <thead>
