@@ -1,4 +1,14 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116771224859937865": {
+    "content_zh_cn": "一边声称要打击腐败，纽森一边为盟友向特殊利益集团募得3.4亿美元：https://justthenews.com/accountability/political-ethics/newsom-alleges-trump-corruption-while-soliciting-more-340m",
+    "content_zh_hk": "一邊聲稱要打擊腐敗，紐森一邊為盟友向特殊利益集團籌得3.4億美元：https://justthenews.com/accountability/political-ethics/newsom-alleges-trump-corruption-while-soliciting-more-340m",
+    "content_ko": "부패와 싸우겠다고 주장하면서도, 뉴섬은 동맹들을 위해 특수이익집단으로부터 3억4천만 달러를 모금했다: https://justthenews.com/accountability/political-ethics/newsom-alleges-trump-corruption-while-soliciting-more-340m"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116771222226594566": {
+    "content_zh_cn": "教皇利奥赞扬美伊和平协议：https://justthenews.com/nation/religion/pope-leo-commends-us-iran-peace-deal-ahead-friday-signing",
+    "content_zh_hk": "教宗良讚揚美伊和平協議：https://justthenews.com/nation/religion/pope-leo-commends-us-iran-peace-deal-ahead-friday-signing",
+    "content_ko": "교황 레오, 미국-이란 평화 합의 칭찬: https://justthenews.com/nation/religion/pope-leo-commends-us-iran-peace-deal-ahead-friday-signing"
+  },
   "https://truthsocial.com/@realDonaldTrump/116770180426363226": {
     "content_zh_cn": "这些蠢货觉得我对伊朗还不够强硬——可就在股市刚刚创下历史新高、油价还在“暴跌”之际，他们要么是嫉妒，要么就是坏人，或者愚蠢。让美国再次伟大！！！总统 DJT",
     "content_zh_hk": "這些蠢貨覺得我對伊朗還不夠強硬——可就在股市剛剛創下歷史新高、油價還在「暴跌」之際，他們要麼是嫉妒，要麼就是壞人，或者愚蠢。讓美國再次偉大！！！總統 DJT",
