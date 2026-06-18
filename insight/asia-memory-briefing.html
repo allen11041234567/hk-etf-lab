@@ -174,6 +174,7 @@
   <script>
     const SNAPSHOT_FEED = '/api/pulse/asia-memory-snapshot';
     const REFRESH_MS = 30000;
+    const SNAPSHOT_STORAGE_KEY = 'asia-memory-briefing-last-good-v1';
     const errorBox = document.getElementById('error-box');
     let latestRefreshTs = null;
     let refreshTimer = null;
@@ -204,7 +205,9 @@
       el.className = 'quick-value ' + (!Number.isFinite(n) ? 'flat' : (n >= 0 ? 'up' : 'down'));
       el.textContent = pctText || '--';
     }
-    async function fetchJson(url){ const r = await fetch(url, { cache:'no-store' }); if(!r.ok) throw new Error(`http ${r.status}`); return await r.json(); }
+    async function fetchJson(url){ const r = await fetch(url, { cache:'default' }); if(!r.ok) throw new Error(`http ${r.status}`); return await r.json(); }
+    function saveSnapshot(data){ try { localStorage.setItem(SNAPSHOT_STORAGE_KEY, JSON.stringify(data)); } catch(_) {} }
+    function loadSnapshot(){ try { const raw = localStorage.getItem(SNAPSHOT_STORAGE_KEY); return raw ? JSON.parse(raw) : null; } catch(_) { return null; } }
     function renderTsmc(t){
       setText('tsmc-price', t.currentText);
       paintChange('tsmc-change', t.dayChangeText, t.dayChangePercentText);
@@ -219,17 +222,27 @@
       setText('kioxia-open', k.openText); setText('kioxia-prev', k.previousCloseText); setText('kioxia-high', k.highText); setText('kioxia-low', k.lowText);
       setText('kioxia-value', k.tradingValueText); setText('kioxia-mcap', k.marketCapText); setText('kioxia-pbr-roe', `${k.pbrText || '--'} / ${k.roeText || '--'}`); setText('kioxia-equity', k.equityRatioText);
     }
+    function renderSnapshot(data){
+      if(data.tsmc) renderTsmc(data.tsmc);
+      if(data.kioxia) renderKioxia(data.kioxia);
+      updateLiveTime(new Date());
+    }
     async function refreshAll(){
       if(document.hidden) return;
       try {
         const data = await fetchJson(SNAPSHOT_FEED);
         if(!data.ok) throw new Error(data.error || 'snapshot failed');
-        if(data.tsmc) renderTsmc(data.tsmc);
-        if(data.kioxia) renderKioxia(data.kioxia);
-        updateLiveTime(new Date());
+        renderSnapshot(data);
+        saveSnapshot(data);
         errorBox.style.display = 'none';
       } catch (_) {
-        errorBox.style.display = 'block';
+        const cached = loadSnapshot();
+        if (cached && cached.ok) {
+          renderSnapshot(cached);
+          errorBox.style.display = 'none';
+        } else {
+          errorBox.style.display = 'block';
+        }
       }
     }
     function stopPolling(){ if(refreshTimer){ clearInterval(refreshTimer); refreshTimer = null; } }
@@ -237,6 +250,11 @@
     document.querySelectorAll('.switch-btn').forEach((btn)=>btn.addEventListener('click',()=>applyCardVisibility(btn.dataset.targetCode)));
     window.addEventListener('resize', ()=>applyCardVisibility(document.querySelector('.switch-btn.active')?.dataset.targetCode || '2330.TW'));
     document.addEventListener('visibilitychange',()=>{ if(document.hidden) stopPolling(); else startPolling(); });
+    const bootCache = loadSnapshot();
+    if (bootCache && bootCache.ok) {
+      renderSnapshot(bootCache);
+      errorBox.style.display = 'none';
+    }
     startPolling();
     setTimeout(()=>applyCardVisibility('2330.TW'), 0);
   </script>
