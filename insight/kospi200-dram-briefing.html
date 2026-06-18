@@ -47,6 +47,11 @@
     .qr-title{margin:0;font-size:12px;font-weight:800;line-height:1.25}
     .qr-desc{margin-top:2px;font-size:11px;color:#475569;line-height:1.4}
     .section-title{font-size:21px;font-weight:900;margin:0 0 12px}
+    .section-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 12px}
+    .section-head .section-title{margin:0}
+    .trade-qr{display:flex;align-items:center;gap:8px;padding:8px 10px;border:1px solid #dbe3ef;border-radius:14px;background:#fff;flex-shrink:0;max-width:230px}
+    .trade-qr img{display:block;width:34px;height:34px;border-radius:8px;background:#fff;padding:3px;box-shadow:inset 0 0 0 1px #e2e8f0}
+    .trade-qr span{font-size:11px;line-height:1.35;color:#64748b;white-space:normal}
     .section-desc{margin:-2px 0 12px;font-size:12px;color:var(--muted);line-height:1.6}
     .compare-hero{padding:14px;border-radius:16px;background:linear-gradient(135deg,#eef6ff 0%,#fff7ed 100%);border:1px solid #dbeafe;margin-bottom:10px;text-align:center}
     .compare-hero .top{font-size:11px;color:var(--blue);font-weight:800;letter-spacing:.05em;text-transform:uppercase}
@@ -85,7 +90,7 @@
       .qr-card img{width:38px;height:38px}
       .qr-title{font-size:11px}
       .qr-desc{font-size:10px}
-      .section-title{font-size:18px}
+      .section-title{font-size:18px}.section-head{align-items:flex-start;flex-direction:column;gap:8px}.trade-qr{max-width:none;padding:6px 8px;border-radius:12px}.trade-qr img{width:28px;height:28px;padding:2px}.trade-qr span{font-size:10px;line-height:1.3}
       .compare{grid-template-columns:1fr;gap:8px}
       .compare-hero{padding:14px}
       .compare-hero .main{font-size:24px;gap:6px}
@@ -149,7 +154,7 @@
     </section>
 
     <section class="panel">
-      <div class="section-title">持仓信息优先，先看前十大</div>
+      <div class="section-head"><div class="section-title">持仓信息优先，先看前十大</div><div class="trade-qr"><img src="/assets/qr/futunn-trade-qr-20260618.jpg" alt="富途交易二维码" /><span>扫码可前往富途交易</span></div></div>
       <div class="table-wrap">
         <table>
           <thead>
