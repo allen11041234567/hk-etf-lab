@@ -43,6 +43,12 @@
     .live-row + .live-row{border-top:1px solid #edf2f7}
     .live-name{color:#334155;font-weight:700}
     .live-val{font-size:20px;font-weight:800;color:#b91c1c;line-height:1}
+    .premium-strip{padding:10px 12px;border-radius:14px;border:1px solid #dbe3ef;background:linear-gradient(180deg,#fff 0%,#f8fbff 100%)}
+    .premium-title{font-size:12px;color:#64748b;font-weight:800;margin-bottom:8px}
+    .premium-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+    .premium-box{padding:10px;border:1px solid #e2e8f0;border-radius:12px;background:#fff}
+    .premium-box .k{font-size:11px;color:#64748b;margin-bottom:4px}
+    .premium-box .v{font-size:16px;font-weight:800;line-height:1.35;color:#0f172a}
     .qr-card{padding:9px 10px;border-radius:14px;border:1px solid var(--line);background:linear-gradient(180deg,#fff 0%,#f8fbff 100%);display:flex;flex-direction:row;align-items:center;gap:8px}
     .qr-card img{display:block;width:42px;height:42px;object-fit:cover;border-radius:8px;background:#fff;padding:3px;border:1px solid #e5e7eb;flex:0 0 auto}
     .qr-copy{min-width:0;flex:1}
@@ -87,7 +93,7 @@
       .kpi-v{font-size:18px}
       .action-btn{font-size:12px;padding:10px}
       .live-name{font-size:13px;max-width:58%}
-      .live-val{font-size:18px}
+      .live-val{font-size:18px}.premium-grid{grid-template-columns:1fr}.premium-box .v{font-size:15px}
       .qr-card{padding:8px 9px}
       .qr-card img{width:38px;height:38px}
       .qr-title{font-size:11px}
@@ -144,6 +150,15 @@
           <div class="live-row">
             <div class="live-name">三星电子 即时涨跌幅</div>
             <div class="live-val" id="live-samsung">--</div>
+          </div>
+        </div>
+
+        <div class="premium-strip">
+          <div class="premium-title">03121 实时溢价参考</div>
+          <div class="premium-grid">
+            <div class="premium-box"><div class="k">盘中预估 NAV</div><div class="v" id="csop-nav">--</div></div>
+            <div class="premium-box"><div class="k">市场价格</div><div class="v" id="csop-price">--</div></div>
+            <div class="premium-box"><div class="k">溢价 / 折价</div><div class="v" id="csop-premium">--</div></div>
           </div>
         </div>
 
@@ -271,6 +286,26 @@
         })
         .catch(() => {
           Object.values(ids).forEach(el => { if (el) el.textContent = '--'; });
+        });
+
+      fetch('/api/pulse/csop-3121-quote', { cache: 'no-store' })
+        .then(r => r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`)))
+        .then(data => {
+          const nav = data?.estimatedNav?.value || '--';
+          const price = data?.marketPrice?.value || '--';
+          const premium = data?.premiumDiscount?.value || '--';
+          const navEl = document.getElementById('csop-nav');
+          const priceEl = document.getElementById('csop-price');
+          const premiumEl = document.getElementById('csop-premium');
+          if (navEl) navEl.textContent = nav;
+          if (priceEl) priceEl.textContent = price;
+          if (premiumEl) premiumEl.textContent = premium;
+        })
+        .catch(() => {
+          ['csop-nav','csop-price','csop-premium'].forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.textContent = '--';
+          });
         });
     })();
   </script>
