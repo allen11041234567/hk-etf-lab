@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116771467656011073": {
+    "content_zh_cn": "石油正源源不断地供应，伊朗绝不能拥有核武器（世界将更安全！），股市强劲上扬，就业创下历史纪录，物价正在回落（更负担得起！）。我们的国家比以往任何时候都更强大、更安全，也更受尊重。“不客气！”——特朗普总统",
+    "content_zh_hk": "石油正源源不絕地供應，伊朗絕不能擁有核武器（世界將更安全！），股市強勁上揚，就業創下歷史紀錄，物價正在回落（更負擔得起！）。我們的國家比以往任何時候都更強大、更安全，也更受尊重。「不客氣！」——特朗普總統",
+    "content_ko": "석유는 계속 흘러들고 있고, 이란은 결코 핵무기를 가져서는 안 됩니다(세계는 더 안전해질 것입니다!). 증시는 힘차게 오르고 있고, 고용은 사상 최고 수준이며, 물가는 내려가고 있습니다(더 감당할 수 있는 수준!). 우리나라는 그 어느 때보다 강하고, 안전하며, 존중받고 있습니다. “천만에요!” — 트럼프 대통령"
+  },
   "https://truthsocial.com/@realDonaldTrump/116771224859937865": {
     "content_zh_cn": "一边声称要打击腐败，纽森一边为盟友向特殊利益集团募得3.4亿美元：https://justthenews.com/accountability/political-ethics/newsom-alleges-trump-corruption-while-soliciting-more-340m",
     "content_zh_hk": "一邊聲稱要打擊腐敗，紐森一邊為盟友向特殊利益集團籌得3.4億美元：https://justthenews.com/accountability/political-ethics/newsom-alleges-trump-corruption-while-soliciting-more-340m",
