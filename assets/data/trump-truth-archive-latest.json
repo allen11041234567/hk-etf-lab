@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-18T10:33:44.329Z",
+  "fetchedAt": "2026-06-18T10:48:47.508Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
@@ -62,8 +62,8 @@
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-06-18T08:28:01.854Z",
       "created_at_text": "Jun 18, 2026, 8:28 AM",
-      "content": "Tyrus became famous for saying, long before November 5th, 2024, \"Why we are talking about the 2024 Presidential Election? It's OVER. TRUMP is going to win, and everyone knows it. It's a waste of time to talk about it. They're not going to beat him, and they never will.\" He was right! In his incredible Book, Tyrus tells the true story of the 2024 Presidential Election, with his own unique insights, strongly rooted in Common Sense and Love for our Country. This Book is fantastic — Enjoy! https://www.amazon.com/dp/B0FP5KNYMC?ref=cm\\_sw\\_r\\_ffobk\\_cso\\_cp\\_apin\\_dp\\_HKJ4DSK0H3SQ6CMJ1456&ref\\_=cm\\_sw\\_r\\_ffobk\\_cso\\_cp\\_apin\\_dp\\_HKJ4DSK0H3SQ6CMJ1456&social\\_share=cm\\_sw\\_r\\_ffobk\\_cso\\_cp\\_apin\\_dp\\_HKJ4DSK0H3SQ6CMJ1456&bestFormat=true&titleSource=true\nPreview",
-      "content_html": "Tyrus became famous for saying, long before November 5th, 2024, \"Why we are talking about the 2024 Presidential Election? It's OVER. TRUMP is going to win, and everyone knows it. It's a waste of time to talk about it. They're not going to beat him, and they never will.\" He was right! In his incredible Book, Tyrus tells the true story of the 2024 Presidential Election, with his own unique insights, strongly rooted in Common Sense and Love for our Country. This Book is fantastic — Enjoy! https://www.amazon.com/dp/B0FP5KNYMC?ref=cm\\_sw\\_r\\_ffobk\\_cso\\_cp\\_apin\\_dp\\_HKJ4DSK0H3SQ6CMJ1456&ref\\_=cm\\_sw\\_r\\_ffobk\\_cso\\_cp\\_apin\\_dp\\_HKJ4DSK0H3SQ6CMJ1456&social\\_share=cm\\_sw\\_r\\_ffobk\\_cso\\_cp\\_apin\\_dp\\_HKJ4DSK0H3SQ6CMJ1456&bestFormat=true&titleSource=true\nPreview",
+      "content": "",
+      "content_html": "",
       "media": [
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NzI5L2NjNTBjNDFjNjQ1ZjkyZGMuanBn",
@@ -73,9 +73,9 @@
       "favourites_count": 1880,
       "reblogs_count": 411,
       "replies_count": 93,
-      "content_zh_cn": "Tyrus became famous for saying, long before November 5th, 2024, \"Why we are talking about the 2024 Presidential Election? It's OVER. TRUMP is going to win, and everyone knows it. It's a waste of time to talk about it. They're not going to beat him, and they never will.\" He was right! In his incredible Book, Tyrus tells the true story of the 2024 Presidential Election, with his own unique insights, strongly rooted in Common Sense and Love for our Country. This Book is fantastic — Enjoy! https://www.amazon.com/dp/B0FP5KNYMC?ref=cm\\_sw\\_r\\_ffobk\\_cso\\_cp\\_apin\\_dp\\_HKJ4DSK0H3SQ6CMJ1456&ref\\_=cm\\_sw\\_r\\_ffobk\\_cso\\_cp\\_apin\\_dp\\_HKJ4DSK0H3SQ6CMJ1456&social\\_share=cm\\_sw\\_r\\_ffobk\\_cso\\_cp\\_apin\\_dp\\_HKJ4DSK0H3SQ6CMJ1456&bestFormat=true&titleSource=true\nPreview",
-      "content_zh_hk": "Tyrus became famous for saying, long before November 5th, 2024, \"Why we are talking about the 2024 Presidential Election? It's OVER. TRUMP is going to win, and everyone knows it. It's a waste of time to talk about it. They're not going to beat him, and they never will.\" He was right! In his incredible Book, Tyrus tells the true story of the 2024 Presidential Election, with his own unique insights, strongly rooted in Common Sense and Love for our Country. This Book is fantastic — Enjoy! https://www.amazon.com/dp/B0FP5KNYMC?ref=cm\\_sw\\_r\\_ffobk\\_cso\\_cp\\_apin\\_dp\\_HKJ4DSK0H3SQ6CMJ1456&ref\\_=cm\\_sw\\_r\\_ffobk\\_cso\\_cp\\_apin\\_dp\\_HKJ4DSK0H3SQ6CMJ1456&social\\_share=cm\\_sw\\_r\\_ffobk\\_cso\\_cp\\_apin\\_dp\\_HKJ4DSK0H3SQ6CMJ1456&bestFormat=true&titleSource=true\nPreview",
-      "content_ko": "Tyrus became famous for saying, long before November 5th, 2024, \"Why we are talking about the 2024 Presidential Election? It's OVER. TRUMP is going to win, and everyone knows it. It's a waste of time to talk about it. They're not going to beat him, and they never will.\" He was right! In his incredible Book, Tyrus tells the true story of the 2024 Presidential Election, with his own unique insights, strongly rooted in Common Sense and Love for our Country. This Book is fantastic — Enjoy! https://www.amazon.com/dp/B0FP5KNYMC?ref=cm\\_sw\\_r\\_ffobk\\_cso\\_cp\\_apin\\_dp\\_HKJ4DSK0H3SQ6CMJ1456&ref\\_=cm\\_sw\\_r\\_ffobk\\_cso\\_cp\\_apin\\_dp\\_HKJ4DSK0H3SQ6CMJ1456&social\\_share=cm\\_sw\\_r\\_ffobk\\_cso\\_cp\\_apin\\_dp\\_HKJ4DSK0H3SQ6CMJ1456&bestFormat=true&titleSource=true\nPreview",
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
       "source_hint": "stock.fengle.me"
     },
     {
@@ -110,8 +110,8 @@
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-06-18T08:27:29.671Z",
       "created_at_text": "Jun 18, 2026, 8:27 AM",
-      "content": "Preview\nPreview",
-      "content_html": "Preview\nPreview",
+      "content": "",
+      "content_html": "",
       "media": [
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NzMxLzk1NGY3YjJjMzEyNmM4MDMuanBn",
@@ -121,9 +121,9 @@
       "favourites_count": 1528,
       "reblogs_count": 265,
       "replies_count": 31,
-      "content_zh_cn": "Preview\nPreview",
-      "content_zh_hk": "Preview\nPreview",
-      "content_ko": "Preview\nPreview",
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
       "source_hint": "stock.fengle.me"
     },
     {
@@ -132,8 +132,8 @@
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-06-18T08:27:16.284Z",
       "created_at_text": "Jun 18, 2026, 8:27 AM",
-      "content": "THE SAVE AMERICA ACT!1\\. ALL VOTERS MUST SHOW PHOTO I.D. (IDENTIFICATION!).2\\. ALL VOTERS MUST SHOW PROOF OF CITIZENSHIP.3\\. NO MAIL-IN BALLOTS (EXCEPT FOR ILLNESS, DISABILITY, MILITARY, OR TRAVEL!).4\\. NO MEN IN WOMEN'S SPORTS.5\\. NO TRANSGENDER MUTILIZATION SURGERY ON OUR CHILDREN.",
-      "content_html": "THE SAVE AMERICA ACT!1\\. ALL VOTERS MUST SHOW PHOTO I.D. (IDENTIFICATION!).2\\. ALL VOTERS MUST SHOW PROOF OF CITIZENSHIP.3\\. NO MAIL-IN BALLOTS (EXCEPT FOR ILLNESS, DISABILITY, MILITARY, OR TRAVEL!).4\\. NO MEN IN WOMEN'S SPORTS.5\\. NO TRANSGENDER MUTILIZATION SURGERY ON OUR CHILDREN.",
+      "content": "Preview\nPreview\nPreview\nPreview",
+      "content_html": "Preview\nPreview\nPreview\nPreview",
       "media": [
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NzMyLzRjNjcyMDNhOWQ3N2I2YzIuanBn",
@@ -155,9 +155,9 @@
       "favourites_count": 1536,
       "reblogs_count": 371,
       "replies_count": 52,
-      "content_zh_cn": "THE SAVE AMERICA ACT!1\\. ALL VOTERS MUST SHOW PHOTO I.D. (IDENTIFICATION!).2\\. ALL VOTERS MUST SHOW PROOF OF CITIZENSHIP.3\\. NO MAIL-IN BALLOTS (EXCEPT FOR ILLNESS, DISABILITY, MILITARY, OR TRAVEL!).4\\. NO MEN IN WOMEN'S SPORTS.5\\. NO TRANSGENDER MUTILIZATION SURGERY ON OUR CHILDREN.",
-      "content_zh_hk": "THE SAVE AMERICA ACT!1\\. ALL VOTERS MUST SHOW PHOTO I.D. (IDENTIFICATION!).2\\. ALL VOTERS MUST SHOW PROOF OF CITIZENSHIP.3\\. NO MAIL-IN BALLOTS (EXCEPT FOR ILLNESS, DISABILITY, MILITARY, OR TRAVEL!).4\\. NO MEN IN WOMEN'S SPORTS.5\\. NO TRANSGENDER MUTILIZATION SURGERY ON OUR CHILDREN.",
-      "content_ko": "THE SAVE AMERICA ACT!1\\. ALL VOTERS MUST SHOW PHOTO I.D. (IDENTIFICATION!).2\\. ALL VOTERS MUST SHOW PROOF OF CITIZENSHIP.3\\. NO MAIL-IN BALLOTS (EXCEPT FOR ILLNESS, DISABILITY, MILITARY, OR TRAVEL!).4\\. NO MEN IN WOMEN'S SPORTS.5\\. NO TRANSGENDER MUTILIZATION SURGERY ON OUR CHILDREN.",
+      "content_zh_cn": "Preview\nPreview\nPreview\nPreview",
+      "content_zh_hk": "Preview\nPreview\nPreview\nPreview",
+      "content_ko": "Preview\nPreview\nPreview\nPreview",
       "source_hint": "stock.fengle.me"
     },
     {
