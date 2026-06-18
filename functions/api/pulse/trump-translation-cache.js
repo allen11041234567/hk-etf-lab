@@ -19,6 +19,16 @@ export const TRUMP_TRANSLATION_CACHE = {
     "content_zh_hk": "美國並沒有向伊朗支付3000億美元。那是假新聞！\n美國得到的只有成功、更低的油價和勝利。看看股市吧。\n民主黨人的宣傳伎倆正在上演！！！\n——總統DJT",
     "content_ko": "미국이 이란에 3,000억 달러를 지급했다는 일은 없다. 그건 가짜 뉴스다!\n미국에 있는 것은 오직 성공, 더 낮은 유가, 그리고 승리뿐이다. 증시를 보라.\n민주당의 선전이 작동하고 있다!!!\n— 대통령 DJT"
   },
+  "https://truthsocial.com/@realDonaldTrump/116772117261615722": {
+    "content_zh_cn": "转发 @realDonaldTrump：特朗普前经济顾问表示，与伊朗达成协议将为美国带来巨大的经济繁荣：https://justthenews.com/nation/free-speech/trumps-former-economist-says-iran-deal-means-big-economic-boom-us",
+    "content_zh_hk": "轉發 @realDonaldTrump：特朗普前經濟顧問表示，與伊朗達成協議將為美國帶來巨大的經濟繁榮：https://justthenews.com/nation/free-speech/trumps-former-economist-says-iran-deal-means-big-economic-boom-us",
+    "content_ko": "RT @realDonaldTrump 트럼프 전 경제고문은 이란과의 합의가 미국에 큰 경제 호황을 의미한다고 말했습니다: https://justthenews.com/nation/free-speech/trumps-former-economist-says-iran-deal-means-big-economic-boom-us"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116772115745401759": {
+    "content_zh_cn": "转发 @realDonaldTrumpUS\n加州联邦检察官怀疑，对选民欺诈的调查将最终提出指控：\nhttps://justthenews.com/government/courts-law/us-attorney-california-suspects-voter-fraud-investigation-will-result-charges",
+    "content_zh_hk": "轉發 @realDonaldTrumpUS\n加州聯邦檢察官懷疑，對選民欺詐的調查將最終提出檢控：\nhttps://justthenews.com/government/courts-law/us-attorney-california-suspects-voter-fraud-investigation-will-result-charges",
+    "content_ko": "리트윗 @realDonaldTrumpUS\n캘리포니아 연방검사는 유권자 사기 조사 결과 기소로 이어질 것으로 의심한다고 밝혔다:\nhttps://justthenews.com/government/courts-law/us-attorney-california-suspects-voter-fraud-investigation-will-result-charges"
+  },
   "https://truthsocial.com/@realDonaldTrump/116771467656011073": {
     "content_zh_cn": "石油正源源不断地供应，伊朗绝不能拥有核武器（世界将更安全！），股市强劲上扬，就业创下历史纪录，物价正在回落（更负担得起！）。我们的国家比以往任何时候都更强大、更安全，也更受尊重。“不客气！”——特朗普总统",
     "content_zh_hk": "石油正源源不絕地供應，伊朗絕不能擁有核武器（世界將更安全！），股市強勁上揚，就業創下歷史紀錄，物價正在回落（更負擔得起！）。我們的國家比以往任何時候都更強大、更安全，也更受尊重。「不客氣！」——特朗普總統",
@@ -39,10 +49,20 @@ export const TRUMP_TRANSLATION_CACHE = {
     "content_zh_hk": "這些蠢貨覺得我對伊朗還不夠強硬——可就在股市剛剛創下歷史新高、油價還在「暴跌」之際，他們要麼是嫉妒，要麼就是壞人，或者愚蠢。讓美國再次偉大！！！總統 DJT",
     "content_ko": "이 바보들은 내가 이란에 대해 충분히 강경하지 않았다고 생각하지만, 주식시장이 방금 사상 최고치를 기록했고 유가는 “폭락”하고 있는 지금, 그들은 질투심에 사로잡혔거나, 나쁜 사람들이거나, 아니면 멍청한 사람들이다. 미국을 다시 위대하게!!! 대통령 DJT"
   },
+  "https://truthsocial.com/@realDonaldTrump/116770165395319673": {
+    "content_zh_cn": "转发 @realDonaldTrump\n《拯救美国法案》！\n1. 所有选民都必须出示带照片的身份证件（身份证明！）。\n2. 所有选民都必须出示公民身份的证明。\n3. 不允许邮寄选票（疾病、残疾、军人或出行情况除外！）。\n4. 不允许男性参加女子体育项目。\n5. 不允许对我们的孩子进行跨性别相关的毁损性手术。",
+    "content_zh_hk": "轉發 @realDonaldTrump\n《拯救美國法案》！\n1. 所有選民都必須出示附照片的身份證明文件（身份證明！）。\n2. 所有選民都必須出示公民身份證明。\n3. 不允許郵寄選票（疾病、殘疾、軍人或出行情況除外！）。\n4. 不允許男性參加女子體育項目。\n5. 不允許對我們的孩子進行跨性別相關的毀損性手術。",
+    "content_ko": "리트윗 @realDonaldTrump\n미국을 구하자 법안!\n1. 모든 유권자는 반드시 사진이 부착된 신분증을 제시해야 합니다(신분 확인!).\n2. 모든 유권자는 반드시 시민권 증빙을 제시해야 합니다.\n3. 우편투표는 허용되지 않습니다(질병, 장애, 군 복무 또는 여행의 경우는 예외!).\n4. 남성의 여성 스포츠 참여는 허용되지 않습니다.\n5. 우리 아이들에게 트랜스젠더 관련 훼손적 수술을 해서는 안 됩니다."
+  },
   "https://truthsocial.com/@realDonaldTrump/116770163996850294": {
     "content_zh_cn": "特朗普称，欢迎中国和印度投资委内瑞拉石油业：https://www.bloomberg.com/news/articles/2026-02-01/trump-says-he-welcomes-china-india-investment-in-venezuela-oil",
     "content_zh_hk": "特朗普稱，歡迎中國和印度投資委內瑞拉石油業：https://www.bloomberg.com/news/articles/2026-02-01/trump-says-he-welcomes-china-india-investment-in-venezuela-oil",
     "content_ko": "트럼프, 중국과 인도의 베네수엘라 석유 부문 투자 환영: https://www.bloomberg.com/news/articles/2026-02-01/trump-says-he-welcomes-china-india-investment-in-venezuela-oil"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116770161935260082": {
+    "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116770160614131644",
+    "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116770160614131644",
+    "content_ko": "리트윗: https://truthsocial.com/users/realDonaldTrump/statuses/116770160614131644"
   },
   "https://truthsocial.com/@realDonaldTrump/116769886136736615": {
     "content_zh_cn": "“英勇”雕像——“战争艺术”雕像群之一——在我们伟大的内政部主持下，几乎已完成重新镀金。",
