@@ -1,4 +1,14 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116770180426363226": {
+    "content_zh_cn": "这些蠢货觉得我对伊朗还不够强硬——可就在股市刚刚创下历史新高、油价还在“暴跌”之际，他们要么是嫉妒，要么就是坏人，或者愚蠢。让美国再次伟大！！！总统 DJT",
+    "content_zh_hk": "這些蠢貨覺得我對伊朗還不夠強硬——可就在股市剛剛創下歷史新高、油價還在「暴跌」之際，他們要麼是嫉妒，要麼就是壞人，或者愚蠢。讓美國再次偉大！！！總統 DJT",
+    "content_ko": "이 바보들은 내가 이란에 대해 충분히 강경하지 않았다고 생각하지만, 주식시장이 방금 사상 최고치를 기록했고 유가는 “폭락”하고 있는 지금, 그들은 질투심에 사로잡혔거나, 나쁜 사람들이거나, 아니면 멍청한 사람들이다. 미국을 다시 위대하게!!! 대통령 DJT"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116770163996850294": {
+    "content_zh_cn": "特朗普称，欢迎中国和印度投资委内瑞拉石油业：https://www.bloomberg.com/news/articles/2026-02-01/trump-says-he-welcomes-china-india-investment-in-venezuela-oil",
+    "content_zh_hk": "特朗普稱，歡迎中國和印度投資委內瑞拉石油業：https://www.bloomberg.com/news/articles/2026-02-01/trump-says-he-welcomes-china-india-investment-in-venezuela-oil",
+    "content_ko": "트럼프, 중국과 인도의 베네수엘라 석유 부문 투자 환영: https://www.bloomberg.com/news/articles/2026-02-01/trump-says-he-welcomes-china-india-investment-in-venezuela-oil"
+  },
   "https://truthsocial.com/@realDonaldTrump/116769886136736615": {
     "content_zh_cn": "“英勇”雕像——“战争艺术”雕像群之一——在我们伟大的内政部主持下，几乎已完成重新镀金。",
     "content_zh_hk": "「英勇」雕像——「戰爭藝術」雕像群之一——在我們偉大的內政部主持下，幾乎已完成重新鍍金。",
