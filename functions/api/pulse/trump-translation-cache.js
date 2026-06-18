@@ -1,4 +1,14 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116769129718272146": {
+    "content_zh_cn": "早在2024年11月5日之前很久，Tyrus就因这样一句话而广为人知：“我们为什么还在谈论2024年总统选举？它已经结束了。TRUMP会赢，而且所有人都知道。这件事根本不值得浪费时间去讨论。他们不可能击败他，而且永远都做不到。”\n他说对了！\n\n在这本令人惊叹的书中，Tyrus以他独特的视角，讲述了2024年总统选举的真实故事，其观点深深植根于常识以及对我们国家的热爱。这本书非常精彩——尽情阅读！a.co/d/ef3e2av",
+    "content_zh_hk": "早在2024年11月5日之前很久，Tyrus就因這樣一句話而廣為人知：「我們為甚麼還在談論2024年總統大選？它已經結束了。TRUMP會贏，而且所有人都知道。這件事根本不值得浪費時間去討論。他們不可能擊敗他，而且永遠都做不到。」\n他說對了！\n\n在這本令人驚嘆的書中，Tyrus以他獨特的視角，講述了2024年總統大選的真實故事，其觀點深深植根於常識以及對我們國家的熱愛。這本書非常精彩——盡情閱讀！a.co/d/ef3e2av",
+    "content_ko": "타이러스는 2024년 11월 5일 훨씬 전부터 이렇게 말해 유명해졌습니다. “왜 우리가 2024년 대통령 선거를 이야기하나? 끝났다. TRUMP가 이길 것이고, 모두가 그것을 안다. 이 문제를 이야기하는 건 시간 낭비다. 그들은 그를 이기지 못할 것이고, 앞으로도 절대 못 한다.”\n그의 말이 맞았습니다!\n\n이 놀라운 책에서 타이러스는 자신만의 독특한 통찰로 2024년 대통령 선거의 진짜 이야기를 들려줍니다. 그 통찰은 상식과 우리나라에 대한 사랑에 깊이 뿌리를 두고 있습니다. 이 책은 정말 훌륭합니다 — 즐겁게 읽으세요! a.co/d/ef3e2av"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116769123459644540": {
+    "content_zh_cn": "埃德·加尔雷因向肯塔基州北部展示了他的真正实力：https://www.washingtonexaminer.com/opinion/columnists/4551998/ed-gallrein-shows-northern-kentucky-what-he-is-made-of/",
+    "content_zh_hk": "埃德·加爾雷因向肯塔基州北部展示了他的真正實力：https://www.washingtonexaminer.com/opinion/columnists/4551998/ed-gallrein-shows-northern-kentucky-what-he-is-made-of/",
+    "content_ko": "에드 갤레인이 노던 켄터키에 자신의 진면목을 보여줍니다: https://www.washingtonexaminer.com/opinion/columnists/4551998/ed-gallrein-shows-northern-kentucky-what-he-is-made-of/"
+  },
   "https://truthsocial.com/@realDonaldTrump/116768696093434401": {
     "content_zh_cn": "《拯救美国法案》！\n\n1. 所有选民都必须出示带照片的身份证件（身份证明！）。\n\n2. 所有选民都必须提供公民身份凭证。\n\n3. 禁止邮寄选票（疾病、残疾、军人服役或出行情况除外！）。\n\n4. 禁止男性参加女子体育赛事。\n\n5. 禁止对我们的孩子进行所谓的跨性别“变性”手术。",
     "content_zh_hk": "《拯救美國法案》！\n\n1. 所有選民都必須出示附照片的身份證明文件（身份證明！）。\n\n2. 所有選民都必須提供公民身分證明。\n\n3. 禁止郵寄選票（患病、殘疾、軍人服役或出行情況除外！）。\n\n4. 禁止男性參加女子體育賽事。\n\n5. 禁止對我們的孩子進行所謂的跨性別「變性」手術。",
