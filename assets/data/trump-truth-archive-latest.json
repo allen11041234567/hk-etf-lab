@@ -1,10 +1,44 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-19T14:20:30.615Z",
+  "fetchedAt": "2026-06-19T14:35:09.344Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
   "posts": [
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116777207736809151",
+      "url": "https://truthsocial.com/@realDonaldTrump/116777207736809151",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-19T14:19:40.158Z",
+      "created_at_text": "Jun 19, 2026, 2:19 PM",
+      "content": "RT @realDonaldTrumpWe didn't meet out of desperation, Iran did. They are FINISHED! We'll play out the 60 days. They get no money, not ten cents!",
+      "content_html": "RT @realDonaldTrumpWe didn't meet out of desperation, Iran did. They are FINISHED! We'll play out the 60 days. They get no money, not ten cents!",
+      "media": [],
+      "favourites_count": 0,
+      "reblogs_count": 0,
+      "replies_count": 0,
+      "content_zh_cn": "RT @realDonaldTrumpWe didn't meet out of desperation, Iran did. They are FINISHED! We'll play out the 60 days. They get no money, not ten cents!",
+      "content_zh_hk": "RT @realDonaldTrumpWe didn't meet out of desperation, Iran did. They are FINISHED! We'll play out the 60 days. They get no money, not ten cents!",
+      "content_ko": "RT @realDonaldTrumpWe didn't meet out of desperation, Iran did. They are FINISHED! We'll play out the 60 days. They get no money, not ten cents!",
+      "source_hint": "stock.fengle.me"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116777207460249864",
+      "url": "https://truthsocial.com/@realDonaldTrump/116777207460249864",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-19T14:19:35.944Z",
+      "created_at_text": "Jun 19, 2026, 2:19 PM",
+      "content": "RT @realDonaldTrumpThe War has diminished Iran! It doesn't, any longer, have an Air Force, a Navy, Antiaircraft Equipment, Radar, or practically anything else, and yet the Dumocrats say that Iran is better off now than it was four months ago. Can you imagine getting away with that??? How stupid can some people be??? President DJT",
+      "content_html": "RT @realDonaldTrumpThe War has diminished Iran! It doesn't, any longer, have an Air Force, a Navy, Antiaircraft Equipment, Radar, or practically anything else, and yet the Dumocrats say that Iran is better off now than it was four months ago. Can you imagine getting away with that??? How stupid can some people be??? President DJT",
+      "media": [],
+      "favourites_count": 0,
+      "reblogs_count": 0,
+      "replies_count": 0,
+      "content_zh_cn": "RT @realDonaldTrumpThe War has diminished Iran! It doesn't, any longer, have an Air Force, a Navy, Antiaircraft Equipment, Radar, or practically anything else, and yet the Dumocrats say that Iran is better off now than it was four months ago. Can you imagine getting away with that??? How stupid can some people be??? President DJT",
+      "content_zh_hk": "RT @realDonaldTrumpThe War has diminished Iran! It doesn't, any longer, have an Air Force, a Navy, Antiaircraft Equipment, Radar, or practically anything else, and yet the Dumocrats say that Iran is better off now than it was four months ago. Can you imagine getting away with that??? How stupid can some people be??? President DJT",
+      "content_ko": "RT @realDonaldTrumpThe War has diminished Iran! It doesn't, any longer, have an Air Force, a Navy, Antiaircraft Equipment, Radar, or practically anything else, and yet the Dumocrats say that Iran is better off now than it was four months ago. Can you imagine getting away with that??? How stupid can some people be??? President DJT",
+      "source_hint": "stock.fengle.me"
+    },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116776806511904791",
       "url": "https://truthsocial.com/@realDonaldTrump/116776806511904791",
@@ -14,9 +48,9 @@
       "content": "We didn't meet out of desperation, Iran did. They are FINISHED! We'll play out the 60 days. They get no money, not ten cents!",
       "content_html": "We didn't meet out of desperation, Iran did. They are FINISHED! We'll play out the 60 days. They get no money, not ten cents!",
       "media": [],
-      "favourites_count": 5789,
-      "reblogs_count": 1390,
-      "replies_count": 1051,
+      "favourites_count": 10397,
+      "reblogs_count": 2546,
+      "replies_count": 1884,
       "content_zh_cn": "不是我们急着要见面，而是伊朗急了。他们已经完了！我们会把这60天走完。他们一分钱都拿不到，连10美分也别想拿到！",
       "content_zh_hk": "不是我們急着要見面，而是伊朗急了。他們已經完了！我們會把這60天走完。他們一分錢都拿不到，連10美仙也別想拿到！",
       "content_ko": "우리가 다급해서 만난 게 아니다. 다급한 건 이란이었다. 그들은 끝났다! 우리는 이 60일을 끝까지 갈 것이다. 그들은 돈을 한 푼도 못 받는다, 10센트도 안 된다!",
@@ -31,9 +65,9 @@
       "content": "The War has diminished Iran! It doesn't, any longer, have an Air Force, a Navy, Antiaircraft Equipment, Radar, or practically anything else, and yet the Dumocrats say that Iran is better off now than it was four months ago. Can you imagine getting away with that??? How stupid can some people be??? President DJT",
       "content_html": "The War has diminished Iran! It doesn't, any longer, have an Air Force, a Navy, Antiaircraft Equipment, Radar, or practically anything else, and yet the Dumocrats say that Iran is better off now than it was four months ago. Can you imagine getting away with that??? How stupid can some people be??? President DJT",
       "media": [],
-      "favourites_count": 12848,
-      "reblogs_count": 2755,
-      "replies_count": 2103,
+      "favourites_count": 19790,
+      "reblogs_count": 4317,
+      "replies_count": 3132,
       "content_zh_cn": "这场战争削弱了伊朗！伊朗如今已不再拥有空军、海军、防空装备、雷达，几乎什么都不剩，可那些“蠢驴党”却说，伊朗现在比四个月前处境更好。你能想象这种话竟然也能蒙混过关吗??? 有些人到底能蠢到什么程度???\n唐纳德·J·特朗普总统",
       "content_zh_hk": "這場戰爭削弱了伊朗！伊朗如今已不再擁有空軍、海軍、防空裝備、雷達，幾乎甚麼都不剩，可那些「蠢驢黨」卻說，伊朗現在比四個月前處境更好。你能想像這種話竟然也能蒙混過關嗎??? 有些人到底能蠢到甚麼程度???\n特朗普總統",
       "content_ko": "전쟁은 이란을 약화시켰다! 이제 이란에는 공군도, 해군도, 대공 장비도, 레이더도, 사실상 그 밖의 거의 모든 것도 더는 없다. 그런데도 그 \"멍청한 민주당원들\"은 이란이 지금이 4개월 전보다 더 나은 형편이라고 말한다. 이런 말이 그냥 넘어갈 수 있다는 걸 상상할 수 있는가??? 어떤 사람들은 도대체 얼마나 멍청할 수 있는가???\n도널드 J. 트럼프 대통령",
@@ -48,9 +82,9 @@
       "content": "Iranian resistance leader, former national security aide praise Trump's deal with Tehran: https://justthenews.com/government/security/iranian-resistance-leader-former-national-security-aide-praise-trumps-mou",
       "content_html": "Iranian resistance leader, former national security aide praise Trump's deal with Tehran: https://justthenews.com/government/security/iranian-resistance-leader-former-national-security-aide-praise-trumps-mou",
       "media": [],
-      "favourites_count": 8492,
-      "reblogs_count": 2135,
-      "replies_count": 1029,
+      "favourites_count": 9108,
+      "reblogs_count": 2274,
+      "replies_count": 1049,
       "content_zh_cn": "伊朗反对派领袖、前国家安全顾问称赞特朗普与德黑兰达成的协议：https://justthenews.com/government/security/iranian-resistance-leader-former-national-security-aide-praise-trumps-mou",
       "content_zh_hk": "伊朗反對派領袖、前國家安全顧問讚揚特朗普與德黑蘭達成的協議：https://justthenews.com/government/security/iranian-resistance-leader-former-national-security-aide-praise-trumps-mou",
       "content_ko": "이란 반정부 지도자와 전 국가안보 보좌관, 트럼프의 테헤란 합의에 찬사: https://justthenews.com/government/security/iranian-resistance-leader-former-national-security-aide-praise-trumps-mou",
@@ -161,7 +195,7 @@
       "content_zh_cn": "美国致力于和平，我们鼓励中东地区各方继续坚定承诺，让我们的谈判得以顺利、美好地推进。市场正乐见油价大幅下行、股市大幅走高。我们预计各条战线都将实现全面停火，包括黎巴嫩、真主党和以色列。\n感谢各方对此事的关注！唐纳德·J·特朗普总统",
       "content_zh_hk": "美國致力於和平，我們鼓勵中東地區各方繼續堅定承諾，讓我們的談判得以順利、美好地推進。市場正樂見油價大幅下行、股市大幅走高。我們預計各條戰線都將實現全面停火，包括黎巴嫩、真主黨和以色列。\n感謝各方對此事的關注！特朗普總統 唐納德·J·特朗普",
       "content_ko": "미국은 평화에 전념하고 있으며, 우리는 중동 지역의 모든 당사자들이 우리의 협상이 아름답게 전개될 수 있도록 그 약속을 계속 유지해 주기를 권장합니다. 시장은 유가 급락과 증시 급등을 반기고 있습니다. 우리는 레바논, 헤즈볼라, 이스라엘을 포함한 모든 전선에서 완전한 휴전이 이뤄질 것으로 기대합니다.\n이 사안에 관심을 가져주셔서 감사합니다! 도널드 J. 트럼프 대통령",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116772135215188960",
@@ -178,7 +212,7 @@
       "content_zh_cn": "美国并没有向伊朗支付3000亿美元。那是假新闻！\n美国得到的只有成功、更低的油价和胜利。看看股市吧。\n民主党人的宣传伎俩正在上演！！！\n——总统DJT",
       "content_zh_hk": "美國並沒有向伊朗支付3000億美元。那是假新聞！\n美國得到的只有成功、更低的油價和勝利。看看股市吧。\n民主黨人的宣傳伎倆正在上演！！！\n——總統DJT",
       "content_ko": "미국이 이란에 3,000억 달러를 지급했다는 일은 없다. 그건 가짜 뉴스다!\n미국에 있는 것은 오직 성공, 더 낮은 유가, 그리고 승리뿐이다. 증시를 보라.\n민주당의 선전이 작동하고 있다!!!\n— 대통령 DJT",
-      "source_hint": "stock.fengle.me"
+      "source_hint": "cnn"
     },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116772117261615722",
@@ -314,54 +348,6 @@
       "content_zh_cn": "特朗普称，欢迎中国和印度投资委内瑞拉石油业：https://www.bloomberg.com/news/articles/2026-02-01/trump-says-he-welcomes-china-india-investment-in-venezuela-oil",
       "content_zh_hk": "特朗普稱，歡迎中國和印度投資委內瑞拉石油業：https://www.bloomberg.com/news/articles/2026-02-01/trump-says-he-welcomes-china-india-investment-in-venezuela-oil",
       "content_ko": "트럼프, 중국과 인도의 베네수엘라 석유 부문 투자 환영: https://www.bloomberg.com/news/articles/2026-02-01/trump-says-he-welcomes-china-india-investment-in-venezuela-oil",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116770162723287735",
-      "url": "https://truthsocial.com/@realDonaldTrump/116770162723287735",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-18T08:28:01.854Z",
-      "created_at_text": "Jun 18, 2026, 8:28 AM",
-      "content": "",
-      "content_html": "",
-      "media": [
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NzI5L2NjNTBjNDFjNjQ1ZjkyZGMuanBn",
-          "type": "image"
-        }
-      ],
-      "favourites_count": 10883,
-      "reblogs_count": 2361,
-      "replies_count": 390,
-      "content_zh_cn": "",
-      "content_zh_hk": "",
-      "content_ko": "",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116770161935260082",
-      "url": "https://truthsocial.com/@realDonaldTrump/116770161935260082",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-18T08:27:49.858Z",
-      "created_at_text": "Jun 18, 2026, 8:27 AM",
-      "content": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116770160614131644",
-      "content_html": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116770160614131644",
-      "media": [
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NzMwL2U2ZjdmMTc4NTZkYTNkMjMuanBn",
-          "type": "image"
-        },
-        {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NzMxLzk1NGY3YjJjMzEyNmM4MDMuanBn",
-          "type": "image"
-        }
-      ],
-      "favourites_count": 11362,
-      "reblogs_count": 2561,
-      "replies_count": 386,
-      "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116770160614131644",
-      "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116770160614131644",
-      "content_ko": "리트윗: https://truthsocial.com/users/realDonaldTrump/statuses/116770160614131644",
       "source_hint": "cnn"
     }
   ]
