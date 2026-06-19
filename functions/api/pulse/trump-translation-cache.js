@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116774618857147202": {
+    "content_zh_cn": "伊朗反对派领袖、前国家安全顾问称赞特朗普与德黑兰达成的协议：https://justthenews.com/government/security/iranian-resistance-leader-former-national-security-aide-praise-trumps-mou",
+    "content_zh_hk": "伊朗反對派領袖、前國家安全顧問讚揚特朗普與德黑蘭達成的協議：https://justthenews.com/government/security/iranian-resistance-leader-former-national-security-aide-praise-trumps-mou",
+    "content_ko": "이란 반정부 지도자와 전 국가안보 보좌관, 트럼프의 테헤란 합의에 찬사: https://justthenews.com/government/security/iranian-resistance-leader-former-national-security-aide-praise-trumps-mou"
+  },
   "https://truthsocial.com/@realDonaldTrump/116774169197004942": {
     "content_zh_cn": "“蠢主党”有一件事比共和党更擅长——作弊。让美国再次伟大！总统 唐纳德·J·特朗普",
     "content_zh_hk": "「蠢主黨」有一件事比共和黨更擅長——作弊。讓美國再次偉大！總統 當勞·J·特朗普",
