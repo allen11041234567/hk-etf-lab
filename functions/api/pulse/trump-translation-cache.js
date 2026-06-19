@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116775035111874680": {
+    "content_zh_cn": "UFC自由250！ 🇺🇸🦅",
+    "content_zh_hk": "UFC自由250！ 🇺🇸🦅",
+    "content_ko": "UFC 프리덤 250! 🇺🇸🦅"
+  },
   "https://truthsocial.com/@realDonaldTrump/116774618857147202": {
     "content_zh_cn": "伊朗反对派领袖、前国家安全顾问称赞特朗普与德黑兰达成的协议：https://justthenews.com/government/security/iranian-resistance-leader-former-national-security-aide-praise-trumps-mou",
     "content_zh_hk": "伊朗反對派領袖、前國家安全顧問讚揚特朗普與德黑蘭達成的協議：https://justthenews.com/government/security/iranian-resistance-leader-former-national-security-aide-praise-trumps-mou",
