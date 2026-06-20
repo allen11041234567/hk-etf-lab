@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-20T14:34:13.629Z",
+  "fetchedAt": "2026-06-20T14:49:17.745Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
@@ -11,8 +11,8 @@
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-06-20T14:12:35.571Z",
       "created_at_text": "Jun 20, 2026, 2:12 PM",
-      "content": "RT @realDonaldTrumpItalian Prime Minister Giorgia Meloni asked, over and over, for a picture with me during the G-7 meeting in France. She is doing poorly in Italy with her level of popularity, possibly because she turned down the United States of America, a Country that truly loves and protects Italy, when it came to denying Iran from obtaining or developing a Nuclear Weapon (But so did NATO, for that matter!). She wouldn't even let us use Italy's landing strips or runways, a great logistical inconvenience, and this despite the fact the U.S. contributes hundreds of Billions of Dollars a year to protect Italy, and other \"so-called\" NATO Allies. Now, after the United States defeated Iran militarily, she wants to be friends again in order to get her \"numbers up.\" No thanks!!! President DJT",
-      "content_html": "RT @realDonaldTrumpItalian Prime Minister Giorgia Meloni asked, over and over, for a picture with me during the G-7 meeting in France. She is doing poorly in Italy with her level of popularity, possibly because she turned down the United States of America, a Country that truly loves and protects Italy, when it came to denying Iran from obtaining or developing a Nuclear Weapon (But so did NATO, for that matter!). She wouldn't even let us use Italy's landing strips or runways, a great logistical inconvenience, and this despite the fact the U.S. contributes hundreds of Billions of Dollars a year to protect Italy, and other \"so-called\" NATO Allies. Now, after the United States defeated Iran militarily, she wants to be friends again in order to get her \"numbers up.\" No thanks!!! President DJT",
+      "content": "",
+      "content_html": "",
       "media": [
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi83ODIvODQyLzA3OC85MTUvMDMxL29yaWdpbmFsL2QyMzY4NzU1N2JjZTQ2YmIuanBn",
@@ -22,9 +22,9 @@
       "favourites_count": 1266,
       "reblogs_count": 302,
       "replies_count": 225,
-      "content_zh_cn": "RT @realDonaldTrumpItalian Prime Minister Giorgia Meloni asked, over and over, for a picture with me during the G-7 meeting in France. She is doing poorly in Italy with her level of popularity, possibly because she turned down the United States of America, a Country that truly loves and protects Italy, when it came to denying Iran from obtaining or developing a Nuclear Weapon (But so did NATO, for that matter!). She wouldn't even let us use Italy's landing strips or runways, a great logistical inconvenience, and this despite the fact the U.S. contributes hundreds of Billions of Dollars a year to protect Italy, and other \"so-called\" NATO Allies. Now, after the United States defeated Iran militarily, she wants to be friends again in order to get her \"numbers up.\" No thanks!!! President DJT",
-      "content_zh_hk": "RT @realDonaldTrumpItalian Prime Minister Giorgia Meloni asked, over and over, for a picture with me during the G-7 meeting in France. She is doing poorly in Italy with her level of popularity, possibly because she turned down the United States of America, a Country that truly loves and protects Italy, when it came to denying Iran from obtaining or developing a Nuclear Weapon (But so did NATO, for that matter!). She wouldn't even let us use Italy's landing strips or runways, a great logistical inconvenience, and this despite the fact the U.S. contributes hundreds of Billions of Dollars a year to protect Italy, and other \"so-called\" NATO Allies. Now, after the United States defeated Iran militarily, she wants to be friends again in order to get her \"numbers up.\" No thanks!!! President DJT",
-      "content_ko": "RT @realDonaldTrumpItalian Prime Minister Giorgia Meloni asked, over and over, for a picture with me during the G-7 meeting in France. She is doing poorly in Italy with her level of popularity, possibly because she turned down the United States of America, a Country that truly loves and protects Italy, when it came to denying Iran from obtaining or developing a Nuclear Weapon (But so did NATO, for that matter!). She wouldn't even let us use Italy's landing strips or runways, a great logistical inconvenience, and this despite the fact the U.S. contributes hundreds of Billions of Dollars a year to protect Italy, and other \"so-called\" NATO Allies. Now, after the United States defeated Iran militarily, she wants to be friends again in order to get her \"numbers up.\" No thanks!!! President DJT",
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
       "source_hint": "stock.fengle.me"
     },
     {
