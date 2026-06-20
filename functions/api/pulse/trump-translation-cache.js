@@ -9,6 +9,21 @@ export const TRUMP_TRANSLATION_CACHE = {
     "content_zh_hk": "事隔多年，即使曾奪普立茲獎，《紐約時報》再次把「通俄勾連」報道弄錯了：https://justthenews.com/accountability/media/pulitzer-prize-aside-new-york-times-keeps-getting-russia-collusion-factually",
     "content_ko": "퓰리처상을 받은 지 여러 해가 지났지만, 뉴욕타임스는 이번에도 러시아 내통 보도를 또다시 잘못 전했다: https://justthenews.com/accountability/media/pulitzer-prize-aside-new-york-times-keeps-getting-russia-collusion-factually"
   },
+  "https://truthsocial.com/@realDonaldTrump/116782422961737533": {
+    "content_zh_cn": "特朗普掌握着内塔尼亚胡岌岌可危连任前景的关键筹码：https://justthenews.com/government/white-house/softer-touch-or-no-endorsement-trump-holds-back-firm-blessing-israel-thin",
+    "content_zh_hk": "特朗普手握內塔尼亞胡岌岌可危連任前景的關鍵籌碼：https://justthenews.com/government/white-house/softer-touch-or-no-endorsement-trump-holds-back-firm-blessing-israel-thin",
+    "content_ko": "트럼프가 네타냐후의 위태로운 재선 가능성에 쥔 결정적 카드: https://justthenews.com/government/white-house/softer-touch-or-no-endorsement-trump-holds-back-firm-blessing-israel-thin"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116782421610429815": {
+    "content_zh_cn": "伊朗反对派领袖、前国家安全顾问助手称赞特朗普与德黑兰达成的协议：https://justthenews.com/government/security/iranian-resistance-leader-former-national-security-aide-praise-trumps-mou",
+    "content_zh_hk": "伊朗反對派領袖、前國家安全顧問助手讚揚特朗普與德黑蘭達成的協議：https://justthenews.com/government/security/iranian-resistance-leader-former-national-security-aide-praise-trumps-mou",
+    "content_ko": "이란 반정부 지도자와 전 국가안보 보좌관 보좌진이 트럼프의 테헤란과의 합의를 찬사했다: https://justthenews.com/government/security/iranian-resistance-leader-former-national-security-aide-praise-trumps-mou"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116782419844270788": {
+    "content_zh_cn": "拜登政府压下了一份举报投诉，指控福奇在疫情期间就相关问题向国会撒谎：https://justthenews.com/accountability/whistleblowers/biden-administration-buried-whistleblower-complaint-alleging-fauci",
+    "content_zh_hk": "拜登政府壓下了一份舉報投訴，指控福奇在疫情期間就相關問題向國會撒謊：https://justthenews.com/accountability/whistleblowers/biden-administration-buried-whistleblower-complaint-alleging-fauci",
+    "content_ko": "바이든 행정부가 팬데믹 기간 파우치가 의회에 거짓말을 했다는 내부고발 민원을 묵살했다: https://justthenews.com/accountability/whistleblowers/biden-administration-buried-whistleblower-complaint-alleging-fauci"
+  },
   "https://truthsocial.com/@realDonaldTrump/116782416835973120": {
     "content_zh_cn": "意大利总理焦尔吉娅·梅洛尼在法国举行的G-7会议期间，一再要求与我合影。她目前在意大利的支持率表现不佳，可能是因为在阻止伊朗获得或发展核武器这一问题上，她拒绝支持美利坚合众国——一个真正热爱并保护意大利的国家（不过，北约在这件事上也是如此！）。她甚至不允许我们使用意大利的着陆带或跑道，这在后勤上造成了极大不便；尽管美国每年花费数千亿美元来保护意大利，以及其他所谓的“北约盟友”。现在，在美国在军事上击败伊朗之后，她又想重新做朋友，好让她的“民调数字回升”。不，谢了！！！\n特朗普总统",
     "content_zh_hk": "意大利總理焦爾吉婭·梅洛尼在法國舉行的G-7會議期間，一再要求與我合照。她目前在意大利的支持率表現欠佳，可能是因為在阻止伊朗取得或發展核武器這件事上，她拒絕支持美利堅合眾國——一個真正熱愛並保護意大利的國家（不過，北約在這件事上也是如此！）。她甚至不允許我們使用意大利的著陸帶或跑道，這在後勤上造成極大不便；儘管美國每年花費數千億美元來保護意大利，以及其他所謂的「北約盟友」。現在，在美國在軍事上擊敗伊朗之後，她又想重新做朋友，好讓她的「民調數字回升」。不，謝了！！！\n特朗普總統",
