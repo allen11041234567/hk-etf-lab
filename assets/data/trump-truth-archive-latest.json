@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-20T02:33:17.600Z",
+  "fetchedAt": "2026-06-20T02:49:19.344Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
@@ -50,8 +50,8 @@
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-06-19T21:47:41.675Z",
       "created_at_text": "Jun 19, 2026, 9:47 PM",
-      "content": "Very popular agreement, except for the Fake News and their partner, the Dumocrats!\nPreview",
-      "content_html": "Very popular agreement, except for the Fake News and their partner, the Dumocrats!\nPreview",
+      "content": "",
+      "content_html": "",
       "media": [
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NzU1LzQ3MTdiMzlmN2ExNGM1YTYuanBn",
@@ -61,9 +61,9 @@
       "favourites_count": 11369,
       "reblogs_count": 2529,
       "replies_count": 1218,
-      "content_zh_cn": "Very popular agreement, except for the Fake News and their partner, the Dumocrats!\nPreview",
-      "content_zh_hk": "Very popular agreement, except for the Fake News and their partner, the Dumocrats!\nPreview",
-      "content_ko": "Very popular agreement, except for the Fake News and their partner, the Dumocrats!\nPreview",
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
       "source_hint": "stock.fengle.me"
     },
     {
