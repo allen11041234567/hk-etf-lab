@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116784450971912162": {
+    "content_zh_cn": "美国国家公园警察已逮捕多人，他们涉嫌破坏我们国家宏伟的倒影池。谁会做这种事？这属于非常严重的犯罪，涉及对国家纪念设施的破坏。要坐很多年的牢！修复工作将立即展开。总统 DJT",
+    "content_zh_hk": "美國國家公園警察已拘捕多人，他們涉嫌破壞我們國家宏偉的倒影池。誰會做這種事？這屬於非常嚴重的罪行，涉及對國家紀念設施的破壞。要坐很多年監！修復工作將立即展開。總統 DJT",
+    "content_ko": "미국 국립공원경찰이 우리나라의 웅장한 리플렉팅 풀을 훼손한 혐의로 여러 명을 체포했습니다. 누가 이런 일을 하겠습니까? 이는 국가 기념물을 파괴하는 것과 관련된 매우 중대한 범죄입니다. 수년간 감옥에 가게 될 것입니다! 복구 작업은 즉시 시작될 것입니다. 대통령 DJT"
+  },
   "https://truthsocial.com/@realDonaldTrump/116784267172845354": {
     "content_zh_cn": "前奥运选手因涉嫌破坏倒影池被捕：https://www.dailymail.com/news/article-15916401/amp/olympian-lincoln-memorial-reflecting-pool-vandalism.html",
     "content_zh_hk": "前奧運選手因涉嫌破壞倒影池被捕：https://www.dailymail.com/news/article-15916401/amp/olympian-lincoln-memorial-reflecting-pool-vandalism.html",
