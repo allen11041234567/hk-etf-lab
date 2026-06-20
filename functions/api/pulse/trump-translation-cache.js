@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116782997575708953": {
+    "content_zh_cn": "民调：你更喜欢哪个，Dumocrat 还是 Dumbocrat？一种情况下，你只需把“e”换成“u”，简单又精准（很多人不知道，或者想当然地以为，DUMB 是以“b”结尾的）。另一种情况下，则是把 DUMB 直接完整拼出来，但这样一来，似乎又损失了一些与 Democrats 的对应识别度。哪个更好？\n\n感谢大家关注这一非常重要的事项！DJT 总统",
+    "content_zh_hk": "民調：你更喜歡哪個，Dumocrat 還是 Dumbocrat？一種情況下，你只需把「e」換成「u」，簡單又精準（很多人不知道，或者想當然地以為，DUMB 是以「b」結尾的）。另一種情況下，則是把 DUMB 直接完整拼出來，但這樣一來，似乎又損失了一些與 Democrats 的對應辨識度。哪個更好？\n\n感謝大家關注這一非常重要的事項！DJT 總統",
+    "content_ko": "여론조사: Dumocrat와 Dumbocrat 중 어느 쪽이 더 낫다고 보십니까? 한쪽은 “e”를 “u”로 바꾸기만 하면 되니, 아주 간단하고 정확합니다(많은 사람들은 DUMB가 “b”로 끝난다는 사실을 모르거나, 그렇게 여깁니다). 다른 한쪽은 DUMB를 아예 그대로 다 쓰는 방식이지만, 이렇게 하면 Democrats와의 동일성이 다소 약해지는 것처럼 보입니다. 어느 쪽이 더 낫습니까?\n\n이 매우 중요한 사안에 관심 가져주셔서 감사합니다! DJT 대통령"
+  },
   "https://truthsocial.com/@realDonaldTrump/116782425705942065": {
     "content_zh_cn": "一边声称要打击腐败，纽森一边向特殊利益集团募集了3.4亿美元，为其盟友输送利益：https://justthenews.com/accountability/political-ethics/newsom-alleges-trump-corruption-while-soliciting-more-340m",
     "content_zh_hk": "一邊聲稱要打擊腐敗，紐森一邊向特殊利益集團籌集了3.4億美元，為其盟友輸送利益：https://justthenews.com/accountability/political-ethics/newsom-alleges-trump-corruption-while-soliciting-more-340m",
