@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116784267172845354": {
+    "content_zh_cn": "前奥运选手因涉嫌破坏倒影池被捕：https://www.dailymail.com/news/article-15916401/amp/olympian-lincoln-memorial-reflecting-pool-vandalism.html",
+    "content_zh_hk": "前奧運選手因涉嫌破壞倒影池被捕：https://www.dailymail.com/news/article-15916401/amp/olympian-lincoln-memorial-reflecting-pool-vandalism.html",
+    "content_ko": "전직 올림픽 선수가 리플렉팅 풀 훼손 혐의로 체포됐다: https://www.dailymail.com/news/article-15916401/amp/olympian-lincoln-memorial-reflecting-pool-vandalism.html"
+  },
   "https://truthsocial.com/@realDonaldTrump/116784032456610294": {
     "content_zh_cn": "在停火期间，霍尔木兹海峡将在60天内不收取任何通行费；60天期满后，也将继续不收取任何通行费，除非协议未能达成，则可由美利坚合众国为了向中东各国提供“守护天使”服务，并就过去、现在及未来的成本予以追偿，而征收相关费用。感谢大家对此事的关注！！！\nDJT总统",
     "content_zh_hk": "在停火期間，霍爾木茲海峽將在60天內不收取任何通行費；60天期滿後，也將繼續不收取任何通行費，除非協議未能達成，則可由美利堅合眾國為了向中東各國提供「守護天使」服務，並就過去、現在及未來的成本予以追償，而徵收相關費用。感謝大家對此事的關注！！！\nDJT總統",
