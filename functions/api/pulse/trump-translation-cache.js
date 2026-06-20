@@ -1,4 +1,19 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116782425705942065": {
+    "content_zh_cn": "一边声称要打击腐败，纽森一边向特殊利益集团募集了3.4亿美元，为其盟友输送利益：https://justthenews.com/accountability/political-ethics/newsom-alleges-trump-corruption-while-soliciting-more-340m",
+    "content_zh_hk": "一邊聲稱要打擊腐敗，紐森一邊向特殊利益集團籌集了3.4億美元，為其盟友輸送利益：https://justthenews.com/accountability/political-ethics/newsom-alleges-trump-corruption-while-soliciting-more-340m",
+    "content_ko": "부패 척결을 주장하면서도, 뉴섬은 자신의 동맹들을 위해 특수이익단체들로부터 3억4천만 달러를 모금했다: https://justthenews.com/accountability/political-ethics/newsom-alleges-trump-corruption-while-soliciting-more-340m"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116782424333689013": {
+    "content_zh_cn": "时隔多年，即便拿过普利策奖，《纽约时报》再次把“俄罗斯勾连”报道搞错了：https://justthenews.com/accountability/media/pulitzer-prize-aside-new-york-times-keeps-getting-russia-collusion-factually",
+    "content_zh_hk": "事隔多年，即使曾奪普立茲獎，《紐約時報》再次把「通俄勾連」報道弄錯了：https://justthenews.com/accountability/media/pulitzer-prize-aside-new-york-times-keeps-getting-russia-collusion-factually",
+    "content_ko": "퓰리처상을 받은 지 여러 해가 지났지만, 뉴욕타임스는 이번에도 러시아 내통 보도를 또다시 잘못 전했다: https://justthenews.com/accountability/media/pulitzer-prize-aside-new-york-times-keeps-getting-russia-collusion-factually"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116782416835973120": {
+    "content_zh_cn": "意大利总理焦尔吉娅·梅洛尼在法国举行的G-7会议期间，一再要求与我合影。她目前在意大利的支持率表现不佳，可能是因为在阻止伊朗获得或发展核武器这一问题上，她拒绝支持美利坚合众国——一个真正热爱并保护意大利的国家（不过，北约在这件事上也是如此！）。她甚至不允许我们使用意大利的着陆带或跑道，这在后勤上造成了极大不便；尽管美国每年花费数千亿美元来保护意大利，以及其他所谓的“北约盟友”。现在，在美国在军事上击败伊朗之后，她又想重新做朋友，好让她的“民调数字回升”。不，谢了！！！\n特朗普总统",
+    "content_zh_hk": "意大利總理焦爾吉婭·梅洛尼在法國舉行的G-7會議期間，一再要求與我合照。她目前在意大利的支持率表現欠佳，可能是因為在阻止伊朗取得或發展核武器這件事上，她拒絕支持美利堅合眾國——一個真正熱愛並保護意大利的國家（不過，北約在這件事上也是如此！）。她甚至不允許我們使用意大利的著陸帶或跑道，這在後勤上造成極大不便；儘管美國每年花費數千億美元來保護意大利，以及其他所謂的「北約盟友」。現在，在美國在軍事上擊敗伊朗之後，她又想重新做朋友，好讓她的「民調數字回升」。不，謝了！！！\n特朗普總統",
+    "content_ko": "이탈리아 총리 조르자 멜로니는 프랑스에서 열린 G-7 회의 기간 내내 저와 사진을 찍자고 거듭 요청했습니다. 그녀는 현재 이탈리아에서 지지율이 좋지 않은데, 이는 이란의 핵무기 획득 또는 개발을 막는 문제에서 진정으로 이탈리아를 사랑하고 보호하는 나라, 미합중국의 뜻을 거부했기 때문일 수 있습니다(하지만 그 점에서는 NATO도 마찬가지였습니다!). 그녀는 심지어 우리가 이탈리아의 착륙장이나 활주로를 사용하는 것조차 허용하지 않았고, 이는 물류 측면에서 엄청난 불편을 초래했습니다. 그럼에도 미국은 이탈리아와 다른 이른바 “NATO 동맹국들”을 보호하기 위해 매년 수천억 달러를 쓰고 있습니다. 이제 미국이 군사적으로 이란을 격파한 뒤, 그녀는 자신의 “숫자”를 다시 끌어올리기 위해 또다시 친구가 되기를 원합니다. 사양하겠습니다!!!\nDJT 대통령"
+  },
   "https://truthsocial.com/@realDonaldTrump/116782304422351399": {
     "content_zh_cn": "真是可笑，民主党那些“蠢货”总爱说，尽管伊朗在军事上已经被击败，海军和空军全无，但其如今的处境却比三个月前更强。这就是我为什么称他们为“蠢货民主党”！！！\n\n总统 DJT",
     "content_zh_hk": "真是可笑，民主黨那些「蠢貨」總愛說，儘管伊朗在軍事上已被擊敗，海軍和空軍全無，但其如今的處境卻比三個月前更強。這就是我為甚麼稱他們為「蠢貨民主黨」！！！\n\n總統 DJT",
