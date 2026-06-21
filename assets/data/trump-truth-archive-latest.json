@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-21T20:18:06.576Z",
+  "fetchedAt": "2026-06-21T20:34:02.304Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
@@ -11,8 +11,8 @@
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-06-21T20:02:03.023Z",
       "created_at_text": "Jun 21, 2026, 8:02 PM",
-      "content": "After spending Trillions of Dollars on NATO, Italy, and its Prime Minister, wouldn't even think of becoming involved with the Islamic Republic of Iran and their very serious Nuclear Threat. For decades, we defend them but, when tested, they are not there to defend us, and the rest of the World. Not good! President DONALD J. TRUMP",
-      "content_html": "After spending Trillions of Dollars on NATO, Italy, and its Prime Minister, wouldn't even think of becoming involved with the Islamic Republic of Iran and their very serious Nuclear Threat. For decades, we defend them but, when tested, they are not there to defend us, and the rest of the World. Not good! President DONALD J. TRUMP",
+      "content": "",
+      "content_html": "",
       "media": [
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NzYzLzUzZmYxZjZmYzU5NzU4MWEuanBn",
@@ -22,9 +22,9 @@
       "favourites_count": 1720,
       "reblogs_count": 471,
       "replies_count": 210,
-      "content_zh_cn": "After spending Trillions of Dollars on NATO, Italy, and its Prime Minister, wouldn't even think of becoming involved with the Islamic Republic of Iran and their very serious Nuclear Threat. For decades, we defend them but, when tested, they are not there to defend us, and the rest of the World. Not good! President DONALD J. TRUMP",
-      "content_zh_hk": "After spending Trillions of Dollars on NATO, Italy, and its Prime Minister, wouldn't even think of becoming involved with the Islamic Republic of Iran and their very serious Nuclear Threat. For decades, we defend them but, when tested, they are not there to defend us, and the rest of the World. Not good! President DONALD J. TRUMP",
-      "content_ko": "After spending Trillions of Dollars on NATO, Italy, and its Prime Minister, wouldn't even think of becoming involved with the Islamic Republic of Iran and their very serious Nuclear Threat. For decades, we defend them but, when tested, they are not there to defend us, and the rest of the World. Not good! President DONALD J. TRUMP",
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
       "source_hint": "stock.fengle.me"
     },
     {
@@ -157,8 +157,8 @@
       "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
       "created_at": "2026-06-21T00:08:02.493Z",
       "created_at_text": "Jun 21, 2026, 12:08 AM",
-      "content": "",
-      "content_html": "",
+      "content": "Great daughter. MyHonor!!! President DJT\nPreview",
+      "content_html": "Great daughter. MyHonor!!! President DJT\nPreview",
       "media": [
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2NzYwLzBjZjE4OTI0ODE4NWIwODUucG5n",
@@ -168,9 +168,9 @@
       "favourites_count": 17476,
       "reblogs_count": 4761,
       "replies_count": 1034,
-      "content_zh_cn": "",
-      "content_zh_hk": "",
-      "content_ko": "",
+      "content_zh_cn": "Great daughter. MyHonor!!! President DJT\nPreview",
+      "content_zh_hk": "Great daughter. MyHonor!!! President DJT\nPreview",
+      "content_ko": "Great daughter. MyHonor!!! President DJT\nPreview",
       "source_hint": "stock.fengle.me"
     },
     {
