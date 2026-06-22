@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex,nofollow,noarchive" />
+  <title>利亨元提金计算器</title>
+  <style>
+    :root { --bg:#0d1015; --bg-soft:#141923; --card:rgba(255,255,255,0.05); --card-strong:rgba(255,255,255,0.08); --line:rgba(229,197,128,0.18); --line-strong:rgba(229,197,128,0.34); --text:#f7f2e8; --muted:#b8ad99; --gold:#e7c98b; --gold-strong:#f2d7a6; --accent:#d8b56d; --shadow:0 24px 70px rgba(0,0,0,0.35); --font-body:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; --font-display:"Iowan Old Style","Palatino Linotype","Times New Roman","Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",serif; }
+    * { box-sizing:border-box; } html { scroll-behavior:smooth; }
+    body { margin:0; min-height:100vh; color:var(--text); background:radial-gradient(circle at top right, rgba(231,201,139,0.12), transparent 28%), radial-gradient(circle at top left, rgba(231,201,139,0.06), transparent 22%), linear-gradient(180deg, #12161d 0%, #0d1015 46%, #090b0f 100%); font-family:var(--font-body); }
+    .wrap { width:min(1120px, calc(100vw - 28px)); margin:0 auto; padding:20px 0 48px; }
+    .hero, .panel { background:linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03)); border:1px solid var(--line); border-radius:28px; box-shadow:var(--shadow); backdrop-filter:blur(12px); }
+    .hero { padding:30px; position:relative; overflow:hidden; display:grid; grid-template-columns:1.25fr .9fr; gap:18px; margin-bottom:18px; }
+    .hero::after { content:''; position:absolute; inset:auto -45px -60px auto; width:260px; height:260px; background:radial-gradient(circle, rgba(231,201,139,0.20), transparent 66%); pointer-events:none; }
+    .eyebrow { display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; color:var(--gold); border:1px solid var(--line-strong); background:rgba(231,201,139,0.08); font-size:12px; letter-spacing:.12em; text-transform:uppercase; }
+    h1 { margin:18px 0 12px; font-size:clamp(30px, 4.4vw, 48px); line-height:1.08; letter-spacing:-0.03em; font-family:var(--font-display); font-weight:700; }
+    .hero-sub { color:var(--muted); font-size:15px; line-height:1.8; max-width:680px; }
+    .hero-note { margin-top:14px; color:var(--muted); font-size:12px; line-height:1.75; }
+    .scope-banner { margin-top:16px; padding:12px 14px; border-radius:16px; background:rgba(255,208,163,0.07); border:1px solid rgba(255,208,163,0.22); color:#ffe0bb; font-size:12px; line-height:1.75; }
+    .hero-side { display:grid; gap:14px; }
+    .mini-card { padding:20px; border-radius:22px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); }
+    .label { color:var(--muted); font-size:12px; letter-spacing:.08em; text-transform:uppercase; }
+    .value-xl { margin-top:10px; font-size:clamp(28px,4vw,38px); font-weight:700; letter-spacing:-.02em; font-family:var(--font-display); }
+    .subline { margin-top:8px; color:var(--muted); font-size:13px; line-height:1.75; }
+    .section { margin-top:18px; }
+    .section-head { display:flex; justify-content:space-between; gap:12px; align-items:end; margin-bottom:10px; }
+    .section-title { font-size:21px; font-weight:700; letter-spacing:-.02em; font-family:var(--font-display); }
+    .section-desc { color:var(--muted); font-size:13px; }
+    .pill { display:inline-flex; align-items:center; gap:8px; padding:7px 11px; border-radius:999px; font-size:12px; color:var(--muted); background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); }
+    .dot { width:8px; height:8px; border-radius:50%; background:var(--gold); box-shadow:0 0 0 5px rgba(231,201,139,0.12); }
+    .calculator { display:grid; grid-template-columns:1fr .95fr; gap:16px; }
+    .panel { padding:20px; }
+    .field { margin-top:14px; }
+    .field-label { display:block; margin-bottom:7px; color:var(--muted); font-size:12px; }
+    .control, select.control { width:100%; min-height:56px; border-radius:18px; border:1px solid var(--line-strong); background:rgba(255,255,255,0.04); color:var(--text); padding:0 16px; font-size:18px; font-weight:700; outline:none; }
+    select.control option { color:#111827; background:#ffffff; }
+    input.control { font-size:24px; letter-spacing:-.02em; }
+    .helper { margin-top:7px; color:var(--muted); font-size:11px; line-height:1.7; }
+    .formula { margin-top:14px; padding:14px 16px; border-radius:16px; background:rgba(255,255,255,0.025); border:1px solid rgba(255,255,255,0.06); color:var(--muted); font-size:12px; line-height:1.72; }
+    .items-list { display:grid; gap:12px; margin-top:16px; }
+    .item-row { padding:13px; border-radius:16px; border:1px solid rgba(255,255,255,0.07); background:rgba(255,255,255,0.03); }
+    .item-top { display:flex; justify-content:space-between; gap:12px; align-items:center; }
+    .item-title { font-size:15px; font-weight:700; }
+    .item-controls { display:grid; grid-template-columns:1.15fr .9fr auto; gap:10px; margin-top:12px; align-items:end; }
+    .btn-mini, .btn { min-height:42px; border-radius:14px; border:1px solid rgba(255,255,255,0.08); background:rgba(255,255,255,0.04); color:var(--text); padding:0 14px; font-size:12px; font-weight:700; cursor:pointer; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; }
+    .btn-mini:hover, .btn:hover { background:rgba(255,255,255,0.06); }
+    .btn.primary { color:#1a1712; background:linear-gradient(135deg,var(--gold-strong),var(--accent)); border:none; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:16px; }
+    .empty-note { margin-top:14px; color:var(--muted); font-size:13px; line-height:1.75; }
+    .hero-metrics { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; margin-top:16px; }
+    .savings-hero { padding:16px; border-radius:18px; border:1px solid var(--line-strong); background:rgba(231,201,139,0.085); }
+    .savings-title { color:var(--gold-strong); font-size:13px; letter-spacing:.08em; text-transform:uppercase; }
+    .savings-value { margin-top:8px; font-size:32px; font-weight:700; letter-spacing:-.02em; font-family:var(--font-display); }
+    .savings-sub { margin-top:8px; color:var(--muted); font-size:13px; line-height:1.8; }
+    .result-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:12px; margin-top:16px; }
+    .result-card { padding:14px; border-radius:16px; border:1px solid rgba(255,255,255,0.07); background:rgba(255,255,255,0.035); }
+    .result-label { color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.08em; }
+    .result-value { margin-top:8px; font-size:26px; font-weight:700; letter-spacing:-.02em; font-family:var(--font-display); }
+    .result-sub { margin-top:8px; color:var(--muted); font-size:12px; line-height:1.7; }
+    .note-list { display:grid; gap:10px; }.note-item { color:var(--muted); font-size:13px; line-height:1.78; }
+    @media (max-width: 960px) { .hero, .calculator { grid-template-columns:1fr; } .wrap { width:min(100vw - 18px, 1120px); padding:14px 0 32px; } .hero, .panel { border-radius:22px; } .hero, .panel { padding:18px; } }
+    @media (max-width: 720px) { .wrap { width:calc(100vw - 12px); padding:8px 0 22px; } .hero { gap:12px; margin-bottom:12px; } .hero, .panel { border-radius:18px; padding:16px; } h1 { margin:14px 0 10px; font-size:24px; } .hero-sub { font-size:13px; line-height:1.68; } .hero-note, .scope-banner, .subline, .section-desc, .result-sub, .helper, .note-item { font-size:11px; line-height:1.65; } .section-head { flex-direction:column; align-items:flex-start; gap:8px; } .section-title { font-size:18px; } .hero-metrics, .result-grid, .item-controls { grid-template-columns:1fr; } .control, select.control { min-height:50px; border-radius:14px; padding:0 13px; font-size:16px; } input.control { font-size:20px; } .value-xl { font-size:24px; } .result-value, .savings-value { font-size:22px; } .btn-mini, .btn { width:100%; } .item-top { align-items:flex-start; flex-direction:column; } .item-top .btn-mini { margin-top:6px; } .actions { flex-direction:column; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Li Heng Yuan Gold Calculator</div>
+        <h1>利亨元提金计算器</h1>
+        <div class="hero-sub">以伦敦金现货为基准，不收额外工费，直接按规格对应的加点比例报价。</div>
+        <div class="hero-note">支持 5g、10g、20g、50g、100g、200g、500g、1000g。页面价格均为参考金价，实际交易报价以现场交易为准。</div>
+        <div class="scope-banner">报价逻辑：≤50g 按伦敦价 +2%；>50g 且 ≤500g 按 +1.5%；>500g 按 +1%。</div>
+      </div>
+      <div class="hero-side">
+        <div class="mini-card"><div class="label">伦敦金现货（USD/oz）</div><div class="value-xl" id="hero-price">--</div><div class="subline" id="hero-updated">等待参考金价同步</div></div>
+        <div class="mini-card"><div class="label">利亨元规则</div><div class="value-xl">无工费</div><div class="subline">按规格对应的加点档位直接报价，无额外工费叠加。</div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><div><div class="section-title">利亨元快速报价</div><div class="section-desc">自由组合规格与块数，直接计算总重量、总金额与当前适用的加点档位。</div></div><div class="pill"><span class="dot"></span><span id="live-status">等待实时金价接口</span></div></div>
+      <div class="calculator">
+        <div class="panel">
+          <div class="label">添加规格与数量</div>
+          <div class="field"><label class="field-label" for="spec">规格</label><select id="spec" class="control"><option value="g5">5 g 金块</option><option value="g10">10 g 金块</option><option value="g20">20 g 金块</option><option value="g50">50 g 金块</option><option value="g100">100 g 金块</option><option value="g200">200 g 金块</option><option value="g500">500 g 金块</option><option value="g1000">1000 g 金块</option></select></div>
+          <div class="field"><label class="field-label" for="qty">块数</label><input id="qty" class="control" type="number" min="1" step="1" value="1" /><div class="helper">系统会按每个规格对应的加点档位逐行计算，再汇总总金额。</div></div>
+          <div class="field"><button class="btn-mini" id="add-item" type="button">加入本次报价</button></div>
+          <div class="items-list" id="items-list"></div>
+          <div class="empty-note" id="empty-note">默认已加入 1 行报价项，可继续叠加其他规格。</div>
+          <div class="formula">计算口径：单块金额 = 伦敦金价 × (1 + 加点比例) × 规格克重 / 31.1035。总金额 = 各行金额汇总。</div>
+        </div>
+
+        <div class="panel">
+          <div class="label">汇总报价结果</div>
+          <div class="hero-metrics">
+            <div class="savings-hero"><div class="savings-title">利亨元订单总额</div><div class="savings-value" id="headline-total">--</div><div class="savings-sub" id="headline-total-sub">按参考金价估算，实际交易报价以现场交易为准。</div></div>
+            <div class="savings-hero"><div class="savings-title">当前主档位</div><div class="savings-value" id="headline-tier">--</div><div class="savings-sub" id="headline-tier-sub">按每个规格单独判断加点档位。</div></div>
+          </div>
+          <div class="result-grid">
+            <div class="result-card"><div class="result-label">总重量</div><div class="result-value" id="total-weight-oz">--</div><div class="result-sub" id="total-weight-g">--</div></div>
+            <div class="result-card"><div class="result-label">总块数</div><div class="result-value" id="total-qty">--</div><div class="result-sub">全部规格合计</div></div>
+            <div class="result-card"><div class="result-label">金料基础总额</div><div class="result-value" id="base-total-usd">--</div><div class="result-sub" id="base-total-hkd">--</div></div>
+            <div class="result-card"><div class="result-label">加点后总额</div><div class="result-value" id="total-usd">--</div><div class="result-sub" id="total-hkd">--</div></div>
+            <div class="result-card" style="grid-column:1 / -1;"><div class="result-label">组合档位说明</div><div class="result-value" id="tier-mix">--</div><div class="result-sub" id="tier-mix-sub">--</div></div>
+          </div>
+          <div class="actions">
+            <a class="btn secondary" href="./lhy-gold-preorder.html">返回首页</a>
+            <a class="btn primary" href="#" id="continue-reservation">继续预约</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section"><div class="panel"><div class="note-list"><div class="note-item">页面价格均为参考金价，实际交易报价以现场交易为准。</div><div class="note-item">当前版本先完成利亨元测算与确认页，问卷链接后续再替换。</div></div></div></section>
+  </div>
+
+  <script>
+    const CONFIG = {
+      liveApi: '/api/gold/live', staticLiveJson: '/assets/data/gold-live.json', fxUsdHkd: 7.85, gramsPerOunce: 31.1035, refreshMs: 30000, storageKey: 'lhyGoldReservationDraft', confirmUrl: './lhy-gold-reservation-check.html',
+      specs: {
+        g5:{ key:'g5', label:'5 g 金块', grams:5 }, g10:{ key:'g10', label:'10 g 金块', grams:10 }, g20:{ key:'g20', label:'20 g 金块', grams:20 }, g50:{ key:'g50', label:'50 g 金块', grams:50 },
+        g100:{ key:'g100', label:'100 g 金块', grams:100 }, g200:{ key:'g200', label:'200 g 金块', grams:200 }, g500:{ key:'g500', label:'500 g 金块', grams:500 }, g1000:{ key:'g1000', label:'1000 g 金块', grams:1000 }
+      }
+    };
+    let livePayload = null;
+    let quoteItems = [{ id:`item-${Date.now()}`, specKey:'g5', quantity:1 }];
+    function money(n, digits = 2) { const value = Number(n); if (!Number.isFinite(value)) return '--'; return value.toLocaleString('en-HK', { minimumFractionDigits: digits, maximumFractionDigits: digits }); }
+    function getDraftQty() { const raw = Number(document.getElementById('qty').value || 0); if (!Number.isFinite(raw) || raw < 1) return 1; return Math.floor(raw); }
+    function getMarkupRate(grams) { if (grams <= 50) return 0.02; if (grams <= 500) return 0.015; return 0.01; }
+    function calcLine({ londonUsdOz, specGrams, quantity }) {
+      const unitOz = specGrams / CONFIG.gramsPerOunce;
+      const unitBaseUsd = londonUsdOz * unitOz;
+      const markupRate = getMarkupRate(specGrams);
+      const unitQuotedUsd = unitBaseUsd * (1 + markupRate);
+      return { unitOz, unitGrams: specGrams, quantity, totalOz: unitOz * quantity, totalGrams: specGrams * quantity, markupRate, unitBaseUsd, unitQuotedUsd, baseTotalUsd: unitBaseUsd * quantity, quotedTotalUsd: unitQuotedUsd * quantity };
+    }
+    function calcQuoteSummary() {
+      if (!livePayload?.ok || !Number.isFinite(livePayload.spot_usd_oz)) return null;
+      const londonUsdOz = Number(livePayload.spot_usd_oz);
+      const lines = quoteItems.map((item) => { const spec = CONFIG.specs[item.specKey] || CONFIG.specs.g5; return { ...item, spec, ...calcLine({ londonUsdOz, specGrams: spec.grams, quantity: item.quantity }) }; });
+      const totalQty = lines.reduce((sum, line) => sum + line.quantity, 0);
+      const totalOz = lines.reduce((sum, line) => sum + line.totalOz, 0);
+      const totalGrams = lines.reduce((sum, line) => sum + line.totalGrams, 0);
+      const baseTotalUsd = lines.reduce((sum, line) => sum + line.baseTotalUsd, 0);
+      const totalUsd = lines.reduce((sum, line) => sum + line.quotedTotalUsd, 0);
+      const rates = [...new Set(lines.map((line) => line.markupRate))].sort((a,b)=>a-b);
+      return { lines, totalQty, totalOz, totalGrams, baseTotalUsd, baseTotalHkd: baseTotalUsd * CONFIG.fxUsdHkd, totalUsd, totalHkd: totalUsd * CONFIG.fxUsdHkd, rateMix: rates, updatedAt: livePayload.updated_at || null };
+    }
+    function persistReservationDraft(summary) {
+      if (!summary) return;
+      const draft = { lines: summary.lines.map((line) => ({ label: line.spec.label, quantity: line.quantity, grams: line.spec.grams, markupRate: line.markupRate })), totalQty: summary.totalQty, totalOz: summary.totalOz, totalGrams: summary.totalGrams, totalUsd: summary.totalUsd, totalHkd: summary.totalHkd, rateMix: summary.rateMix, updatedAt: summary.updatedAt };
+      sessionStorage.setItem(CONFIG.storageKey, JSON.stringify(draft));
+    }
+    function renderItems(summary) {
+      const list = document.getElementById('items-list'); const emptyNote = document.getElementById('empty-note'); if (!summary || !summary.lines.length) { list.innerHTML=''; emptyNote.style.display='block'; return; }
+      emptyNote.style.display='none';
+      list.innerHTML = summary.lines.map((line) => `<div class="item-row"><div class="item-top"><div class="item-title">${line.spec.label} × ${line.quantity} 块</div><button class="btn-mini" type="button" data-remove-id="${line.id}">删除</button></div><div class="item-controls"><div><label class="field-label">规格</label><select class="control" data-spec-id="${line.id}">${Object.values(CONFIG.specs).map((spec) => `<option value="${spec.key}" ${spec.key === line.spec.key ? 'selected' : ''}>${spec.label}</option>`).join('')}</select></div><div><label class="field-label">块数</label><input class="control" type="number" min="1" step="1" value="${line.quantity}" data-qty-id="${line.id}" /></div><div class="helper">约 ${money(line.totalGrams, 2)} g，按伦敦价 + ${(line.markupRate*100).toFixed(1)}%</div></div></div>`).join('');
+    }
+    function renderSummary() {
+      const summary = calcQuoteSummary(); renderItems(summary); if (!summary) return;
+      const rateText = summary.rateMix.length === 1 ? `+${(summary.rateMix[0]*100).toFixed(1)}%` : summary.rateMix.map((r) => `+${(r*100).toFixed(1)}%`).join(' / ');
+      document.getElementById('total-weight-oz').textContent = `${money(summary.totalOz, 4)} oz`;
+      document.getElementById('total-weight-g').textContent = `约 ${money(summary.totalGrams, 2)} g`;
+      document.getElementById('total-qty').textContent = `${summary.totalQty}`;
+      document.getElementById('base-total-usd').textContent = `US$${money(summary.baseTotalUsd)}`;
+      document.getElementById('base-total-hkd').textContent = `约 HK$${money(summary.baseTotalHkd)}`;
+      document.getElementById('total-usd').textContent = `US$${money(summary.totalUsd)}`;
+      document.getElementById('total-hkd').textContent = `约 HK$${money(summary.totalHkd)}`;
+      document.getElementById('headline-total').textContent = `HK$${money(summary.totalHkd)}`;
+      document.getElementById('headline-total-sub').textContent = `约合 US$${money(summary.totalUsd)}，按参考金价估算，实际交易报价以现场交易为准。`;
+      document.getElementById('headline-tier').textContent = rateText;
+      document.getElementById('headline-tier-sub').textContent = summary.rateMix.length === 1 ? '当前组合全部落在同一报价档位。' : '当前组合跨多个规格档位，按每个规格分别加点。';
+      document.getElementById('tier-mix').textContent = rateText;
+      document.getElementById('tier-mix-sub').textContent = summary.lines.map((line) => `${line.spec.label} × ${line.quantity}：+${(line.markupRate*100).toFixed(1)}%`).join('；');
+      persistReservationDraft(summary);
+    }
+    function renderLive(payload) {
+      const status = document.getElementById('live-status');
+      if (!payload?.ok || !Number.isFinite(payload.spot_usd_oz)) { status.textContent = '参考金价暂不可用'; document.getElementById('hero-price').textContent = '--'; document.getElementById('hero-updated').textContent = '请稍后重试'; return; }
+      status.textContent = '参考金价已同步';
+      livePayload = payload;
+      document.getElementById('hero-price').textContent = `US$${money(payload.spot_usd_oz)}`;
+      document.getElementById('hero-updated').textContent = '汇率按 7.85 参考换算';
+      renderSummary();
+    }
+    async function fetchJsonWithFallback(primary, fallback) {
+      try { const resp = await fetch(primary, { headers: { accept:'application/json' }, cache:'no-store' }); if (!resp.ok) throw new Error(`HTTP ${resp.status}`); const payload = await resp.json(); if (!payload?.ok) throw new Error(payload?.error || 'primary not ok'); return payload; }
+      catch (_) { const resp = await fetch(fallback, { headers: { accept:'application/json' }, cache:'no-store' }); if (!resp.ok) throw new Error(`HTTP ${resp.status}`); return await resp.json(); }
+    }
+    async function loadLive() { try { const payload = await fetchJsonWithFallback(CONFIG.staticLiveJson, CONFIG.liveApi); renderLive(payload); } catch (error) { renderLive({ ok:false, error:error.message || String(error) }); } }
+    function addItem() { quoteItems.push({ id:`item-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`, specKey:document.getElementById('spec').value, quantity:getDraftQty() }); renderSummary(); }
+    document.getElementById('add-item').addEventListener('click', addItem);
+    document.getElementById('items-list').addEventListener('input', (event) => {
+      const specId = event.target.dataset.specId; const qtyId = event.target.dataset.qtyId;
+      if (specId) { const item = quoteItems.find((it) => it.id === specId); if (item) item.specKey = event.target.value; renderSummary(); }
+      if (qtyId) { const item = quoteItems.find((it) => it.id === qtyId); if (item) { const raw = Number(event.target.value || 1); item.quantity = Number.isFinite(raw) && raw >= 1 ? Math.floor(raw) : 1; } renderSummary(); }
+    });
+    document.getElementById('items-list').addEventListener('click', (event) => { const removeId = event.target.dataset.removeId; if (!removeId) return; if (quoteItems.length <= 1) return; quoteItems = quoteItems.filter((it) => it.id !== removeId); renderSummary(); });
+    document.getElementById('continue-reservation').addEventListener('click', (event) => { event.preventDefault(); const summary = calcQuoteSummary(); if (!summary) return; persistReservationDraft(summary); window.location.href = CONFIG.confirmUrl; });
+    loadLive(); setInterval(loadLive, CONFIG.refreshMs);
+  </script>
+</body>
+</html>
