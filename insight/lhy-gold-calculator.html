@@ -271,9 +271,26 @@
       document.getElementById('hero-updated').textContent = '汇率按 7.85 参考换算';
       renderSummary();
     }
-    async function fetchJsonWithFallback(primary, fallback) {
-      try { const resp = await fetch(primary, { headers: { accept:'application/json' }, cache:'no-store' }); if (!resp.ok) throw new Error(`HTTP ${resp.status}`); const payload = await resp.json(); if (!payload?.ok) throw new Error(payload?.error || 'primary not ok'); return payload; }
-      catch (_) { const resp = await fetch(fallback, { headers: { accept:'application/json' }, cache:'no-store' }); if (!resp.ok) throw new Error(`HTTP ${resp.status}`); return await resp.json(); }
+    async function fetchBestJson(primary, fallback) {
+      const fetchOne = async (url, requireOk = false) => {
+        const resp = await fetch(url, { headers: { accept:'application/json' }, cache:'no-store' });
+        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+        const payload = await resp.json();
+        if (requireOk && !payload?.ok) throw new Error(payload?.error || 'payload not ok');
+        return payload;
+      };
+      const [a, b] = await Promise.allSettled([
+        fetchOne(primary, true),
+        fetchOne(fallback, false),
+      ]);
+      const candidates = [a, b].filter((r) => r.status === 'fulfilled' && r.value).map((r) => r.value);
+      if (!candidates.length) throw new Error('all sources failed');
+      const score = (p) => {
+        const t = Date.parse(p?.updated_at || p?.snapshot_at || p?.fetchedAt || '');
+        return Number.isFinite(t) ? t : -1;
+      };
+      candidates.sort((x, y) => score(y) - score(x));
+      return candidates[0];
     }
     async function loadLive() { try { const payload = await fetchBestJson(CONFIG.liveApi, CONFIG.staticLiveJson); renderLive(payload); } catch (error) { renderLive({ ok:false, error:error.message || String(error) }); } }
     function addItem() { quoteItems.push({ id:`item-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`, specKey:document.getElementById('spec').value, quantity:getDraftQty() }); renderSummary(); }

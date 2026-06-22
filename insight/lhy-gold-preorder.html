@@ -131,16 +131,26 @@
       if (!Number.isFinite(value)) return '--';
       return value.toLocaleString('en-HK', { minimumFractionDigits: digits, maximumFractionDigits: digits });
     }
-    async function fetchJsonWithFallback(primary, fallback) {
-      try {
-        const resp = await fetch(primary, { headers: { accept:'application/json' }, cache:'no-store' });
+    async function fetchBestJson(primary, fallback) {
+      const fetchOne = async (url, requireOk = false) => {
+        const resp = await fetch(url, { headers: { accept:'application/json' }, cache:'no-store' });
         if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-        return await resp.json();
-      } catch (_) {
-        const resp = await fetch(fallback, { headers: { accept:'application/json' }, cache:'no-store' });
-        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-        return await resp.json();
-      }
+        const payload = await resp.json();
+        if (requireOk && !payload?.ok) throw new Error(payload?.error || 'payload not ok');
+        return payload;
+      };
+      const [a, b] = await Promise.allSettled([
+        fetchOne(primary, true),
+        fetchOne(fallback, false),
+      ]);
+      const candidates = [a, b].filter((r) => r.status === 'fulfilled' && r.value).map((r) => r.value);
+      if (!candidates.length) throw new Error('all sources failed');
+      const score = (p) => {
+        const t = Date.parse(p?.updated_at || p?.snapshot_at || p?.fetchedAt || '');
+        return Number.isFinite(t) ? t : -1;
+      };
+      candidates.sort((x, y) => score(y) - score(x));
+      return candidates[0];
     }
     function renderLive(payload) {
       if (!payload?.ok || !Number.isFinite(payload.spot_usd_oz)) {
