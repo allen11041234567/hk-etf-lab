@@ -314,8 +314,8 @@
         return await resp.json();
       }
     }
-    async function loadLive() { try { const payload = await fetchJsonWithFallback(CONFIG.staticLiveJson, CONFIG.liveApi); renderLive(payload); } catch (error) { renderLive({ ok:false, error:error.message || String(error) }); } }
-    async function loadJewellers() { try { const payload = await fetchJsonWithFallback(CONFIG.staticJewellersJson, CONFIG.jewellersApi); renderJewellers(payload); } catch (error) { renderJewellers({ ok:false, error:error.message || String(error) }); } }
+    async function loadLive() { try { const payload = await fetchJsonWithFallback(CONFIG.liveApi, CONFIG.staticLiveJson); renderLive(payload); } catch (error) { renderLive({ ok:false, error:error.message || String(error) }); } }
+    async function loadJewellers() { try { const payload = await fetchJsonWithFallback(CONFIG.jewellersApi, CONFIG.staticJewellersJson); renderJewellers(payload); } catch (error) { renderJewellers({ ok:false, error:error.message || String(error) }); } }
     function addItem() { quoteItems.push({ id:`item-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`, specKey:document.getElementById('spec').value, quantity:getDraftQty() }); renderSummary(); }
     function setMode(mode) {
       const manual = document.getElementById('manual-box');
