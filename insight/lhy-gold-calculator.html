@@ -81,7 +81,7 @@
         <h1>利亨元提金计算器</h1>
         <div class="hero-sub">以伦敦金现货为基准，不收额外工费，直接按规格对应的加点比例报价。</div>
         <div class="hero-note">支持 5g、10g、20g、50g、100g、200g、500g、1000g。页面价格均为参考金价，实际交易报价以现场交易为准。</div>
-        <div class="scope-banner">报价逻辑：≤50g 按伦敦价 +2%；>50g 且 ≤500g 按 +1.5%；>500g 按 +1%。</div>
+        <div class="scope-banner">报价逻辑：先按整单总重量判断档位。总重量 ≤50g 按伦敦价 +2%；>50g 且 ≤500g 按 +1.5%；>500g 按 +1%。</div>
       </div>
       <div class="hero-side">
         <div class="mini-card"><div class="label">伦敦金现货（USD/oz）</div><div class="value-xl" id="hero-price">--</div><div class="subline" id="hero-updated">等待参考金价同步</div></div>
@@ -111,19 +111,19 @@
           <div class="manual-box" id="manual-box">
             <div class="label" style="margin-top:16px;">添加规格与数量</div>
             <div class="field"><label class="field-label" for="spec">规格</label><select id="spec" class="control"><option value="g5">5 g 金块</option><option value="g10">10 g 金块</option><option value="g20">20 g 金块</option><option value="g50">50 g 金块</option><option value="g100">100 g 金块</option><option value="g200">200 g 金块</option><option value="g500">500 g 金块</option><option value="g1000">1000 g 金块</option></select></div>
-            <div class="field"><label class="field-label" for="qty">块数</label><input id="qty" class="control" type="number" min="1" step="1" value="1" /><div class="helper">系统会按每个规格对应的加点档位逐行计算，再汇总总金额。</div></div>
+            <div class="field"><label class="field-label" for="qty">块数</label><input id="qty" class="control" type="number" min="1" step="1" value="1" /><div class="helper">系统会先汇总整单总重量，再按总重量对应的单一档位统一计算总金额。</div></div>
             <div class="field"><button class="btn-mini" id="add-item" type="button">加入本次报价</button></div>
             <div class="items-list" id="items-list"></div>
             <div class="empty-note" id="empty-note">默认已加入 1 行报价项，可继续叠加其他规格。</div>
           </div>
-          <div class="formula">计算口径：单块金额 = 伦敦金价 × (1 + 加点比例) × 规格克重 / 31.1035。总金额 = 各行金额汇总。</div>
+          <div class="formula">计算口径：先合并全部规格的总重量，再按整单总重量对应的单一加点档位计算。总金额 = 伦敦金价 × (1 + 整单加点比例) × 总重量 / 31.1035。</div>
         </div>
 
         <div class="panel">
           <div class="label">汇总报价结果</div>
           <div class="hero-metrics">
             <div class="savings-hero"><div class="savings-title">利亨元订单总额</div><div class="savings-value" id="headline-total">--</div><div class="savings-sub" id="headline-total-sub">按参考金价估算，实际交易报价以现场交易为准。</div></div>
-            <div class="savings-hero"><div class="savings-title">当前主档位</div><div class="savings-value" id="headline-tier">--</div><div class="savings-sub" id="headline-tier-sub">按每个规格单独判断加点档位。</div></div>
+            <div class="savings-hero"><div class="savings-title">当前主档位</div><div class="savings-value" id="headline-tier">--</div><div class="savings-sub" id="headline-tier-sub">按整单总重量统一判断档位。</div></div>
           </div>
           <div class="result-grid">
             <div class="result-card"><div class="result-label">总重量</div><div class="result-value" id="total-weight-oz">--</div><div class="result-sub" id="total-weight-g">--</div></div>
@@ -159,9 +159,7 @@
     function calcLine({ londonUsdOz, specGrams, quantity }) {
       const unitOz = specGrams / CONFIG.gramsPerOunce;
       const unitBaseUsd = londonUsdOz * unitOz;
-      const markupRate = getMarkupRate(specGrams);
-      const unitQuotedUsd = unitBaseUsd * (1 + markupRate);
-      return { unitOz, unitGrams: specGrams, quantity, totalOz: unitOz * quantity, totalGrams: specGrams * quantity, markupRate, unitBaseUsd, unitQuotedUsd, baseTotalUsd: unitBaseUsd * quantity, quotedTotalUsd: unitQuotedUsd * quantity };
+      return { unitOz, unitGrams: specGrams, quantity, totalOz: unitOz * quantity, totalGrams: specGrams * quantity, unitBaseUsd, baseTotalUsd: unitBaseUsd * quantity };
     }
     function calcQuoteSummary() {
       if (!livePayload?.ok || !Number.isFinite(livePayload.spot_usd_oz)) return null;
@@ -171,19 +169,19 @@
       const totalOz = lines.reduce((sum, line) => sum + line.totalOz, 0);
       const totalGrams = lines.reduce((sum, line) => sum + line.totalGrams, 0);
       const baseTotalUsd = lines.reduce((sum, line) => sum + line.baseTotalUsd, 0);
-      const totalUsd = lines.reduce((sum, line) => sum + line.quotedTotalUsd, 0);
-      const rates = [...new Set(lines.map((line) => line.markupRate))].sort((a,b)=>a-b);
-      return { lines, totalQty, totalOz, totalGrams, baseTotalUsd, baseTotalHkd: baseTotalUsd * CONFIG.fxUsdHkd, totalUsd, totalHkd: totalUsd * CONFIG.fxUsdHkd, rateMix: rates, updatedAt: livePayload.updated_at || null };
+      const orderMarkupRate = getMarkupRate(totalGrams);
+      const totalUsd = baseTotalUsd * (1 + orderMarkupRate);
+      return { lines, totalQty, totalOz, totalGrams, baseTotalUsd, baseTotalHkd: baseTotalUsd * CONFIG.fxUsdHkd, totalUsd, totalHkd: totalUsd * CONFIG.fxUsdHkd, orderMarkupRate, updatedAt: livePayload.updated_at || null };
     }
     function persistReservationDraft(summary) {
       if (!summary) return;
-      const draft = { lines: summary.lines.map((line) => ({ label: line.spec.label, quantity: line.quantity, grams: line.spec.grams, markupRate: line.markupRate })), totalQty: summary.totalQty, totalOz: summary.totalOz, totalGrams: summary.totalGrams, totalUsd: summary.totalUsd, totalHkd: summary.totalHkd, rateMix: summary.rateMix, updatedAt: summary.updatedAt };
+      const draft = { lines: summary.lines.map((line) => ({ label: line.spec.label, quantity: line.quantity, grams: line.spec.grams })), totalQty: summary.totalQty, totalOz: summary.totalOz, totalGrams: summary.totalGrams, totalUsd: summary.totalUsd, totalHkd: summary.totalHkd, orderMarkupRate: summary.orderMarkupRate, updatedAt: summary.updatedAt };
       sessionStorage.setItem(CONFIG.storageKey, JSON.stringify(draft));
     }
     function renderItems(summary) {
       const list = document.getElementById('items-list'); const emptyNote = document.getElementById('empty-note'); if (!summary || !summary.lines.length) { list.innerHTML=''; emptyNote.style.display='block'; return; }
       emptyNote.style.display='none';
-      list.innerHTML = summary.lines.map((line) => `<div class="item-row"><div class="item-top"><div class="item-title">${line.spec.label} × ${line.quantity} 块</div><button class="btn-mini" type="button" data-remove-id="${line.id}">删除</button></div><div class="item-controls"><div><label class="field-label">规格</label><select class="control" data-spec-id="${line.id}">${Object.values(CONFIG.specs).map((spec) => `<option value="${spec.key}" ${spec.key === line.spec.key ? 'selected' : ''}>${spec.label}</option>`).join('')}</select></div><div><label class="field-label">块数</label><input class="control" type="number" min="1" step="1" value="${line.quantity}" data-qty-id="${line.id}" /></div><div class="helper">约 ${money(line.totalGrams, 2)} g，按伦敦价 + ${(line.markupRate*100).toFixed(1)}%</div></div></div>`).join('');
+      list.innerHTML = summary.lines.map((line) => `<div class="item-row"><div class="item-top"><div class="item-title">${line.spec.label} × ${line.quantity} 块</div><button class="btn-mini" type="button" data-remove-id="${line.id}">删除</button></div><div class="item-controls"><div><label class="field-label">规格</label><select class="control" data-spec-id="${line.id}">${Object.values(CONFIG.specs).map((spec) => `<option value="${spec.key}" ${spec.key === line.spec.key ? 'selected' : ''}>${spec.label}</option>`).join('')}</select></div><div><label class="field-label">块数</label><input class="control" type="number" min="1" step="1" value="${line.quantity}" data-qty-id="${line.id}" /></div><div class="helper">约 ${money(line.totalGrams, 2)} g，整单统一按总重量档位报价</div></div></div>`).join('');
     }
     function findBestRecommendation(budgetHkd) {
       if (!livePayload?.ok || !Number.isFinite(livePayload.spot_usd_oz) || !Number.isFinite(budgetHkd) || budgetHkd <= 0) return null;
@@ -193,7 +191,7 @@
       const maxBars = 20;
       const maxPerSpec = {};
       for (const spec of specs) {
-        const oneBarHkd = calcLine({ londonUsdOz, specGrams: spec.grams, quantity: 1 }).quotedTotalUsd * CONFIG.fxUsdHkd;
+        const oneBarHkd = calcLine({ londonUsdOz, specGrams: spec.grams, quantity: 1 }).baseTotalUsd * (1 + getMarkupRate(spec.grams)) * CONFIG.fxUsdHkd;
         maxPerSpec[spec.key] = Math.max(0, Math.min(maxBars, Math.floor(budgetHkd / oneBarHkd) + 1));
       }
       const keys = specs.map(s => s.key);
@@ -201,14 +199,16 @@
         if (idx === keys.length) {
           const totalQty = keys.reduce((sum,k)=>sum+(counts[k]||0),0);
           if (totalQty <= 0 || totalQty > maxBars) return;
-          let totalGrams = 0, totalUsd = 0;
+          let totalGrams = 0, baseTotalUsd = 0;
           for (const spec of specs) {
             const q = counts[spec.key] || 0;
             if (!q) continue;
             const line = calcLine({ londonUsdOz, specGrams: spec.grams, quantity: q });
             totalGrams += line.totalGrams;
-            totalUsd += line.quotedTotalUsd;
+            baseTotalUsd += line.baseTotalUsd;
           }
+          const orderMarkupRate = getMarkupRate(totalGrams);
+          const totalUsd = baseTotalUsd * (1 + orderMarkupRate);
           const totalHkd = totalUsd * CONFIG.fxUsdHkd;
           if (totalHkd > budgetHkd) return;
           const leftover = budgetHkd - totalHkd;
@@ -240,13 +240,13 @@
       const parts = Object.entries(best.counts).filter(([,q]) => q > 0).map(([k,q]) => `${CONFIG.specs[k].label} × ${q}`);
       mixEl.textContent = parts.join('，');
       summaryEl.innerHTML = `总块数 ${best.totalQty}<br>总重量 ${money(best.totalGrams, 2)} g<br>预计总额 HK$${money(best.totalHkd)}<br>剩余预算 HK$${money(best.leftover)}`;
-      reasonEl.textContent = '当前预算下，优先给出总克重更高、块数更少、预算利用率更高的组合。';
+      reasonEl.textContent = '当前预算下，优先给出总克重更高、块数更少、预算利用率更高的组合；整单统一按总重量所在档位报价。';
       applyBtn.disabled = false;
       applyBtn.dataset.reco = JSON.stringify(best);
     }
     function renderSummary() {
       const summary = calcQuoteSummary(); renderItems(summary); renderSmartRecommendation(); if (!summary) return;
-      const rateText = summary.rateMix.length === 1 ? `+${(summary.rateMix[0]*100).toFixed(1)}%` : summary.rateMix.map((r) => `+${(r*100).toFixed(1)}%`).join(' / ');
+      const rateText = `+${(summary.orderMarkupRate*100).toFixed(1)}%`;
       document.getElementById('total-weight-oz').textContent = `${money(summary.totalOz, 4)} oz`;
       document.getElementById('total-weight-g').textContent = `约 ${money(summary.totalGrams, 2)} g`;
       document.getElementById('total-qty').textContent = `${summary.totalQty}`;
@@ -257,9 +257,9 @@
       document.getElementById('headline-total').textContent = `HK$${money(summary.totalHkd)}`;
       document.getElementById('headline-total-sub').textContent = `约合 US$${money(summary.totalUsd)}，按参考金价估算，实际交易报价以现场交易为准。`;
       document.getElementById('headline-tier').textContent = rateText;
-      document.getElementById('headline-tier-sub').textContent = summary.rateMix.length === 1 ? '当前组合全部落在同一报价档位。' : '当前组合跨多个规格档位，按每个规格分别加点。';
+      document.getElementById('headline-tier-sub').textContent = '当前整单统一按总重量对应的单一档位报价。';
       document.getElementById('tier-mix').textContent = rateText;
-      document.getElementById('tier-mix-sub').textContent = summary.lines.map((line) => `${line.spec.label} × ${line.quantity}：+${(line.markupRate*100).toFixed(1)}%`).join('；');
+      document.getElementById('tier-mix-sub').textContent = `当前组合总重量 ${money(summary.totalGrams, 2)} g，整单统一按 +${(summary.orderMarkupRate*100).toFixed(1)}% 计算。`;
       persistReservationDraft(summary);
     }
     function renderLive(payload) {

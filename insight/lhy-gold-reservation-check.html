@@ -113,9 +113,9 @@
       document.getElementById('total-sub').textContent = `约合 US$${money(draft.totalUsd)}，实际交易报价以现场交易为准`;
       document.getElementById('grams').textContent = `${money(draft.totalGrams, 2)} g`;
       document.getElementById('qty').textContent = `总块数 ${draft.totalQty}`;
-      const rateText = Array.isArray(draft.rateMix) && draft.rateMix.length ? draft.rateMix.map((r) => `+${(Number(r)*100).toFixed(1)}%`).join(' / ') : '--';
+      const rateText = Number.isFinite(Number(draft.orderMarkupRate)) ? `+${(Number(draft.orderMarkupRate)*100).toFixed(1)}%` : '--';
       document.getElementById('tier').textContent = rateText;
-      document.getElementById('tier-sub').textContent = Array.isArray(draft.rateMix) && draft.rateMix.length > 1 ? '当前组合跨多个规格档位。' : '当前组合全部落在同一报价档位。';
+      document.getElementById('tier-sub').textContent = '当前整单统一按总重量对应的单一档位报价。';
     }
     const draft = loadDraft(); renderDraft(draft);
     const ack = document.getElementById('ack'); const btn = document.getElementById('continue-btn'); const hint = document.getElementById('confirm-hint');
