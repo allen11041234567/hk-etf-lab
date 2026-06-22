@@ -158,7 +158,7 @@
     }
     async function loadLive() {
       try {
-        const payload = await fetchJsonWithFallback(CONFIG.liveApi, CONFIG.staticLiveJson);
+        const payload = await fetchBestJson(CONFIG.liveApi, CONFIG.staticLiveJson);
         renderLive(payload);
       } catch (_) {
         document.getElementById('hero-updated').textContent = '参考金价暂不可用';

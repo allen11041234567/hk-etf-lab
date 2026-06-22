@@ -316,8 +316,8 @@
     async function loadAll() {
       try {
         const [live, jewellers] = await Promise.all([
-          fetchJsonWithFallback(CONFIG.liveApi, CONFIG.staticLiveJson),
-          fetchJsonWithFallback(CONFIG.jewellersApi, CONFIG.staticJewellersJson),
+          fetchBestJson(CONFIG.liveApi, CONFIG.staticLiveJson),
+          fetchBestJson(CONFIG.jewellersApi, CONFIG.staticJewellersJson),
         ]);
 
         if (live?.ok) {
