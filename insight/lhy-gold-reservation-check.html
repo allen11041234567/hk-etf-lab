@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex,nofollow,noarchive" />
+  <title>利亨元预约前确认</title>
+  <style>
+    :root { --bg:#0d1015; --text:#f7f2e8; --muted:#b8ad99; --gold:#e7c98b; --gold-strong:#f2d7a6; --line:rgba(229,197,128,0.18); --line-strong:rgba(229,197,128,0.34); --shadow:0 24px 70px rgba(0,0,0,0.35); --font-body:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; --font-display:"Iowan Old Style","Palatino Linotype","Times New Roman","Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",serif; }
+    * { box-sizing:border-box; }
+    body { margin:0; min-height:100vh; color:var(--text); background:linear-gradient(180deg, #12161d 0%, #0d1015 46%, #090b0f 100%); font-family:var(--font-body); }
+    .wrap { width:min(980px, calc(100vw - 24px)); margin:0 auto; padding:20px 0 40px; }
+    .panel { background:linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03)); border:1px solid var(--line); border-radius:24px; box-shadow:var(--shadow); padding:20px; }
+    .eyebrow { display:inline-flex; padding:8px 12px; border-radius:999px; color:var(--gold); border:1px solid var(--line-strong); background:rgba(231,201,139,0.08); font-size:12px; letter-spacing:.12em; text-transform:uppercase; }
+    h1 { margin:16px 0 10px; font-size:clamp(28px, 4.4vw, 42px); letter-spacing:-.03em; line-height:1.08; font-family:var(--font-display); font-weight:700; }
+    .sub { color:var(--muted); font-size:14px; line-height:1.8; }
+    .hero-metrics { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; margin-top:16px; }
+    .grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:14px; margin-top:14px; }
+    .card { padding:16px; border-radius:18px; border:1px solid rgba(255,255,255,0.07); background:rgba(255,255,255,0.035); }
+    .hero-card { padding:18px; border-radius:20px; border:1px solid var(--line-strong); background:rgba(231,201,139,0.085); }
+    .label { color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.08em; }
+    .hero-card .label { color:var(--gold-strong); }
+    .value { margin-top:8px; font-size:26px; font-weight:700; letter-spacing:-.02em; font-family:var(--font-display); }
+    .hero-card .value { font-size:32px; }
+    .subline { margin-top:8px; color:var(--muted); font-size:12px; line-height:1.7; }
+    .rule-box { margin-top:16px; padding:18px; border-radius:20px; border:1px solid var(--line-strong); background:rgba(231,201,139,0.08); }
+    .rule-title { font-size:18px; font-weight:700; font-family:var(--font-display); }
+    .rule-list { display:grid; gap:8px; margin-top:12px; color:var(--muted); font-size:13px; line-height:1.75; }
+    .confirm { margin-top:16px; display:flex; gap:10px; align-items:flex-start; color:var(--text); font-size:13px; line-height:1.75; }
+    .confirm-hint { margin-top:12px; padding:12px 14px; border-radius:14px; border:1px solid rgba(242,215,166,.32); background:rgba(231,201,139,.08); color:var(--gold-strong); font-size:12px; line-height:1.7; }
+    .confirm-hint.hidden { display:none; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:18px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; min-height:46px; padding:0 18px; border-radius:999px; text-decoration:none; font-size:14px; font-weight:700; cursor:pointer; }
+    .btn.primary { color:#1a1712; background:linear-gradient(135deg,var(--gold-strong),#d7b46a); border:none; }
+    .btn.secondary { color:var(--text); border:1px solid var(--line-strong); background:rgba(255,255,255,0.03); }
+    .btn[disabled] { opacity:.45; cursor:not-allowed; }
+    .empty { color:var(--muted); font-size:13px; line-height:1.8; margin-top:16px; }
+    @media (max-width: 720px) { .wrap { width:calc(100vw - 12px); padding:10px 0 24px; } .panel { padding:16px; border-radius:18px; } .hero-metrics, .grid { grid-template-columns:1fr; } h1 { font-size:26px; } .sub, .subline, .rule-list, .confirm, .empty { font-size:12px; line-height:1.7; } .hero-card .value, .value { font-size:24px; } .actions { flex-direction:column; } .actions .btn { width:100%; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="panel">
+      <div class="eyebrow">Reservation Check</div>
+      <h1>利亨元预约前确认</h1>
+      <div class="sub">请先核对本次利亨元提金测算结果。页面结果均为参考金价估算，实际交易报价以现场交易为准。</div>
+
+      <div id="empty-state" class="empty" style="display:none;">尚未检测到有效测算结果。请先返回利亨元计算器页面完成测算，再进入预约确认。</div>
+
+      <div id="content" style="display:none;">
+        <div class="hero-metrics">
+          <div class="hero-card">
+            <div class="label">利亨元订单总额</div>
+            <div class="value" id="total-hkd">--</div>
+            <div class="subline" id="total-sub">--</div>
+          </div>
+          <div class="hero-card">
+            <div class="label">组合档位</div>
+            <div class="value" id="tier">--</div>
+            <div class="subline" id="tier-sub">--</div>
+          </div>
+        </div>
+        <div class="grid">
+          <div class="card">
+            <div class="label">规格组合</div>
+            <div class="value" id="mix-text">--</div>
+            <div class="subline" id="mix-sub">--</div>
+          </div>
+          <div class="card">
+            <div class="label">总重量</div>
+            <div class="value" id="grams">--</div>
+            <div class="subline" id="qty">--</div>
+          </div>
+        </div>
+
+        <div class="rule-box">
+          <div class="rule-title">预约问卷前须知</div>
+          <div class="rule-list">
+            <div>1. 当前页面结果均为参考金价估算，实际交易报价以现场交易为准。</div>
+            <div>2. 本版问卷链接暂未接入，后续你给我链接后再替换。</div>
+            <div>3. 继续前往按钮当前先跳占位链接，结构已预留。</div>
+          </div>
+          <div class="confirm-hint" id="confirm-hint">请先勾选下方“我已了解”后，才能继续前往后续问卷。</div>
+          <label class="confirm">
+            <input type="checkbox" id="ack" />
+            <span>我已了解：当前结果仅作参考金价估算，实际交易报价以现场交易为准，问卷链接后续会单独替换。</span>
+          </label>
+        </div>
+
+        <div class="actions">
+          <a class="btn secondary" href="./lhy-gold-calculator.html">返回重新测算</a>
+          <a class="btn secondary" href="./lhy-gold-preorder.html">返回首页</a>
+          <a class="btn primary" id="continue-btn" href="#" aria-disabled="true">继续前往问卷</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const CONFIG = {
+      storageKey: 'lhyGoldReservationDraft',
+      questionnaireUrl: '#',
+    };
+    function money(n, digits = 2) { const value = Number(n); if (!Number.isFinite(value)) return '--'; return value.toLocaleString('en-HK', { minimumFractionDigits: digits, maximumFractionDigits: digits }); }
+    function loadDraft() { try { const raw = sessionStorage.getItem(CONFIG.storageKey); if (!raw) return null; return JSON.parse(raw); } catch { return null; } }
+    function renderDraft(draft) {
+      if (!draft || !Array.isArray(draft.lines) || !draft.lines.length) { document.getElementById('empty-state').style.display = 'block'; return; }
+      document.getElementById('content').style.display = 'block';
+      const mixText = draft.lines.map((line) => `${line.label} × ${line.quantity}`).join(' / ');
+      document.getElementById('mix-text').textContent = mixText;
+      document.getElementById('mix-sub').textContent = `参考金价时间：${draft.updatedAt || '--'}`;
+      document.getElementById('total-hkd').textContent = `HK$${money(draft.totalHkd)}`;
+      document.getElementById('total-sub').textContent = `约合 US$${money(draft.totalUsd)}，实际交易报价以现场交易为准`;
+      document.getElementById('grams').textContent = `${money(draft.totalGrams, 2)} g`;
+      document.getElementById('qty').textContent = `总块数 ${draft.totalQty}`;
+      const rateText = Array.isArray(draft.rateMix) && draft.rateMix.length ? draft.rateMix.map((r) => `+${(Number(r)*100).toFixed(1)}%`).join(' / ') : '--';
+      document.getElementById('tier').textContent = rateText;
+      document.getElementById('tier-sub').textContent = Array.isArray(draft.rateMix) && draft.rateMix.length > 1 ? '当前组合跨多个规格档位。' : '当前组合全部落在同一报价档位。';
+    }
+    const draft = loadDraft(); renderDraft(draft);
+    const ack = document.getElementById('ack'); const btn = document.getElementById('continue-btn'); const hint = document.getElementById('confirm-hint');
+    ack.addEventListener('change', () => {
+      const enabled = ack.checked && !!draft;
+      btn.setAttribute('aria-disabled', enabled ? 'false' : 'true');
+      if (enabled) { btn.removeAttribute('disabled'); btn.href = CONFIG.questionnaireUrl; hint.classList.add('hidden'); }
+      else { btn.setAttribute('disabled', 'disabled'); btn.href = '#'; hint.classList.remove('hidden'); }
+    });
+    btn.setAttribute('disabled', 'disabled');
+  </script>
+</body>
+</html>
