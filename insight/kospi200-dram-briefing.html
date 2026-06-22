@@ -78,6 +78,7 @@
     .compare-value{margin-top:10px;font-size:34px;font-weight:900;line-height:1}
     .compare-desc{margin-top:8px;font-size:12px;color:#475569;line-height:1.65;text-align:center}
     .compare-card.diff .compare-value{color:var(--green)}
+    .top10-live-wrap{margin-top:14px}.top10-live-title{font-size:13px;color:#64748b;font-weight:800;margin-bottom:10px}.top10-live-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.top10-live-card{padding:10px 12px;border:1px solid #e2e8f0;border-radius:14px;background:#fff}.top10-live-card .k{font-size:12px;color:#64748b;font-weight:700}.top10-live-card .v{margin-top:6px;font-size:18px;font-weight:800;line-height:1.2;color:#0f172a}.top10-live-card .d{margin-top:4px;font-size:12px;font-weight:700}
     .table-wrap{overflow-x:auto;border-radius:16px;border:1px solid #e8eef7}
     table{width:100%;border-collapse:collapse;min-width:720px;background:#fff}
     th,td{padding:11px 10px;border-bottom:1px solid #e5e7eb;text-align:left;vertical-align:top;font-size:14px}
@@ -107,7 +108,7 @@
       .compare-card{padding:14px 12px;border-radius:16px}
       .focus-badge{font-size:9px;padding:5px 8px;margin-bottom:6px}
       .compare-value{font-size:28px}
-      .compare-desc{font-size:11px}
+      .compare-desc{font-size:11px}.top10-live-grid{grid-template-columns:1fr}.top10-live-card .v{font-size:16px}.top10-live-card .d{font-size:11px}
       th,td{padding:10px 8px;font-size:13px}
       table{min-width:620px}
     }
@@ -194,6 +195,19 @@
           </tbody>
         </table>
       </div>
+      <div class="top10-live-wrap">
+        <div class="top10-live-title">前十大成分股实时行情包</div>
+        <div class="top10-live-grid">
+          <div class="top10-live-card"><div class="k">三星电机 009150</div><div class="v" id="live-009150">--</div><div class="d" id="live-009150-pct">--</div></div>
+          <div class="top10-live-card"><div class="k">SK Square 402340</div><div class="v" id="live-402340">--</div><div class="d" id="live-402340-pct">--</div></div>
+          <div class="top10-live-card"><div class="k">现代汽车 005380</div><div class="v" id="live-005380">--</div><div class="d" id="live-005380-pct">--</div></div>
+          <div class="top10-live-card"><div class="k">KB金融集团 105560</div><div class="v" id="live-105560">--</div><div class="d" id="live-105560-pct">--</div></div>
+          <div class="top10-live-card"><div class="k">现代摩比斯 012330</div><div class="v" id="live-012330">--</div><div class="d" id="live-012330-pct">--</div></div>
+          <div class="top10-live-card"><div class="k">斗山能源 034020</div><div class="v" id="live-034020">--</div><div class="d" id="live-034020-pct">--</div></div>
+          <div class="top10-live-card"><div class="k">三星SDI 006400</div><div class="v" id="live-006400">--</div><div class="d" id="live-006400-pct">--</div></div>
+          <div class="top10-live-card"><div class="k">三星物产 028260</div><div class="v" id="live-028260">--</div><div class="d" id="live-028260-pct">--</div></div>
+        </div>
+      </div>
     </section>
 
     <section class="panel">
@@ -241,8 +255,7 @@
         '000660': document.getElementById('live-sk-hynix'),
         '005930': document.getElementById('live-samsung')
       };
-      const SNAPSHOT_FEED = '/api/pulse/korea-tech-briefing-snapshot';
-      const STATIC_SNAPSHOT_FEED = '/assets/data/korea-tech-briefing-snapshot.json';
+      const SNAPSHOT_FEED = '/api/pulse/kospi-top10-snapshot';
       function formatPct(v){
         const n = Number(v);
         if (!Number.isFinite(n)) return '--';
@@ -258,39 +271,37 @@
         }
         el.style.color = n >= 0 ? '#b91c1c' : '#2563eb';
       }
-      async function fetchJsonWithFallback(primary, fallback){
-        try {
-          const resp = await fetch(primary, { cache: 'no-store' });
-          if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-          const data = await resp.json();
-          if (data && data.ok === false) throw new Error(data.error || 'unknown error');
-          return data;
-        } catch (_) {
-          const resp = await fetch(fallback, { cache: 'no-store' });
-          if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-          return await resp.json();
+      function renderTop10Card(item){
+        const priceEl = document.getElementById(`live-${item.code}`);
+        const pctEl = document.getElementById(`live-${item.code}-pct`);
+        if (priceEl) priceEl.textContent = Number.isFinite(Number(item.current)) ? new Intl.NumberFormat('en-US').format(Math.round(Number(item.current))) : '--';
+        if (pctEl) {
+          pctEl.textContent = formatPct(item.dayChangePercent ?? item.changePercent ?? item.changePct ?? item.rate);
+          const n = Number(item.dayChangePercent ?? item.changePercent ?? item.changePct ?? item.rate);
+          pctEl.style.color = !Number.isFinite(n) ? '#64748b' : (n >= 0 ? '#b91c1c' : '#2563eb');
         }
       }
-      fetchJsonWithFallback(SNAPSHOT_FEED, STATIC_SNAPSHOT_FEED)
+      fetch(SNAPSHOT_FEED, { cache: 'no-store' })
+        .then(r => r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`)))
         .then(data => {
           const list = Array.isArray(data?.quotes) ? data.quotes : [];
           list.forEach(item => {
             const el = ids[item.code];
             if (el) paint(el, item.dayChangePercent ?? item.changePercent ?? item.changePct ?? item.rate);
+            if (!ids[item.code]) renderTop10Card(item);
           });
-        })
-        .catch(() => {
-          Object.values(ids).forEach(el => { if (el) el.textContent = '--'; });
-        });
-
-      fetch('/api/pulse/csop-3121-quote', { cache: 'no-store' })
-        .then(r => r.ok ? r.json() : Promise.reject(new Error(`HTTP ${r.status}`)))
-        .then(data => {
-          const premium = data?.premiumDiscount?.value || '--';
+          const premium = data?.csop3121?.premiumDiscount?.value || '--';
           const premiumEl = document.getElementById('csop-premium');
           if (premiumEl) premiumEl.textContent = premium;
         })
         .catch(() => {
+          Object.values(ids).forEach(el => { if (el) el.textContent = '--'; });
+          ['009150','402340','005380','105560','012330','034020','006400','028260'].forEach(code => {
+            const priceEl = document.getElementById(`live-${code}`);
+            const pctEl = document.getElementById(`live-${code}-pct`);
+            if (priceEl) priceEl.textContent = '--';
+            if (pctEl) pctEl.textContent = '--';
+          });
           const el = document.getElementById('csop-premium');
           if (el) el.textContent = '--';
         });
