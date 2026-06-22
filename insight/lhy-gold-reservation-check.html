@@ -99,7 +99,7 @@
   <script>
     const CONFIG = {
       storageKey: 'lhyGoldReservationDraft',
-      questionnaireUrl: '#',
+      questionnaireUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSfIHJQ5KcAs15KNdVLfji3vp_yZ-2dxQwhFz3YzoKdzom9OEA/viewform?usp=publish-editor',
     };
     function money(n, digits = 2) { const value = Number(n); if (!Number.isFinite(value)) return '--'; return value.toLocaleString('en-HK', { minimumFractionDigits: digits, maximumFractionDigits: digits }); }
     function loadDraft() { try { const raw = sessionStorage.getItem(CONFIG.storageKey); if (!raw) return null; return JSON.parse(raw); } catch { return null; } }
