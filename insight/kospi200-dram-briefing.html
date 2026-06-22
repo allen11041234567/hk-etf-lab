@@ -78,7 +78,7 @@
     .compare-value{margin-top:10px;font-size:34px;font-weight:900;line-height:1}
     .compare-desc{margin-top:8px;font-size:12px;color:#475569;line-height:1.65;text-align:center}
     .compare-card.diff .compare-value{color:var(--green)}
-    .top10-live-wrap{margin-top:14px}.top10-live-title{font-size:13px;color:#64748b;font-weight:800;margin-bottom:10px}.top10-live-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.top10-live-card{padding:10px 12px;border:1px solid #e2e8f0;border-radius:14px;background:#fff}.top10-live-card .k{font-size:12px;color:#64748b;font-weight:700}.top10-live-card .v{margin-top:6px;font-size:18px;font-weight:800;line-height:1.2;color:#0f172a}.top10-live-card .d{margin-top:4px;font-size:12px;font-weight:700}
+    .live-pct-inline{font-weight:800}
     .table-wrap{overflow-x:auto;border-radius:16px;border:1px solid #e8eef7}
     table{width:100%;border-collapse:collapse;min-width:720px;background:#fff}
     th,td{padding:11px 10px;border-bottom:1px solid #e5e7eb;text-align:left;vertical-align:top;font-size:14px}
@@ -108,7 +108,7 @@
       .compare-card{padding:14px 12px;border-radius:16px}
       .focus-badge{font-size:9px;padding:5px 8px;margin-bottom:6px}
       .compare-value{font-size:28px}
-      .compare-desc{font-size:11px}.top10-live-grid{grid-template-columns:1fr}.top10-live-card .v{font-size:16px}.top10-live-card .d{font-size:11px}
+      .compare-desc{font-size:11px}
       th,td{padding:10px 8px;font-size:13px}
       table{min-width:620px}
     }
@@ -176,37 +176,24 @@
             <tr>
               <th>序号</th>
               <th>公司</th>
-              <th>代码</th>
+              <th>实时涨跌幅</th>
               <th>权重</th>
               <th>行业</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td>1</td><td>三星电子</td><td>005930</td><td>32.88%</td><td>电子电气设备</td></tr>
-            <tr><td>2</td><td>SK海力士</td><td>000660</td><td>28.75%</td><td>电子电气设备</td></tr>
-            <tr><td>3</td><td>三星电机</td><td>009150</td><td>2.64%</td><td>电子电气设备</td></tr>
-            <tr><td>4</td><td>SK Square</td><td>402340</td><td>2.52%</td><td>金融</td></tr>
-            <tr><td>5</td><td>现代汽车</td><td>005380</td><td>2.19%</td><td>交通运输设备及零部件</td></tr>
-            <tr><td>6</td><td>KB金融集团</td><td>105560</td><td>1.07%</td><td>金融</td></tr>
-            <tr><td>7</td><td>现代摩比斯</td><td>012330</td><td>1.06%</td><td>交通运输设备及零部件</td></tr>
-            <tr><td>8</td><td>斗山能源</td><td>034020</td><td>1.02%</td><td>机械设备</td></tr>
-            <tr><td>9</td><td>三星SDI</td><td>006400</td><td>0.93%</td><td>电子电气设备</td></tr>
-            <tr><td>10</td><td>三星物产</td><td>028260</td><td>0.93%</td><td>分销</td></tr>
+            <tr><td>1</td><td>三星电子</td><td><span class="live-pct-inline" id="live-005930-pct">--</span></td><td>32.88%</td><td>电子电气设备</td></tr>
+            <tr><td>2</td><td>SK海力士</td><td><span class="live-pct-inline" id="live-000660-pct">--</span></td><td>28.75%</td><td>电子电气设备</td></tr>
+            <tr><td>3</td><td>三星电机</td><td><span class="live-pct-inline" id="live-009150-pct">--</span></td><td>2.64%</td><td>电子电气设备</td></tr>
+            <tr><td>4</td><td>SK Square</td><td><span class="live-pct-inline" id="live-402340-pct">--</span></td><td>2.52%</td><td>金融</td></tr>
+            <tr><td>5</td><td>现代汽车</td><td><span class="live-pct-inline" id="live-005380-pct">--</span></td><td>2.19%</td><td>交通运输设备及零部件</td></tr>
+            <tr><td>6</td><td>KB金融集团</td><td><span class="live-pct-inline" id="live-105560-pct">--</span></td><td>1.07%</td><td>金融</td></tr>
+            <tr><td>7</td><td>现代摩比斯</td><td><span class="live-pct-inline" id="live-012330-pct">--</span></td><td>1.06%</td><td>交通运输设备及零部件</td></tr>
+            <tr><td>8</td><td>斗山能源</td><td><span class="live-pct-inline" id="live-034020-pct">--</span></td><td>1.02%</td><td>机械设备</td></tr>
+            <tr><td>9</td><td>三星SDI</td><td><span class="live-pct-inline" id="live-006400-pct">--</span></td><td>0.93%</td><td>电子电气设备</td></tr>
+            <tr><td>10</td><td>三星物产</td><td><span class="live-pct-inline" id="live-028260-pct">--</span></td><td>0.93%</td><td>分销</td></tr>
           </tbody>
         </table>
-      </div>
-      <div class="top10-live-wrap">
-        <div class="top10-live-title">前十大成分股实时行情包</div>
-        <div class="top10-live-grid">
-          <div class="top10-live-card"><div class="k">三星电机 009150</div><div class="v" id="live-009150">--</div><div class="d" id="live-009150-pct">--</div></div>
-          <div class="top10-live-card"><div class="k">SK Square 402340</div><div class="v" id="live-402340">--</div><div class="d" id="live-402340-pct">--</div></div>
-          <div class="top10-live-card"><div class="k">现代汽车 005380</div><div class="v" id="live-005380">--</div><div class="d" id="live-005380-pct">--</div></div>
-          <div class="top10-live-card"><div class="k">KB金融集团 105560</div><div class="v" id="live-105560">--</div><div class="d" id="live-105560-pct">--</div></div>
-          <div class="top10-live-card"><div class="k">现代摩比斯 012330</div><div class="v" id="live-012330">--</div><div class="d" id="live-012330-pct">--</div></div>
-          <div class="top10-live-card"><div class="k">斗山能源 034020</div><div class="v" id="live-034020">--</div><div class="d" id="live-034020-pct">--</div></div>
-          <div class="top10-live-card"><div class="k">三星SDI 006400</div><div class="v" id="live-006400">--</div><div class="d" id="live-006400-pct">--</div></div>
-          <div class="top10-live-card"><div class="k">三星物产 028260</div><div class="v" id="live-028260">--</div><div class="d" id="live-028260-pct">--</div></div>
-        </div>
       </div>
     </section>
 
@@ -271,10 +258,8 @@
         }
         el.style.color = n >= 0 ? '#b91c1c' : '#2563eb';
       }
-      function renderTop10Card(item){
-        const priceEl = document.getElementById(`live-${item.code}`);
+      function renderTop10Pct(item){
         const pctEl = document.getElementById(`live-${item.code}-pct`);
-        if (priceEl) priceEl.textContent = Number.isFinite(Number(item.current)) ? new Intl.NumberFormat('en-US').format(Math.round(Number(item.current))) : '--';
         if (pctEl) {
           pctEl.textContent = formatPct(item.dayChangePercent ?? item.changePercent ?? item.changePct ?? item.rate);
           const n = Number(item.dayChangePercent ?? item.changePercent ?? item.changePct ?? item.rate);
@@ -288,7 +273,7 @@
           list.forEach(item => {
             const el = ids[item.code];
             if (el) paint(el, item.dayChangePercent ?? item.changePercent ?? item.changePct ?? item.rate);
-            if (!ids[item.code]) renderTop10Card(item);
+            renderTop10Pct(item);
           });
           const premium = data?.csop3121?.premiumDiscount?.value || '--';
           const premiumEl = document.getElementById('csop-premium');
@@ -296,10 +281,8 @@
         })
         .catch(() => {
           Object.values(ids).forEach(el => { if (el) el.textContent = '--'; });
-          ['009150','402340','005380','105560','012330','034020','006400','028260'].forEach(code => {
-            const priceEl = document.getElementById(`live-${code}`);
+          ['005930','000660','009150','402340','005380','105560','012330','034020','006400','028260'].forEach(code => {
             const pctEl = document.getElementById(`live-${code}-pct`);
-            if (priceEl) priceEl.textContent = '--';
             if (pctEl) pctEl.textContent = '--';
           });
           const el = document.getElementById('csop-premium');
