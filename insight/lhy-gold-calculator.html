@@ -33,6 +33,12 @@
     .panel { padding:20px; }
     .field { margin-top:14px; }
     .field-label { display:block; margin-bottom:7px; color:var(--muted); font-size:12px; }
+    .mode-switch { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; margin-top:14px; }
+    .mode-btn { min-height:44px; border-radius:14px; border:1px solid rgba(255,255,255,0.08); background:rgba(255,255,255,0.03); color:var(--text); font-size:13px; font-weight:700; cursor:pointer; }
+    .mode-btn.active { color:#1a1712; background:linear-gradient(135deg,var(--gold-strong),var(--accent)); border-color:transparent; }
+    .smart-box { display:none; margin-top:16px; }
+    .smart-box.show { display:block; }
+    .manual-box.hide { display:none; }
     .control, select.control { width:100%; min-height:56px; border-radius:18px; border:1px solid var(--line-strong); background:rgba(255,255,255,0.04); color:var(--text); padding:0 16px; font-size:18px; font-weight:700; outline:none; }
     select.control option { color:#111827; background:#ffffff; }
     input.control { font-size:24px; letter-spacing:-.02em; }
@@ -53,6 +59,10 @@
     .savings-title { color:var(--gold-strong); font-size:13px; letter-spacing:.08em; text-transform:uppercase; }
     .savings-value { margin-top:8px; font-size:32px; font-weight:700; letter-spacing:-.02em; font-family:var(--font-display); }
     .savings-sub { margin-top:8px; color:var(--muted); font-size:13px; line-height:1.8; }
+    .recommend-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:12px; margin-top:14px; }
+    .recommend-card { padding:14px; border-radius:16px; border:1px solid rgba(255,255,255,0.07); background:rgba(255,255,255,0.035); }
+    .recommend-list { margin-top:10px; color:var(--text); font-size:14px; line-height:1.8; }
+    .recommend-reason { margin-top:10px; color:var(--muted); font-size:12px; line-height:1.7; }
     .result-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:12px; margin-top:16px; }
     .result-card { padding:14px; border-radius:16px; border:1px solid rgba(255,255,255,0.07); background:rgba(255,255,255,0.035); }
     .result-label { color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.08em; }
@@ -60,7 +70,7 @@
     .result-sub { margin-top:8px; color:var(--muted); font-size:12px; line-height:1.7; }
     .note-list { display:grid; gap:10px; }.note-item { color:var(--muted); font-size:13px; line-height:1.78; }
     @media (max-width: 960px) { .hero, .calculator { grid-template-columns:1fr; } .wrap { width:min(100vw - 18px, 1120px); padding:14px 0 32px; } .hero, .panel { border-radius:22px; } .hero, .panel { padding:18px; } }
-    @media (max-width: 720px) { .wrap { width:calc(100vw - 12px); padding:8px 0 22px; } .hero { gap:12px; margin-bottom:12px; } .hero, .panel { border-radius:18px; padding:16px; } h1 { margin:14px 0 10px; font-size:24px; } .hero-sub { font-size:13px; line-height:1.68; } .hero-note, .scope-banner, .subline, .section-desc, .result-sub, .helper, .note-item { font-size:11px; line-height:1.65; } .section-head { flex-direction:column; align-items:flex-start; gap:8px; } .section-title { font-size:18px; } .hero-metrics, .result-grid, .item-controls { grid-template-columns:1fr; } .control, select.control { min-height:50px; border-radius:14px; padding:0 13px; font-size:16px; } input.control { font-size:20px; } .value-xl { font-size:24px; } .result-value, .savings-value { font-size:22px; } .btn-mini, .btn { width:100%; } .item-top { align-items:flex-start; flex-direction:column; } .item-top .btn-mini { margin-top:6px; } .actions { flex-direction:column; } }
+    @media (max-width: 720px) { .wrap { width:calc(100vw - 12px); padding:8px 0 22px; } .hero { gap:12px; margin-bottom:12px; } .hero, .panel { border-radius:18px; padding:16px; } h1 { margin:14px 0 10px; font-size:24px; } .hero-sub { font-size:13px; line-height:1.68; } .hero-note, .scope-banner, .subline, .section-desc, .result-sub, .helper, .note-item { font-size:11px; line-height:1.65; } .section-head { flex-direction:column; align-items:flex-start; gap:8px; } .section-title { font-size:18px; } .hero-metrics, .recommend-grid, .result-grid, .item-controls, .mode-switch { grid-template-columns:1fr; } .control, select.control { min-height:50px; border-radius:14px; padding:0 13px; font-size:16px; } input.control { font-size:20px; } .value-xl { font-size:24px; } .result-value, .savings-value { font-size:22px; } .btn-mini, .btn { width:100%; } .item-top { align-items:flex-start; flex-direction:column; } .item-top .btn-mini { margin-top:6px; } .actions { flex-direction:column; } }
   </style>
 </head>
 <body>
@@ -83,12 +93,29 @@
       <div class="section-head"><div><div class="section-title">利亨元快速报价</div><div class="section-desc">自由组合规格与块数，直接计算总重量、总金额与当前适用的加点档位。</div></div><div class="pill"><span class="dot"></span><span id="live-status">等待实时金价接口</span></div></div>
       <div class="calculator">
         <div class="panel">
-          <div class="label">添加规格与数量</div>
-          <div class="field"><label class="field-label" for="spec">规格</label><select id="spec" class="control"><option value="g5">5 g 金块</option><option value="g10">10 g 金块</option><option value="g20">20 g 金块</option><option value="g50">50 g 金块</option><option value="g100">100 g 金块</option><option value="g200">200 g 金块</option><option value="g500">500 g 金块</option><option value="g1000">1000 g 金块</option></select></div>
-          <div class="field"><label class="field-label" for="qty">块数</label><input id="qty" class="control" type="number" min="1" step="1" value="1" /><div class="helper">系统会按每个规格对应的加点档位逐行计算，再汇总总金额。</div></div>
-          <div class="field"><button class="btn-mini" id="add-item" type="button">加入本次报价</button></div>
-          <div class="items-list" id="items-list"></div>
-          <div class="empty-note" id="empty-note">默认已加入 1 行报价项，可继续叠加其他规格。</div>
+          <div class="label">计算方式</div>
+          <div class="mode-switch">
+            <button class="mode-btn active" id="mode-manual" type="button">手动配置</button>
+            <button class="mode-btn" id="mode-smart" type="button">智能推荐</button>
+          </div>
+
+          <div class="smart-box" id="smart-box">
+            <div class="field"><label class="field-label" for="budget">预算金额（HKD）</label><input id="budget" class="control" type="number" min="0" step="1000" value="500000" /><div class="helper">输入预算后，系统会在 5g、10g、20g、50g、100g、200g、500g、1000g 中穷举可行组合，优先给出总克重更高、块数更少的方案。智能推荐最高块数为 20 块，如需更多请按手动配置。</div></div>
+            <div class="recommend-grid">
+              <div class="recommend-card"><div class="result-label">推荐组合</div><div class="recommend-list" id="smart-mix">--</div><div class="recommend-reason" id="smart-reason">等待参考金价后计算。</div></div>
+              <div class="recommend-card"><div class="result-label">推荐结果</div><div class="recommend-list" id="smart-summary">--</div><div class="recommend-reason">推荐基于参考金价估算，实际交易报价以现场交易为准。</div></div>
+            </div>
+            <div class="actions"><button class="btn primary" id="apply-smart" type="button">一键带入手动配置</button></div>
+          </div>
+
+          <div class="manual-box" id="manual-box">
+            <div class="label" style="margin-top:16px;">添加规格与数量</div>
+            <div class="field"><label class="field-label" for="spec">规格</label><select id="spec" class="control"><option value="g5">5 g 金块</option><option value="g10">10 g 金块</option><option value="g20">20 g 金块</option><option value="g50">50 g 金块</option><option value="g100">100 g 金块</option><option value="g200">200 g 金块</option><option value="g500">500 g 金块</option><option value="g1000">1000 g 金块</option></select></div>
+            <div class="field"><label class="field-label" for="qty">块数</label><input id="qty" class="control" type="number" min="1" step="1" value="1" /><div class="helper">系统会按每个规格对应的加点档位逐行计算，再汇总总金额。</div></div>
+            <div class="field"><button class="btn-mini" id="add-item" type="button">加入本次报价</button></div>
+            <div class="items-list" id="items-list"></div>
+            <div class="empty-note" id="empty-note">默认已加入 1 行报价项，可继续叠加其他规格。</div>
+          </div>
           <div class="formula">计算口径：单块金额 = 伦敦金价 × (1 + 加点比例) × 规格克重 / 31.1035。总金额 = 各行金额汇总。</div>
         </div>
 
@@ -158,8 +185,67 @@
       emptyNote.style.display='none';
       list.innerHTML = summary.lines.map((line) => `<div class="item-row"><div class="item-top"><div class="item-title">${line.spec.label} × ${line.quantity} 块</div><button class="btn-mini" type="button" data-remove-id="${line.id}">删除</button></div><div class="item-controls"><div><label class="field-label">规格</label><select class="control" data-spec-id="${line.id}">${Object.values(CONFIG.specs).map((spec) => `<option value="${spec.key}" ${spec.key === line.spec.key ? 'selected' : ''}>${spec.label}</option>`).join('')}</select></div><div><label class="field-label">块数</label><input class="control" type="number" min="1" step="1" value="${line.quantity}" data-qty-id="${line.id}" /></div><div class="helper">约 ${money(line.totalGrams, 2)} g，按伦敦价 + ${(line.markupRate*100).toFixed(1)}%</div></div></div>`).join('');
     }
+    function findBestRecommendation(budgetHkd) {
+      if (!livePayload?.ok || !Number.isFinite(livePayload.spot_usd_oz) || !Number.isFinite(budgetHkd) || budgetHkd <= 0) return null;
+      const londonUsdOz = Number(livePayload.spot_usd_oz);
+      const specs = Object.values(CONFIG.specs);
+      let best = null;
+      const maxBars = 20;
+      const maxPerSpec = {};
+      for (const spec of specs) {
+        const oneBarHkd = calcLine({ londonUsdOz, specGrams: spec.grams, quantity: 1 }).quotedTotalUsd * CONFIG.fxUsdHkd;
+        maxPerSpec[spec.key] = Math.max(0, Math.min(maxBars, Math.floor(budgetHkd / oneBarHkd) + 1));
+      }
+      const keys = specs.map(s => s.key);
+      function dfs(idx, counts) {
+        if (idx === keys.length) {
+          const totalQty = keys.reduce((sum,k)=>sum+(counts[k]||0),0);
+          if (totalQty <= 0 || totalQty > maxBars) return;
+          let totalGrams = 0, totalUsd = 0;
+          for (const spec of specs) {
+            const q = counts[spec.key] || 0;
+            if (!q) continue;
+            const line = calcLine({ londonUsdOz, specGrams: spec.grams, quantity: q });
+            totalGrams += line.totalGrams;
+            totalUsd += line.quotedTotalUsd;
+          }
+          const totalHkd = totalUsd * CONFIG.fxUsdHkd;
+          if (totalHkd > budgetHkd) return;
+          const leftover = budgetHkd - totalHkd;
+          const candidate = { counts:{...counts}, totalQty, totalGrams, totalUsd, totalHkd, leftover };
+          if (!best || candidate.totalGrams > best.totalGrams || (candidate.totalGrams === best.totalGrams && candidate.totalQty < best.totalQty) || (candidate.totalGrams === best.totalGrams && candidate.totalQty === best.totalQty && candidate.leftover < best.leftover)) best = candidate;
+          return;
+        }
+        const key = keys[idx];
+        for (let q = 0; q <= maxPerSpec[key]; q++) { counts[key] = q; dfs(idx + 1, counts); }
+      }
+      dfs(0, {});
+      return best;
+    }
+    function renderSmartRecommendation() {
+      const budget = Number(document.getElementById('budget')?.value || 0);
+      const best = findBestRecommendation(budget);
+      const mixEl = document.getElementById('smart-mix');
+      const summaryEl = document.getElementById('smart-summary');
+      const reasonEl = document.getElementById('smart-reason');
+      const applyBtn = document.getElementById('apply-smart');
+      if (!best) {
+        mixEl.textContent = '--';
+        summaryEl.textContent = '--';
+        reasonEl.textContent = '等待输入预算并取得参考金价后计算。';
+        applyBtn.disabled = true;
+        delete applyBtn.dataset.reco;
+        return;
+      }
+      const parts = Object.entries(best.counts).filter(([,q]) => q > 0).map(([k,q]) => `${CONFIG.specs[k].label} × ${q}`);
+      mixEl.textContent = parts.join('，');
+      summaryEl.innerHTML = `总块数 ${best.totalQty}<br>总重量 ${money(best.totalGrams, 2)} g<br>预计总额 HK$${money(best.totalHkd)}<br>剩余预算 HK$${money(best.leftover)}`;
+      reasonEl.textContent = '当前预算下，优先给出总克重更高、块数更少、预算利用率更高的组合。';
+      applyBtn.disabled = false;
+      applyBtn.dataset.reco = JSON.stringify(best);
+    }
     function renderSummary() {
-      const summary = calcQuoteSummary(); renderItems(summary); if (!summary) return;
+      const summary = calcQuoteSummary(); renderItems(summary); renderSmartRecommendation(); if (!summary) return;
       const rateText = summary.rateMix.length === 1 ? `+${(summary.rateMix[0]*100).toFixed(1)}%` : summary.rateMix.map((r) => `+${(r*100).toFixed(1)}%`).join(' / ');
       document.getElementById('total-weight-oz').textContent = `${money(summary.totalOz, 4)} oz`;
       document.getElementById('total-weight-g').textContent = `约 ${money(summary.totalGrams, 2)} g`;
@@ -191,6 +277,22 @@
     }
     async function loadLive() { try { const payload = await fetchJsonWithFallback(CONFIG.staticLiveJson, CONFIG.liveApi); renderLive(payload); } catch (error) { renderLive({ ok:false, error:error.message || String(error) }); } }
     function addItem() { quoteItems.push({ id:`item-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`, specKey:document.getElementById('spec').value, quantity:getDraftQty() }); renderSummary(); }
+    function setMode(mode) {
+      const manual = document.getElementById('manual-box'); const smart = document.getElementById('smart-box'); const bManual = document.getElementById('mode-manual'); const bSmart = document.getElementById('mode-smart');
+      if (mode === 'smart') { smart.classList.add('show'); manual.classList.add('hide'); bSmart.classList.add('active'); bManual.classList.remove('active'); }
+      else { smart.classList.remove('show'); manual.classList.remove('hide'); bManual.classList.add('active'); bSmart.classList.remove('active'); }
+    }
+    document.getElementById('mode-manual').addEventListener('click', () => setMode('manual'));
+    document.getElementById('mode-smart').addEventListener('click', () => setMode('smart'));
+    document.getElementById('budget').addEventListener('input', renderSmartRecommendation);
+    document.getElementById('apply-smart').addEventListener('click', () => {
+      const raw = document.getElementById('apply-smart').dataset.reco;
+      if (!raw) return;
+      const best = JSON.parse(raw);
+      const items = [];
+      Object.entries(best.counts).forEach(([key, qty], idx) => { if (qty > 0) items.push({ id:`item-${Date.now()}-${idx}`, specKey:key, quantity:qty }); });
+      if (items.length) { quoteItems = items; setMode('manual'); renderSummary(); }
+    });
     document.getElementById('add-item').addEventListener('click', addItem);
     document.getElementById('items-list').addEventListener('input', (event) => {
       const specId = event.target.dataset.specId; const qtyId = event.target.dataset.qtyId;
