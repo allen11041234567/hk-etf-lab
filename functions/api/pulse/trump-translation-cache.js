@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116793994014541387": {
+    "content_zh_cn": "在我们重建、翻新、清洁和修复的众多雕像与喷泉中，唯一遭到蓄意破坏的是倒影池，目前正被尽快处理！\n它被划出了一道长达300英尺的裂痕，水中被人非法投放化学品，而那片漂亮的新草坪也被彻底毁坏，上面还被用化学物质巨大地刻上了“86 47”（很可能是受“黑心警察”詹姆斯·科米的启发！）。\n请记住，破坏这类设施，甚至只是企图破坏，最高可判10年监禁——这项法律将被全面执行！\n感谢大家对此事的关注。\n总统 DJT",
+    "content_zh_hk": "在我們重建、翻新、清潔及修復的眾多雕像與噴泉之中，唯一遭到蓄意破壞的是倒影池，現正被盡快處理！\n它被劃出一道長達300呎的裂痕，水中被人非法投放化學品，而那片漂亮的新草坪亦被徹底破壞，上面更被用化學物質巨大地刻上了「86 47」（很可能是受「黑警」詹姆斯・科米啟發！）。\n請記住，破壞這類設施，甚至只是企圖破壞，最高可判處10年監禁——這項法律將被全面執行！\n感謝大家關注此事。\n總統 DJT",
+    "content_ko": "우리가 재건하고, 보수하고, 청소하고, 수리한 수많은 동상과 분수 가운데, 훼손된 것은 반영지 하나뿐이었으며, 현재 즉시 복구 조치가 진행 중입니다!\n이곳에는 길이 300피트에 달하는 깊은 상처가 생겼고, 물에는 불법적으로 화학물질이 투입됐으며, 아름다운 새 잔디밭도 완전히 망가진 채 그 위에 화학물질로 거대한 \"86 47\"이 새겨졌습니다(아마도 \"부패한 경찰\" 제임스 코미에게서 영감을 받은 듯합니다!).\n이런 시설을 파괴하거나, 심지어 파괴를 시도하는 것만으로도 10년의 징역형에 처해질 수 있다는 점을 꼭 기억하시기 바랍니다 - 이는 전면적으로 집행될 것입니다!\n이 사안에 관심을 가져주셔서 감사합니다.\n대통령 DJT"
+  },
   "https://truthsocial.com/@realDonaldTrump/116791057884875243": {
     "content_zh_cn": "他赢了，大胜！\nhttps://justthenews.com/world/latin-america/trump-backed-candidate-colombia-holds-narrow-lead-presidential-cliffhanger",
     "content_zh_hk": "他贏了，大勝！\nhttps://justthenews.com/world/latin-america/trump-backed-candidate-colombia-holds-narrow-lead-presidential-cliffhanger",
