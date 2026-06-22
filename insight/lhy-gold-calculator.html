@@ -275,7 +275,7 @@
       try { const resp = await fetch(primary, { headers: { accept:'application/json' }, cache:'no-store' }); if (!resp.ok) throw new Error(`HTTP ${resp.status}`); const payload = await resp.json(); if (!payload?.ok) throw new Error(payload?.error || 'primary not ok'); return payload; }
       catch (_) { const resp = await fetch(fallback, { headers: { accept:'application/json' }, cache:'no-store' }); if (!resp.ok) throw new Error(`HTTP ${resp.status}`); return await resp.json(); }
     }
-    async function loadLive() { try { const payload = await fetchJsonWithFallback(CONFIG.liveApi, CONFIG.staticLiveJson); renderLive(payload); } catch (error) { renderLive({ ok:false, error:error.message || String(error) }); } }
+    async function loadLive() { try { const payload = await fetchBestJson(CONFIG.liveApi, CONFIG.staticLiveJson); renderLive(payload); } catch (error) { renderLive({ ok:false, error:error.message || String(error) }); } }
     function addItem() { quoteItems.push({ id:`item-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`, specKey:document.getElementById('spec').value, quantity:getDraftQty() }); renderSummary(); }
     function setMode(mode) {
       const manual = document.getElementById('manual-box'); const smart = document.getElementById('smart-box'); const bManual = document.getElementById('mode-manual'); const bSmart = document.getElementById('mode-smart');
