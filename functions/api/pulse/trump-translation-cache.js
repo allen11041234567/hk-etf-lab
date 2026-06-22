@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116791057884875243": {
+    "content_zh_cn": "他赢了，大胜！\nhttps://justthenews.com/world/latin-america/trump-backed-candidate-colombia-holds-narrow-lead-presidential-cliffhanger",
+    "content_zh_hk": "他贏了，大勝！\nhttps://justthenews.com/world/latin-america/trump-backed-candidate-colombia-holds-narrow-lead-presidential-cliffhanger",
+    "content_ko": "그가 이겼다, 크게!\nhttps://justthenews.com/world/latin-america/trump-backed-candidate-colombia-holds-narrow-lead-presidential-cliffhanger"
+  },
   "https://truthsocial.com/@realDonaldTrump/116790956768105397": {
     "content_zh_cn": "《纽约时报》这个失败的媒体，腐败透顶！",
     "content_zh_hk": "《紐約時報》這家失敗的媒體，腐敗透頂！",
