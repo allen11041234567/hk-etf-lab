@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116799620438726718": {
+    "content_zh_cn": "投票支持安迪·比格斯竞选亚利桑那州州长。他非常出色！！！\n——总统唐纳德·J·特朗普",
+    "content_zh_hk": "投票支持安迪·比格斯競選亞利桑那州州長。他非常出色！！！\n——特朗普總統",
+    "content_ko": "애리조나 주지사 선거에서 앤디 빅스에게 투표해 주십시오. 그는 정말 훌륭합니다!!!\n— 도널드 J. 트럼프 대통령"
+  },
   "https://truthsocial.com/@realDonaldTrump/116799245997909499": {
     "content_zh_cn": "特朗普7年内在拉丁美洲斩获8场胜利：https://www.newsmax.com/john-gizzi/donald-trump-latin-america-elections/2026/06/22/id/1260532/",
     "content_zh_hk": "特朗普7年內在拉丁美洲取得8場勝利：https://www.newsmax.com/john-gizzi/donald-trump-latin-america-elections/2026/06/22/id/1260532/",
