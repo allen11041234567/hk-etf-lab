@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116797344912017182": {
+    "content_zh_cn": "《速度与激情2.0》？一名举报人律师称，拜登政府领导下的美国缉毒局（DEA）放任100万片芬太尼流入街头：https://justthenews.com/government/federal-agencies/cover-dea-whistleblowers-lawyer-says-client-silenced-more-1m-pills",
+    "content_zh_hk": "《狂野時速2.0》？一名舉報人律師稱，拜登政府領導下的美國緝毒局（DEA）放任100萬粒芬太尼流入街頭：https://justthenews.com/government/federal-agencies/cover-dea-whistleblowers-lawyer-says-client-silenced-more-1m-pills",
+    "content_ko": "‘분노의 질주 2.0’?\n내부고발자 측 변호사에 따르면, 바이든 행정부의 DEA가 펜타닐 알약 100만 정이 거리로 흘러들어가도록 방치했다: https://justthenews.com/government/federal-agencies/cover-dea-whistleblowers-lawyer-says-client-silenced-more-1m-pills"
+  },
   "https://truthsocial.com/@realDonaldTrump/116796681069385730": {
     "content_zh_cn": "拜登政府压下了一份举报投诉，指称福奇在疫情期间就相关问题向国会作了虚假陈述：https://justthenews.com/accountability/whistleblowers/biden-administration-buried-whistleblower-complaint-alleging-fauci",
     "content_zh_hk": "拜登政府壓下了一份舉報投訴，指稱福奇在疫情期間就相關問題向國會作了虛假陳述：https://justthenews.com/accountability/whistleblowers/biden-administration-buried-whistleblower-complaint-alleging-fauci",
