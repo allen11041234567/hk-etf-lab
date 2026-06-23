@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116800828536496774": {
+    "content_zh_cn": "https://www.dailymail.com/news/article-15921233/trump-approval-bounces-iran-deal.html",
+    "content_zh_hk": "https://www.dailymail.com/news/article-15921233/trump-approval-bounces-iran-deal.html",
+    "content_ko": "https://www.dailymail.com/news/article-15921233/trump-approval-bounces-iran-deal.html"
+  },
   "https://truthsocial.com/@realDonaldTrump/116800008619522183": {
     "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116800007587633396\n这些照片是今天上午拍的！",
     "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116800007587633396\n這些照片是今天上午拍的！",
