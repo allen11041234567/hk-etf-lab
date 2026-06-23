@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-23T15:48:38.048Z",
+  "fetchedAt": "2026-06-23T16:04:37.527Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
@@ -14,6 +14,10 @@
       "content": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116800007587633396These pictures were taken this morning!",
       "content_html": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116800007587633396These pictures were taken this morning!",
       "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2Nzc2LzY2NmFjNDk2YTQxNzllYmEuanBn",
+          "type": "image"
+        },
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2Nzc3LzA0YWYwZWRkNmExZTJlNDIuanBn",
           "type": "image"
