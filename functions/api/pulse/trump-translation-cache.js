@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116796667784429554": {
+    "content_zh_cn": "随着特朗普支持的候选人在哥伦比亚宣布胜选，拉丁美洲继续向右翼转移：https://justthenews.com/world/latin-america/trump-backed-candidate-colombia-holds-narrow-lead-presidential-cliffhanger",
+    "content_zh_hk": "隨着特朗普支持的候選人在哥倫比亞宣佈勝選，拉丁美洲繼續向右翼轉移：https://justthenews.com/world/latin-america/trump-backed-candidate-colombia-holds-narrow-lead-presidential-cliffhanger",
+    "content_ko": "트럼프가 지지한 후보가 콜롬비아에서 승리를 선언하면서, 라틴아메리카는 계속 우경화하고 있습니다: https://justthenews.com/world/latin-america/trump-backed-candidate-colombia-holds-narrow-lead-presidential-cliffhanger"
+  },
   "https://truthsocial.com/@realDonaldTrump/116796512818935902": {
     "content_zh_cn": "在描述华盛顿特区倒影池发生的破坏行为时，ABC假新闻——业内最差的媒体之一，甚至还曾因过去恶劣且失实的报道向我支付1600万美元——竟然没有报道，他们的亲密“朋友”、蠢主党人奥巴马和拜登，曾在倒影池上花费逾1亿美元，但它却从未真正正常运作。事实上，由于漏水和“恶臭”，它很少开放。他们原本还想再花3亿到4亿美元，但最后却任其腐烂。\n\n我花了大约1600万美元，效果非常好，除了这次遭到破坏——而我们现在正在修复。实际工程规模也比最初设想的大得多，包括外围区域和人行道。\n\n我们正在准备起诉ABC，原因是其虚假报道。我喜欢他们的钱，这笔钱将交给美国财政部！\n\n感谢大家对此事的关注。\n\n总统 DJT",
     "content_zh_hk": "在描述華盛頓特區倒影池發生的破壞行為時，ABC假新聞——業內最差的媒體之一，甚至還曾因過去惡劣且失實的報道向我支付1,600萬美元——竟然沒有報道，他們的親密「朋友」、蠢主黨人奧巴馬和拜登，曾在倒影池上花費逾1億美元，但它卻從未真正正常運作。事實上，由於漏水和「惡臭」，它很少開放。他們原本還想再花3億到4億美元，但最後卻任其腐爛。\n\n我花了大約1,600萬美元，效果非常好，除了這次遭到破壞——而我們現在正在修復。實際工程規模也比最初設想的大得多，包括外圍區域和人行道。\n\n我們正在準備起訴ABC，原因是其虛假報道。我喜歡他們的錢，這筆錢將交給美國財政部！\n\n感謝大家對此事的關注。\n\n總統 DJT",
