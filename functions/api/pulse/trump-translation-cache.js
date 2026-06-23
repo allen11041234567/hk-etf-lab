@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116799245997909499": {
+    "content_zh_cn": "特朗普7年内在拉丁美洲斩获8场胜利：https://www.newsmax.com/john-gizzi/donald-trump-latin-america-elections/2026/06/22/id/1260532/",
+    "content_zh_hk": "特朗普7年內在拉丁美洲取得8場勝利：https://www.newsmax.com/john-gizzi/donald-trump-latin-america-elections/2026/06/22/id/1260532/",
+    "content_ko": "트럼프, 7년간 중남미에서 8차례 승리: https://www.newsmax.com/john-gizzi/donald-trump-latin-america-elections/2026/06/22/id/1260532/"
+  },
   "https://truthsocial.com/@realDonaldTrump/116799167032916635": {
     "content_zh_cn": "昨天有1900万桶石油经由霍尔木兹海峡运出，创下历史最高纪录。油价正在大幅下跌，世界也安全得多了！！！\n美国总统 唐纳德·J·特朗普",
     "content_zh_hk": "昨天有1,900萬桶石油經霍爾木茲海峽運出，創下歷來最高紀錄。油價正大幅下跌，世界也安全得多了！！！\n美國總統 當勞·J·特朗普",
