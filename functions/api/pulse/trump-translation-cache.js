@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116801336239023557": {
+    "content_zh_cn": "谢谢你，苏格兰！！！\nDJT总统",
+    "content_zh_hk": "多謝你，蘇格蘭！！！\nDJT總統",
+    "content_ko": "고마워요, 스코틀랜드!!!\nDJT 대통령"
+  },
   "https://truthsocial.com/@realDonaldTrump/116801315279395561": {
     "content_zh_cn": "https://wabcradio.com/player/",
     "content_zh_hk": "https://wabcradio.com/player/",
