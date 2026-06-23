@@ -1,4 +1,19 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116796681069385730": {
+    "content_zh_cn": "拜登政府压下了一份举报投诉，指称福奇在疫情期间就相关问题向国会作了虚假陈述：https://justthenews.com/accountability/whistleblowers/biden-administration-buried-whistleblower-complaint-alleging-fauci",
+    "content_zh_hk": "拜登政府壓下了一份舉報投訴，指稱福奇在疫情期間就相關問題向國會作了虛假陳述：https://justthenews.com/accountability/whistleblowers/biden-administration-buried-whistleblower-complaint-alleging-fauci",
+    "content_ko": "바이든 행정부가 팬데믹 기간 중 파우치가 의회에 허위 진술을 했다고 주장한 내부고발 민원을 묵살했다: https://justthenews.com/accountability/whistleblowers/biden-administration-buried-whistleblower-complaint-alleging-fauci"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116796679527851962": {
+    "content_zh_cn": "伊朗反对派领袖、前国家安全顾问助理赞扬特朗普与德黑兰达成的协议：https://justthenews.com/government/security/iranian-resistance-leader-former-national-security-aide-praise-trumps-mou",
+    "content_zh_hk": "伊朗反對派領袖、前國家安全顧問助理讚揚特朗普與德黑蘭達成的協議：https://justthenews.com/government/security/iranian-resistance-leader-former-national-security-aide-praise-trumps-mou",
+    "content_ko": "이란 반정부 지도자와 전 국가안보보좌관 보좌진이 트럼프의 테헤란 합의를 찬사했다: https://justthenews.com/government/security/iranian-resistance-leader-former-national-security-aide-praise-trumps-mou"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116796678044750462": {
+    "content_zh_cn": "多年过去了，即便拿了普利策奖，《纽约时报》还是再次把“通俄勾连”报道搞错了：https://justthenews.com/accountability/media/pulitzer-prize-aside-new-york-times-keeps-getting-russia-collusion-factually",
+    "content_zh_hk": "多年過去了，即使拿了普立茲獎，《紐約時報》還是再次把「通俄勾連」報道搞錯了：https://justthenews.com/accountability/media/pulitzer-prize-aside-new-york-times-keeps-getting-russia-collusion-factually",
+    "content_ko": "퓰리처상을 받은 지 여러 해가 지났지만, 뉴욕타임스는 또다시 러시아 공모 보도를 틀렸습니다: https://justthenews.com/accountability/media/pulitzer-prize-aside-new-york-times-keeps-getting-russia-collusion-factually"
+  },
   "https://truthsocial.com/@realDonaldTrump/116796667784429554": {
     "content_zh_cn": "随着特朗普支持的候选人在哥伦比亚宣布胜选，拉丁美洲继续向右翼转移：https://justthenews.com/world/latin-america/trump-backed-candidate-colombia-holds-narrow-lead-presidential-cliffhanger",
     "content_zh_hk": "隨着特朗普支持的候選人在哥倫比亞宣佈勝選，拉丁美洲繼續向右翼轉移：https://justthenews.com/world/latin-america/trump-backed-candidate-colombia-holds-narrow-lead-presidential-cliffhanger",
