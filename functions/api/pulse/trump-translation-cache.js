@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116797415517828450": {
+    "content_zh_cn": "特朗普7年间在拉丁美洲斩获8场胜利：https://www.newsmax.com/john-gizzi/donald-trump-latin-america-elections/2026/06/22/id/1260532/",
+    "content_zh_hk": "特朗普7年間在拉丁美洲斬獲8場勝利：https://www.newsmax.com/john-gizzi/donald-trump-latin-america-elections/2026/06/22/id/1260532/",
+    "content_ko": "트럼프, 7년간 중남미에서 8번의 승리를 거두다: https://www.newsmax.com/john-gizzi/donald-trump-latin-america-elections/2026/06/22/id/1260532/"
+  },
   "https://truthsocial.com/@realDonaldTrump/116797344912017182": {
     "content_zh_cn": "《速度与激情2.0》？一名举报人律师称，拜登政府领导下的美国缉毒局（DEA）放任100万片芬太尼流入街头：https://justthenews.com/government/federal-agencies/cover-dea-whistleblowers-lawyer-says-client-silenced-more-1m-pills",
     "content_zh_hk": "《狂野時速2.0》？一名舉報人律師稱，拜登政府領導下的美國緝毒局（DEA）放任100萬粒芬太尼流入街頭：https://justthenews.com/government/federal-agencies/cover-dea-whistleblowers-lawyer-says-client-silenced-more-1m-pills",
