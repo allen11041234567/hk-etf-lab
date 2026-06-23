@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116801315279395561": {
+    "content_zh_cn": "https://wabcradio.com/player/",
+    "content_zh_hk": "https://wabcradio.com/player/",
+    "content_ko": "https://wabcradio.com/player/"
+  },
   "https://truthsocial.com/@realDonaldTrump/116800828536496774": {
     "content_zh_cn": "https://www.dailymail.com/news/article-15921233/trump-approval-bounces-iran-deal.html",
     "content_zh_hk": "https://www.dailymail.com/news/article-15921233/trump-approval-bounces-iran-deal.html",
