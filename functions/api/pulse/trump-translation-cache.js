@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116800008619522183": {
+    "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116800007587633396\n这些照片是今天上午拍的！",
+    "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116800007587633396\n這些照片是今天上午拍的！",
+    "content_ko": "리트윗: https://truthsocial.com/users/realDonaldTrump/statuses/116800007587633396\n이 사진들은 오늘 아침에 촬영된 것입니다!"
+  },
   "https://truthsocial.com/@realDonaldTrump/116799685479849509": {
     "content_zh_cn": "伟大的拉什·林博的优秀妻子凯瑟琳今天在《Fox & Friends》节目中表现非常出色，接受了安斯利的采访。我们都很怀念拉什，他真的独一无二！！！\n美国总统特朗普",
     "content_zh_hk": "偉大的拉什·林博的優秀妻子凱瑟琳今天在《Fox & Friends》節目中表現非常出色，接受了安斯利的訪問。我們都很懷念拉什，他真的是獨一無二！！！\n美國總統特朗普",
