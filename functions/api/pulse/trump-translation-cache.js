@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116797477878659134": {
+    "content_zh_cn": "芝加哥周末枪击事件已造成至少39人受伤、4人死亡。普利茨克州长，我，作为总统，能够解决这一问题，而且会很快、永久性地解决。\n华盛顿特区、孟菲斯、新奥尔良，都已迅速降至历史低点！给我打电话！\n——总统DJT",
+    "content_zh_hk": "芝加哥周末槍擊事件已造成至少39人受傷、4人死亡。普利茨克州長，我，作為總統，能夠解決這個問題，而且會很快、永久性地解決。\n華盛頓特區、孟菲斯、新奧爾良，都已迅速降至歷史低點！給我打電話！\n——總統DJT",
+    "content_ko": "시카고에서 주말 총격 사건으로 최소 39명이 다치고 4명이 사망했습니다. 프리츠커 주지사, 나, 대통령으로서 이 문제를 신속하고 영구적으로 해결할 수 있습니다.\n워싱턴 D.C., 멤피스, 뉴올리언스는 모두 기록적인 저점까지 빠르게 내려갔습니다! 전화하세요!\n대통령 DJT"
+  },
   "https://truthsocial.com/@realDonaldTrump/116797415517828450": {
     "content_zh_cn": "特朗普7年间在拉丁美洲斩获8场胜利：https://www.newsmax.com/john-gizzi/donald-trump-latin-america-elections/2026/06/22/id/1260532/",
     "content_zh_hk": "特朗普7年間在拉丁美洲斬獲8場勝利：https://www.newsmax.com/john-gizzi/donald-trump-latin-america-elections/2026/06/22/id/1260532/",
