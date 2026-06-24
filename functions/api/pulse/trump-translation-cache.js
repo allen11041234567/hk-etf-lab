@@ -29,6 +29,11 @@ export const TRUMP_TRANSLATION_CACHE = {
     "content_zh_hk": "今晚國家廣場將舉行大型集會。\n精彩音樂演出！！！MAGA！！！歡樂無限！！！\n請於晚上7:00到場。總統DJT",
     "content_ko": "오늘 밤 내셔널 몰에서 대규모 집회가 열립니다.\n환상적인 음악 공연!!! MAGA!!! FUN!!!\n오후 7:00에 함께해 주십시오. 대통령 DJT"
   },
+  "https://truthsocial.com/@realDonaldTrump/116805002780051143": {
+    "content_zh_cn": "转发 @realDonaldTrump",
+    "content_zh_hk": "轉發 @realDonaldTrump",
+    "content_ko": "RT @realDonaldTrump"
+  },
   "https://truthsocial.com/@realDonaldTrump/116804998509920399": {
     "content_zh_cn": "尽管他曾试图起诉我却未能得逞，而且他还是个十足的卑鄙小人，我还是为前众议员丹·戈德曼感到难过。\n他正与伟大的凯莉安妮·康韦的前夫一道，在一大片“愚主党”共产主义者中漫无目的地徘徊，拼命想找到出路——对一个毫无头绪、而且从来就没明白过的人来说，这样的结局实在非常可悲！！！\n特朗普总统 DJT",
     "content_zh_hk": "儘管他曾試圖起訴我卻未能得逞，而且他還是個十足的卑鄙小人，我還是為前眾議員丹·高盛感到難過。\n他正與偉大的凱莉安妮·康韋的前夫一道，在一大片「愚主黨」共產主義者中漫無目的地徘徊，拼命想找到出路——對一個毫無頭緒、而且從來就沒搞清楚過的人來說，這樣的結局實在非常可悲！！！\n特朗普總統 DJT",
