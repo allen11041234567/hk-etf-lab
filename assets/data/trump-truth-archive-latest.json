@@ -1,10 +1,32 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-24T00:35:01.711Z",
+  "fetchedAt": "2026-06-24T00:49:55.316Z",
   "count": 19,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
   "posts": [
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116802216796370297",
+      "url": "https://truthsocial.com/@realDonaldTrump/116802216796370297",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-24T00:19:48.124Z",
+      "created_at_text": "Jun 24, 2026, 12:19 AM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi84MDIvMjE2LzY1Mi8xNzUvNTg0L29yaWdpbmFsLzUzZGI4OTVkZGFiMTc0N2MuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 1486,
+      "reblogs_count": 351,
+      "replies_count": 69,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "cnn"
+    },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116802101261209554",
       "url": "https://truthsocial.com/@realDonaldTrump/116802101261209554",
@@ -19,9 +41,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 883,
-      "reblogs_count": 211,
-      "replies_count": 43,
+      "favourites_count": 2809,
+      "reblogs_count": 625,
+      "replies_count": 122,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -41,9 +63,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 1776,
-      "reblogs_count": 418,
-      "replies_count": 106,
+      "favourites_count": 3371,
+      "reblogs_count": 761,
+      "replies_count": 157,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -67,9 +89,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 7752,
-      "reblogs_count": 2209,
-      "replies_count": 1550,
+      "favourites_count": 9005,
+      "reblogs_count": 2535,
+      "replies_count": 1723,
       "content_zh_cn": "这不是很奇怪吗？那些“蠢主党”（Dumocrats）在得州推出来的一个人，看上去几乎和《MAD》杂志里大名鼎鼎的阿尔弗雷德·E·纽曼一模一样；而在佐治亚州，他们推出的另一个人，看上去则像已故伟大的“皮威·赫尔曼”的孪生兄弟。\n\n面对这两位糟糕透顶的政治候选人，我不知道他们之间是不是有什么“基因谱系”，但看起来确实八九不离十！你怎么看？\n\n无论如何，佐治亚州的迈克·柯林斯应该能轻松击败“皮威”，得州的肯·帕克斯顿也应该能轻松击败“阿尔弗雷德·E”。投票给共和党人，让美国再次伟大！\n\n总统 唐纳德·J·特朗普",
       "content_zh_hk": "這不是很奇怪嗎？那些「蠢主黨」（Dumocrats）在得州推出的一個人，看上去幾乎和《MAD》雜誌中廣為人知的阿爾弗雷德·E·紐曼一模一樣；而在佐治亞州，他們推出的另一個人，看上去則像已故偉大的「皮威·赫爾曼」的孿生兄弟。\n\n面對這兩位糟糕透頂的政治候選人，我不知道他們之間是否有什麼「基因樹」，但看起來確實非常接近！你怎麼看？\n\n無論如何，佐治亞州的邁克·柯林斯應該能輕鬆擊敗「皮威」，得州的肯·帕克斯頓也應該能輕鬆擊敗「阿爾弗雷德·E」。投票給共和黨，讓美國再次偉大！\n\n總統 唐納德·J·特朗普",
       "content_ko": "이상하지 않나요? 그 ‘덤ocrats’는 텍사스에서 MAD 매거진으로 유명한 알프레드 E. 뉴먼과 거의 똑같이 생긴 사람을 내세우고, 조지아에서는 고(故) 위대한 피위 허먼의 쌍둥이처럼 보이는 사람을 내세우고 있습니다.\n\n이 두 끔찍한 정치 후보를 보면, 무슨 유전적 계보가 있는지는 모르겠지만, 확실히 아주 가까워 보입니다! 어떻게 생각하시나요?\n\n어쨌든 조지아의 마이크 콜린스는 ‘피위’를 쉽게 이길 것이고, 텍사스의 켄 팩스턴은 ‘알프레드 E.’를 쉽게 이길 것입니다. 공화당에 투표하고, 미국을 다시 위대하게 만드십시오!\n\n도널드 J. 트럼프 대통령",
@@ -388,23 +410,6 @@
       "content_zh_cn": "伊朗反对派领袖、前国家安全顾问助理赞扬特朗普与德黑兰达成的协议：https://justthenews.com/government/security/iranian-resistance-leader-former-national-security-aide-praise-trumps-mou",
       "content_zh_hk": "伊朗反對派領袖、前國家安全顧問助理讚揚特朗普與德黑蘭達成的協議：https://justthenews.com/government/security/iranian-resistance-leader-former-national-security-aide-praise-trumps-mou",
       "content_ko": "이란 반정부 지도자와 전 국가안보보좌관 보좌진이 트럼프의 테헤란 합의를 찬사했다: https://justthenews.com/government/security/iranian-resistance-leader-former-national-security-aide-praise-trumps-mou",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116796678044750462",
-      "url": "https://truthsocial.com/@realDonaldTrump/116796678044750462",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-23T00:51:13.521Z",
-      "created_at_text": "Jun 23, 2026, 12:51 AM",
-      "content": "Years after Pulitzer prize, New York Times gets Russia collusion story wrong once again: https://justthenews.com/accountability/media/pulitzer-prize-aside-new-york-times-keeps-getting-russia-collusion-factually",
-      "content_html": "Years after Pulitzer prize, New York Times gets Russia collusion story wrong once again: https://justthenews.com/accountability/media/pulitzer-prize-aside-new-york-times-keeps-getting-russia-collusion-factually",
-      "media": [],
-      "favourites_count": 12468,
-      "reblogs_count": 3410,
-      "replies_count": 606,
-      "content_zh_cn": "多年过去了，即便拿了普利策奖，《纽约时报》还是再次把“通俄勾连”报道搞错了：https://justthenews.com/accountability/media/pulitzer-prize-aside-new-york-times-keeps-getting-russia-collusion-factually",
-      "content_zh_hk": "多年過去了，即使拿了普立茲獎，《紐約時報》還是再次把「通俄勾連」報道搞錯了：https://justthenews.com/accountability/media/pulitzer-prize-aside-new-york-times-keeps-getting-russia-collusion-factually",
-      "content_ko": "퓰리처상을 받은 지 여러 해가 지났지만, 뉴욕타임스는 또다시 러시아 공모 보도를 틀렸습니다: https://justthenews.com/accountability/media/pulitzer-prize-aside-new-york-times-keeps-getting-russia-collusion-factually",
       "source_hint": "cnn"
     }
   ]
