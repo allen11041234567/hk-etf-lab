@@ -1,10 +1,181 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-24T01:12:08.105Z",
+  "fetchedAt": "2026-06-24T01:32:59.914Z",
   "count": 19,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
   "posts": [
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116802462702290667",
+      "url": "https://truthsocial.com/@realDonaldTrump/116802462702290667",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-24T01:22:20.356Z",
+      "created_at_text": "Jun 24, 2026, 1:22 AM",
+      "content": "RT @realDonaldTrump",
+      "content_html": "RT @realDonaldTrump",
+      "media": [],
+      "favourites_count": 0,
+      "reblogs_count": 0,
+      "replies_count": 0,
+      "content_zh_cn": "RT @realDonaldTrump",
+      "content_zh_hk": "RT @realDonaldTrump",
+      "content_ko": "RT @realDonaldTrump",
+      "source_hint": "cnn"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116802461544961412",
+      "url": "https://truthsocial.com/@realDonaldTrump/116802461544961412",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-24T01:22:02.762Z",
+      "created_at_text": "Jun 24, 2026, 1:22 AM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2Nzk1LzIwMjRmNmYyZjRiNDg1MjMuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 307,
+      "reblogs_count": 76,
+      "replies_count": 16,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "cnn"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116802459363870357",
+      "url": "https://truthsocial.com/@realDonaldTrump/116802459363870357",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-24T01:21:29.479Z",
+      "created_at_text": "Jun 24, 2026, 1:21 AM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi84MDIvNDU5LzEwOS84MTQvMzc3L29yaWdpbmFsLzRkNTgwMmI4NjhiZGRhZDguanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 316,
+      "reblogs_count": 71,
+      "replies_count": 6,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "cnn"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116802458701910307",
+      "url": "https://truthsocial.com/@realDonaldTrump/116802458701910307",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-24T01:21:19.379Z",
+      "created_at_text": "Jun 24, 2026, 1:21 AM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2Nzk3Lzk3NThmYjBjNGE5OWEwODEuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 310,
+      "reblogs_count": 65,
+      "replies_count": 4,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "cnn"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116802457932140979",
+      "url": "https://truthsocial.com/@realDonaldTrump/116802457932140979",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-24T01:21:07.635Z",
+      "created_at_text": "Jun 24, 2026, 1:21 AM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2Nzk4LzBjNTI0ZTk2YTE2NzRmZjMuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 316,
+      "reblogs_count": 66,
+      "replies_count": 3,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "cnn"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116802457179980574",
+      "url": "https://truthsocial.com/@realDonaldTrump/116802457179980574",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-24T01:20:56.158Z",
+      "created_at_text": "Jun 24, 2026, 1:20 AM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2Nzk5LzkzYTFmOTYyZmM1Y2FjY2EuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 329,
+      "reblogs_count": 67,
+      "replies_count": 4,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "cnn"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116802456666292957",
+      "url": "https://truthsocial.com/@realDonaldTrump/116802456666292957",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-24T01:20:48.319Z",
+      "created_at_text": "Jun 24, 2026, 1:20 AM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2ODAwLzk1MzIzMmQ5ZTNjMGUwMTIuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 316,
+      "reblogs_count": 67,
+      "replies_count": 5,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "cnn"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116802455893272945",
+      "url": "https://truthsocial.com/@realDonaldTrump/116802455893272945",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-24T01:20:36.524Z",
+      "created_at_text": "Jun 24, 2026, 1:20 AM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi84MDIvNDU1LzYzNy8zMTAvNjI1L29yaWdpbmFsLzI3ZDhjN2VjNzI3NGU0ZTcuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 316,
+      "reblogs_count": 73,
+      "replies_count": 7,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "cnn"
+    },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116802216796370297",
       "url": "https://truthsocial.com/@realDonaldTrump/116802216796370297",
@@ -19,9 +190,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 1486,
-      "reblogs_count": 351,
-      "replies_count": 69,
+      "favourites_count": 3149,
+      "reblogs_count": 717,
+      "replies_count": 106,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -41,9 +212,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 2809,
-      "reblogs_count": 625,
-      "replies_count": 122,
+      "favourites_count": 4133,
+      "reblogs_count": 887,
+      "replies_count": 135,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -63,9 +234,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 3371,
-      "reblogs_count": 761,
-      "replies_count": 157,
+      "favourites_count": 4586,
+      "reblogs_count": 1005,
+      "replies_count": 177,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -89,9 +260,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 9005,
-      "reblogs_count": 2535,
-      "replies_count": 1723,
+      "favourites_count": 10023,
+      "reblogs_count": 2809,
+      "replies_count": 1828,
       "content_zh_cn": "这不是很奇怪吗？那些“蠢主党”（Dumocrats）在得州推出来的一个人，看上去几乎和《MAD》杂志里大名鼎鼎的阿尔弗雷德·E·纽曼一模一样；而在佐治亚州，他们推出的另一个人，看上去则像已故伟大的“皮威·赫尔曼”的孪生兄弟。\n\n面对这两位糟糕透顶的政治候选人，我不知道他们之间是不是有什么“基因谱系”，但看起来确实八九不离十！你怎么看？\n\n无论如何，佐治亚州的迈克·柯林斯应该能轻松击败“皮威”，得州的肯·帕克斯顿也应该能轻松击败“阿尔弗雷德·E”。投票给共和党人，让美国再次伟大！\n\n总统 唐纳德·J·特朗普",
       "content_zh_hk": "這不是很奇怪嗎？那些「蠢主黨」（Dumocrats）在得州推出的一個人，看上去幾乎和《MAD》雜誌中廣為人知的阿爾弗雷德·E·紐曼一模一樣；而在佐治亞州，他們推出的另一個人，看上去則像已故偉大的「皮威·赫爾曼」的孿生兄弟。\n\n面對這兩位糟糕透頂的政治候選人，我不知道他們之間是否有什麼「基因樹」，但看起來確實非常接近！你怎麼看？\n\n無論如何，佐治亞州的邁克·柯林斯應該能輕鬆擊敗「皮威」，得州的肯·帕克斯頓也應該能輕鬆擊敗「阿爾弗雷德·E」。投票給共和黨，讓美國再次偉大！\n\n總統 唐納德·J·特朗普",
       "content_ko": "이상하지 않나요? 그 ‘덤ocrats’는 텍사스에서 MAD 매거진으로 유명한 알프레드 E. 뉴먼과 거의 똑같이 생긴 사람을 내세우고, 조지아에서는 고(故) 위대한 피위 허먼의 쌍둥이처럼 보이는 사람을 내세우고 있습니다.\n\n이 두 끔찍한 정치 후보를 보면, 무슨 유전적 계보가 있는지는 모르겠지만, 확실히 아주 가까워 보입니다! 어떻게 생각하시나요?\n\n어쨌든 조지아의 마이크 콜린스는 ‘피위’를 쉽게 이길 것이고, 텍사스의 켄 팩스턴은 ‘알프레드 E.’를 쉽게 이길 것입니다. 공화당에 투표하고, 미국을 다시 위대하게 만드십시오!\n\n도널드 J. 트럼프 대통령",
@@ -111,9 +282,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 9597,
-      "reblogs_count": 2951,
-      "replies_count": 1060,
+      "favourites_count": 11577,
+      "reblogs_count": 3572,
+      "replies_count": 1173,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -133,9 +304,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 9020,
-      "reblogs_count": 2357,
-      "replies_count": 1217,
+      "favourites_count": 9980,
+      "reblogs_count": 2605,
+      "replies_count": 1274,
       "content_zh_cn": "https://www.dailymail.com/news/article-15921233/trump-approval-bounces-iran-deal.html",
       "content_zh_hk": "https://www.dailymail.com/news/article-15921233/trump-approval-bounces-iran-deal.html",
       "content_ko": "https://www.dailymail.com/news/article-15921233/trump-approval-bounces-iran-deal.html",
@@ -183,9 +354,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 15169,
-      "reblogs_count": 3415,
-      "replies_count": 1729,
+      "favourites_count": 15879,
+      "reblogs_count": 3563,
+      "replies_count": 1795,
       "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116800007587633396\n这些照片是今天上午拍的！",
       "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116800007587633396\n這些照片是今天上午拍的！",
       "content_ko": "리트윗: https://truthsocial.com/users/realDonaldTrump/statuses/116800007587633396\n이 사진들은 오늘 아침에 촬영된 것입니다!",
@@ -274,142 +445,6 @@
       "content_zh_cn": "投票支持安迪·比格斯竞选亚利桑那州州长。他非常出色！！！\n——总统唐纳德·J·特朗普",
       "content_zh_hk": "投票支持安迪·比格斯競選亞利桑那州州長。他非常出色！！！\n——特朗普總統",
       "content_ko": "애리조나 주지사 선거에서 앤디 빅스에게 투표해 주십시오. 그는 정말 훌륭합니다!!!\n— 도널드 J. 트럼프 대통령",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116799245997909499",
-      "url": "https://truthsocial.com/@realDonaldTrump/116799245997909499",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-23T11:44:17.377Z",
-      "created_at_text": "Jun 23, 2026, 11:44 AM",
-      "content": "Trump Scores 8 Triumphs in 7 Years Across Latin America: https://www.newsmax.com/john-gizzi/donald-trump-latin-america-elections/2026/06/22/id/1260532/",
-      "content_html": "Trump Scores 8 Triumphs in 7 Years Across Latin America: https://www.newsmax.com/john-gizzi/donald-trump-latin-america-elections/2026/06/22/id/1260532/",
-      "media": [],
-      "favourites_count": 13303,
-      "reblogs_count": 3106,
-      "replies_count": 531,
-      "content_zh_cn": "特朗普7年内在拉丁美洲斩获8场胜利：https://www.newsmax.com/john-gizzi/donald-trump-latin-america-elections/2026/06/22/id/1260532/",
-      "content_zh_hk": "特朗普7年內在拉丁美洲取得8場勝利：https://www.newsmax.com/john-gizzi/donald-trump-latin-america-elections/2026/06/22/id/1260532/",
-      "content_ko": "트럼프, 7년간 중남미에서 8차례 승리: https://www.newsmax.com/john-gizzi/donald-trump-latin-america-elections/2026/06/22/id/1260532/",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116799167032916635",
-      "url": "https://truthsocial.com/@realDonaldTrump/116799167032916635",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-23T11:24:12.430Z",
-      "created_at_text": "Jun 23, 2026, 11:24 AM",
-      "content": "19 Millions Barrels of Oil flowed out of the Hormuz Strait yesterday, an all time RECORD. Oil prices are tumbling down, and the World is a much safer place!!! President DONALD J. TRUMP",
-      "content_html": "19 Millions Barrels of Oil flowed out of the Hormuz Strait yesterday, an all time RECORD. Oil prices are tumbling down, and the World is a much safer place!!! President DONALD J. TRUMP",
-      "media": [],
-      "favourites_count": 19191,
-      "reblogs_count": 4602,
-      "replies_count": 1579,
-      "content_zh_cn": "昨天有1900万桶石油经由霍尔木兹海峡运出，创下历史最高纪录。油价正在大幅下跌，世界也安全得多了！！！\n美国总统 唐纳德·J·特朗普",
-      "content_zh_hk": "昨天有1,900萬桶石油經霍爾木茲海峽運出，創下歷來最高紀錄。油價正大幅下跌，世界也安全得多了！！！\n美國總統 當勞·J·特朗普",
-      "content_ko": "어제 호르무즈 해협을 통해 1,900만 배럴의 원유가 운송됐으며, 이는 사상 최고 기록입니다. 유가는 급락하고 있고, 세계는 훨씬 더 안전한 곳이 됐습니다!!!\n미국 대통령 도널드 J. 트럼프",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116799154100072125",
-      "url": "https://truthsocial.com/@realDonaldTrump/116799154100072125",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-23T11:20:55.091Z",
-      "created_at_text": "Jun 23, 2026, 11:20 AM",
-      "content": "Despite their protestations and false statements to the contrary, coupled with the drumbeat of the Fake News, which is doing everything possible to make the U.S. Victory as small and insignificant as possible, Iran has fully and completely agreed to highest level Nuclear inspections long into the future (Infinity!!!). This will insure \"Nuclear Honesty.\" If they did not agree to this, there would be no further negotiations! Based on this and other major concessions being made by Iran, I have agreed to allow the Hormuz Strait to remain OPEN, with no further Naval Blockade. However, all ships are remaining in place should it be necessary to reinstitute the Blockade, which seems, at this point, highly unlikely. The Money and/or Sanctions that the U.S. Treasury is releasing goes into escrow, controlled by the U.S.A., and will be used for the purchase of food and medical supplies, exclusively from the United States, including Corn, Wheat, and Soybeans from our great American Farmers. These are things that are desperately needed by Iran. This is a humanitarian crisis, and I feel it is necessary to help, NOW, before it is too late. Talks are going well! Thank you for your attention to this matter. President DONALD J. TRUMP",
-      "content_html": "Despite their protestations and false statements to the contrary, coupled with the drumbeat of the Fake News, which is doing everything possible to make the U.S. Victory as small and insignificant as possible, Iran has fully and completely agreed to highest level Nuclear inspections long into the future (Infinity!!!). This will insure \"Nuclear Honesty.\" If they did not agree to this, there would be no further negotiations! Based on this and other major concessions being made by Iran, I have agreed to allow the Hormuz Strait to remain OPEN, with no further Naval Blockade. However, all ships are remaining in place should it be necessary to reinstitute the Blockade, which seems, at this point, highly unlikely. The Money and/or Sanctions that the U.S. Treasury is releasing goes into escrow, controlled by the U.S.A., and will be used for the purchase of food and medical supplies, exclusively from the United States, including Corn, Wheat, and Soybeans from our great American Farmers. These are things that are desperately needed by Iran. This is a humanitarian crisis, and I feel it is necessary to help, NOW, before it is too late. Talks are going well! Thank you for your attention to this matter. President DONALD J. TRUMP",
-      "media": [],
-      "favourites_count": 17118,
-      "reblogs_count": 4522,
-      "replies_count": 1442,
-      "content_zh_cn": "尽管伊朗一再否认并发表与事实相反的虚假声明，再加上“假新闻”持续不断地鼓噪，竭尽所能把美国的胜利说得越小、越无足轻重越好，但伊朗已经就未来长期接受最高级别的核查作出全面、彻底的同意（无限期!!!）。这将确保“核诚信”。如果他们不同意这一点，就不会有进一步谈判！\n\n基于此，以及伊朗作出的其他重大让步，我已同意允许霍尔木兹海峡继续保持开放，不再实施海上封锁。然而，所有舰船仍将留在原位，以备在必要时恢复封锁；不过从目前来看，这种可能性极低。\n\n美国财政部正在释放的资金和/或制裁豁免所得款项将进入由美国控制的托管账户，并将专门用于采购食品和医疗物资，而且只能从美国采购，包括向我们伟大的美国农民购买玉米、小麦和大豆。这些都是伊朗当前迫切需要的物资。\n\n这是一场人道主义危机，我认为有必要现在就提供帮助，NOW，在为时已晚之前。谈判进展顺利！感谢大家对此事的关注。\n\n总统 唐纳德·J·特朗普",
-      "content_zh_hk": "儘管伊朗一再抗辯並發表與事實相反的虛假聲明，再加上「假新聞」持續不斷地鼓噪，竭盡所能把美國的勝利說得越小、越微不足道越好，但伊朗已就未來長期接受最高級別的核查作出全面、徹底的同意（無限期!!!）。這將確保「核誠信」。如果他們不同意這一點，就不會有進一步談判！\n\n基於此，以及伊朗作出的其他重大讓步，我已同意容許霍爾木茲海峽繼續保持開放，不再實施海上封鎖。然而，所有艦船仍將留在原位，以備在必要時恢復封鎖；不過從目前來看，這種可能性極低。\n\n美國財政部正在釋放的資金及／或制裁豁免所得款項將進入由美國控制的託管帳戶，並將專門用於採購食品和醫療物資，而且只能從美國採購，包括向我們偉大的美國農民購買粟米、小麥和大豆。這些都是伊朗當前迫切需要的物資。\n\n這是一場人道主義危機，我認為有必要現在就提供幫助，NOW，在為時已晚之前。談判進展順利！感謝大家對此事的關注。\n\n總統 當勞·J·特朗普",
-      "content_ko": "이란은 이를 부인하고 사실과 다른 허위 성명을 내고 있고, 여기에 미국의 승리를 최대한 작고 하찮게 보이게 만들기 위해 온갖 수단을 동원하는 가짜뉴스의 끊임없는 공세까지 더해지고 있지만, 이란은 앞으로 오랜 기간 최고 수준의 핵 사찰을 전면적이고 완전하게 수용하기로 합의했습니다(무기한!!!). 이는 “핵의 정직성”을 보장할 것입니다. 이 점에 동의하지 않았다면 추가 협상은 없었을 것입니다!\n\n이와 함께 이란이 내놓은 다른 중대한 양보들을 바탕으로, 저는 호르무즈 해협을 계속 개방 상태로 유지하고 추가적인 해상 봉쇄는 하지 않기로 동의했습니다. 다만 필요할 경우 봉쇄를 다시 시행할 수 있도록 모든 함정은 현재 위치를 유지하고 있습니다. 하지만 현시점에서 그럴 가능성은 매우 낮아 보입니다.\n\n미 재무부가 풀고 있는 자금 및/또는 제재 완화로 인한 자금은 미국이 통제하는 에스크로 계정에 들어가며, 식량과 의료 물자 구매에만 사용될 것입니다. 또한 이 물자는 전적으로 미국으로부터만 구매되며, 여기에는 우리의 위대한 미국 농부들이 생산한 옥수수, 밀, 대두가 포함됩니다. 이는 이란에 절실히 필요한 물자들입니다.\n\n이것은 인도주의적 위기이며, 너무 늦기 전에 바로 지금, NOW, 도움을 주는 것이 필요하다고 생각합니다. 협상은 잘 진행되고 있습니다! 이 사안에 관심을 가져주셔서 감사합니다.\n\n대통령 도널드 J. 트럼프",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116797477878659134",
-      "url": "https://truthsocial.com/@realDonaldTrump/116797477878659134",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-23T04:14:37.982Z",
-      "created_at_text": "Jun 23, 2026, 4:14 AM",
-      "content": "At least 39 people injured, 4 dead, in Chicago weekend shootings. Governor Pritzker, I, as President, can fix this, FAST and Permanently. D.C., Memphis, New Orleans, all down to record lows, and quickly! CALL ME! President DJT",
-      "content_html": "At least 39 people injured, 4 dead, in Chicago weekend shootings. Governor Pritzker, I, as President, can fix this, FAST and Permanently. D.C., Memphis, New Orleans, all down to record lows, and quickly! CALL ME! President DJT",
-      "media": [],
-      "favourites_count": 19720,
-      "reblogs_count": 4998,
-      "replies_count": 1781,
-      "content_zh_cn": "芝加哥周末枪击事件已造成至少39人受伤、4人死亡。普利茨克州长，我，作为总统，能够解决这一问题，而且会很快、永久性地解决。\n华盛顿特区、孟菲斯、新奥尔良，都已迅速降至历史低点！给我打电话！\n——总统DJT",
-      "content_zh_hk": "芝加哥周末槍擊事件已造成至少39人受傷、4人死亡。普利茨克州長，我，作為總統，能夠解決這個問題，而且會很快、永久性地解決。\n華盛頓特區、孟菲斯、新奧爾良，都已迅速降至歷史低點！給我打電話！\n——總統DJT",
-      "content_ko": "시카고에서 주말 총격 사건으로 최소 39명이 다치고 4명이 사망했습니다. 프리츠커 주지사, 나, 대통령으로서 이 문제를 신속하고 영구적으로 해결할 수 있습니다.\n워싱턴 D.C., 멤피스, 뉴올리언스는 모두 기록적인 저점까지 빠르게 내려갔습니다! 전화하세요!\n대통령 DJT",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116797415517828450",
-      "url": "https://truthsocial.com/@realDonaldTrump/116797415517828450",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-23T03:58:46.467Z",
-      "created_at_text": "Jun 23, 2026, 3:58 AM",
-      "content": "Trump Scores 8 Triumphs in 7 Years Across Latin America: https://www.newsmax.com/john-gizzi/donald-trump-latin-america-elections/2026/06/22/id/1260532/",
-      "content_html": "Trump Scores 8 Triumphs in 7 Years Across Latin America: https://www.newsmax.com/john-gizzi/donald-trump-latin-america-elections/2026/06/22/id/1260532/",
-      "media": [],
-      "favourites_count": 13460,
-      "reblogs_count": 3004,
-      "replies_count": 493,
-      "content_zh_cn": "特朗普7年间在拉丁美洲斩获8场胜利：https://www.newsmax.com/john-gizzi/donald-trump-latin-america-elections/2026/06/22/id/1260532/",
-      "content_zh_hk": "特朗普7年間在拉丁美洲斬獲8場勝利：https://www.newsmax.com/john-gizzi/donald-trump-latin-america-elections/2026/06/22/id/1260532/",
-      "content_ko": "트럼프, 7년간 중남미에서 8번의 승리를 거두다: https://www.newsmax.com/john-gizzi/donald-trump-latin-america-elections/2026/06/22/id/1260532/",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116797344912017182",
-      "url": "https://truthsocial.com/@realDonaldTrump/116797344912017182",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-23T03:40:49.109Z",
-      "created_at_text": "Jun 23, 2026, 3:40 AM",
-      "content": "Fast and Furious 2.0?' Biden DEA let 1M fentanyl pills flow to streets, whistleblower lawyer says: https://justthenews.com/government/federal-agencies/cover-dea-whistleblowers-lawyer-says-client-silenced-more-1m-pills",
-      "content_html": "Fast and Furious 2.0?' Biden DEA let 1M fentanyl pills flow to streets, whistleblower lawyer says: https://justthenews.com/government/federal-agencies/cover-dea-whistleblowers-lawyer-says-client-silenced-more-1m-pills",
-      "media": [],
-      "favourites_count": 12217,
-      "reblogs_count": 4013,
-      "replies_count": 739,
-      "content_zh_cn": "《速度与激情2.0》？一名举报人律师称，拜登政府领导下的美国缉毒局（DEA）放任100万片芬太尼流入街头：https://justthenews.com/government/federal-agencies/cover-dea-whistleblowers-lawyer-says-client-silenced-more-1m-pills",
-      "content_zh_hk": "《狂野時速2.0》？一名舉報人律師稱，拜登政府領導下的美國緝毒局（DEA）放任100萬粒芬太尼流入街頭：https://justthenews.com/government/federal-agencies/cover-dea-whistleblowers-lawyer-says-client-silenced-more-1m-pills",
-      "content_ko": "‘분노의 질주 2.0’?\n내부고발자 측 변호사에 따르면, 바이든 행정부의 DEA가 펜타닐 알약 100만 정이 거리로 흘러들어가도록 방치했다: https://justthenews.com/government/federal-agencies/cover-dea-whistleblowers-lawyer-says-client-silenced-more-1m-pills",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116796681069385730",
-      "url": "https://truthsocial.com/@realDonaldTrump/116796681069385730",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-23T00:51:59.676Z",
-      "created_at_text": "Jun 23, 2026, 12:51 AM",
-      "content": "Biden administration buried whistleblower complaint alleging Fauci lied to Congress during pandemic: https://justthenews.com/accountability/whistleblowers/biden-administration-buried-whistleblower-complaint-alleging-fauci",
-      "content_html": "Biden administration buried whistleblower complaint alleging Fauci lied to Congress during pandemic: https://justthenews.com/accountability/whistleblowers/biden-administration-buried-whistleblower-complaint-alleging-fauci",
-      "media": [],
-      "favourites_count": 16426,
-      "reblogs_count": 5592,
-      "replies_count": 1641,
-      "content_zh_cn": "拜登政府压下了一份举报投诉，指称福奇在疫情期间就相关问题向国会作了虚假陈述：https://justthenews.com/accountability/whistleblowers/biden-administration-buried-whistleblower-complaint-alleging-fauci",
-      "content_zh_hk": "拜登政府壓下了一份舉報投訴，指稱福奇在疫情期間就相關問題向國會作了虛假陳述：https://justthenews.com/accountability/whistleblowers/biden-administration-buried-whistleblower-complaint-alleging-fauci",
-      "content_ko": "바이든 행정부가 팬데믹 기간 중 파우치가 의회에 허위 진술을 했다고 주장한 내부고발 민원을 묵살했다: https://justthenews.com/accountability/whistleblowers/biden-administration-buried-whistleblower-complaint-alleging-fauci",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116796679527851962",
-      "url": "https://truthsocial.com/@realDonaldTrump/116796679527851962",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-23T00:51:36.152Z",
-      "created_at_text": "Jun 23, 2026, 12:51 AM",
-      "content": "Iranian resistance leader, former national security aide praise Trump's deal with Tehran: https://justthenews.com/government/security/iranian-resistance-leader-former-national-security-aide-praise-trumps-mou",
-      "content_html": "Iranian resistance leader, former national security aide praise Trump's deal with Tehran: https://justthenews.com/government/security/iranian-resistance-leader-former-national-security-aide-praise-trumps-mou",
-      "media": [],
-      "favourites_count": 13465,
-      "reblogs_count": 3283,
-      "replies_count": 756,
-      "content_zh_cn": "伊朗反对派领袖、前国家安全顾问助理赞扬特朗普与德黑兰达成的协议：https://justthenews.com/government/security/iranian-resistance-leader-former-national-security-aide-praise-trumps-mou",
-      "content_zh_hk": "伊朗反對派領袖、前國家安全顧問助理讚揚特朗普與德黑蘭達成的協議：https://justthenews.com/government/security/iranian-resistance-leader-former-national-security-aide-praise-trumps-mou",
-      "content_ko": "이란 반정부 지도자와 전 국가안보보좌관 보좌진이 트럼프의 테헤란 합의를 찬사했다: https://justthenews.com/government/security/iranian-resistance-leader-former-national-security-aide-praise-trumps-mou",
       "source_hint": "cnn"
     }
   ]
