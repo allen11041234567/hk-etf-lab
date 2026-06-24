@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116805750630335427": {
+    "content_zh_cn": "这是那种坚硬的橡胶表面——没有油漆——在那些破坏者把它割开并扯坏之前！",
+    "content_zh_hk": "這是那種堅硬的橡膠表面——沒有油漆——在那些破壞者把它割開並扯壞之前！",
+    "content_ko": "이것은 단단한 고무 표면입니다 — 페인트칠이 아닙니다 — 저 파괴자들이 그것을 잘라내고 뜯어놓기 전의 모습입니다!"
+  },
   "https://truthsocial.com/@realDonaldTrump/116805545512296111": {
     "content_zh_cn": "原定于今日举行的住房新闻发布会及签署仪式现予以取消，直至我们通过迫切需要的《拯救美国法案》（SAVE AMERICA ACT）为止。我认为这已构成国家紧急状态。\n\n感谢各位对此事的关注！\n特朗普总统",
     "content_zh_hk": "原定於今日舉行的住房新聞發佈會及簽署儀式現予以取消，直至我們通過迫切需要的《拯救美國法案》（SAVE AMERICA ACT）為止。我認為這已構成國家緊急狀態。\n\n感謝各位對此事的關注！\n特朗普總統",
