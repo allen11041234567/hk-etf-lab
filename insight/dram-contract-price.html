@@ -64,7 +64,7 @@
         <div class="eyebrow">DRAM价格观察</div>
         <h1>DRAM 合约价 + 现货价跟踪</h1>
         <div class="sub">
-          这页改成了 <b>轻量接口实时取数</b>，不再依赖每日定时爬取任务。页面会通过站内接口抓取 TrendForce 的 DRAM 合约价和现货价，并保留你要的对外标记：<b>北京时间 11:00 / 15:00</b>。如果源站当次没有新数据，或接口临时抓取失败，则页面会继续保留上一版可用数据。
+          这页现在拆成两部分处理：<b>DRAM合约价</b> 固定展示，不走自动刷新；<b>DRAM现货价</b> 才通过站内轻量接口取数，并保留你要的对外标记：<b>北京时间 11:00 / 15:00</b>。如果现货源站当次没有新数据，或接口临时抓取失败，则继续保留上一版可用数据。
         </div>
         <div class="meta-grid">
           <div class="meta-card">
@@ -72,16 +72,16 @@
             <div class="meta-v">DRAM合约价 + DRAM现货价</div>
           </div>
           <div class="meta-card">
-            <div class="meta-k">对外刷新标记</div>
+            <div class="meta-k">合约价更新方式</div>
+            <div class="meta-v">固定展示，不自动更新</div>
+          </div>
+          <div class="meta-card">
+            <div class="meta-k">现货价对外标记</div>
             <div class="meta-v" id="site-refresh-label">北京时间 11:00 / 15:00</div>
           </div>
           <div class="meta-card">
-            <div class="meta-k">接口最近取数</div>
+            <div class="meta-k">现货接口最近取数</div>
             <div class="meta-v" id="fetched-at">加载中</div>
-          </div>
-          <div class="meta-card">
-            <div class="meta-k">取数方式</div>
-            <div class="meta-v">站内 API 轻量刷新</div>
           </div>
         </div>
       </div>
@@ -103,13 +103,68 @@
               </tr>
             </thead>
             <tbody id="contract-body">
-              <tr><td class="loading" colspan="6">正在加载 DRAM 合约价…</td></tr>
+              <tr>
+                <td class="item">DDR5 8GB SO-DIMM</td>
+                <td class="num">120.00</td>
+                <td class="num">96.00</td>
+                <td class="num">109.00</td>
+                <td class="chg-up">▲ 45.33%</td>
+                <td class="chg-up">▲ 32.41%</td>
+              </tr>
+              <tr>
+                <td class="item">DDR4 16GB SO-DIMM</td>
+                <td class="num">256.00</td>
+                <td class="num">192.00</td>
+                <td class="num">227.00</td>
+                <td class="chg-up">▲ 33.53%</td>
+                <td class="chg-up">▲ 37.14%</td>
+              </tr>
+              <tr>
+                <td class="item">DDR4 8GB SO-DIMM</td>
+                <td class="num">128.00</td>
+                <td class="num">96.00</td>
+                <td class="num">119.00</td>
+                <td class="chg-up">▲ 40.00%</td>
+                <td class="chg-up">▲ 36.17%</td>
+              </tr>
+              <tr>
+                <td class="item">DDR4 16Gb 2Gx8</td>
+                <td class="num">41.00</td>
+                <td class="num">31.00</td>
+                <td class="num">33.50</td>
+                <td class="chg-up">▲ 13.56%</td>
+                <td class="chg-up">▲ 14.82%</td>
+              </tr>
+              <tr>
+                <td class="item">DDR4 8Gb 1Gx8</td>
+                <td class="num">23.00</td>
+                <td class="num">14.50</td>
+                <td class="num">16.00</td>
+                <td class="chg-up">▲ 23.08%</td>
+                <td class="chg-up">▲ 26.09%</td>
+              </tr>
+              <tr>
+                <td class="item">DDR4 4Gb 256Mx16</td>
+                <td class="num">12.00</td>
+                <td class="num">8.00</td>
+                <td class="num">10.00</td>
+                <td class="chg-up">▲ 33.33%</td>
+                <td class="chg-up">▲ 37.93%</td>
+              </tr>
+              <tr>
+                <td class="item">DDR3 4Gb 256Mx16</td>
+                <td class="num">12.00</td>
+                <td class="num">9.50</td>
+                <td class="num">10.00</td>
+                <td class="chg-up">▲ 33.33%</td>
+                <td class="chg-up">▲ 35.71%</td>
+              </tr>
             </tbody>
           </table>
         </div>
         <div class="foot">
           数据来源页面：<a href="https://www.trendforce.com.tw/price/dram/dram_contract" target="_blank" rel="noopener noreferrer">TrendForce DRAM Contract Price</a>。<br>
-          源页最近更新时间：<b id="contract-update">加载中</b>。
+          当前合约价部分按固定口径展示，不走自动刷新。源页参考更新时间：<b>Last Update 2026-04-30 15:00 (GMT+8)</b>。
         </div>
 
         <div class="divider"></div>
@@ -169,20 +224,6 @@
       }).format(dt).replace(/\//g, '-') + ' (GMT+8)';
     }
 
-    function renderContractRows(rows) {
-      if (!rows || !rows.length) return '<tr><td class="loading" colspan="6">暂无数据</td></tr>';
-      return rows.map((row) => `
-        <tr>
-          <td class="item">${escapeHtml(row.item)}</td>
-          <td class="num">${escapeHtml(row.high)}</td>
-          <td class="num">${escapeHtml(row.low)}</td>
-          <td class="num">${escapeHtml(row.avg)}</td>
-          <td class="${classifyChange(row.avgChange)}">${escapeHtml(row.avgChange)}</td>
-          <td class="${classifyChange(row.lowChange)}">${escapeHtml(row.lowChange)}</td>
-        </tr>
-      `).join('');
-    }
-
     function renderSpotRows(rows) {
       if (!rows || !rows.length) return '<tr><td class="loading" colspan="5">暂无数据</td></tr>';
       return rows.map((row) => `
@@ -204,9 +245,7 @@
         if (!resp.ok || !data.ok) throw new Error(data.error || `HTTP ${resp.status}`);
         document.getElementById('site-refresh-label').textContent = data.siteRefreshLabel || '北京时间 11:00 / 15:00';
         document.getElementById('fetched-at').textContent = formatBeijing(data.fetchedAt);
-        document.getElementById('contract-update').textContent = data.contract?.lastUpdate || '--';
         document.getElementById('spot-update').textContent = data.spot?.lastUpdate || '--';
-        document.getElementById('contract-body').innerHTML = renderContractRows(data.contract?.rows || []);
         document.getElementById('spot-body').innerHTML = renderSpotRows(data.spot?.rows || []);
         errorBox.style.display = 'none';
       } catch (error) {
