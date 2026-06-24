@@ -46,7 +46,6 @@
     .chg-up{color:var(--red);font-weight:800}
     .chg-down{color:var(--green);font-weight:800}
     .chg-flat{color:#64748b;font-weight:800}
-    .foot{margin-top:16px;padding:14px 16px;border-radius:16px;background:#f8fafc;border:1px solid var(--line);color:var(--muted);font-size:13px;line-height:1.8}
     .divider{height:1px;background:#edf2f7;margin:26px 0}
     .schedule-pill{display:inline-flex;align-items:center;gap:8px;padding:7px 10px;border-radius:999px;background:#fff7ed;color:var(--amber);border:1px solid #fed7aa;font-size:12px;font-weight:800}
     .loading{padding:28px 18px;text-align:center;color:var(--muted);font-size:14px}
@@ -64,7 +63,7 @@
         <div class="eyebrow">DRAM价格观察</div>
         <h1>DRAM 合约价 + 现货价跟踪</h1>
         <div class="sub">
-          这页现在拆成两部分处理：<b>DRAM合约价</b> 固定展示，不走自动刷新；<b>DRAM现货价</b> 才通过站内轻量接口取数，并保留你要的对外标记：<b>北京时间 11:00 / 15:00</b>。如果现货源站当次没有新数据，或接口临时抓取失败，则继续保留上一版可用数据。
+          汇总展示 DRAM 合约价与 DRAM 现货价，便于持续观察主流品项价格变化。
         </div>
         <div class="meta-grid">
           <div class="meta-card">
@@ -72,24 +71,22 @@
             <div class="meta-v">DRAM合约价 + DRAM现货价</div>
           </div>
           <div class="meta-card">
-            <div class="meta-k">合约价更新方式</div>
-            <div class="meta-v">固定展示，不自动更新</div>
-          </div>
-          <div class="meta-card">
-            <div class="meta-k">现货价对外标记</div>
+            <div class="meta-k">现货价更新时间</div>
             <div class="meta-v" id="site-refresh-label">北京时间 11:00 / 15:00</div>
           </div>
           <div class="meta-card">
-            <div class="meta-k">现货接口最近取数</div>
+            <div class="meta-k">最近刷新</div>
             <div class="meta-v" id="fetched-at">加载中</div>
+          </div>
+          <div class="meta-card">
+            <div class="meta-k">价格维度</div>
+            <div class="meta-v">合约价 + 现货价</div>
           </div>
         </div>
       </div>
       <div class="body">
         <h2 class="section-title">DRAM合约价表</h2>
-        <p class="section-note">
-          本节明确标记为 <b>DRAM合约价</b>，表头为：<b>項目 / 盤高點 / 盤低點 / 盤平均 / 均價漲跌 / 低點漲跌</b>。
-        </p>
+        <p class="section-note">項目 / 盤高點 / 盤低點 / 盤平均 / 均價漲跌 / 低點漲跌</p>
         <div class="table-wrap">
           <table>
             <thead>
@@ -162,18 +159,11 @@
             </tbody>
           </table>
         </div>
-        <div class="foot">
-          数据来源页面：<a href="https://www.trendforce.com.tw/price/dram/dram_contract" target="_blank" rel="noopener noreferrer">TrendForce DRAM Contract Price</a>。<br>
-          当前合约价部分按固定口径展示，不走自动刷新。源页参考更新时间：<b>Last Update 2026-04-30 15:00 (GMT+8)</b>。
-        </div>
-
         <div class="divider"></div>
 
         <h2 class="section-title">DRAM现货价表</h2>
-        <p class="section-note">
-          本节明确标记为 <b>DRAM现货价</b>。页面对外仍按你的要求显示为 <b>北京时间 11:00</b> 与 <b>15:00</b> 两个关键刷新时点，但实际数据采用接口轻量拉取，不再建每日爬取任务。若源站未更新，则继续展示上一版有效数据。
-        </p>
-        <div style="margin-bottom:16px"><span class="schedule-pill">对外刷新标记：北京时间 11:00 / 15:00</span></div>
+        <p class="section-note">項目 / 盤高點 / 盤低點 / 盤平均 / 均價漲跌</p>
+        <div style="margin-bottom:16px"><span class="schedule-pill">北京时间 11:00 / 15:00</span></div>
         <div class="table-wrap">
           <table>
             <thead>
@@ -190,11 +180,6 @@
             </tbody>
           </table>
         </div>
-        <div class="foot">
-          数据来源页面：<a href="https://www.trendforce.com.tw/price/dram/dram_spot" target="_blank" rel="noopener noreferrer">TrendForce DRAM Spot Price</a>。<br>
-          源页最近更新时间：<b id="spot-update">加载中</b>。
-        </div>
-
         <div class="error" id="error-box"></div>
       </div>
     </div>
@@ -245,7 +230,6 @@
         if (!resp.ok || !data.ok) throw new Error(data.error || `HTTP ${resp.status}`);
         document.getElementById('site-refresh-label').textContent = data.siteRefreshLabel || '北京时间 11:00 / 15:00';
         document.getElementById('fetched-at').textContent = formatBeijing(data.fetchedAt);
-        document.getElementById('spot-update').textContent = data.spot?.lastUpdate || '--';
         document.getElementById('spot-body').innerHTML = renderSpotRows(data.spot?.rows || []);
         errorBox.style.display = 'none';
       } catch (error) {
