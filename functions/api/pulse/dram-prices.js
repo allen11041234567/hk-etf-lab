@@ -22,6 +22,8 @@ function stripTags(raw) {
     .replace(/<[^>]+>/g, '')
     .replace(/&nbsp;/g, ' ')
     .replace(/&amp;/g, '&')
+    .replace(/&mdash;/gi, '—')
+    .replace(/&#8212;/g, '—')
     .replace(/&#9650;/g, '▲')
     .replace(/&#9660;/g, '▼')
     .replace(/\s+/g, ' ')
@@ -43,9 +45,15 @@ function parseLastUpdate(html) {
 }
 
 function parseTableRows(html, kind) {
-  const tableMatch = html.match(/<table class="price-table">[\s\S]*?<tbody>([\s\S]*?)<\/tbody>/i);
-  if (!tableMatch) throw new Error(`price table not found for ${kind}`);
-  const tbody = tableMatch[1];
+  let tbody = null;
+  if (kind === 'contract') {
+    const blockMatch = html.match(/<div id="dram_contract" class="price-content"[\s\S]*?<table class="price-table">[\s\S]*?<tbody>([\s\S]*?)<\/tbody>/i);
+    tbody = blockMatch ? blockMatch[1] : null;
+  } else {
+    const blockMatch = html.match(/<div id="dram_spot" class="price-content"[\s\S]*?<table class="price-table">[\s\S]*?<tbody>([\s\S]*?)<\/tbody>/i);
+    tbody = blockMatch ? blockMatch[1] : null;
+  }
+  if (!tbody) throw new Error(`price table not found for ${kind}`);
   const rows = [];
   for (const tr of tbody.match(/<tr>[\s\S]*?<\/tr>/gi) || []) {
     const cells = [...tr.matchAll(/<td\b[^>]*>([\s\S]*?)<\/td>/gi)].map((m) => m[1]);
