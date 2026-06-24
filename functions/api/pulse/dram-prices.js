@@ -1,7 +1,6 @@
 const LIVE_TTL_SECONDS = 600;
 const STALE_TTL_SECONDS = 172800;
 
-const CONTRACT_URL = 'https://www.trendforce.com.tw/price/dram/dram_contract';
 const SPOT_URL = 'https://www.trendforce.com.tw/price/dram/dram_spot';
 const UA = 'Mozilla/5.0 (compatible; HK-ETF-Lab/1.0; +https://hketf-lab.pages.dev/)';
 
@@ -93,13 +92,7 @@ async function fetchHtml(url) {
   return await resp.text();
 }
 
-function buildPayload(contractHtml, spotHtml) {
-  const contract = {
-    sourceUrl: CONTRACT_URL,
-    label: 'DRAM合约价',
-    lastUpdate: parseLastUpdate(contractHtml),
-    rows: parseTableRows(contractHtml, 'contract'),
-  };
+function buildPayload(spotHtml) {
   const spot = {
     sourceUrl: SPOT_URL,
     label: 'DRAM现货价',
@@ -107,15 +100,14 @@ function buildPayload(contractHtml, spotHtml) {
     updateHint: '站内按北京时间 11:00 / 15:00 作为对外刷新标记',
     rows: parseTableRows(spotHtml, 'spot'),
   };
-  if (!contract.rows.length || !spot.rows.length) {
-    throw new Error('parsed rows empty');
+  if (!spot.rows.length) {
+    throw new Error('parsed spot rows empty');
   }
   return {
     ok: true,
     fetchedAt: new Date().toISOString(),
     siteRefreshLabel: '北京时间 11:00 / 15:00',
     retentionRule: '如源站无新数据或抓取失败，则保留上一版数据',
-    contract,
     spot,
   };
 }
@@ -135,11 +127,8 @@ export async function onRequestGet(context) {
       return new Response(cached.body, { status: cached.status, headers: h });
     }
 
-    const [contractHtml, spotHtml] = await Promise.all([
-      fetchHtml(CONTRACT_URL),
-      fetchHtml(SPOT_URL),
-    ]);
-    const body = JSON.stringify(buildPayload(contractHtml, spotHtml));
+    const spotHtml = await fetchHtml(SPOT_URL);
+    const body = JSON.stringify(buildPayload(spotHtml));
 
     const live = new Response(body, {
       headers: headers(`public, max-age=0, s-maxage=${LIVE_TTL_SECONDS}`, 'MISS'),
