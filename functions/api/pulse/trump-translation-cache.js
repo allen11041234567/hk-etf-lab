@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116805545512296111": {
+    "content_zh_cn": "原定于今日举行的住房新闻发布会及签署仪式现予以取消，直至我们通过迫切需要的《拯救美国法案》（SAVE AMERICA ACT）为止。我认为这已构成国家紧急状态。\n\n感谢各位对此事的关注！\n特朗普总统",
+    "content_zh_hk": "原定於今日舉行的住房新聞發佈會及簽署儀式現予以取消，直至我們通過迫切需要的《拯救美國法案》（SAVE AMERICA ACT）為止。我認為這已構成國家緊急狀態。\n\n感謝各位對此事的關注！\n特朗普總統",
+    "content_ko": "오늘 예정됐던 주택 관련 기자회견 및 서명식은 우리가 절실히 필요한 SAVE AMERICA ACT를 통과시킬 때까지 이로써 취소됩니다. 저는 이를 국가 비상사태로 봅니다.\n\n이 사안에 관심을 가져주셔서 감사합니다!\n트럼프 대통령"
+  },
   "https://truthsocial.com/@realDonaldTrump/116805510184370677": {
     "content_zh_cn": "我真实的民调支持率创下历史新高。谢谢大家！！！\n特朗普总统",
     "content_zh_hk": "我真實的民調支持率創下歷史新高。多謝大家！！！\n特朗普總統",
