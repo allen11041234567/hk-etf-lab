@@ -1,5 +1,5 @@
 const LIVE_TTL_SECONDS = 600;
-const STALE_TTL_SECONDS = 3600;
+const STALE_TTL_SECONDS = 172800;
 
 const CONTRACT_URL = 'https://www.trendforce.com.tw/price/dram/dram_contract';
 const SPOT_URL = 'https://www.trendforce.com.tw/price/dram/dram_spot';
@@ -86,23 +86,29 @@ async function fetchHtml(url) {
 }
 
 function buildPayload(contractHtml, spotHtml) {
+  const contract = {
+    sourceUrl: CONTRACT_URL,
+    label: 'DRAM合约价',
+    lastUpdate: parseLastUpdate(contractHtml),
+    rows: parseTableRows(contractHtml, 'contract'),
+  };
+  const spot = {
+    sourceUrl: SPOT_URL,
+    label: 'DRAM现货价',
+    lastUpdate: parseLastUpdate(spotHtml),
+    updateHint: '站内按北京时间 11:00 / 15:00 作为对外刷新标记',
+    rows: parseTableRows(spotHtml, 'spot'),
+  };
+  if (!contract.rows.length || !spot.rows.length) {
+    throw new Error('parsed rows empty');
+  }
   return {
     ok: true,
     fetchedAt: new Date().toISOString(),
     siteRefreshLabel: '北京时间 11:00 / 15:00',
-    contract: {
-      sourceUrl: CONTRACT_URL,
-      label: 'DRAM合约价',
-      lastUpdate: parseLastUpdate(contractHtml),
-      rows: parseTableRows(contractHtml, 'contract'),
-    },
-    spot: {
-      sourceUrl: SPOT_URL,
-      label: 'DRAM现货价',
-      lastUpdate: parseLastUpdate(spotHtml),
-      updateHint: '站内按北京时间 11:00 / 15:00 作为对外刷新标记',
-      rows: parseTableRows(spotHtml, 'spot'),
-    },
+    retentionRule: '如源站无新数据或抓取失败，则保留上一版数据',
+    contract,
+    spot,
   };
 }
 
