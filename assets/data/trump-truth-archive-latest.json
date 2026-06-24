@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-24T01:52:21.803Z",
+  "fetchedAt": "2026-06-24T02:06:07.207Z",
   "count": 19,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
@@ -54,7 +54,7 @@
       "content_html": "",
       "media": [
         {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi84MDIvNDU5LzEwOS84MTQvMzc3L29yaWdpbmFsLzRkNTgwMmI4NjhiZGRhZDguanBn",
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2Nzk2LzRkNTgwMmI4NjhiZGRhZDguanBn",
           "type": "image"
         }
       ],
@@ -164,7 +164,7 @@
       "content_html": "",
       "media": [
         {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi84MDIvNDU1LzYzNy8zMTAvNjI1L29yaWdpbmFsLzI3ZDhjN2VjNzI3NGU0ZTcuanBn",
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2ODAxLzI3ZDhjN2VjNzI3NGU0ZTcuanBn",
           "type": "image"
         }
       ],
