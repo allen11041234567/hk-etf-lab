@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116808686040715251": {
+    "content_zh_cn": "刚刚袭击伟大委内瑞拉人民的两场强烈地震，规模都极其巨大，并已造成灾难性的重大人员伤亡。美国已做好准备，愿意并且有能力提供帮助！我已指示政府所有相关机构做好准备，迅速行动。我们将与我们新的、伟大的朋友站在一起。初步报告并不乐观！！！\n特朗普总统",
+    "content_zh_hk": "剛剛襲擊偉大委內瑞拉人民的兩場強烈地震，規模都極其巨大，並已造成災難性的重大人員傷亡。美國已做好準備，願意並且有能力提供協助！我已指示政府所有相關機構做好準備，迅速行動。我們將與我們新的、偉大的朋友站在一起。初步報告並不樂觀！！！\n特朗普總統",
+    "content_ko": "방금 위대한 베네수엘라 국민을 강타한 두 차례의 대형 지진은 모두 규모가 매우 컸으며, 참혹할 정도로 많은 사망자를 남겼습니다. 미국은 도움을 제공할 준비가 되어 있고, 그럴 의지도 있으며, 그럴 능력도 있습니다! 저는 우리 정부의 모든 기관에 신속히 움직일 준비를 하라고 지시했습니다. 우리는 우리의 새롭고 위대한 친구들을 위해 함께할 것입니다. 초기 보고는 좋지 않습니다!!!\n도널드 J. 트럼프 대통령"
+  },
   "https://truthsocial.com/@realDonaldTrump/116808579545638198": {
     "content_zh_cn": "https://www.breitbart.com/politics/2026/06/06/exclusive-bernie-moreno-embarrassing-congress-cant-pass-save-america-act/",
     "content_zh_hk": "https://www.breitbart.com/politics/2026/06/06/exclusive-bernie-moreno-embarrassing-congress-cant-pass-save-america-act/",
