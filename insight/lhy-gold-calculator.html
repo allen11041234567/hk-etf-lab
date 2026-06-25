@@ -95,8 +95,8 @@
         <div class="panel">
           <div class="label">计算方式</div>
           <div class="mode-switch">
-            <button class="mode-btn active" id="mode-manual" type="button">手动配置</button>
-            <button class="mode-btn" id="mode-smart" type="button">智能推荐</button>
+            <button class="mode-btn" id="mode-manual" type="button">手动配置</button>
+            <button class="mode-btn active" id="mode-smart" type="button">智能推荐</button>
           </div>
 
           <div class="smart-box" id="smart-box">
@@ -123,7 +123,7 @@
           <div class="label">汇总报价结果</div>
           <div class="hero-metrics">
             <div class="savings-hero"><div class="savings-title">利亨元订单总额</div><div class="savings-value" id="headline-total">--</div><div class="savings-sub" id="headline-total-sub">按参考金价估算，实际交易报价以现场交易为准。</div></div>
-            <div class="savings-hero"><div class="savings-title">当前主档位</div><div class="savings-value" id="headline-tier">--</div><div class="savings-sub" id="headline-tier-sub">按整单总重量统一判断档位。</div></div>
+            <div class="savings-hero"><div class="savings-title">相较周大福等金店，利亨元预计可节约</div><div class="savings-value" id="savings-top">--</div><div class="savings-sub" id="savings-top-sub">等待参考金价与金店参考价返回。</div></div>
           </div>
           <div class="result-grid">
             <div class="result-card"><div class="result-label">总重量</div><div class="result-value" id="total-weight-oz">--</div><div class="result-sub" id="total-weight-g">--</div></div>
@@ -145,13 +145,15 @@
 
   <script>
     const CONFIG = {
-      liveApi: '/api/gold/live', staticLiveJson: '/assets/data/gold-live.json', fxUsdHkd: 7.85, gramsPerOunce: 31.1035, refreshMs: 30000, storageKey: 'lhyGoldReservationDraft', confirmUrl: './lhy-gold-reservation-check.html',
+      liveApi: '/api/gold/live', jewellersApi: '/api/gold/hk-jewellers', staticLiveJson: '/assets/data/gold-live.json', staticJewellersJson: '/assets/data/gold-hk-jewellers.json', fxUsdHkd: 7.85, gramsPerOunce: 31.1035, taelGrams: 37.429, refreshMs: 30000, storageKey: 'lhyGoldReservationDraft', confirmUrl: './lhy-gold-reservation-check.html',
+      jewellerPriority: ['周大福','周生生','六福'],
       specs: {
         g5:{ key:'g5', label:'5 g 金块', grams:5 }, g10:{ key:'g10', label:'10 g 金块', grams:10 }, g20:{ key:'g20', label:'20 g 金块', grams:20 }, g50:{ key:'g50', label:'50 g 金块', grams:50 },
         g100:{ key:'g100', label:'100 g 金块', grams:100 }, g200:{ key:'g200', label:'200 g 金块', grams:200 }, g500:{ key:'g500', label:'500 g 金块', grams:500 }, g1000:{ key:'g1000', label:'1000 g 金块', grams:1000 }
       }
     };
     let livePayload = null;
+    let jewellersPayload = null;
     let quoteItems = [{ id:`item-${Date.now()}`, specKey:'g5', quantity:1 }];
     function money(n, digits = 2) { const value = Number(n); if (!Number.isFinite(value)) return '--'; return value.toLocaleString('en-HK', { minimumFractionDigits: digits, maximumFractionDigits: digits }); }
     function getDraftQty() { const raw = Number(document.getElementById('qty').value || 0); if (!Number.isFinite(raw) || raw < 1) return 1; return Math.floor(raw); }
@@ -173,9 +175,29 @@
       const totalUsd = baseTotalUsd * (1 + orderMarkupRate);
       return { lines, totalQty, totalOz, totalGrams, baseTotalUsd, baseTotalHkd: baseTotalUsd * CONFIG.fxUsdHkd, totalUsd, totalHkd: totalUsd * CONFIG.fxUsdHkd, orderMarkupRate, updatedAt: livePayload.updated_at || null };
     }
+    function getShopSellPrice(name) {
+      const shops = Array.isArray(jewellersPayload?.shops) ? jewellersPayload.shops : [];
+      const found = shops.find((shop) => shop.name === name && Number.isFinite(shop.sell_hkd_tael));
+      return found ? Number(found.sell_hkd_tael) : null;
+    }
+    function calcJewellerCompare(totalGrams, orderTotalHkd, shopName) {
+      const sellHkdTael = getShopSellPrice(shopName);
+      if (!Number.isFinite(sellHkdTael) || !Number.isFinite(totalGrams) || totalGrams <= 0 || !Number.isFinite(orderTotalHkd)) return null;
+      const shopTotalHkd = (totalGrams / CONFIG.taelGrams) * sellHkdTael;
+      const savingHkd = shopTotalHkd - orderTotalHkd;
+      return { shopName, sellHkdTael, shopTotalHkd, savingHkd };
+    }
+    function getPriorityCompare(totalGrams, orderTotalHkd) {
+      for (const name of CONFIG.jewellerPriority) {
+        const compare = calcJewellerCompare(totalGrams, orderTotalHkd, name);
+        if (compare) return compare;
+      }
+      return null;
+    }
     function persistReservationDraft(summary) {
       if (!summary) return;
-      const draft = { lines: summary.lines.map((line) => ({ label: line.spec.label, quantity: line.quantity, grams: line.spec.grams })), totalQty: summary.totalQty, totalOz: summary.totalOz, totalGrams: summary.totalGrams, totalUsd: summary.totalUsd, totalHkd: summary.totalHkd, orderMarkupRate: summary.orderMarkupRate, updatedAt: summary.updatedAt };
+      const priority = getPriorityCompare(summary.totalGrams, summary.totalHkd);
+      const draft = { lines: summary.lines.map((line) => ({ label: line.spec.label, quantity: line.quantity, grams: line.spec.grams })), totalQty: summary.totalQty, totalOz: summary.totalOz, totalGrams: summary.totalGrams, totalUsd: summary.totalUsd, totalHkd: summary.totalHkd, orderMarkupRate: summary.orderMarkupRate, prioritySavingHkd: priority?.savingHkd ?? null, priorityShopName: priority?.shopName ?? null, updatedAt: summary.updatedAt };
       sessionStorage.setItem(CONFIG.storageKey, JSON.stringify(draft));
     }
     function renderItems(summary) {
@@ -256,8 +278,14 @@
       document.getElementById('total-hkd').textContent = `约 HK$${money(summary.totalHkd)}`;
       document.getElementById('headline-total').textContent = `HK$${money(summary.totalHkd)}`;
       document.getElementById('headline-total-sub').textContent = `约合 US$${money(summary.totalUsd)}，按参考金价估算，实际交易报价以现场交易为准。`;
-      document.getElementById('headline-tier').textContent = rateText;
-      document.getElementById('headline-tier-sub').textContent = '当前整单统一按总重量对应的单一档位报价。';
+      const priority = getPriorityCompare(summary.totalGrams, summary.totalHkd);
+      if (!priority) {
+        document.getElementById('savings-top').textContent = '--';
+        document.getElementById('savings-top-sub').textContent = '等待参考金价与金店参考价返回。';
+      } else {
+        document.getElementById('savings-top').textContent = priority.savingHkd >= 0 ? `HK$${money(priority.savingHkd)}` : `-HK$${money(Math.abs(priority.savingHkd))}`;
+        document.getElementById('savings-top-sub').textContent = `优先按 ${priority.shopName} 参考卖出价 HK$${money(priority.sellHkdTael, 0)} / 両 折算相同总克重。`;
+      }
       document.getElementById('tier-mix').textContent = rateText;
       document.getElementById('tier-mix-sub').textContent = `当前组合总重量 ${money(summary.totalGrams, 2)} g，整单统一按 +${(summary.orderMarkupRate*100).toFixed(1)}% 计算。`;
       persistReservationDraft(summary);
@@ -292,7 +320,9 @@
       candidates.sort((x, y) => score(y) - score(x));
       return candidates[0];
     }
+    function renderJewellers(payload) { jewellersPayload = payload?.ok ? payload : null; renderSummary(); }
     async function loadLive() { try { const payload = await fetchBestJson(CONFIG.liveApi, CONFIG.staticLiveJson); renderLive(payload); } catch (error) { renderLive({ ok:false, error:error.message || String(error) }); } }
+    async function loadJewellers() { try { const payload = await fetchBestJson(CONFIG.jewellersApi, CONFIG.staticJewellersJson); renderJewellers(payload); } catch (error) { renderJewellers({ ok:false, error:error.message || String(error) }); } }
     function addItem() { quoteItems.push({ id:`item-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`, specKey:document.getElementById('spec').value, quantity:getDraftQty() }); renderSummary(); }
     function setMode(mode) {
       const manual = document.getElementById('manual-box'); const smart = document.getElementById('smart-box'); const bManual = document.getElementById('mode-manual'); const bSmart = document.getElementById('mode-smart');
@@ -318,7 +348,8 @@
     });
     document.getElementById('items-list').addEventListener('click', (event) => { const removeId = event.target.dataset.removeId; if (!removeId) return; if (quoteItems.length <= 1) return; quoteItems = quoteItems.filter((it) => it.id !== removeId); renderSummary(); });
     document.getElementById('continue-reservation').addEventListener('click', (event) => { event.preventDefault(); const summary = calcQuoteSummary(); if (!summary) return; persistReservationDraft(summary); window.location.href = CONFIG.confirmUrl; });
-    loadLive(); setInterval(loadLive, CONFIG.refreshMs);
+    setMode('smart');
+    loadLive(); loadJewellers(); setInterval(loadLive, CONFIG.refreshMs); setInterval(loadJewellers, 5 * 60 * 1000);
   </script>
 </body>
 </html>
