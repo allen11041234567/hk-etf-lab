@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116810046344255729": {
+    "content_zh_cn": "在一番激烈交锋后，参议院否决了旨在限制特朗普对伊朗军事行动的法案，这让特朗普赢得一场胜利：https://justthenews.com/government/congress/after-testy-exchange-senate-hands-trump-win-rejecting-bill-rein-his-war-iran",
+    "content_zh_hk": "在一番激烈交鋒後，參議院否決了旨在限制特朗普對伊朗軍事行動的法案，令特朗普取得一場勝利：https://justthenews.com/government/congress/after-testy-exchange-senate-hands-trump-win-rejecting-bill-rein-his-war-iran",
+    "content_ko": "격한 공방 끝에, 상원은 트럼프의 대이란 군사행동을 억제하려는 법안을 부결시키며 트럼프에 승리를 안겼다: https://justthenews.com/government/congress/after-testy-exchange-senate-hands-trump-win-rejecting-bill-rein-his-war-iran"
+  },
   "https://truthsocial.com/@realDonaldTrump/116808686040715251": {
     "content_zh_cn": "刚刚袭击伟大委内瑞拉人民的两场强烈地震，规模都极其巨大，并已造成灾难性的重大人员伤亡。美国已做好准备，愿意并且有能力提供帮助！我已指示政府所有相关机构做好准备，迅速行动。我们将与我们新的、伟大的朋友站在一起。初步报告并不乐观！！！\n特朗普总统",
     "content_zh_hk": "剛剛襲擊偉大委內瑞拉人民的兩場強烈地震，規模都極其巨大，並已造成災難性的重大人員傷亡。美國已做好準備，願意並且有能力提供協助！我已指示政府所有相關機構做好準備，迅速行動。我們將與我們新的、偉大的朋友站在一起。初步報告並不樂觀！！！\n特朗普總統",
