@@ -1,4 +1,14 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116808579545638198": {
+    "content_zh_cn": "https://www.breitbart.com/politics/2026/06/06/exclusive-bernie-moreno-embarrassing-congress-cant-pass-save-america-act/",
+    "content_zh_hk": "https://www.breitbart.com/politics/2026/06/06/exclusive-bernie-moreno-embarrassing-congress-cant-pass-save-america-act/",
+    "content_ko": "https://www.breitbart.com/politics/2026/06/06/exclusive-bernie-moreno-embarrassing-congress-cant-pass-save-america-act/"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116808568420301784": {
+    "content_zh_cn": "哇！参议院刚刚将针对伊朗的投票结果从50票赞成、48票反对，改为50票支持、47票反对。兰德·保罗和比尔·卡西迪改变了投票立场。感谢约翰·图恩领袖、林赛·格雷厄姆、伯尼·莫雷诺，以及所有人。这次投票是在向伊朗发出警告！特朗普总统",
+    "content_zh_hk": "嘩！參議院剛剛將針對伊朗的投票結果由50票贊成、48票反對，改為50票支持、47票反對。蘭德·保羅和比爾·卡西迪改變了投票立場。感謝約翰·圖恩領袖、林賽·格雷厄姆、伯尼·莫雷諾，以及所有人。這次投票是在向伊朗發出警告！特朗普總統",
+    "content_ko": "와우! 상원이 방금 이란 관련 표결 결과를 반대 50대 48에서 찬성 50대 47로 바꿨습니다. 랜드 폴과 빌 캐시디가 입장을 바꿨습니다. 존 튠 원내대표, 린지 그레이엄, 버니 모레노, 그리고 모든 분들께 감사드립니다. 이번 표결은 이란에 대한 경고입니다! DJT 대통령"
+  },
   "https://truthsocial.com/@realDonaldTrump/116805750630335427": {
     "content_zh_cn": "这是那种坚硬的橡胶表面——没有油漆——在那些破坏者把它割开并扯坏之前！",
     "content_zh_hk": "這是那種堅硬的橡膠表面——沒有油漆——在那些破壞者把它割開並扯壞之前！",
