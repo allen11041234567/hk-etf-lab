@@ -86,11 +86,22 @@ function buildPayload(html) {
   const insideRaw = extractInsideText(html);
   const outsideRaw = extractOutsideText(html);
 
+  const currentNum = parseNumber(current);
+  const previousCloseNum = parseNumber(previousClose);
   let dayChange = parseNumber(change);
+  let dayChangePercent = parseNumber(changePercent);
   let dayChangePercentText = changePercent ? (String(changePercent).includes('%') ? String(changePercent) : `${changePercent}%`) : null;
-  if (dayChange == null && current && previousClose) {
-    const diff = parseNumber(current) - parseNumber(previousClose);
+  if (dayChange == null && currentNum != null && previousCloseNum != null) {
+    const diff = currentNum - previousCloseNum;
     if (Number.isFinite(diff)) dayChange = diff;
+  }
+  if ((dayChangePercent == null || dayChangePercentText == null) && dayChange != null && previousCloseNum) {
+    const pct = (dayChange / previousCloseNum) * 100;
+    if (Number.isFinite(pct)) {
+      dayChangePercent = pct;
+      const absText = Math.abs(pct).toFixed(2);
+      dayChangePercentText = `${pct > 0 ? '+' : pct < 0 ? '-' : ''}${absText}%`;
+    }
   }
 
   return {
@@ -101,12 +112,12 @@ function buildPayload(html) {
       name,
       nameZh: '台积电',
       market: 'TWSE',
-      current: parseNumber(current),
+      current: currentNum,
       currentText: current,
       timeText,
       dayChange,
       dayChangeText: dayChange == null ? null : `${dayChange > 0 ? '+' : ''}${dayChange.toFixed(2)}`,
-      dayChangePercent: parseNumber(changePercent),
+      dayChangePercent,
       dayChangePercentText,
       open: parseNumber(open),
       openText: open,
@@ -116,7 +127,7 @@ function buildPayload(html) {
       lowText: low,
       average: parseNumber(average),
       averageText: average,
-      previousClose: parseNumber(previousClose),
+      previousClose: previousCloseNum,
       previousCloseText: previousClose,
       tradingValueText: tradingValue ? `${tradingValue}亿` : null,
       tradingValue: parseNumber(tradingValue),
