@@ -127,8 +127,8 @@
         <div class="panel">
           <div class="label">计算方式</div>
           <div class="mode-switch">
-            <button class="mode-btn active" id="mode-manual" type="button">手动配置</button>
-            <button class="mode-btn" id="mode-smart" type="button">智能推荐</button>
+            <button class="mode-btn" id="mode-manual" type="button">手动配置</button>
+            <button class="mode-btn active" id="mode-smart" type="button">智能推荐</button>
           </div>
 
           <div class="smart-box" id="smart-box">
@@ -366,6 +366,7 @@
     document.getElementById('items-list').addEventListener('input', (event) => { const specId = event.target.dataset.specId; const qtyId = event.target.dataset.qtyId; if (specId) { const item = quoteItems.find((it) => it.id === specId); if (item) item.specKey = event.target.value; renderSummary(); } if (qtyId) { const item = quoteItems.find((it) => it.id === qtyId); if (item) { const raw = Number(event.target.value || 1); item.quantity = Number.isFinite(raw) && raw >= 1 ? Math.floor(raw) : 1; } renderSummary(); } });
     document.getElementById('items-list').addEventListener('click', (event) => { const removeId = event.target.dataset.removeId; if (!removeId) return; if (quoteItems.length <= 1) return; quoteItems = quoteItems.filter((it) => it.id !== removeId); renderSummary(); });
     document.getElementById('continue-reservation').addEventListener('click', (event) => { event.preventDefault(); const summary = calcQuoteSummary(); if (!summary) return; persistReservationDraft(summary); window.location.href = CONFIG.confirmUrl; });
+    setMode('smart');
     loadLive(); loadJewellers(); setInterval(loadLive, CONFIG.refreshMs); setInterval(loadJewellers, 5 * 60 * 1000);
   </script>
 </body>
