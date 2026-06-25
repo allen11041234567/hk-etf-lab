@@ -222,10 +222,30 @@
     async function fetchJson(url){ const r = await fetch(url, { cache:'default' }); if(!r.ok) throw new Error(`http ${r.status}`); return await r.json(); }
     function saveSnapshot(data){ try { localStorage.setItem(SNAPSHOT_STORAGE_KEY, JSON.stringify(data)); } catch(_) {} }
     function loadSnapshot(){ try { const raw = localStorage.getItem(SNAPSHOT_STORAGE_KEY); return raw ? JSON.parse(raw) : null; } catch(_) { return null; } }
+    function getBeijingDateParts(){
+      const now = new Date();
+      const bj = new Date(now.toLocaleString('en-US', { timeZone:'Asia/Shanghai' }));
+      return { year: bj.getFullYear(), month: bj.getMonth() + 1, day: bj.getDate(), hour: bj.getHours(), minute: bj.getMinutes() };
+    }
+    function parseSlashDate(text){
+      const m = String(text || '').match(/(\d{4})\/(\d{2})\/(\d{2})/);
+      if (!m) return null;
+      return { year: Number(m[1]), month: Number(m[2]), day: Number(m[3]) };
+    }
+    function shouldZeroTsmcPreopen(t){
+      const bj = getBeijingDateParts();
+      if (bj.hour >= 9) return false;
+      const quoteDate = parseSlashDate(t?.timeText);
+      if (!quoteDate) return false;
+      return quoteDate.year < bj.year || (quoteDate.year === bj.year && (quoteDate.month < bj.month || (quoteDate.month === bj.month && quoteDate.day < bj.day)));
+    }
     function renderTsmc(t){
       setText('tsmc-price', t.currentText);
-      paintChange('tsmc-change', t.dayChangeText, t.dayChangePercentText);
-      paintQuick('quick-tsmc', t.dayChangePercentText, t.dayChangeText);
+      const zeroPreopen = shouldZeroTsmcPreopen(t);
+      const changeText = zeroPreopen ? '0.00' : t.dayChangeText;
+      const pctText = zeroPreopen ? '0.00%' : t.dayChangePercentText;
+      paintChange('tsmc-change', changeText, pctText);
+      paintQuick('quick-tsmc', pctText, changeText);
       setText('tsmc-open', t.openText); setText('tsmc-prev', t.previousCloseText); setText('tsmc-high', t.highText); setText('tsmc-low', t.lowText);
       setText('tsmc-avg', t.averageText); setText('tsmc-value', t.tradingValueText); setText('tsmc-volume', t.volumeText); setText('tsmc-io', [t.insideText, t.outsideText].filter(Boolean).join(' / ') || '--');
     }
