@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116812000049397183": {
+    "content_zh_cn": "昨晚的现场人群令人难以置信，场地座无虚席——至少有45,000人在场，电视和线上观众规模也十分庞大。我真希望我们当时能有更大的场地，而这一点将在7月4日实现，届时我将再次发表讲话。飞机飞越表演和音乐都精彩极了。大家一直停留到我演讲结束，因为他们喜欢听到一个真正成功的美国。7月4日再见！\n美国总统 唐纳德·J·特朗普",
+    "content_zh_hk": "昨晚現場人群非常驚人，場地擠得水洩不通——至少有45,000人在場，電視及線上觀眾人數亦相當龐大。我希望當時能有更大的場地，而這將可於7月4日實現，屆時我會再次發表演說。飛機飛越表演和音樂都精彩萬分。大家一直留到我演說結束，因為他們喜歡聽到一個真正成功的美國。7月4日再見！\n美國總統 唐納德·J·特朗普",
+    "content_ko": "어젯밤 군중은 정말 놀라웠고, 행사장은 발 디딜 틈 없이 가득 찼습니다 — 현장에는 최소 45,000명이 있었고, TV와 온라인 시청자도 대단히 많았습니다. 그보다 더 큰 장소를 사용할 수 있었으면 좋았겠지만, 제가 다시 연설하게 될 7월 4일에는 그렇게 할 수 있을 것입니다. 전투기 비행과 음악도 환상적이었습니다. 모두가 제 연설이 끝날 때까지 자리를 지켰는데, 진정으로 성공한 미국에 대한 이야기를 듣는 것을 좋아했기 때문입니다. 7월 4일에 다시 뵙겠습니다!\n대통령 도널드 J. 트럼프"
+  },
   "https://truthsocial.com/@realDonaldTrump/116810046344255729": {
     "content_zh_cn": "在一番激烈交锋后，参议院否决了旨在限制特朗普对伊朗军事行动的法案，这让特朗普赢得一场胜利：https://justthenews.com/government/congress/after-testy-exchange-senate-hands-trump-win-rejecting-bill-rein-his-war-iran",
     "content_zh_hk": "在一番激烈交鋒後，參議院否決了旨在限制特朗普對伊朗軍事行動的法案，令特朗普取得一場勝利：https://justthenews.com/government/congress/after-testy-exchange-senate-hands-trump-win-rejecting-bill-rein-his-war-iran",
