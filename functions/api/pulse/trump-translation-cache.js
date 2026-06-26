@@ -1,4 +1,24 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116814051010230263": {
+    "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116814048560190114",
+    "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116814048560190114",
+    "content_ko": "재게시: https://truthsocial.com/users/realDonaldTrump/statuses/116814048560190114"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116813945998972533": {
+    "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116813945253003849",
+    "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116813945253003849",
+    "content_ko": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116813945253003849"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116813942567060772": {
+    "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116813941619435704",
+    "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116813941619435704",
+    "content_ko": "리트윗: https://truthsocial.com/users/realDonaldTrump/statuses/116813941619435704"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116813757947032364": {
+    "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116813755890271897",
+    "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116813755890271897",
+    "content_ko": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116813755890271897"
+  },
   "https://truthsocial.com/@realDonaldTrump/116813202769287423": {
     "content_zh_cn": "我非常荣幸地宣布，提名 Chris Klomp @1klomp 出任下一任美国卫生与公众服务部（HHS）副部长！他在我政府中的迅速崛起，证明他是一位潜力十足的明星。Chris 是一位强大且富有感召力的领导者，也是一位极其成功的企业家。无论走到哪里，Chris 都能赢得信任。他是一位有原则的人，并坚定致力于服务美国人民——修复我们已经失灵的医疗保健体系。\n\nHHS 是一个庞大而复杂的机构，但 Chris 完全知道该如何管理它。他在领导 Medicare、监督日常运营方面表现出色。肯尼迪部长、Oz 医生和我共同作出了这一决定！Chris 打造大型企业的经验，赋予了他推动迫切需要的重大改革所必需的强硬作风，其中包括我具有历史意义的“最惠国”药品定价政策，最终阻止外国长期搭美国人民便车。现在是其他国家承担其公平份额的时候了，而且他们正在这么做！过去一年，我们的药价已大幅下降。\n\nChris 坚持“美国优先”，并将改革医疗保健，让美国再次伟大、再次健康。恭喜你，Chris！\n总统 唐纳德·J·特朗普",
     "content_zh_hk": "我非常榮幸宣布，提名 Chris Klomp @1klomp 出任下一任美國衛生與公眾服務部（HHS）副部長！他在我政府中的迅速崛起，證明他是一位極具潛力的明星。Chris 是一位強而有力、富有啟發性的領袖，也是一位非常成功的企業家。無論去到哪裡，Chris 都能贏得信任。他是一位有原則的人，並堅定致力服務美國人民——修復我們已失靈的醫療保健體系。\n\nHHS 是一個龐大而複雜的機構，但 Chris 完全知道如何管理它。他在領導 Medicare、監督日常運作方面表現極為出色。Kennedy 部長、Oz 醫生和我共同作出了這項決定！Chris 建立大型企業的經驗，賦予他推動迫切需要的重大改革所必需的強硬作風，其中包括我具歷史意義的「最惠國」藥品定價政策，最終阻止外國長期佔美國人民便宜。現在是其他國家支付其公平份額的時候了，而他們也正在這樣做！過去一年，我們的藥價已大幅下降。\n\nChris 堅持「美國優先」，並將改革醫療保健，讓美國再次偉大、再次健康。恭喜你，Chris！\n總統 唐納德·J·特朗普",
