@@ -1,10 +1,27 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-26T14:33:53.503Z",
+  "fetchedAt": "2026-06-26T14:48:56.638Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
   "posts": [
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116816735268373974",
+      "url": "https://truthsocial.com/@realDonaldTrump/116816735268373974",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-26T13:52:02.465Z",
+      "created_at_text": "Jun 26, 2026, 1:52 PM",
+      "content": "Other Polls have my Approval Rating at 65%, and more! Like Journalists, Honest Pollsters are very rare and hard to find! President DJThttps://www.newsmax.com/mclaughlin/mclaughlin-poll-iran/2026/06/25/id/1260918/",
+      "content_html": "Other Polls have my Approval Rating at 65%, and more! Like Journalists, Honest Pollsters are very rare and hard to find! President DJThttps://www.newsmax.com/mclaughlin/mclaughlin-poll-iran/2026/06/25/id/1260918/",
+      "media": [],
+      "favourites_count": 3475,
+      "reblogs_count": 908,
+      "replies_count": 653,
+      "content_zh_cn": "其他民调显示，我的支持率达到65%，甚至更高！就像记者一样，诚实的民调机构非常少见，难以找到！总统DJT\nhttps://www.newsmax.com/mclaughlin/mclaughlin-poll-iran/2026/06/25/id/1260918/",
+      "content_zh_hk": "其他民調顯示，我的支持率達到65%，甚至更高！就像記者一樣，誠實的民調機構非常少見，難以找到！總統DJT\nhttps://www.newsmax.com/mclaughlin/mclaughlin-poll-iran/2026/06/25/id/1260918/",
+      "content_ko": "다른 여론조사들에서는 제 지지율이 65%, 그 이상으로도 나옵니다! 기자들과 마찬가지로, 정직한 여론조사기관은 매우 드물고 찾기도 어렵습니다! 대통령 DJT\nhttps://www.newsmax.com/mclaughlin/mclaughlin-poll-iran/2026/06/25/id/1260918/",
+      "source_hint": "cnn"
+    },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116816466651864171",
       "url": "https://truthsocial.com/@realDonaldTrump/116816466651864171",
@@ -14,9 +31,9 @@
       "content": "Roger Marshall of Kansas is a GREAT Republican Senator who just plain GETS THE JOB DONE. Thank you Roger! President DJT",
       "content_html": "Roger Marshall of Kansas is a GREAT Republican Senator who just plain GETS THE JOB DONE. Thank you Roger! President DJT",
       "media": [],
-      "favourites_count": 3584,
-      "reblogs_count": 763,
-      "replies_count": 311,
+      "favourites_count": 5694,
+      "reblogs_count": 1191,
+      "replies_count": 388,
       "content_zh_cn": "堪萨斯州的罗杰·马歇尔是位非常出色的共和党参议员，办事就是干脆利落、把工作做成。谢谢你，罗杰！\n特朗普总统",
       "content_zh_hk": "堪薩斯州的羅傑·馬歇爾是一位非常出色的共和黨參議員，做事就是乾脆俐落、把工作辦成。謝謝你，羅傑！\n特朗普總統",
       "content_ko": "캔자스주의 로저 마셜은 그저 말이 아니라 확실히 일을 해내는 훌륭한 공화당 상원의원입니다. 고마워요, 로저!\n트럼프 대통령",
@@ -40,9 +57,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 15939,
-      "reblogs_count": 5858,
-      "replies_count": 1279,
+      "favourites_count": 17168,
+      "reblogs_count": 6302,
+      "replies_count": 1365,
       "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116814048560190114",
       "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116814048560190114",
       "content_ko": "재게시: https://truthsocial.com/users/realDonaldTrump/statuses/116814048560190114",
@@ -66,9 +83,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 13749,
-      "reblogs_count": 4400,
-      "replies_count": 1940,
+      "favourites_count": 14668,
+      "reblogs_count": 4694,
+      "replies_count": 2062,
       "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116813945253003849",
       "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116813945253003849",
       "content_ko": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116813945253003849",
@@ -92,9 +109,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 13605,
-      "reblogs_count": 4437,
-      "replies_count": 909,
+      "favourites_count": 14497,
+      "reblogs_count": 4730,
+      "replies_count": 969,
       "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116813941619435704",
       "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116813941619435704",
       "content_ko": "리트윗: https://truthsocial.com/users/realDonaldTrump/statuses/116813941619435704",
@@ -118,9 +135,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 14506,
-      "reblogs_count": 5031,
-      "replies_count": 996,
+      "favourites_count": 15239,
+      "reblogs_count": 5304,
+      "replies_count": 1027,
       "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116813755890271897",
       "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116813755890271897",
       "content_ko": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116813755890271897",
@@ -417,23 +434,6 @@
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116805545512296111",
-      "url": "https://truthsocial.com/@realDonaldTrump/116805545512296111",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-24T14:26:20.301Z",
-      "created_at_text": "Jun 24, 2026, 2:26 PM",
-      "content": "Today's Housing News Conference and Signing is hereby cancelled until such time as we pass the desperately needed SAVE AMERICA ACT, which I consider to be a National Emergency. Thank you for your attention to this matter! President DJT",
-      "content_html": "Today's Housing News Conference and Signing is hereby cancelled until such time as we pass the desperately needed SAVE AMERICA ACT, which I consider to be a National Emergency. Thank you for your attention to this matter! President DJT",
-      "media": [],
-      "favourites_count": 33137,
-      "reblogs_count": 8758,
-      "replies_count": 4203,
-      "content_zh_cn": "原定于今日举行的住房新闻发布会及签署仪式现予以取消，直至我们通过迫切需要的《拯救美国法案》（SAVE AMERICA ACT）为止。我认为这已构成国家紧急状态。\n\n感谢各位对此事的关注！\n特朗普总统",
-      "content_zh_hk": "原定於今日舉行的住房新聞發佈會及簽署儀式現予以取消，直至我們通過迫切需要的《拯救美國法案》（SAVE AMERICA ACT）為止。我認為這已構成國家緊急狀態。\n\n感謝各位對此事的關注！\n特朗普總統",
-      "content_ko": "오늘 예정됐던 주택 관련 기자회견 및 서명식은 우리가 절실히 필요한 SAVE AMERICA ACT를 통과시킬 때까지 이로써 취소됩니다. 저는 이를 국가 비상사태로 봅니다.\n\n이 사안에 관심을 가져주셔서 감사합니다!\n트럼프 대통령",
       "source_hint": "cnn"
     }
   ]
