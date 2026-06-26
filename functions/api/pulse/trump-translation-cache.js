@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116818236347869022": {
+    "content_zh_cn": "印度海得拉巴新设“唐纳德·特朗普大道”——这是美国历史上首位以这种方式获此殊荣的总统。谢谢！\n总统 唐纳德·J·特朗普",
+    "content_zh_hk": "印度海得拉巴新設「唐納德·特朗普大道」——這是美國歷史上首位以這種方式獲此殊榮的總統。多謝！\n總統 唐納德·J·特朗普",
+    "content_ko": "인도 하이데라바드에 새로 조성된 ‘도널드 트럼프 애비뉴’ — 이런 방식으로 영예를 받은 최초의 미국 대통령입니다. 감사합니다!\n대통령 도널드 J. 트럼프"
+  },
   "https://truthsocial.com/@realDonaldTrump/116818025512975700": {
     "content_zh_cn": "来自记者池的早安！",
     "content_zh_hk": "來自記者池的早晨好！",
