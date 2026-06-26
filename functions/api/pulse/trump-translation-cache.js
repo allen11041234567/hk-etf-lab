@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116816735268373974": {
+    "content_zh_cn": "其他民调显示，我的支持率达到65%，甚至更高！就像记者一样，诚实的民调机构非常少见，难以找到！总统DJT\nhttps://www.newsmax.com/mclaughlin/mclaughlin-poll-iran/2026/06/25/id/1260918/",
+    "content_zh_hk": "其他民調顯示，我的支持率達到65%，甚至更高！就像記者一樣，誠實的民調機構非常少見，難以找到！總統DJT\nhttps://www.newsmax.com/mclaughlin/mclaughlin-poll-iran/2026/06/25/id/1260918/",
+    "content_ko": "다른 여론조사들에서는 제 지지율이 65%, 그 이상으로도 나옵니다! 기자들과 마찬가지로, 정직한 여론조사기관은 매우 드물고 찾기도 어렵습니다! 대통령 DJT\nhttps://www.newsmax.com/mclaughlin/mclaughlin-poll-iran/2026/06/25/id/1260918/"
+  },
   "https://truthsocial.com/@realDonaldTrump/116816466651864171": {
     "content_zh_cn": "堪萨斯州的罗杰·马歇尔是位非常出色的共和党参议员，办事就是干脆利落、把工作做成。谢谢你，罗杰！\n特朗普总统",
     "content_zh_hk": "堪薩斯州的羅傑·馬歇爾是一位非常出色的共和黨參議員，做事就是乾脆俐落、把工作辦成。謝謝你，羅傑！\n特朗普總統",
