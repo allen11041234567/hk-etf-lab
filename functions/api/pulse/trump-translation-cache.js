@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116818025512975700": {
+    "content_zh_cn": "来自记者池的早安！",
+    "content_zh_hk": "來自記者池的早晨好！",
+    "content_ko": "풀 기자단에서 전하는 좋은 아침입니다!"
+  },
   "https://truthsocial.com/@realDonaldTrump/116817962257360565": {
     "content_zh_cn": "来自记者团的晚间问候！",
     "content_zh_hk": "來自記者團的晚間問候！",
