@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116816466651864171": {
+    "content_zh_cn": "堪萨斯州的罗杰·马歇尔是位非常出色的共和党参议员，办事就是干脆利落、把工作做成。谢谢你，罗杰！\n特朗普总统",
+    "content_zh_hk": "堪薩斯州的羅傑·馬歇爾是一位非常出色的共和黨參議員，做事就是乾脆俐落、把工作辦成。謝謝你，羅傑！\n特朗普總統",
+    "content_ko": "캔자스주의 로저 마셜은 그저 말이 아니라 확실히 일을 해내는 훌륭한 공화당 상원의원입니다. 고마워요, 로저!\n트럼프 대통령"
+  },
   "https://truthsocial.com/@realDonaldTrump/116814051010230263": {
     "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116814048560190114",
     "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116814048560190114",
