@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116822415818781534": {
+    "content_zh_cn": "https://babylonbee.com/news/cubans-living-in-nyc-begin-boarding-rafts-to-escape-communism-again",
+    "content_zh_hk": "https://babylonbee.com/news/cubans-living-in-nyc-begin-boarding-rafts-to-escape-communism-again",
+    "content_ko": "https://babylonbee.com/news/cubans-living-in-nyc-begin-boarding-rafts-to-escape-communism-again"
+  },
   "https://truthsocial.com/@realDonaldTrump/116821470056250616": {
     "content_zh_cn": "路易斯安那州：今天就把票投给朱莉娅！！！DJT",
     "content_zh_hk": "路易斯安那州：今天就把票投給朱莉婭！！！DJT",
