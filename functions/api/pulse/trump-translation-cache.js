@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116824551176646175": {
+    "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116824550355095950",
+    "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116824550355095950",
+    "content_ko": "리트루스: https://truthsocial.com/users/realDonaldTrump/statuses/116824550355095950"
+  },
   "https://truthsocial.com/@realDonaldTrump/116823759809487754": {
     "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116823758959638034",
     "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116823758959638034",
