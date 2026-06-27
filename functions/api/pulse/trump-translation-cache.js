@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116821470056250616": {
+    "content_zh_cn": "路易斯安那州：今天就把票投给朱莉娅！！！DJT",
+    "content_zh_hk": "路易斯安那州：今天就把票投給朱莉婭！！！DJT",
+    "content_ko": "루이지애나: 오늘 줄리아에게 투표하세요!!! DJT"
+  },
   "https://truthsocial.com/@realDonaldTrump/116819418021640869": {
     "content_zh_cn": "约翰·博尔顿，这位极其愚蠢、失衡且毫无能力的美国前官员，刚刚认罪了！他是个糟糕透顶的人，一个只想挑起事端和战争的疯子；无论走到哪里，都是在毫无必要地鼓动死亡与破坏。希望他会受到严厉惩处！\n特朗普总统",
     "content_zh_hk": "約翰·博爾頓，這位極其愚蠢、失衡且毫無能力的美國前官員，剛剛認罪了！他是個糟糕透頂的人，一個只想挑起事端和戰爭的瘋子；無論走到哪裡，都是在毫無必要地鼓動死亡與破壞。希望他會受到嚴厲懲處！\n特朗普總統",
