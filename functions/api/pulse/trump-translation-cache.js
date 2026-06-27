@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116822431539992071": {
+    "content_zh_cn": "陷入混乱的民主党建制派指责社会主义者利用选票准入规则：\nhttps://justthenews.com/politics-policy/elections/reeling-democratic-establishment-suggests-policing-primaries-pushing-back",
+    "content_zh_hk": "陷入混亂的民主黨建制派指責社會主義者利用選票准入規則：\nhttps://justthenews.com/politics-policy/elections/reeling-democratic-establishment-suggests-policing-primaries-pushing-back",
+    "content_ko": "휘청이는 민주당 주류가 사회주의자들이 후보 등록 접근성을 악용하고 있다고 비난: \nhttps://justthenews.com/politics-policy/elections/reeling-democratic-establishment-suggests-policing-primaries-pushing-back"
+  },
   "https://truthsocial.com/@realDonaldTrump/116822415818781534": {
     "content_zh_cn": "https://babylonbee.com/news/cubans-living-in-nyc-begin-boarding-rafts-to-escape-communism-again",
     "content_zh_hk": "https://babylonbee.com/news/cubans-living-in-nyc-begin-boarding-rafts-to-escape-communism-again",
