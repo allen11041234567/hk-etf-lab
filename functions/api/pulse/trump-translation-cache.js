@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116830380441356766": {
+    "content_zh_cn": "独家——马林部长在国土安全部履职满100天之际表示：“遣返人数大幅上升”，2026年数据将“远远超过”2025年：https://www.breitbart.com/politics/2026/06/28/exclusive-secretary-mullin-at-100-day-mark-at-dhs-deportations-are-way-up-2026-stats-set-to-outpace-well-past-2025-numbers/",
+    "content_zh_hk": "獨家——馬林部長在國土安全部履職滿100天之際表示：「遣返人數大幅上升」，2026年數據將「遠遠超過」2025年：https://www.breitbart.com/politics/2026/06/28/exclusive-secretary-mullin-at-100-day-mark-at-dhs-deportations-are-way-up-2026-stats-set-to-outpace-well-past-2025-numbers/",
+    "content_ko": "단독 — 멀린 장관은 국토안보부(DHS) 취임 100일을 맞아 “추방 건수가 크게 증가했다”고 밝혔으며, 2026년 수치는 2025년 수치를 “훨씬 뛰어넘을” 것으로 전망됐다: https://www.breitbart.com/politics/2026/06/28/exclusive-secretary-mullin-at-100-day-mark-at-dhs-deportations-are-way-up-2026-stats-set-to-outpace-well-past-2025-numbers/"
+  },
   "https://truthsocial.com/@realDonaldTrump/116829518714038986": {
     "content_zh_cn": "FIFA的各项数据远超历史上任何一届世界杯。这是对美利坚合众国的巨大致敬。感谢大家！\n\n总统 唐纳德·J·特朗普",
     "content_zh_hk": "FIFA的各項數據遠超歷史上任何一屆世界盃。這是對美利堅合眾國的巨大致敬。感謝大家！\n\n總統 唐納德·J·特朗普",
