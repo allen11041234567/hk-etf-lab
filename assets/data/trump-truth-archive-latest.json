@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-28T00:50:50.944Z",
+  "fetchedAt": "2026-06-28T01:18:06.303Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
@@ -96,6 +96,10 @@
       "content": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116824548028070621",
       "content_html": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116824548028070621",
       "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi84MjQvNTQ3LzYzMi80MTcvOTY5L29yaWdpbmFsL2E5Y2ZiNDc3YjFlYzk0NTcubXA0",
+          "type": "video"
+        },
         {
           "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2ODQ0LzQ5ZjlhNWUxMTQwY2VlODkucG5n",
           "type": "image"
