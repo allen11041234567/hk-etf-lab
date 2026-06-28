@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-28T00:21:02.049Z",
+  "fetchedAt": "2026-06-28T00:36:29.419Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
@@ -82,9 +82,9 @@
       "favourites_count": 4737,
       "reblogs_count": 1272,
       "replies_count": 194,
-      "content_zh_cn": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116824548028070621",
-      "content_zh_hk": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116824548028070621",
-      "content_ko": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116824548028070621",
+      "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116824548028070621",
+      "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116824548028070621",
+      "content_ko": "리트윗: https://truthsocial.com/users/realDonaldTrump/statuses/116824548028070621",
       "source_hint": "cnn"
     },
     {
