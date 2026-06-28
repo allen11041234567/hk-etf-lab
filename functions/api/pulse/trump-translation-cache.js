@@ -1,4 +1,34 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116825706034291064": {
+    "content_zh_cn": "“Mack驶向未来”：特朗普称，与伊朗达成协议后将迎来能源繁荣，或提振卡车运输业务：https://justthenews.com/government/white-house/mack-future-trump-touts-tariffs-and-iran-deal-energy-boom-will-boost",
+    "content_zh_hk": "「Mack駛向未來」：特朗普稱，與伊朗達成協議後將迎來能源繁榮，或提振貨車運輸業務：https://justthenews.com/government/white-house/mack-future-trump-touts-tariffs-and-iran-deal-energy-boom-will-boost",
+    "content_ko": "\"Mack, 미래로\": 트럼프, 이란 협상에 따른 에너지 붐이 트럭 운송 사업을 끌어올릴 수 있다고 강조: https://justthenews.com/government/white-house/mack-future-trump-touts-tariffs-and-iran-deal-energy-boom-will-boost"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116825704058472549": {
+    "content_zh_cn": "最高法院有关移民问题的裁决，进一步巩固了特朗普作为首要边境安全守护者的地位：https://justthenews.com/government/security/friscotus-immigration-rulings-cement-trump-foremost-border-security-guardian",
+    "content_zh_hk": "最高法院有關移民問題的裁決，進一步鞏固了特朗普作為首要邊境安全守護者的地位：https://justthenews.com/government/security/friscotus-immigration-rulings-cement-trump-foremost-border-security-guardian",
+    "content_ko": "연방대법원의 이민 관련 판결로 트럼프는 최고의 국경 안보 수호자라는 입지를 더욱 굳혔다: https://justthenews.com/government/security/friscotus-immigration-rulings-cement-trump-foremost-border-security-guardian"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116825702171921406": {
+    "content_zh_cn": "Aloha，控枪派：随着夏威夷相关规定被推翻，特朗普推动全国范围携枪权的努力获得美国最高法院（SCOTUS）加持：https://justthenews.com/government/white-house/aloha-gun-grabbers-trumps-national-carry-push-gets-scotus-boost-hawaiis-rule",
+    "content_zh_hk": "Aloha，控槍派：隨着夏威夷相關規定被推翻，特朗普推動全國範圍攜槍權的努力獲得美國最高法院（SCOTUS）加持：https://justthenews.com/government/white-house/aloha-gun-grabbers-trumps-national-carry-push-gets-scotus-boost-hawaiis-rule",
+    "content_ko": "Aloha, 총기 규제 지지자들: 하와이의 관련 규정이 무너지면서, 트럼프의 전국 휴대 허용 추진이 연방대법원(SCOTUS)의 힘을 얻게 됐다: https://justthenews.com/government/white-house/aloha-gun-grabbers-trumps-national-carry-push-gets-scotus-boost-hawaiis-rule"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116825700077983923": {
+    "content_zh_cn": "财政部长誓言：违法的左翼非营利组织将面临起诉、资产没收：https://justthenews.com/accountability/political-ethics/treasury-secretary-vows-law-breaking-leftist-nonprofits-face",
+    "content_zh_hk": "財政部長誓言：違法的左翼非牟利組織將面臨檢控、資產充公：https://justthenews.com/accountability/political-ethics/treasury-secretary-vows-law-breaking-leftist-nonprofits-face",
+    "content_ko": "재무장관 경고: 법을 위반한 좌파 성향 비영리단체는 기소와 자산 압류에 직면할 것 https://justthenews.com/accountability/political-ethics/treasury-secretary-vows-law-breaking-leftist-nonprofits-face"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116825697576087695": {
+    "content_zh_cn": "陷入混乱的民主党建制派指责社会主义者利用选票准入规则：https://justthenews.com/politics-policy/elections/reeling-democratic-establishment-suggests-policing-primaries-pushing-back",
+    "content_zh_hk": "陷入混亂的民主黨建制派指責社會主義者利用選票准入規則：https://justthenews.com/politics-policy/elections/reeling-democratic-establishment-suggests-policing-primaries-pushing-back",
+    "content_ko": "휘청이는 민주당 기득권층, 사회주의자들이 투표용지 접근 요건을 악용하고 있다고 비난: https://justthenews.com/politics-policy/elections/reeling-democratic-establishment-suggests-policing-primaries-pushing-back"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116825695114073072": {
+    "content_zh_cn": "特朗普的选举连胜势头仍在延续：特朗普支持的莱特洛在路易斯安那州联邦参议员席位的共和党决选中胜出：https://justthenews.com/politics-policy/elections/trump-backed-letlow-facing-against-fleming-us-senate-runoff-louisiana",
+    "content_zh_hk": "特朗普的選舉連勝勢頭仍在延續：特朗普支持的萊特洛在路易斯安那州聯邦參議員席位的共和黨決選中勝出：https://justthenews.com/politics-policy/elections/trump-backed-letlow-facing-against-fleming-us-senate-runoff-louisiana",
+    "content_ko": "트럼프의 선거 연승 흐름이 계속되고 있다: 트럼프가 지지한 렛로우가 루이지애나주 연방상원 의석을 놓고 치러진 공화당 결선투표에서 승리했다: https://justthenews.com/politics-policy/elections/trump-backed-letlow-facing-against-fleming-us-senate-runoff-louisiana"
+  },
   "https://truthsocial.com/@realDonaldTrump/116825287521580891": {
     "content_zh_cn": "重大好消息！！！朱莉娅·莱特洛（Julia Letlow）在路易斯安那州胜选， decisively击败了一位实力强劲且非常聪明的对手。祝贺朱莉娅。她将成为一位真正伟大的参议员！总统 唐纳德·J·特朗普",
     "content_zh_hk": "重大好消息！！！朱莉婭·萊特洛（Julia Letlow）在路易斯安那州勝選，明確擊敗一位實力強勁且非常聰明的對手。恭賀朱莉婭。她將會成為一位真正偉大的參議員！總統 唐納德·J·特朗普",
