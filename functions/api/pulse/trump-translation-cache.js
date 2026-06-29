@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116833168246538290": {
+    "content_zh_cn": "伊朗已提出会面请求。会晤将于明天在多哈举行！特朗普总统",
+    "content_zh_hk": "伊朗已提出會面要求。會晤將於明天在多哈舉行！特朗普總統",
+    "content_ko": "이란이 회담을 요청했습니다. 회담은 내일 도하에서 열릴 것입니다! 트럼프 대통령"
+  },
   "https://truthsocial.com/@realDonaldTrump/116833138299035157": {
     "content_zh_cn": "WTI原油——69美元，而且还在下跌。这比伊朗开启去核化进程之前的水平还要低！特朗普总统",
     "content_zh_hk": "WTI原油——69美元，而且還在下跌。這比伊朗啟動去核化進程之前的水平還要低！特朗普總統",
