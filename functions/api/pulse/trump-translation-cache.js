@@ -1,4 +1,14 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116833138299035157": {
+    "content_zh_cn": "WTI原油——69美元，而且还在下跌。这比伊朗开启去核化进程之前的水平还要低！特朗普总统",
+    "content_zh_hk": "WTI原油——69美元，而且還在下跌。這比伊朗啟動去核化進程之前的水平還要低！特朗普總統",
+    "content_ko": "WTI 원유 - 69달러, 그리고 하락세입니다. 이는 이란의 비핵화가 시작되기 이전보다 더 낮은 수준입니다! 트럼프 대통령"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116833127066912322": {
+    "content_zh_cn": "油价正在快速下降！\n如发现零售端有任何违规行为，请立即举报！！！\n——总统DJT",
+    "content_zh_hk": "油價正在迅速回落！\n如發現零售層面有任何違規行為，請立即舉報！！！\n——總統DJT",
+    "content_ko": "휘발유 가격이 빠르게 내려가고 있다!\n소매 단계에서 어떤 부당행위든 발견하면 즉시 신고하라!!!\n— DJT 대통령"
+  },
   "https://truthsocial.com/@realDonaldTrump/116832995541119171": {
     "content_zh_cn": "民调支持率创下历史新高，\n甚至高于11月5日选举日当天。尽管如此，伊朗绝不会拥有核武器！",
     "content_zh_hk": "民調支持率創下歷來新高，\n甚至高於11月5日選舉日當天。儘管如此，伊朗絕不會擁有核武器！",
