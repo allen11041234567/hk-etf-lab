@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116830494681072122": {
+    "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116830493710945459",
+    "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116830493710945459",
+    "content_ko": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116830493710945459"
+  },
   "https://truthsocial.com/@realDonaldTrump/116830380441356766": {
     "content_zh_cn": "独家——马林部长在国土安全部履职满100天之际表示：“遣返人数大幅上升”，2026年数据将“远远超过”2025年：https://www.breitbart.com/politics/2026/06/28/exclusive-secretary-mullin-at-100-day-mark-at-dhs-deportations-are-way-up-2026-stats-set-to-outpace-well-past-2025-numbers/",
     "content_zh_hk": "獨家——馬林部長在國土安全部履職滿100天之際表示：「遣返人數大幅上升」，2026年數據將「遠遠超過」2025年：https://www.breitbart.com/politics/2026/06/28/exclusive-secretary-mullin-at-100-day-mark-at-dhs-deportations-are-way-up-2026-stats-set-to-outpace-well-past-2025-numbers/",
