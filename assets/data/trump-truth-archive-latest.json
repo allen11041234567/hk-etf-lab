@@ -1,10 +1,54 @@
 {
   "ok": true,
-  "fetchedAt": "2026-06-29T03:49:21.827Z",
+  "fetchedAt": "2026-06-29T04:04:49.609Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
   "posts": [
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116831104490275644",
+      "url": "https://truthsocial.com/@realDonaldTrump/116831104490275644",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-29T02:46:19.422Z",
+      "created_at_text": "Jun 29, 2026, 2:46 AM",
+      "content": "Great painting!!  President DJT",
+      "content_html": "Great painting!!  President DJT",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2ODYxLzdkMWVjOGY2YjhlYzAzZWYuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 4868,
+      "reblogs_count": 1165,
+      "replies_count": 570,
+      "content_zh_cn": "真是幅杰作！！  DJT总统",
+      "content_zh_hk": "真是幅傑作！！  DJT總統",
+      "content_ko": "정말 훌륭한 그림입니다!!  DJT 대통령",
+      "source_hint": "cnn"
+    },
+    {
+      "status_url": "https://truthsocial.com/@realDonaldTrump/116831103426109262",
+      "url": "https://truthsocial.com/@realDonaldTrump/116831103426109262",
+      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
+      "created_at": "2026-06-29T02:46:03.183Z",
+      "created_at_text": "Jun 29, 2026, 2:46 AM",
+      "content": "",
+      "content_html": "",
+      "media": [
+        {
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2ODYyLzQyODcxZTBjODgxMzZhZTcuanBn",
+          "type": "image"
+        }
+      ],
+      "favourites_count": 2273,
+      "reblogs_count": 568,
+      "replies_count": 97,
+      "content_zh_cn": "",
+      "content_zh_hk": "",
+      "content_ko": "",
+      "source_hint": "cnn"
+    },
     {
       "status_url": "https://truthsocial.com/@realDonaldTrump/116830986161149807",
       "url": "https://truthsocial.com/@realDonaldTrump/116830986161149807",
@@ -19,9 +63,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 1437,
-      "reblogs_count": 347,
-      "replies_count": 106,
+      "favourites_count": 4596,
+      "reblogs_count": 997,
+      "replies_count": 230,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -41,9 +85,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 1618,
-      "reblogs_count": 417,
-      "replies_count": 70,
+      "favourites_count": 5344,
+      "reblogs_count": 1259,
+      "replies_count": 186,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -63,9 +107,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 1608,
-      "reblogs_count": 402,
-      "replies_count": 125,
+      "favourites_count": 5437,
+      "reblogs_count": 1285,
+      "replies_count": 358,
       "content_zh_cn": "",
       "content_zh_hk": "",
       "content_ko": "",
@@ -89,9 +133,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 1422,
-      "reblogs_count": 360,
-      "replies_count": 68,
+      "favourites_count": 4739,
+      "reblogs_count": 1102,
+      "replies_count": 165,
       "content_zh_cn": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116830981377783021",
       "content_zh_hk": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116830981377783021",
       "content_ko": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116830981377783021",
@@ -115,9 +159,9 @@
           "type": "image"
         }
       ],
-      "favourites_count": 7083,
-      "reblogs_count": 1948,
-      "replies_count": 746,
+      "favourites_count": 8802,
+      "reblogs_count": 2370,
+      "replies_count": 813,
       "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116830493710945459",
       "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116830493710945459",
       "content_ko": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116830493710945459",
@@ -132,9 +176,9 @@
       "content": "Exclusive — Secretary Mullin at 100-Day Mark at DHS: 'Deportations Are Way Up,' 2026 Stats Set to Outpace 'Well Past' 2025 Numbers: https://www.breitbart.com/politics/2026/06/28/exclusive-secretary-mullin-at-100-day-mark-at-dhs-deportations-are-way-up-2026-stats-set-to-outpace-well-past-2025-numbers/",
       "content_html": "Exclusive — Secretary Mullin at 100-Day Mark at DHS: 'Deportations Are Way Up,' 2026 Stats Set to Outpace 'Well Past' 2025 Numbers: https://www.breitbart.com/politics/2026/06/28/exclusive-secretary-mullin-at-100-day-mark-at-dhs-deportations-are-way-up-2026-stats-set-to-outpace-well-past-2025-numbers/",
       "media": [],
-      "favourites_count": 6872,
-      "reblogs_count": 1748,
-      "replies_count": 569,
+      "favourites_count": 8222,
+      "reblogs_count": 2056,
+      "replies_count": 649,
       "content_zh_cn": "独家——马林部长在国土安全部履职满100天之际表示：“遣返人数大幅上升”，2026年数据将“远远超过”2025年：https://www.breitbart.com/politics/2026/06/28/exclusive-secretary-mullin-at-100-day-mark-at-dhs-deportations-are-way-up-2026-stats-set-to-outpace-well-past-2025-numbers/",
       "content_zh_hk": "獨家——馬林部長在國土安全部履職滿100天之際表示：「遣返人數大幅上升」，2026年數據將「遠遠超過」2025年：https://www.breitbart.com/politics/2026/06/28/exclusive-secretary-mullin-at-100-day-mark-at-dhs-deportations-are-way-up-2026-stats-set-to-outpace-well-past-2025-numbers/",
       "content_ko": "단독 — 멀린 장관은 국토안보부(DHS) 취임 100일을 맞아 “추방 건수가 크게 증가했다”고 밝혔으며, 2026년 수치는 2025년 수치를 “훨씬 뛰어넘을” 것으로 전망됐다: https://www.breitbart.com/politics/2026/06/28/exclusive-secretary-mullin-at-100-day-mark-at-dhs-deportations-are-way-up-2026-stats-set-to-outpace-well-past-2025-numbers/",
@@ -389,40 +433,6 @@
       "content_zh_cn": "Aloha，控枪派：随着夏威夷相关规定被推翻，特朗普推动全国范围携枪权的努力获得美国最高法院（SCOTUS）加持：https://justthenews.com/government/white-house/aloha-gun-grabbers-trumps-national-carry-push-gets-scotus-boost-hawaiis-rule",
       "content_zh_hk": "Aloha，控槍派：隨着夏威夷相關規定被推翻，特朗普推動全國範圍攜槍權的努力獲得美國最高法院（SCOTUS）加持：https://justthenews.com/government/white-house/aloha-gun-grabbers-trumps-national-carry-push-gets-scotus-boost-hawaiis-rule",
       "content_ko": "Aloha, 총기 규제 지지자들: 하와이의 관련 규정이 무너지면서, 트럼프의 전국 휴대 허용 추진이 연방대법원(SCOTUS)의 힘을 얻게 됐다: https://justthenews.com/government/white-house/aloha-gun-grabbers-trumps-national-carry-push-gets-scotus-boost-hawaiis-rule",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116825700077983923",
-      "url": "https://truthsocial.com/@realDonaldTrump/116825700077983923",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-28T03:51:54.605Z",
-      "created_at_text": "Jun 28, 2026, 3:51 AM",
-      "content": "Treasury Secretary vows law-breaking leftist nonprofits to face prosecution, asset seizures: https://justthenews.com/accountability/political-ethics/treasury-secretary-vows-law-breaking-leftist-nonprofits-face",
-      "content_html": "Treasury Secretary vows law-breaking leftist nonprofits to face prosecution, asset seizures: https://justthenews.com/accountability/political-ethics/treasury-secretary-vows-law-breaking-leftist-nonprofits-face",
-      "media": [],
-      "favourites_count": 18423,
-      "reblogs_count": 4165,
-      "replies_count": 680,
-      "content_zh_cn": "财政部长誓言：违法的左翼非营利组织将面临起诉、资产没收：https://justthenews.com/accountability/political-ethics/treasury-secretary-vows-law-breaking-leftist-nonprofits-face",
-      "content_zh_hk": "財政部長誓言：違法的左翼非牟利組織將面臨檢控、資產充公：https://justthenews.com/accountability/political-ethics/treasury-secretary-vows-law-breaking-leftist-nonprofits-face",
-      "content_ko": "재무장관 경고: 법을 위반한 좌파 성향 비영리단체는 기소와 자산 압류에 직면할 것 https://justthenews.com/accountability/political-ethics/treasury-secretary-vows-law-breaking-leftist-nonprofits-face",
-      "source_hint": "cnn"
-    },
-    {
-      "status_url": "https://truthsocial.com/@realDonaldTrump/116825697576087695",
-      "url": "https://truthsocial.com/@realDonaldTrump/116825697576087695",
-      "avatar": "https://hketf-lab.pages.dev/assets/home/trump-home.jpg",
-      "created_at": "2026-06-28T03:51:16.428Z",
-      "created_at_text": "Jun 28, 2026, 3:51 AM",
-      "content": "Reeling Democratic establishment accuses socialists of exploiting ballot access: https://justthenews.com/politics-policy/elections/reeling-democratic-establishment-suggests-policing-primaries-pushing-back",
-      "content_html": "Reeling Democratic establishment accuses socialists of exploiting ballot access: https://justthenews.com/politics-policy/elections/reeling-democratic-establishment-suggests-policing-primaries-pushing-back",
-      "media": [],
-      "favourites_count": 13833,
-      "reblogs_count": 3054,
-      "replies_count": 476,
-      "content_zh_cn": "陷入混乱的民主党建制派指责社会主义者利用选票准入规则：https://justthenews.com/politics-policy/elections/reeling-democratic-establishment-suggests-policing-primaries-pushing-back",
-      "content_zh_hk": "陷入混亂的民主黨建制派指責社會主義者利用選票准入規則：https://justthenews.com/politics-policy/elections/reeling-democratic-establishment-suggests-policing-primaries-pushing-back",
-      "content_ko": "휘청이는 민주당 기득권층, 사회주의자들이 투표용지 접근 요건을 악용하고 있다고 비난: https://justthenews.com/politics-policy/elections/reeling-democratic-establishment-suggests-policing-primaries-pushing-back",
       "source_hint": "cnn"
     }
   ]
