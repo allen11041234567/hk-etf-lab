@@ -29,6 +29,11 @@ export const TRUMP_TRANSLATION_CACHE = {
     "content_zh_hk": "剛剛在最高法院取得重大勝利——在「Slaughter案」中，法院確認，根據《憲法》第二條，總統在我國擁有罷免行政部門官員，以及各機構任命人員或代表的權力。\n\n這項裁決是美國歷任總統長期爭取的結果，最早可追溯至20世紀30年代。能夠成為贏得這一歷史性且前所未有裁決的現任總統，我深感榮幸。這是有關總統權力最重要的裁決之一。\n\n感謝大家對此事的關注！\n特朗普總統 唐納德·J·特朗普",
     "content_ko": "조금 전 연방대법원에서 중대한 승리를 거뒀습니다. 이른바 ‘Slaughter 사건’에서 대법원은 헌법 제2조에 따라 대통령이 행정부 공직자와 각 기관의 임명직 인사 또는 대표를 해임할 권한이 있음을 확인했습니다.\n\n이번 결정은 1930년대까지 거슬러 올라갈 만큼 미국 대통령들이 오랫동안 추구해 온 것이었습니다. 대통령 권한과 관련해 가장 중요한 판결 가운데 하나인 이 역사적이고 전례 없는 결정을 현직 대통령으로서 이끌어낸 것을 큰 영광으로 생각합니다.\n\n이 사안에 관심을 가져주셔서 감사합니다!\n도널드 J. 트럼프 대통령"
   },
+  "https://truthsocial.com/@realDonaldTrump/116833596711045418": {
+    "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116833595973466644",
+    "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116833595973466644",
+    "content_ko": "리트윗: https://truthsocial.com/users/realDonaldTrump/statuses/116833595973466644"
+  },
   "https://truthsocial.com/@realDonaldTrump/116833168246538290": {
     "content_zh_cn": "伊朗已提出会面请求。会晤将于明天在多哈举行！特朗普总统",
     "content_zh_hk": "伊朗已提出會面要求。會晤將於明天在多哈舉行！特朗普總統",
@@ -58,6 +63,11 @@ export const TRUMP_TRANSLATION_CACHE = {
     "content_zh_cn": "真是幅杰作！！  DJT总统",
     "content_zh_hk": "真是幅傑作！！  DJT總統",
     "content_ko": "정말 훌륭한 그림입니다!!  DJT 대통령"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116830982622038793": {
+    "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116830981377783021",
+    "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116830981377783021",
+    "content_ko": "RT: https://truthsocial.com/users/realDonaldTrump/statuses/116830981377783021"
   },
   "https://truthsocial.com/@realDonaldTrump/116830494681072122": {
     "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116830493710945459",
