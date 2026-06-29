@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116831104490275644": {
+    "content_zh_cn": "真是幅杰作！！  DJT总统",
+    "content_zh_hk": "真是幅傑作！！  DJT總統",
+    "content_ko": "정말 훌륭한 그림입니다!!  DJT 대통령"
+  },
   "https://truthsocial.com/@realDonaldTrump/116830494681072122": {
     "content_zh_cn": "转发：https://truthsocial.com/users/realDonaldTrump/statuses/116830493710945459",
     "content_zh_hk": "轉發：https://truthsocial.com/users/realDonaldTrump/statuses/116830493710945459",
