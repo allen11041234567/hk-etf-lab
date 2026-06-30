@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116839596876971289": {
+    "content_zh_cn": "重大胜利：美国联邦最高法院刚刚裁定，反对男性参加女子体育赛事。哇！这就把那种荒谬的情况彻底排除了！！！\n总统 唐纳德·J·特朗普",
+    "content_zh_hk": "重大勝利：美國聯邦最高法院剛剛裁定，反對男性參加女子體育賽事。嘩！這就把那種荒謬的情況徹底排除了！！！\n總統 唐納德·J·特朗普",
+    "content_ko": "큰 승리: 미국 연방대법원이 방금 여성 스포츠에 남성이 참가하는 것에 반대하는 판결을 내렸습니다. 와! 이로써 그 터무니없는 상황은 완전히 제외됐습니다!!!\n대통령 도널드 J. 트럼프"
+  },
   "https://truthsocial.com/@realDonaldTrump/116839303401655480": {
     "content_zh_cn": "特朗普试图废除“出生公民权”的努力，无论最高法院是否介入，都可能取得成功：https://justthenews.com/government/white-house/trumps-efforts-reverse-birthright-citizenship-can-succeed-or-without-scotus",
     "content_zh_hk": "特朗普試圖推翻「出生公民權」的努力，無論最高法院是否介入，都可能取得成功：https://justthenews.com/government/white-house/trumps-efforts-reverse-birthright-citizenship-can-succeed-or-without-scotus",
