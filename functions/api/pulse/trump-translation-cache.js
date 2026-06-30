@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116839303401655480": {
+    "content_zh_cn": "特朗普试图废除“出生公民权”的努力，无论最高法院是否介入，都可能取得成功：https://justthenews.com/government/white-house/trumps-efforts-reverse-birthright-citizenship-can-succeed-or-without-scotus",
+    "content_zh_hk": "特朗普試圖推翻「出生公民權」的努力，無論最高法院是否介入，都可能取得成功：https://justthenews.com/government/white-house/trumps-efforts-reverse-birthright-citizenship-can-succeed-or-without-scotus",
+    "content_ko": "트럼프의 ‘출생 시민권’ 폐지 추진은 연방대법원(SCOTUS)의 판단이 있든 없든 성공할 수 있다: https://justthenews.com/government/white-house/trumps-efforts-reverse-birthright-citizenship-can-succeed-or-without-scotus"
+  },
   "https://truthsocial.com/@realDonaldTrump/116836451044750555": {
     "content_zh_cn": "我很高兴宣布，提名杰森·马尼恩出任美国量刑委员会委员。杰森现任白宫打击欺诈特别工作组总法律顾问兼高级顾问。他此前曾担任美国司法部长顾问，并曾出任俄亥俄州北区联邦助理检察官。杰森还曾任俄亥俄州副总检察长，并曾担任第六巡回上诉法院两位备受尊敬的法官——埃里克·墨菲法官和艾丽斯·巴切尔德法官——的书记官。杰森毕业于哈佛法学院和托马斯·爱迪生州立大学，将在量刑委员会中为公共安全以及法律与秩序发声。恭喜你，杰森！\n\n总统 唐纳德·J·特朗普",
     "content_zh_hk": "我很高興宣布，提名傑森·馬尼恩出任美國量刑委員會委員。傑森現任白宮打擊欺詐特別工作組總法律顧問兼高級顧問。他此前曾擔任美國司法部長顧問，並曾出任俄亥俄州北區聯邦助理檢察官。傑森亦曾任俄亥俄州副訴訟總長，並曾擔任第六巡迴上訴法院兩位備受尊敬的法官——埃里克·墨菲法官和艾麗斯·巴切爾德法官——的法官助理。傑森畢業於哈佛法學院及托馬斯·愛迪生州立大學，將在量刑委員會中為公共安全以及法律與秩序發聲。恭喜你，傑森！\n\n總統 唐納德·J·特朗普",
