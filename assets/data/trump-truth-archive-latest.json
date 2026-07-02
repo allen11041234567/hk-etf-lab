@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-07-02T13:04:18.725Z",
+  "fetchedAt": "2026-07-02T13:25:37.417Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
@@ -14,9 +14,9 @@
       "content": "The United States spends more money on NATO than any other country, by far, to protect them, without getting any benefit from so doing: U.S. 999 Billion Dollars, United Kingdom, 90.5 Billion Dollars, France, 66.5  Billion Dollars, Italy, 48.8 Billion Dollars, Poland, 44.3 Billion Dollars. Others, including Germany, are MUCH LOWER. (2014-2025) Ridiculous! President DJT",
       "content_html": "The United States spends more money on NATO than any other country, by far, to protect them, without getting any benefit from so doing: U.S. 999 Billion Dollars, United Kingdom, 90.5 Billion Dollars, France, 66.5  Billion Dollars, Italy, 48.8 Billion Dollars, Poland, 44.3 Billion Dollars. Others, including Germany, are MUCH LOWER. (2014-2025) Ridiculous! President DJT",
       "media": [],
-      "favourites_count": 2749,
-      "reblogs_count": 847,
-      "replies_count": 589,
+      "favourites_count": 10088,
+      "reblogs_count": 2640,
+      "replies_count": 2015,
       "content_zh_cn": "美国为北约提供防务支出，远远高于其他任何国家，却没有从中获得任何回报来保护他们：美国9990亿美元，英国905亿美元，法国665亿美元，意大利488亿美元，波兰443亿美元。其他国家，包括德国在内，都要低得多。（2014-2025）荒唐！特朗普总统",
       "content_zh_hk": "美國為北約提供防務開支，遠遠高於其他任何國家，卻沒有因此獲得任何回報來保護他們：美國9990億美元，英國905億美元，法國665億美元，意大利488億美元，波蘭443億美元。其他國家，包括德國在內，都低得多。（2014-2025）荒謬！特朗普總統",
       "content_ko": "미국은 그들을 보호하기 위해 NATO에 다른 어떤 나라보다도 훨씬 더 많은 돈을 쓰고 있지만, 그에 따른 어떤 이익도 얻지 못하고 있다: 미국 9,990억 달러, 영국 905억 달러, 프랑스 665억 달러, 이탈리아 488억 달러, 폴란드 443억 달러. 독일을 포함한 다른 나라들은 훨씬 더 낮다. (2014-2025) 터무니없다! 트럼프 대통령",
@@ -31,9 +31,9 @@
       "content": "S&P 500 closes with strongest quarter since 2020: https://justthenews.com/politics-policy/finance/sp-500-closes-strongest-quarter-2020",
       "content_html": "S&P 500 closes with strongest quarter since 2020: https://justthenews.com/politics-policy/finance/sp-500-closes-strongest-quarter-2020",
       "media": [],
-      "favourites_count": 10377,
-      "reblogs_count": 2277,
-      "replies_count": 705,
+      "favourites_count": 11173,
+      "reblogs_count": 2402,
+      "replies_count": 729,
       "content_zh_cn": "标普500指数录得自2020年以来最强劲季度收盘： https://justthenews.com/politics-policy/finance/sp-500-closes-strongest-quarter-2020",
       "content_zh_hk": "標普500指數錄得自2020年以來最強勁季度收市： https://justthenews.com/politics-policy/finance/sp-500-closes-strongest-quarter-2020",
       "content_ko": "S&P 500 지수가 2020년 이후 가장 강한 분기 마감세를 기록: https://justthenews.com/politics-policy/finance/sp-500-closes-strongest-quarter-2020",
@@ -83,11 +83,11 @@
       "content_html": "This was a typical day on the Border under the Sleepy Joe Biden Administration with \"Border Czar\" Kamala Harris!",
       "media": [
         {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2ODczLzRhY2YwNzI5MGY4M2Y2Y2EuanBn",
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi84NDcvNDQ3LzEwNi8wMTAvNjkxL29yaWdpbmFsLzRhY2YwNzI5MGY4M2Y2Y2EuanBn",
           "type": "image"
         },
         {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2ODc0LzAxYzRiZTNmMTU0OWZjMDAuanBn",
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi84NDcvNDQ3LzEwNS85ODgvMjY2L29yaWdpbmFsLzAxYzRiZTNmMTU0OWZjMDAuanBn",
           "type": "image"
         }
       ],
@@ -109,11 +109,11 @@
       "content_html": "Just as I promised, Oil Prices are plummeting FAST, and Gas Prices at the pump are dropping too, but not as fast as they should be. As we approach America's 250th Birthday, I am pleased to announce that a VERY smart Retailer, located throughout the Northeast, is stepping up, and wishing the People of Philadelphia a \"Happy Birthday!\" On July 3rd, the Freedom Fuel Network will be lowering gas prices at 25 \"FREEDOM FUEL\" Stations across the Greater Philadelphia Area. This Retailer is taking the lead, and others should follow. They are doing this because they love the U.S.A. We are proud to celebrate America's 250th Birthday in the Great Commonwealth of Pennsylvania, the Birthplace of our very special, one-of-a-kind Declaration of Independence, and where I won BIG in the Presidential Election! America has never been stronger than it is now, and Gas Prices will soon be back to the Record Low Prices Americans enjoyed at the pump before our very successful \"excursion\" in Iran. Happy Birthday America! President DONALD J. TRUMP",
       "media": [
         {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2ODcxL2E2MzM4OTBlZGQyZDgwYTcucG5n",
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi84NDcvNDEyLzEzNS8yNzkvMzI2L29yaWdpbmFsL2E2MzM4OTBlZGQyZDgwYTcucG5n",
           "type": "image"
         },
         {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2ODcyLzhmZTgwMWQ2ZTcwY2QwODgucG5n",
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi84NDcvNDEyLzEzNS8yNzkvMzI1L29yaWdpbmFsLzhmZTgwMWQ2ZTcwY2QwODgucG5n",
           "type": "image"
         }
       ],
@@ -186,7 +186,7 @@
       "content_html": "",
       "media": [
         {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2ODY4L2RjNTY5NGU1ODU4ZTJiNmUuanBn",
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi84NDIvMTM1LzkxMi81NzkvOTUwL29yaWdpbmFsL2RjNTY5NGU1ODU4ZTJiNmUuanBn",
           "type": "image"
         }
       ],
@@ -208,7 +208,7 @@
       "content_html": "",
       "media": [
         {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2ODY5LzNjMjU2Yjk1NjAwMzg5ZWIuanBn",
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi84NDIvMTM1LzI4OC8yNzEvMzM0L29yaWdpbmFsLzNjMjU2Yjk1NjAwMzg5ZWIuanBn",
           "type": "image"
         }
       ],
@@ -230,7 +230,7 @@
       "content_html": "",
       "media": [
         {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2ODcwL2RmZjlkZmRkYzBmYTM5MzMuanBn",
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi84NDIvMTM0LzA3MS8yMzQvNTg1L29yaWdpbmFsL2RmZjlkZmRkYzBmYTM5MzMuanBn",
           "type": "image"
         }
       ],
@@ -303,7 +303,7 @@
       "content_html": "",
       "media": [
         {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2ODY3LzQyMmZkNGUwN2VmYjZiZjEuanBn",
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi84NDEvNTM2LzUwNi80MzgvMjMyL29yaWdpbmFsLzQyMmZkNGUwN2VmYjZiZjEuanBn",
           "type": "image"
         }
       ],
