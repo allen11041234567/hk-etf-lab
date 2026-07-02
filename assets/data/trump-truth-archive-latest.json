@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "fetchedAt": "2026-07-02T13:39:07.314Z",
+  "fetchedAt": "2026-07-02T13:49:04.007Z",
   "count": 20,
   "source": "cnn + stock.fengle + trumpstruth fallback",
   "latestCount": 20,
@@ -83,11 +83,11 @@
       "content_html": "This was a typical day on the Border under the Sleepy Joe Biden Administration with \"Border Czar\" Kamala Harris!",
       "media": [
         {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi84NDcvNDQ3LzEwNi8wMTAvNjkxL29yaWdpbmFsLzRhY2YwNzI5MGY4M2Y2Y2EuanBn",
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2ODczLzRhY2YwNzI5MGY4M2Y2Y2EuanBn",
           "type": "image"
         },
         {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi84NDcvNDQ3LzEwNS85ODgvMjY2L29yaWdpbmFsLzAxYzRiZTNmMTU0OWZjMDAuanBn",
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2ODc0LzAxYzRiZTNmMTU0OWZjMDAuanBn",
           "type": "image"
         }
       ],
@@ -109,11 +109,11 @@
       "content_html": "Just as I promised, Oil Prices are plummeting FAST, and Gas Prices at the pump are dropping too, but not as fast as they should be. As we approach America's 250th Birthday, I am pleased to announce that a VERY smart Retailer, located throughout the Northeast, is stepping up, and wishing the People of Philadelphia a \"Happy Birthday!\" On July 3rd, the Freedom Fuel Network will be lowering gas prices at 25 \"FREEDOM FUEL\" Stations across the Greater Philadelphia Area. This Retailer is taking the lead, and others should follow. They are doing this because they love the U.S.A. We are proud to celebrate America's 250th Birthday in the Great Commonwealth of Pennsylvania, the Birthplace of our very special, one-of-a-kind Declaration of Independence, and where I won BIG in the Presidential Election! America has never been stronger than it is now, and Gas Prices will soon be back to the Record Low Prices Americans enjoyed at the pump before our very successful \"excursion\" in Iran. Happy Birthday America! President DONALD J. TRUMP",
       "media": [
         {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi84NDcvNDEyLzEzNS8yNzkvMzI2L29yaWdpbmFsL2E2MzM4OTBlZGQyZDgwYTcucG5n",
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2ODcxL2E2MzM4OTBlZGQyZDgwYTcucG5n",
           "type": "image"
         },
         {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi84NDcvNDEyLzEzNS8yNzkvMzI1L29yaWdpbmFsLzhmZTgwMWQ2ZTcwY2QwODgucG5n",
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2ODcyLzhmZTgwMWQ2ZTcwY2QwODgucG5n",
           "type": "image"
         }
       ],
@@ -186,7 +186,7 @@
       "content_html": "",
       "media": [
         {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi84NDIvMTM1LzkxMi81NzkvOTUwL29yaWdpbmFsL2RjNTY5NGU1ODU4ZTJiNmUuanBn",
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2ODY4L2RjNTY5NGU1ODU4ZTJiNmUuanBn",
           "type": "image"
         }
       ],
@@ -208,7 +208,7 @@
       "content_html": "",
       "media": [
         {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi84NDIvMTM1LzI4OC8yNzEvMzM0L29yaWdpbmFsLzNjMjU2Yjk1NjAwMzg5ZWIuanBn",
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2ODY5LzNjMjU2Yjk1NjAwMzg5ZWIuanBn",
           "type": "image"
         }
       ],
@@ -230,7 +230,7 @@
       "content_html": "",
       "media": [
         {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi84NDIvMTM0LzA3MS8yMzQvNTg1L29yaWdpbmFsL2RmZjlkZmRkYzBmYTM5MzMuanBn",
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2ODcwL2RmZjlkZmRkYzBmYTM5MzMuanBn",
           "type": "image"
         }
       ],
@@ -303,7 +303,7 @@
       "content_html": "",
       "media": [
         {
-          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly9zdGF0aWMtYXNzZXRzLTEudHJ1dGhzb2NpYWwuY29tL3RtdGc6cHJpbWUtdHMtYXNzZXRzL21lZGlhX2F0dGFjaG1lbnRzL2ZpbGVzLzExNi84NDEvNTM2LzUwNi80MzgvMjMyL29yaWdpbmFsLzQyMmZkNGUwN2VmYjZiZjEuanBn",
+          "url": "https://hketf-lab.pages.dev/api/pulse/trump-media?id=aHR0cHM6Ly90cnV0aC1hcmNoaXZlLnVzLWlhZC0xLmxpbm9kZW9iamVjdHMuY29tL2F0dGFjaG1lbnRzLzE2ODY3LzQyMmZkNGUwN2VmYjZiZjEuanBn",
           "type": "image"
         }
       ],
