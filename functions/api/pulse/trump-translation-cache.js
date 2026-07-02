@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116847906594604040": {
+    "content_zh_cn": "标普500指数录得自2020年以来最强劲季度收盘： https://justthenews.com/politics-policy/finance/sp-500-closes-strongest-quarter-2020",
+    "content_zh_hk": "標普500指數錄得自2020年以來最強勁季度收市： https://justthenews.com/politics-policy/finance/sp-500-closes-strongest-quarter-2020",
+    "content_ko": "S&P 500 지수가 2020년 이후 가장 강한 분기 마감세를 기록: https://justthenews.com/politics-policy/finance/sp-500-closes-strongest-quarter-2020"
+  },
   "https://truthsocial.com/@realDonaldTrump/116847662330084420": {
     "content_zh_cn": "Breitbart 的 @jonkahnmusic 创作了排名第一的歌曲《Fighter》，如今他又与 Michael Farren 为“美国250周年”推出了一首了不起的新歌。大家都应该听一听《The United Saints of America》，并为我们伟大的国家感到自豪！\n\n总统 唐纳德·J·特朗普\nhttps://www.breitbart.com/america250/2026/07/01/united-saints-of-america-trump-inspired-fighter-singer-jon-kahn-nashville-hit-maker-michael-farren-release-patriotic-anthem-ahead-of-americas-250/",
     "content_zh_hk": "Breitbart 的 @jonkahnmusic 創作了排名第一的歌曲《Fighter》，如今他又與 Michael Farren 為「美國250週年」推出了一首了不起的新歌。大家都應該聽一聽《The United Saints of America》，並為我們偉大的國家感到自豪！\n\n總統 唐納德·J·特朗普\nhttps://www.breitbart.com/america250/2026/07/01/united-saints-of-america-trump-inspired-fighter-singer-jon-kahn-nashville-hit-maker-michael-farren-release-patriotic-anthem-ahead-of-americas-250/",
