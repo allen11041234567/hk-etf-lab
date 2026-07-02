@@ -1,4 +1,14 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116847640860677495": {
+    "content_zh_cn": "赫格塞思：我们必须大幅增加国防开支，才能守住美国的经济实力：https://nypost.com/2026/06/23/opinion/hegseth-we-must-spend-big-on-defense-to-save-americas-economic-might/",
+    "content_zh_hk": "赫格塞思：我們必須大幅增加國防開支，才能守住美國的經濟實力：https://nypost.com/2026/06/23/opinion/hegseth-we-must-spend-big-on-defense-to-save-americas-economic-might/",
+    "content_ko": "헤그세스: 미국의 경제력을 지키기 위해 우리는 국방비를 대폭 늘려야 한다: https://nypost.com/2026/06/23/opinion/hegseth-we-must-spend-big-on-defense-to-save-americas-economic-might/"
+  },
+  "https://truthsocial.com/@realDonaldTrump/116847638833780246": {
+    "content_zh_cn": "这就是“瞌睡乔”拜登政府、以及“边境沙皇”卡玛拉·哈里斯治下边境地区一个再普通不过的日子！",
+    "content_zh_hk": "這就是「瞌睡喬」拜登政府、以及「邊境沙皇」卡瑪拉·哈里斯治下邊境地區一個再普通不過的日子！",
+    "content_ko": "이것이 바로 “졸린 조” 바이든 행정부와 “국경 차르” 카멀라 해리스 아래에서 벌어지던 국경의 전형적인 하루였다!"
+  },
   "https://truthsocial.com/@realDonaldTrump/116847413162359390": {
     "content_zh_cn": "正如我所承诺的，油价正在快速暴跌，加油站的汽油价格也在下降，但降得还没有达到应有的速度。值此美国即将迎来建国250周年之际，我很高兴宣布，一家遍布美国东北部、VERY聪明的零售商正挺身而出，向费城人民送上“生日快乐！”\n\n7月3日，Freedom Fuel Network将下调大费城地区25家“FREEDOM FUEL”加油站的汽油价格。这家零售商正在带头，其他人也应该跟进。他们这么做，是因为他们热爱美利坚合众国。我们很自豪能在伟大的宾夕法尼亚联邦庆祝美国建国250周年——这里是我们极其特殊、独一无二的《独立宣言》的诞生地，也是我在总统大选中BIG获胜的地方！\n\n美国从未像现在这样强大，而汽油价格很快将回到美国人在我们非常成功的伊朗“出击”之前，在加油站享受到的创纪录低位。美国，生日快乐！\n\n总统 唐纳德·J·特朗普",
     "content_zh_hk": "正如我所承諾的，油價正在快速暴跌，加油站的汽油價格也在下降，但降幅仍未達到應有的速度。值此美國即將迎來建國250周年之際，我很高興宣布，一家遍佈美國東北部、VERY聰明的零售商正挺身而出，向費城人民送上「生日快樂！」\n\n7月3日，Freedom Fuel Network將下調大費城地區25家「FREEDOM FUEL」加油站的汽油價格。這家零售商正在帶頭，其他人也應該跟進。他們這樣做，是因為他們熱愛美利堅合眾國。我們很自豪能在偉大的賓夕法尼亞聯邦慶祝美國建國250周年——這裡是我們極其特別、獨一無二的《獨立宣言》的誕生地，也是我在總統大選中BIG勝出的地方！\n\n美國從未像現在這樣強大，而汽油價格很快將回到美國人在我們非常成功的伊朗「出擊」之前，在油站享受到的創紀錄低位。美國，生日快樂！\n\n總統 唐納德·J·特朗普",
