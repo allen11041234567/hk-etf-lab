@@ -1,4 +1,9 @@
 export const TRUMP_TRANSLATION_CACHE = {
+  "https://truthsocial.com/@realDonaldTrump/116850279579552155": {
+    "content_zh_cn": "美国为北约提供防务支出，远远高于其他任何国家，却没有从中获得任何回报来保护他们：美国9990亿美元，英国905亿美元，法国665亿美元，意大利488亿美元，波兰443亿美元。其他国家，包括德国在内，都要低得多。（2014-2025）荒唐！特朗普总统",
+    "content_zh_hk": "美國為北約提供防務開支，遠遠高於其他任何國家，卻沒有因此獲得任何回報來保護他們：美國9990億美元，英國905億美元，法國665億美元，意大利488億美元，波蘭443億美元。其他國家，包括德國在內，都低得多。（2014-2025）荒謬！特朗普總統",
+    "content_ko": "미국은 그들을 보호하기 위해 NATO에 다른 어떤 나라보다도 훨씬 더 많은 돈을 쓰고 있지만, 그에 따른 어떤 이익도 얻지 못하고 있다: 미국 9,990억 달러, 영국 905억 달러, 프랑스 665억 달러, 이탈리아 488억 달러, 폴란드 443억 달러. 독일을 포함한 다른 나라들은 훨씬 더 낮다. (2014-2025) 터무니없다! 트럼프 대통령"
+  },
   "https://truthsocial.com/@realDonaldTrump/116847906594604040": {
     "content_zh_cn": "标普500指数录得自2020年以来最强劲季度收盘： https://justthenews.com/politics-policy/finance/sp-500-closes-strongest-quarter-2020",
     "content_zh_hk": "標普500指數錄得自2020年以來最強勁季度收市： https://justthenews.com/politics-policy/finance/sp-500-closes-strongest-quarter-2020",
